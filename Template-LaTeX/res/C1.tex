@@ -1,0 +1,54 @@
+\subsection{Capitolato C1 - Autonomous Highlights Platform}
+\subsubsection{Informazioni generali}
+\begin{itemize}
+	\item \textbf{Nome}: Autonomous Highlights Platform
+	\item \textbf{Proponente}: Zero12
+	\item \textbf{Committente}: Prof. Tullio Vardanega e Prof. Riccardo Cardin
+\end{itemize}
+\subsubsection{Descrizione}
+Creazione di un software in grado di ricevere in input video di eventi sportivi e che crei un video contenente i momenti salienti dell'evento.
+\subsubsection{Prerequisiti di progetto}
+Il progetto prevede la creazione di un software che riceve in input dei video di eventi sportivi come una partita di calcio, F1, Motogp o altro sport e riesca a creare in autonomia un video di massimo 5 minuti con i soli suoi momenti salienti (highlights). A questo fine la piattaforma dovrà essere dotata di un modello di machine learning in grado di identificare ogni momento importante dell’evento.
+In particolare il flusso di generazione del video sarà così organizzato:
+\begin{itemize}
+	\item Caricamento del video dell'evento desiderato;
+	\item Individuazione degli highlights;
+	\item Estrazione delle parti individuate dal video originario;
+	\item Generazione del video dei momenti salienti.
+\end{itemize}
+\subsubsection{Vincoli}
+Al fine del corretto svolgimento del progetto sarà necessario rispettare i seguenti vincoli forniti dall'azienda proponente:
+\begin{itemize}
+	\item Utilizzo di Sage Maker per la costruzione del modello di intelligenza artificiale;
+	\item Strutturazione di un'architettura multiservizi;
+	\item Permettere il caricamento dei video tramite riga di comando;
+	\item Creazione di un'interfaccia web per l'analisi e il controllo dello stato di elaborazione del video.
+\end{itemize}
+\subsubsection{Tecnologie interessate}
+Le tecnologie previste per la realizzazione del capitolato sono:
+\begin{itemize}
+	\item Amazon web service, in particolare:
+	\begin{itemize}
+		\item AWS Elastic Container Service come servizio per la gestione dei contenitori;
+		\item AWS Dynamo DB, database non relazionale in NoSQL per il supporto e la gestione dei tag
+		\item AWS Elastic Transcoder per la conversione e la rielaborazione dei video
+		\item AWS Sage Maker per la creazione di un modello per il riconoscimento degli eventi salienti se si sceglie di implementare un addestramento supervisionato dell'intelligenza artificiale;
+		\item AWS Rekognition da usare nel caso si scelga, invece, l'apprendimento non supervisionato e quindi l'utilizzo di modelli già esistenti.
+	\end{itemize}
+	\item NodeJS per lo sviluppo di API Restful JSON al fine di garantire una scalabilità ottimale;
+	\item Python per lo sviluppo delle componenti necessarie di machine learning;
+	\item HTML5, CSS3 e Javascript per lo sviluppo dell'interfaccia web. 
+\end{itemize}
+\subsubsection{Aspetti positivi}
+\begin{itemize}
+	\item Il progetto è stato ritenuto interessante dal gruppo per la sua tematica accattivante e vicina agli interessi personali di ogni membro;
+	\item Le tecnologie proposte risultano innovative e utili per la loro larga diffusione nel mondo del lavoro;
+	\item La documentazione delle tecnologie reperibile è ben approfondita;
+	\item Le specifiche del capitolato sono state fornite in modo chiaro e preciso. 
+\end{itemize}
+\subsubsection{Criticità e fattori di rischio}
+\begin{itemize}
+	\item La maggior parte delle tecnologie non proposte non è prevista dal nostro corso di laurea, lo svolgimento di questo capitolato richiederebbe quindi un numero di ore difficilmente quantificabile di apprendimento.
+\end{itemize}
+\subsubsection{Conclusioni}
+Lo scopo del capitolato è risultato accattivante, tuttavia la quantità di nuove tecnologie da apprendere ha demotivato il gruppo a scegliere questo progetto.
