@@ -1,12 +1,30 @@
 % Configurazioni varie, da inserire nel preambolo dopo i pacchetti
 
-\hypersetup{hidelinks} %serve per nascondere riquadri rossi dai link 
+\hypersetup{hidelinks} %serve per nascondere riquadri rossi che circondano i link 
 
 \lstset{literate= {à}{{\`a}}1 } %Permette di usare lettere accentate nei listings
 
 \pagestyle{fancy} %Imposto stile pagina
 \fancyhf{} %Reset, se lo tolgo LaTex mette impostazioni di default (p.es numerazione pagine di default)
 
-\lhead{VRAM Software} %Nome gruppo
-\rhead{\leftmark} %Nome della top-level structure (p.es. Section in article o Chapter in book)
-\lfoot{Template LaTeX V0.1} %Nome documento
+\lhead{VRAM Software} %Left header che compare in ogni pagina
+\rhead{\leftmark} %Nome della top-level structure (p.es. Section in article o Chapter in book) in ogni pagina
+\lfoot{Template LaTeX V0.1} %Left foot in ogni pagina
+
+%Setto il colore dei link
+\hypersetup{
+	colorlinks,
+	linkcolor=[HTML]{404040},
+	citecolor={purple!50!black},
+	urlcolor={blue!50!black}
+}
+
+%Tabelle e tabulazione (può tornare utile)
+%\setlength{\tablcolsep}{10pt}
+%\renewcommand{\arraystretch}{1.4}
+
+%Comando per aggiungere le pagine di ogni sezione
+\newcommand{\newSection}[1]{%
+	\newpage
+	\input{res/sections/#1}
+}

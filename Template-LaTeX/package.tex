@@ -1,17 +1,27 @@
 % Tutti i pacchetti usati, da inserire nel preambolo prima delle configurazioni
 
-\usepackage[T1]{fontenc} %serve per andare a capo correttamente in italiano
-\usepackage[utf8]{inputenc} %serve per le lettere accentate
-\usepackage[english,italian]{babel} %serve per far apparire "indice" al posto di "contents"; imposta italiano lingua principale, inglese secondaria.
+\usepackage[T1]{fontenc} %Permette la sillabazione su qualsiasi testo contenente caratteri
+\usepackage[utf8]{inputenc} %Serve per usare la codifica utf-8
+\usepackage[english,italian]{babel} %Imposta italiano lingua principale, inglese secondaria. Es. serve per far apparire "indice" al posto di "contents"
 
-\usepackage{graphicx} %serve per includere le immagini
+\usepackage{graphicx} %Serve per includere le immagini
 
-\usepackage{hyperref} %serve per rendere clickabili le sezioni dell'indice
+\usepackage{hyperref} %Gestisce i riferimenti/link. Es. Serve per rendere clickabili le sezioni dell'indice
 
-\usepackage{float} %per poter usare l'opzione [H] nelle figure; [H] permette di tenere fissate le immagini che altrimenti LaTeX si sposta a piacere.
+\usepackage{float} %Serve per migliore la definizione di oggetti fluttuanti come figure e tabelle. Es. poter usare l'opzione [H] nelle figure ovvero tenere fissate le immagini che altrimenti LaTeX si sposta a piacere.
 
-\usepackage{listings} %serve per poter mettere snippets di codice nel testo
+\usepackage{listings} %Serve per poter mettere snippets di codice nel testo
 
-\usepackage{lastpage} %serve per poter fare " \rfoot{\thepage\ di \pageref{LastPage}} "
+\usepackage{lastpage} %Serve per poter introdurre un'etichetta a cui si può fare riferimento Es. piè di pagina; poter fare " \rfoot{\thepage\ di \pageref{LastPage}} "
 
-\usepackage{fancyhdr} %Per header personalizzati
+\usepackage{fancyhdr} %Per header e piè di pagina personalizzati
+
+%Sono alcuni package che potranno esserci utili in futuro
+%\usepackage{charter}
+%\usepackage{eurosym}
+\usepackage{subcaption}
+%\usepackage{wrapfig}
+%\usepackage{background}
+\usepackage{longtable}
+\usepackage{xcolor}
+%\usepackage{colortbl}
