@@ -1,0 +1,68 @@
+\subsection{Capitolato 5 - Stalker}
+
+\subsection{Informazioni}
+\begin{itemize}
+	\item \textbf{Nome}: Stalker
+	\item \textbf{Proponente}: Imola Informatica
+	\item \textbf{Committente}: Prof. Tullio Vardanega
+\end{itemize}
+
+\subsection{Descrizione}
+Soluzione software composta di applicazione mobile che si appoggia su un'infrastruttura server, con lo scopo di monitorare le presenze in forma anonima o autenticata in uno o più luoghi circoscritti.
+Gli ambiti di utilizzo possono variare, dal controllare l'affluenza in luoghi di interesse al verificare le presenze del personale nel luogo di lavoro.
+
+\subsubsection{Requisiti applicazione mobile}
+\begin{itemize}
+	\item Recupero lista organizzazioni
+	\item Possiblità di effettuare login tramite LDAP per organizzazioni che lo richiedono
+	\item Storico accessi
+	\item Visualizzazione in tempo reale della propria presenza all'interno di un luogo monitorato e cronometro del tempo trascorso al suo interno
+\end{itemize}
+
+\subsection{Requisiti interfaccia web lato server}
+\begin{itemize}
+	\item Funzionalità di login
+	\item Creazione/modifica/eliminazione di organizzazioni
+	\item Aggiunta/modifica/rimozione di luoghi, definiti da coordinate geografiche
+	\item Configurazione collegamento server LDAP
+	\item Invio di notifiche push alle applicazioni per segnalare l'aggiornamento delle liste di organizzazioni e luoghi
+	\item Monitoraggio del numero di utenti presenti nei luoghi dell'organizzazione in tempo reale
+	\item Ricerca sugli accessi dei dipendenti e creazione di report sulla frequentazione dei luoghi
+	\item Gestione delle autorizzazioni per gli utenti dell'interfaccia web
+\end{itemize}
+
+\subsection{Requisiti dell'infrastruttura}
+\begin{itemize}
+	\item Comunicazioni solo all'entrata od uscita dall'area interessata
+	\item Cifratura di tutte le comunicazioni tra app e server
+	\item Architettura server scalabile (verticalmente e orizzontalmente) e tollerante a picchi di traffico
+	\item Test di carico che dimostrino il funzionamento in varie situazioni
+\end{itemize}
+
+\subsubsection{Tecnologie interessate}
+\begin{itemize}
+	\item Java o Swift (applicazione mobile)
+	\item NodeJS o python (back-end)
+	\item utilizzo di protocolli asincroni per le comunicazioni tra app e server
+	\item HTML5, CSS3 e Javascript (interfaccia web lato server)
+	\item Utilizzo del pattern di Publisher/Subscriber, ovvero mittenti e destinatari dimessaggi dialogano attraverso un tramite(dispatcher)
+	\item Utilizzo dell’IAAS Kubernetes o di un PAAS, Openshift o Rancher, per il rilascio delle componenti server
+	\item API REST esposte dal server, o gRPC in alternativa
+	\item GPS/sistemi ibridi di geolocalizzazione
+	\item LDAP (Lightweighgt Directory Access Protocol)
+	\item Test unitari e d'integrazione per tutte le componenti applicative
+\end{itemize}
+\subsubsection{Aspetti positivi}
+\begin{itemize}
+	\item Lo sviluppo di applicazioni mobili è una conoscenza richiesta
+	\item Argomento interessante, anche grazie alla potenziale utilità nell'ambito della sicurezza
+\end{itemize}
+\subsubsection{Criticità e fattori di rischio}
+\begin{itemize}
+	\item I requisiti sono numerosi e importanti
+	\item La precisione ottenibile con le tecnologie attuali non è sufficiente per rendere l’applicazione usabile nella realtà
+	\item Nella presentazione è stato discusso il funzionamento del sistema GPS ma completamente tralasciata la funzionalità dei backend di geolocalizzazione presenti nei moderni sistemi mobile (ad esempio i Google Mobile Services per Android)
+	\item Lo sviluppo lato server non è stato ben discusso durante la presentazione e potrebbe portare complicazioni
+\end{itemize}
+\subsubsection{Conclusioni}
+Nonostante il nobile obiettivo, la difficile fattibilità di un prodotto concreto e la possiblità di complicazioni scoraggia il gruppo nella decisione di intraprendere questo capitolato.
