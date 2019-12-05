@@ -34,5 +34,18 @@
 - Telegram
 - Google Drive
 - Google Calendar
-
-
+- Dati operativi
+- Fattori influenzanti
+- IoT
+- Apache Kafka
+- Time series database
+- Timestamp
+- Metadati
+- PostgreSQL
+- TimescaleDB
+- ClickHouse
+- Contanerizzazione
+- Docker
+- Business Logic
+- Bootstrap
+- Big data
