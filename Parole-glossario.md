@@ -13,6 +13,13 @@
 - CSS3
 - Javascript
 - API Restful JSON
+- capitolato
+- Git
+- GitHub
+- Slack
+- Telegram
+- Google Drive
+- Google Calendar
 
 
 
