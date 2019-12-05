@@ -12,8 +12,21 @@
 - HTML5
 - CSS3
 - Javascript
-- API Restful JSON
-
+- API Restful, JSON, RESTful API DLS(description languages), REST 
+- PoC (Proof of Concept)
+- feature
+- stakeholders
+- BDL(business domain language), BAL(business application language), BDD(Behaviour Driven Development)
+- repository
+- Gherkin, Hiptest, Cucumber
+- GUI
+- NLP (Natural Language Processing)
+- Dependency parser
+- OpenAPI, Swagger, OWL
+- framework
+- toolkit
+- Qt
+- React
 
 
 

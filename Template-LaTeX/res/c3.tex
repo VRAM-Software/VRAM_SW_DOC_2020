@@ -1,50 +1,50 @@
-\section{Capitolato 3 - NaturalAPI}
-\subsection{Informazioni generali}
+\subsection{Capitolato 3 - NaturalAPI}
+\subsubsection{Informazioni generali}
 \begin{itemize}
 	\item Nome: NaturalAPI;
 	\item Proponente: Teal Blue;
 	\item Committente: Prof. Tullio Vardanega e Prof. Riccardo Cardin;
 \end{itemize}
-\subsection{Descrizione}
-L'obbiettivo di questo capitolato è quello di far parlare a tutti gli $stakeholders_G$ un linguaggio comune, in modo da velocizzare ed evitare confusione durante la progettazione. Teal Blue vuole utilizzare le specifiche e i requisiti di un software, scritti in linguaggio naturale (Inglese, Italiano, ecc.), per generare $API_G$.
-\subsection{Finalità del progetto}
-Il prodotto da sviluppare è \textbf{NaturalAPI} un $toolkit_G$ che dovrà generare $API_G$ complete e test automatici a partire da un linguaggio naturale. Per la realizzazione di questo prodotto dovranno essere sviluppati tre $PoC_G$ o $feature_G$.
+\subsubsection{Descrizione}
+L'obbiettivo di questo capitolato è quello di far parlare a tutti gli stakeholders\glo un linguaggio comune, in modo da velocizzare ed evitare confusione durante la progettazione. Teal Blue vuole utilizzare le specifiche e i requisiti di un software, scritti in linguaggio naturale (Inglese, Italiano, ecc.), per generare API\glo.
+\subsubsection{Finalità del progetto}
+Il prodotto da sviluppare è \textbf{NaturalAPI} un toolkit\glo che dovrà generare API\glo complete e test automatici a partire da un linguaggio naturale. Per la realizzazione di questo prodotto dovranno essere sviluppati tre PoC\glo o feature\glo.
 \begin{enumerate}
-	\item \textbf{NaturalAPI Discover: }\textit{estrattore di $BDL_G$}. \\*
+	\item \textbf{NaturalAPI Discover: }\textit{estrattore di BDL\glo}. \\*
 	L'estrattore \textit{Discover} ha lo scopo di estrarre entità, processi e combinazioni tra essi da un documento testuale di business.
-	\item \textbf{NaturalAPI Design: }\textit{$parser_G$ di scenari e caratteristiche}. \\*
-	Questa $PoC_G$ dovrà creare una $BAL_G$ $API_G$ in tempo reale a partire dai documenti di $Gherkin_G$ e da un $BDL_G$.
+	\item \textbf{NaturalAPI Design: }\textit{parser\glo di scenari e caratteristiche}. \\*
+	Questa PoC\glo dovrà creare una BAL\glo API\glo in tempo reale a partire dai documenti di Gherkin\glo e da un BDL\glo.
 	\item \textbf{NaturalAPI Develop: }\textit{esportatore di linguaggio}. \\* 
-	Questa $feature_G$ dovrà convertire un $BAL_G$ in casi di test e $API_G$ nel linguaggio di programmazione scelto, supportando la creazione e l'aggiornamento di nuove $repository_G$.
+	Questa feature\glo dovrà convertire un BAL\glo in casi di test e API\glo nel linguaggio di programmazione scelto, supportando la creazione e l'aggiornamento di nuove repository\glo.
 \end{enumerate} 
-Ogni $feature_G$ sopraindicata dovrà essere accessibile attraverso almeno due dei seguenti modi: interfaccia da linea di comando, $GUI_G$ minimale o un'interfaccia web $REST_G$.
+Ogni feature\glo sopraindicata dovrà essere accessibile attraverso almeno due dei seguenti modi: interfaccia da linea di comando, GUI\glo minimale o un'interfaccia web REST\glo.
 La parte logica del prodotto finale dovrà essere esportata in una delle seguenti modalità: come una libreria, come parte di un eseguibile o come un processo indipendente locale o remoto.  
 
 
-\subsection{Tecnologie interessate}
+\subsubsection{Tecnologie interessate}
 \begin{itemize}
-	\item $NLP_G$ o Natural Language Processing cioè un trattamento informatico del linguaggio naturale, che si occupa della realizzazione di sistemi in grado di comprendere il linguaggio naturale	
-	\item $Dependency Parser_G$ cioè un parser che si occupa di analizzare la struttura grammaticale di una frase in linguaggio naturale per identificare le relazioni tra parole chiavi e parole che le modificano
-	\item $BDD_G$ Behaviour Driven Development che è un processo di sviluppo software agile che ha, alla sua base, una continua comunicazione tra tutti gli $stakeholders_G$ di un progetto informatico
-	\item $Hiptest_G$ e $Cucumber_G$ che sono degli strumenti software che supportano il processo $BDD_G$; il primo serve per eseguire test automatici, mentre il secondo legge le specificazioni software in linguaggio naturale, scritte con alcune regole di sintassi ($Gherkin_G$), e controlla che il software rispetti i requisiti
-	\item Generazione $API_G$ e $DLS_G$ utilizzando:
+	\item NLP\glo o Natural Language Processing cioè un trattamento informatico del linguaggio naturale, che si occupa della realizzazione di sistemi in grado di comprendere il linguaggio naturale	
+	\item Dependency Parser\glo cioè un parser che si occupa di analizzare la struttura grammaticale di una frase in linguaggio naturale per identificare le relazioni tra parole chiavi e parole che le modificano
+	\item BDD\glo Behaviour Driven Development che è un processo di sviluppo software agile che ha, alla sua base, una continua comunicazione tra tutti gli stakeholders\glo di un progetto informatico
+	\item Hiptest\glo e Cucumber\glo che sono degli strumenti software che supportano il processo BDD\glo; il primo serve per eseguire test automatici, mentre il secondo legge le specificazioni software in linguaggio naturale, scritte con alcune regole di sintassi (Gherkin\glo), e controlla che il software rispetti i requisiti
+	\item Generazione API\glo e DLS\glo utilizzando:
 	\begin{itemize}
-		\item $OpenAPI_G$: uno standard per descrivere $API_G$
-		\item $Swagger_G$: un $framework_G$ che aiuta a sviluppare servizi web $REST_G$
-		\item $OWL_G$: un linguaggio web semantico
+		\item OpenAPI\glo: uno standard per descrivere API\glo
+		\item Swagger\glo: un framework\glo che aiuta a sviluppare servizi web REST\glo
+		\item OWL\glo: un linguaggio web semantico
 	\end{itemize}
-	\item Un qualsiasi $framework_G$ a scelta come $Qt_G$, $React_G$, ecc.
+	\item Un qualsiasi framework\glo a scelta come Qt\glo, React\glo, ecc.
 \end{itemize} 
-\subsection{Aspetti positivi}
+\subsubsection{Aspetti positivi}
 \begin{itemize} 
-	\item Il proponente non impone vincoli sui linguaggi di programmazione da utilizzare, questo permette  al gruppo di sviluppare un prodotto con un linguaggio o un $framework_G$ considerato più interessante. 
+	\item Il proponente non impone vincoli sui linguaggi di programmazione da utilizzare, questo permette  al gruppo di sviluppare un prodotto con un linguaggio o un framework\glo considerato più interessante. 
 	\item I requisiti, le tecnologie e il modo di esportare il prodotto finale sono spiegati in modo preciso e esauriente.
 	\item L'azienda Teal Blue si dimostra disponibile a incontri ed a una comunicazione aperta con il fornitore.
 \end{itemize}
-\subsection{Criticità e fattori di rischio}
+\subsubsection{Criticità e fattori di rischio}
 \begin{itemize}
 	\item Questo capitolato non ha suscitato molto interesse nel gruppo a causa dell'eccessiva astrattezza del capitolato e per il fatto che i concetti su cui prepararsi non erano, per il gruppo VRAM Software, stimolanti. 
 	\item Le tecnologie da imparare sono molte ed è arduo quantificare il tempo necessario per raggiungere una preparazione sufficiente per gestire in modo produttivo le tecnologie elencate.
 \end{itemize}
-\subsection{Conclusione}
-Il gruppo ha trovato interessante l'idea di Teal Blue di rendere la comunicazione tra tutti $stakeholders_G$ chiara e veloce, tuttavia abbiamo deciso di orientarci verso un progetto meno astratto.
+\subsubsection{Conclusione}
+Il gruppo ha trovato interessante l'idea di Teal Blue di rendere la comunicazione tra tutti stakeholders\glo chiara e veloce, tuttavia abbiamo deciso di orientarci verso un progetto meno astratto.
