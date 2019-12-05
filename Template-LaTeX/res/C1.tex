@@ -8,7 +8,7 @@
 \subsubsection{Descrizione}
 Creazione di un software in grado di ricevere in input video di eventi sportivi e che crei un video contenente i momenti salienti dell'evento.
 \subsubsection{Obiettivi di progetto}
-Il progetto prevede la creazione di un software che riceve in input dei video di eventi sportivi come una partita di calcio, F1, Motogp o altro sport e riesca a creare in autonomia un video di massimo 5 minuti con i soli suoi momenti salienti (highlights). A questo fine la piattaforma dovrà essere dotata di un modello di machine learning in grado di identificare ogni momento importante dell’evento.
+Il progetto prevede la creazione di un software che riceve in input dei video di eventi sportivi come una partita di calcio, Formula1, Motogp o altro sport e riesca a creare in autonomia un video di massimo 5 minuti con i soli suoi momenti salienti (highlights). A questo fine la piattaforma dovrà essere dotata di un modello di machine learning\glo in grado di identificare ogni momento importante dell’evento.
 In particolare il flusso di generazione del video sarà così organizzato:
 \begin{itemize}
 	\item Caricamento del video dell'evento desiderato;
@@ -19,25 +19,25 @@ In particolare il flusso di generazione del video sarà così organizzato:
 \subsubsection{Requisiti di progetto}
 Al fine del corretto svolgimento del progetto sarà necessario rispettare i seguenti vincoli forniti dall'azienda proponente:
 \begin{itemize}
-	\item Utilizzo di Sage Maker per la costruzione del modello di intelligenza artificiale;
-	\item Strutturazione di un'architettura a multiservizi;
+	\item Utilizzo di Sage Maker\glo per la costruzione del modello di intelligenza artificiale\glo;
+	\item Strutturazione di un'architettura a multiservizi\glo;
 	\item Permettere il caricamento dei video tramite riga di comando;
 	\item Creazione di un'interfaccia web per l'analisi e il controllo dello stato di elaborazione del video.
 \end{itemize}
 \subsubsection{Tecnologie interessate}
 Le tecnologie previste per la realizzazione del capitolato sono:
 \begin{itemize}
-	\item \textbf{Amazon web services}, in particolare:
+	\item \textbf{Amazon web services\glo}, in particolare:
 	\begin{itemize}
-		\item \textbf{AWS Elastic Container Service} come servizio per la gestione dei contenitori;
-		\item \textbf{AWS Dynamo DB}, database non relazionale in NoSQL per il supporto e la gestione dei tag
-		\item \textbf{AWS Elastic Transcoder} per la conversione e la rielaborazione dei video
-		\item \textbf{AWS Sage Maker} per la creazione di un modello per il riconoscimento degli eventi salienti se si sceglie di implementare un addestramento supervisionato dell'intelligenza artificiale;
-		\item \textbf{AWS Rekognition} da usare nel caso si scelga, invece, l'apprendimento non supervisionato e quindi l'utilizzo di modelli già esistenti.
+		\item \textbf{AWS Elastic Container Service\glo} come servizio per la gestione dei contenitori;
+		\item \textbf{AWS Dynamo DB\glo}, database non relazionale in NoSQL\glo per il supporto e la gestione dei tag
+		\item \textbf{AWS Elastic Transcoder\glo} per la conversione e la rielaborazione dei video
+		\item \textbf{AWS Sage Maker\glo} per la creazione di un modello per il riconoscimento degli eventi salienti se si sceglie di implementare un addestramento supervisionato dell'intelligenza artificiale;
+		\item \textbf{AWS Rekognition\glo} da usare nel caso si scelga, invece, l'apprendimento non supervisionato e quindi l'utilizzo di modelli già esistenti.
 	\end{itemize}
-	\item \textbf{NodeJS} per lo sviluppo di API Restful JSON al fine di garantire una scalabilità ottimale;
-	\item \textbf{Python} per lo sviluppo delle componenti necessarie di machine learning;
-	\item \textbf{HTML5}, \textbf{CSS3} e \textbf{Javascript} per lo sviluppo dell'interfaccia web. 
+	\item \textbf{NodeJS\glo} per lo sviluppo di API Restful JSON\glo al fine di garantire una scalabilità ottimale;
+	\item \textbf{Python\glo} per lo sviluppo delle componenti necessarie di machine learning;
+	\item \textbf{HTML5\glo}, \textbf{CSS3\glo} e \textbf{Javascript\glo} per lo sviluppo dell'interfaccia web. 
 \end{itemize}
 \subsubsection{Aspetti positivi}
 \begin{itemize}
