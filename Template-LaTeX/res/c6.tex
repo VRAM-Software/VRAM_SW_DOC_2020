@@ -1,48 +1,45 @@
-\section{Capitolato 6 - ThiReMa}
-\subsection{Informazioni generali}
+\subsection{Capitolato 6 - ThiReMa}
+\subsubsection{Informazioni generali}
 \begin{itemize}
 	\item Nome: ThiReMa;
 	\item Proponente: Sanmarco Informatica;
 	\item Committente: Prof. Tullio Vardanega e Prof. Riccardo Cardin;
 \end{itemize}
-\subsection{Descrizione}
-L'obiettivo di questo capitolato è di creare un'applicazione web che permetta di valutare la $correlazione_G$ fra $dati operativi_G$ e $fattori influenzanti_G$, oltre che offrire servizi di $predittività_G$. I dati saranno ricavati da dispositivi $IoT_G$ eterogenei tramite piattaforma $Apache Kafka_G$, quindi un'unico software si occuperà di raccolta, storicizzazione, monitoraggio, analisi e presentazione dei dati.
-Lo scopo finale del progetto è di rendere i processi aziendali intelligenti trasformando i dati in informazioni, così da permettere ad esempio la pianificazione di manutenzioni predittive calcolate su informazioni reali, in automatico.
+\subsubsection{Descrizione}
+Lo scopo di questo progetto è di creare un'applicazione web che permetta di valutare la correlazione fra dati operativi\glosp e fattori influenzanti\glo, oltre che offrire servizi di predittività. I dati saranno ricavati da dispositivi IoT\glosp eterogenei tramite piattaforma Apache Kafka\glo, quindi un'unico software si occuperà di raccolta, storicizzazione, monitoraggio, analisi e presentazione dei dati.
+L'obiettivo finale del progetto è di rendere i processi aziendali intelligenti trasformando i dati in informazioni, così da permettere ad esempio la pianificazione di manutenzioni predittive calcolate su informazioni reali, in automatico.
 
-\subsection{Finalità del progetto}
-Realizzare il prodotto \textbf{ThiReMa} una $web application_G$ che raccoglierà dati da dispositivi $IoT_G$ eterogenei tramite piattaforma Apache Kafka, li monitorerà e storicizzerà in un $time series database_G$ e li presenterà elaborati all'utente tramite interfaccia web.
-\begin{enumerate}
-	\item \textbf{Piattaforma Kafka: }\textit{piattaforma di streaming dati distribuita \\*
-	Questa piattaforma si occuperà della raccolta dei dati dai vari sensori e del loro indirizzamento al $database_G$. Sarà inoltre usata per leggere, elaborare e presentare gli storici dei dati stessi.
-	\item \textbf{Time series database: }\textit{database particolarmente efficienti nello storicizzare dati temporali. \\*
-	Questi $database_G$ sono molto efficienti per archiviare dati $IoT_G$ in quanto usano il $timestamp_G$ della lettura come chiave, a cui poi basterà associare il valore letto. Oltre ai dati delle misurazioni dovranno essere storicizzati i loro $metadati_G$ ed i dati degli utenti del sistema.
-	Alcuni esempi consigliati sono: $PostgreSQL_G$, $TimescaleDB_G$, $ClickHouse_G$.
-	\item \textbf{Interfaccia web }\textit{portale web dove consultare i dati raccolti}. \\* 
-	Questa interfaccia dovrà permettere la visualizzazione dei dati raccolti, la loro $correlazione_G$ e la loro gestione. Dovrà permettere di gestire i sensori, gli impianti e gli utenti del sistema.
-\end{enumerate} 
-Ogni $feature_G$ dovrà essere istanziata tramite uso della tecnologia di $contanerizzazione_G$ $Docker_G$, così da rendere il più possibile le componenti del sistema manutenibili singolarmente senza inficiare le funzionalità del sistema nella loro interezza.
-
-
-\subsection{Tecnologie interessate}
+\subsubsection{Obiettivi di progetto}
+Realizzare il prodotto \textbf{ThiReMa}, una web application che raccoglierà dati da dispositivi IoT\glosp eterogenei tramite piattaforma Apache Kafka, li monitorerà e storicizzerà in un time series database\glosp e li presenterà elaborati all'utente tramite interfaccia web. Inoltre dovrà inviare notifiche tempestive agli operatori tramite un servizio basato su Telegram\glo.
 \begin{itemize}
-	\item $Kafka$ Piattaforma di streaming distribuito, permette di raccogliere e monitorare flussi di $record di dati_G$ come se fossero una coda di messaggi. Permette anche la storicizzazione e l'elaborazione di questi $stream_G$ di dati.	
-	\item $Time series database$ Sono database molto efficienti nella storicizzazione di dati $IoT_G$, in quanto occupano poca memoria pur mantenendo le informazioni basilari necessarie. A questi database è possibile affiancare altri database per contenere i metadati dei dispositivi $IoT_G$ ed i dati degli utenti. Alcuni possibili database sono $PostgreSQL_G$, $TimescaleDB_G$, $ClickHouse_G$.
-	\item $JAVA$ Popolare linguaggio di programmazione interpretato ed orientato agli oggetti. E' consigliato il suo uso per realizzare la $business logic_G$ del programma tramite piattaforma $Kafka_G$.
-	\item $Bootstrap$ Popolare $framework_G$ CSS utilizzato per realizzare l'interfaccia grafica di siti ed applicazioni WEB. E' consigliato il suo uso per la realizzazione dell'interfaccia web dell'applicazione.
-	\item $Docker$ E' una tecnologia di $contaneirizzazione_G$ che permette di eseguire in modo efficiente più applicativi software in ambienti dedicati ed isolati risiedenti in un'unica macchina fisica. Tali ambienti sono detti container e permettono di eseguire più servizi in un'unica macchina fisica rendendoli indipendenti gli uni dagli altri, è quindi possibile fermare un container lasciando gli altri regolarmente attivi.
+	\item \textbf{Piattaforma Kafka}: Questa piattaforma di streaming dati distribuita si occuperà della raccolta dei dati dai vari sensori e del loro indirizzamento al database. Sarà inoltre usata per leggere, elaborare e presentare gli storici dei dati stessi.
+	\item \textbf{Time series database}: Questi database sono molto efficienti per archiviare dati IoT\glosp in quanto usano il timestamp\glosp della lettura come chiave, a cui poi basterà associare il valore letto. Oltre ai dati delle misurazioni dovranno essere storicizzati i loro metadati\glosp ed i dati degli utenti del sistema.
+	Alcuni esempi consigliati sono: PostgreSQL\glo, TimescaleDB\glo, ClickHouse\glo.
+	\item \textbf{Interfaccia web}: Questa interfaccia dovrà permettere la visualizzazione dei dati raccolti, la loro correlazione e la loro gestione. Dovrà permettere di gestire i sensori, gli impianti e gli utenti del sistema.
 \end{itemize} 
-\subsection{Aspetti positivi}
+Ogni feature\glosp dovrà essere istanziata tramite uso della tecnologia di contanerizzazione\glosp Docker\glo, così da rendere il più possibile le componenti del sistema manutenibili singolarmente senza inficiare le funzionalità del sistema nella loro interezza.
+
+
+\subsubsection{Tecnologie interessate}
+\begin{itemize}
+	\item Kafka\glosp Piattaforma di streaming distribuito, permette di raccogliere e monitorare flussi di record di dati come se fossero una coda di messaggi. Permette anche la storicizzazione e l'elaborazione di questi stream di dati.	
+	\item Time series database\glosp Sono database molto efficienti nella storicizzazione di dati IoT\glo, in quanto occupano poca memoria pur mantenendo le informazioni basilari necessarie. A questi database è possibile affiancare altri database per contenere i metadati dei dispositivi IoT\glosp ed i dati degli utenti. Alcuni possibili database sono PostgreSQL\glo, TimescaleDB\glo, ClickHouse\glo.
+	\item JAVA\glosp Popolare linguaggio di programmazione interpretato ed orientato agli oggetti. E' consigliato il suo uso per realizzare la business logic\glosp del programma tramite piattaforma Kafka\glo.
+	\item Bootstrap\glosp Popolare framework\glosp CSS utilizzato per realizzare l'interfaccia grafica di siti ed applicazioni WEB. E' consigliato il suo uso per la realizzazione dell'interfaccia web dell'applicazione.
+	\item Docker\glosp E' una tecnologia di contaneirizzazione\glosp che permette di eseguire in modo efficiente più applicativi software in ambienti dedicati ed isolati risiedenti in un'unica macchina fisica. Tali ambienti sono detti container e permettono di eseguire più servizi in un'unica macchina fisica rendendoli indipendenti gli uni dagli altri, è quindi possibile fermare un container lasciando gli altri regolarmente attivi.
+\end{itemize} 
+\subsubsection{Aspetti positivi}
 \begin{itemize} 
-	\item Sviluppo di competenze nell'ambito $IoT_G$, molto richieste ed interessanti per i membri del gruppo.
-	\item Sviluppo di conoscenze in ambito $Big Data_G$ ed analisi dei dati, molto richieste attualmente e probabilmente anche in futuro.
+	\item Sviluppo di competenze nell'ambito IoT\glo, molto richieste ed interessanti per i membri del gruppo.
+	\item Sviluppo di conoscenze in ambito Big Data\glosp ed analisi dei dati, molto richieste attualmente e probabilmente anche in futuro.
 	\item Utilizzo di Java, un linguaggio di programmazione molto popolare e previsto da un insegnamento del nostro corso di studi.
 	\item Architettura del sistema ben definita e componenti ben chiare.
 	\item L'ambito del capitolato è interessante per tutti i membri del gruppo.
 \end{itemize}
-\subsection{Criticità e fattori di rischio}
+\subsubsection{Criticità e fattori di rischio}
 \begin{itemize}
 	\item Numero elevato di componenti da realizzare ed integrare che comportano di conseguenza molte tecnologie da apprendere. 
 	\item Probabile necessità di effettuare test in sede aziendale per avere accesso ai dispositivi fisici ed agli storici di dati.
 \end{itemize}
-\subsection{Conclusione}
+\subsubsection{Conclusioni}
 
