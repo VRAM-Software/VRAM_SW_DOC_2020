@@ -1,0 +1,10 @@
+# Fdb version 3
+["pdflatex"] 1575506077 "config.tex" "config.pdf" "config" 1575506077
+  "/etc/texmf/web2c/texmf.cnf" 1559110348 36392 27b717d9fa5a56a8f0962508b3423be8 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1559110348 36392 27b717d9fa5a56a8f0962508b3423be8 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1574809929 3717452 d4a610742df22067af8af62725198135 ""
+  "config.aux" 1575501434 8 a94a2480d3289e625eea47cd1b285758 ""
+  "config.tex" 1575494530 973 4be7d494bbc55153fda0d99e44b636cd ""
+  (generated)
+  "config.pdf"
+  "config.log"

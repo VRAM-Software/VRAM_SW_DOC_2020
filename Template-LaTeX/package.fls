@@ -1,0 +1,6 @@
+PWD /home/marco/Documenti/uni/VRAM_SW_DOC_2020/Template-LaTeX
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT package.tex
+OUTPUT package.log

@@ -1,0 +1,10 @@
+PWD /home/marco/Documenti/uni/VRAM_SW_DOC_2020/Template-LaTeX
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT recurrent.tex
+OUTPUT recurrent.log
+INPUT /usr/share/texmf/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texmf/fonts/tfm/public/cm/cmbx10.tfm
+OUTPUT recurrent.pdf
+INPUT /usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map
