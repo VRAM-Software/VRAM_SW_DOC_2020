@@ -1,8 +1,0 @@
-PWD /home/marco/Documenti/uni/VRAM_SW_DOC_2020/Template-LaTeX/res
-INPUT /etc/texmf/web2c/texmf.cnf
-INPUT /usr/share/texmf/web2c/texmf.cnf
-INPUT /var/lib/texmf/web2c/pdftex/latex.fmt
-INPUT c6.tex
-OUTPUT c6.log
-INPUT /usr/share/texmf/fonts/map/fontname/texfonts.map
-INPUT /usr/share/texmf/fonts/tfm/public/cm/cmbx10.tfm
