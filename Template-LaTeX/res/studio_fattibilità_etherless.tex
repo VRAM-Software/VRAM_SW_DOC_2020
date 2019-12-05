@@ -27,19 +27,27 @@
         \end{itemize}
         \textit{AWS Lambda} può essere corredata con altri componenti quali: \textit{AWS API Gateway} (per eventi HTTP), \textit{AWS DynamoDB} (database non relazionale)
         o \textit{AWS S3} (servizio di memorizzazione). Tutto questo poi può essere gestito tramite \textit{AWS CloudFormation} (piattaforma per l'organizzazione delle
-        risorse AWS). Infine è richiesto di dividere lo sviluppo in tre fasi:
+        risorse AWS).
+    \subsection{Requisiti di progetto}
+        È richiesto di dividere lo sviluppo in tre fasi:
         \begin{itemize}
             \item \textbf{Local}: utilizzo dell'applicativo in ambiente locale, in cui può essere utilizzato \textit{Ethereum testrpc} di \textit{Truffle} per
             l'emulazione della blockchain;
             \item \textbf{Test}: utilizzo dell'applicativo in ambiente di testing, in cui può essere usata la soluzione proposta al punto precedente;
             \item \textbf{Staging}: utilizzo dell'applicativo in un ambiente pubblico, in tal caso si potrà usufruire di \textit{Ropsten Ethereum} come rete di testing.
         \end{itemize}
+        Inoltre è obbligatorio separare il software in tre parti:
+        \begin{itemize}
+            \item \textbf{etherless-cli}: modulo attraverso il quale lo sviluppatore interagisce con Etherless;
+            \item \textbf{etherless-smart}: modulo per l'interazione tra \textit{etherless-cli} e la parte server;
+            \item \textbf{etherless-server}: modulo che ascolta gli eventi emessi da \textit{etherless-smart} per attivare le rispettive funzioni lambda. 
+        \end{itemize}
         Ognuna di queste operazioni dovrà poi essere caricata e versionata tramite \textit{GitHub} o \textit{GitLab}.
     \subsection{Aspetti postivi}
     \begin{itemize}
         \item Ethereum e la tecnologia della blockchain più in generale sono tematiche molto attuali ed innovative che suscitano interesse tra i componenti del gruppo
         anche per le possibili applicazioni future;
-        \item L'azienda ha avvallato delle richieste chiare e precise che hanno dimostrato serietà da parte di quest'ultima, aspetto valutato positivamente dal gruppo.
+        \item L'azienda ha avvallato delle richieste chiare e precise, aspetto valutato positivamente dal gruppo.
     \end{itemize}
     \subsection{Criticità e fattori di rischio}
     \begin{itemize}
