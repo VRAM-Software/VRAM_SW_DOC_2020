@@ -27,6 +27,12 @@
 - toolkit
 - Qt
 - React
-
+- capitolato
+- Git
+- GitHub
+- Slack
+- Telegram
+- Google Drive
+- Google Calendar
 
 
