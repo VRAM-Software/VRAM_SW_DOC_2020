@@ -28,3 +28,11 @@
 	\newpage
 	\input{res/sections/#1}
 }
+
+% Comandi per aggiungere padding a parole contenute nella tabella; è una specie di strut (un carattere invisibile)
+\newcommand\Tstrut{\rule{0pt}{2.6ex}} % top padding
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}} % bottom padding
+\newcommand{\TBstrut}{\Tstrut\Bstrut} % top & bottom padding
+
+\newcommand{\glo}{$_G$} %Comando per aggiungere il pedice G
+\newcommand{\glosp}{$_G$ } %Comando per aggiungere il pedice G con spazio
