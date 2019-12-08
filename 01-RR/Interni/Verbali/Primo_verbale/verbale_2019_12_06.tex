@@ -1,0 +1,32 @@
+%documento di prova per testare il template, può essere usato come base per la creazione dei documenti finali
+
+\documentclass[12pt,a4paper]{article} %formato del documento e grandezza caratteri
+
+\input{../../../../Template-LaTeX/package.tex} %include il file package.tex
+\input{config/config_latex.tex} %inclusione file che permette di modificare i vari comandi custom
+\input{../../../../Template-LaTeX/template_latex.tex} %inclusione file principale con la pagina del titolo
+\input{res/log-table.tex} %inclusione file con tabella diario delle modifiche
+\pagebreak
+
+% #### INDICE (tableofcontents )####
+\pagenumbering{Roman} %Pagine con i  numeri romani + reset a I
+\renewcommand{\footrulewidth}{1pt} %Di default footrulewidth==0 e quindi è invisibile
+\tableofcontents %Provoca la stampa dell'indice
+\label{LastPageRoman} %Indica l'ultima pagina dell'indice
+\rfoot{\thepage\ di \pageref{LastPageRoman}} %Pagina n di m, con numeri Romani
+\clearpage
+
+% #### PARTE PRINCIPALE (mainmatter) ####
+\pagenumbering{arabic} %Pagine con i numeri arabi + reset a 1
+\rfoot{\thepage\ di \pageref{LastPage}} %Pagina n di m, con numeri Arabi; usa il pacchetto "lastpage", in caso non sia possibile usare tale pacchetto mettere al fondo dell'ultima pagina "\label{LastPage}"
+\clearpage
+
+\setcounter{secnumdepth}{4} %Permette di andare fino alla profondità del paragraph con la numerazione delle sezioni
+
+\pagebreak
+\input{res/verbale_06_12_2019.tex}
+\pagebreak
+
+\input{res/track_log.tex}
+
+\end{document}

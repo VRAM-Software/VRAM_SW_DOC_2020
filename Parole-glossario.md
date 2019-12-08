@@ -1,3 +1,11 @@
+- stream-processing
+- LDAP
+- Notifiche push
+- Architettura scalabile
+- Swift
+- Pattern publisher/subscriber
+- gRPC
+- Test unitari
 - machine learning
 - AWS Sage Maker
 - intelligenza artificiale
@@ -49,4 +57,3 @@
 - Business Logic
 - Bootstrap
 - Big data
-- stream-processing
