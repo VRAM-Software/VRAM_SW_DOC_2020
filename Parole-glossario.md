@@ -1,0 +1,8 @@
+LDAP
+Notifiche push
+Architettura scalabile
+Swift
+Pattern publisher/subscriber
+REST API
+gRPC
+Test unitari
