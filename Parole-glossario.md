@@ -1,8 +1,59 @@
-LDAP
-Notifiche push
-Architettura scalabile
-Swift
-Pattern publisher/subscriber
-REST API
-gRPC
-Test unitari
+- machine learning
+- AWS Sage Maker
+- intelligenza artificiale
+- architettura a multiservizi
+- amazon web services
+- AWS Elastic Container Service
+- AWS Dynamo DB
+- AWS Elastic Transcoder
+- AWS Rekognition
+- Node JS
+- Python
+- HTML5
+- CSS3
+- Javascript
+- API Restful, JSON, RESTful API DLS(description languages), REST 
+- PoC (Proof of Concept)
+- feature
+- stakeholders
+- BDL(business domain language), BAL(business application language), BDD(Behaviour Driven Development)
+- repository
+- Gherkin, Hiptest, Cucumber
+- GUI
+- NLP (Natural Language Processing)
+- Dependency parser
+- OpenAPI, Swagger, OWL
+- framework
+- toolkit
+- Qt
+- React
+- capitolato
+- Git
+- GitHub
+- Slack
+- Telegram
+- Google Drive
+- Google Calendar
+- Dati operativi
+- Fattori influenzanti
+- IoT
+- Apache Kafka
+- Time series database
+- Timestamp
+- Metadati
+- PostgreSQL
+- TimescaleDB
+- ClickHouse
+- Contanerizzazione
+- Docker
+- Business Logic
+- Bootstrap
+- Big data
+- LDAP
+- Notifiche push
+- Architettura scalabile
+- Swift
+- Pattern publisher/subscriber
+- REST API
+- gRPC
+- Test unitari
