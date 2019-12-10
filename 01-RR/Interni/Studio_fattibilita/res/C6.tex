@@ -1,15 +1,15 @@
-\subsection{Capitolato 6 - ThiReMa}
-\subsubsection{Informazioni generali}
+\section{Capitolato 6 - ThiReMa}
+\subsection{Informazioni generali}
 \begin{itemize}
 	\item Nome: ThiReMa;
 	\item Proponente: Sanmarco Informatica;
 	\item Committente: Prof. Tullio Vardanega e Prof. Riccardo Cardin;
 \end{itemize}
-\subsubsection{Descrizione}
+\subsection{Descrizione}
 Lo scopo di questo progetto è di creare un'applicazione web che permetta di valutare la correlazione fra dati operativi\glosp e fattori influenzanti\glo in ambito IoT\glo. I dati saranno ricavati da dispositivi IoT\glosp eterogenei tramite piattaforma Apache Kafka\glo, quindi il software si occuperà di raccolta, storicizzazione, monitoraggio, analisi e presentazione dei dati.
 L'obiettivo finale del progetto è di rendere i processi aziendali intelligenti trasformando i dati in informazioni, così da permettere ad esempio la pianificazione di manutenzioni predittive calcolate su informazioni reali, in automatico.
 
-\subsubsection{Obiettivi di progetto}
+\subsection{Obiettivi di progetto}
 Realizzare il prodotto \textbf{ThiReMa}, una web application che raccoglierà dati da dispositivi IoT\glosp eterogenei tramite piattaforma Apache Kafka, li monitorerà e storicizzerà in un time series database\glosp e li presenterà elaborati all'utente tramite interfaccia web. Inoltre dovrà inviare notifiche tempestive agli operatori tramite un servizio basato su Telegram\glo e permettere, sempre tramite tale servizio, di comandare i dispositivi IoT\glosp stessi.
 \begin{itemize}
 	\item \textbf{Piattaforma Kafka}: Questa piattaforma di stream-processing\glosp distribuita si occuperà della raccolta dei dati dai vari sensori e del loro indirizzamento al database. Sarà inoltre usata per leggere, elaborare e presentare gli storici dei dati stessi.
@@ -20,7 +20,7 @@ Realizzare il prodotto \textbf{ThiReMa}, una web application che raccoglierà da
 Ogni feature\glosp dovrà essere istanziata tramite uso della tecnologia di contanerizzazione\glosp Docker\glo, così da rendere il più possibile le componenti del sistema manutenibili singolarmente.
 
 
-\subsubsection{Tecnologie interessate}
+\subsection{Tecnologie interessate}
 \begin{itemize}
 	\item Kafka\glosp: piattaforma di stream-processing\glosp distribuito, permette di raccogliere e monitorare flussi di record di dati come se fossero una coda di messaggi. Permette anche la storicizzazione e l'elaborazione di questi stream di dati.	
 	\item Time series database\glosp: sono database molto efficienti nella storicizzazione di dati IoT\glo, in quanto occupano poca memoria pur mantenendo le informazioni basilari necessarie. A questi database è possibile affiancare altri database per contenere i metadati dei dispositivi IoT\glosp ed i dati degli utenti. Alcuni possibili database sono PostgreSQL\glo, TimescaleDB\glo, ClickHouse\glo.
@@ -28,7 +28,7 @@ Ogni feature\glosp dovrà essere istanziata tramite uso della tecnologia di cont
 	\item Bootstrap\glosp: popolare framework\glosp CSS utilizzato per realizzare l'interfaccia grafica di siti ed applicazioni web. È consigliato il suo uso per la realizzazione dell'interfaccia web dell'applicazione.
 	\item Docker\glosp: è una tecnologia di contaneirizzazione\glosp che permette di eseguire in modo efficiente più applicativi software in ambienti dedicati ed isolati risiedenti in un'unica macchina fisica. Tali ambienti sono detti container e permettono di eseguire più servizi in un'unica macchina fisica rendendoli indipendenti gli uni dagli altri, è quindi possibile fermare un container lasciando gli altri regolarmente attivi.
 \end{itemize} 
-\subsubsection{Aspetti positivi}
+\subsection{Aspetti positivi}
 \begin{itemize} 
 	\item Sviluppo di competenze nell'ambito IoT\glo, molto richieste dal mondo del lavoro ed interessanti per i membri del gruppo.
 	\item Sviluppo di conoscenze in ambito Big Data\glosp ed analisi dei dati, molto richieste attualmente dal mondo del lavoro e probabilmente anche in futuro.
@@ -36,10 +36,10 @@ Ogni feature\glosp dovrà essere istanziata tramite uso della tecnologia di cont
 	\item Architettura del sistema ben definita e componenti ben chiare.
 	\item L'ambito del capitolato è interessante per tutti i membri del gruppo.
 \end{itemize}
-\subsubsection{Criticità e fattori di rischio}
+\subsection{Criticità e fattori di rischio}
 \begin{itemize}
 	\item Numero elevato di componenti da realizzare ed integrare che comportano di conseguenza molte tecnologie da apprendere. 
 	\item Probabile necessità di effettuare test in sede aziendale per avere accesso ai dispositivi fisici.
 \end{itemize}
-\subsubsection{Conclusioni}
+\subsection{Conclusioni}
 Il gruppo ha trovato l'ambito di applicazione del problema interessante ed ha apprezzato la chiarezza con cui sono definite le varie parti del sistema. Proprio l'elevato numero di componenti da realizzare ha però fatto calare la volontà dei membri del gruppo a svolgere questo progetto.
