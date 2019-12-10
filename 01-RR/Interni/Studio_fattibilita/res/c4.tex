@@ -8,7 +8,7 @@
 \end{itemize}
 
 \subsection{Descrizione}
-Con questo capitolato, Zucchetti mira a realizzre due plug-in\glosp per lo strumento di monitoraggio Grafana\glo che applichi gli algoritmi di Support Vector Machine(SVM)\glosp e Regressione Lineare(RL)\glosp al flusso di dati che sono stati ricevuti per allarmi o segnalazione tra la linea di produzione del software e le segnalazioni tra gli operatori del servizio Cloud\glo.
+Con questo capitolato, Zucchetti mira a realizzare due plug-in\glosp per lo strumento di monitoraggio Grafana\glo. Essi devono applicare gli algoritmi di Support Vector Machine(SVM)\glosp e Regressione Lineare(RL)\glosp al flusso di dati al fine di prevedere livelli al di sopra di una certa soglia e quindi generare un allarme, oppure permettere agli operatori del servizio Cloud\glosp di generare segnalazioni dei punti critici che l’erogazione mette in evidenza. In tal modo la linea di produzione del software può intervenire con cognizione di causa sul sistema.
 
 \subsection{Requisiti e finalità di progetto}
 Il sistema richiede due plug-in\glosp di Grafana\glosp scritti in Javascript\glosp che eseguiranno i calcoli letti da un file json\glosp e produrranno valori tali da essere aggiunti al flusso di monitoraggio. In particolare viene richiesto di:
@@ -22,10 +22,10 @@ Il sistema richiede due plug-in\glosp di Grafana\glosp scritti in Javascript\glo
 Opzionalemente è richiesto di implementare le seguenti funzionalità:
 \begin{itemize}
 	\item Offrire la possibilità di definire degli "alert\glo" in base a livelli di soglia raggiunti dai nodi collegati alle previsioni
-	\item Fornire i dati che definiscono bontà dei modelli di previsione utilizzati
+	\item Fornire i dati che definiscono la bontà dei modelli di previsione utilizzati
 	\item Offrire la possibilità di applicare delle trasformazioni alle misure lette dal campo per ottenere delle regressioni\glosp esponenziali o logaritmiche
-	\item Offrire la possiblità di addestrare SVM\glosp o RL\glosp direttamente in Grafana\glo
-	\item Implementare dei meccanismi di apprendimento di flusso, per poter disporre di sistemi di previsione che si adattano costantemente ai dati rilevati sul campo
+	\item Offrire la possibilità di addestrare SVM\glosp o RL\glosp direttamente in Grafana\glo
+	\item Implementare dei meccanismi di apprendimento di flusso, per poter disporre di sistemi di previsione che si adattino costantemente ai dati rilevati sul campo
 	\item Utilizzare altri metodi di previsione che possano dare benefici alla previsione dei dati, tra cui la versione delle SVM\glosp adattate alla regressione\glosp o piccole reti neurali\glosp per la classificazione
 \end{itemize}
 
@@ -33,18 +33,19 @@ Opzionalemente è richiesto di implementare le seguenti funzionalità:
 \begin{itemize}
 	\item \textbf{Javascript}: linguaggio di programmazione richiesto per costruire i plug-in\glosp di Grafana\glosp ed eseguire i calcoli tramite SVM\glosp e RL\glosp per fare le previsioni
 	\item \textbf{Grafana}: sistema di monitoraggio open-source\glosp estendibile con plug-in\glosp javascript\glo
-	\item \textbf{Libreria Javascript per reti neurali}: librerie che permettono di implementare reti neurali\glosp per migliorare le previsioni, utili a soddisfare uno dei requisiti opzionali
+	\item \textbf{Librerie Javascript per reti neurali}: librerie che permettono di implementare reti neurali\glosp per migliorare le previsioni, utili a soddisfare uno dei requisiti opzionali
 \end{itemize}
- 
+
 \subsection{Aspetti positivi}
 \begin{itemize} 
-	\item Svolgere questo capitolato permette di acquisire competenze in ambito di analisi e previsione dei dati, molto richieste in ambito lavorativo.
-	\item La presentazione del problema è stata molto chiara e l'azienda è apparsa molto disponibile.
-	\item Gli algoritmi di SVM\glosp e RL\glosp verranno forniti dall'azienda.
+	\item Svolgere questo capitolato permette di acquisire competenze in ambito di analisi e previsione dei dati, molto richieste in ambito lavorativo;
+	\item La presentazione del problema è stata molto chiara e l'azienda è apparsa molto disponibile;
+	\item Gli algoritmi di SVM\glosp e RL\glosp verranno forniti dall'azienda;
+  \item L'azienda si rende disponibile a impartire delle basi di machine learning\glosp che non sono fornite nel nostro corso di laurea.
 \end{itemize}
 \subsection{Criticità e fattori di rischio}
 \begin{itemize}
 	\item Gli algoritmi da utilizzare sono basati su concetti matematici e valutati di non facile apprendimento e che porteranno ad una fase di studio non indifferente. 
 \end{itemize}
 \subsection{Conclusione}
-Il gruppo ha trovato molto chiaro e definito il problema, ma i concetti matematici richiesti per affrontarlo hanno demotivato l'interesse del gruppo verso questa scelta.
+Il gruppo ha trovato molto chiaro e definito il problema, inoltre l'azienda, forse anche perché di grandi dimensioni, si è mostrata molto disponibile a dedicare risorse per i gruppi che sceglieranno il suo capitolato.
