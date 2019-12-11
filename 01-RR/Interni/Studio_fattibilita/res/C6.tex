@@ -11,14 +11,26 @@ L'obiettivo finale del progetto è di rendere i processi aziendali intelligenti 
 
 \subsection{Obiettivi di progetto}
 Realizzare il prodotto \textbf{ThiReMa}, una web application che raccoglierà dati da dispositivi IoT\glosp eterogenei tramite piattaforma Apache Kafka, li monitorerà e storicizzerà in un time series database\glosp e li presenterà elaborati all'utente tramite interfaccia web. Inoltre dovrà inviare notifiche tempestive agli operatori tramite un servizio basato su Telegram\glo e permettere, sempre tramite tale servizio, di comandare i dispositivi IoT\glosp stessi.
-\begin{itemize}
-	\item \textbf{Piattaforma Kafka}: Questa piattaforma di stream-processing\glosp distribuita si occuperà della raccolta dei dati dai vari sensori e del loro indirizzamento al database. Sarà inoltre usata per leggere, elaborare e presentare gli storici dei dati stessi.
-	\item \textbf{Time series database}: Questi database sono molto efficienti per archiviare dati IoT\glosp in quanto usano il timestamp\glosp della lettura come chiave, a cui poi basterà associare il valore letto. Oltre ai dati delle misurazioni dovranno essere storicizzati i loro metadati\glosp ed i dati degli utenti del sistema.
-	Alcuni esempi consigliati sono: PostgreSQL\glo, TimescaleDB\glo, ClickHouse\glo.
-	\item \textbf{Interfaccia web}: Questa interfaccia dovrà permettere la visualizzazione dei dati raccolti, la loro correlazione e la loro gestione. Dovrà permettere di gestire i sensori, gli impianti e gli utenti del sistema.
-\end{itemize} 
-Ogni feature\glosp dovrà essere istanziata tramite uso della tecnologia di contanerizzazione\glosp Docker\glo, così da rendere il più possibile le componenti del sistema manutenibili singolarmente.
 
+\subsection{Requisiti}
+\begin{itemize}
+	\item Lettura dati da gateway e sensori IoT\glosp tramite Apache Kafka\glo;
+	\item Salvataggio dei dati su time series database\glosp come TimescaleDB\glo, ClickHouse\glosp tramite Apache Kafka\glo;
+	\item Creazione di una web application per presentare i dati raccolti;
+	\item Gestione di utenti, ruoli e gruppi tramite web application;
+	\item Possibilità di configurare da quali dispositivi i dati devono essere raccolti;
+	\item Possibilità di mettere in correlazione i dati tra loro, scegliendo quali visualizzare;
+	\item Possibilità di inviare comandi di configurazione o azione ai gateway tramite web application o Telegram\glo;
+	\item Deve prevedere dei meccanismi di avviso e notifica per ente.
+\end{itemize}
+Opzionalemente è richiesto di implementare le seguenti funzionalità:
+\begin{itemize}
+	\item Possibilità di impostare una frequenza di interrogazione dei dispositivi ed invio dati;
+	\item Possibilità di specificare delle funzioni di accumulo sui dati;
+	\item Rappresentare i dei dati raccolti e le correlazioni tramite grafici;
+	\item Possibilità di scegliere fra più algoritmi di correlazione;
+	\item Sviluppare ed istaziare le feature\glosp tramite uso della tecnologia di contanerizzazione\glosp Docker\glo.
+\end{itemize}
 
 \subsection{Tecnologie interessate}
 \begin{itemize}
