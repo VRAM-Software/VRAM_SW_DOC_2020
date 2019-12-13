@@ -57,3 +57,5 @@
 - Business Logic
 - Bootstrap
 - Big data
+- Access Point
+- Bluetooth
