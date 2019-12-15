@@ -52,7 +52,7 @@
 - PostgreSQL
 - TimescaleDB
 - ClickHouse
-- Contanerizzazione
+- Containerizzazione
 - Docker
 - Business Logic
 - Bootstrap
