@@ -57,6 +57,7 @@
 - Business Logic
 - Bootstrap
 - Big data
+- Workflow
 - Access Point
 - Bluetooth
 Da qui in poi sono parole che trovi sullo studio di fattibilità di c2 se hai bisogno di un contesto
