@@ -6,46 +6,46 @@
         \item \textbf{Committente}: Prof. Tullio Vardanega e Prof. Riccardo Cardin.
     \end{itemize}
 \subsection{Descrizione}
-    Etherless è una \textit{Cloud Application Platform} che permette agli sviluppatori che la utilizzano di caricare nel cloud delle funzioni
-    \textit{JavaScript}. Tali procedure possono poi essere acquistate da terzi tramite l'impiego della criptovaluta \textit{Ethereum} implementata
-    grazie alla tecnologia della \textit{blockchain}.
+    Etherless è una \textit{Cloud Application Platform}\glosp che permette agli sviluppatori che la utilizzano di caricare nel cloud\glosp delle funzioni
+    \textit{JavaScript}\glo. Tali procedure possono poi essere acquistate da terzi tramite l'impiego della criptovaluta\glosp \textit{Ethereum}\glosp implementata
+    grazie alla tecnologia della \textit{blockchain}\glo.
 \subsection{Obiettivi di progetto}
     Il progetto si propone di aiutare gli sviluppatori fornendo:
     \begin{itemize}
-        \item un framework \textit{Serverless} che gestisca il costo computazionale della funzione;
-        \item un servizio di \textit{Smart Contracts} che sovrintenda il processo di pagamento.
+        \item un framework\glosp \textit{Serverless}\glosp che gestisca il costo computazionale della funzione;
+        \item un servizio di \textit{Smart Contracts}\glosp che sovrintenda il processo di pagamento.
     \end{itemize}
     Quest'ultima tecnologia sarà di supporto anche per l'acquirente in quanto assicurerà il completamento della transazione solo a lavoro verificato e completato.
 \subsection{Requisiti di progetto}
 È richiesto di dividere lo sviluppo in tre fasi:
 \begin{itemize}
-   	\item \textbf{Local}: utilizzo dell'applicativo in ambiente locale, in cui può essere utilizzato \textit{Ethereum testrpc} di \textit{Truffle} per
-   	l'emulazione della blockchain;
+   	\item \textbf{Local}: utilizzo dell'applicativo in ambiente locale, in cui può essere utilizzato \textit{Ethereum testrpc}\glosp di \textit{Truffle} per
+   	l'emulazione\glosp della blockchain\glo;
    	\item \textbf{Test}: utilizzo dell'applicativo in ambiente di testing, in cui può essere usata la soluzione proposta al punto precedente;
-   	\item \textbf{Staging}: utilizzo dell'applicativo in un ambiente pubblico, in tal caso si potrà usufruire di \textit{Ropsten Ethereum} come rete di testing.
+   	\item \textbf{Staging}: utilizzo dell'applicativo in un ambiente pubblico, in tal caso si potrà usufruire di \textit{Ropsten Ethereum}\glosp come rete di testing.
 \end{itemize}
 Inoltre è obbligatorio separare il software in tre parti:
 \begin{itemize}
    	\item \textbf{etherless-cli}: modulo attraverso il quale lo sviluppatore interagisce con Etherless;
    	\item \textbf{etherless-smart}: modulo per l'interazione tra \textit{etherless-cli} e la parte server;
-   	\item \textbf{etherless-server}: modulo che ascolta gli eventi emessi da \textit{etherless-smart} per attivare le rispettive funzioni lambda. 
+   	\item \textbf{etherless-server}: modulo che ascolta gli eventi emessi da \textit{etherless-smart} per attivare le rispettive funzioni lambda\glo. 
 \end{itemize}
-Ognuna di queste operazioni dovrà poi essere caricata e versionata tramite \textit{GitHub} o \textit{GitLab}.
+Ognuna di queste operazioni dovrà poi essere caricata e versionata tramite \textit{GitHub}\glosp o \textit{GitLab}\glo.
 \subsection{Tecnologie interessate}
     Per l'implementazione delle varie funzionalità vengono date dall'azienda delle linee guida sulle tecnologie da utilizzare:
     \begin{itemize}
-        \item \textbf{Typescript 3.6}: linguaggio di programmazione da impiegare, tramite l'approccio \textit{Promise} o \textit{async-await}, nello sviluppo della piattaforma \textit{Etherless};
-        \item \textbf{Solidity}: linguaggio per la creazione e la gestione degli \textit{Smart Contracts};
-        \item \textbf{AWS Lambda}: piattaforma computazione serverless fornita da \textit{Amazon} per la coordinazione degli eventi;
-        \item \textbf{Serverless Framework}: framework Web per la creazione di applicazioni su \textit{AWS Lambda};
-        \item \textbf{typescript-eslint}: strumento di analisi statica del codice \textit{Typescript}.
+        \item \textbf{Typescript 3.6}\glo: linguaggio di programmazione da impiegare, tramite l'approccio \textit{Promise}\glosp o \textit{async-await}\glo, nello sviluppo della piattaforma \textit{Etherless};
+        \item \textbf{Solidity}\glo: linguaggio per la creazione e la gestione degli \textit{Smart Contracts}\glo;
+        \item \textbf{AWS Lambda}\glo: piattaforma computazione serverless fornita da \textit{Amazon} per la coordinazione degli eventi;
+        \item \textbf{Serverless Framework}\glo: framework\glosp Web per la creazione di applicazioni su \textit{AWS Lambda}\glo;
+        \item \textbf{typescript-eslint}\glo: strumento di analisi statica\glosp del codice \textit{Typescript}\glo.
     \end{itemize}
-    \textit{AWS Lambda} può essere corredata con altri componenti quali: \textit{AWS API Gateway} (per eventi HTTP), \textit{AWS DynamoDB} (database non relazionale)
-    o \textit{AWS S3} (servizio di memorizzazione). Tutto questo poi può essere gestito tramite \textit{AWS CloudFormation} (piattaforma per l'organizzazione delle
+    \textit{AWS Lambda}\glosp può essere corredata con altri componenti quali: \textit{AWS API Gateway}\glosp (per eventi HTTP\glo), \textit{AWS DynamoDB}\glosp (database non relazionale\glo)
+    o \textit{AWS S3}\glosp (servizio di memorizzazione). Tutto questo poi può essere gestito tramite \textit{AWS CloudFormation}\glosp (piattaforma per l'organizzazione delle
     risorse AWS).
 \subsection{Aspetti positivi}
 \begin{itemize}
-    \item Ethereum e la tecnologia della blockchain più in generale sono tematiche molto attuali e innovative che suscitano interesse tra i componenti del gruppo
+    \item Ethereum\glosp e la tecnologia della blockchain\glosp più in generale sono tematiche molto attuali e innovative che suscitano interesse tra i componenti del gruppo
     anche per le possibili applicazioni future;
     \item L'azienda ha avvallato delle richieste chiare e precise, aspetto valutato positivamente dal gruppo.
 \end{itemize}

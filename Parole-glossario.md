@@ -60,3 +60,29 @@
 - Workflow
 - Access Point
 - Bluetooth
+Da qui in poi sono parole che trovi sullo studio di fattibilità di c2 se hai bisogno di un contesto
+- Cloud Application Platform
+- cloud
+- criptovaluta
+- Ethereum
+- blockchain
+- Serverless
+- Smart contracts
+- Ethereum testrpc
+- emulazione
+- Ropsten Ethereum
+- funzioni lambda
+- GitLab
+- Typescript 3.6
+- approccio Promise
+- approccio async-await
+- Solidity
+- AWS Lambda
+- Serverless Framework
+- typescript-eslint
+- analisi statica
+- AWS API Gateway
+- HTTP
+- database non relazionale
+- AWS S3
+- AWS CloudFormation
