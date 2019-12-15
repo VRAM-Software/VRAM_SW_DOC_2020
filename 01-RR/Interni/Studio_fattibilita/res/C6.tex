@@ -9,16 +9,28 @@
 Lo scopo di questo progetto è di creare un'applicazione web che permetta di valutare la correlazione fra dati operativi\glosp e fattori influenzanti\glo in ambito IoT\glo. I dati saranno ricavati da dispositivi IoT\glosp eterogenei tramite piattaforma Apache Kafka\glo, quindi il software si occuperà di raccolta, storicizzazione, monitoraggio, analisi e presentazione dei dati.
 L'obiettivo finale del progetto è di rendere i processi aziendali intelligenti trasformando i dati in informazioni, così da permettere ad esempio la pianificazione di manutenzioni predittive calcolate su informazioni reali, in automatico.
 
-\subsection{Obiettivi di progetto}
+\subsection{Obiettivi del progetto}
 Realizzare il prodotto \textbf{ThiReMa}, una web application che raccoglierà dati da dispositivi IoT\glosp eterogenei tramite piattaforma Apache Kafka, li monitorerà e storicizzerà in un time series database\glosp e li presenterà elaborati all'utente tramite interfaccia web. Inoltre dovrà inviare notifiche tempestive agli operatori tramite un servizio basato su Telegram\glo e permettere, sempre tramite tale servizio, di comandare i dispositivi IoT\glosp stessi.
-\begin{itemize}
-	\item \textbf{Piattaforma Kafka}: Questa piattaforma di stream-processing\glosp distribuita si occuperà della raccolta dei dati dai vari sensori e del loro indirizzamento al database. Sarà inoltre usata per leggere, elaborare e presentare gli storici dei dati stessi.
-	\item \textbf{Time series database}: Questi database sono molto efficienti per archiviare dati IoT\glosp in quanto usano il timestamp\glosp della lettura come chiave, a cui poi basterà associare il valore letto. Oltre ai dati delle misurazioni dovranno essere storicizzati i loro metadati\glosp ed i dati degli utenti del sistema.
-	Alcuni esempi consigliati sono: PostgreSQL\glo, TimescaleDB\glo, ClickHouse\glo.
-	\item \textbf{Interfaccia web}: Questa interfaccia dovrà permettere la visualizzazione dei dati raccolti, la loro correlazione e la loro gestione. Dovrà permettere di gestire i sensori, gli impianti e gli utenti del sistema.
-\end{itemize} 
-Ogni feature\glosp dovrà essere istanziata tramite uso della tecnologia di contanerizzazione\glosp Docker\glo, così da rendere il più possibile le componenti del sistema manutenibili singolarmente.
 
+\subsection{Requisiti di progetto}
+\begin{itemize}
+	\item Lettura dati da gateway e sensori IoT\glosp tramite Apache Kafka\glo;
+	\item Salvataggio dei dati su time series database\glosp come TimescaleDB\glo, ClickHouse\glosp tramite Apache Kafka\glo;
+	\item Creazione di una web application per presentare i dati raccolti;
+	\item Gestione di utenti, ruoli e gruppi tramite web application;
+	\item Possibilità di configurare da quali dispositivi i dati devono essere raccolti;
+	\item Possibilità di mettere in correlazione i dati tra loro, scegliendo quali visualizzare;
+	\item Possibilità di inviare comandi di configurazione o azione ai gateway tramite web application o Telegram\glo;
+	\item Deve prevedere dei meccanismi di avviso e notifica per ente.
+\end{itemize}
+Opzionalmente è richiesto di implementare le seguenti funzionalità:
+\begin{itemize}
+	\item Possibilità di impostare una frequenza di interrogazione dei dispositivi ed invio dati;
+	\item Possibilità di specificare delle funzioni di accumulo sui dati;
+	\item Rappresentare i dati raccolti e le correlazioni tramite grafici;
+	\item Possibilità di scegliere fra più algoritmi di correlazione;
+	\item Sviluppare ed istanziare le feature\glosp tramite uso della tecnologia di containerizzazione\glosp Docker\glo.
+\end{itemize}
 
 \subsection{Tecnologie interessate}
 \begin{itemize}
@@ -26,7 +38,7 @@ Ogni feature\glosp dovrà essere istanziata tramite uso della tecnologia di cont
 	\item Time series database\glosp: sono database molto efficienti nella storicizzazione di dati IoT\glo, in quanto occupano poca memoria pur mantenendo le informazioni basilari necessarie. A questi database è possibile affiancare altri database per contenere i metadati dei dispositivi IoT\glosp ed i dati degli utenti. Alcuni possibili database sono PostgreSQL\glo, TimescaleDB\glo, ClickHouse\glo.
 	\item JAVA\glosp: popolare linguaggio di programmazione interpretato ed orientato agli oggetti. È consigliato il suo uso per realizzare la business logic\glosp del programma tramite piattaforma Kafka\glo.
 	\item Bootstrap\glosp: popolare framework\glosp CSS utilizzato per realizzare l'interfaccia grafica di siti ed applicazioni web. È consigliato il suo uso per la realizzazione dell'interfaccia web dell'applicazione.
-	\item Docker\glosp: è una tecnologia di contaneirizzazione\glosp che permette di eseguire in modo efficiente più applicativi software in ambienti dedicati ed isolati risiedenti in un'unica macchina fisica. Tali ambienti sono detti container e permettono di eseguire più servizi in un'unica macchina fisica rendendoli indipendenti gli uni dagli altri, è quindi possibile fermare un container lasciando gli altri regolarmente attivi.
+	\item Docker\glosp: è una tecnologia di containerizzazione\glosp che permette di eseguire in modo efficiente più applicativi software in ambienti dedicati ed isolati risiedenti in un'unica macchina fisica. Tali ambienti sono detti container e permettono di eseguire più servizi in un'unica macchina fisica rendendoli indipendenti gli uni dagli altri, è quindi possibile fermare un container lasciando gli altri regolarmente attivi.
 \end{itemize} 
 \subsection{Aspetti positivi}
 \begin{itemize} 
