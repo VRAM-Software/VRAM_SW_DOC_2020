@@ -1,11 +1,17 @@
-%documento di prova per testare il template, può essere usato come base per la creazione dei documenti finali
+% Main del glossario (http://www.treccani.it/vocabolario/glossario/)
+%
+% Per decidere quali parole inserire nel glossario  ho seguito queste linee guida:
+% 1) Parole bisognose di spiegazione (da definizione delle slide di Tullio) 
+% 2) Parole che potrebbero causare confusione o fraintendimenti (da risposta ricevuta all'incontro con i gruppi del primo lotto il 13/12/19)
+%
+% Non è quindi una lista delle tecnologie e servizi usati
 
 \documentclass[12pt,a4paper]{article} %formato del documento e grandezza caratteri
 
-\input{../../../../Template-LaTeX/package.tex} %include il file package.tex
-\input{config/config_latex.tex} %inclusione file che permette di modificare i vari comandi custom
-\input{../../../../Template-LaTeX/template_latex.tex} %inclusione file principale con la pagina del titolo
-\input{res/log-table.tex} %inclusione file con tabella diario delle modifiche
+\input{../../../Template-LaTeX/package.tex} %include il file package.tex
+\input{meta_dati.tex} %inclusione file che permette di modificare i vari comandi custom
+\input{../../../Template-LaTeX/template_latex.tex} %inclusione file principale con la pagina del titolo
+\input{log_table.tex} %inclusione file con tabella diario delle modifiche
 \pagebreak
 
 % #### INDICE (tableofcontents )####
@@ -23,10 +29,6 @@
 
 \setcounter{secnumdepth}{4} %Permette di andare fino alla profondità del paragraph con la numerazione delle sezioni
 
-\pagebreak
-\input{res/verbale_06_12_2019.tex}
-\pagebreak
-
-\input{res/track_log.tex}
+\include{res/definizioni}
 
 \end{document}
