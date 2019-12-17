@@ -1,0 +1,14 @@
+Come creare un nuovo documento:
+
+1)copiare le cartelle "img", "res" e il file main.tex, NON copiare la cartella "config"
+
+2)modificare con i dati specifici del documento i file dentro la cartella "res"
+
+3)nel file "main.tex" impostare il path per i file "package.tex", "config.tex" e "frontmatter.tex"
+  in modo che prendano il file dalla cartella "Template-LaTeX/config"
+
+4)scrivere le sezioni e metterle nella cartella "res"
+
+5)includere le sezioni dentro al file "main.tex"
+
+6)compilare il file "main.tex"
