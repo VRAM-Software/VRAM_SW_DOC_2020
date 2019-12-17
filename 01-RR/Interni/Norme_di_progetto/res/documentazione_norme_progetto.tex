@@ -1,0 +1,215 @@
+\section{Processi di supporto}
+    \subsection{Documentazione}
+        \subsubsection{Descrizione}
+            In questo capitolo verrà illustrato come il gruppo ha gestito il processo di redazione della documentazione utile ai fini del progetto.
+            Si andranno perciò a chiarire le fasi di costruzione del documento, la sua struttura, gli standard tipografici utilizzati e gli strumenti
+            usati per la stesura.
+        \subsubsection{Previsioni}
+            Tale sezione si prefigge due obiettivi:
+            \begin{itemize}
+                \item standardizzare la scrittura della documentazione al fine di offrire degli elaborati consistenti e coerenti tra di loro;
+                \item dare delle linee guida per la produzione di documenti corretti e validi.
+            \end{itemize}
+        \subsubsection{Obiettivi}
+            Questo documento stabilisce delle norme per la produzione e la verifica dei prossimi elaborati. Tali indicazioni saranno condivise e seguite
+            da tutti gli elementi del gruppo.
+        \subsubsection{Ciclo di vita dei documenti}
+            Ogni documento, durante il suo ciclo di vita, attraversa tre fasi principali:
+            \begin{itemize}
+                \item \textbf{Stesura}: in questo stadio viene effettuata la redazione del documento seguendo le norme indicate e i template disponibili.
+                                        Il responsabile, a seguito di un'analisi preliminare, divide (se necessario) il lavoro tra vari redattori che procederanno
+                                        alla compilazione.
+                \item \textbf{Verifica}: terminata la fase di stesura i redattori sottometteranno l'elaborato al controllo dei verificatori. I verificatori, 
+                                         nominati in precedenza dal responsabile, analizzeranno il documento. Nel caso in cui si evidenzino delle criticità
+                                         segnaleranno le dovute modifiche ai redattori, in alternativa comunicheranno al responsabile la conformità del materiale.
+                \item \textbf{Approvazione}: alla fine il documento viene vagliato dal responsabile che ne approva ufficialmente il rilascio.
+            \end{itemize}
+        \subsubsection{Struttura dei documenti}
+            \paragraph{Template \LaTeX} \mbox{}\\ \mbox{}\\
+                Per la produzione di documenti consistenti e coerenti tra loro il gruppo ha deciso di creare un template \LaTeX\glosp che permette, al momento della
+                stesura, di concentrarsi unicamente sul contenuto e di non impegnare troppo tempo nella strutturazione della pagina. Il template è formato da
+                più parti, tra cui:
+                \begin{itemize}
+                    \item un file per la corretta formattazione della prima pagina;
+                    \item un file contenente i pacchetti \LaTeX\glosp utilizzati per una migliore rappresentazione dei contenuti;
+                    \item un file per modificare i comandi personalizzati, i quali garantiscono una maggiore modularità del template;
+                    \item due file per la gestione delle tabelle.
+                \end{itemize}
+            \paragraph{Prima pagina} \mbox{}\\ \mbox{}\\
+                Il frontespizio è strutturato in questo modo:
+                \begin{itemize}
+                    \item \textbf{Logo del gruppo}: corredato dal nome, il tutto centrato orizzontalmente;
+                    \item \textbf{Capitolato\glo}: nome del progetto scelto dal gruppo (\textit{Predire in Grafana}), centrato orizzontalmente;
+                    \item \textbf{Titolo del documento}: nome esplicativo del contenuto del documento, centrato orizzontalmente e in grassetto;
+                    \item \textbf{Data}: data di approvazione finale dell'elaborato, centrata orizzontalmente;
+                    \item \textbf{Tabella informativa}: contenente informazioni quali:
+                    \begin{itemize}
+                        \item versione del documento;
+                        \item nominativo dell'approvatore (e quindi responsabile) del documento;
+                        \item nominativo/i del/i redattore/i del documento;
+                        \item nominativo/i del/i verificatore/i del documento;
+                        \item stato del documento (approvato o non approvato);
+                        \item tipo d'uso del documento (interno o esterno);
+                        \item nominativi dei destinatari del documento;
+                        \item email di riferimento del gruppo.
+                    \end{itemize} 
+                    \item \textbf{Descrizione}: breve riassunto del contenuto del documento.
+                \end{itemize}
+            \paragraph{Registro delle modifiche} \mbox{}\\ \mbox{}\\
+                La pagina successiva mostra una tabella contenente una raccolta cronologica delle modifiche avvenute sul documento.
+                Le colonne espongono i seguenti contenuti:
+                \begin{itemize}
+                    \item versione del documento dopo la modifica;
+                    \item data della modifica;
+                    \item nominativo del componente responsabile della modifica;
+                    \item ruolo del componente responsabile della modifica;
+                    \item breve descrizione della modifica effettuata;
+                \end{itemize}
+            \paragraph{Indice} \mbox{}\\ \mbox{}\\
+                L'indice riassume in modo schematico i contenuti del documento mostrando la loro suddivisione in sezioni, sottosezioni e paragrafi.
+                È presente all'inizio di ogni elaborato dopo il registro delle modifiche. I suoi elementi sono cliccabili e rimandano alla pagina
+                corrispondente. In alcuni documenti viene corredato di due liste:
+                \begin{itemize}
+                    \item \textbf{Lista delle immagini}: riportante le immagini utilizzate tramite rispettiva didascalia;
+                    \item \textbf{Lista delle tabelle}: riportante le tabelle utilizzate tramite rispettiva didascalia (sono esclusi il registro delle modifiche
+                                                  e il riepilogo tracciamenti)-
+                \end{itemize}
+            \paragraph{Contenuto} \mbox{}\\ \mbox{}\\
+                Il corpo principale del documento è così strutturato:
+                \begin{itemize}
+                    \item intestazione in alto con logo del gruppo riadattato a sinistra e nome del documento a destra;
+                    \item una riga divisoria;
+                    \item il contenuto della pagina formattato con una dimensione di 12 punti e la visualizzazione in A4 formato articolo
+                          (\verb|\documentclass{article}|);
+                    \item una riga divisoria opzionale in caso di appunti;
+                    \item eventuali note sul testo riportate con un numero progressivo a esponente;
+                    \item una riga divisoria;
+                    \item il contenuto a piè di pagina con a destra il numero progressivo della pagina visualizzata sul totale (nell'indice invece dei numeri
+                          arabi vengono utilizzati quelli romani).
+                \end{itemize}
+        \subsubsection{Norme tipografiche}
+                \paragraph{Nomi dei file} \mbox{}\\ \mbox{}\\
+                    Per organizzare i file in modo più ordinato e corretto il gruppo ha scelto di seguire la pratica dello "snake\_case"\glo.
+                    Tale prassi, nell'ambito di questo progetto, è applicata seguendo tre regole:
+                    \begin{itemize}
+                        \item i file con nome composto da più parole useranno il carattere underscore come separatore;
+                        \item i nomi dei file saranno scritti interamente in minuscolo;
+                        \item non vengono tralasciate preposizioni di alcun tipo dal nome del file.
+                    \end{itemize}
+                \paragraph{Glossario}
+                    \begin{itemize}
+                        \item Ogni parola da inserire nel \textit{Glossario} è corredata da una "G" a pedice per tutte le sue occorrenze;
+                        \item sono escluse dalla regola precedente i titoli e il nome delle sezioni del documento.
+                    \end{itemize}
+                \paragraph{Stili di testo}
+                \begin{itemize}
+                    \item \textbf{Grassetto}: il grassetto viene usato solamente per evidenziare le parole a cui si vuole dare risalto e per la prima parola
+                                              di un elenco puntato se quest'ultimo è del tipo: \textbf{Termine}: definizione/spiegazione.
+                    \item \textbf{Corsivo}: il corsivo viene usato per evidenziare i nomi dei documenti oltre che per il nome dell'azienda
+                                            proponente (\textit{Zucchetti}) e del gruppo (\textit{VRAM Software}).
+                    \item \textbf{Maiuscolo}: in aggiunta alle normali regole dell'italiano le lettere maiuscole verranno utilizzate anche per riportare i nomi dei
+                                              documenti e di certi capitoli.
+                \end{itemize}
+                \paragraph{Elenchi puntati} \mbox{}\\ \mbox{}\\
+                    Ogni voce dell'elenco puntato sarà preceduta da un "•" (punto elenco) per quanto riguarda il primo livello e da un "-" per il secondo.
+                    Alla fine di ogni elemento, invece, si aggiunge il carattere ";" a meno che non sia l'ultimo dove va messo il segno di punteggiatura ".".
+                    Se la voce dell'elenco è del tipo termine-spiegazione/definizione il termine va in grassetto.
+                \paragraph{Convenzioni} \mbox{}\\ \mbox{}\\
+                    Vengono usate tre convenzioni per la data, l'orario (i quali prendono come riferimento ISO 8601) e la valuta. Le date saranno espresse nella forma: \newline \newline
+                    \centerline{\textbf{YYYY-MM-DD}} \newline \newline
+                    dove:
+                    \begin{itemize}
+                        \item \textbf{YYYY}: indica l'anno;
+                        \item \textbf{MM}: indica il mese e deve sempre avere due cifre;
+                        \item \textbf{DD}: indica il giorno e deve sempre avere due cifre.
+                    \end{itemize}
+                    Gli orari saranno invece rappresentati nella forma: \newline \newline
+                    \centerline{\textbf{HH:MM}} \newline \newline
+                    dove:
+                    \begin{itemize}
+                        \item \textbf{HH}: indica le ore (in formato 24 ore) e deve sempre avere due cifre;
+                        \item \textbf{MM}: indica i minuti e deve sempre avere due cifre.
+                    \end{itemize}
+                    La valuta infine sarà scritta nella forma: \newline \newline
+                    \centerline{\textbf{X.XXX,YY}} \newline \newline
+                    dove:
+                    \begin{itemize}
+                        \item \textbf{XXXX}: rappresenta la parte intera della somma;
+                        \item \textbf{.}: viene usato come separatore ogni tre cifre intere;
+                        \item \textbf{YY}: rappresenta la parte decimale della somma;
+                    \end{itemize}
+            \subsubsection{Produzione}
+                    Il progetto prevede la stesura di documenti che si dividono in interni ed esterni a seconda dei destinatari. Questi elaborati verranno poi valutati
+                    in quattro revisioni. Tali elementi progettuali saranno elencati e spiegati di seguito con le rispettive sigle.
+                \paragraph{Documenti esterni}
+                    \begin{itemize}
+                        \item \textbf{Analisi dei Requisiti - AdR}: contiene la descrizione degli attori del sistema e la loro interazione con i casi d'uso,
+                                                                    fornendo una visione chiara ai progettisti sul problema da trattare;
+                        \item \textbf{Manuale Utente - MU}: serve per guidare l'utente nell'utilizzo del software;
+                        \item \textbf{Manuale Sviluppatore - MS}: ha lo scopo di spiegare a eventuali sviluppatori esterni il funzionamento
+                                                                  del sistema;
+                        \item \textbf{Piano di Progetto - PdP}: dà indicazioni sulle tempistiche e i costi che il gruppo prevede d'impiegare
+                                                                per la realizzazione del progetto;
+                        \item \textbf{Piano di Qualifica - PdQ}: fornisce le specifiche riguardanti il controllo qualità dei processi e dei
+                                                                 prodotti tramite delle metriche misurabili.
+                    \end{itemize}
+                \paragraph{Documenti interni}
+                    \begin{itemize}
+                        \item \textbf{Glossario - G}: documento dove sono riportate i termini che necessitano di spiegazione o che potrebbero causare confusione o
+                                                      fraintendimenti;
+                        \item \textbf{Norme di Progetto - NdP}: linee guida per la gestione delle attività di progetto;
+                        \item \textbf{Studio di Fattibilità - SdF}: breve analisi di tutti i capitolati proposti.
+                    \end{itemize}
+                \paragraph{Verbale} \mbox{}\\ \mbox{}\\
+                    Il verbale della riunione è un documento particolare in quanto può essere sia interno che esterno. Sarà interno quando
+                    i partecipanti saranno solo i componenti del gruppo; esterno quando saranno presenti anche referenti dell'azienda.
+                    È inoltre presente la tabella "Riepilogo dei tracciamenti" che tiene segno delle modifiche discusse e
+                    approvate in sede d'incontro. Questo prospetto presenta una colonna con un codice nel formato: \newline \newline
+                    \centerline{\textbf{V(I/E)\_X.Y}} \newline \newline
+                    dove:
+                    \begin{itemize}
+                        \item \textbf{V(I/E)}: indica se il verbale è interno o esterno;
+                        \item \textbf{X}: indica il numero dell'incontro che si sta organizzando;
+                        \item \textbf{Y}: indica il numero della scelta.
+                    \end{itemize}
+                \paragraph{Revisioni}
+                \begin{itemize}
+                    \item \textbf{Revisione dei Requisiti - RR}: analisi iniziale del capitolato per concordare i requisiti col proponente;
+                    \item \textbf{Revisione di Progettazione - RP}: revisione intermedia per accertare la fattibilità del progetto;
+                    \item \textbf{Revisione di Qualifica - RQ}: revisione intermedia per l'approvazione delle verifiche e l'attivazione del processo di validazione;
+                    \item \textbf{Revisione di Accettazione - RA}: revisione finale per il collaudo del software e l'accertamento del soddisfacimento dei requisiti
+                                                                   presentati in RR.
+                \end{itemize}
+                \paragraph{Altre sigle}
+                    \begin{itemize}
+                        \item \textbf{Responsabile - Re};
+                        \item \textbf{Amministratore - Am};
+                        \item \textbf{Analista - An};
+                        \item \textbf{Progettista - Pr};
+                        \item \textbf{Programmatore - Pt};
+                        \item \textbf{Verificatore - Ve};
+                        \item \textbf{Proof of Concept - PoC}.
+                    \end{itemize}
+            \subsubsection{Elementi grafici}
+                    \paragraph{Immagini} \mbox{}\\ \mbox{}\\
+                        Le immagini sono sempre centrate e presentano una didascalia, tranne il logo nella prima pagina.
+                    \paragraph{Tabelle} \mbox{}\\ \mbox{}\\
+                        Le tabelle sono sempre centrate e presentano una didascalia, tranne il "Registro delle modifiche" e il "Riepilogo tracciamenti".
+                        Inoltre le tabelle presentano un'alternanza di colori per favorirne la lettura.
+                    \paragraph{Didascalie} \mbox{}\\ \mbox{}\\
+                        Le didascalie vengono indicate con un numero progressivo del tipo X.Y, dove:
+                        \begin{itemize}
+                            \item \textbf{X}: indica la sezione a cui appartiene l'elemento;
+                            \item \textbf{Y}: indica che tabella o immagine è della sezione.
+                        \end{itemize}
+            \subsubsection{Strumenti}
+                    \paragraph{\LaTeX} \mbox{}\\ \mbox{}\\
+                        Per stilare i documenti è stato usato il linguaggio di markup \LaTeX\glo. Questo linguaggio permette di scrivere dei testi mantenendo il focus
+                        sul contenuto e non sulla forma. La struttura infatti è stata dichiarata all'inizio del progetto e poi riutilizzata permettendo una gestione
+                        degli elaborati scalabile, modulare e ordinata.
+                    \paragraph{TeXStudio} \mbox{}\\ \mbox{}\\
+                        Per scrivere in \LaTeX\glosp viene usata l'IDE \textit{TeXStudio}\glosp creata appositamente per questo fine e che quindi offre delle scorciatoie
+                        per i vari comandi, un correttore automatico per la lingua italiana e un servizio di compilazione e visualizzazione dei PDF integrato;
+                    \paragraph{Lucidchart} \mbox{}\\ \mbox{}\\
+                        Per la creazione dei diagrammi UML\glosp e di altro tipo viene usata la piattaforma online Lucidchart\glo. \newline \newline
+                        \centerline{\url{https://www.lucidchart.com}}

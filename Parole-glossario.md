@@ -59,7 +59,7 @@
 - Big data
 - Workflow
 - Access Point
-- Bluetooth
+- Bluetooth<br/>
 Da qui in poi sono parole che trovi sullo studio di fattibilità di c2 se hai bisogno di un contesto
 - Cloud Application Platform
 - cloud
@@ -85,4 +85,10 @@ Da qui in poi sono parole che trovi sullo studio di fattibilità di c2 se hai bi
 - HTTP
 - database non relazionale
 - AWS S3
-- AWS CloudFormation
+- AWS CloudFormation<br/>
+Da qui in poi sono parole che trovi sulla parte documentazione delle norme di progetto
+- LaTeX
+- snake_case
+- TeXStudio
+- diagrammi UML
+- Lucidchart
