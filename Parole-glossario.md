@@ -91,5 +91,4 @@ Da qui in poi sono parole che trovi sulla parte documentazione delle norme di pr
 - snake_case
 - TeXStudio
 - diagrammi UML
-- diagrammi di Gantt
 - Lucidchart
