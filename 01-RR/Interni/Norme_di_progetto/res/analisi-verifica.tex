@@ -25,44 +25,48 @@
 			% 8lab l'ha fatto ma mi sembra di copiare e basta sinceramente	
 			Il nostro gruppo, per l'analisi statica del codice ha scelto di utilizzare SonarJS\glo, un analizzatore statico di codice JavaScript. 
 		\paragraph{Analisi dinamica}
-			L'analisi dinamica viene effettuata mediante test sul codice, quindi richiede l'esecuzione del prodotto SW. Questi test verificano e certificano il corretto funzionamento del prodotto. 
+			L'analisi dinamica viene effettuata mediante test sul codice, quindi richiede l'esecuzione del prodotto software. Questi test verificano e certificano il corretto funzionamento del prodotto, producendo una misura della qualità del prodotto. 
 			\subparagraph{Test}
 				Per la corretta verifica del codice, i test devono seguire regole ben precise che definiscono i parametri da definire e le proprietà che devono avere test per essere considerati efficaci:
-				\textbf{Parametri:} \\*
+				\textbf{Parametri da definire in un test:} \\*
 				\begin{itemize}
-					\item \textbf{}
-					\item \textbf{}
-					\item \textbf{}
-					\item \textbf{}
-					\item \textbf{}
+					\item L'input preso in considerazione
+					\item L'output che si aspetta di ricevere
+					\item L'ambiente, quindi hardware e sistema operativo, in cui viene eseguito il test
+					\item Lo stato iniziale del prodotto, precedente all'esecuzione del test
+					\item In caso di utilizzo di istruzioni opzionali aggiuntive esse devono essere note
+				\end{itemize} \\*
+				\textbf{Un test può essere definito efficace se:}
+				\begin{itemize}
+					\item I parametri citati sopra sono correttamente indicati
+					\item Il nome di un test deve essere autoesplicativo per capire subito che cosa si sta testando
+					\item Esso è ripetibile, quindi ci si aspetta un risultato costante per tutte le esecuzioni di quel test
+					\item In caso di fallimento del test, esso devo fornire informazioni utili a risolvere il problema identificato
+					\item In caso di possibili effetti indesiderati ci si aspetta un avvertimento
+					\item Esso è esaustivo e accurato, infatti devono poter identificare una parte del progetto che potrebbe essere causa di errori
 				\end{itemize}
+				Il cosiddetto software testing è un procedimento importante per misurare la qualità di un prodotto software, per questo motivo sono definiti cinque livelli che dividono i tipi di test da effettuare secondo una gerarchia. Essi sono: 
+				\begin{itemize}
+					\item \textbf{Test d'unità}
+					\item \textbf{Test d'integrazione}
+					\item \textbf{Test di sistema}
+					\item \textbf{Test di regressione}
+					\item \textbf{Test di accettazione}
+				\end{itemize} \\*
 				
-				\textbf{Proprietà}
-				\begin{itemize}
-					\item
-					\item
-					\item
-					\item
-					\item
-				\end{itemize}
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+				\textbf{Test d'unità} \\*
+				I test d'unità si definiscono tali perché controllano il corretto funzionamento di una sezione di codice specifica. Usualmente questi tipi di test vengono eseguiti su funzioni o, se si parla di programmazione ad oggetti, su un metodo di una classe, quindi su una parte minimale del codice. È buona norma rendere questi test automatici in modo da minimizzare il tempo di esecuzione e non devono richiedere l'interazione dello sviluppatore. Questo tipo di test viene scritto dal programmatore che sviluppa le singole unità, per verificare l'assenza di errori e documentare il funzionamento dell'unità. \\*
+				
+				
+				\textbf{Test d'integrazione} \\*
+				Eseguire test d'integrazione è il passo successivo ai test d'unità, infatti in questo livello del software testing si cerca di trovare anomalie ed errori tra le interfacce dei singoli componenti, previa conferma del corretto funzionamento delle singole unità. Usualmente questi tipi di test vengono effettuati testando componenti in modo iterativo per evitare di individuare più facilmente e velocemente i problemi. \\*
+				
+				\textbf{Test di sistema} \\*
+				I test di sistema controllano il funzionamento corretto del prodotto e verificano che il sistema soddisfi tutti i requisiti definiti nel documento: \textit{Analisi dei Requisiti}. Con l'esecuzione di questi test si riesce a definire e documentare tutte le funzionalità del sistema e possono individuare criticità come il problema del black-box\glo.
+				\\*
+				
+				\textbf{Test di regressione} \\*
+				I test di regressione sono dei particolari tipi di test che vanno a controllare l'integrazione tra il sistema e correzioni o estensioni del codice aggiunte successivamente. Questi test vengono eseguiti singolarmente per ogni aggiunta al sistema; per ogni estensione vengono eseguiti nel seguente ordine: il test d'unità, il test d'integrazione con il sistema e infine il test di sistema per confermare il corretto funzionamento del prodotto. \\*
+				
+				\textbf{Test di accettazione} \\*
+				I test di accettazione, o di collaudo, vengono effettuati ad ogni pre-rilascio, quindi dopo l'esecuzione dei test di sistema, essi servono a confermare il soddisfacimento dei requisiti da parte del committente infatti questi tipi di test ne richiedono la presenza. Se questi test vengono superati significa che il prodotto software è pronto per il rilascio. \\*
