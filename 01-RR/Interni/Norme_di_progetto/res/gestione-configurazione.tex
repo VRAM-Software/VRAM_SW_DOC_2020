@@ -8,20 +8,36 @@
 		L'obiettivo principale è quindi di rendere documenti e codice sorgente univocamente identificati e facilmente identificabili, evidenziandone versioni e modifiche. Vuole anche agevolare l'identificazione delle relazioni esistenti fra gli elementi e fa da supporto alla fase di verifica.
 	\subsubsection{Versionamento}
 		Le modifiche effettuate ai documenti ed ai file contenenti codice sorgente sono identificate da un numero di versione presente all'interno dei file stessi. Per quanto riguarda i documenti, ogni numero di versione avrà una corrispondente riga nella tabella delle modifiche così da avere uno storico delle modifiche effettuate al documento. Per il codice sorgente le modifiche effettuate in una versione saranno consultabili sul repository Git e saranno identificate da opportuni tag.
-		
-		* formato scelto per le versioni dei documenti
-		
-		* formato scelto per le versioni del software
+		\newline
+		Per identificare univocamente le versioni dei documenti seguiamo le indicazioni dell'ente \textit{ETSI}, dunque la numerazione delle versioni è composta da 3 cifre nel formato X.Y.Z e la prima bozza ha versione 0.0.1. Le modifiche al documento aggiorneranno le cifre nel seguente modo:
+		\begin{itemize}
+			\item \textbf{Z} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche editoriali\glosp al documento, es. X.Y.1, X.Y.2 etc.;
+			\item \textbf{Y} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche tecniche\glosp al documento. Se sono state eseguite modifiche sia editoriali che tecniche allora entrambe le cifre Z e Y saranno incrementate, es. X.1.1, X.2.2 etc;
+			\item \textbf{X} : Questa cifra viene incrementata ogni volta che viene rilasciata una nuova versione finale del documento, ovvero una versione di rilascio.			
+		\end{itemize}
+		La prima versione finale ha versione 1.1.1.
+		\newline
+		Durante la modifica e la revisione del documento le bozze vengono incrementate le cifre Z ed Y, es. 1.2.0, 1.2.1, 1.30, etc.
+		\newline
+		Quando il documento viene approvato come finale allora viene incrementata la cifra X, ad esempio la bozza 1.5.3 diventa la versione finale 2.1.1.
+		\newline
+		Ogni incremento sulle singole cifre è rigorosamente un +1, non possono essere saltati numeri.
 		
 	\subsubsection{Relazioni fra le parti del sistema}
 		* Assemblaggio delle varie componenti software / documenti in un elemento unico
 		
 	\subsubsection{Gestione delle modifiche}
-		* meccanismi di pull request previsti da Github
-	
-	\subsubsection{Gestione dei rilasci}
-		* gestione del rilascio dei pdf su drive - dei compilati del codice come pacchetti su github
-	
+		Al fine di monitorare e limitare le modifiche al ramo principale del repository, \textit{master}, è utilizzato il meccanismo di pull request fornito da Github. Ogni membro del gruppo può creare branch secondari su cui effettuare modifiche, tuttavia per unirle al branch \textit{master} è necessario aprire una pull request che dovrà essere revisionata dai verificatori tramite i servizi di revisione integrati in Github. Una volta revisionata positivamente è compito del responsabile del documento approvare la pull request ed effettuare quindi l'effettiva unione delle modifiche nel branch master.
+		\newline
+		In sintesi, per effettuare modifiche ai documenti sono previsti i seguenti passaggi:
+		\begin{itemize}
+			\item Contattare il responsabile del documento affinché autorizzi la modifica del documento;
+			\item Creare un branch secondario ed effettuare le modifiche al documento;
+			\item Aprire una pull request per unire le modifiche al ramo \textit{master};
+			\item I verificatori revisionano la pull request ed eventualmente richiedono aggiornamenti;
+			\item Completata la revisione il responsabile approva la pull request.
+		\end{itemize}
+		
 	\subsubsection{Repository}
 		Per tenere traccia di versioni e modifiche fatte a documenti e codice è utilizzato il sistema di versionamento distribuito Git, che può essere utilizzato tramite riga di comando o utilità come Github Desktop o GitKraken.
 		Il repository dei documenti è ospitato sul sito Github all'indirizzo: \url{https://github.com/marcoDallas/VRAM_SW_DOC_2020/}
