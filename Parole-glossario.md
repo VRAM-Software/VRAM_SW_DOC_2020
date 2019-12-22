@@ -1,88 +1,40 @@
-- stream-processing
-- LDAP
-- Notifiche push
-- Architettura scalabile
-- Swift
-- Pattern publisher/subscriber
-- gRPC
-- Test unitari
+- capitolato
 - machine learning
-- AWS Sage Maker
+- progetto
 - intelligenza artificiale
 - architettura a multiservizi
-- amazon web services
-- AWS Elastic Container Service
-- AWS Dynamo DB
-- AWS Elastic Transcoder
-- AWS Rekognition
-- Node JS
-- Python
-- HTML5
-- CSS3
-- Javascript
-- API Restful, JSON, RESTful API DLS(description languages), REST 
-- PoC (Proof of Concept)
+- stakeholder
 - feature
-- stakeholders
-- BDL(business domain language), BAL(business application language), BDD(Behaviour Driven Development)
-- repository
-- Gherkin, Hiptest, Cucumber
-- GUI
-- NLP (Natural Language Processing)
-- Dependency parser
-- OpenAPI, Swagger, OWL
-- framework
-- toolkit
-- Qt
-- React
-- capitolato
-- Git
-- GitHub
-- Slack
-- Telegram
-- Google Drive
-- Google Calendar
-- Dati operativi
-- Fattori influenzanti
-- IoT
-- Apache Kafka
-- Time series database
-- Timestamp
-- Metadati
-- PostgreSQL
-- TimescaleDB
-- ClickHouse
-- Contanerizzazione
-- Docker
-- Business Logic
-- Bootstrap
-- Big data
-- Workflow
-- Access Point
-- Bluetooth
-Da qui in poi sono parole che trovi sullo studio di fattibilità di c2 se hai bisogno di un contesto
-- Cloud Application Platform
-- cloud
-- criptovaluta
-- Ethereum
-- blockchain
-- Serverless
-- Smart contracts
-- Ethereum testrpc
+- containerizzazione
+- smart contracts
+- analisi statica
 - emulazione
-- Ropsten Ethereum
+- toolkit
+- alert
+- (protocollo) asincrono
+- business logic
+- dati operativi
+- fattori influenzanti
+- AWS
+- API
+- cloud
+- Serverless
 - funzioni lambda
-- GitLab
-- Typescript 3.6
 - approccio Promise
 - approccio async-await
-- Solidity
-- AWS Lambda
-- Serverless Framework
-- typescript-eslint
-- analisi statica
-- AWS API Gateway
-- HTTP
-- database non relazionale
-- AWS S3
-- AWS CloudFormation
+- contenitore (container)
+- progettazione
+- prodotto
+- versionamento (controllo versione)
+- workflow
+- PoC
+- repository
+- REST
+- Grafana
+- DevOps
+- SVM
+- RL
+- predittori
+- dashboard
+- reti neurali
+- dispatcher
