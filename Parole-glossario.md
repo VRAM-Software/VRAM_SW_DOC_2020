@@ -92,3 +92,7 @@ Da qui in poi sono parole che trovi sulla parte documentazione delle norme di pr
 - TeXStudio
 - diagrammi UML
 - Lucidchart
+- baseline
+- driver
+- stub
+- black-box (problema test di sistema)
