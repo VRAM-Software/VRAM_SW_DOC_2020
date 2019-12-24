@@ -1,8 +1,8 @@
 \subsection{Processo di verifica}
 \subsubsection{Scopo}
-La verifica ha lo scopo di accertare che i risultati ottenuti da tutte le attività, attuate in un periodo preso in considerazione, raggiungano tutti i requisiti richiesti senza aver introdotto degli errori. La verifica deve essere svolta per durante il ciclo di vita del software, più precisamente al passare di ogni baseline\glo.
+La verifica ha lo scopo di accertare che i risultati ottenuti da tutte le attività, attuate in un periodo preso in considerazione, raggiungano tutti i requisiti richiesti senza aver introdotto degli errori. La verifica deve essere svolta durante il ciclo di vita del software, più precisamente al passare di ogni baseline\glo.
 \subsubsection{Aspettative}
-La verifica viene effettuata per raggiungere le seguenti caratteristiche:
+La verifica viene effettuata per raggiungere i seguenti obiettivi:
 \begin{itemize}
 	\item Cercare consistenza, completezza e correttezza nelle singole attività;
 	\item Ottenere supporto per una successiva validazione del prodotto;
@@ -45,7 +45,7 @@ Per la corretta verifica del codice, i test devono seguire regole ben precise ch
 	\item \textbf{Output}: l'output che si aspetta di ricevere;
 	\item \textbf{Ambiente}: l'ambiente, quindi hardware e sistema operativo, in cui viene eseguito il test;
 	\item \textbf{Stato iniziale}: Lo stato iniziale del prodotto, precedente all'esecuzione del test;
-	\item \textbf{Istruzioni opzionali}: In caso di utilizzo di istruzioni opzionali aggiuntive esse devono essere note;
+	\item \textbf{Istruzioni opzionali}: In caso di utilizzo di istruzioni opzionali aggiuntive esse devono essere note.
 \end{itemize} 
 \textbf{Un test può essere definito efficace se:}
 \begin{itemize}
@@ -54,33 +54,33 @@ Per la corretta verifica del codice, i test devono seguire regole ben precise ch
 	\item Esso è ripetibile, quindi ci si aspetta un risultato costante per tutte le esecuzioni di quel test;
 	\item In caso di fallimento del test, esso devo fornire informazioni utili a risolvere il problema identificato;
 	\item In caso di possibili effetti indesiderati ci si aspetta un avvertimento;
-	\item Esso è esaustivo e accurato, infatti devono poter identificare una parte del progetto che potrebbe essere causa di errori;
+	\item Esso è esaustivo e accurato, infatti devono poter identificare una parte del progetto che potrebbe essere causa di errori.
 \end{itemize}
 Il cosiddetto software testing è un procedimento importante per misurare la qualità di un prodotto software, per questo motivo sono definiti cinque livelli che dividono i tipi di test da effettuare secondo una gerarchia. Essi sono: 
 \begin{itemize}
-	\item \textbf{Test d'unità}
-	\item \textbf{Test d'integrazione}
-	\item \textbf{Test di sistema}
-	\item \textbf{Test di regressione}
-	\item \textbf{Test di accettazione}
+	\item \textbf{Test d'unità};
+	\item \textbf{Test d'integrazione};
+	\item \textbf{Test di sistema};
+	\item \textbf{Test di regressione};
+	\item \textbf{Test di accettazione}.
 \end{itemize}
 
 \textbf{Test d'unità} \\*
-I test d'unità si definiscono tali perché controllano il corretto funzionamento di una sezione di codice specifica chiamata unità. Usualmente questi tipi di test vengono eseguiti su funzioni o, se si parla di programmazione ad oggetti, su un metodo di una classe, quindi su una parte minimale del codice. Il loro scopo è verificare che gli input forniti diano gli output attesi. È buona norma rendere questi test automatici in modo da minimizzare il tempo di esecuzione senza richiedere l'interazione dello sviluppatore. Questo tipo di test viene scritto dal programmatore che sviluppa le singole unità mediate l'ausilio di driver\glosp e stub\glo, per verificare l'assenza di errori e documentare il funzionamento dell'unità. \\*
+I test d'unità si definiscono tali perché controllano il corretto funzionamento di una sezione di codice specifica chiamata unità. Usualmente questi tipi di test vengono eseguiti su funzioni o, se si parla di programmazione ad oggetti, su un metodo di una classe, quindi su una parte minimale del codice. Il loro scopo è verificare che gli input forniti diano gli output attesi. È buona norma rendere questi test automatici per minimizzare il tempo di esecuzione senza richiedere l'interazione dello sviluppatore. Questo tipo di test viene scritto dal programmatore che sviluppa le singole unità mediate l'ausilio di driver\glosp e stub\glo, per verificare l'assenza di errori e documentare il funzionamento dell'unità. \\*
 
 
 \textbf{Test d'integrazione} \\*
-Successivamente ai test d'unità, si assemblano gruppi di esse progressivamente in modo da formare degli agglomerati sempre più grandi. Questo tipo di test infatti si concentra nella ricerca di anomalie ed errori tra le interfacce dei singoli componenti. Dunque una volta concluso il test si otterrà un agglomerato che costituirà una nuova unità da cui partire per ulteriori integrazioni. Per svolgere questo test si è scelto un approccio iterativo. \\*
+Successivamente ai test d'unità, si assemblano gruppi di unità progressivamente che formeranno degli agglomerati sempre più grandi. Questo tipo di test, infatti, si concentra nella ricerca di anomalie ed errori tra le interfacce dei singoli componenti. Una volta concluso un singolo test, si otterrà un agglomerato che costituirà una nuova unità da cui partire per ulteriori test d'integrazione. Per svolgere questo test si è scelto un approccio iterativo. \\*
 
 \textbf{Test di sistema} \\*
 I test di sistema controllano il funzionamento corretto del prodotto e verificano che il sistema soddisfi tutti i requisiti definiti nel documento: \textit{Analisi dei Requisiti}. Con l'esecuzione di questi test si riesce a definire e documentare tutte le funzionalità del sistema e possono individuare criticità come il problema del black-box\glo. Il gruppo svolgerà questo test quando si raggiungerà uno stato di rilascio per il prodotto sviluppato.
 \\*
 
 \textbf{Test di regressione} \\*
-I test di regressione sono dei particolari tipi di test che vanno a controllare l'integrazione tra il sistema e correzioni o estensioni del codice aggiunte successivamente. Questi test vengono eseguiti singolarmente per ogni aggiunta al sistema; per ogni estensione vengono eseguiti nel seguente ordine: il test d'unità, il test d'integrazione con il sistema e infine il test di sistema per confermare il corretto funzionamento del prodotto. \\*
+I test di regressione controllano l'integrazione tra il sistema e correzioni o estensioni del codice aggiunte successivamente; vengono eseguiti singolarmente per ogni aggiunta al sistema. Ad ogni estensione vengono eseguiti nel seguente ordine: il test d'unità, il test d'integrazione con il sistema e infine il test di sistema per confermare il corretto funzionamento del prodotto. \\*
 
 \textbf{Test di accettazione} \\*
-I test di accettazione, o di collaudo, vengono effettuati ad ogni pre-rilascio, quindi dopo l'esecuzione dei test di sistema, essi servono a confermare il soddisfacimento dei requisiti da parte del committente infatti questi tipi di test ne richiedono la presenza. Se questi test vengono superati significa che il prodotto software è pronto per il rilascio. \\*
+I test di accettazione, o di collaudo, vengono effettuati ad ogni pre-rilascio, quindi dopo l'esecuzione dei test di sistema. Essi servono a confermare il soddisfacimento dei requisiti da parte del committente; infatti questi tipi di test ne richiedono la presenza. Se questi test vengono superati significa che il prodotto software è pronto per il rilascio. \\*
 \subsubsection{Strumenti}
 	\paragraph{Correzione ortografica}
 	Il nostro gruppo ha utilizzato, per la ricerca di errori ortografici o stilistici nel testo dei documenti, la libreria \textbf{HunSpell} utilizzata con l'editor di test: \textbf{TexStudio}. Esso permette di avere un controllo in tempo reale su errori ortografici in lingua inglese e italiana (sottolineati in rosso) e ripetizioni di parole a breve distanza (sottolineati in verde).
