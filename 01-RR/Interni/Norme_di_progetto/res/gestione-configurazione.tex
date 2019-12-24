@@ -1,13 +1,13 @@
 \subsection{Gestione della configurazione}
 	\subsubsection{Descrizione}
 		In questo capitolo verrà illustrato come il gruppo ha gestito la configurazione degli strumenti e delle risorse utilizzate per svolgere il progetto\glo.
-		Sarà quindi descritta la configurazione del repository\glosp su Github, del sistema di versionamento\glosp Git e dei servizi Github.
+		Sarà quindi descritta la configurazione del repository\glosp su GitHub, del sistema di versionamento\glosp Git e dei servizi GitHub.
 	\subsubsection{Previsioni}
 		Questa sezione ha lo scopo supportare i processi di documentazione, di sviluppo e manutenzione del software rendendoli definiti e ripetibili.  
 	\subsubsection{Obiettivi} 
 		L'obiettivo principale è quindi di rendere documenti e codice sorgente univocamente identificati e facilmente identificabili, evidenziandone versioni e modifiche. Vuole anche agevolare l'identificazione delle relazioni esistenti fra gli elementi e fa da supporto alla fase di verifica.
 	\subsubsection{Versionamento}
-		Le modifiche effettuate ai documenti ed ai file contenenti codice sorgente sono identificate da un numero di versione presente all'interno dei file stessi. Per quanto riguarda i documenti, ogni numero di versione sarà presente nel nome del file ed avrà una corrispondente riga nella tabella delle modifiche così da avere uno storico delle modifiche effettuate al documento. Per il codice sorgente del software le modifiche effettuate in una versione saranno consultabili sulla sezione rilasci di Github e saranno identificate da opportuni tag.
+		Le modifiche effettuate ai documenti ed ai file contenenti codice sorgente sono identificate da un numero di versione presente all'interno dei file stessi. Per quanto riguarda i documenti, ogni numero di versione sarà presente nel nome del file ed avrà una corrispondente riga nella tabella delle modifiche così da avere uno storico delle modifiche effettuate al documento. Per il codice sorgente del software le modifiche effettuate in una versione saranno consultabili sulla sezione rilasci di GitHub e saranno identificate da opportuni tag.
 		\newline
 		Per identificare univocamente le versioni dei documenti seguiamo le indicazioni dell'ente ETSI, dunque la numerazione delle versioni è composta da 3 cifre nel formato X.Y.Z e la prima bozza ha versione 0.0.1. Le modifiche al documento aggiorneranno le cifre nel seguente modo:
 		\begin{itemize}
@@ -24,7 +24,7 @@
 		Ogni incremento sulle singole cifre è rigorosamente un +1, non possono essere saltati numeri.
 		
 	\subsubsection{Gestione delle modifiche}
-		Al fine di monitorare e limitare le modifiche al ramo principale del repository\glo, master, è utilizzato il meccanismo di pull request fornito da Github. Ogni membro del gruppo può creare branch secondari, secondo il workflow feature branch, su cui effettuare modifiche, tuttavia per unirle al branch master è necessario aprire una pull request che dovrà essere revisionata dai verificatori tramite i servizi di revisione integrati in Github. Una volta revisionata positivamente è compito del responsabile del documento approvare la pull request ed effettuare quindi l'effettiva unione delle modifiche nel branch master.
+		Al fine di monitorare e limitare le modifiche al ramo principale del repository\glo, master, è utilizzato il meccanismo di pull request fornito da GitHub. Ogni membro del gruppo può creare branch secondari, secondo il workflow feature branch, su cui effettuare modifiche, tuttavia per unirle al branch master è necessario aprire una pull request che dovrà essere revisionata dai verificatori tramite i servizi di revisione integrati in GitHub. Una volta revisionata positivamente è compito del responsabile del documento approvare la pull request ed effettuare quindi l'effettiva unione delle modifiche nel branch master.
 		\newline
 		In sintesi, per effettuare modifiche ai documenti sono previsti i seguenti passaggi:
 		\begin{itemize}
@@ -36,8 +36,8 @@
 		\end{itemize}
 		
 	\subsubsection{Repository}
-		Per tenere traccia di versioni e modifiche fatte a documenti e codice è utilizzato il sistema di versionamento\glosp distribuito Git, che può essere utilizzato tramite riga di comando o utilità grafiche come Github Desktop o GitKraken.
-		Il repository\glosp dei documenti è ospitato sul sito Github all'indirizzo: 
+		Per tenere traccia di versioni e modifiche fatte a documenti e codice è utilizzato il sistema di versionamento\glosp distribuito Git, che può essere utilizzato tramite riga di comando o utilità grafiche come GitHub Desktop o GitKraken.
+		Il repository\glosp dei documenti è ospitato sul sito GitHub all'indirizzo: 
 		\begin{center}
 			\url{https://github.com/marcoDallas/VRAM_SW_DOC_2020/}
 		\end{center}
@@ -74,7 +74,7 @@
 			\item \textbf{Guide} : contiene brevi indicazioni interne su come usare i comandi \LaTeX \xspace usati nei documenti e su come riutilizzare il template per generare nuovi documenti;
 			\item \textbf{Template} : contiene i sorgenti \LaTeX \xspace usati per generare la base comune di tutti i documenti.
 		\end{itemize}
-	E' inoltre disponibile una directory condivisa su Google Drive, con la stessa struttura gerarchica sopra esposta, che contiene tutti e soli i file pdf in versione finale. Lo scopo di questa directory condivisa è di facilitare la consultazione e la condivisione dei file pdf stessi.
+		È inoltre disponibile una directory condivisa su Google Drive, con la stessa struttura gerarchica sopra esposta, che contiene tutti e soli i file PDF in versione finale. Lo scopo di questa directory condivisa è di facilitare la consultazione e la condivisione dei file PDF stessi.
 		
 	\subsubsection{Tipologie di file non accettate}
 		Tramite un apposito file .gitignore presente nella root directory della gerarchia vengono definiti i tipi di file non accettati all'interno del repository\glo. Vengono esclusi tutti i file di compilazione, compilati o temporanei in quanto il repository\glosp dovrebbe contenere solamente i seguenti formati di file:
@@ -84,10 +84,10 @@
 			\item File testuali in formato .md o .txt.			
 		\end{itemize}
 	
-	\subsubsection{Ulteriori Strumenti Github utilizzati}
-		In aggiunta ai servizi già elencati, al fine di migliorare efficacia ed efficienza, vengono utilizzate le funzionalità di Issue Tracking System,
+	\subsubsection{Ulteriori Strumenti GitHub utilizzati}
+		In aggiunta ai servizi già elencati, al fine di migliorare efficacia ed efficienza, vengono utilizzate le funzionalità di "Issue Tracking System",
 		% milestone qui è usato come nome di funzione github quindi non va a glossario  
-		Milestone e Project Board integrate in Github. Ognuna di queste funzionalità viene usata solo da chi autorizzato, ad esempio rilasci di versioni e chiusure di milestone\glosp sono concesse solo al responsabile di progetto.
+		"Milestone" e "Project Board" integrate in GitHub. Ognuna di queste funzionalità viene usata solo da chi autorizzato, ad esempio rilasci di versioni e chiusure di milestone\glosp sono concesse solo al responsabile di progetto.
 		\newline
-		Per il repository\glosp contenente il codice sorgente del software saranno usate anche le Github Actions al fine di implementare la pratica della continuous integration.
+		Per il repository\glosp contenente il codice sorgente del software saranno usate anche le GitHub Actions al fine di implementare la pratica della continuous integration.
 		
