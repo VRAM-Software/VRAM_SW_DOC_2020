@@ -1,15 +1,46 @@
 \documentclass[a4]{article}
+\usepackage{hyperref}
 \begin{document}
 	\section{Introduzione}
 		\subsection{Scopo del documento}
-			Questo documento contiene una descrizione dettagliata di tutti i requisiti impliciti ed espliciti che il nostro gruppo ha individuato dopo una analisi dei bisogni e delle fonti attraverso: 
+			Questo documento contiene una descrizione dettagliata di tutti i requisiti impliciti ed espliciti che il prodotto dovrà avere. Il nostro gruppo ha individuato questi requisiti dopo un'analisi dei bisogni e delle fonti realizzata mediante: 
 				\begin{itemize}
-					\item Una analisi del capitolato C4; 
-					\item Uno studio del software: \textit{Grafana};
-					\item Da incontri con il proponente: \textit{Zucchetti}.
+					\item Una analisi del capitolato C4 e della sua presentazione; 
+					\item Uno studio di \textit{Grafana} e di \textit{InfluxDB};
+					\item Da incontri con il proponente \textit{Zucchetti}.
 				\end{itemize}
-			Quindi l'\textit{Analisi dei Requisiti 1.0.0} descrive le caratteristiche che il prodotto finale dovrà avere per essere ritenuto soddisfacente.
 		\subsection{Scopo del prodotto}
-			
-		\subsection{Glossario}
+			Il prodotto che si sta sviluppando sarà costituito da un plug-in per \textit{Grafana} e da una applicazione per gestire i parametri di previsione (da aggiungere se sarà standalone o no). I dati inseriti da utente verranno mandati alla applicazione la quale genererà i parametri di previsione. Essi verranno in seguito mandati al nostro plug-in, il quale li applicherà ai dati inseriti dall'utente. I dati verranno poi aggiunti al database InfluxDB e, mediante \textit{Grafana}, verrà creata una dashboard che conterrà dei grafici per rappresentare i dati. Questi grafici verranno monitorati in modo da generare alert in caso di anomalie.
+		
+		\subsection{Aggiunta del glossario}
+			Per facilitare la lettura dei documenti si è deciso di introdurre il documento: \textit{Glossario 1.0.0}. Il quale contiene una spiegazione delle parole che potrebbero essere considerate ambigue. Queste parole saranno segnalate con una \textit{G} maiuscola a pedice. 
+		\subsection{Riferimenti}
+			\subsubsection{Riferimenti normativi}
+				\begin{itemize}
+					\item \textbf{Materiale didattico:}
+					\begin{itemize}
+						\item \textbf{Analisi dei requisiti:} \textit{Lezione T8 e T9} \\*
+							\url{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/L08.pdf};
+						\item \textbf{Diagrammi dei casi d'uso:} \textit{Lezione E3} \\*
+							\url{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/E03.pdf}.
+					\end{itemize}
+					\item \textbf{Verbali esterni:} 
+					\begin{itemize}
+						\item \textit{Verbale esterno 2019-12-18};
+					\end{itemize}
+					\item \textbf{Capitolato d'appalto:} \textit{C4 - Zucchetti - Predire in Grafana} \\*
+						\url{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C4.pdf};
+					\item \textbf{Studi di fattibilità:} \textit{Studio di fattibilità 1.0.0};
+					\item \textbf{Norme di progetto:} \textit{Norme di progetto 1.0.0}.
+				\end{itemize}
+			\subsubsection{Riferimenti informativi}
+				\begin{itemize}
+					\item \textbf{Presentazione capitolato d'appalto} \\*
+						\url{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/C4a.pdf};
+					\item \textbf{Grafana} \\*
+						\url{https://grafana.com/docs/grafana/latest/};
+					\item \textbf{InfluxDB} \\*
+						\url{https://docs.influxdata.com/influxdb/v1.7/}.
+		
+				\end{itemize}
 \end{document}
