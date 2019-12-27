@@ -1,4 +1,4 @@
-\section{Capitolato 2 - \textit{Etherless}}
+\section{Capitolato 2 - Etherless}
 \subsection{Informazioni generali}
     \begin{itemize}
         \item \textbf{Nome}: Etherless;
@@ -6,46 +6,46 @@
         \item \textbf{Committente}: Prof. Tullio Vardanega e Prof. Riccardo Cardin.
     \end{itemize}
 \subsection{Descrizione}
-    Etherless è una \textit{Cloud Application Platform}\glosp che permette agli sviluppatori che la utilizzano di caricare nel cloud\glosp delle funzioni
-    \textit{JavaScript}\glo. Tali procedure possono poi essere acquistate da terzi tramite l'impiego della criptovaluta\glosp \textit{Ethereum}\glosp implementata
-    grazie alla tecnologia della \textit{blockchain}\glo.
+    Etherless è una Cloud Application Platform che permette agli sviluppatori che la utilizzano di caricare nel cloud\glosp delle funzioni
+    JavaScript. Tali procedure possono poi essere acquistate da terzi tramite l'impiego della criptovaluta Ethereum implementata
+    grazie alla tecnologia della blockchain.
 \subsection{Obiettivi di progetto}
-    Il progetto si propone di aiutare gli sviluppatori fornendo:
+    Il progetto\glosp si propone di aiutare gli sviluppatori fornendo:
     \begin{itemize}
-        \item un framework\glosp \textit{Serverless}\glosp che gestisca il costo computazionale della funzione;
-        \item un servizio di \textit{Smart Contracts}\glosp che sovrintenda il processo di pagamento.
+        \item un framework Serverless\glosp che gestisca il costo computazionale della funzione;
+        \item un servizio di Smart Contracts\glosp che sovrintenda il processo di pagamento.
     \end{itemize}
     Quest'ultima tecnologia sarà di supporto anche per l'acquirente in quanto assicurerà il completamento della transazione solo a lavoro verificato e completato.
 \subsection{Requisiti di progetto}
 È richiesto di dividere lo sviluppo in tre fasi:
 \begin{itemize}
-   	\item \textbf{Local}: utilizzo dell'applicativo in ambiente locale, in cui può essere utilizzato \textit{Ethereum testrpc}\glosp di \textit{Truffle} per
-   	l'emulazione\glosp della blockchain\glo;
+   	\item \textbf{Local}: utilizzo dell'applicativo in ambiente locale, per cui può essere utilizzato Ethereum testrpc di Truffle per
+   	l'emulazione\glosp della blockchain;
    	\item \textbf{Test}: utilizzo dell'applicativo in ambiente di testing, in cui può essere usata la soluzione proposta al punto precedente;
-   	\item \textbf{Staging}: utilizzo dell'applicativo in un ambiente pubblico, in tal caso si potrà usufruire di \textit{Ropsten Ethereum}\glosp come rete di testing.
+   	\item \textbf{Staging}: utilizzo dell'applicativo in un ambiente pubblico, in tal caso si potrà usufruire di Ropsten Ethereum come rete di testing prima del rilascio.
 \end{itemize}
 Inoltre è obbligatorio separare il software in tre parti:
 \begin{itemize}
    	\item \textbf{etherless-cli}: modulo attraverso il quale lo sviluppatore interagisce con Etherless;
-   	\item \textbf{etherless-smart}: modulo per l'interazione tra \textit{etherless-cli} e la parte server;
-   	\item \textbf{etherless-server}: modulo che ascolta gli eventi emessi da \textit{etherless-smart} per attivare le rispettive funzioni lambda\glo. 
+   	\item \textbf{etherless-smart}: modulo per l'interazione tra etherless-cli e la parte server;
+   	\item \textbf{etherless-server}: modulo che ascolta gli eventi emessi da etherless-smart per attivare le rispettive funzioni lambda\glo. 
 \end{itemize}
-Ognuna di queste operazioni dovrà poi essere caricata e versionata tramite \textit{GitHub}\glosp o \textit{GitLab}\glo.
+Ognuna di queste operazioni dovrà poi essere caricata e versionata\glosp tramite GitHub o GitLab.
 \subsection{Tecnologie interessate}
     Per l'implementazione delle varie funzionalità vengono date dall'azienda delle linee guida sulle tecnologie da utilizzare:
     \begin{itemize}
-        \item \textbf{Typescript 3.6}\glo: linguaggio di programmazione da impiegare, tramite l'approccio \textit{Promise}\glosp o \textit{async-await}\glo, nello sviluppo della piattaforma \textit{Etherless};
-        \item \textbf{Solidity}\glo: linguaggio per la creazione e la gestione degli \textit{Smart Contracts}\glo;
-        \item \textbf{AWS Lambda}\glo: piattaforma computazione serverless fornita da \textit{Amazon} per la coordinazione degli eventi;
-        \item \textbf{Serverless Framework}\glo: framework\glosp Web per la creazione di applicazioni su \textit{AWS Lambda}\glo;
-        \item \textbf{typescript-eslint}\glo: strumento di analisi statica\glosp del codice \textit{Typescript}\glo.
+        \item \textbf{Typescript 3.6}: linguaggio di programmazione da impiegare, tramite l'approccio Promise\glosp o async-await\glo, nello sviluppo della piattaforma Etherless;
+        \item \textbf{Solidity}: linguaggio per la creazione e la gestione degli Smart Contracts\glo;
+        \item \textbf{AWS Lambda}: piattaforma computazione serverless\glosp fornita da Amazon per la coordinazione degli eventi;
+        \item \textbf{Serverless Framework}: framework Web per la creazione di applicazioni su AWS Lambda;
+        \item \textbf{typescript-eslint}: strumento di analisi statica\glosp del codice Typescript.
     \end{itemize}
-    \textit{AWS Lambda}\glosp può essere corredata con altri componenti quali: \textit{AWS API Gateway}\glosp (per eventi HTTP\glo), \textit{AWS DynamoDB}\glosp (database non relazionale\glo)
-    o \textit{AWS S3}\glosp (servizio di memorizzazione). Tutto questo poi può essere gestito tramite \textit{AWS CloudFormation}\glosp (piattaforma per l'organizzazione delle
+    AWS Lambda può essere corredata con altri componenti quali: AWS API Gateway (per eventi HTTP), AWS DynamoDB (database non relazionale)
+    o AWS S3 (servizio di memorizzazione). Tutto questo poi può essere gestito tramite AWS CloudFormation (piattaforma per l'organizzazione delle
     risorse AWS).
 \subsection{Aspetti positivi}
 \begin{itemize}
-    \item Ethereum\glosp e la tecnologia della blockchain\glosp più in generale sono tematiche molto attuali e innovative che suscitano interesse tra i componenti del gruppo
+    \item Ethereum e la tecnologia della blockchain più in generale sono tematiche molto attuali e innovative che suscitano interesse tra i componenti del gruppo
     anche per le possibili applicazioni future;
     \item L'azienda ha avvallato delle richieste chiare e precise, aspetto valutato positivamente dal gruppo.
 \end{itemize}
@@ -56,6 +56,6 @@ Ognuna di queste operazioni dovrà poi essere caricata e versionata tramite \tex
     delle tecnologie presentate.
 \end{itemize}
 \subsection{Conclusioni}
-Il capitolato è apparso stimolante per quanto riguarda le tecnologie utilizzate e convincente nella sua esposizione. Tuttavia la distanza geografica e la
+Il capitolato\glosp è apparso stimolante per quanto riguarda le tecnologie utilizzate e convincente nella sua esposizione. Tuttavia la distanza geografica e la
 mole di lavoro prevista sono risultate un ostacolo nell'effettiva realizzazione del software. Per questo motivi il gruppo ha deciso di vertere la sua scelta
-su un altro progetto.
+su un altro progetto\glo.

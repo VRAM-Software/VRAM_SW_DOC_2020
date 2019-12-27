@@ -1,0 +1,25 @@
+% \textbf = grassetto; \Large = font più grande
+% \rowcolors{quanti colori alternare}{colore numero riga pari}{colore numero riga dispari}: colori alternati per riga
+% \rowcolor{color}: cambia colore di una riga
+% p{larghezza colonna}: p è un tipo di colonna di testo verticalmente allineata sopra, ci sarebbe anche m che è centrata a metà ma non è precisa per questo utilizzo TBStrut; la sintassi >{\centering} indica che il contenuto della colonna dovrà essere centrato
+% \TBstrut fa parte di alcuni comandi che ho inserito in config.tex che permetto di aggiungere un po' di padding al testo
+% \\ [2mm] : questra scrittura indica che lo spazio dopo una break line deve essere di 2mm
+
+%\setcounter{secnumdepth}{0}
+%\hfill \break
+%\textbf{\Large{Diario delle modifiche}} \\
+\section{Riepilogo tracciamenti}
+\rowcolors{2}{gray!25}{gray!15}
+\begin{longtable} {
+		>{\centering}p{17mm} 
+		%>{\centering}p{19.5mm}
+		%>{\centering}p{24mm} 
+		%>{\centering}p{24mm} 
+		>{}p{120mm}}
+	\rowcolor{gray!50}
+	\textbf{Codice} & \multicolumn{1}{c}{\textbf{Decisione}} \\%\textbf{Decisione} \\ %\TBstrut \\
+	VI\_3.1 & Chiarimenti dubbi sulle \textit{Norme di Progetto v. 1.1.1} e terminazione documento. \TBstrut \\ [2mm]
+	VI\_3.2 & Cambio dei ruoli per inizio stesura nuovi documenti. \TBstrut \\ [2mm]
+	VI\_3.3 & Studio preliminare e divisione carico di lavoro per lo \textit{Studio di Fattibilità v. 1.1.1} \TBstrut \\ [2mm]
+	
+\end{longtable}
