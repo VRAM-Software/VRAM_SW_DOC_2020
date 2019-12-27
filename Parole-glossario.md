@@ -22,6 +22,11 @@
 - funzioni lambda
 - approccio Promise
 - approccio async-await
+- Lucidchart
+- baseline
+- driver
+- stub
+- black-box (problema test di sistema)
 - contenitore (container)
 - progettazione
 - prodotto
