@@ -6,6 +6,7 @@ Per abilitare le notifiche si procede alla configurazione di un canale di notifi
 #####Opzioni di un canale di notifica:
 - frequenza delle notifiche: imposta l'intervallo di tempo minimo tra una notifica e l'altra
 - le notifiche vengono inviate sia all'attivazione che alla disattivazione degli alert, utilizzare l'opzione "disable resolve message" per modificare questo comportamento.
+- può essere allegata nella notifica l'immagine dello stato attuale del grafico
 
 ####[Tutorial integrazione con Slack](https://medium.com/@_oleksii_/grafana-alerting-and-slack-notifications-3affe9d5f688)
 
