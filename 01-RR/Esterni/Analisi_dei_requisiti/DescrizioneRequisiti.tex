@@ -1,13 +1,13 @@
 \section{Descrizione generale}
 	\subsection{Obiettivi del Prodotto}
 	L'obiettivo del progetto \textit{Predire in Grafana} è realizzare un plug-in\glosp per la piattaforma Grafana che fornisce delle previsioni su un flusso dati ricevuto in input.
-	Più in dettaglio, il plug-in\glosp riceve in input un insieme di dati e fornisce in output informazioni sulle previsioni fatte su quei dati e visualizzate su grafici scelti dall'utente. Inoltre offre la possiblità di definire degli alert che rappresentano segnalazioni configurabili dall'utente in caso di sforamento dei limiti prefissati. 
+	Più in dettaglio, il plug-in\glosp riceve in input un insieme di dati e fornisce in output informazioni sulle previsioni fatte su quei dati e visualizzate su grafici scelti dall'utente. Inoltre offre la possibilità di definire degli alert che rappresentano segnalazioni configurabili dall'utente in caso di sforamento dei limiti prefissati. 
 	\subsection{Caratteristiche del Prodotto}
 	Il prodotto dispone di molte caratteristiche e le due principali sono l'addestramento degli algoritmi per le previsioni e la visualizzazione delle previsioni stesse.
-	L'addestramento viene fatto da un programma esterno, possibilmente integrato al plug-in, il cui scopo è allenare uno tra gli algoritmi di machine learning\glosp proposti: SVN\glosp, SVN\glosp adattata alla Regressione\glo, Reti Neurali\glosp per la classificazione, RL\glo e altri algoritmi di Regressione\glosp non lineari quali logaritmica ed esponenzionale. L'utente dà in input un insieme di dati di test in formato JSON\glosp, seleziona l'algoritmo da allenare e avvia l'esecuzione. Al termine, il programma restituisce un file JSON\glosp con i parametri per le previsioni.
+	L'addestramento viene fatto da un programma esterno, possibilmente integrato al plug-in, il cui scopo è allenare uno tra gli algoritmi di machine learning\glosp proposti: SVN\glosp, SVN\glosp adattata alla Regressione\glo, Reti Neurali\glosp per la classificazione, RL\glo e altri algoritmi di Regressione\glosp non lineari quali logaritmica ed esponenziale. L'utente dà in input un insieme di dati di test in formato JSON\glosp, seleziona l'algoritmo da allenare e avvia l'esecuzione. Al termine, il programma restituisce un file JSON\glosp con i parametri per le previsioni.
 	L'utente, solo dopo aver eseguito l'addestramento, può avviare il programma di previsione dei dati. Più in dettaglio, fornisce in input un flusso di dati da monitorare che possono essere statici oppure in tempo reale e un file JSON\glosp ottenuto dall'operazione precedente. Seleziona il pannello su cui visualizzare i dati, lo personalizza secondo le sue necessità e avvia l'attività di previsione. Questa attività consiste nei seguenti passi:
 	\begin{itemize}
-		\item Leggere la definzione dei uno o più predittori presenti nel file JSON\glosp;
+		\item Leggere la definizione dei uno o più predittori presenti nel file JSON\glosp;
 		\item Associarli al flusso di dati caricato;
 		\item Applicare le previsioni;
 		\item Visualizzare il risultato su grafici e dashboard\glosp definite dall'utente.
@@ -28,9 +28,24 @@
 	\end{itemize}
 	I vincoli opzionali sono i seguenti:
 	\begin{itemize}
-		\item Permettere all'utente di definire "alert" in base ai liveli di soglia raggiunti dai nodi collegati alle previsioni;
+		\item Permettere all'utente di definire "alert" in base ai livelli di soglia raggiunti dai nodi collegati alle previsioni;
 		\item Fornire dati sulla qualità dei modelli di previsione tramite meccanismi di Precision\glosp e Recall\glosp per le SVM\glosp e R^2\glosp per la RL\glo;
 		\item Permette all'utente di applicare algoritmi di Regressione\glosp non lineare quali logaritmica ed esponenziale;
 		\item Implementare meccamismi di apprendimento di flusso per dati in tempo reale;
 		\item Usare metodi di previsione differenti e più complessi quali SVM\glosp adattate alla Regressione\glosp oppure piccole Reti Neurali\glosp per la classificazione\glo.
 	\end{itemize}
+	\subsection{Macro Architetture del Progetto}
+		\subsubsection{Front end}
+		Il front end\glosp del progetto è affidato totalmente a Grafana, l'utente per interagire con il plug-in dovrà quindi accedere tramite browser all'interfaccia di Grafana dove potrà creare le dashboard per la visualizzazione grafica dei dati predetti. 
+		\subsection{Back end}
+		Il back end\glosp del progetto sarà costituito da un plug-in capace di ricevere in input un flusso di dati e un file di configurazione in formato .JSON e di restituire in output i dati predetti.
+\section{Casi d'uso}
+	\subsection{Attori dei casi d'uso}
+		\subsubsection{Attori primari}
+		\begin{itemize}
+			\item \textbf{Utente}: generico utente autenticato sulla piattaforma Grafana. Dato che il nostro prodotto è un plug-in da integrare al sistema Grafana, risulta impossibile interagirci senza autenticarsi sulla piattaforma ne consegue che questa tipologia di utente è l'unica esistente nel nostro progetto.
+		\end{itemize}
+		\subsubsection{Attori secondari}
+		\begin{itemize}
+			\item \textbf{Grafana}: software per la produzione di dashboard e la composizione di grafici. Permette agli utenti autenticati di inserire un plug-in e sfruttarlo per ottenere i dati per la creazione di dashboard con pannelli ed alert che presentino la situazione del sistema.
+		\end{itemize}
