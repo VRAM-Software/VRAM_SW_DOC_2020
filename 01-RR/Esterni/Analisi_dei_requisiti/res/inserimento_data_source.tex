@@ -1,0 +1,130 @@
+\section{UC4 - Inserimento del data source}
+\hspace*{-1.5cm}\includegraphics[width=500pt, height=400pt]{img/inserimento_data_source.pdf}
+\mbox{} \mbox{} \\
+\begin{itemize}
+    \item \textbf{Codice identificativo}: UC4;
+    \item \textbf{Titolo}: Inserimento del data source;
+    \item \textbf{Attori primari}: Utente;
+    \item \textbf{Attori secondari}: Grafana\glo;
+    \item \textbf{Descrizione}: l'utente compila seleziona su Grafana\glosp un data source da dove prelevare i dati e quindi inserisce                               hostname, nome del database, username e password dell'utente del database;
+    \item \textbf{Precondizioni}: l'utente deve aver effettuato il login nella piattaforma Grafana\glo;
+    \item \textbf{Postcondizioni}: l'utente ha aggiunto un data source valido alla piattaforma Grafana\glosp e può ora monitorare i dati                                forniti;
+    \item \textbf{Scenario principale}:
+    \begin{enumerate}
+        \item l'utente seleziona la data source (UC4.1);
+        \item l'utente inserisce l'hostname della data source (UC4.2);
+        \item l'utente inserisce il nome del database (UC4.3);
+        \item l'utente inserisce lo username dell'utente del database (UC4.4);
+        \item l'utente inserisce la password dell'utente del database (UC4.5);
+        \item l'utente salva e testa la nuova data source (UC4.6);
+        \item visualizzazione del messaggio di avvenuta connessione alla data source (UC 4.7).
+    \end{enumerate}
+    \item \textbf{Estensioni}:
+    \begin{enumerate}
+        \item visualizzazione del messaggio di errore causato da hostname non valido (UC5);
+        \item visualizzazione del messaggio di errore causato da nome del database, username o password dell'utente del database non           validi (UC6);
+    \end{enumerate}
+\end{itemize}
+    \subsection{UC4.1 - Selezione della data source}
+        \begin{itemize}
+            \item \textbf{Codice identificativo}: UC4.1;
+            \item \textbf{Titolo}: Selezione della data source;
+            \item \textbf{Attori primari}: Utente;
+            \item \textbf{Attori secondari}: Grafana\glo;
+            \item \textbf{Descrizione}: l'utente tramite le impostazioni di Grafana\glosp selezione una data source dalla lista;
+            \item \textbf{Precondizioni}: l'utente deve aver effettuato il login nella piattaforma Grafana\glo;
+            \item \textbf{Postcondizioni}: l'utente ha selezionato una data source e può procedere alla sua configurazione;
+            \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item l'utente accede alla schermata delle impostazioni di Grafana\glosp dedicata alle data source;
+                \item l'utente seleziona una data source dalla lista.
+            \end{enumerate}
+        \end{itemize}
+    \subsection{UC4.2 - Inserimento dell'hostname della data source}
+        \begin{itemize}
+            \item \textbf{Codice identificativo}: UC4.2;
+            \item \textbf{Titolo}: Inserimento dell'hostname della data source;
+            \item \textbf{Attori primari}: Utente;
+            \item \textbf{Attori secondari}: Grafana\glo;
+            \item \textbf{Descrizione}: l'utente inserisce l'hostname della data source;
+            \item \textbf{Precondizioni}: l'utente deve aver effettuato il login nella piattaforma Grafana\glo e aver selezionato una                                  data source valida;
+            \item \textbf{Postcondizioni}: l'utente ha inserito l'hostname della data source;
+            \item \textbf{Scenario principale}: l'utente inserisce l'hostname della data source nell'apposito campo.
+        \end{itemize}
+    \subsection{UC4.3 - Inserimento del nome del database}
+        \begin{itemize}
+            \item \textbf{Codice identificativo}: UC4.3;
+            \item \textbf{Titolo}: Inserimento del nome del database;
+            \item \textbf{Attori primari}: Utente;
+            \item \textbf{Attori secondari}: Grafana\glo;
+            \item \textbf{Descrizione}: l'utente inserisce il nome del database;
+            \item \textbf{Precondizioni}: l'utente deve aver effettuato il login nella piattaforma Grafana\glo e aver selezionato una                                  data source valida;
+            \item \textbf{Postcondizioni}: l'utente ha inserito il nome del database;
+            \item \textbf{Scenario principale}: l'utente inserisce il nome del database nell'apposito campo.
+        \end{itemize}
+    \subsection{UC4.4 - Inserimento dello username dell'utente del database}
+        \begin{itemize}
+            \item \textbf{Codice identificativo}: UC4.4;
+            \item \textbf{Titolo}: Inserimento dello username dell'utente del database;
+            \item \textbf{Attori primari}: Utente;
+            \item \textbf{Attori secondari}: Grafana\glo;
+            \item \textbf{Descrizione}: l'utente inserisce lo username dell'utente del database;
+            \item \textbf{Precondizioni}: l'utente deve aver effettuato il login nella piattaforma Grafana\glo e aver selezionato una                                  data source valida;
+            \item \textbf{Postcondizioni}: l'utente ha inserito lo username dell'utente del database;
+            \item \textbf{Scenario principale}: l'utente inserisce lo username dell'utente del database nell'apposito campo.
+        \end{itemize}
+    \subsection{UC4.5 - Inserimento della password dell'utente del database}
+        \begin{itemize}
+            \item \textbf{Codice identificativo}: UC4.5;
+            \item \textbf{Titolo}: Inserimento della password dell'utente del database;
+            \item \textbf{Attori primari}: Utente;
+            \item \textbf{Attori secondari}: Grafana\glo;
+            \item \textbf{Descrizione}: l'utente inserisce la password dell'utente del database;
+            \item \textbf{Precondizioni}: l'utente deve aver effettuato il login nella piattaforma Grafana\glo e aver selezionato una                                  data source valida;
+            \item \textbf{Postcondizioni}: l'utente ha inserito la password dell'utente del database;
+            \item \textbf{Scenario principale}: l'utente inserisce la password dell'utente del database nell'apposito campo.
+        \end{itemize}
+    \subsection{UC4.6 - Salvataggio e test della data source selezionata}
+        \begin{itemize}
+            \item \textbf{Codice identificativo}: UC4.6;
+            \item \textbf{Titolo}: Salvataggio e test della data source aggiunta;
+            \item \textbf{Attori primari}: Utente;
+            \item \textbf{Attori secondari}: Grafana\glo;
+            \item \textbf{Descrizione}: l'utente salva e testa la data source selezionata;
+            \item \textbf{Precondizioni}: l'utente deve aver effettuato il login nella piattaforma Grafana\glo e ha selezionato una data                               source valida e inserito almeno l'hostname;
+            \item \textbf{Postcondizioni}: l'utente ha salvato e testato una nuova data source;
+            \item \textbf{Scenario principale}: l'utente salva la nuova data source che viene automaticamente testata da Grafana\glosp                                       per verificarne il funzionamento.
+        \end{itemize}
+    \subsection{UC4.7 - Visualizzione messaggio di avvenuta connessione alla data source}
+        \begin{itemize}
+            \item \textbf{Codice identificativo}: UC4.7;
+            \item \textbf{Titolo}: Visualizzione messaggio di avvenuta connessione alla data source;
+            \item \textbf{Attori primari}: Utente;
+            \item \textbf{Attori secondari}: Grafana\glo;
+            \item \textbf{Descrizione}: l'utente visualizza il messaggio di avvenuta connessione alla data source;
+            \item \textbf{Precondizioni}: l'utente deve aver effettuato il login nella piattaforma Grafana\glo e ha selezionato una data                               source valida e inserito almeno l'hostname;
+            \item \textbf{Postcondizioni}: l'utente ha inserito correttamente una nuova data source a Grafana\glo;
+            \item \textbf{Scenario principale}: l'utente visualizza il messaggio di avvenuta connessione alla data source.
+        \end{itemize}
+\section{UC5 - Visualizzazione del messaggio di errore causato da hostname non valido}
+\begin{itemize}
+    \item \textbf{Codice identificativo}: UC5;
+    \item \textbf{Titolo}: Visualizzazione del messaggio di errore causato da hostname non valido;
+    \item \textbf{Attori primari}: Utente;
+    \item \textbf{Attori secondari}: Grafana\glo;
+    \item \textbf{Descrizione}: l'utente visualizza il messaggio di errore causato da hostname non valido;
+    \item \textbf{Precondizioni}: l'utente deve aver effettuato il login nella piattaforma Grafana\glo e ha selezionato una data source                                valida e inserito almeno l'hostname;
+    \item \textbf{Postcondizioni}: l'utente visualizza il messaggio di errore causato da hostname non valido;
+    \item \textbf{Scenario principale}: l'utente visualizza il messaggio di errore causato da hostname non valido.
+\end{itemize}
+\section{UC6 - Visualizzazione del messaggio di errore causato da nome del database, username o password dell'utente del database non             validi}
+\begin{itemize}
+    \item \textbf{Codice identificativo}: UC6;
+    \item \textbf{Titolo}: Visualizzazione del messaggio di errore causato da nome del database, username o password dell'utente del                            database non validi;
+    \item \textbf{Attori primari}: Utente;
+    \item \textbf{Attori secondari}: Grafana\glo;
+    \item \textbf{Descrizione}: l'utente visualizza il messaggio di errore causato da nome del database, username o password dell'utente                             del database non validi;
+    \item \textbf{Precondizioni}: l'utente deve aver effettuato il login nella piattaforma Grafana\glo e ha selezionato una data source                                valida e inserito almeno l'hostname corretto e o il nome del database non valido o il nome del                                       database corretto, ma lo username o la password non validi;
+    \item \textbf{Postcondizioni}: l'utente visualizza il messaggio di errore causato da nome del database, username o password                                         dell'utente del database                                non validi;
+    \item \textbf{Scenario principale}: l'utente visualizza il messaggio di errore causato da nome del database, username o password                                         dell'utente del database non validi.
+\end{itemize}
