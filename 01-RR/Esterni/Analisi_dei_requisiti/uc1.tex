@@ -65,24 +65,13 @@
 		\item \textbf{Scenario principale:} l'utente riceve un messaggio sull'esito dell'addestramento;
 		\item \textbf{Estensioni:}
 			\begin{itemize}
-				\item \textbf{UC1.4.1:} l'addestramento è stato completato con successo;
-				\item \textbf{UC1.4.2:} l'addestramento è fallito.
+				\item \textbf{UC1.4.1:} l'addestramento è fallito.
 			\end{itemize}
 		\item \textbf{Precondizione:} l'addestramento è stato avviato con successo;
-		\item \textbf{Postcondizione:} l'addestramento è stato concluso.
-	\end{itemize}
-	
-	\paragraph{UC1.4.1 - Ricezione del file JSON contenente i parametri per la previsione}
-	\begin{itemize}
-		\item \textbf{Attore primario:} utente;
-		\item \textbf{Attore secondario:} Grafana;
-		\item \textbf{Descrizione:} l'addestramento ;
-		\item \textbf{Scenario principale:} l'utente riceve un messaggio che conferma il corretto svolgimento dell'addestramento e che è stato ricevuto il file JSON che contiene il risultato dell'addestramento;
-		\item \textbf{Precondizione:} l'addestramento è stato completato;
-		\item \textbf{Postcondizione:} il sistema riceve il file JSON fornito dal plugin dopo l'addestramento.
+		\item \textbf{Postcondizione:} l'addestramento è stato concluso con successo e il file JSON contenente i parametri di previsione, generati dall'addestramento, è presente nel sistema.
 	\end{itemize}
 
-	\paragraph{UC1.4.2 - Addestramento fallito}
+	\paragraph{UC1.4.1 - Addestramento fallito}
 	\begin{itemize}
 		\item \textbf{Attore primario:} utente;
 		\item \textbf{Attore secondario:} Grafana;
