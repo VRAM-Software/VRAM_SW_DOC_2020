@@ -1,0 +1,36 @@
+\documentclass[a4]{article}
+\begin{document}
+	\subsection{UC14 - Definizione di un alert}
+	\begin{itemize}
+		\item \textbf{Attore primario:} utente;
+		\item \textbf{Attore secondario:} Grafana\glo;
+		\item \textbf{Descrizione:} questo caso d'uso descrive la funzionalità offerta da Grafana\glo di definire alert\glosp sulle serie di dati che monitora.
+		\item \textbf{Scenario principale:} 
+		\begin{enumerate}
+			\item \textbf{UC14.1:} Inserimento dei un alert\glo;
+			\item \textbf{UC14.2:} Definizione di un alert\glo.
+		\end{enumerate}
+		\item \textbf{Precondizione:} l'utente è autenticato nel sistema software Grafana\glo ed è presente una istanza di Grafana\glo cloud o locale su cui è stato aggiunto un pannello grafico che monitora una serie di dati;
+		\item \textbf{Postcondizione:} Viene inserito e definito con successo un alert\glosp nel pannello grafico scelto.
+	\end{itemize}
+	
+	\subsubsection{UC14.1 - Inserimento dei un alert}
+	\begin{itemize}
+		\item \textbf{Attore primario:} utente;
+		\item \textbf{Attore secondario:} Grafana\glo;
+		\item \textbf{Descrizione:} Grafana\glo fornisce all'utente un modo per inserire alert\glosp sui pannelli grafici;
+		\item \textbf{Scenario principale:} L'utente inserisce in un pannello grafico un alert\glo;
+		\item \textbf{Precondizione:} L'utente deve aver inserito in una dashboard un pannello grafico;
+		\item \textbf{Postcondizione:} Il pannello grafico possiede ora un alert\glo.
+	\end{itemize}
+	
+	\subsubsection{UC14.2 - Definizione di un alert}
+	\begin{itemize}
+		\item \textbf{Attore primario:} utente;
+		\item \textbf{Attore secondario:} Grafana\glo;
+		\item \textbf{Descrizione:} Dopo aver aggiunto un alert\glosp ad un pannello grafico l'utente ha la possibilità di definirlo e quindi di configurarne funzionamento;
+		\item \textbf{Scenario principale:} L'utente definisce le regole di funzionamento dell'alert\glosp appena inserito, usando le funzioni previste da Grafana\glo;
+		\item \textbf{Precondizione:} l'utente ha aggiunto un alert\glosp al pannello grafico;
+		\item \textbf{Postcondizione:} l'utente tramite le funzioni offerte da Grafana\glosp ha definito l'alert\glosp precedentemente aggiunto.
+	\end{itemize}
+\end{document} 
