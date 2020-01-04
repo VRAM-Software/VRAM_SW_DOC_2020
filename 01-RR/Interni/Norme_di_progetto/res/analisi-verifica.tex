@@ -12,7 +12,7 @@ La verifica viene effettuata per raggiungere i seguenti obiettivi:
 Il processo di verifica assicura che tutte le attività svolte della fase in esame, attraverso analisi e test successivamente definiti, siano conformi alle aspettative.
 \subsubsection{Attività}
 \paragraph{Analisi}\mbox{}\\ [1mm]
-Le attività che si effettuano durante la verifica sono due tipi di analisi: l'\textbf{Analisi statica} e l'\textbf{Analisi dinamica}. \\[2mm]
+Le attività che si effettuano durante la verifica sono due tipi di analisi: l'analisi statica e l'analisi dinamica. \\[2mm]
 \textbf{Analisi statica}\mbox{}\\ [1mm]
 L'analisi statica è lo studio della documentazione e del codice sorgente, essa non richiede l'esecuzione delle singole parti del sistema software che si sta sviluppando, quindi viene applicata ad ogni prodotto di processo. L'analisi statica può essere effettuata manualmente in due modi:
 \begin{itemize}
@@ -22,6 +22,7 @@ L'analisi statica è lo studio della documentazione e del codice sorgente, essa 
 	Metodo di lettura o desk check per cercare errori specifici utilizzando liste di controllo o check list, la tabella successiva rappresenta gli errori che i nostri verificatori hanno identificato come essere i più frequenti.
 \end{itemize}
 \rowcolors{2}{gray!25}{gray!15}
+\renewcommand\thetable{3.1}
 \begin{longtable} {
 		>{\centering}p{55mm} 
 		>{\centering}p{55mm}
@@ -33,11 +34,13 @@ L'analisi statica è lo studio della documentazione e del codice sorgente, essa 
 	Sintassi parole da enfatizzare & Le parole da enfatizzare, come titolo di liste puntate, devono essere scritte i grassetto utilizzando il comando: \verb|\textbf{}|  &  \TBstrut \\[2mm]
 	Punteggiatura liste puntate & Ogni elemento nelle liste puntate deve iniziare con una lettera maiuscola e deve finire con un punto e virgola &  \TBstrut \\[2mm]
 	Uso corretto dei comandi \verb|\glo| e \verb|\glosp| & I comandi \verb|\glo| e \verb|\glosp|, sono stati creati per identificare le parole da inserire nel glossario, \verb|\glo| dovrà essere usato se la parola del glossario precede un carattere di punteggiatura. Il comando \verb|\glosp| sarà invece usato per le parole che precedono uno spazio &  \TBstrut \\	[2mm]
+	\rowcolor{white}
+	\caption{Tabella errori più frequenti}
 \end{longtable}
 
 \textbf{Analisi dinamica} \\ [1mm]
 L'analisi dinamica è una tecnica che consiste nell'esecuzione del prodotto software eseguendo dei test su un insieme finito di casi.
-\paragraph{Test}\mbox{}\\
+\paragraph{Test}\mbox{}\\ [1mm]
 Per la corretta verifica del codice, i test devono seguire regole ben precise che definiscono i parametri da definire e le proprietà che devono avere test per essere considerati efficaci: \\*
 \textbf{Parametri da definire:}
 \begin{itemize}
@@ -82,7 +85,7 @@ I test di regressione controllano l'integrazione tra il sistema e correzioni o e
 \textbf{Test di accettazione} \\*
 I test di accettazione, o di collaudo, vengono effettuati ad ogni pre-rilascio, quindi dopo l'esecuzione dei test di sistema. Essi servono a confermare il soddisfacimento dei requisiti da parte del committente; infatti questi tipi di test ne richiedono la presenza. Se questi test vengono superati significa che il prodotto software è pronto per il rilascio. \\*
 \subsubsection{Strumenti}
-	\paragraph{Correzione ortografica}
-	Il nostro gruppo ha utilizzato, per la ricerca di errori ortografici o stilistici nel testo dei documenti, la libreria \textbf{HunSpell} utilizzata con l'editor di test: \textbf{TexStudio}. Esso permette di avere un controllo in tempo reale su errori ortografici in lingua inglese e italiana (sottolineati in rosso) e ripetizioni di parole a breve distanza (sottolineati in verde).
-	\paragraph{Validazione codice con SonarJS}
-	Per la validazione del codice JavaScript prodotto il gruppo ha deciso di utilizzare l'analizzatore di codice statico \textbf{SonarJs} la cui pagina web è la seguente: \\ \url{https://www.sonarsource.com/products/codeanalyzers/sonarjs.html}
+	\paragraph{Correzione ortografica}\mbox{}\\ [1mm]
+	Il nostro gruppo ha utilizzato, per la ricerca di errori ortografici o stilistici nel testo dei documenti, la libreria HunSpell utilizzata con l'editor di test: TexStudio. Esso permette di avere un controllo in tempo reale su errori ortografici in lingua inglese e italiana (sottolineati in rosso) e ripetizioni di parole a breve distanza (sottolineati in verde).
+	\paragraph{Validazione codice con SonarJS}\mbox{}\\ [1mm]
+	Per la validazione del codice JavaScript prodotto il gruppo ha deciso di utilizzare l'analizzatore di codice statico SonarJS la cui pagina web è la seguente: \\ \url{https://www.sonarsource.com/products/codeanalyzers/sonarjs.html}
