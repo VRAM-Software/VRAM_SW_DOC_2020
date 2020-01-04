@@ -7,124 +7,123 @@
 		>{}p{28mm}
 		}
 	\rowcolor{gray!50}
-		\textbf{Requisito} & 
-		\textbf{Classificazione} & 
-		\textbf{Descrizione} & 
-		\textbf{Fonti} 	\TBstrut \\
-		
-		R1V1 & 
-		Obbligatorio & 
-		Il plugin deve funzionare per l'ultima versione di Grafana\glo : \textit{6.5}. &
-		Decisione interna.  \TBstrut \\ [2mm]		
-		
-		R1V1.1 &
-		Obbligatorio &
-		I dati ricevuti da utente devono essere forniti in un file formato JSON  &
-		Capitolato.  \TBstrut \\ [2mm]
-		
-		R1V1.2 &
-		Obbligatorio &
-		Il plugin produce un file JSON che contiene i parametri di predizione, a partire dai predittori letti dal file fornito dall'utente  &
-		Capitolato.  \TBstrut \\ [2mm]
-		
-		R1V1.3 &
-		Obbligatorio &
-		Il plugin deve associare i dati letti dal file JSON prodotto, al flusso dei dati di Grafana\glo .  &
-		Capitolato.  \TBstrut \\ [2mm]
-		
-		R1V1.4 &
-		Obbligatorio &
-		Il plugin deve applicare la previsione utilizzando il file JSON nel flusso dei dati di Grafana\glosp e deve fornire i nuovi dati al sistema.  &
-		Capitolato.  \TBstrut \\ [2mm]
-		
-		R1V1.5 &
-		Obbligatorio &
-		I dati prodotti dovranno essere disponibili al sistema di Grafana\glosp per la creazione di grafici e dashboard.  &
-		Capitolato.  \TBstrut \\ [2mm]
+	\textbf{Requisito} & 
+	\textbf{Classificazione} & 
+	\textbf{Descrizione} & 
+	\textbf{Fonti} 	\TBstrut \\
+	
+	R1V1 & 
+	Obbligatorio & 
+	Il plugin deve funzionare per l'ultima versione di Grafana\glo : \textit{6.5}. &
+	Decisione interna.  \TBstrut \\ [2mm]		
+	
+	R1V1.1 &
+	Obbligatorio &
+	I dati ricevuti da utente devono essere forniti in un file formato JSON  &
+	Capitolato.  \TBstrut \\ [2mm]
+	
+	R1V1.2 &
+	Obbligatorio &
+	Il plugin produce un file JSON che contiene i parametri di predizione, a partire dai predittori letti dal file fornito dall'utente  &
+	Capitolato.  \TBstrut \\ [2mm]
+	
+	R1V1.3 &
+	Obbligatorio &
+	Il plugin deve associare i dati letti dal file JSON prodotto, al flusso dei dati di Grafana\glo .  &
+	Capitolato.  \TBstrut \\ [2mm]
+	
+	R1V1.4 &
+	Obbligatorio &
+	Il plugin deve applicare la previsione utilizzando il file JSON nel flusso dei dati di Grafana\glosp e deve fornire i nuovi dati al sistema.  &
+	Capitolato.  \TBstrut \\ [2mm]
+	
+	R1V1.5 &
+	Obbligatorio &
+	I dati prodotti dovranno essere disponibili al sistema di Grafana\glosp per la creazione di grafici e dashboard.  &
+	Capitolato.  \TBstrut \\ [2mm]
 
-		R2V1 & 
-		Obbligatorio & 
-		Il plugin deve essere sviluppato mediante tecnologie web. &
-		Capitolato.  \TBstrut \\ [2mm]
-		
-		R2V1.1 & 
-		Obbligatorio & 
-		Il linguaggio di programmazione per il plugin di Grafana\glosp deve essere javascript e deve utilizzare lo standard \textit{ECMAScript6} (\textit{ES6}) dato l'utilizzo di Grafana\glosp dello stesso standard. &
-		Documentazione Grafana\glo.  \TBstrut \\ [2mm]
-		
-		R2V1.2 & 
-		Obbligatorio & 
-		Il sistema deve funzionare sui browser più recenti dato il supporto dello standard \textit{ES6} &
-		W3School  \TBstrut \\ [2mm]
-		
-		R2V1.2.1 & 
-		Obbligatorio & 
-		Il plugin funziona sul browser \textit{Chrome} dalla versione \textit{58} in poi &
-		W3School  \TBstrut \\ [2mm]
-		
-		R2V1.2.2 & 
-		Obbligatorio & 
-		Il plugin funziona sul browser \textit{Microsoft Edge} dalla versione \textit{14} in poi &
-		W3School  \TBstrut \\ [2mm]
-		
-		R2V1.2.3 & 
-		Obbligatorio & 
-		Il plugin funziona sul browser \textit{Firefox} dalla versione \textit{54} in poi &
-		W3School  \TBstrut \\ [2mm]
-		
-		R2V1.2.4 & 
-		Obbligatorio & 
-		Il plugin funziona sul browser \textit{Safari} dalla versione \textit{10} in poi &
-		W3School  \TBstrut \\ [2mm]
-		
-		R2V1.2.5 & 
-		Obbligatorio & 
-		Il plugin funziona sul browser \textit{Opera} dalla versione \textit{55} in poi &
-		W3School  \TBstrut \\ [2mm]
-		
-		R2V1.3 & 
-		Obbligatorio & 
-		Il plugin deve utilizzare un build system\glosp che supporti \textit{systemjs}, un caricatore di moduli \textit{ES (ECMAScript)} &
-		Documentazione Grafana\glo.  \TBstrut \\ [2mm]
+	R2V1 & 
+	Obbligatorio & 
+	Il plugin deve essere sviluppato mediante tecnologie web. &
+	Capitolato.  \TBstrut \\ [2mm]
+	
+	R2V1.1 & 
+	Obbligatorio & 
+	Il linguaggio di programmazione per il plugin di Grafana\glosp deve essere javascript e deve utilizzare lo standard \textit{ECMAScript6} (\textit{ES6}) dato l'utilizzo di Grafana\glosp dello stesso standard. &
+	Documentazione Grafana\glo.  \TBstrut \\ [2mm]
+	
+	R2V1.2 & 
+	Obbligatorio & 
+	Il sistema deve funzionare sui browser più recenti dato il supporto dello standard \textit{ES6} &
+	W3School  \TBstrut \\ [2mm]
+	
+	R2V1.2.1 & 
+	Obbligatorio & 
+	Il plugin funziona sul browser \textit{Chrome} dalla versione \textit{58} in poi &
+	W3School  \TBstrut \\ [2mm]
+	
+	R2V1.2.2 & 
+	Obbligatorio & 
+	Il plugin funziona sul browser \textit{Microsoft Edge} dalla versione \textit{14} in poi &
+	W3School  \TBstrut \\ [2mm]
+	
+	R2V1.2.3 & 
+	Obbligatorio & 
+	Il plugin funziona sul browser \textit{Firefox} dalla versione \textit{54} in poi &
+	W3School  \TBstrut \\ [2mm]
+	
+	R2V1.2.4 & 
+	Obbligatorio & 
+	Il plugin funziona sul browser \textit{Safari} dalla versione \textit{10} in poi &
+	W3School  \TBstrut \\ [2mm]
+	
+	R2V1.2.5 & 
+	Obbligatorio & 
+	Il plugin funziona sul browser \textit{Opera} dalla versione \textit{55} in poi &
+	W3School  \TBstrut \\ [2mm]
+	
+	R2V1.3 & 
+	Obbligatorio & 
+	Il plugin deve utilizzare un build system\glosp che supporti \textit{systemjs}, un caricatore di moduli \textit{ES (ECMAScript)} &
+	Documentazione Grafana\glo.  \TBstrut \\ [2mm]
 
-		R2V1.4 & 
-		Obbligatorio & 
-		L'inserimento dei metadati del plugin è obbligatorio; essi sono costituiti da due file: \textit{plugin.json} e \textit{README.md}. Il file di configurazione \textit{plugin.json} ha lo scopo di indicare la giusta cartella da montare a Grafana\glo . &
-		Documentazione Grafana\glo.  \TBstrut \\ [2mm]
+	R2V1.4 & 
+	Obbligatorio & 
+	L'inserimento dei metadati del plugin è obbligatorio; essi sono costituiti da due file: \textit{plugin.json} e \textit{README.md}. Il file di configurazione \textit{plugin.json} ha lo scopo di indicare la giusta cartella da montare a Grafana\glo . &
+	Documentazione Grafana\glo.  \TBstrut \\ [2mm]
+	
+	R2V1.5 &
+	Desiderabile &
+	La struttura dei file del plugin deve essere simile alla struttura usata nella documentazione di Grafana\glo &
+	Documentazione Grafana\glo.  \TBstrut \\ [2mm]
 		
-		R2V1.5 &
-		Desiderabile &
-		La struttura dei file del plugin deve essere simile alla struttura usata nella documentazione di Grafana\glo &
-		Documentazione Grafana\glo.  \TBstrut \\ [2mm]
-			
-		R2V2 &
-		Desiderabile &
-		Il codice sorgente deve essere gestito mediante un sistema di versionamento (\textit{Git}) e di Continuous Integration (\textit{Github Actions}). &
-		Decisione interna.  \TBstrut \\ [2mm]		
-		
-		R2V2.1 &
-		Desiderabile &
-		Il codice sorgente deve essere analizzato staticamente mediante SonarJs\glo . &
-		Decisione interna.  \TBstrut \\ [2mm]
-		
-		R2V2.2 &
-		Desiderabile &
-		Il codice sorgente deve essere analizzato dinamicamente mediante (github action js unit testing). &
-		Decisione interna.  \TBstrut \\ [2mm]
-		
-		R2V2.3 &
-		Desiderabile &
-		Devono essere eseguiti test funzionali mediante il framework: \textit{Selenium}. &
-		Decisione interna.  \TBstrut \\ [2mm]
-		
-		R3V1 & 
-		Obbligatorio & 
-		Il progetto deve essere caricato su un repository\glosp pubblico disponibile sul sito \textit{github.com}. &
-		Capitolato.  \TBstrut \\ [2mm]
-		
-		R3V1.1 & 
-		Obbligatorio & 
-		Il codice sorgente del plugin sviluppato deve essere open source e deve avere licenza \textit{Apache 2.0}.  &
-		Decisione interna.  \TBstrut \\ [2mm]
-
-	\end{longtable}
+	R2V2 &
+	Desiderabile &
+	Il codice sorgente deve essere gestito mediante un sistema di versionamento (\textit{Git}) e di Continuous Integration (\textit{Github Actions}). &
+	Decisione interna.  \TBstrut \\ [2mm]		
+	
+	R2V2.1 &
+	Desiderabile &
+	Il codice sorgente deve essere analizzato staticamente mediante SonarJs\glo . &
+	Decisione interna.  \TBstrut \\ [2mm]
+	
+	R2V2.2 &
+	Desiderabile &
+	Il codice sorgente deve essere analizzato dinamicamente mediante (github action js unit testing). &
+	Decisione interna.  \TBstrut \\ [2mm]
+	
+	R2V2.3 &
+	Desiderabile &
+	Devono essere eseguiti test funzionali mediante il framework: \textit{Selenium}. &
+	Decisione interna.  \TBstrut \\ [2mm]
+	
+	R3V1 & 
+	Obbligatorio & 
+	Il progetto deve essere caricato su un repository\glosp pubblico disponibile sul sito \textit{github.com}. &
+	Capitolato.  \TBstrut \\ [2mm]
+	
+	R3V1.1 & 
+	Obbligatorio & 
+	Il codice sorgente del plugin sviluppato deve essere open source e deve avere licenza \textit{Apache 2.0}.  &
+	Decisione interna.  \TBstrut \\ [2mm]
+\end{longtable}
