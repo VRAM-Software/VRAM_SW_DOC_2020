@@ -5,9 +5,14 @@
 % \TBstrut fa parte di alcuni comandi che ho inserito in config.tex che permetto di aggiungere un po' di padding al testo
 % \\ [2mm] : questra scrittura indica che lo spazio dopo una break line deve essere di 2mm
 % 
-\setcounter{secnumdepth}{0}
+
+%\setcounter{secnumdepth}{0}
 %\hfill \break
 %\textbf{\Large{Diario delle modifiche}} \\
+
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %Inserire questo per escludere una sezione dall'indice.
+
 \section*{Registro delle modifiche}
 \rowcolors{2}{gray!25}{gray!15}
 \begin{longtable} {
@@ -35,3 +40,5 @@
 	0.0.2 & 03-12-2019 & Marco Rampazzo & Analista & Definita struttura interna del documento \TBstrut \\ [2mm]
 	0.0.1 & 03-12-2019 & Marco Dalla Libera & Analista & Creato documento \LaTeX{} con il titolo \TBstrut \\ [2mm]
 \end{longtable}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{4}} %Inserire questo per ripristinare il normale inserimento delle sezioni nell'indice. 4 significa fino al paragrah
