@@ -64,3 +64,15 @@
     \item \textbf{Postcondizioni}: L'addestramento è stato concluso con successo e il file JSON contenente i parametri di previsione, generati dall'addestramento, è presente nel sistema;
     \item \textbf{Scenario principale}: L'utente riceve un messaggio sull'esito dell'addestramento.
 \end{itemize}
+
+\subsubsection{UC2.5 - Ricezione del file JSON}
+\begin{itemize}
+    \item \textbf{Codice identificativo}: UC2.5;
+    \item \textbf{Titolo}: Ricezione del file JSON;
+    \item \textbf{Attori primari}: Utente;
+    \item \textbf{Attori secondari}: Grafana\glo ;
+    \item \textbf{Descrizione}: L'applicativo esterno ha completato l'addestramento e manda a Grafana\glosp il file JSON contenente i risultati dell'addestramento;
+    \item \textbf{Precondizioni}: L'addestramento è stato completato con successo;
+    \item \textbf{Postcondizioni}: Il sistema ha ricevuto il file JSON dei risultati dell'addestramento;
+    \item \textbf{Scenario principale}: Il sistema software Grafana\glo riceve il file JSON.
+\end{itemize}
