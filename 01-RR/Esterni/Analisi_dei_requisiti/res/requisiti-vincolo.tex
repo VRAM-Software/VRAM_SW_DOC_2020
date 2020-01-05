@@ -1,0 +1,129 @@
+\section{Requisiti dichiarativi}
+	\rowcolors{2}{gray!25}{gray!15}
+	\begin{longtable} {
+		>{\centering}p{18mm} 
+		>{\centering}p{28mm}
+		>{}p{50mm} 
+		>{}p{28mm}
+		}
+	\rowcolor{gray!50}
+	\textbf{Requisito} & 
+	\textbf{Classificazione} & 
+	\textbf{Descrizione} & 
+	\textbf{Fonti} 	\TBstrut \\
+	
+	R1V1 & 
+	Obbligatorio & 
+	Il plugin deve funzionare per l'ultima versione di Grafana\glo : \textit{6.5}. &
+	Interno  \TBstrut \\ [2mm]		
+	
+	R1V1.1 &
+	Obbligatorio &
+	I dati ricevuti da utente devono essere forniti in un file formato JSON  &
+	Capitolato  \TBstrut \\ [2mm]
+	
+	R1V1.2 &
+	Obbligatorio &
+	Il plugin produce un file JSON che contiene i parametri di predizione, a partire dai predittori\glosp letti dal file fornito dall'utente  &
+	Capitolato  \TBstrut \\ [2mm]
+	
+	R1V1.3 &
+	Obbligatorio &
+	Il plugin deve associare i dati letti dal file JSON prodotto, al flusso dei dati di Grafana\glo .  &
+	Capitolato  \TBstrut \\ [2mm]
+	
+	R1V1.4 &
+	Obbligatorio &
+	Il plugin deve applicare la previsione utilizzando il file JSON nel flusso dei dati di Grafana\glosp e deve fornire i nuovi dati al sistema.  &
+	Capitolato  \TBstrut \\ [2mm]
+	
+	R1V1.5 &
+	Obbligatorio &
+	I dati prodotti dovranno essere disponibili al sistema di Grafana\glosp per la creazione di grafici e dashboard\glo .  &
+	Capitolato  \TBstrut \\ [2mm]
+
+	R1V2 & 
+	Obbligatorio & 
+	Il plugin deve essere sviluppato mediante tecnologie web. &
+	Capitolato  \TBstrut \\ [2mm]
+	
+	R1V2.1 & 
+	Obbligatorio & 
+	Il linguaggio di programmazione per il plugin di Grafana\glosp deve essere javascript e deve utilizzare lo standard \textit{ECMAScript6} (\textit{ES6}) dato l'utilizzo di Grafana\glosp dello stesso standard. &
+	Interno  \TBstrut \\ [2mm]
+	
+	R1V2.2 & 
+	Obbligatorio & 
+	Il sistema deve funzionare sui browser più recenti dato il supporto dello standard ES6 &
+	Interno  \TBstrut \\ [2mm]
+	
+	R1V2.2.1 & 
+	Obbligatorio & 
+	Il plugin funziona sul browser Chrome dalla versione 58 in poi &
+	Interno  \TBstrut \\ [2mm]
+	
+	R1V2.2.2 & 
+	Obbligatorio & 
+	Il plugin funziona sul browser Microsoft Edge dalla versione 14 in poi &
+	Interno  \TBstrut \\ [2mm]
+	
+	R1V2.2.3 & 
+	Obbligatorio & 
+	Il plugin funziona sul browser Firefox dalla versione 54 in poi &
+	Interno  \TBstrut \\ [2mm]
+	
+	R1V2.2.4 & 
+	Obbligatorio & 
+	Il plugin funziona sul browser Safari dalla versione 10 in poi &
+	Interno  \TBstrut \\ [2mm]
+	
+	R1V2.2.5 & 
+	Obbligatorio & 
+	Il plugin funziona sul browser Opera dalla versione 55 in poi &
+	Interno  \TBstrut \\ [2mm]
+	
+	R1V2.3 & 
+	Obbligatorio & 
+	Il plugin deve utilizzare un build system\glosp che supporti systemjs, un caricatore di moduli ES (ECMAScript) &
+	Interno  \TBstrut \\ [2mm]
+
+	R1V2.4 & 
+	Obbligatorio & 
+	L'inserimento dei metadati del plugin è obbligatorio; essi sono costituiti da due file: plugin.json e README.md. Il file di configurazione plugin.json ha lo scopo di indicare la giusta cartella da montare a Grafana\glo . &
+	Interno  \TBstrut \\ [2mm]
+	
+	R2V2.5 &
+	Desiderabile &
+	La struttura dei file del plugin deve essere simile alla struttura usata nella documentazione di Grafana\glo &
+	Interno  \TBstrut \\ [2mm]
+		
+	R2V3 &
+	Desiderabile &
+	Il codice sorgente deve essere gestito mediante un sistema di versionamento\glosp (Git) e di Continuous Integration (Github Actions). &
+	Interno  \TBstrut \\ [2mm]		
+	
+	R2V3.1 &
+	Desiderabile &
+	Il codice sorgente deve essere analizzato staticamente mediante SonarJs\glo . &
+	Interno  \TBstrut \\ [2mm]
+	
+	R2V3.2 &
+	Desiderabile &
+	Il codice sorgente deve essere analizzato dinamicamente mediante (github action js unit testing). &
+	Interno  \TBstrut \\ [2mm]
+	
+	R2V3.3 &
+	Desiderabile &
+	Devono essere eseguiti test funzionali mediante il framework: Selenium. &
+	Interno  \TBstrut \\ [2mm]
+	
+	R1V4 & 
+	Obbligatorio & 
+	Il progetto deve essere caricato su un repository\glosp pubblico disponibile sul sito github.com. &
+	Capitolato  \TBstrut \\ [2mm]
+	
+	R1V4.1 & 
+	Obbligatorio & 
+	Il codice sorgente del plugin sviluppato deve essere open source e deve avere licenza Apache 2.0\glo .  &
+	Interno  \TBstrut \\ [2mm]
+\end{longtable}
