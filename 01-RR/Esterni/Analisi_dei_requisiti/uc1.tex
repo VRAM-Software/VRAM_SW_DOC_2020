@@ -67,22 +67,5 @@
 		\item \textbf{Descrizione}: Il sistema ha completato l'addestramento, il risultato di successo o insuccesso verrà fornito all'utente;
 		\item \textbf{Precondizioni}: L'addestramento è stato avviato con successo;
 		\item \textbf{Postcondizioni}: L'addestramento è stato concluso con successo e il file JSON contenente i parametri di previsione, generati dall'addestramento, è presente nel sistema;
-		\item \textbf{Scenario principale}: L'utente riceve un messaggio sull'esito dell'addestramento;
-		\item \textbf{Estensioni}:
-			\begin{itemize}
-				\item \textbf{UC3}: L'addestramento è fallito.
-			\end{itemize}
-		
-	\end{itemize}
-
-	\subsection{UC3 - Addestramento fallito}
-	\begin{itemize}
-		\item \textbf{Codice identificativo}: UC3;
-		\item \textbf{Titolo}: Addestramento fallito;
-		\item \textbf{Attori primari}: Utente;
-		\item \textbf{Attori secondari}: Grafana\glo;
-		\item \textbf{Descrizione}: In caso di errori nell'addestramento, viene fornito all'utente un messaggio di errore;
-		\item \textbf{Precondizioni}: L'addestramento è stato completato con errori;
-		\item \textbf{Postcondizioni}: Viene visualizzato un messaggio di errore e non viene ricevuto nessun file JSON;
-		\item \textbf{Scenario principale}: L'utente riceve un messaggio di errore esplicativo per l'insuccesso dell'addestramento.
+		\item \textbf{Scenario principale}: L'utente riceve un messaggio sull'esito dell'addestramento.
 	\end{itemize}
