@@ -1,3 +1,4 @@
+  
 % \textbf = grassetto; \Large = font più grande
 % \rowcolors{quanti colori alternare}{colore numero riga pari}{colore numero riga dispari}: colori alternati per riga
 % \rowcolor{color}: cambia colore di una riga
@@ -5,11 +6,44 @@
 % \TBstrut fa parte di alcuni comandi che ho inserito in config.tex che permetto di aggiungere un po' di padding al testo
 % \\ [2mm] : questra scrittura indica che lo spazio dopo una break line deve essere di 2mm
 % 
+\documentclass[12pt,a4paper]{article} %formato del documento e grandezza caratteri
+\newcommand\Tstrut{\rule{0pt}{2.6ex}} % top padding
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}} % bottom padding
+\newcommand{\TBstrut}{\Tstrut\Bstrut} % top & bottom padding
+\usepackage{longtable} % tabella che può continuare per più di una pagina
+\usepackage[table]{xcolor} % ho dovuto aggiungere table in modo da poter colorare le row della tabella, dava: undefined control sequences
 
-%\setcounter{secnumdepth}{0}
+
+\begin{document}
+\setcounter{secnumdepth}{0}
 %\hfill \break
 %\textbf{\Large{Diario delle modifiche}} \\
-
+\section{Introduzione}
+La seguente tabella è da usare nella Analisi dei requisiti per i requisiti: funzionali, di qualità e di vincolo; seguono le tabelle per il tracciamento dei requisiti e del registro delle modifiche.
+\section*{Conteggio ore}
+	\rowcolors{2}{gray!25}{gray!15}
+	\begin{longtable} {
+		>{\centering}m{42mm} 
+		>{\centering}m{10mm}
+		>{\centering}m{10mm}
+		>{\centering}m{10mm}
+		>{\centering}m{10mm}
+		>{\centering}m{18mm}
+		@{}m{0pt}@{}
+		}
+	\rowcolor{gray!50}
+		\textbf{Re} & \textbf{Am} & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} & \TBstrut \\
+		Vittorio Corrizzato & - & - & - & - & - &\TBstrut \\ [2mm]
+		Marco Dalla Libera & - & - & - & - & - &\TBstrut \\ [2mm]
+		Marco Rampazzo & - & - & - & - & - &\TBstrut \\ [2mm]
+		Vittorio Santagiuliana  & - & - & - & - & - &\TBstrut \\ [2mm]
+		Rebecca Schiavon & - & - & - & - & - &\TBstrut \\ [2mm]
+		Alessandro Spreafico & - & - & - & - & - &\TBstrut \\ [2mm]
+		Massimo Toffoletto & - & - & - & - & - &\TBstrut \\ [2mm]
+	\end{longtable}
+	
+	%\hfill \break
+%\textbf{\Large{Diario delle modifiche}} \\
 
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %Inserire questo per escludere una sezione dall'indice.
 
@@ -30,3 +64,4 @@
 \end{longtable}
 
 \addtocontents{toc}{\protect\setcounter{tocdepth}{4}} %Inserire questo per ripristinare il normale inserimento delle sezioni nell'indice. 4 significa fino al paragrah
+\end{document}
