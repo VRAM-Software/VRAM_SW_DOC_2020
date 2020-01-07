@@ -1,0 +1,44 @@
+\section{Modello di sviluppo}
+Dall'analisi del progetto\glosp è stato identificato come modello di sviluppo più appropriato un modello di sviluppo ad incrementi. Tuttavia si è anche notato che, dato che sarà sviluppato un plugin, all'occorrenza sarà necessario utilizzare un modello di sviluppo a componenti. In particolare lo sviluppo a componenti, quando applicabile, faciliterà e velocizzerà notevolmente lo sviluppo tramite l'applicazione di:
+\begin{itemize}
+	\item \textbf{Component reuse}: riuso di componenti di un'applicazione esistente, siano essi sottosistemi o singoli oggetti, potranno essere utilizzati tramite opportune API;
+	\item \textbf{Object and function reuse}: riuso di componenti software che realizzano una singola funzione o classe oggetto, potranno essere utilizzati come librerie durante lo sviluppo di nuovo codice sorgente.
+\end{itemize}
+Si è quindi ritenuto che il modello incrementale con utilizzo, dove opportuno, di modello a componenti sia la soluzione migliore per realizzare il prodotto\glosp richiesto, in quanto permetterà di agevolare e strutturare in modo efficace ed efficiente lo sviluppo, portando continuamente valore aggiunto al prodotto\glosp e velocizzando lo sviluppo tramite il riuso di componenti esistenti.
+
+\subsection{Modello incrementale}
+Il modello di sviluppo incrementale rappresenta il principale modello di sviluppo che sarà utilizzato per sviluppare il plugin, in quanto la sua natura ad incrementi porterà i seguenti vantaggi:
+\begin{itemize}
+	\item Agevolazione l'organizzazione dello sviluppo, in quanto ci sarà corrispondenza fra requisiti ed incrementi;
+	\item Agevolazione della verifica in quanto può essere effettuata ad ogni incremento senza dover necessariamente bloccare lo sviluppo di altri incrementi;
+	\item Agevolazione del monitoraggio dei progressi, in quanto ogni incremento porterà valore aggiunto al prodotto\glo.
+\end{itemize}}
+La prima attività del modello di sviluppo incrementale consiste nell'individuazione dei requisiti da implementare, che vanno classificati in base alla loro rilevanza per gli stakeholder\glo. È così possibile sviluppare per primi i requisiti ad importanza critica che rappresentano le funzionalità cardine del prodotto\glo, lasciando in secondo piano i requisiti non prioritari, facendo corrispondere appunto ad ogni incremento uno o più requisiti.
+Il metodo di lavoro incrementale è quindi così riassunto:
+\begin{itemize}
+	\item Individuare i requisiti del prodotto\glo;
+	\item Definire degli incrementi facendo loro corrispondere uno o più requisiti;
+	\item Analizzare se negli incrementi è possibile riutilizzare componenti secondo il modello di sviluppo a componenti;
+	\item I seguenti passaggi saranno eseguiti per ogni incremento:
+	\begin{itemize}
+		\item Suddivisione dello sviluppo del singolo incremento fra gli sviluppatori;
+		\item Sviluppo del singolo incremento;
+		\item Verifica dello sviluppo da parte dei verificatori;
+		\item Validazione\glosp dell'incremento tramite riunione di gruppo, in cui si verifica se l'incremento soddisfa effettivamente i requisiti a lui assegnati;
+		\item Discussione ed eventuale attuazione di miglioramenti per i prossimi incrementi.
+	\end{itemize}
+\end{itemize}}
+
+\subsubsection{Incrementi individuati}
+Tabella degli incrementi
+
+\subsection{Modello a componenti}
+I componenti evidenziati dall'analisi sono principalmente gli elementi esistenti di Grafana\glosp e gli algoritmi di predittività forniti da \textit{Zucchetti}.
+In particolare tali elementi vengono inquadrati nelle seguenti classi di componenti:
+\begin{itemize}
+	\item \textbf{Elementi Grafana\glo}: Sono le librerie  e le funzionalità fornite da Grafana\glo, il loro uso viene quindi inquadrato come component reuse;
+	\item \textbf{Algoritmi di preittività}: Sono gli algoritmi che ci sono stati forniti da \textit{Zucchetti} e saranno riutilizzabili come librerie durante lo sviluppo del plugin, il loro uso viene quindi inquadrato come object and function reuse.
+\end{itemize}
+
+[figura modello incrementale]
+[figura modello a componenti]
