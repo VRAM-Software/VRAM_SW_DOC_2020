@@ -1,25 +1,20 @@
 \section{Introduzione}
 \subsection{Scopo del Documento}
-Il presente documento ha come scopo la definizione di regole e convenzioni che stanno alla base del progetto e che tutti i membri del gruppo devono seguire. In questo modo si garantisce consistenza e omogeneità in tutto il materiale del progetto stesso. Infatti ogni componente del gruppo è obbligato a visionare questo documento e a rispettarne rigorosamente le norme\glosp al fine di lavorare secondo una metodologia coesa\glosp e uniforme.
+Il presente documento ha come scopo la definizione di regole e convenzioni che stanno alla base del progetto\glosp e che tutti i membri del gruppo devono seguire. In questo modo si garantisce consistenza e omogeneità in tutto il materiale del progetto\glosp stesso. Infatti ogni componente del gruppo è obbligato a visionare questo documento e a rispettarne rigorosamente le norme al fine di lavorare secondo una metodologia coesa e uniforme.
 \subsection{Scopo del Prodotto}
-Il capitolato\glosp C4 ha lo scopo di implementare due plug-in\glosp di Grafana\glosp scritti in linguaggio Javascript\glosp che eseguiranno i calcoli(Support Vector Machine SVM o Regressione Lineare RL) letti da un file json\glosp e produrranno valori tali da essere aggiunti al flusso di monitoraggio. I plug-in\glosp dovranno prevedere il superamento di determinati livelli di soglia per generare un allarme, oppure permettere agli operatori del servizio Cloud\glosp di generare segnalazioni dei punti critici che l'erogazione mette in evidenza.
-Dunque questi 2 plug-in\glosp permetteranno un'azione di monitoraggio grazie alla quale gli operatori potranno intervenire con ogni cognizione di causa sul sistema.
-\subsection{Ambigiutà e Glossario}
-Questo documento verrà corredato da un \textit{Glossario v.1.0.0} dove saranno illustrati i termini tecnici o altamente specifici per evitare ambiguità in essi. Le voci interessate saranno identificate da una 'G' a pedice.
+Il capitolato\glosp C4 ha lo scopo di implementare un plug-in di Grafana\glosp scritto in linguaggio Javascript che eseguirà gli algoritmi di Support Vector Machine SVM\glosp o Regressione Lineare RL\glo, i quali leggendo da un file JSON la loro configurazione saranno in grado di generare previsioni che potranno essere aggiunte al flusso di monitoraggio. Il plug-in dovrà prevedere il superamento di determinati livelli di soglia per generare un allarme, oppure permettere agli operatori del servizio Cloud\glosp di generare segnalazioni dei punti critici che l'erogazione mette in evidenza. Il plug-in utilizzerà un applicativo esterno per addestrare gli algoritmi di SVM\glosp ed RL\glo.
+Dunque il plug-in permetterà un'azione di monitoraggio grazie alla quale gli operatori potranno intervenire con ogni cognizione di causa sul sistema.
+\subsection{Ambiguità e Glossario}
+Questo documento verrà corredato da un \textit{Glossario v.1.1.1} dove saranno illustrati i termini tecnici o altamente specifici per evitare ambiguità in essi. Le voci interessate saranno identificate da una 'G' a pedice.
 \subsection{Riferimenti}
-\subsubsection{Riferimenti Normativi}
-\begin{itemize}
+\subsubsection{Riferimenti Informativi}
+\begin{enumerate}
 	\item \textbf{Standard ISO/IEC 12207:1995}: 
 	\url{https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf};
 	\item \textbf{Capitolato\glosp d'appalto C4 - Predire in Grafana}:  \url{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C4.pdf}
-	%verbali normativi PLACEHOLDER
-\end{itemize}
-\subsubsection{Riferimenti Informativi}
-\begin{itemize}
 	\item \textbf{Piano di Progetto}: \textit{Piano di Progetto v1.0.0};
 	\item \textbf{Piano di Qualifica}: \textit{Piano di Qualifica v1.0.0};
-	\item \textbf{Software Engineering - Ian Sommerville - 9 th Edition (2010)}:
-	(formato cartaceo);
+	\item \textbf{Ingegneria del software, Ian Sommerville, Pearson Education, Addison Wesley (Decima edizione)};
 	\item \textbf{Guide to the Software Engineering Body of Knowledge(SWEBOK), 2004}
 		\url{http://www.math.unipd.it/~	tullio/IS-1/2007/Approfondimenti/SWEBOK.pdf};
 
@@ -40,6 +35,6 @@ Questo documento verrà corredato da un \textit{Glossario v.1.0.0} dove saranno 
 	
 	%NOTA BENE: Dobbiamo decidere un po' di tecnologie da usare/strumenti e qualche sito per la loro documentazione da inserire nei riferimenti informativi
 	
-\end{itemize}
+\end{enumerate}
 
 
