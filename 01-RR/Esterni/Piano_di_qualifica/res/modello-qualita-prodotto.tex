@@ -1,43 +1,65 @@
 \subsubsection{Modello di qualità del prodotto} 
-Per descrivere il modello di qualità del prodotto software il nostro gruppo ha deciso di utilizzare lo standard ISO/IEC 25010, che classifica e definisce i parametri della qualità di un prodotto software. Il nostro gruppo ha considerato adatti per questo progetto i seguenti quattro parametri tralasciando l'efficienza e la portabilità dato che non vengono contemplati nel progetto.
-	\paragraph{Funzionalità} \mbox{}\\
-	Per funzionalità si intende la capacità di un prodotto software di fornire funzionalità che servono agli utenti per operare in un determinato contesto.
+Per descrivere il modello di qualità del prodotto software il nostro gruppo ha deciso di utilizzare lo standard ISO/IEC 25010, che determina le caratteristiche della qualità di un prodotto software che verranno valutate. Il modello di qualità del prodotto, definito nello standard, è suddiviso nelle otto seguenti caratteristiche:
+	\paragraph{Adeguatezza funzionale} \mbox{}\\
+	Per adeguatezza funzionale si intende la capacità di un prodotto software di fornire funzioni che soddisfano i requisiti impliciti ed espliciti, quando usati in un determinato contesto sotto specifiche condizioni.
 	\begin{itemize}
-		\item \textbf{Adeguatezza}: la capacità del software di offrire un insieme di funzioni appropriate le cui funzionalità permettono all'utente di raggiungere determinati obbiettivi;
-		\item \textbf{Accuratezza}: la capacità del software di fornire agli utenti risultati corretti e precisi e funzionalità concordanti;
-		\item \textbf{Interoperabilità}: la capacità del software di comunicare e scambiare informazioni con servizi o altri sistemi senza l'introduzione di errori;
-		\item \textbf{Sicurezza}: la capacità del software di proteggere i dati da persone o sistemi non autorizzati;
-		\item \textbf{Conformità}: la capacità del software di essere conforme a standard, regole e leggi alla sua funzionalità;
+		\item \textbf{Completezza funzionale}: la capacità del software di offrire un insieme di funzioni le cui funzionalità coprono tutte le attività e tutti gli obbiettivi di un utente;
+		\item \textbf{Correttezza funzionale}: la capacità del software di fornire agli utenti risultati corretti e precisi rispetto al grado di precisione richiesto;
+		\item \textbf{Appropriatezza funzionale}: la capacità del software di fornire funzioni appropriate che facilitano l'utente a raggiungere i suoi obbiettivi.
+	\end{itemize}
+	\paragraph{Efficienza prestazionale} \mbox{}\\
+	L'efficienza prestazionale è la caratteristica relativa alle prestazioni rispetto al numero di risorse usate sotto condizioni precise.
+	\begin{itemize}
+		\item \textbf{Comportamento rispetto al tempo}: la capacità del software di eseguire le funzioni in un tempo di risposta, tempo processionale e un volume di produzione che soddisfa i requisiti;
+		\item \textbf{Utilizzo delle risorse}: la capacità del software di eseguire le funzioni usando un numero di risorse disponibili che soddisfa i requisiti;
+		\item \textbf{Capacità}: la capacità del software di avere limiti prestazionali massimi che soddisfano i requisiti.
+	\end{itemize}
+	\paragraph{Compatibilità} \mbox{}\\
+	La compatibilità è la caratteristica di un software di scambiare informazioni con altri prodotti, ed eseguire le sue funzioni mentre viene condiviso lo stesso ambiente hardware o software.
+	\begin{itemize}
+		\item \textbf{Coesistenza}: la capacità del software di eseguire le sue funzionalità senza impatti negativi mentre condivide lo stesso ambiente con un altro software;
+		\item \textbf{Interoperabilità}: la capacità di due o più software di scambiare informazioni tra loro e usare tali dati per i loro scopi.
 	\end{itemize}
 	\paragraph{Usabilità} \mbox{}\\
-	L'usabilità è la capacità del prodotto software di essere facilmente utilizzabile e comprensibile dall'utente, se viene usato secondo alcune regole prestabilite dagli sviluppatori.
+	L'usabilità è la caratteristica di un software facilmente utilizzabile, comprensibile dall'utente ed efficacie a raggiungere gli obbiettivi che un utente si prefissa.
 	\begin{itemize}
-		\item \textbf{Comprensibilità}: un software è comprensibile se i suoi concetti sono facilmente compresibili dall'utente;
-		\item \textbf{Apprendibilità}: è considerato apprendibile un software che riduce l'impegno che un utente deve avere per capire le funzionalità del prodotto;
-		\item \textbf{Operabilità}: la capacità del software di essere utilizzato dagli utenti per raggiungere i loro scopi;
-		\item \textbf{Attrattivà}: la caratteristica del software il cui utilizzo è piacevole all'utente, quindi l'interfaccia utente deve essere semplice, coerente e chiara;
-		\item \textbf{Conformità}: la capacità del software di essere conforme a standard, regole e leggi alla sua usabilità.
-	\end{itemize}
-	\paragraph{Efficienza} \mbox{}\\
-	\begin{itemize}
+		\item \textbf{Riconoscibilità dell'adeguatezza}: la capacità del software di essere riconosciuto dall'utente come un prodotto adatto ai loro scopi;
+		\item \textbf{Apprendibilità}: la capacità del software di ridurre l'impegno che un utente deve avere per capire le funzionalità del prodotto;
+		\item \textbf{Operabilità}: la capacità del software di essere utilizzato dagli utenti in modo semplice;
+		\item \textbf{Protezione errori dell'utente}: la capacità del software di proteggere l'utente dagli errori che lo stesso può causare;
+		\item \textbf{Estetica dell'interfaccia utente}: la capacità del software di avere una interfaccia utente piacevole;
+		\item \textbf{Accessibilità}: la capacità del software di essere usato da persone con caratteristiche che alterano in modo negativo l'operabilità del software.
 	\end{itemize}
 	\paragraph{Affidabilità} \mbox{}\\
 	Un prodotto software è considerato affidabile quando mantiene un livello di prestazioni costanti per un determinato intervallo di tempo sotto precise condizioni che possono variare nel tempo.
-	\begin{itemize}
-		\item \textbf{Maturità}: un software può essere considerato maturo se riesce a evitare errori e/o risultati errati;
+	\begin{itemize} \mbox{}\\
+		\item \textbf{Maturità}: la capacità del software di avere un comportamento affidabile quando usato in condizioni normali;
+		\item \textbf{Disponibilità}: la capacità del software di essere disponibile quando ne è richiesto l'uso;
 		\item \textbf{Tolleranza agli errori}: la capacità del software di tollerare situazioni critiche in caso di errori, in modo da permettere funzionalità costanti anche in presenza di malfunzionamenti;
-		\item \textbf{Recuperabilità}: la recuperabilità è strettamente legata alla tolleranza agli errori e indica la capacità del software di ristabilire il suo funzionamento corretto in seguito a malfunzionamenti;
-		\item \textbf{Conformità}: la capacità del software di essere conforme a standard, regole e leggi riguardo alla sua affidabilità.
+		\item \textbf{Recuperabilità}: la capacità del software di ristabilire il sistema allo stato desiderato dopo malfunzionamenti.
+	\end{itemize}
+	\paragraph{Sicurezza} \mbox{}\\
+	Per sicurezza in un prodotto software si intende il grado di protezione che il software ha sui dati per evitare che persone o servizi non autorizzati li ricevano.
+	\begin{itemize}
+		\item \textbf{Confidenzialità}: la capacità del software di assicurare la confidenzialità dei data alle persone che hanno l'autorizzazione di accedere a tali informazioni;
+		\item \textbf{Integrità}: la capacità del software di evitare modifiche o accessi non autorizzati;
+		\item \textbf{Non ripudio}: la capacità del software di dimostrare che eventi o azioni sono avvenuti, in modo da non ripudiarli in un secondo momento;
+		\item \textbf{Responsabilità}: la capacità del software di risalire a una sola entità a partire da una azione di una entità;
+		\item \textbf{Autenticità}: la capacità del software di provare l'identità delle risorse utilizzate.
 	\end{itemize}
 	\paragraph{Manutenibilità} \mbox{}\\
-	Per manutenibilità si intende la capacità di un prodotto software di essere modificato e aggiornato senza l'introduzione di problemi e anomalie.
+	Per manutenibilità si intende la capacità di un prodotto software di essere modificato e aggiornato senza l'introduzione di problemi e anomalie in seguito a cambiamenti dell'ambiente e/o dei requisiti.
 	\begin{itemize}
-		\item \textbf{Analizzabilità}: per analizzabilità si intende la facilità con cui si può identificare un errore nel codice;
+		\item \textbf{Modularità}: la capacità del software di essere composto da componenti in modo che un cambio di un componente non abbia un grande impatto sul resto del sistema;
+		\item \textbf{Riutilizzabilità}: la capacità del software di riutilizzare risorse più di una volta;
+		\item \textbf{Analizzabilità}: la capacità del software di essere facilmente analizzabile per individuare un errore, le causa di un fallimento o di identificare le parti da modificare;
 		\item \textbf{Modificabilità}: la capacità del software di essere facilmente modificabile senza introdurre errori non gestibili dal programmatore;
-		\item \textbf{Stabilità}: un software è definito stabile se l'aggiornamento o modifica dello stesso non provoca errori o anomalie nel funzionamento;
-		\item \textbf{Testabilità}: la capacità del software di essere testato facilmente così da verificare ogni aggiunta e/o modifica;
-		\item \textbf{Conformità}: la capacità del software di essere conforme a standard, regole e leggi riguardo alla sua manutenibilità.
+		\item \textbf{Testabilità}: la capacità del software di essere testato facilmente così da verificare ogni aggiunta e/o modifica.
 	\end{itemize}
-	\paragraph{Portabilità} \mbox{}\\
+	\paragraph{Portabilità} \mbox{}\\ 
+	Per portabilità si intende la caratteristica del software di essere utilizzato in modo efficacie quando esso viene trasferito su diversi hardware o software.
 	\begin{itemize}
+		\item \textbf{Adattabilità}: la capacità del software di essere adattato per hardware o software in continuo cambiamento;
+		\item \textbf{Installabilità}: la capacità del software di essere installato o disinstallato efficacemente in un ambiete specifico;
+		\item \textbf{Sostituibilità}: la capacità del software di rimpiazzare un altro prodotto con lo stesso scopo nello stesso ambiente.
 	\end{itemize}
