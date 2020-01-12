@@ -76,8 +76,10 @@ I parametri utilizzati per valutare la qualità della pianificazione sono:
 \textbf{PV: Planned Value} che rappresenta il valore dei lavoro pianificato fino a quel momento e si misura con la formula: BAC $\cdot$ \%lavoro pianificato;
 \textbf{EV: Earned Value} che rappresenta il valore del lavoro svolto fino a quel momento e si misura con la formula: BAC $\cdot$ \%lavoro pianificato;
 \textbf{AC: Actual cost} che rappresenta il denaro speso fino a quel momento e si misura col relativo numero intero;
-\textbf{SV: Schedule Variance} che segnala se si è in anticipo o in ritardo nello svolgimento di quanto pianificato e si misura con la formula: EV - PV;
-\textbf{CV: Cost Variance} che segnala la differenza tra il costo del lavoro svolto rispetto a quello pianificato e si misura con la formula: EV - PV.
+\textbf{CPI: Cost Performance Index} che rappresenta un indice per i costi effettivi rispetto a quelli previsti e si misura con la formula: $\frac{EV}{AC}$, se è $\le$1 indica che si sta spendendo più di quanto preventivato;
+\textbf{SPI: Schedule Performance Index} che rappresenta un indice per i tempi effettivi rispetto a quelli previsti e si misura con la formula: $\frac{EV}{PV}$, se è $\le$1 indica che si sta impiegando più tempo di quanto preventivato;
+\textbf{EAC: Estimated Cost at Completion} che rappresenta il budget totale stimato del progetto\glosp con il CPI del momento e si misura con la formula: $AC+\frac{BT-EV}{CPI}$;
+\textbf{SAC: Schedule at Completion} che rappresenta il tempo totale stimato del progetto\glosp con SPI del momento e si misura con la formula: $\frac{TT}{SPI}$; con TT=Tempo Totale.
 \subsubsection{Strumenti}
 Durante il Processo di Fornitura sono utilizzati i seguenti strumenti della suite di Microsoft.
 \paragraph{Microsoft Excel}\mbox{}\\ [1mm]
