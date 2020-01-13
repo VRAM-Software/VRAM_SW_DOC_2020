@@ -12,7 +12,7 @@
 		Per identificare univocamente le versioni dei documenti seguiamo le indicazioni dell'ente ETSI, dunque la numerazione delle versioni è composta da 3 cifre nel formato X.Y.Z e la prima bozza ha versione 0.0.1. Le modifiche al documento aggiorneranno le cifre nel seguente modo:
 		\begin{itemize}
 			\item \textbf{Z} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche editoriali\glosp al documento, es. X.Y.1, X.Y.2 etc.;
-			\item \textbf{Y} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche tecniche\glosp al documento. Se sono state eseguite modifiche sia editoriali che tecniche allora entrambe le cifre Z e Y saranno incrementate, es. X.1.1, X.2.2 etc;
+			\item \textbf{Y} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche tecniche\glosp al documento. Se sono state eseguite modifiche sia editoriali\glosp che tecniche\glosp allora entrambe le cifre Z e Y saranno incrementate, es. X.1.1, X.2.2 etc;
 			\item \textbf{X} : Questa cifra viene incrementata ogni volta che viene rilasciata una nuova versione finale del documento, ovvero una versione di rilascio.			
 		\end{itemize}
 		La prima versione finale ha versione 1.1.1.
@@ -24,7 +24,7 @@
 		Ogni incremento sulle singole cifre è rigorosamente un +1, non possono essere saltati numeri.
 		
 	\subsubsection{Gestione delle modifiche}
-		Al fine di monitorare e limitare le modifiche al ramo principale del repository\glo, master, è utilizzato il meccanismo di pull request fornito da GitHub. Ogni membro del gruppo può creare branch secondari, secondo il workflow feature branch, su cui effettuare modifiche, tuttavia per unirle al branch master è necessario aprire una pull request che dovrà essere revisionata dai verificatori tramite i servizi di revisione integrati in GitHub. Una volta revisionata positivamente è compito del responsabile del documento approvare la pull request ed effettuare quindi l'effettiva unione delle modifiche nel branch master.
+		Al fine di monitorare e limitare le modifiche al ramo principale del repository\glo, master, è utilizzato il meccanismo di pull request fornito da GitHub. Ogni membro del gruppo può creare branch secondari, secondo il workflow\glosp feature branch, su cui effettuare modifiche, tuttavia per unirle al branch master è necessario aprire una pull request che dovrà essere revisionata dai verificatori tramite i servizi di revisione integrati in GitHub. Una volta revisionata positivamente è compito del responsabile del documento approvare la pull request ed effettuare quindi l'effettiva unione delle modifiche nel branch master.
 		\newline
 		In sintesi, per effettuare modifiche ai documenti sono previsti i seguenti passaggi:
 		\begin{itemize}
@@ -68,7 +68,7 @@
 		Nel dettaglio:
 		\begin{itemize}
 			\item \textbf{RR} : contiene i sorgenti \LaTeX \xspace dei documenti relativi alla revisione dei requisiti;
-			\item \textbf{RP} : contiene i sorgenti \LaTeX \xspace dei documenti relativi alla revisione di progettazione;
+			\item \textbf{RP} : contiene i sorgenti \LaTeX \xspace dei documenti relativi alla revisione di progettazione\glo;
 			\item \textbf{RQ} : contiene i sorgenti \LaTeX \xspace dei documenti relativi alla revisione di qualifica;
 			\item \textbf{RA} : contiene i sorgenti \LaTeX \xspace dei documenti relativi alla revisione di accettazione; 
 			\item \textbf{Guide} : contiene brevi indicazioni interne su come usare i comandi \LaTeX \xspace usati nei documenti e su come riutilizzare il template per generare nuovi documenti;
@@ -87,7 +87,7 @@
 	\subsubsection{Ulteriori Strumenti GitHub utilizzati}
 		In aggiunta ai servizi già elencati, al fine di migliorare efficacia ed efficienza, vengono utilizzate le funzionalità di "Issue Tracking System",
 		% milestone qui è usato come nome di funzione github quindi non va a glossario  
-		"Milestone" e "Project Board" integrate in GitHub. Ognuna di queste funzionalità viene usata solo da chi autorizzato, ad esempio rilasci di versioni, creazione e chiusura di milestone\glosp sono concesse solo al responsabile di progetto.
+		"Milestone" e "Project Board" integrate in GitHub. Ognuna di queste funzionalità viene usata solo da chi autorizzato, ad esempio rilasci di versioni, creazione e chiusura di milestone sono concesse solo al responsabile di progetto\glo.
 		\newline
 		Per il repository\glosp contenente il codice sorgente del software saranno usate anche le GitHub Actions al fine di implementare la pratica della continuous integration.
 		
