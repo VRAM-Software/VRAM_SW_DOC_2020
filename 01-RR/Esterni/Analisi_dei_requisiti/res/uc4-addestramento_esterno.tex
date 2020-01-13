@@ -24,12 +24,37 @@
     \item \textbf{Descrizione}: L'applicativo esterno fornisce all'utente un modo per eseguire l'upload di un file JSON che contiene dati di testing per l'addestramento degli algoritmi di predizione;
     \item \textbf{Precondizioni}: Il plugin è installato nell'istanza di Grafana\glosp dell'utente;
     \item \textbf{Postcondizioni}: Il file JSON, inserito da utente, è stato caricato nel sistema;
-    \item \textbf{Scenario principale}: l'utente esegue il caricamento di un file JSON nel sistema;
+    \item \textbf{Scenario principale}:
+		\begin{enumerate}
+			\item L'utente seleziona il file JSON da caricare (UC4.1.1);
+			\item L'utente carica il file JSON nell'applicativo esterno (UC4.1.2).
+		\end{enumerate}
     \item \textbf{Estensioni}:
         \begin{itemize}
             \item l'applicativo esterno avverte l'utente, attraverso un errore, che il caricamento del file JSON non è avvenuto con successo (UC6).
         \end{itemize}
+\end{itemize}
 
+\paragraph{UC4.1.1 - Selezione del file JSON}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC4.1.1;
+	\item \textbf{Titolo}: Selezione del file JSON;
+	\item \textbf{Attori primari}: Utente;
+	\item \textbf{Descrizione}: L'utente seleziona il file JSON da inserire nell'applicativo esterno;
+	\item \textbf{Precondizioni}: L'utente ha avviato la procedura di inserimento del file JSON;
+	\item \textbf{Postcondizioni}: Il file JSON, selezionato dall'utente, è pronto per essere caricato;
+	\item \textbf{Scenario principale}: L'utente seleziona il file JSON.
+\end{itemize}
+
+\paragraph{UC4.1.2 - Caricamento del file JSON}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC4.1.2;
+	\item \textbf{Titolo}: Caricamento del file JSON;
+	\item \textbf{Attori primari}: Utente;
+	\item \textbf{Descrizione}: L'utente carica il file JSON nel sistema;
+	\item \textbf{Precondizioni}: L'utente ha selezionato il file da caricare;
+	\item \textbf{Postcondizioni}: Il file JSON, caricato dall'utente, è presente nell'applicativo esterno;
+	\item \textbf{Scenario principale}: L'utente avvia il caricamento del file JSON precedentemente selezionato.
 \end{itemize}
 
 \subsubsection{UC4.2 - Selezione del modello di predizione su cui applicare l'addestramento}
