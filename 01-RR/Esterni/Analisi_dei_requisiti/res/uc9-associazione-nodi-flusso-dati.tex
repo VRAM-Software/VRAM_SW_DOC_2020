@@ -1,0 +1,65 @@
+\subsection{UC9 - Associazione dei nodi al flusso dati}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC9;
+	\item \textbf{Titolo}: Associazione dei nodi al flusso dati;
+	\item \textbf{Attori primari}: Utente;
+	\item \textbf{Attori secondari}: Grafana\glo;
+	\item \textbf{Descrizione}: L'utente esegue l'associazione dei nodi individuati per l'attività di previsione;
+	\item \textbf{Precondizioni}: L'utente è autenticato nel sistema software Grafana\glosp, ha avviato il plugin e ha caricato il file JSON con i dati di addestramento;
+	\item \textbf{Postcondizioni}: I nodi sono stati associati al flusso dati con successo;
+	\item \textbf{Scenario principale}: 
+		\begin{itemize}
+			\item Selezione del nodo (UC9.1);
+			\item Selezione del flusso dati (UC9.2);
+			\item Collegamenti dei nodi al flusso dati (UC9.3);
+			\item Visualizzazione conferma collegamento del nodo al flusso dati (UC9.4).
+		\end{itemize}
+\end{itemize}
+
+\subsection{UC9.1 - Selezione dei nodi}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC9.1;
+	\item \textbf{Titolo}: Selezioni del nodi;
+	\item \textbf{Attori primari}: Utente;
+	\item \textbf{Attori secondari}: Grafana\glo;
+	\item \textbf{Descrizione}: L'utente seleziona i nodi tramite il plugin;
+	\item \textbf{Precondizioni}: L'utente ha avviato correttamente il plugin;
+	\item \textbf{Postcondizioni}: L'utente ha selezionato correttamente il nodo;
+	\item \textbf{Scenario principale}: L'utente seleziona il nodo da associare al flusso di dati.
+\end{itemize}
+
+\subsection{UC9.2 - Selezione del flusso dati}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC9.2;
+	\item \textbf{Titolo}: Selezione del flusso dati;
+	\item \textbf{Attori primari}: Utente;
+	\item \textbf{Attori secondari}: Grafana\glo;
+	\item \textbf{Descrizione}: L'utente seleziona il flusso di dati tramite il plugin;
+	\item \textbf{Precondizioni}: L'utente ha avviato correttamente il plugin;
+	\item \textbf{Postcondizioni}: L'utente ha selezionato correttamente flusso dati;
+	\item \textbf{Scenario principale}: L'utente seleziona il flusso dati a cui viene associato il nodo.
+\end{itemize}
+
+\subsection{UC9.3 - Collegamenti dei nodi al flusso dati}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC9.3;
+	\item \textbf{Titolo}: Collegamenti dei nodi al flusso dati;
+	\item \textbf{Attori primari}: Utente;
+	\item \textbf{Attori secondari}: Grafana\glo;
+	\item \textbf{Descrizione}: L'utente esegue il collegamento dei nodi al flusso dati;
+	\item \textbf{Precondizioni}: L'utente ha avviato correttamente il plugin, ha selezionato i nodi ed il flusso dati;
+	\item \textbf{Postcondizioni}: L'utente ha collegato correttamente i nodi al flusso dati;
+	\item \textbf{Scenario principale}: L'utente seleziona il flusso dati a cui viene associato il nodo.
+\end{itemize}
+
+\subsection{UC9.4 - Visualizzazione conferma collegamento del nodo al flusso dati}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC9.4;
+	\item \textbf{Titolo}: Visualizzazione conferma collegamento del nodo al flusso dati;
+	\item \textbf{Attori primari}: Utente;
+	\item \textbf{Attori secondari}: Grafana\glo;
+	\item \textbf{Descrizione}: L'utente visualizza la conferma di collegamento del nodo al flusso dati avvenuta con successo;
+	\item \textbf{Precondizioni}: L'utente ha avviato il plugin e ha eseguito il collegamento dei nodi al flusso dati;
+	\item \textbf{Postcondizioni}: L'utente ha visualizzato la conferma del collegamento dei nodi al flusso dati;
+	\item \textbf{Scenario principale}: L'utente visualizza la conferma del collegamento dei nodi al flusso dati.
+\end{itemize}
