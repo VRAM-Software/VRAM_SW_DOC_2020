@@ -3,17 +3,21 @@
     \item \textbf{Codice identificativo}: UC4;
     \item \textbf{Titolo}: Addestramento degli algoritmi di predizione con applicativo esterno;
     \item \textbf{Attori primari}: Utente;
-    \item \textbf{Descrizione}: Questo use case descrive una delle funzionalità offerte dal plugin di addestrare degli algoritmi di predizione utilizzando dei dati inseriti da un utente;
-    \item \textbf{Precondizioni}: L'utente è autenticato nel sistema software Grafana\glosp ed è presente una istanza di Grafana\glosp cloud\glosp o locale dove è installato il plugin;
-    \item \textbf{Postcondizioni}: Grafana\glosp riceve i dati di previsione dopo l'addestramento dei dati caricati da utente;
+    \item \textbf{Descrizione}: Attività di addestramento degli algoritmi di predizione eseguita nell'applicativo esterno a Grafana\glosp utilizzando dei dati inseriti da un utente;
+    \item \textbf{Precondizioni}: L'utente è autenticato nel sistema software Grafana\glo;
+    \item \textbf{Postcondizioni}: L'utente ha completato l'addestramento degli algoritmi di predizione;
     \item \textbf{Scenario principale}: 
         \begin{enumerate}
-            \item L'utente esegue il caricamento di un file JSON che contiene i dati che si vogliono utilizzare per addestrare gli algoritmi di predizione (UC4.1);
-            \item L'utente sceglie tra SVM\glosp e RL\glo, ovvero quale modello utilizzare per effettuare l'addestramento (UC4.2);
-            \item L'utente inizia l'addestramento (UC4.3);
-            \item Alla fine dell'addestramento, l'applicativo esterno ha i parametri di predizione e l'utente riceve una conferma sulla corretta esecuzione dell'addestramento (UC4.4);
-            \item I risultati dell'addestramento sono stati mandati dall'applicativo esterno a Grafana\glo, e ora sono presenti nel sistema di Grafana\glosp (UC4.5). 
+            \item Inserimento del file in formato JSON contenente i dati di testing (UC4.1);
+            \item Selezione del modello di predizione su cui applicare l'addestramento (UC4.2);
+            \item Avvio dell'addestramento (UC4.3);
+            \item Conclusione dell'addestramento (UC4.4);
+            \item Ricezione del file JSON (UC4.5). 
         \end{enumerate}
+    \item \textbf{Estensioni}:
+    \begin{itemize}
+    	\item Se il caricamento del file JSON non è avvenuto con successo viene visualizzato un messaggio di errore (UC6).
+    \end{itemize}
 \end{itemize}
 
 \subsubsection{UC4.1 - Inserimento del file in formato JSON contenente i dati di testing}
@@ -21,15 +25,36 @@
     \item \textbf{Codice identificativo}: UC4.1;
     \item \textbf{Titolo}: Inserimento del file in formato JSON contenente i dati di testing;
     \item \textbf{Attori primari}: Utente;
-    \item \textbf{Descrizione}: L'applicativo esterno fornisce all'utente un modo per eseguire l'upload di un file JSON che contiene dati di testing per l'addestramento degli algoritmi di predizione;
-    \item \textbf{Precondizioni}: Il plugin è installato nell'istanza di Grafana\glosp dell'utente;
-    \item \textbf{Postcondizioni}: Il file JSON, inserito da utente, è stato caricato nel sistema;
-    \item \textbf{Scenario principale}: l'utente esegue il caricamento di un file JSON nel sistema;
-    \item \textbf{Estensioni}:
-        \begin{itemize}
-            \item l'applicativo esterno avverte l'utente, attraverso un errore, che il caricamento del file JSON non è avvenuto con successo (UC6).
-        \end{itemize}
+    \item \textbf{Descrizione}: L'utente inserisce un file in formato JSON contenente i dati di testing nell'applicazione esterna;
+    \item \textbf{Precondizioni}: L'utente è autenticato nel sistema software Grafana\glo;
+    \item \textbf{Postcondizioni}: L'utente ha inserito correttamente il file JSON;
+    \item \textbf{Scenario principale}:
+		\begin{enumerate}
+			\item Selezione del file JSON (UC4.1.1);
+			\item Caricamento del file JSON (UC4.1.2).
+		\end{enumerate}
+\end{itemize}
 
+\paragraph{UC4.1.1 - Selezione del file JSON}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC4.1.1;
+	\item \textbf{Titolo}: Selezione del file JSON;
+	\item \textbf{Attori primari}: Utente;
+	\item \textbf{Descrizione}: L'utente seleziona il file JSON da inserire nell'applicativo esterno;
+	\item \textbf{Precondizioni}: L'utente è autenticato nel sistema software Grafana\glo;
+	\item \textbf{Postcondizioni}: L'utente ha selezionato correttamente il file JSON;
+	\item \textbf{Scenario principale}: L'utente seleziona il file JSON.
+\end{itemize}
+
+\paragraph{UC4.1.2 - Caricamento del file JSON}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC4.1.2;
+	\item \textbf{Titolo}: Caricamento del file JSON;
+	\item \textbf{Attori primari}: Utente;
+	\item \textbf{Descrizione}: L'utente carica il file JSON nell'applicativo esterno;
+	\item \textbf{Precondizioni}: L'utente ha selezionato il file da caricare;
+	\item \textbf{Postcondizioni}: L'utente ha caricato correttamente i file JSON;
+	\item \textbf{Scenario principale}: L'utente carica il file JSON.
 \end{itemize}
 
 \subsubsection{UC4.2 - Selezione del modello di predizione su cui applicare l'addestramento}
@@ -37,11 +62,10 @@
     \item \textbf{Codice identificativo}: UC4.2;
     \item \textbf{Titolo}: Selezione del modello di predizione su cui applicare l'addestramento;
     \item \textbf{Attori primari}: Utente;
-    \item \textbf{Descrizione}: L'utente può decidere quale modello di predizione utilizzare per applicare l'addestramento tra Regressione Lineare (RL\glo) e Support Vector Machine (SVM\glo);
-    \item \textbf{Precondizioni}: Il file JSON inserito da utente è stato correttamente inserito nel sistema;
-    \item \textbf{Postcondizioni}: Il modello di predizione è stato correttamente scelto e il sistema fornisce all'utente un modo per avviare l'addestramento;
-    \item \textbf{Scenario principale}: L'utente seleziona un modello per eseguire l'addestramento.
-    
+    \item \textbf{Descrizione}: L'utente seleziona quale modello di predizione applicare durante l'addestramento;
+    \item \textbf{Precondizioni}: Il file JSON è stato inserito correttamente;
+    \item \textbf{Postcondizioni}: Il modello di predizione è stato scelto correttamente;
+    \item \textbf{Scenario principale}: L'utente seleziona un modello di predizione per eseguire l'addestramento.   
 \end{itemize}
 
 \subsubsection{UC4.3 - Avvio dell'addestramento}
@@ -50,9 +74,9 @@
     \item \textbf{Titolo}: Avvio dell'addestramento;
     \item \textbf{Attori primari}: Utente;
     \item \textbf{Descrizione}: Viene fornito all'utente un modo per avviare l'addestramento;
-    \item \textbf{Precondizioni}: L'utente ha scelto il modello di predizione da utilizzare;
+    \item \textbf{Precondizioni}: Il file JSON è stato inserito correttamente e il modello di predizione è stato selezionato;
     \item \textbf{Postcondizioni}: L'addestramento è stato avviato con successo;
-    \item \textbf{Scenario principale}: L'utente inizia l'addestramento.
+    \item \textbf{Scenario principale}: L'utente avvia l'addestramento.
 \end{itemize}
 
 \subsubsection{UC4.4 - Conclusione dell'addestramento}
@@ -60,20 +84,32 @@
     \item \textbf{Codice identificativo}: UC4.4;
     \item \textbf{Titolo}: Conclusione dell'addestramento;
     \item \textbf{Attori primari}: Utente;
-    \item \textbf{Descrizione}: L'applicativo esterno ha completato l'addestramento, il risultato di successo o insuccesso verrà fornito all'utente;
+    \item \textbf{Descrizione}: L'applicazione esterna ha concluso l'addestramento;
     \item \textbf{Precondizioni}: L'addestramento è stato avviato con successo;
-    \item \textbf{Postcondizioni}: L'addestramento è stato concluso con successo e il file JSON contenente i parametri di previsione, generati dall'addestramento, è presente nell'applicativo esterno;
-    \item \textbf{Scenario principale}: L'utente riceve un messaggio sull'esito dell'addestramento.
+    \item \textbf{Postcondizioni}: L'addestramento è stato concluso con successo;
+    \item \textbf{Scenario principale}: L'utente visualizza un messaggio di conferma e conclude l'addestramento.
 \end{itemize}
+
+\subsubsection{UC4.4.1 - Visualizzazione del messaggio di conferma}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC4.4.1;
+	\item \textbf{Titolo}: Visualizzazione del messaggio di conferma;
+	\item \textbf{Attori primari}: Utente;
+	\item \textbf{Descrizione}: L'utente visualizza un messaggio di conferma che l'addestramento è stato eseguito correttamente;
+	\item \textbf{Precondizioni}: L'addestramento è stato avviato con successo;
+	\item \textbf{Postcondizioni}: L'utente ha visualizzato un messaggio di conferma che l'addestramento è stato eseguito correttamente;
+	\item \textbf{Scenario principale}: L'utente visualizza un messaggio di conferma che l'addestramento è stato eseguito correttamente.
+\end{itemize}
+
 
 \subsubsection{UC4.5 - Ricezione del file JSON}
 \begin{itemize}
     \item \textbf{Codice identificativo}: UC4.5;
     \item \textbf{Titolo}: Ricezione del file JSON;
     \item \textbf{Attori primari}: Utente;
-    \item \textbf{Attori secondari}: Grafana\glo ;
-    \item \textbf{Descrizione}: L'applicativo esterno ha completato l'addestramento e manda a Grafana\glosp il file JSON contenente i risultati dell'addestramento;
-    \item \textbf{Precondizioni}: L'addestramento è stato completato con successo;
-    \item \textbf{Postcondizioni}: Il sistema ha ricevuto il file JSON dei risultati dell'addestramento;
-    \item \textbf{Scenario principale}: Il sistema software Grafana\glo riceve il file JSON.
+    \item \textbf{Attori secondari}: Grafana\glo;
+    \item \textbf{Descrizione}: L'applicazione restituisce un file JSON con l'addestramento dei dati completato;
+    \item \textbf{Precondizioni}: L'applicazione esterna ha concluso l'addestramento con successo;
+    \item \textbf{Postcondizioni}: L'utente ha ricevuto il file JSON dei risultati dell'addestramento;
+    \item \textbf{Scenario principale}: L'utente riceve il file JSON dei risultati dell'addestramento.
 \end{itemize}
