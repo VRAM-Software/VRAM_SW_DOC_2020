@@ -66,6 +66,19 @@ Il cosiddetto software testing è un procedimento importante per misurare la qua
 	\item \textbf{Test di sistema};
 	\item \textbf{Test di accettazione}.
 \end{itemize}
+Per ogni test vengono definiti lo stato e l'esito:
+\begin{itemize}
+	\item Stato:
+	\begin{itemize}
+		\item I: implementato;
+		\item NI: non completata;
+	\end{itemize}
+	\item Esito:
+	\begin{itemize}
+		\item P: positivo;
+		\item N: negativo;
+	\end{itemize}
+\end{itemize}
 
 \paragraph*{Test d'unità} \mbox{}\\ [1mm]
 I test d'unità si definiscono tali perché controllano il corretto funzionamento di una sezione di codice specifica chiamata unità. Usualmente questi tipi di test vengono eseguiti su funzioni o, se si parla di programmazione ad oggetti, su un metodo di una classe, quindi su una parte minimale del codice. Il loro scopo è verificare che gli input forniti diano gli output attesi. È buona norma rendere questi test automatici per minimizzare il tempo di esecuzione senza richiedere l'interazione dello sviluppatore. Questo tipo di test viene scritto dal programmatore che sviluppa le singole unità mediate l'ausilio di driver\glosp e stub\glo, per verificare l'assenza di errori e documentare il funzionamento dell'unità.
