@@ -1,8 +1,6 @@
 \section{Descrizione dei test}
 Il nostro gruppo ha scelto di adottare il Modello a V\glosp per garantire la qualità del nostro prodotto. In particolare, questo modello prevede lo sviluppo dei test durante le attività di analisi dei requisiti, progettazione architetturale e progettazione di dettaglio oltre a validazione e collaudo.
-In questo modo è possibile verificare la correttezza sia di tutti gli aspetti che compongono il progetto che delle singole parti sviluppate.
-
-Sono state individuate 4 tipologie di test:
+In questo modo è possibile verificare la correttezza sia di tutti gli aspetti che compongono il progetto che delle singole parti sviluppate. Sono state individuate 4 tipologie di test:
 \begin{itemize}
 	\item Test di Accetazione;
 	\item Test di Sistema;
@@ -16,11 +14,12 @@ All'interno del documento \textit{Norme di Progetto v.1.1.1} vengono definite le
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %Inserire questo per escludere una sezione dall'indice.
 
 \rowcolors{2}{gray!25}{gray!15}
+\setcounter{table}{0}
 \begin{longtable} {
-		>{\centering}p{15mm} 
-		>{\centering}p{79.5mm}
-		>{\centering}p{15mm} 
-		>{\centering}p{15mm}
+		>{}p{15mm} 
+		>{}p{79.5mm}
+		>{}p{15mm} 
+		>{}p{15mm}
 		>{}p{0mm}}
 	\rowcolor{gray!50}
 	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato} & \textbf{Esito} &\TBstrut \\
@@ -58,7 +57,8 @@ All'interno del documento \textit{Norme di Progetto v.1.1.1} vengono definite le
 	TA14 & Verificare che l'utente visualizzi un messaggio di errore se viene inserito un input errato nella definizione di un alert\glo & NI & NE  &\TBstrut \\ [2mm]
 	TA15 & Verificare che l'utente possa sospendere un alert\glo & NI & NE  &\TBstrut \\ [2mm]
 	TA16 & Verificare che l'utente possa rimuovere un alert\glo & NI & NE  &\TBstrut \\ [2mm]
-	
+	\rowcolor{white}
+	\caption{Test di Accettazione}
 \end{longtable}
 
 \addtocontents{toc}{\protect\setcounter{tocdepth}{4}} %Inserire questo per ripristinare il normale inserimento delle sezioni nell'indice. 4 significa fino al paragrah
@@ -68,20 +68,21 @@ All'interno del documento \textit{Norme di Progetto v.1.1.1} vengono definite le
 
 \rowcolors{2}{gray!25}{gray!15}
 \begin{longtable} {
-		>{\centering}p{15mm} 
-		>{\centering}p{79.5mm}
-		>{\centering}p{15mm} 
-		>{\centering}p{15mm}
+		>{}p{15mm} 
+		>{}p{79.5mm}
+		>{}p{15mm} 
+		>{}p{15mm}
 		>{}p{0mm}}
 	\rowcolor{gray!50}
 	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato} & \textbf{Esito} &\TBstrut \\
 	TS & Verificare che l'addestramento degli algoritmi produca un file JSON con i parametri per le previsioni & NI & NE  &\TBstrut \\ [2mm]
-	TS & Verificare la corretta visualizzazione della bontà dei modelli di previsioni a seguito dell'addestramento sui dati & NI & NE  &\TBstrut \\ [2mm]
+	TS & Verificare la corretta visualizzazione della bontà dei modelli di previsione a seguito dell'addestramento sui dati & NI & NE  &\TBstrut \\ [2mm]
 	TS & Verificare che i nodi ricavati dal file JSON siano associati correttamente al flusso dati scelto in Grafana\glo & NI & NE  &\TBstrut \\ [2mm]
 	TS & Applicare le previsioni su un flusso dati statico e visualizzare correttamente i dati ottenuti all'interno di un grafico contenuto nella dashboard\glo & NI & NE  &\TBstrut \\ [2mm]
 	TS & Applicare le previsioni su un flusso dati continuo e visualizzare correttamente i dati ottenuti all'interno di un grafico contenuto nella dashboard\glo & NI & NE  &\TBstrut \\ [2mm]
 	TS & Verificare che il sistema permetta all'utente inserire un alert\glo & NI & NE  &\TBstrut \\ [2mm]
-	
+	\rowcolor{white}
+	\caption{Test di Sistema}
 \end{longtable}
 
 \addtocontents{toc}{\protect\setcounter{tocdepth}{4}} %Inserire questo per ripristinare il normale inserimento delle sezioni nell'indice. 4 significa fino al paragrah
