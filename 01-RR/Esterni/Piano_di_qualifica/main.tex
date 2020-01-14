@@ -16,15 +16,20 @@
 	%Attenzione bisogna impostare il percorso del file!
 	\input{../../../Template-LaTeX/config/frontmatter.tex} %Imposta il frontespizio, l'indice, header e footer
 	
-	
+	\input{res/intro-PdQ.tex}
+	\pagebreak
+	\input{res/qualita-di-processo.tex}
+	\pagebreak
+	\input{res/qualita-prodotto.tex}
+	\pagebreak
 	\input{res/descrizione_test.tex}
-	%Tutte le sezioni del documento
-	%\input{res/inserire nome sezione 1} 
-	% ...
-	%\input{res/inserire nome sezione n} 
+	\pagebreak
 	
-	
+	\appendix
+	\input{res/resoconto-verifica.tex}
+	\pagebreak
+	\input{res/valutazioni_miglioramento.tex}
 	
 	%Input del file "decision_table" della cartella locale "res/"
-	\input{../../../Template-LaTeX/res/decision_table.tex} %Tabella delle decisioni (solo per i verbali)
+	%\input{../../../Template-LaTeX/res/decision_table.tex} %Tabella delle decisioni (solo per i verbali)
 \end{document}
