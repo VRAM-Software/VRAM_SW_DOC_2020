@@ -1,0 +1,128 @@
+\section{Modello di sviluppo}
+Dall'analisi del progetto\glosp è stato identificato come modello di sviluppo più appropriato un modello di sviluppo incrementale. Tuttavia si è anche notato che, dato che sarà sviluppato un plugin, all'occorrenza sarà necessario utilizzare un modello di sviluppo a componenti in quanto, quando applicabile, faciliterà e velocizzerà notevolmente lo sviluppo tramite l'applicazione di:
+\begin{itemize}
+	\item \textbf{Component reuse}: riuso di componenti di un'applicazione esistente, siano essi sottosistemi o singoli oggetti che potranno essere utilizzati tramite opportune API;
+	\item \textbf{Object and function reuse}: riuso di componenti software che realizzano una singola funzione o classe oggetto che potranno essere utilizzati come librerie durante lo sviluppo di nuovo codice sorgente.
+\end{itemize}
+Si è quindi ritenuto che il modello incrementale con utilizzo, dove opportuno, di modello a componenti sia la soluzione migliore per realizzare il prodotto\glosp richiesto, in quanto permetterà di agevolare e strutturare in modo efficace ed efficiente lo sviluppo, portando continuamente valore aggiunto al prodotto\glosp e velocizzando lo sviluppo tramite il riuso di componenti esistenti.
+
+\subsection{Modello incrementale}
+Il modello di sviluppo incrementale rappresenta il principale modello di sviluppo che sarà utilizzato per sviluppare il plugin, in quanto la sua natura ad incrementi porterà i seguenti vantaggi:
+\begin{itemize}
+	\item Agevolazione dell'organizzazione dello sviluppo, in quanto ci sarà corrispondenza fra requisiti ed incrementi;
+	\item Agevolazione della verifica in quanto potrà essere effettuata ad ogni incremento senza dover necessariamente bloccare lo sviluppo degli altri incrementi;
+	\item Agevolazione del monitoraggio dei progressi, in quanto ogni incremento porterà valore aggiunto al prodotto\glo.
+\end{itemize}
+La prima attività del modello di sviluppo incrementale consiste nell'individuazione dei requisiti da implementare, che vanno classificati in base alla loro rilevanza per gli stakeholder\glo. È così possibile sviluppare per primi i requisiti ad importanza critica che rappresentano le funzionalità cardine del prodotto\glo, lasciando in secondo piano i requisiti non prioritari, facendo corrispondere appunto ad ogni incremento uno o più requisiti.
+Il metodo di lavoro incrementale è quindi così riassunto:
+\begin{itemize}
+	\item Individuare i requisiti del prodotto\glo;
+	\item Definire degli incrementi facendo loro corrispondere uno o più requisiti;
+	\item Analizzare se negli incrementi è possibile riutilizzare componenti secondo il modello di sviluppo a componenti;
+	\item I seguenti passaggi saranno eseguiti per ogni incremento:
+	\begin{itemize}
+		\item Suddivisione dello sviluppo del singolo incremento fra gli sviluppatori;
+		\item Sviluppo del singolo incremento;
+		\item Verifica dello sviluppo da parte dei verificatori;
+		\item Validazione\glosp dell'incremento tramite riunione di gruppo, in cui si verifica se l'incremento soddisfa effettivamente i requisiti a lui assegnati;
+		\item Discussione ed eventuale attuazione di miglioramenti per i prossimi incrementi.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Incrementi individuati}
+La seguente tabella riporta i principali incrementi individuati e definiti inizialmente. La priorità è data agli incrementi che implementano i requisiti obbligatori, seguiti dagli incrementi riguardanti i requisiti desiderabili. Infine sono riportati degli incrementi che potrebbero, se necessario, implementare i requisiti opzionali.
+\rowcolors{2}{gray!25}{gray!15}
+\begin{longtable} {
+		>{\raggedright\arraybackslash}p{85mm}
+		>{\raggedleft\arraybackslash}p{40mm}
+	}
+	\rowcolor{gray!50} 
+	\textbf{Incremento} & 
+	\textbf{Requisiti} 	\TBstrut \\
+	
+	Incremento 1: creazione struttura base applicativo addestramento &
+	R1F4  \TBstrut \\ [2mm]		
+	
+	Incremento 2: importazione file JSON su applicativo esterno & 
+	R1F4, R1F4.1, R1F4.1.1, R1F4.1.2  \TBstrut \\ [2mm]
+	
+	Incremento 3: sviluppo algoritmo addestramento SVM\glosp & 
+	R1F4.2  \TBstrut \\ [2mm]
+	
+	Incremento 4: sviluppo algoritmo addestramento RL\glosp & 
+	R1F4.2  \TBstrut \\ [2mm]
+	
+	Incremento 5: selezione algoritmo di addestramento & 
+	R1F4.2  \TBstrut \\ [2mm]
+	
+	Incremento 6: selezione modello e avvio addestramento & 
+	R1F4.2, R1F4.4 \TBstrut \\ [2mm]
+	
+	Incremento 7: creazione ed esportazione file JSON con i parametri addestramento &
+	R1F4.5, R1F4.5.1, R1F4.5.2 \TBstrut \\ [2mm]
+	
+	Incremento 8: visualizzazione qualità previsioni &
+	R1F5 \TBstrut \\ [2mm]
+	
+	Incremento 9: realizzazione struttura base plugin Grafana\glosp &
+	R1F7 \TBstrut \\ [2mm]
+	
+	Incremento 10: sviluppo algoritmo predizione SVM\glosp nel plugin &
+	R1F11 \TBstrut \\ [2mm]
+	
+	Incremento 11: sviluppo algoritmo predizione RL\glosp nel plugin &
+	R1F11 \TBstrut \\ [2mm]
+	
+	Incremento 12: importazione file JSON nel plugin &
+	R1F8 \TBstrut \\ [2mm]
+	
+	Incremento 13: lettura file JSON e configurazione algoritmi plugin &
+	R1F8, R1F11 \TBstrut \\ [2mm]
+	
+	Incremento 14: associazione nodi al flusso dati &
+	R1F9, R1F9.1, R1F9.2, R1F9.4, R1F9.5 \TBstrut \\ [2mm]
+	
+	Incremento 15: elaborazione e visualizzazione dei dati &
+	R1F11 \TBstrut \\ [2mm]
+	
+	Incremento 16: arresto del plugin &
+	R1F12 \TBstrut \\ [2mm]
+	
+	Incremento 17: errore JSON non valido &
+	R2F6 \TBstrut \\ [2mm]
+	
+	Incremento 18: errore collegamento nodi &
+	R2F10 \TBstrut \\ [2mm]
+	
+	Incremento 19: predisposizione addestramento interno &
+	R3F1, R3F1.1, R3F1.1.1 \TBstrut \\ [2mm]
+	
+	Incremento 20: addestramento interno &
+	R3F1.2, R3F1.2, R3F1.3 \TBstrut \\ [2mm]
+	
+	Incremento 21: chiusura addestramento interno &
+	R3F1.4, R3F1.4.1 \TBstrut \\ [2mm]
+	
+	Incremento 22: indice previsioni e errore &
+	R3F2, , R3F3 \TBstrut \\ [2mm]
+	
+	Incremento 23: sviluppo algoritmo regressione non lineare &
+	R3F4.3 \TBstrut \\ [2mm]
+	
+	Incremento 24: sviluppo algoritmo reti neurali &
+	R3F4.3 \TBstrut \\ [2mm]
+	
+	Incremento 25: flusso dati continuo &
+	R3F9.3 \TBstrut \\ [2mm]
+	\rowcolor{white}
+	\caption{Tabella degli incrementi}
+\end{longtable}
+
+\subsection{Modello a componenti}
+Per la realizzazione del prodotto\glosp sarà anche utilizzato, quando possibile, il modello di sviluppo a componenti, così da velocizzare e standardizzare lo sviluppo dei requisti.
+I componenti evidenziati dall'analisi sono principalmente gli elementi esistenti di Grafana\glosp e gli algoritmi di predittività forniti da \textit{Zucchetti}.
+In particolare tali elementi vengono inquadrati nelle seguenti classi di componenti:
+\begin{itemize}
+	\item \textbf{Elementi Grafana}\glo: Sono le librerie  e le funzionalità fornite da Grafana\glo, il loro uso viene quindi inquadrato come component reuse;
+	\item \textbf{Algoritmi di predittività}: Sono gli algoritmi che ci sono stati forniti da \textit{Zucchetti} e saranno riutilizzabili come librerie durante lo sviluppo del plugin, il loro uso viene quindi inquadrato come object and function reuse.
+\end{itemize}
