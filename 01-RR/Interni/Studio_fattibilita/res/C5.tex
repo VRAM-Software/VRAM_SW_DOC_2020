@@ -16,56 +16,56 @@ La soluzione software proposta da Imola Informatica prevede lo sviluppo di un'ap
 \subsection{Requisiti di progetto}
 Un'applicazione mobile con i seguenti requisiti:
 \begin{itemize}
-	\item Recupero lista organizzazioni;
-	\item Possibilità di effettuare login tramite LDAP per organizzazioni che lo richiedono;
-	\item Storico accessi;
-	\item Visualizzazione real-time della propria presenza in un luogo monitorato e cronometro del tempo trascorso al suo interno.
+	\item recupero lista organizzazioni;
+	\item possibilità di effettuare login tramite LDAP per organizzazioni che lo richiedono;
+	\item storico accessi;
+	\item visualizzazione real-time della propria presenza in un luogo monitorato e cronometro del tempo trascorso al suo interno.
 \end{itemize}
 Un'interfaccia web per l'amministrazione con le seguenti funzionalità:
 \begin{itemize}
-	\item Funzionalità di login;
-	\item Creazione/modifica/eliminazione di organizzazioni;
-	\item Aggiunta/modifica/rimozione di luoghi, definiti da coordinate geografiche;
-	\item Configurazione collegamento server LDAP;
-	\item Invio di notifiche push alle applicazioni per segnalare l'aggiornamento delle liste di organizzazioni e luoghi;
-	\item Monitoraggio del numero di utenti presenti nei luoghi dell'organizzazione in tempo reale;
-	\item Ricerca sugli accessi dei dipendenti e creazione di report sulla frequentazione dei luoghi;
-	\item Gestione delle autorizzazioni per gli utenti dell'interfaccia web.
+	\item funzionalità di login;
+	\item creazione/modifica/eliminazione di organizzazioni;
+	\item aggiunta/modifica/rimozione di luoghi, definiti da coordinate geografiche;
+	\item configurazione collegamento server LDAP;
+	\item invio di notifiche push alle applicazioni per segnalare l'aggiornamento delle liste di organizzazioni e luoghi;
+	\item monitoraggio del numero di utenti presenti nei luoghi dell'organizzazione in tempo reale;
+	\item ricerca sugli accessi dei dipendenti e creazione di report sulla frequentazione dei luoghi;
+	\item gestione delle autorizzazioni per gli utenti dell'interfaccia web.
 \end{itemize}
 L'infrastruttura su cui si baserà l'applicazione dovrà sottostare ai seguenti vincoli:
 \begin{itemize}
-	\item Comunicazioni solo all'entrata o uscita dall'area interessata;
-	\item Cifratura di tutte le comunicazioni tra app e server;
-	\item Architettura scalabile (verticalmente e orizzontalmente) e tollerante a picchi di traffico per il lato server;
-	\item Test di carico che dimostrino il funzionamento in varie situazioni.
+	\item comunicazioni solo all'entrata o uscita dall'area interessata;
+	\item cifratura di tutte le comunicazioni tra app e server;
+	\item architettura scalabile (verticalmente e orizzontalmente) e tollerante a picchi di traffico per il lato server;
+	\item test di carico che dimostrino il funzionamento in varie situazioni.
 \end{itemize}
 
 \subsection{Tecnologie interessate}
 \begin{itemize}
 	\item \textbf{Java} o \textbf{Swift}: per lo sviluppo dell'applicazione mobile;
 	\item \textbf{NodeJS} o \textbf{Python}: per la gestione del back-end;
-	\item Utilizzo di protocolli asincroni\glosp per le comunicazioni tra app e server;
+	\item utilizzo di protocolli asincroni\glosp per le comunicazioni tra app e server;
 	\item \textbf{HTML5}, \textbf{CSS3} e \textbf{JavaScript}: per la creazione dell'interfaccia web lato server;
-	\item Utilizzo del pattern di Publisher/Subscriber, ovvero mittenti e destinatari di messaggi dialogano attraverso un tramite (dispatcher\glo);
+	\item utilizzo del pattern di Publisher/Subscriber, ovvero mittenti e destinatari di messaggi dialogano attraverso un tramite (dispatcher\glo);
 	\item \textbf{IAAS Kubernetes} o \textbf{Openshift} o \textbf{Rancher}: framework IAAS o PAAS per il rilascio delle componenti server;
 	\item \textbf{API REST} o \textbf{gRPC}: funzionalità esposte dal server;
 	\item \textbf{GPS} o \textbf{sistemi ibridi}: per la geolocalizzazione;
 	\item \textbf{LDAP}: Lightweight Directory Access Protocol cioè un protocollo per il servizio di autenticazione;
-	\item Test unitari e d'integrazione per tutte le componenti applicative.
+	\item test unitari e d'integrazione per tutte le componenti applicative.
 \end{itemize}
 
 \subsection{Aspetti positivi}
 \begin{itemize}
 	\item Lo sviluppo di applicazioni mobili è una conoscenza richiesta;
-	\item Argomento interessante, anche grazie alla potenziale utilità nell'ambito della sicurezza;
+	\item argomento interessante, anche grazie alla potenziale utilità nell'ambito della sicurezza;
 \end{itemize}
 
 \subsection{Criticità e fattori di rischio}
 \begin{itemize}
 	\item I requisiti sono numerosi e richiedono conoscenze non banali;
-	\item Lo sviluppo lato server potrebbe portare complicazioni, viste le numerose tecnologie coinvolte e i requisiti in scalabilità;
-	\item La precisione ottenibile con le tecnologie attuali non è sufficiente per rendere l’applicazione usabile nella realtà;
-	\item Nella presentazione è stato discusso il funzionamento del sistema GPS, ma completamente tralasciata la funzionalità dei back-end di geolocalizzazione presenti nei moderni sistemi mobile (ad esempio i Google Mobile Services per Android).
+	\item lo sviluppo lato server potrebbe portare complicazioni, viste le numerose tecnologie coinvolte e i requisiti in scalabilità;
+	\item la precisione ottenibile con le tecnologie attuali non è sufficiente per rendere l’applicazione usabile nella realtà;
+	\item nella presentazione è stato discusso il funzionamento del sistema GPS, ma completamente tralasciata la funzionalità dei back-end di geolocalizzazione presenti nei moderni sistemi mobile (ad esempio i Google Mobile Services per Android).
 \end{itemize}
 
 \subsection{Conclusioni}
