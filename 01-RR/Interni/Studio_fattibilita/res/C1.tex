@@ -8,7 +8,7 @@
 \subsection{Descrizione}
 Autonomous Highligths Platform prevede lo sviluppo di una piattaforma web capace di ricevere in input dei video di eventi sportivi e fornire in output un video contenente i momenti salienti.
 \subsection{Obiettivi del progetto}
-Il progetto\glosp prevede la creazione di un software che riceva in input dei video di eventi sportivi come una partita di calcio, Formula 1, Moto GP o altri sport e riesca a creare in autonomia un video di massimo 5 minuti con i soli suoi momenti salienti (highlights) da fornire in output. A questo fine la piattaforma dovrà essere dotata di un modello di machine learning\glosp in grado d'identificare ogni momento importante dell’evento.
+Il progetto\glosp prevede la creazione di un software che riceva in input dei video di eventi sportivi come una partita di calcio, Formula 1, Moto GP o altri sport e riesca a creare in autonomia un video di massimo 5 minuti con i soli suoi momenti salienti (highlights) da fornire in output. A questo fine la piattaforma dovrà essere dotata di un modello di machine learning\glosp in grado di identificare ogni momento importante dell’evento.
 In particolare il flusso di generazione del video sarà così organizzato:
 \begin{itemize}
 	\item caricamento del video dell'evento desiderato;
@@ -30,9 +30,9 @@ Le tecnologie previste per la realizzazione del capitolato\glosp sono:
 	\item \textbf{Amazon Web Services}\glo, in particolare:
 	\begin{itemize}
 		\item \textbf{AWS Elastic Container Service}: servizio per la gestione dei contenitori\glosp ad alte prestazioni;
-		\item \textbf{AWS DynamoDB}: database non relazionale del tipo NoSQL per il supporto e la gestione dei tag;
+		\item \textbf{AWS DynamoDB}: database non relazionale di tipo NoSQL per il supporto e la gestione dei tag;
 		\item \textbf{AWS Elastic Transcoder}: servizio per la conversione e la rielaborazione dei video;
-		\item \textbf{AWS SageMaker}: servizio per la creazione di un modello per il riconoscimento degli eventi salienti se si sceglie d'implementare un addestramento supervisionato dell'intelligenza artificiale\glo;
+		\item \textbf{AWS SageMaker}: servizio per la creazione di un modello per il riconoscimento degli eventi salienti se si sceglie di implementare un addestramento supervisionato dell'intelligenza artificiale\glo;
 		\item \textbf{AWS Rekognition}: servizio da usare nel caso si scelga l'apprendimento non supervisionato e quindi l'utilizzo di modelli già esistenti.
 	\end{itemize}
 	\item \textbf{NodeJS}: runtime di JavaScript per lo sviluppo di API Restful\glosp JSON al fine di garantire una scalabilità ottimale;
