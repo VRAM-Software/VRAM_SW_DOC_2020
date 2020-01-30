@@ -4,9 +4,9 @@ La verifica ha lo scopo di accertare che i risultati ottenuti da tutte le attivi
 \subsubsection{Aspettative}
 La verifica viene effettuata per raggiungere i seguenti obiettivi:
 \begin{itemize}
-	\item Cercare consistenza, completezza e correttezza nelle singole attività;
-	\item Ottenere supporto per una successiva validazione\glosp del prodotto\glo;
-	\item Avere a disposizione dei criteri e procedure, comprensibili e affidabili, da seguire.
+	\item cercare consistenza, completezza e correttezza nelle singole attività;
+	\item ottenere supporto per una successiva validazione\glosp del prodotto\glo;
+	\item avere a disposizione dei criteri e procedure, comprensibili e affidabili, da seguire.
 \end{itemize}
 \subsubsection{Descrizione}
 Il processo\glosp di verifica assicura che tutte le attività svolte della fase in esame, attraverso analisi e test successivamente definiti, siano conformi alle aspettative.
@@ -16,10 +16,8 @@ Le attività che si effettuano durante la verifica sono due tipi di analisi: l'a
 \textbf{Analisi statica}\mbox{}\\ [1mm]
 L'analisi statica\glosp è lo studio della documentazione e del codice sorgente, essa non richiede l'esecuzione delle singole parti del sistema software che si sta sviluppando, quindi viene applicata ad ogni prodotto\glosp di processo\glo. L'analisi statica\glosp può essere effettuata manualmente in due modi:
 \begin{itemize}
-	\item \textbf{Walkthrough} \\*
-	Metodo di lettura in cui tutti i componenti del gruppo analizzano tutti i documenti e codice realizzato, senza tralasciare nulla, in modo da rilevare eventuali errori. Questa ricerca è ad ampio spettro, infatti viene effettuata anche se a priori non si può sapere se verranno trovate anomalie;
-	\item \textbf{Inspection} \\*
-	Metodo di lettura o desk check per cercare errori specifici utilizzando liste di controllo o check list, la tabella successiva rappresenta gli errori che i nostri verificatori hanno identificato come essere i più frequenti.
+	\item \textbf{Walkthrough}: metodo di lettura in cui tutti i componenti del gruppo analizzano tutti i documenti e codice realizzato, senza tralasciare nulla, in modo da rilevare eventuali errori. Questa ricerca è ad ampio spettro, infatti viene effettuata anche se a priori non si può sapere se verranno trovate anomalie;
+	\item \textbf{Inspection}: metodo di lettura o desk check per cercare errori specifici utilizzando liste di controllo o check list, la tabella successiva rappresenta gli errori che i nostri verificatori hanno identificato come essere i più frequenti.
 \end{itemize}
 \rowcolors{2}{gray!25}{gray!15}
 \setcounter{table}{0}
@@ -32,7 +30,7 @@ L'analisi statica\glosp è lo studio della documentazione e del codice sorgente,
 	Formato data dei documenti & Tutte le date devono utilizzare la seguente scrittura: \textit{YYYY-MM-DD}  &  \TBstrut \\[2mm]
 	Sintassi nome documenti citati & I documenti, interni o esterni, citati nella documentazione devono essere scritti in italico utilizzando il comando: \verb|\textit{}|  &  \TBstrut \\[2mm]
 	Sintassi parole da enfatizzare & Le parole da enfatizzare, come titolo di liste puntate, devono essere scritte i grassetto utilizzando il comando: \verb|\textbf{}|  &  \TBstrut \\[2mm]
-	Punteggiatura liste puntate & Ogni elemento nelle liste puntate deve iniziare con una lettera maiuscola e deve finire con un punto e virgola &  \TBstrut \\[2mm]
+	Punteggiatura liste puntate & Ogni elemento nelle liste puntate deve iniziare con una lettera maiuscola o minuscola (a seconda del contesto) e deve finire con un punto e virgola &  \TBstrut \\[2mm]
 	Uso corretto dei comandi \verb|\glo| e \verb|\glosp| & I comandi \verb|\glo| e \verb|\glosp|, sono stati creati per identificare le parole da inserire nel glossario, \verb|\glo| dovrà essere usato se la parola del glossario precede un carattere di punteggiatura. Il comando \verb|\glosp| sarà invece usato per le parole che precedono uno spazio &  \TBstrut \\	[2mm]
 	\rowcolor{white}
 	\caption{Tabella errori più frequenti}
@@ -50,14 +48,14 @@ Per la corretta verifica del codice, i test devono seguire regole ben precise ch
 	\item \textbf{Stato iniziale}: lo stato iniziale del prodotto\glo, precedente all'esecuzione del test;
 	\item \textbf{Istruzioni opzionali}: l'utilizzo di istruzioni opzionali aggiuntive deve essere noto.
 \end{itemize} 
-\textbf{Un test può essere definito efficace se}:
+Un test può essere definito efficace se:
 \begin{itemize}
-	\item I parametri citati sopra sono correttamente indicati;
-	\item Il nome di un test deve essere autoesplicativo per capire subito che cosa si sta testando;
-	\item Esso è ripetibile, quindi ci si aspetta un risultato costante per tutte le esecuzioni di quel test;
-	\item In caso di fallimento del test, esso devo fornire informazioni utili a risolvere il problema identificato;
-	\item In caso di possibili effetti indesiderati ci si aspetta un avvertimento;
-	\item Esso è esaustivo e accurato, infatti devono poter identificare una parte del progetto\glosp che potrebbe essere causa di errori.
+	\item i parametri citati sopra sono correttamente indicati;
+	\item il nome di un test deve essere autoesplicativo per capire subito che cosa si sta testando;
+	\item esso è ripetibile, quindi ci si aspetta un risultato costante per tutte le esecuzioni di quel test;
+	\item in caso di fallimento del test, esso devo fornire informazioni utili a risolvere il problema identificato;
+	\item in caso di possibili effetti indesiderati ci si aspetta un avvertimento;
+	\item esso è esaustivo e accurato, infatti devono poter identificare una parte del progetto\glosp che potrebbe essere causa di errori.
 \end{itemize}
 Il cosiddetto software testing è un procedimento importante per misurare la qualità di un prodotto\glosp software, per questo motivo sono definiti cinque livelli che dividono i tipi di test da effettuare secondo una gerarchia. Essi sono: 
 \begin{itemize}
@@ -68,16 +66,16 @@ Il cosiddetto software testing è un procedimento importante per misurare la qua
 \end{itemize}
 Per ogni test vengono definiti lo stato e l'esito:
 \begin{itemize}
-	\item Stato:
+	\item stato:
 	\begin{itemize}
-		\item I: implementato;
-		\item NI: non implementato.
+		\item \textbf{I}: implementato;
+		\item \textbf{NI}: non implementato.
 	\end{itemize}
 	\item Esito:
 	\begin{itemize}
-		\item P: positivo;
-		\item N: negativo;
-		\item NE: non eseguito.
+		\item \textbf{P}: positivo;
+		\item \textbf{N}: negativo;
+		\item \textbf{NE}: non eseguito.
 	\end{itemize}
 \end{itemize}
 
@@ -89,13 +87,13 @@ Successivamente ai test d'unità, si assemblano gruppi di unità progressivament
 
 \paragraph*{Test di sistema} \mbox{}\\ [1mm]
 I test di sistema controllano il funzionamento corretto del prodotto\glosp e verificano che il sistema soddisfi tutti i requisiti definiti nel documento: \textit{Analisi dei Requisiti}. Con l'esecuzione di questi test si riesce a definire e documentare tutte le funzionalità del sistema e possono individuare criticità come il problema del black-box\glo. Il gruppo svolgerà questo test quando si raggiungerà uno stato di rilascio per il prodotto\glosp sviluppato.
-Per identificare un test di unità viene utilizzata una codifica con il seguente formato:
+Per identificare un test di unità viene utilizzata una codifica con il seguente formato:\\
 \textbf{TS[codice]}
 Dove codice è un numero progressivo nel formato: [X].[Y] con X e Y numeri maggiori di zero.
 
 \paragraph*{Test di accettazione} \mbox{}\\ [1mm]
 I test di accettazione, o di collaudo, vengono effettuati ad ogni pre-rilascio, quindi dopo l'esecuzione dei test di sistema. Essi servono a confermare il soddisfacimento dei requisiti da parte del committente; infatti questi tipi di test ne richiedono la presenza. Se questi test vengono superati significa che il prodotto\glosp software è pronto per il rilascio. 
-Per identificare un test di accettazione viene utilizzata una codifica con il seguente formato:
+Per identificare un test di accettazione viene utilizzata una codifica con il seguente formato:\\
 \textbf{TA[codice]}
 Dove codice è un numero progressivo nel formato: [X].[Y] con X e Y numeri maggiori di zero.
 
