@@ -3,7 +3,7 @@
 		In questo capitolo verrà illustrato come il gruppo ha gestito la configurazione degli strumenti e delle risorse utilizzate per svolgere il progetto\glo.
 		Sarà quindi descritta la configurazione del repository\glosp su GitHub, del sistema di versionamento\glosp Git e dei servizi GitHub.
 	\subsubsection{Previsioni}
-		Questa sezione ha lo scopo supportare i processi di documentazione, di sviluppo e manutenzione del software rendendoli definiti e ripetibili.  
+		Questa sezione ha lo scopo supportare i processi\glosp di documentazione, di sviluppo e manutenzione del software rendendoli definiti e ripetibili.  
 	\subsubsection{Obiettivi} 
 		L'obiettivo principale è quindi di rendere documenti e codice sorgente univocamente identificati e facilmente identificabili, evidenziandone versioni e modifiche. Vuole anche agevolare l'identificazione delle relazioni esistenti fra gli elementi e fa da supporto alla fase di verifica.
 	\subsubsection{Versionamento}
@@ -28,11 +28,11 @@
 		\newline
 		In sintesi, per effettuare modifiche ai documenti sono previsti i seguenti passaggi:
 		\begin{itemize}
-			\item Contattare il responsabile del documento affinché autorizzi la modifica del documento;
-			\item Creare un branch secondario ed effettuare le modifiche al documento;
-			\item Aprire una pull request per unire le modifiche al ramo master;
-			\item I verificatori revisionano la pull request ed eventualmente richiedono aggiornamenti;
-			\item Completata la revisione il responsabile approva la pull request.
+			\item contattare il responsabile del documento affinché autorizzi la modifica del documento;
+			\item creare un branch secondario ed effettuare le modifiche al documento;
+			\item aprire una pull request per unire le modifiche al ramo master;
+			\item i verificatori revisionano la pull request ed eventualmente richiedono aggiornamenti;
+			\item completata la revisione il responsabile approva la pull request.
 		\end{itemize}
 		
 	\subsubsection{Repository}
@@ -67,24 +67,24 @@
 		\mbox{}\\ % forza un newline
 		Nel dettaglio:
 		\begin{itemize}
-			\item \textbf{RR} : contiene i sorgenti \LaTeX \xspace dei documenti relativi alla revisione dei requisiti;
-			\item \textbf{RP} : contiene i sorgenti \LaTeX \xspace dei documenti relativi alla revisione di progettazione\glo;
-			\item \textbf{RQ} : contiene i sorgenti \LaTeX \xspace dei documenti relativi alla revisione di qualifica;
-			\item \textbf{RA} : contiene i sorgenti \LaTeX \xspace dei documenti relativi alla revisione di accettazione; 
-			\item \textbf{Guide} : contiene brevi indicazioni interne su come usare i comandi \LaTeX \xspace usati nei documenti e su come riutilizzare il template per generare nuovi documenti;
-			\item \textbf{Template} : contiene i sorgenti \LaTeX \xspace usati per generare la base comune di tutti i documenti.
+			\item \textbf{RR}: contiene i sorgenti \LaTeX \xspace dei documenti relativi alla revisione dei requisiti;
+			\item \textbf{RP}: contiene i sorgenti \LaTeX \xspace dei documenti relativi alla revisione di progettazione\glo;
+			\item \textbf{RQ}: contiene i sorgenti \LaTeX \xspace dei documenti relativi alla revisione di qualifica;
+			\item \textbf{RA}: contiene i sorgenti \LaTeX \xspace dei documenti relativi alla revisione di accettazione; 
+			\item \textbf{Guide}: contiene brevi indicazioni interne su come usare i comandi \LaTeX \xspace usati nei documenti e su come riutilizzare il template per generare nuovi documenti;
+			\item \textbf{Template}: contiene i sorgenti \LaTeX \xspace usati per generare la base comune di tutti i documenti.
 		\end{itemize}
 		È inoltre disponibile una directory condivisa su Google Drive, con la stessa struttura gerarchica sopra esposta, che contiene tutti e soli i file PDF in versione finale. Lo scopo di questa directory condivisa è di facilitare la consultazione e la condivisione dei file PDF stessi.
 		
 	\subsubsection{Tipologie di file non accettate}
 		Tramite un apposito file .gitignore presente nella root directory della gerarchia vengono definiti i tipi di file non accettati all'interno del repository\glo. Vengono esclusi tutti i file di compilazione, compilati o temporanei in quanto il repository\glosp dovrebbe contenere solamente i seguenti formati di file:
 		\begin{itemize}
-			\item File sorgente \LaTeX \xspace con estensione .tex;
-			\item File immagine, preferibilmente in formato .png;
-			\item File testuali in formato .md o .txt.			
+			\item file sorgente \LaTeX \xspace con estensione .tex;
+			\item file immagine, preferibilmente in formato .png;
+			\item file testuali in formato .md o .txt.			
 		\end{itemize}
 	
-	\subsubsection{Ulteriori Strumenti GitHub utilizzati}
+	\subsubsection{Ulteriori strumenti GitHub utilizzati}
 		In aggiunta ai servizi già elencati, al fine di migliorare efficacia ed efficienza, vengono utilizzate le funzionalità di "Issue Tracking System",
 		% milestone qui è usato come nome di funzione github quindi non va a glossario  
 		"Milestone" e "Project Board" integrate in GitHub. Ognuna di queste funzionalità viene usata solo da chi autorizzato, ad esempio rilasci di versioni, creazione e chiusura di milestone sono concesse solo al responsabile di progetto\glo.
