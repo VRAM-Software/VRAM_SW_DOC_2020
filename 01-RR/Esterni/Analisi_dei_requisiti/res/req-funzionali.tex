@@ -1,4 +1,38 @@
-\section{Requisiti funzionali}
+\section{Requisiti}
+Per descrivere un requisito viene utilizzata la seguente struttura:
+\begin{itemize}
+	\item codice identificativo;
+	\item classificazione;
+	\item descrizione;
+	\item fonti.
+\end{itemize} 
+Il \textbf{Codice Identificativo} sarà scritto in questo formato: \\
+\textbf{R[Importanza][Tipologia][Codice]} \\
+Dove:
+\begin{itemize}
+	\item \textbf{Importanza} può assumere i seguenti valori:
+	\begin{itemize}
+		\item 1: requisito obbligatorio;
+		\item 2: requisito desiderabile;
+		\item 3: requisito opzionale.
+	\end{itemize}
+	\item \textbf{Tipologia} può assumere i seguenti valori:
+	\begin{itemize}
+		\item F: funzionale;
+		\item Q: prestazionale;
+		\item P: qualitativo;
+		\item V: vincolo.
+	\end{itemize}
+	\item\textbf{Codice}: numero progressivo identificativo strutturato nel formato: [codice\_padre].[codice\_figlio]
+\end{itemize}
+Le \textbf{Fonti} possono essere:
+\begin{itemize}
+	\item capitolato\glo: il requisito è stato quindi individuato dalla lettura del capitolato\glo;
+	\item interno: il requisito è stato individuato ed aggiunto in seguito ad un'analisi interna;
+	\item caso d'uso\glo: il requisito è stato individuato dallo studio di un caso d'uso\glo;
+	\item proponente: il requisito è stato individuato in seguito ad un colloquio con il proponente.
+\end{itemize}
+\subsection{Requisiti funzionali}
 	\rowcolors{2}{gray!25}{gray!15}
 	\setcounter{table}{0}
 	\begin{longtable} {
@@ -32,8 +66,8 @@
 		R1F5 & Obbligatorio & L'utente deve visualizzare il grafico della qualità delle previsioni & Capitolato UC5 \TBstrut \\ [2mm]
 		R2F6 & Desiderabile & Se l'utente inserisce un file JSON non valido deve visualizzare un messaggio di errore & Interno UC6 \TBstrut \\ [2mm]
 		
-		R1F7 & Obbligatorio & L'utente deve poter avviare il plugin & Capitolato UC7 \TBstrut \\ [2mm]
-		R1F8 & Obbligatorio & L'utente deve poter caricare il file JSON di addestramento all'interno del plugin & Capitolato UC8 \TBstrut \\ [2mm]
+		R1F7 & Obbligatorio & L'utente deve poter avviare il plug-in & Capitolato UC7 \TBstrut \\ [2mm]
+		R1F8 & Obbligatorio & L'utente deve poter caricare il file JSON di addestramento all'interno del plug-in & Capitolato UC8 \TBstrut \\ [2mm]
 		R1F9 & Obbligatorio & L'utente deve poter associare i nodi letti dal file JSON al flusso dati & Capitolato UC9 \TBstrut \\ [2mm]
 		R1F9.1 & Obbligatorio & L'utente deve poter selezionare i nodi & Capitolato UC9.1 \TBstrut \\ [2mm]
 		R1F9.2 & Obbligatorio & L'utente deve poter selezionare un flusso dati statico su cui eseguire le previsioni & Capitolato UC9.2 \TBstrut \\ [2mm]
@@ -42,7 +76,7 @@
 		R1F9.5 & Obbligatorio & Se il collegamento dei nodi al flusso dati va a buon fine l'utente deve visualizzare un messaggio di conferma & Capitolato UC9.4 \TBstrut \\ [2mm]
 		R2F10 & Desiderabile & Se il collegamento dei nodi al flusso dati non va a buon fine l'utente deve visualizzare un messaggio di errore & Interno UC10 \TBstrut \\ [2mm]
 		R1F11 & Obbligatorio & L'utente deve poter visualizzare i risultati della previsione sotto forma di grafici all'interno di una dashboard\glosp configurata & Capitolato UC11 \TBstrut \\ [2mm]
-		R1F12 & Obbligatorio & L'utente deve poter fermare l'esecuzione del plugin rimuovendolo & Capitolato UC12 \TBstrut \\ [2mm]		
+		R1F12 & Obbligatorio & L'utente deve poter fermare l'esecuzione del plug-in rimuovendolo & Capitolato UC12 \TBstrut \\ [2mm]		
 		
 			R2F13 &	Desiderabile & L'utente deve poter definire un alert nel pannello grafico di una dashboard\glo & Capitolato UC13 \TBstrut \\ [2mm]			
 		R2F13.1 & Desiderabile & L'utente deve poter inserire un alert & Capitolato UC13.1 \TBstrut \\ [2mm]		
