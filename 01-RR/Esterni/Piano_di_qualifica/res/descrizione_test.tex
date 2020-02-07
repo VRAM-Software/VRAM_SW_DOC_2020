@@ -1,16 +1,16 @@
-\section{Descrizione dei test}
-Il nostro gruppo ha scelto di adottare il Modello a V\glosp per garantire la qualità del nostro prodotto. In particolare, questo modello prevede lo sviluppo dei test durante le attività di analisi dei requisiti, progettazione architetturale e progettazione di dettaglio oltre a validazione e collaudo.
-In questo modo è possibile verificare la correttezza sia di tutti gli aspetti che compongono il progetto che delle singole parti sviluppate. Sono state individuate 4 tipologie di test:
+\section{Specifica dei test}
+Il nostro gruppo ha scelto di adottare il Modello a V\glosp per garantire la qualità del nostro prodotto\glo. In particolare, questo modello prevede lo sviluppo dei test durante le attività di analisi dei requisiti, progettazione\glosp architetturale e progettazione\glosp di dettaglio oltre a validazione\glosp e collaudo.
+In questo modo è possibile verificare la correttezza sia di tutti gli aspetti che compongono il progetto\glosp che delle singole parti sviluppate. Sono state individuate quattro tipologie di test:
 \begin{itemize}
-	\item Test di Accetazione;
-	\item Test di Sistema;
-	\item Test di Integrazione;
-	\item Test di Unità.
+	\item test di accettazione;
+	\item test di sistema;
+	\item test di integrazione;
+	\item test di unità.
 \end{itemize}
 Ogni volta che viene svolta un'attività viene definita una tabella con i test di una tipologia.
-All'interno del documento \textit{Norme di Progetto v.1.1.1} vengono definite le caratteristiche dei test e i codici che identificano univocamente i singoli test.
+All'interno del documento \textit{Norme di Progetto v. 1.1.1} vengono definite le caratteristiche dei test e i codici che identificano univocamente i singoli test.
 
-\subsection{Test di Accettazione}
+\subsection{Test di accettazione}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %Inserire questo per escludere una sezione dall'indice.
 
 \rowcolors{2}{gray!25}{gray!15}
@@ -38,8 +38,8 @@ All'interno del documento \textit{Norme di Progetto v.1.1.1} vengono definite le
 	TA4.5 & Verificare che al termine della procedura l'utente riceva dall'applicazione esterna un file JSON con i parametri per le previsioni & NI & NE  &\TBstrut \\ [2mm]
 	TA5 & Verificare che l'utente possa visualizzare l'indice della qualità delle previsioni & NI & NE  &\TBstrut \\ [2mm]
 	TA6 & Verificare che, se l'utente inserisce un file JSON non valido, viene visualizzato un messaggio di errore & NI & NE  &\TBstrut \\ [2mm]
-	TA7 & Verificare che l'utente possa avviare il plugin & NI & NE  &\TBstrut \\ [2mm]
-	TA8 & Verificare che l'utente possa caricare il file JSON ottenuto dall'addestramento all'interno del plugin & NI & NE  &\TBstrut \\ [2mm]
+	TA7 & Verificare che l'utente possa avviare il plug-in & NI & NE  &\TBstrut \\ [2mm]
+	TA8 & Verificare che l'utente possa caricare il file JSON ottenuto dall'addestramento all'interno del plug-in & NI & NE  &\TBstrut \\ [2mm]
 	TA9 & Verificare che l'utente possa associare i nodi letti dal file JSON al flusso dati & NI & NE  &\TBstrut \\ [2mm]
 	TA9.1 & Verificare che l'utente possa inserire i nodi & NI & NE  &\TBstrut \\ [2mm]
 	TA9.2 & Verificare che l'utente possa selezionare un flusso di dati statico su cui eseguire delle previsioni & NI & NE  &\TBstrut \\ [2mm]
@@ -48,8 +48,8 @@ All'interno del documento \textit{Norme di Progetto v.1.1.1} vengono definite le
 	TA9.5 & Verificare che l'utente possa visualizzare un messaggio che conferma il successo nel collegamento dei nodi al flusso dati & NI & NE  &\TBstrut \\ [2mm]
 	TA10 & Verificare che, se il collegamento dei nodi al flusso dati non va a buon file, l'utente deve visualizzare un messaggio di errore & NI & NE  &\TBstrut \\ [2mm]
 	TA11 & Verificare che l'utente possa visualizzare il grafico dei risultati della previsione all'interno di una dashboard\glosp precedentemente configurata & NI & NE  &\TBstrut \\ [2mm]
-	TA12 & Verificare che l'utente possa fermare l'esecuzione del plugin rimuovendolo dalla dashboard\glo & NI & NE  &\TBstrut \\ [2mm]
-	TA13 & Verificare che l'utente possa definire un alert\glosp all'interno del pannello della dashboard\glosp su cui si è applicato il plugin & NI & NE  &\TBstrut \\ [2mm]
+	TA12 & Verificare che l'utente possa fermare l'esecuzione del plug-in rimuovendolo dalla dashboard\glo & NI & NE  &\TBstrut \\ [2mm]
+	TA13 & Verificare che l'utente possa definire un alert\glosp all'interno del pannello della dashboard\glosp su cui si è applicato il plug-in & NI & NE  &\TBstrut \\ [2mm]
 	TA13.1 & Verificare che l'utente possa inserire un alert\glosp nel pannello della dashboard\glo & NI & NE  &\TBstrut \\ [2mm]
 	TA13.2 & Verificare che l'utente possa definire le regole di funzionamento di un alert\glo & NI & NE  &\TBstrut \\ [2mm]
 	TA13.3 & L'utente deve poter definire le condizioni di funzionamento di un alert\glo & NI & NE  &\TBstrut \\ [2mm]
@@ -58,12 +58,12 @@ All'interno del documento \textit{Norme di Progetto v.1.1.1} vengono definite le
 	TA15 & Verificare che l'utente possa sospendere un alert\glo & NI & NE  &\TBstrut \\ [2mm]
 	TA16 & Verificare che l'utente possa rimuovere un alert\glo & NI & NE  &\TBstrut \\ [2mm]
 	\rowcolor{white}
-	\caption{Test di Accettazione}
+	\caption{Test di accettazione}
 \end{longtable}
 
 \addtocontents{toc}{\protect\setcounter{tocdepth}{4}} %Inserire questo per ripristinare il normale inserimento delle sezioni nell'indice. 4 significa fino al paragrah
 
-\subsection{Test di Sistema}
+\subsection{Test di sistema}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %Inserire questo per escludere una sezione dall'indice.
 
 \rowcolors{2}{gray!25}{gray!15}
@@ -82,13 +82,13 @@ All'interno del documento \textit{Norme di Progetto v.1.1.1} vengono definite le
 	TS & Applicare le previsioni su un flusso dati continuo e visualizzare correttamente i dati ottenuti all'interno di un grafico contenuto nella dashboard\glo & NI & NE  &\TBstrut \\ [2mm]
 	TS & Verificare che il sistema permetta all'utente inserire un alert\glo & NI & NE  &\TBstrut \\ [2mm]
 	\rowcolor{white}
-	\caption{Test di Sistema}
+	\caption{Test di sistema}
 \end{longtable}
 
 \addtocontents{toc}{\protect\setcounter{tocdepth}{4}} %Inserire questo per ripristinare il normale inserimento delle sezioni nell'indice. 4 significa fino al paragrah
 
-\subsection{Test di Integrazione}
-I test di integrazione verranno sviluppati in seguito alla progettazione architetturale.
+\subsection{Test di integrazione}
+I test di integrazione verranno sviluppati in seguito alla progettazione\glosp architetturale.
 
-\subsection{Test di Unità}
-I test di integrazione verranno sviluppati in seguito alla progettazione di dettaglio e alla codifica.
+\subsection{Test di unità}
+I test di integrazione verranno sviluppati in seguito alla progettazione\glosp di dettaglio e alla codifica.
