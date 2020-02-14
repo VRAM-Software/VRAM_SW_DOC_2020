@@ -1,0 +1,27 @@
+% \textbf = grassetto; \Large = font più grande
+% \rowcolors{quanti colori alternare}{colore numero riga pari}{colore numero riga dispari}: colori alternati per riga
+% \rowcolor{color}: cambia colore di una riga
+% p{larghezza colonna}: p è un tipo di colonna di testo verticalmente allineata sopra, ci sarebbe anche m che è centrata a metà ma non è precisa per questo utilizzo TBStrut; la sintassi >{\centering} indica che il contenuto della colonna dovrà essere centrato
+% \TBstrut fa parte di alcuni comandi che ho inserito in config.tex che permetto di aggiungere un po' di padding al testo
+% \\ [2mm] : questra scrittura indica che lo spazio dopo una break line deve essere di 2mm
+
+%\setcounter{secnumdepth}{0}
+%\hfill \break
+%\textbf{\Large{Diario delle modifiche}} \\
+\section{Riepilogo tracciamenti}
+\rowcolors{2}{gray!25}{gray!15}
+\begin{longtable} {
+		>{\centering}p{17mm} 
+		%>{\centering}p{19.5mm}
+		%>{\centering}p{24mm} 
+		%>{\centering}p{24mm} 
+		>{}p{120mm}}
+	\rowcolor{gray!50}
+	\textbf{Codice} & \multicolumn{1}{c}{\textbf{Decisione}} \\%\textbf{Decisione} \\ %\TBstrut \\
+	VI\_5.1 & Revisione dell'avanzamento della stesura dell'\textit{Piano di Qualifica}. \TBstrut \\ [2mm]
+	VI\_5.2 & Scrittura della e-mail per chiedere incontro al proponente \textit{Zucchetti} e conseguente stesura delle domande da porre. \TBstrut \\ [2mm]
+	VI\_5.3 & Scrittura delle domande da sottoporre al proponente \textit{Prof. Tullio Vardanega} al colloquio precedentemente fissato. \TBstrut \\ [2mm]
+	VI\_5.4 & Analisi dei rischi per la redazione del \textit{Piano di Progetto v. 1.1.1}. \TBstrut \\ [2mm]
+	VI\_5.5 & Rotazione ruoli. \TBstrut \\ [2mm]
+	VI\_5.6 & Aggiornamento e revisione delle \textit{Norme di Progetto}. \TBstrut \\ [2mm]
+\end{longtable}

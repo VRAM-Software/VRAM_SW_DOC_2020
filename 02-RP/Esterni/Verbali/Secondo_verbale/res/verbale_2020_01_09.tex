@@ -1,0 +1,51 @@
+\section{Informazioni generali}
+    \subsection{Informazioni incontro}
+        \begin{itemize}
+            \item \textbf{Luogo}: \textit{Zucchetti} - Sede di Padova in Via Giovanni Cittadella, 7;
+            \item \textbf{Data}: 2020-01-09;
+            \item \textbf{Ora d'inizio}: 14.30;
+            \item \textbf{Ora di fine}: 15.30;
+            \item \textbf{Partecipanti}: \begin{itemize}
+                \item Corrizzato Vittorio;
+                \item Spreafico Alessandro;
+                \item Dottor Piccoli Gregorio (proponente).
+            \end{itemize}
+        \end{itemize}
+    \subsection{Argomenti trattati}
+        Nel secondo ed ultimo incontro prima della RR, il gruppo ha posto le seguenti domande al proponente:
+        \begin{enumerate}
+            \item eventuali errori di compatibilità dei dati con i modelli;
+            \item database di destinazione in cui registrare i dati di previsione;
+            \item posizionamento della qualità della previsione;
+            \item correlazione tra alert\glosp e canali di notifiche su Grafana\glo;
+            \item chiarimenti sull'addestramento interno a Grafana\glo;
+            \item eventuale accensione e spegnimento del plug-in;
+            \item chiarimenti sull'associazione del JSON di addestramento al plug-in;
+            \item chiarimenti sulla configurazione del pannello;
+            \item chiarimenti sull'inserimento della data source;
+            \item eventuali requisiti prestazionali;
+            \item confronto sull'inquadramento del problema.
+        \end{enumerate}
+\section{Verbale}
+    \subsection{Punto 1}
+        Inizialmente è stato chiesto se un certo tipo di dati potrebbe causare degli errori nell'addestramento del modello. Il proponente non ha rilevato nella sua esperienza dei particolari errori di compatibilità tra i modelli causati dai dati (tranne situazioni ovvie come divisione per zero o mancanza di punti). Ha però dimostrato interesse in questo particolare risvolto della nostra analisi. Il gruppo ha quindi deciso di tralasciare il tracciamento di questi eventuali errori per il momento e di approfondire la ricerca nelle successive revisioni.
+    \subsection{Punto 2}
+        Successivamente si è analizzato il problema riguardante il database di destinazione delle previsioni, in particolare la sua compatibilità con la data source sorgente dei dati. Il dottor Piccoli ha escluso qualsiasi tipo di incompatibilità tra i database presi in esame (MySQL e InfluxDB). 
+    \subsection{Punto 3}
+        In seguito i membri hanno posto un dubbio sul posizionamento del valore della qualità della previsione. Il proponente ha indicato come posto migliore l'applicativo esterno dove avviene l'addestramento, in quanto dovremmo calcolare il dato subito dopo questa azione. Altre locazioni (Grafana\glo) sono sconsigliate poiché sarebbe utile calcolare la qualità della previsione solo nel caso in cui avessimo il dato oggetto dell'analisi già disponibile (eventualità minima).
+    \subsection{Punto 4}
+        Poi i componenti hanno chiesto se esistessero eventuali correlazioni tra gli alert\glosp e i canali di notifica forniti da Grafana\glo. Il dottor Piccoli ha affermato che non è necessaria una correlazione tra le due funzionalità e che ai fini del progetto\glosp saranno sufficienti gli alert\glo, purché siano implementati in modo intelligente. Il gruppo, quindi, ha deciso di escludere eventuali use case\glosp riguardanti i canali di notifica.
+    \subsection{Punto 5}
+        Dopo i membri hanno domandato cosa si intendesse quando nel capitolato\glosp veniva detto che non erano richiesti "dati aggiuntivi di addestramento" nell'addestramento interno a Grafana\glo. Il proponente ha risposto, collegandosi al punto 3, che in linea di massima i dati che andremmo a prevedere non sono conosciuti prima della previsione; nel caso in cui, invece, questi dati siano disponibili prima dell'addestramento si può evitare di effettuarlo su di un applicativo esterno e lavorare internamente a Grafana\glo.
+    \subsection{Punto 6}
+        A seguire è stato chiesto se il plug-in dovesse avere delle funzioni di accensione e spegnimento. Il dottor Piccoli ha indicato che l'avvio e l'interruzione del plug-in sono direttamente collegate con la creazione di un pannello che lo contenga. Il gruppo ha quindi delegato queste funzioni agli use case\glosp relativi alla creazione del pannello.
+    \subsection{Punto 7}
+        Successivamente il gruppo ha chiesto chiarimenti riguardo al collegamento del JSON di addestramento al plug-in in Grafana\glo. Il proponente ha specificato che questo è un passaggio molto importante per il funzionamento del plug-in in quanto da questa azione si collegano i nodi analizzati nell'addestramento con quelli che derivano dalla data source in uso. Il gruppo ha quindi proceduto all'inserimento di tale use case\glosp nell'\textit{Analisi dei Requisiti v. 1.1.1}.
+    \subsection{Punto 8}
+        È stato quindi chiesto un chiarimento sulla configurazione dei plug-in. Il dottor Piccoli ha rimarcato quanto detto nel punto precedente (in quanto suddetta azione avviene nel momento in cui si inserisce il pannello relativo al plug-in) e ha aggiunto che in questa occasione si configureranno anche valori di soglia, query specifiche e gli alert\glo. Il gruppo aveva già individuato la maggior parte di questi casi d'uso\glosp ne segue comunque una revisione generale.
+    \subsection{Punto 9}
+        Durante l'analisi di Grafana\glosp erano stati individuati dei plug-in riguardanti le data source è stato quindi chiesto se fossero utili per i nostri fini o eventualmente da sostituire alle data source base presenti sulla piattaforma. Il proponente ha affermato che tali plug-in probabilmente implementano solo funzionalità aggiuntive e che per il nostro progetto\glosp saranno sufficienti le data source fornite da Grafana\glo.
+    \subsection{Punto 10}
+        Come indicato dal professor Vardanega è stato domandato al proponente un chiarimento riguardo eventuali requisiti prestazionali. Il dottor Piccoli ha riportato che non ci sono particolari requisiti prestazionali in quanto le librerie per gli algoritmi di predizione fornite da lui hanno un'efficienza molto alta, mentre per il resto delle operazioni saremmo supportati da Grafana\glo. Il gruppo quindi procederà a modificare l'\textit{Analisi dei Requisiti} con le informazioni fornite dal proponente.
+    \subsection{Punto 11}
+        Infine è stata chiesta una valutazione riguardo l'inquadramento del progetto\glosp da parte del gruppo. Dopo aver esposto le nostre i requisiti individuati e le idee di sviluppo il dottor Piccoli ha dato un riscontro positivo sulla nostra posizione.
