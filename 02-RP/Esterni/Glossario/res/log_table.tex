@@ -1,0 +1,33 @@
+% \textbf = grassetto; \Large = font più grande
+% \rowcolors{quanti colori alternare}{colore numero riga pari}{colore numero riga dispari}: colori alternati per riga
+% \rowcolor{color}: cambia colore di una riga
+% p{larghezza colonna}: p è un tipo di colonna di testo verticalmente allineata sopra, ci sarebbe anche m che è centrata a metà ma non è precisa per questo utilizzo TBStrut; la sintassi >{\centering} indica che il contenuto della colonna dovrà essere centrato
+% \TBstrut fa parte di alcuni comandi che ho inserito in config.tex che permetto di aggiungere un po' di padding al testo
+% \\ [2mm] : questra scrittura indica che lo spazio dopo una break line deve essere di 2mm
+% 
+
+%\setcounter{secnumdepth}{0}
+%\hfill \break
+%\textbf{\Large{Diario delle modifiche}} \\
+
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %Inserire questo per escludere una sezione dall'indice.
+
+\section*{Registro delle modifiche} %Asterisco per fare sezione non numerata
+\rowcolors{2}{gray!25}{gray!15}
+\begin{longtable} {
+		>{\centering}p{17mm} 
+		>{\centering}p{19.5mm}
+		>{\centering}p{24mm} 
+		>{\centering}p{24mm} 
+		>{}p{32mm}}
+	\rowcolor{gray!50}
+	\textbf{Versione} & \textbf{Data} & \textbf{Nominativo} & \textbf{Ruolo} & \textbf{Descrizione} \TBstrut \\
+	1.1.1 & 2020-01-12 & Corrizzato Vittorio & \textit{Responsabile} & Approvazione documento. \TBstrut \\ [2mm]
+	0.3.3 & 2020-01-11 & Dalla Libera Marco e Schiavon Rebecca & \textit{Analista} e \textit{Verificatore} & Aggiunto il termine "Modello a V" e verifica documento.  \TBstrut \\ [2mm]
+	0.2.3 & 2020-01-11 & Dalla Libera Marco e Schiavon Rebecca & \textit{Analista} e \textit{Verificatore} & Aggiunto il termine "Validazione", sistemato indice e verifica documento.  \TBstrut \\ [2mm]
+	0.1.2 & 2020-01-04 & Dalla Libera Marco, Spreafico Alessandro e Santagiuliana Vittorio & \textit{Analista} e \textit{Verificatori} & Stesura e verifica prima versione glossario. \TBstrut \\ [2mm]
+	
+\end{longtable}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{4}} %Inserire questo per ripristinare il normale inserimento delle sezioni nell'indice. 4 significa fino al paragraph

@@ -1,0 +1,80 @@
+% \textbf = grassetto; \Large = font più grande
+% \rowcolors{quanti colori alternare}{colore numero riga pari}{colore numero riga dispari}: colori alternati per riga
+% \rowcolor{color}: cambia colore di una riga
+% p{larghezza colonna}: p è un tipo di colonna di testo verticalmente allineata sopra, ci sarebbe anche m che è centrata a metà ma non è precisa per questo utilizzo TBStrut; la sintassi >{\centering} indica che il contenuto della colonna dovrà essere centrato
+% \TBstrut fa parte di alcuni comandi che ho inserito in config.tex che permetto di aggiungere un po' di padding al testo
+% \\ [2mm] : questra scrittura indica che lo spazio dopo una break line deve essere di 2mm
+% 
+\documentclass[12pt,a4paper]{article} %formato del documento e grandezza caratteri
+\newcommand\Tstrut{\rule{0pt}{2.6ex}} % top padding
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}} % bottom padding
+\newcommand{\TBstrut}{\Tstrut\Bstrut} % top & bottom padding
+\usepackage{longtable} % tabella che può continuare per più di una pagina
+\usepackage[table]{xcolor} % ho dovuto aggiungere table in modo da poter colorare le row della tabella, dava: undefined control sequences
+
+\begin{document}
+\setcounter{secnumdepth}{0}
+%\hfill \break
+%\textbf{\Large{Diario delle modifiche}} \\
+\section{Introduzione}
+La seguente tabella è da usare nella Analisi dei requisiti per i requisiti: funzionali, di qualità e di vincolo; seguono le tabelle per il tracciamento dei requisiti e del registro delle modifiche.
+\section*{Requisiti funzionali - qualità - vincolo}
+	\rowcolors{2}{gray!25}{gray!15}
+	\begin{longtable} {
+		>{\centering}p{24mm} 
+		>{\centering}p{32mm}
+		>{\centering}p{40mm} 
+		>{}p{24.5mm}
+		}
+	\rowcolor{gray!50}
+		\textbf{Requisito} & \textbf{Classificazione} & \textbf{Descrizione} & \textbf{Fonti} 	\TBstrut \\
+		RXFY & Obbligatorio & Questa è una semplice descrizione noiosa & Capitolato \TBstrut \\ [2mm]
+		RXFY & Obbligatorio & Questa è una semplice descrizione noiosa & Capitolato \TBstrut \\ [2mm]
+		RXFY & Obbligatorio & Questa è una semplice descrizione noiosa & Capitolato \TBstrut \\ [2mm]
+		RXFY & Obbligatorio & Questa è una semplice descrizione noiosa & Capitolato \TBstrut \\ [2mm]
+	\end{longtable}
+	
+\section*{Tracciamento requisiti: fonte-requisiti}
+	\rowcolors{2}{gray!25}{gray!15}
+	\begin{longtable} {
+		>{\centering}p{64.5mm} 
+		>{}p{64.5mm}
+		}
+	\rowcolor{gray!50}
+		\textbf{Fonte} & \textbf{Requisiti} \TBstrut \\
+		UCx.y.z & RXFY \newline RXFY  \TBstrut \\ [2mm]
+		UCx.y.z & RXFY \newline RXFY  \TBstrut \\ [2mm]
+		UCx.y.z & RXFY \newline RXFY  \TBstrut \\ [2mm]
+	\end{longtable}
+	
+\section*{Tracciamento requisiti: requisito-fonte}
+	\rowcolors{2}{gray!25}{gray!15}
+	\begin{longtable} {
+		>{\centering}p{64.5mm} 
+		>{}p{64.5mm}
+		}
+	\rowcolor{gray!50}
+		\textbf{Requisito} & \textbf{Fonte} \TBstrut \\
+		RXFY & UCx.y.z  \TBstrut \\ [2mm]
+		RXFY & UCx.y.z  \TBstrut \\ [2mm]
+		RXFY & UCx.y.z  \TBstrut \\ [2mm]
+	\end{longtable}
+
+\section*{Registro delle modifiche} %Asterisco per fare sezione non numerata
+	\rowcolors{2}{gray!25}{gray!15}
+	\begin{longtable} {
+		>{\centering}p{17mm} 
+		>{\centering}p{19.5mm}
+		>{\centering}p{24mm} 
+		>{\centering}p{24mm} 
+		>{}p{32mm}
+		}
+	\rowcolor{gray!50}
+		\textbf{Versione} & \textbf{Data} & \textbf{Nominativo} & \textbf{Ruolo} & \textbf{Descrizione} \TBstrut \\
+		1.0.0 & 2019-02-12 & Pinco Pallino & Analista e Verificatore & modificato \$3 \TBstrut \\ [2mm]
+		1.0.0 & 2019-02-12 & Pinco Pallino & Analista e Verificatore & modificato \$3 \TBstrut \\ [2mm]
+		1.0.0 & 2019-02-12 & Pinco Pallino & Analista e Verificatore & modificato \$3 \TBstrut \\ [2mm]
+	\end{longtable}
+	
+
+\end{document}

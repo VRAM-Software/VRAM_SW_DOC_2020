@@ -1,0 +1,57 @@
+\section{Capitolato 6 - ThiReMa}
+\subsection{Informazioni generali}
+\begin{itemize}
+	\item \textbf{Nome}: ThiReMa;
+	\item \textbf{Proponente}: Sanmarco Informatica;
+	\item \textbf{Committente}: Prof. Tullio Vardanega e Prof. Riccardo Cardin;
+\end{itemize}
+\subsection{Descrizione}
+Lo scopo di questo progetto\glosp è creare un'applicazione web che permetta di valutare la correlazione fra dati operativi\glosp e fattori influenzanti\glosp in ambito IoT. I dati saranno ricavati da dispositivi IoT eterogenei tramite piattaforma Apache Kafka, quindi il software si occuperà di raccolta, storicizzazione, monitoraggio, analisi e presentazione dei dati.
+L'obiettivo finale del progetto\glosp è rendere i processi\glosp aziendali intelligenti trasformando i dati in informazioni, così da permettere ad esempio la pianificazione di manutenzioni predittive calcolate su informazioni reali, in automatico.
+
+\subsection{Obiettivi del progetto}
+Realizzare il prodotto ThiReMa, una web application che raccoglierà dati da dispositivi IoT eterogenei tramite piattaforma Apache Kafka, li monitorerà e storicizzerà in un time series database e li presenterà elaborati all'utente tramite interfaccia web. Inoltre dovrà inviare notifiche tempestive agli operatori tramite un servizio basato su Telegram e permettere, sempre tramite tale servizio, di comandare i dispositivi IoT stessi.
+
+\subsection{Requisiti di progetto}
+\begin{itemize}
+	\item Lettura dati da gateway e sensori IoT tramite Apache Kafka;
+	\item salvataggio dei dati su time series database come TimescaleDB, ClickHouse tramite Apache Kafka;
+	\item creazione di una web application per presentare i dati raccolti;
+	\item gestione di utenti, ruoli e gruppi tramite web application;
+	\item possibilità di configurare da quali dispositivi i dati devono essere raccolti;
+	\item possibilità di mettere in correlazione i dati tra loro, scegliendo quali visualizzare;
+	\item possibilità di inviare comandi di configurazione o azione ai gateway tramite web application o Telegram;
+	\item deve prevedere dei meccanismi di avviso e notifica per ente.
+\end{itemize}
+Opzionalmente è richiesto d'implementare le seguenti funzionalità:
+\begin{itemize}
+	\item possibilità di impostare una frequenza di interrogazione dei dispositivi ed invio dati;
+	\item possibilità di specificare delle funzioni di accumulo sui dati;
+	\item rappresentare i dati raccolti e le correlazioni tramite grafici;
+	\item possibilità di scegliere fra più algoritmi di correlazione;
+	\item sviluppare ed istanziare le feature\glosp tramite uso della tecnologia di containerizzazione\glosp Docker.
+\end{itemize}
+
+\subsection{Tecnologie interessate}
+\begin{itemize}
+	\item \textbf{Apache Kafka}: piattaforma di stream-processing distribuito, permette di raccogliere e monitorare flussi di record di dati come se fossero una coda di messaggi. Permette anche la storicizzazione e l'elaborazione di questi stream di dati;
+	\item \textbf{Time Series Database}: sono database molto efficienti nella storicizzazione di dati IoT, in quanto occupano poca memoria pur mantenendo le informazioni basilari necessarie. A questi database è possibile affiancare altri database per contenere i metadati dei dispositivi IoT ed i dati degli utenti. Alcuni possibili database sono PostgreSQL, TimescaleDB, ClickHouse;
+	\item \textbf{Java}: popolare linguaggio di programmazione interpretato ed orientato agli oggetti. È consigliato il suo uso per realizzare la business logic\glosp del programma tramite piattaforma Kafka;
+	\item \textbf{Bootstrap}: popolare framework CSS utilizzato per realizzare l'interfaccia grafica di siti ed applicazioni web. È consigliato il suo uso per la realizzazione dell'interfaccia web dell'applicazione;
+	\item \textbf{Docker}: è una tecnologia di containerizzazione\glosp che permette di eseguire in modo efficiente più applicativi software in ambienti dedicati ed isolati risiedenti in un'unica macchina fisica. Tali ambienti sono detti container\glosp e permettono di eseguire più servizi in un'unica macchina fisica rendendoli indipendenti gli uni dagli altri, è quindi possibile fermare un container\glosp lasciando gli altri regolarmente attivi.
+\end{itemize} 
+\subsection{Aspetti positivi}
+\begin{itemize} 
+	\item Sviluppo di competenze nell'ambito IoT, molto richieste dal mondo del lavoro ed interessanti per i membri del gruppo;
+	\item sviluppo di conoscenze in ambito Big Data ed analisi dei dati, molto richieste attualmente dal mondo del lavoro e probabilmente anche in futuro;
+	\item utilizzo di Java, un linguaggio di programmazione molto popolare e previsto da un insegnamento del nostro corso di studi;
+	\item architettura del sistema ben definita e componenti ben chiare;
+	\item l'ambito del capitolato\glosp è interessante per tutti i membri del gruppo.
+\end{itemize}
+\subsection{Criticità e fattori di rischio}
+\begin{itemize}
+	\item Numero elevato di componenti da realizzare ed integrare che comportano di conseguenza molte tecnologie da apprendere; 
+	\item probabile necessità di effettuare test in sede aziendale per avere accesso ai dispositivi fisici.
+\end{itemize}
+\subsection{Conclusioni}
+Il gruppo ha trovato l'ambito di applicazione del problema interessante ed ha apprezzato la chiarezza con cui sono definite le varie parti del sistema. Proprio l'elevato numero di componenti da realizzare ha però fatto calare la volontà dei membri del gruppo a svolgere questo capitolato\glo.
