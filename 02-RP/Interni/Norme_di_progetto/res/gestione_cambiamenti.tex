@@ -1,0 +1,54 @@
+\subsection{Gestione dei cambiamenti}
+\subsubsection{Scopo}
+Questo processo\glosp ha come scopo quello di fornire un metodo tempestivo, disciplinato e documentato per assicurare che tutti i problemi riscontrati siano analizzati e risolti, oltre che permettere di individuare i problemi maggiormente ricorrenti.
+\subsubsection{Aspettative}
+L'applicazione di questo processo\glosp comporterà maggiore tempestività ed efficienza nell'individuazione e risoluzione dei problemi, comportando un conseguente aumento di efficacia ed efficienza del processo di verifica grazie anche al tracciamento dei problemi più frequenti.
+\subsubsection{Descrizione} 
+Il processo\glosp di gestione dei cambiamenti analizza e risolve i problemi, indipendentemente dalla loro natura o origine, riscontrati durante l'esecuzione dei processi\glosp di sviluppo, manutenzione o di altri processi\glosp. 
+\subsubsection{Attività}
+\paragraph{Implementazione del processo}\mbox{}\\ [1mm]
+Un processo\glosp di risoluzione dei problemi deve essere stabilito per gestire ogni problema, comprese le non conformità, rilevato nei prodotti\glosp software o nelle attività. Questo processo\glosp deve essere conforme alle seguenti proprietà:
+\begin{itemize}
+	\item Il processo\glosp deve essere circolare e chiuso, assicurando che:
+	\begin{itemize} 
+		\item Tutti i problemi siano prontamente segnalati e gestiti tramite il processo di risoluzione dei problemi;
+		\item I problemi vengano presi in carico e gestiti;
+		\item Vengano inviate delle notifiche per informare gli interessati della presenza del problema;
+		\item Le cause del problema vengano identificate, analizzate e, dove possibile, eliminate;
+		\item La risoluzione e le decisioni prese siano archiviate e storicizzate;
+		\item Lo stato del problema sia tracciato, aggiornato e comporti delle notifiche al cambio di stato;
+		\item Venga mantenuto un registro di tutti i problemi riscontrati.
+	\end{itemize}
+	\item Il processo\glosp definisce uno schema per categorizzare e dare priorità ai problemi. Questo schema è composto da:
+	\begin{itemize} 
+		\item \textbf{Identificativo}: codice univoco per identificare il singolo problema;
+		\item \textbf{Tipologia}: identifica il tipo di problema, può essere:
+		\begin{itemize}
+			\item \textbf{Editoriale}: (documentazione) per problemi che comportano modifiche editoriali\glo;
+			\item \textbf{Tecnico}: (documentazione) per problemi che comportano modifiche tecniche\glo;
+			\item \textbf{Funzionale}: (software) per problemi che influenzano le caratteristiche funzionali del prodotto\glo;
+			\item \textbf{Conformità}: (software) per violazioni di conformità del prodotto\glo;
+			\item \textbf{Validazione}: (software) per problemi riscontrati durante il processo\glosp di Validazione\glo.
+		\end{itemize}
+		\item \textbf{Priorità}: potrà essere:
+		\begin{itemize}
+			\item Bloccante;
+			\item Urgente;
+			\item Alta;
+			\item Media;
+			\item Bassa.
+		\end{itemize}
+		\item \textbf{Stato}: potrà essere:
+		\begin{itemize}
+			\item Da fare;
+			\item In corso;
+			\item Completato.
+		\end{itemize}
+	\end{itemize}
+	\item I problemi rilevati ed archiviati vengono  analizzati al fine di identificare i più frequenti ed eventuali tendenze;
+	\item Le risoluzioni individuate per i problemi sono analizzate e valutate al fine di verificare che i problemi siano stati effettivamente risolti, che le modifiche siano state correttamente implementate nei prodotti\glosp software e nelle attività. Inoltre l'analisi permette di individuare pattern di risoluzione ed aiuta a determinare quando vengono introdotti ulteriori problemi.			
+\end{itemize}
+
+\paragraph{Risoluzione dei problemi}\mbox{}\\ [1mm]
+Quando dei problemi, comprese le non conformità, sono rilevati in un prodotto\glosp software o in un'attività deve essere realizzato un report che li descriva. Questo report deve essere usato come componente del ciclo chiuso del punto §3.6.4.1: dall'individuazione del problema al il processo di indagine, analisi e risoluzione e per finire all'individuazione della causa ed all'analisi dei problemi per individuare le tendenze.
+
