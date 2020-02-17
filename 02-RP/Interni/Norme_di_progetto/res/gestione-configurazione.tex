@@ -1,15 +1,15 @@
 \subsection{Gestione della configurazione}
 	\subsubsection{Scopo}
-		In questo capitolo verrà illustrato come il gruppo ha gestito la configurazione degli strumenti e delle risorse utilizzate per svolgere il progetto\glo.
-		Sarà quindi descritta la configurazione del repository\glosp su GitHub, del sistema di versionamento\glosp Git e dei servizi GitHub.
+		L'obiettivo di questo processo è rendere documenti e codice sorgente univocamente identificati e facilmente riconoscibili, evidenziando versioni e modifiche. Vuole anche agevolare l'identificazione delle relazioni esistenti fra gli elementi e fa da supporto alla fase di verifica.
 	\subsubsection{Aspettative}
 		Questa sezione ha lo scopo supportare i processi\glosp di documentazione, di sviluppo e manutenzione del software rendendoli definiti e ripetibili.  
 	\subsubsection{Descrizione} 
-		L'obiettivo principale è quindi di rendere documenti e codice sorgente univocamente identificati e facilmente identificabili, evidenziandone versioni e modifiche. Vuole anche agevolare l'identificazione delle relazioni esistenti fra gli elementi e fa da supporto alla fase di verifica.
+		Questo processo descrive come il gruppo ha gestito la configurazione degli strumenti e delle risorse utilizzate per svolgere il progetto\glo.
+		Sarà quindi descritta la configurazione del repository\glosp su GitHub, del sistema di versionamento\glosp Git e dei servizi GitHub.
 	\subsubsection{Attività}
 		\paragraph{Versionamento}\mbox{}\\ [1mm]
 		Le modifiche effettuate ai documenti ed ai file contenenti codice sorgente sono identificate da un numero di versione presente all'interno dei file stessi. Per quanto riguarda i documenti, ogni numero di versione sarà presente nel nome del file ed avrà una corrispondente riga nella tabella delle modifiche così da avere uno storico delle modifiche effettuate al documento. Per il codice sorgente del software le modifiche effettuate in una versione saranno consultabili sulla sezione rilasci di GitHub e saranno identificate da opportuni tag.
-		\newline
+		\subparagraph*{Codice di versione del documento}
 		Per identificare univocamente le versioni dei documenti seguiamo le indicazioni dell'ente ETSI, dunque la numerazione delle versioni è composta da 3 cifre nel formato X.Y.Z e la prima bozza ha versione 0.0.1. Le modifiche al documento aggiorneranno le cifre nel seguente modo:
 		\begin{itemize}
 			\item \textbf{Z} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche editoriali\glosp al documento, es. X.Y.1, X.Y.2 etc.;
@@ -23,6 +23,8 @@
 		Quando il documento viene approvato come finale allora viene incrementata la cifra X, ad esempio la bozza 1.5.3 diventa la versione finale 2.1.1.
 		\newline
 		Ogni incremento sulle singole cifre è rigorosamente un +1, non possono essere saltati numeri.
+		
+		\paragraph{Utilizzo di Git} %SPIEGARE UTILIZZO DI GIT DA PARTE NOSTRA 3.2.2.6 NDP 8-LAB RA
 		
 	\paragraph{Gestione delle modifiche}\mbox{}\\ [1mm]
 		Al fine di monitorare e limitare le modifiche al ramo principale del repository\glo, master, è utilizzato il meccanismo di pull request fornito da GitHub. Ogni membro del gruppo può creare branch secondari, secondo il workflow\glosp feature branch, su cui effettuare modifiche, tuttavia per unirle al branch master è necessario aprire una pull request che dovrà essere revisionata dai verificatori tramite i servizi di revisione integrati in GitHub. Una volta revisionata positivamente è compito del responsabile del documento approvare la pull request ed effettuare quindi l'effettiva unione delle modifiche nel branch master.
@@ -42,6 +44,7 @@
 		\begin{center}
 			\url{https://github.com/marcoDallas/VRAM_SW_DOC_2020/}
 		\end{center}
+		\subparagraph{Struttura del repository} %VERIFICARE COM'E ORA LA STRUTTURA ED EVENTUALMENTE AGGIORNARLA
 		Al fine di fornire una navigazione agevole e standardizzata, il contenuto del repository\glosp è organizzato in modo gerarchico tramite directory secondo il seguente schema:
 		\newline
 		\dirtree{%
@@ -84,8 +87,9 @@
 			\item file immagine, preferibilmente in formato .png;
 			\item file testuali in formato .md o .txt.			
 		\end{itemize}
-	\subsubsection{Strumenti}
-	\paragraph{Ulteriori strumenti GitHub utilizzati}\mbox{}\\ [1mm]
+	\subsubsection{Strumenti di supporto}
+	\paragraph{GitHub} %VEDI TECNOLOGIE 3.2.2.2 NDP 8-LAB DELL'RA
+	\subparagraph*{Strumenti GitHub utilizzati}\mbox{}\\ [1mm]
 		In aggiunta ai servizi già elencati, al fine di migliorare efficacia ed efficienza, vengono utilizzate le funzionalità di "Issue Tracking System",
 		% milestone qui è usato come nome di funzione github quindi non va a glossario  
 		"Milestone" e "Project Board" integrate in GitHub. Ognuna di queste funzionalità viene usata solo da chi autorizzato, ad esempio rilasci di versioni, creazione e chiusura di milestone sono concesse solo al responsabile di progetto\glo.

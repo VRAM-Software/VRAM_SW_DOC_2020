@@ -1,6 +1,6 @@
 \subsection{Verifica}
 \subsubsection{Scopo}
-La verifica ha lo scopo di accertare che i risultati ottenuti da tutte le attività, attuate in un periodo preso in considerazione, raggiungano tutti i requisiti richiesti senza aver introdotto degli errori. La verifica deve essere svolta durante il ciclo di vita del software, più precisamente al passare di ogni baseline\glo.
+Il processo di verifica ha lo scopo di accertare che i risultati ottenuti da tutte le attività, attuate in un periodo preso in considerazione, raggiungano tutti i requisiti richiesti senza aver introdotto degli errori. La verifica deve essere svolta durante il ciclo di vita del software, più precisamente al passare di ogni baseline\glo.
 \subsubsection{Aspettative}
 La verifica viene effettuata per raggiungere i seguenti obiettivi:
 \begin{itemize}
@@ -13,7 +13,7 @@ Il processo\glosp di verifica assicura che tutte le attività svolte della fase 
 \subsubsection{Attività}
 \paragraph{Analisi}\mbox{}\\ [1mm]
 Le attività che si effettuano durante la verifica sono due tipi di analisi: l'analisi statica\glosp e l'analisi dinamica. \\[2mm]
-\textbf{Analisi statica}\mbox{}\\ [1mm]
+\subparagraph*{Analisi statica}\mbox{}\\ [1mm]
 L'analisi statica\glosp è lo studio della documentazione e del codice sorgente, essa non richiede l'esecuzione delle singole parti del sistema software che si sta sviluppando, quindi viene applicata ad ogni prodotto\glosp di processo\glo. L'analisi statica\glosp può essere effettuata manualmente in due modi:
 \begin{itemize}
 	\item \textbf{Walkthrough}: metodo di lettura in cui tutti i componenti del gruppo analizzano tutti i documenti e codice realizzato, senza tralasciare nulla, in modo da rilevare eventuali errori. Questa ricerca è ad ampio spettro, infatti viene effettuata anche se a priori non si può sapere se verranno trovate anomalie;
@@ -36,7 +36,8 @@ L'analisi statica\glosp è lo studio della documentazione e del codice sorgente,
 	\caption{Tabella errori più frequenti}
 \end{longtable}
 
-\paragraph*{Analisi dinamica} \mbox{}\\ [1mm]
+%AGGINGERE VERIFICA DELLA DOCUMENTAZIONE
+\subparagraph*{Analisi dinamica} \mbox{}\\ [1mm]
 L'analisi dinamica è una tecnica che consiste nell'esecuzione del prodotto\glosp software eseguendo dei test su un insieme finito di casi.
 \paragraph{Test}\mbox{}\\ [1mm]
 Per la corretta verifica del codice, i test devono seguire regole ben precise che definiscono i parametri e le proprietà che devono avere test per essere considerati efficaci: \mbox{}\\ [1mm]
@@ -57,15 +58,29 @@ Un test può essere definito efficace se:
 	\item in caso di possibili effetti indesiderati ci si aspetta un avvertimento;
 	\item esso è esaustivo e accurato, infatti devono poter identificare una parte del progetto\glosp che potrebbe essere causa di errori.
 \end{itemize}
-Il cosiddetto software testing è un procedimento importante per misurare la qualità di un prodotto\glosp software, per questo motivo sono definiti cinque livelli che dividono i tipi di test da effettuare secondo una gerarchia. Essi sono: 
+Il software testing è un procedimento importante per misurare la qualità di un prodotto\glosp software, per questo motivo sono definiti quattro livelli che dividono i tipi di test da effettuare secondo una gerarchia. Essi sono: 
 \begin{itemize}
-	\item \textbf{Test d'unità};
-	\item \textbf{Test d'integrazione};
+	\item \textbf{Test di accettazione};
 	\item \textbf{Test di sistema};
-	\item \textbf{Test di accettazione}.
+	\item \textbf{Test d'integrazione};
+	\item \textbf{Test d'unità}.
 \end{itemize}
-Per ogni test vengono definiti lo stato e l'esito:
+\subparagraph*{Codifica dei test}
+Per ogni test vengono definiti il codice identificativo, la descrizione, lo stato e l'esito.
 \begin{itemize}
+	\item il codice identificativo è scritto in questo formato: \textbf{tipologia[codice\_padre].[codice\_figlio]}
+	\begin{itemize}
+		\item \textbf{tipologia}:
+		\begin{itemize}
+			\item \textbf{TA}: test di accettazione;
+			\item \textbf{TS}: test di sistema;
+			\item \textbf{TI}: test d'integrazione;
+			\item \textbf{TU}: test di unità.
+		\end{itemize}
+		\item \textbf{codice\_padre}: numero che identifica univocamente il test;
+		\item \textbf{codice\_figlio}: numero progressivo che indica i sotto-test che compongono il padre. 
+	\end{itemize}
+	\item descrizione: spiegazione concisa e completa di ciò che verifica il test;
 	\item stato:
 	\begin{itemize}
 		\item \textbf{I}: implementato;
@@ -79,24 +94,25 @@ Per ogni test vengono definiti lo stato e l'esito:
 	\end{itemize}
 \end{itemize}
 
-\paragraph*{Test d'unità} \mbox{}\\ [1mm]
+\subparagraph*{Test d'unità} \mbox{}\\ [1mm]
 I test d'unità si definiscono tali perché controllano il corretto funzionamento di una sezione di codice specifica chiamata unità. Usualmente questi tipi di test vengono eseguiti su funzioni o, se si parla di programmazione ad oggetti, su un metodo di una classe, quindi su una parte minimale del codice. Il loro scopo è verificare che gli input forniti diano gli output attesi. È buona norma rendere questi test automatici per minimizzare il tempo di esecuzione senza richiedere l'interazione dello sviluppatore. Questo tipo di test viene scritto dal programmatore che sviluppa le singole unità mediate l'ausilio di driver\glosp e stub\glo, per verificare l'assenza di errori e documentare il funzionamento dell'unità.
 
-\paragraph*{Test d'integrazione} \mbox{}\\ [1mm]
+\subparagraph*{Test d'integrazione} \mbox{}\\ [1mm]
 Successivamente ai test d'unità, si assemblano gruppi di unità progressivamente che formeranno degli agglomerati sempre più grandi. Questo tipo di test, infatti, si concentra nella ricerca di anomalie ed errori tra le interfacce dei singoli componenti. Una volta concluso un singolo test, si otterrà un agglomerato che costituirà una nuova unità da cui partire per ulteriori test d'integrazione. Per svolgere questo test si è scelto un approccio iterativo.
 
-\paragraph*{Test di sistema} \mbox{}\\ [1mm]
+\subparagraph*{Test di sistema} \mbox{}\\ [1mm]
 I test di sistema controllano il funzionamento corretto del prodotto\glosp e verificano che il sistema soddisfi tutti i requisiti definiti nel documento: \textit{Analisi dei Requisiti}. Con l'esecuzione di questi test si riesce a definire e documentare tutte le funzionalità del sistema e possono individuare criticità come il problema del black-box\glo. Il gruppo svolgerà questo test quando si raggiungerà uno stato di rilascio per il prodotto\glosp sviluppato.
 Per identificare un test di unità viene utilizzata una codifica con il seguente formato:\\
 \textbf{TS[codice]}
 Dove codice è un numero progressivo nel formato: [X].[Y] con X e Y numeri maggiori di zero.
 
-\paragraph*{Test di accettazione} \mbox{}\\ [1mm]
+\subparagraph*{Test di accettazione} \mbox{}\\ [1mm]
 I test di accettazione, o di collaudo, vengono effettuati ad ogni pre-rilascio, quindi dopo l'esecuzione dei test di sistema. Essi servono a confermare il soddisfacimento dei requisiti da parte del committente; infatti questi tipi di test ne richiedono la presenza. Se questi test vengono superati significa che il prodotto\glosp software è pronto per il rilascio. 
 Per identificare un test di accettazione viene utilizzata una codifica con il seguente formato:\\
 \textbf{TA[codice]}
 Dove codice è un numero progressivo nel formato: [X].[Y] con X e Y numeri maggiori di zero.
 
-\subsubsection{Strumenti}
+\subsubsection{Strumenti di supporto}
 	\paragraph{Correzione ortografica}\mbox{}\\ [1mm]
 	Il nostro gruppo ha utilizzato, per la ricerca di errori ortografici o stilistici nel testo dei documenti, la libreria HunSpell utilizzata con l'editor di test: TexStudio. Esso permette di avere un controllo in tempo reale su errori ortografici in lingua inglese e italiana (sottolineati in rosso) e ripetizioni di parole a breve distanza (sottolineati in verde).
+	%AGGIUNGERE STRUMENTI PER FARE TESTING
