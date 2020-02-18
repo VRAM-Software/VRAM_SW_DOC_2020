@@ -23,6 +23,9 @@
 			\item avvio dell'addestramento (UC1.3);
 			\item visualizzazione del messaggio di conferma (UC1.5).
 		\end{enumerate}
+	\item \textbf{Scenari alternativi}:
+		\begin{enumerate}
+			\item arresto dell'addestramento (UC1.4).
 	\item \textbf{Estensioni}:
 	\begin{itemize}
 		\item se il caricamento del file JSON non è avvenuto con successo viene visualizzato un messaggio di errore (UC3).
@@ -97,15 +100,15 @@
 	\item \textbf{Scenario principale}: l'utente avvia l'addestramento.
 \end{itemize}
 
-\paragraph{UC1.4 - Conclusione dell'addestramento}
+\paragraph{UC1.4 - Arresto dell'addestramento}
 \begin{itemize}
 	\item \textbf{Codice identificativo}: UC1.4;
-	\item \textbf{Titolo}: conclusione dell'addestramento;
+	\item \textbf{Titolo}: arresto dell'addestramento;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
 	\item \textbf{Descrizione}: l'addestramento è stato fermato dall'utente prima del suo completamento;
 	\item \textbf{Precondizioni}: l'addestramento è stato avviato con successo;
-	\item \textbf{Postcondizioni}: l'addestramento è stato fermato volontaria con successo;
+	\item \textbf{Postcondizioni}: l'addestramento è stato fermato con successo;
 	\item \textbf{Scenario principale}: l'utente visualizza un messaggio di conferma che l'addestramento è stato concluso.
 \end{itemize}
 
