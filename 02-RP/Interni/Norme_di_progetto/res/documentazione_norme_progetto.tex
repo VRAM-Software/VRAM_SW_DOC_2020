@@ -178,7 +178,7 @@
                     \item \textbf{Revisione di Qualifica - RQ}: revisione intermedia per l'approvazione delle verifiche e l'attivazione del processo\glosp di validazione\glo;
                     \item \textbf{Revisione di Accettazione - RA}: revisione finale per il collaudo del software e l'accertamento del soddisfacimento dei requisiti presentati in RR.
                 \end{itemize}
-                \subparagraph{Altre sigle}
+                \subparagraph{Sigle dei ruoli}
                     \begin{itemize}
                         \item \textbf{Responsabile - Re};
                         \item \textbf{Amministratore - Am};
@@ -186,7 +186,6 @@
                         \item \textbf{Progettista - Pr};
                         \item \textbf{Programmatore - Pt};
                         \item \textbf{Verificatore - Ve};
-                        \item \textbf{Proof of Concept - PoC}\glo.
                     \end{itemize}
             \paragraph{Elementi grafici}
                 \subparagraph{Immagini}\mbox{}\\ [1mm]
@@ -196,26 +195,29 @@
                     Inoltre le tabelle presentano un'alternanza di colori per favorirne la lettura.
                 \subparagraph{Didascalie}\mbox{}\\ [1mm]
                     Le didascalie indicano in maniera progressiva il numero di tabella o immagine del documento e descrivono brevemente il loro contenuto.
-            \subsubsection{Metriche} %BOH!!!!
+            \subsubsection{Metriche di prodotto}
                 \paragraph{Metriche di qualità}\mbox{}\\ [1mm]
            		I parametri utilizzati per misurare la qualità dei documenti sono:
                 \begin{itemize}
-                	\item \textbf{Indice di Gulpease}: valore che indica il livello di leggibilità di un testo;
-                	\item \textbf{Correttezza ortografica}: valore che indica la quantità di errori ortografici presenti nel documento.
+                	\item \textbf{Indice di Gulpease}: indica il livello di leggibilità di un testo: più alto questo valore e più è alta la leggibilità del testo. In particolare con valore inferiore a 80 risultata difficile da leggere per chi ha la licenza elementare; inferiore a 60 risultata difficile da leggere per chi ha la licenza media; inferiore a 40 risultata difficile da leggere per chi ha un diploma superiore;
+                	\begin{itemize}
+                		\item[] \textbf{formula}: 89+$\frac{300\cdot numero \; di \; frasi-10\cdot numero \; di \; lettere}{numero \; di \; parole}$;
+                	\end{itemize}                	
+                	\item \textbf{Correttezza ortografica}: indica la quantità di errori ortografici presenti nel documento.
+                	\begin{itemize}
+                		\item[] \textbf{formula}: si calcola con un valore intero;
+                	\end{itemize}
                 \end{itemize}                        
-                \paragraph{Metriche di prodotto}
-                \subparagraph{Usabilità} \mbox{}\\[1mm]
-	            L'usabilità è una caratteristica di un software definita come l'efficacia, l'efficienza e la soddisfazione con le quali determinati utenti raggiungono determinati obiettivi in determinati contesti.\\
-	            Le metriche\glosp sono:
-	            \begin{itemize}
-		        \item \textbf{Completezza della documentazione}: percentuale delle funzioni descritte nella documentazione con un dettaglio tale da consentire all'utente di utilizzarle. Si calcola con la formula:
-		        \[C_{DOC}=(N_{FD}/N_{FI})*100\]
-		        dove N$_{FD}$ sono le funzioni definite sulla documentazione e N$_{FI}$ sono le funzioni individuate nella documentazione;
-		        \item \textbf{Completezza di descrizione}: percentuale degli scenari d’uso descritta nella documentazione effettivamente presenti nel prodotto\glosp finale. Si calcola con la formula:
-		        \[C_{DESC}=(N_{UCI}\\N_{UCE})*100\]
-		        dove N$_{UCI}$ è il numero di casi d'uso\glosp individuati e N$_{UCE}$ è il numero di casi d'uso\glosp effettivi del prodotto\glo.
-	            \end{itemize}
-            \subsubsection{Strumenti}
+                
+	            %\begin{itemize}
+		       % \item \textbf{Completezza della documentazione}: percentuale delle funzioni descritte nella documentazione con un dettaglio tale da consentire all'utente di utilizzarle. Si calcola con la formula:
+		       % \[C_{DOC}=(N_{FD}/N_{FI})*100\]
+		       % dove N$_{FD}$ sono le funzioni definite sulla documentazione e N$_{FI}$ sono le funzioni individuate nella documentazione;
+		       % \item \textbf{Completezza di descrizione}: percentuale degli scenari d’uso descritta nella documentazione effettivamente presenti nel prodotto\glosp finale. Si calcola con la formula:
+		      %  \[C_{DESC}=(N_{UCI}\\N_{UCE})*100\]
+		      %  dove N$_{UCI}$ è il numero di casi d'uso\glosp individuati e N$_{UCE}$ è il numero di casi d'uso\glosp effettivi del prodotto\glo.
+	          %  \end{itemize}
+            \subsubsection{Strumenti di supporto}
                 \paragraph{\LaTeX}\mbox{}\\ [1mm]
                     Per stilare i documenti è stato usato il linguaggio di markup \LaTeX \xspace. Questo linguaggio permette di scrivere dei testi mantenendo il focus
                     sul contenuto e non sulla forma. La struttura infatti è stata dichiarata all'inizio del progetto\glosp e poi riutilizzata permettendo una gestione degli elaborati scalabile, modulare e ordinata.

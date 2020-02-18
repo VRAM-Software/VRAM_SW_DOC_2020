@@ -1,6 +1,3 @@
-%tag per quick testing
-%\documentclass{article}
-%\begin{document}
 \section{Processi organizzativi}
 	\subsection{Gestione organizzativa}
 		\subsubsection{Scopo}
@@ -32,7 +29,20 @@
 				\item gestione del controllo e dell'esecuzione di tutte le attività;
 				\item valutazione periodica dello stato e dell'esecuzione delle attività rispetto a quanto pianificato.
 			\end{itemize}
-		\subsubsection{Attività}
+		\subsubsection{Metriche di qualità del processo}
+		\paragraph*{Pianificazione delle risorse}\mbox{}\\ [1mm]
+		I parametri utilizzati per valutare la qualità della pianificazione sono:
+		\begin{itemize}
+			\item \textbf{BAC: Budget at Completion} che rappresenta il budget totale del progetto\glosp e si misura col relativo numero intero;
+			\item \textbf{PV: Planned Value} che rappresenta il valore dei lavoro pianificato fino a quel momento e si misura con la formula: BAC $\cdot$ \%lavoro pianificato;
+			\item \textbf{EV: Earned Value} che rappresenta il valore del lavoro svolto fino a quel momento e si misura con la formula: BAC $\cdot$ \%lavoro pianificato;
+			\item \textbf{AC: Actual cost} che rappresenta il denaro speso fino a quel momento e si misura col relativo numero intero;
+			\item \textbf{CPI: Cost Performance Index} che rappresenta un indice per i costi effettivi rispetto a quelli previsti e si misura con la formula: $\frac{EV}{AC}$, se è $\le$1 indica che si sta spendendo più di quanto preventivato;
+			\item \textbf{SPI: Schedule Performance Index} che rappresenta un indice per i tempi effettivi rispetto a quelli previsti e si misura con la formula: $\frac{EV}{PV}$, se è $\le$1 indica che si sta impiegando più tempo di quanto preventivato;
+			\item \textbf{EAC: Estimated Cost at Completion} che rappresenta il budget totale stimato del progetto\glosp con il CPI del momento e si misura con la formula: $AC+\frac{BT-EV}{CPI}$;
+			\item \textbf{SAC: Schedule at Completion} che rappresenta il tempo totale stimato del progetto\glosp con SPI del momento e si misura con la formula: $\frac{TT}{SPI}$; con TT=Tempo Totale.
+		\end{itemize}	
+		\subsubsection{Procedure}
 		\paragraph{Ruoli di progetto}
 			\subparagraph{Assegnazione}\mbox{}\\ [1mm]
 				I ruoli scelti corrispondono alla rispettiva figura aziendale e valgono per la durata di una milestone. Al termine di ognuna di esse, viene eseguita una rotazione dei ruoli così da permettere a ciascuno dei membri del gruppo di ricoprirli tutti almeno una volta.
@@ -173,33 +183,6 @@
 					\item \textbf{3}: alto livello di gravità.
 				\end{itemize}
 			\end{itemize}
-		\subsubsection{Metriche}
-		\paragraph{Metriche di qualità}
-			\subparagraph{Pianificazione delle risorse}\mbox{}\\ [1mm]
-			I parametri utilizzati per valutare la qualità della pianificazione sono:
-			\begin{itemize}
-				\item \textbf{BAC: Budget at Completion} che rappresenta il budget totale del progetto\glosp e si misura col relativo numero intero;
-				\item \textbf{PV: Planned Value} che rappresenta il valore dei lavoro pianificato fino a quel momento e si misura con la formula: BAC $\cdot$ \%lavoro pianificato;
-				\item \textbf{EV: Earned Value} che rappresenta il valore del lavoro svolto fino a quel momento e si misura con la formula: BAC $\cdot$ \%lavoro pianificato;
-				\item \textbf{AC: Actual cost} che rappresenta il denaro speso fino a quel momento e si misura col relativo numero intero;
-				\item \textbf{CPI: Cost Performance Index} che rappresenta un indice per i costi effettivi rispetto a quelli previsti e si misura con la formula: $\frac{EV}{AC}$, se è $\le$1 indica che si sta spendendo più di quanto preventivato;
-				\item \textbf{SPI: Schedule Performance Index} che rappresenta un indice per i tempi effettivi rispetto a quelli previsti e si misura con la formula: $\frac{EV}{PV}$, se è $\le$1 indica che si sta impiegando più tempo di quanto preventivato;
-				\item \textbf{EAC: Estimated Cost at Completion} che rappresenta il budget totale stimato del progetto\glosp con il CPI del momento e si misura con la formula: $AC+\frac{BT-EV}{CPI}$;
-				\item \textbf{SAC: Schedule at Completion} che rappresenta il tempo totale stimato del progetto\glosp con SPI del momento e si misura con la formula: $\frac{TT}{SPI}$; con TT=Tempo Totale.
-			\end{itemize}	
-		\subsubsection{Strumenti di supporto}
-		Gli strumenti utilizzati sono i seguenti:
-		\begin{itemize}
-			\item \textbf{Telegram}: strumento di messaggistica istantanea utilizzato inizialmente dal gruppo per il primo incontro;
-			\item \textbf{Slack}: strumento utilizzato per le comunicazione interne del gruppo;
-			\item \textbf{Google Drive}: strumento utilizzato per file che non sono oggetto di cambiamenti frequenti come il \textit{Glossario} o immagini di vario tipo;
-			\item \textbf{Google Calendar}: strumento utilizzato per tracciare e semplificare la gestione degli impegni e fornire a tutti notifiche e promemoria per gli stessi;
-			\item \textbf{Gmail}: strumento di posta elettronica utilizzato per le comunicazioni esterne.
-			\item \textbf{Skype}: strumento utilizzato per effettuare chiamate VoIP per alcuni incontri interni;
-			\item \textbf{Git}: sistema di controllo di versionamento\glo;
-			\item \textbf{GitKraken, GitHub Desktop}: interfacce l'utilizzo di GitHub in locale;
-			\item \textbf{GitHub}: strumento utilizzato per il proprio Issue Tracking System e sistema di versionamento\glosp dei file.
-		\end{itemize}
 		\paragraph{Gestione degli strumenti di coordinamento}
 			\subparagraph{Ticketing}\mbox{}\\ [1mm]
 				Il sistema di ticketing permette ai membri del gruppo di gestire le tutte le attività del progetto\glo.
@@ -213,6 +196,19 @@
 				\end{itemize}
 				L'associazione con le milestone\glosp definisce le scadenze delle singole issue.
 				Inoltre è presente una comoda funzionalità di ricerca per le issue assegnate che ne agevola ulteriormente la gestione.
+		\subsubsection{Strumenti di supporto}
+			Gli strumenti utilizzati sono i seguenti:
+			\begin{itemize}
+				\item \textbf{Telegram}: strumento di messaggistica istantanea utilizzato inizialmente dal gruppo per il primo incontro;
+				\item \textbf{Slack}: strumento utilizzato per le comunicazione interne del gruppo;
+				\item \textbf{Google Drive}: strumento utilizzato per file che non sono oggetto di cambiamenti frequenti come il \textit{Glossario} o immagini di vario tipo;
+				\item \textbf{Google Calendar}: strumento utilizzato per tracciare e semplificare la gestione degli impegni e fornire a tutti notifiche e promemoria per gli stessi;
+				\item \textbf{Gmail}: strumento di posta elettronica utilizzato per le comunicazioni esterne.
+				\item \textbf{Skype}: strumento utilizzato per effettuare chiamate VoIP per alcuni incontri interni;
+				\item \textbf{Git}: sistema di controllo di versionamento\glo;
+				\item \textbf{GitKraken, GitHub Desktop}: interfacce l'utilizzo di GitHub in locale;
+				\item \textbf{GitHub}: strumento utilizzato per il proprio Issue Tracking System e sistema di versionamento\glosp dei file.
+			\end{itemize}
 	\subsection{Formazione del gruppo}
 		\subsubsection{Scopo}
 			Lo scopo di questo processo\glosp è formare ogni membro del gruppo per garantire che ognuno abbia le conoscenze e le competenze adeguate allo svolgimento dei compiti assegnati.

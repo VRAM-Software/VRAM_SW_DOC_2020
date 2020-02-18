@@ -132,7 +132,7 @@
 			\item \textbf{Comunicazioni interne al gruppo};
 			\item \textbf{Analisi dei possibili casi d'uso}\glo.
 		\end{itemize}
-		\subparagraph{Analisi dei Requisiti}
+		\subparagraph*{Analisi dei Requisiti}
 		Un prodotto di quest'attività che formalizza gli obiettivi descritti sopra è un documento chiamato \textit{Analisi Dei Requisiti}. Esso è composto da:
 		\begin{itemize}
 			\item \textbf{Introduzione}: descrizione generale del documento che specifica anche lo scopo del documento e del prodotto\glo;
@@ -212,11 +212,18 @@
 			\item mantenere uniforme la spaziatura tra gruppi analoghi di elementi della stessa tipologia;
 			\item tutti gli attori principali sono raggruppati nella parte sinistra del diagramma mentre quelli secondari sono raggruppati nella parte destra.
 		\end{itemize}
-		\subparagraph*{Metriche di qualità} %VANNO MESSE A INDICE?? VEDI DA RA 8LAB
+		\subparagraph{Metriche di qualità} %INSERIRE QUALITA DEI REQUISITI VEDI RA 8LAB
 		Le metriche di qualità utilizzate per valutare la qualità dell'analisi dei requisiti sono:
 		\begin{itemize}
-			\item la percentuale di requisiti obbligatori soddisfatti (\textbf{PROS}), calcolata con la seguente formula: $\frac{requisiti \; obbligatori \; soddisfatti}{requisiti \; obbligatori \; totali}$; \\
-			\item la percentuale di requisiti desiderabili soddisfatti (\textbf{PRDS}), calcolata con la seguente formula: $\frac{requisiti \; desiderabili \; soddisfatti}{requisiti \; desiderabili \; totali}$.
+			\item \textbf{percentuale di requisiti obbligatori soddisfatti (PROS)}: indica la percentuale di requisiti obbligatori che sono stati soddisfatti. Questo valore deve essere massimizzato per garantire che i vincoli col proponente vengano rispettati;
+			\begin{itemize}
+				\item[] \textbf{formula}: $\frac{requisiti \; obbligatori \; soddisfatti}{requisiti \; obbligatori \; totali}$;
+			\end{itemize} 
+			\item \textbf{percentuale di requisiti desiderabili soddisfatti (PRDS)}:
+			indica la percentuale di requisiti desiderabili che sono stati soddisfatti. Un valore elevato denota una maggior copertura delle richieste del proponente;
+			\begin{itemize}
+				\item[] \textbf{formula}: $\frac{requisiti \; desiderabili \; soddisfatti}{requisiti \; desiderabili \; totali}$.
+			\end{itemize} 
 		\end{itemize}		
 		\pagebreak
 		\paragraph{Progettazione}
@@ -266,19 +273,35 @@
 		\paragraph*{Descrizione}\mbox{}\\ [1mm]
 		Il prodotto dell'attività di codifica è il codice necessario per realizzare il prodotto\glo. La sua struttura dovrà rispettare le regole definite nel \textit{Piano di Qualifica} al fine di garantire una buona qualità.
 		\paragraph*{Stile di Codifica}\mbox{}\\ [1mm]
-		In seguito vengono elencate le norme da rispettare nel processo\glosp di codifica:
+		In seguito vengono elencate le norme da rispettare nell'attività di codifica:
 		\begin{itemize}
-			\item \textbf{Lingua}: la lingua con cui vengono scritti codice e commenti deve essere l'inglese;
-			\item \textbf{Indentazione}: i blocchi annidati devono essere indentati con una tabulazione di quattro spazi;
-			\item \textbf{Nomenclatura}: i nomi di classi, metodi e variabili devono essere univoci ed esplicativi;
-			\item \textbf{Classi}: il nome di ciascuna classe deve iniziare con la lettera maiuscola; 
-			\item \textbf{Costanti}: i nomi delle costanti devono essere scritti usando solo lettere maiuscole;
-			\item \textbf{Metodi}: il nome di ciascun metodo deve iniziare con una lettera minuscola. Nei metodi con nome composto, le iniziali di ogni singola parola che li compone deve essere una lettera maiuscola seguendo la pratica CamelCase;
-			\item \textbf{Ricorsione}: l'uso della ricorsione è da evitare ove possibile;
-			\item \textbf{Condizioni}: l'uso di condizioni multiple è da evitare ove possibile per limitare la complessità delle singole espressioni;
-			\item \textbf{Parentesizzazione}: le parentesi di delimitazione dei costrutti devono essere inserite in linea;
-			\item \textbf{Struttura dei metodi}: ogni metodo deve avere uno ed un solo compito e il suo contenuto deve essere il più possibile breve in termini di righe di codice.
+			\item \textbf{lingua}: la lingua con cui vengono scritti codice e commenti deve essere l'inglese;
+			\item \textbf{indentazione}: i blocchi annidati devono essere indentati con una tabulazione di quattro spazi;
+			\item \textbf{nomenclatura}: i nomi di classi, metodi e variabili devono essere univoci ed esplicativi;
+			\item \textbf{classi}: il nome di ciascuna classe deve iniziare con la lettera maiuscola; 
+			\item \textbf{costanti}: i nomi delle costanti devono essere scritti usando solo lettere maiuscole;
+			\item \textbf{metodi}: il nome di ciascun metodo deve iniziare con una lettera minuscola. Nei metodi con nome composto, le iniziali di ogni singola parola che li compone deve essere una lettera maiuscola seguendo la pratica CamelCase;
+			\item \textbf{commenti}: i commenti nel codice devono essere concisi ma sufficientemente descrittivi. Essi precedono l'implementazione di metodi e classi;
+			\item \textbf{intestazione dei file}: %AGGIUNGERE
+			\item \textbf{ricorsione}: l'uso della ricorsione è da evitare ove possibile;
+			\item \textbf{condizioni}: l'uso di condizioni multiple è da evitare ove possibile per limitare la complessità delle singole espressioni;
+			\item \textbf{parentesizzazione}: le parentesi di delimitazione dei costrutti devono essere inserite in linea;
+			\item \textbf{struttura dei metodi}: ogni metodo deve avere uno ed un solo compito e il suo contenuto deve essere il più possibile breve in termini di righe di codice.
 		\end{itemize}
+		\subparagraph{Metriche di qualità}
+		Per la codifica le metriche di qualità sono:
+		\begin{itemize}
+			\item \textbf{livello di annidamento}: indica il livello di annidamento all'interno dei metodi. Se questo valore è alto il codice è più complesso e difficile da manutenere. Perciò è opportuno suddividere il metodo in più metodi distinti per ottenere un livello di annidamento basso;
+			\begin{itemize}
+				\item[] \textbf{formula}: si calcola con un valore intero;
+			\end{itemize}
+			\item \textbf{numero di parametri per metodo}: indica il numero di parametri presenti in ciascun metodo. Se il valore è elevato è molto probabile che il grado di complessità del metodo sia elevato. Perciò è opportuno limitare questo numero ed eventualmente suddividere il metodo in più metodi distinti;
+			\begin{itemize}
+				\item[] \textbf{formula}: si calcola con un valore intero.
+			\end{itemize}
+		\end{itemize}
+		\paragraph{Integrazione software}
+		%AGGIUNGERE
 		\subsubsection{Strumenti di supporto}
 		Nella valutazione dei costi da affrontare per lo sviluppo del software e per la formazione del personale, abbiamo già identificato le principali tecnologie e strumenti che verranno utilizzare durante il progetto\glo.
 		\paragraph{TeXstudio}\mbox{}\\ [1mm]
