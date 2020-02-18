@@ -21,7 +21,7 @@
 			\item inserimento del file in formato JSON contenente i dati di testing (UC1.1);
 			\item selezione del modello di predizione su cui applicare l'addestramento (UC1.2);
 			\item avvio dell'addestramento (UC1.3);
-			\item visualizzazione del messaggio di conferma (UC1.4).
+			\item visualizzazione del messaggio di conferma (UC1.5).
 		\end{enumerate}
 	\item \textbf{Estensioni}:
 	\begin{itemize}
@@ -97,9 +97,21 @@
 	\item \textbf{Scenario principale}: l'utente avvia l'addestramento.
 \end{itemize}
 
-\paragraph{UC1.4 - Visualizzazione del messaggio di conferma}
+\paragraph{UC1.4 - Conclusione dell'addestramento}
 \begin{itemize}
 	\item \textbf{Codice identificativo}: UC1.4;
+	\item \textbf{Titolo}: conclusione dell'addestramento;
+	\item \textbf{Attori primari}: utente;
+	\item \textbf{Attori secondari}: Grafana\glo;
+	\item \textbf{Descrizione}: l'addestramento è stato fermato dall'utente prima del suo completamento;
+	\item \textbf{Precondizioni}: l'addestramento è stato avviato con successo;
+	\item \textbf{Postcondizioni}: l'addestramento è stato fermato volontaria con successo;
+	\item \textbf{Scenario principale}: l'utente visualizza un messaggio di conferma che l'addestramento è stato concluso.
+\end{itemize}
+
+\paragraph{UC1.5 - Visualizzazione del messaggio di conferma}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC1.5;
 	\item \textbf{Titolo}: visualizzazione del messaggio di conferma;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
