@@ -18,9 +18,9 @@
 	\item \textbf{Postcondizione}: viene inserito e definito con successo un alert\glosp nel pannello grafico scelto;
 	\item \textbf{Scenario principale}: 
 	\begin{enumerate}
-		\item definizione della regola dell'alert\glosp (UC13.1);
-		\item definizione delle condizioni dell'alert\glosp (UC13.2);
-		\item definizione dei casi speciali dell'alert\glosp (UC13.3).
+		\item definizione della regola dell'alert\glosp (UC13.2);
+		\item definizione delle condizioni dell'alert\glosp (UC13.3);
+		\item definizione dei casi speciali dell'alert\glosp (UC13.4).
 	\end{enumerate}
 
 	\item \textbf{Estensioni}:	
@@ -29,7 +29,7 @@
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UC13.1 - Definizione della regola di un alert}
+\subsubsection{UC13.2 - Definizione della regola di un alert}
 \begin{itemize}
 	\item \textbf{Codice identificativo}: UC13.2;
 	\item \textbf{Titolo}: definizione della regola dell'alert\glo;
@@ -41,19 +41,19 @@
 	\item \textbf{Scenario principale}: l'utente definisce le regole di funzionamento dell'alert\glosp appena inserito, usando le funzioni previste da Grafana\glosp ed inserendo nome e tempi di interrogazione.
 \end{itemize}
 
-\subsubsection{UC13.2 - Definizione delle condizioni di un alert}
+\subsubsection{UC13.3 - Definizione delle condizioni di un alert}
 \begin{itemize}
 	\item \textbf{Codice identificativo}: UC13.3;
 	\item \textbf{Titolo}: definizione delle condizioni dell'alert\glo;
 	\item \textbf{Attore primario}: utente;
 	\item \textbf{Attore secondario}: Grafana\glo;
-	\item \textbf{Descrizione}: dopo aver aggiunto un alert\glosp ad un pannello grafico l'utente ha la possibilità di definire le sue condizioni di funzionamento, cioè i limiti che, se superati, portano alla visualizzazione dei limiti superati nel pannello grafico per evidenziare le differenze tra la soglia scelta e i dati;
+	\item \textbf{Descrizione}: dopo aver aggiunto un alert\glosp ad un pannello grafico l'utente ha la possibilità di definire le sue condizioni di funzionamento, cioè i limiti che, se superati, portano alla visualizzazione dei dati oltre la soglia prestabilita, nel pannello grafico;
 	\item \textbf{Precondizione}: l'utente ha aggiunto un alert\glosp al pannello grafico;
 	\item \textbf{Postcondizione}: l'utente tramite le funzioni offerte da Grafana\glosp ha definito una o più condizioni dell'alert\glosp precedentemente aggiunto;
 	\item \textbf{Scenario principale}: l'utente definisce le condizioni di funzionamento dell'alert\glosp appena inserito, usando le funzioni previste da Grafana\glosp e selezionando la funzione di aggregazione dati ed il valore soglia che attiva l'allarme.
 \end{itemize}
 
-\subsubsection{UC13.3 - Definizione dei casi speciali di un alert}
+\subsubsection{UC13.4 - Definizione dei casi speciali di un alert}
 	\begin{itemize}
 	\item \textbf{Codice identificativo}: UC13.4;
 	\item \textbf{Titolo}: definizione dei casi speciali dell'alert\glo;
