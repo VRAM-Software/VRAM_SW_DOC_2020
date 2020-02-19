@@ -47,29 +47,6 @@
 			\item caricamento del file JSON (UC4.1.2).
 		\end{enumerate}
 \end{itemize}
-
-\paragraph{UC4.1.1 - Selezione del file JSON}
-\begin{itemize}
-	\item \textbf{Codice identificativo}: UC4.1.1;
-	\item \textbf{Titolo}: selezione del file JSON;
-	\item \textbf{Attori primari}: utente;
-	\item \textbf{Descrizione}: l'utente seleziona il file JSON da inserire nell'applicativo esterno;
-	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glo;
-	\item \textbf{Postcondizioni}: l'utente ha selezionato correttamente il file JSON;
-	\item \textbf{Scenario principale}: l'utente seleziona il file JSON.
-\end{itemize}
-
-\paragraph{UC4.1.2 - Caricamento del file JSON}
-\begin{itemize}
-	\item \textbf{Codice identificativo}: UC4.1.2;
-	\item \textbf{Titolo}: caricamento del file JSON;
-	\item \textbf{Attori primari}: utente;
-	\item \textbf{Descrizione}: l'utente carica il file JSON nell'applicativo esterno;
-	\item \textbf{Precondizioni}: l'utente ha selezionato il file da caricare;
-	\item \textbf{Postcondizioni}: ò'utente ha caricato correttamente i file JSON;
-	\item \textbf{Scenario principale}: l'utente carica il file JSON.
-\end{itemize}
-
 \subsubsection{UC4.2 - Selezione del modello di predizione su cui applicare l'addestramento}
 \begin{itemize}
     \item \textbf{Codice identificativo}: UC4.2;
@@ -79,6 +56,28 @@
     \item \textbf{Precondizioni}: il file JSON è stato inserito correttamente;
     \item \textbf{Postcondizioni}: il modello di predizione è stato scelto correttamente;
     \item \textbf{Scenario principale}: l'utente seleziona un modello di predizione per eseguire l'addestramento.   
+\end{itemize}
+\subsubsection{UC4.2.1 - Selezione del modello di predizione SVM}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC4.2.1;
+	\item \textbf{Titolo}: selezione del modello di predizione SVM\glo;
+	\item \textbf{Attori primari}: utente;
+	\item \textbf{Attori secondari}: Grafana\glo;
+	\item \textbf{Descrizione}: l'utente seleziona SVM\glosp come modello di predizione da applicare durante l'addestramento;
+	\item \textbf{Precondizioni}: il file JSON è stato inserito correttamente;
+	\item \textbf{Postcondizioni}: l'utente ha selezionato correttamente SVM\glosp come modello di predizione da applicare;
+	\item \textbf{Scenario principale}: l'utente seleziona un modello di predizione per eseguire l'addestramento.
+\end{itemize}
+\subsubsection{UC4.2.2 - Selezione del modello di predizione RL}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC4.2.2;
+	\item \textbf{Titolo}: selezione del modello di predizione RL\glo;
+	\item \textbf{Attori primari}: utente;
+	\item \textbf{Attori secondari}: Grafana\glo;
+	\item \textbf{Descrizione}: l'utente seleziona RL\glosp come modello di predizione da applicare durante l'addestramento;
+	\item \textbf{Precondizioni}: il file JSON è stato inserito correttamente;
+	\item \textbf{Postcondizioni}: l'utente ha selezionato correttamente RL\glosp come modello di predizione da applicare;
+	\item \textbf{Scenario principale}: l'utente seleziona un modello di predizione per eseguire l'addestramento.
 \end{itemize}
 
 \subsubsection{UC4.3 - Avvio dell'addestramento}
@@ -92,7 +91,19 @@
     \item \textbf{Scenario principale}: l'utente avvia l'addestramento.
 \end{itemize}
 
-\paragraph{UC4.4 - Visualizzazione del messaggio di conferma}
+\paragraph{UC4.4 - Arresto dell'addestramento}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC1.4;
+	\item \textbf{Titolo}: arresto dell'addestramento;
+	\item \textbf{Attori primari}: utente;
+	\item \textbf{Attori secondari}: Grafana\glo;
+	\item \textbf{Descrizione}: l'utente arresta l'addestramento prima della sua normale conclusione;
+	\item \textbf{Precondizioni}: l'addestramento è stato avviato con successo;
+	\item \textbf{Postcondizioni}: l'addestramento è stato fermato con successo;
+	\item \textbf{Scenario principale}: l'utente visualizza un messaggio di conferma che l'addestramento è stato concluso.
+\end{itemize}
+
+\paragraph{UC4.6 - Visualizzazione del messaggio di conferma}
 \begin{itemize}
 	\item \textbf{Codice identificativo}: UC4.4;
 	\item \textbf{Titolo}: visualizzazione del messaggio di conferma;
@@ -102,7 +113,6 @@
 	\item \textbf{Postcondizioni}: l'utente ha visualizzato un messaggio di conferma che l'addestramento è stato eseguito correttamente;
 	\item \textbf{Scenario principale}: l'utente visualizza un messaggio di conferma che l'addestramento è stato eseguito correttamente.
 \end{itemize}
-
 
 \paragraph{UC4.5 - Ricezione del file JSON}
 \begin{itemize}

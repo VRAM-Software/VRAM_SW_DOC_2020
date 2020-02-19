@@ -26,6 +26,7 @@
 	\item \textbf{Scenari alternativi}:
 		\begin{enumerate}
 			\item arresto dell'addestramento (UC1.4).
+		\end{enumerate}
 	\item \textbf{Estensioni}:
 	\begin{itemize}
 		\item se il caricamento del file JSON non è avvenuto con successo viene visualizzato un messaggio di errore (UC3).
@@ -51,31 +52,6 @@
 			\item caricamento del file JSON (UC1.1.2).
 		\end{enumerate}
 \end{itemize}
-
-\paragraph{UC1.1.1 - Selezione del file JSON}
-\begin{itemize}
-	\item \textbf{Codice identificativo}: UC1.1.1;
-	\item \textbf{Titolo}: selezione del file JSON;
-	\item \textbf{Attori primari}: utente;
-	\item \textbf{Attori secondari}: Grafana\glo;
-	\item \textbf{Descrizione}: l'utente seleziona il file JSON da inserire nel sistema;
-	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glo;
-	\item \textbf{Postcondizioni}: il file JSON è stato selezionato correttamente;
-	\item \textbf{Scenario principale}: l'utente seleziona il file JSON.
-\end{itemize}
-
-\paragraph{UC1.1.2 - Caricamento del file JSON}
-\begin{itemize}
-	\item \textbf{Codice identificativo}: UC1.1.2;
-	\item \textbf{Titolo}: caricamento del file JSON;
-	\item \textbf{Attori primari}: utente;
-	\item \textbf{Attori secondari}: Grafana\glo;
-	\item \textbf{Descrizione}: l'utente carica il file JSON selezionato;
-	\item \textbf{Precondizioni}: l'utente autenticato ha selezionato il file JSON da caricare;
-	\item \textbf{Postcondizioni}: il file JSON è stato caricato correttamente;
-	\item \textbf{Scenario principale}: l'utente carica del file JSON.
-\end{itemize}
-
 \subsubsection{UC1.2 - Selezione del modello di predizione su cui applicare l'addestramento}
 \begin{itemize}
 	\item \textbf{Codice identificativo}: UC1.2;
@@ -85,6 +61,28 @@
 	\item \textbf{Descrizione}: l'utente seleziona quale modello di predizione applicare durante l'addestramento;
 	\item \textbf{Precondizioni}: il file JSON è stato inserito correttamente;
 	\item \textbf{Postcondizioni}: l'utente ha selezionato correttamente il modello di predizione;
+	\item \textbf{Scenario principale}: l'utente seleziona un modello di predizione per eseguire l'addestramento.
+\end{itemize}
+\subsubsection{UC1.2.1 - Selezione del modello di predizione SVM}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC1.2.1;
+	\item \textbf{Titolo}: selezione del modello di predizione SVM\glo;
+	\item \textbf{Attori primari}: utente;
+	\item \textbf{Attori secondari}: Grafana\glo;
+	\item \textbf{Descrizione}: l'utente seleziona SVM\glosp come modello di predizione da applicare durante l'addestramento;
+	\item \textbf{Precondizioni}: il file JSON è stato inserito correttamente;
+	\item \textbf{Postcondizioni}: l'utente ha selezionato correttamente SVM\glosp come modello di predizione da applicare;
+	\item \textbf{Scenario principale}: l'utente seleziona un modello di predizione per eseguire l'addestramento.
+\end{itemize}
+\subsubsection{UC1.2.2 - Selezione del modello di predizione RL}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC1.2.2;
+	\item \textbf{Titolo}: selezione del modello di predizione RL\glo;
+	\item \textbf{Attori primari}: utente;
+	\item \textbf{Attori secondari}: Grafana\glo;
+	\item \textbf{Descrizione}: l'utente seleziona RL\glosp come modello di predizione da applicare durante l'addestramento;
+	\item \textbf{Precondizioni}: il file JSON è stato inserito correttamente;
+	\item \textbf{Postcondizioni}: l'utente ha selezionato correttamente RL\glosp come modello di predizione da applicare;
 	\item \textbf{Scenario principale}: l'utente seleziona un modello di predizione per eseguire l'addestramento.
 \end{itemize}
 
@@ -106,7 +104,7 @@
 	\item \textbf{Titolo}: arresto dell'addestramento;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
-	\item \textbf{Descrizione}: l'addestramento è stato fermato dall'utente prima del suo completamento;
+	\item \textbf{Descrizione}: l'utente arresta l'addestramento prima della sua normale conclusione;
 	\item \textbf{Precondizioni}: l'addestramento è stato avviato con successo;
 	\item \textbf{Postcondizioni}: l'addestramento è stato fermato con successo;
 	\item \textbf{Scenario principale}: l'utente visualizza un messaggio di conferma che l'addestramento è stato concluso.

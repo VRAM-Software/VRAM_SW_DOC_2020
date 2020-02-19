@@ -13,7 +13,7 @@
 	\item \textbf{Titolo}: definizione di un alert\glo;
 	\item \textbf{Attore primario}: utente;
 	\item \textbf{Attore secondario}: Grafana\glo;
-	\item \textbf{Descrizione}: questo caso d'uso\glosp descrive la funzionalità, offerta da Grafana\glo, di definire alert\glosp sui dati che vengono monitorati;
+	\item \textbf{Descrizione}: l'utente definisce un alert\glosp che rappresenta l'effetto del superamento di una soglia;
 	\item \textbf{Precondizione}: l'utente è autenticato nel sistema software Grafana\glosp ed è presente una istanza di Grafana\glosp cloud o locale su cui è stato aggiunto un pannello grafico che monitora una serie di dati;
 	\item \textbf{Postcondizione}: viene inserito e definito con successo un alert\glosp nel pannello grafico scelto;
 	\item \textbf{Scenario principale}: 
@@ -22,7 +22,6 @@
 		\item definizione delle condizioni dell'alert\glosp (UC13.3);
 		\item definizione dei casi speciali dell'alert\glosp (UC13.4).
 	\end{enumerate}
-
 	\item \textbf{Estensioni}:	
 	\begin{enumerate}
 		\item visualizzazione del messaggio di errore causato da input non valido (UC13).
@@ -35,10 +34,10 @@
 	\item \textbf{Titolo}: definizione della regola dell'alert\glo;
 	\item \textbf{Attore primario}: utente;
 	\item \textbf{Attore secondario}: Grafana\glo;
-	\item \textbf{Descrizione}: dopo aver aggiunto un alert\glosp ad un pannello grafico l'utente ha la possibilità di definire la regola principale di funzionamento dell'alert\glosp che comprende: la scelta del nome, un valore che indica l'intervallo di tempo tra i controlli sui dati e un valore che indica per quanto tempo continuare il controllo;
-	\item \textbf{Precondizione}: l'utente ha aggiunto un alert\glosp al pannello grafico;
-	\item \textbf{Postcondizione}: l'utente tramite le funzioni offerte da Grafana\glosp ha definito la regola dell'alert\glosp precedentemente aggiunto;
-	\item \textbf{Scenario principale}: l'utente definisce le regole di funzionamento dell'alert\glosp appena inserito, usando le funzioni previste da Grafana\glosp ed inserendo nome e tempi di interrogazione.
+	\item \textbf{Descrizione}: l'utente definisce la regola principale di funzionamento dell'alert\glosp che comprende: la scelta del nome, un valore che indica l'intervallo di tempo tra i controlli sui dati e un valore che indica per quanto tempo continuare il controllo;
+	\item \textbf{Precondizione}: l'utente è autenticato nel sistema software Grafana\glosp ed è presente una istanza di Grafana\glosp cloud o locale su cui è stato aggiunto un pannello grafico che monitora una serie di dati;
+	\item \textbf{Postcondizione}: l'utente ha definito la regola di funzionamento dell'alert\glo;
+	\item \textbf{Scenario principale}: l'utente definisce le regole di funzionamento dell'alert\glo, usando le funzioni previste da Grafana\glosp ed inserendo nome e tempi di interrogazione.
 \end{itemize}
 
 \subsubsection{UC13.3 - Definizione delle condizioni di un alert}
@@ -47,10 +46,10 @@
 	\item \textbf{Titolo}: definizione delle condizioni dell'alert\glo;
 	\item \textbf{Attore primario}: utente;
 	\item \textbf{Attore secondario}: Grafana\glo;
-	\item \textbf{Descrizione}: dopo aver aggiunto un alert\glosp ad un pannello grafico l'utente ha la possibilità di definire le sue condizioni di funzionamento, cioè i limiti che, se superati, portano alla visualizzazione dei dati oltre la soglia prestabilita, nel pannello grafico;
-	\item \textbf{Precondizione}: l'utente ha aggiunto un alert\glosp al pannello grafico;
-	\item \textbf{Postcondizione}: l'utente tramite le funzioni offerte da Grafana\glosp ha definito una o più condizioni dell'alert\glosp precedentemente aggiunto;
-	\item \textbf{Scenario principale}: l'utente definisce le condizioni di funzionamento dell'alert\glosp appena inserito, usando le funzioni previste da Grafana\glosp e selezionando la funzione di aggregazione dati ed il valore soglia che attiva l'allarme.
+	\item \textbf{Descrizione}: l'utente definisce le condizioni di funzionamento dell'alert\glo, cioè i limiti che, se superati, portano all'evidenziazione dei dati oltre la soglia prestabilita, nel pannello grafico;
+	\item \textbf{Precondizione}: l'utente è autenticato nel sistema software Grafana\glosp ed è presente una istanza di Grafana\glosp cloud o locale su cui è stato aggiunto un pannello grafico che monitora una serie di dati;
+	\item \textbf{Postcondizione}: l'utente tramite le funzioni offerte da Grafana\glosp ha definito una o più condizioni dell'alert\glo;
+	\item \textbf{Scenario principale}: l'utente definisce le condizioni di funzionamento dell'alert\glo, usando le funzioni previste da Grafana\glosp e selezionando la funzione di aggregazione dati ed il valore soglia che attiva l'allarme.
 \end{itemize}
 
 \subsubsection{UC13.4 - Definizione dei casi speciali di un alert}
@@ -59,8 +58,8 @@
 	\item \textbf{Titolo}: definizione dei casi speciali dell'alert\glo;
 	\item \textbf{Attore primario}: utente;
 	\item \textbf{Attore secondario}: Grafana\glo;
-	\item \textbf{Descrizione}: dopo aver aggiunto un alert\glosp ad un pannello grafico l'utente ha la possibilità di definire il suo comportamento al verificarsi di casi particolari, come nel caso in cui non ci sono dati o sono tutti nulli, oppure nel caso in cui la richiesta va in timeout o c'è un errore di esecuzione;
-	\item \textbf{Precondizione}: l'utente ha aggiunto un alert\glosp al pannello grafico;
-	\item \textbf{Postcondizione}: l'utente, tramite le funzioni offerte da Grafana\glosp, ha definito uno o più comportamenti speciali dell'alert\glosp precedentemente aggiunto;
+	\item \textbf{Descrizione}: l'utente definisce il comportamento dell'alert\glosp al verificarsi di casi particolari, come nel caso in cui non ci siano dati, siano tutti nulli, la richiesta va in timeout o c'è un errore di esecuzione;
+	\item \textbf{Precondizione}: l'utente è autenticato nel sistema software Grafana\glosp ed è presente una istanza di Grafana\glosp cloud o locale su cui è stato aggiunto un pannello grafico che monitora una serie di dati;
+	\item \textbf{Postcondizione}: l'utente, tramite le funzioni offerte da Grafana\glosp, ha definito uno o più comportamenti speciali dell'alert\glo;
 	\item \textbf{Scenario principale}: l'utente definisce i comportamenti speciali dell'alert\glosp nei casi particolari come assenza di dati o errori di esecuzione. Per farlo utilizza le funzioni previste da Grafana\glosp selezionando i comportamenti desiderati.
 \end{itemize} 
