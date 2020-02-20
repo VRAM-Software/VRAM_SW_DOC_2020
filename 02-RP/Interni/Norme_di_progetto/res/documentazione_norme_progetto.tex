@@ -30,10 +30,13 @@
                 Per la produzione di documenti consistenti e coerenti tra loro il gruppo ha deciso di creare un template \LaTeX \xspace che permette, al momento della stesura, di concentrarsi unicamente sul contenuto e di non impegnare troppo tempo nella strutturazione della pagina. Il template è formato da
                 più parti, tra cui:
                 \begin{itemize}
-                    \item un file per la corretta formattazione della prima pagina;
-                    \item un file contenente i pacchetti \LaTeX \xspace utilizzati per una migliore rappresentazione dei contenuti;
-                    \item un file per modificare i comandi personalizzati, i quali garantiscono una maggiore modularità del template;
-                    \item due file per la gestione delle tabelle.
+                    \item \verb|frontmatter.tex|: file per la corretta formattazione della prima pagina, contiene anche dei comandi personalizzati per velocizzare l'adattamento del template alla rotazione dei ruoli;
+                    \item \verb|package.tex|: file contenente i pacchetti \LaTeX \xspace utilizzati per migliorare la rappresentazione dei contenuti;
+                    \item \verb|config.tex|: file per la configurazione dei pacchetti inseriti in \verb|package.tex|;
+                    \item \verb|metadata.tex|: file per modificare i comandi personalizzati su \verb|frontmatter.tex|, i quali garantiscono una maggiore modularità del template;
+                    \item \verb|decision_table.tex|: file per la gestione del riepilogo tracciamenti relativo ai verbali;
+                    \item \verb|log_table.tex|: file per la gestione del registro delle modifiche;
+                    \item \verb|main.tex|: file, su cui si invoca la compilazione, che unisce le parti sopracitate con il documento vero e proprio.
                 \end{itemize}
             \subparagraph{Prima pagina}\mbox{}\\ [1mm]
                 Il frontespizio è strutturato in questo modo:
@@ -66,7 +69,7 @@
                     \item breve descrizione della modifica effettuata;
                 \end{itemize}
             \subparagraph{Indice}\mbox{}\\ [1mm]
-                L'indice riassume in modo schematico i contenuti del documento mostrando la loro suddivisione in sezioni, sottosezioni e paragrafi.
+                L'indice riassume in modo schematico i contenuti del documento mostrando la loro suddivisione in sezioni, sottosezioni, paragrafi e sottoparagrafi.
                 È presente all'inizio di ogni elaborato dopo il registro delle modifiche. I suoi elementi sono cliccabili e rimandano alla pagina
                 corrispondente. In alcuni documenti viene corredato di due liste:
                 \begin{itemize}
@@ -77,23 +80,36 @@
             \subparagraph{Contenuto}\mbox{}\\ [1mm]
                 Il corpo principale del documento è così strutturato:
                 \begin{itemize}
-                    \item intestazione in alto con logo del gruppo riadattato a sinistra e nome del documento a destra;
+                    \item intestazione in alto con logo del gruppo riadattato a sinistra e nome del documento con relativa versione a destra;
                     \item una riga divisoria;
                     \item il contenuto della pagina formattato con una dimensione di 12 punti e la visualizzazione in A4 formato articolo
                           (\verb|\documentclass{article}|);
                     \item una riga divisoria opzionale in caso di appunti;
                     \item eventuali note sul testo riportate con un numero progressivo a esponente;
                     \item una riga divisoria;
-                    \item il contenuto a piè di pagina con a destra il numero progressivo della pagina visualizzata sul totale (nell'indice invece dei numeri
-                          arabi vengono utilizzati quelli romani).
+                    \item il contenuto a piè di pagina con a destra il numero progressivo della pagina visualizzata sul totale.
+                \end{itemize}
+            \subparagraph{Verbali}\mbox{}\\ [1mm]
+                La struttura è schematica e fissa sarà quindi di più facile consultazione e uguale per tutti i verbali sia interni che esterni. Il documento è quindi composto dalle seguenti sezioni e sottosezioni:
+                \begin{itemize}
+                    \item \textbf{Informazioni generali}
+                    \begin{itemize}
+                        \item \textbf{Informazioni incontro}: contiene le informazioni riguardanti data, luogo, tempistiche e partecipanti all'incontro;
+                        \item \textbf{Argomenti trattati}: contiene, in modo sintentico, un elenco numerato dei temi trattati durante l'incontro.
+                    \end{itemize}
+                    \item \textbf{Verbale}
+                    \begin{itemize}
+                        \item \textbf{Punto X}: spiega, in maniera più dettagliata, gli argomenti solo accennati nella sottosezione precedente; X, in questo caso, assumerà un valore numerico intero corrispondente al numero dell'elemento dell'elenco della sottosezione "Argomenti trattati" che si sta analizzando.
+                    \end{itemize}
                 \end{itemize}
         \paragraph{Norme tipografiche}
                 \subparagraph{Nomi dei file}\mbox{}\\ [1mm]
                     Per organizzare i file in modo più ordinato e corretto il gruppo ha scelto di seguire la pratica dello "snake\_case"\glo.
                     Tale prassi, nell'ambito di questo progetto\glo, è applicata seguendo tre regole:
                     \begin{itemize}
-                        \item i file con nome composto da più parole useranno il carattere underscore come separatore;
+                        \item i file con nome composto da più parole useranno il carattere underscore (\_) come separatore;
                         \item i nomi dei file saranno scritti interamente in minuscolo;
+                        \item tutti i documenti saranno corredati del numero di versione, tranne per i verbali che indicheranno la data dell'incontro;
                         \item non vengono tralasciate preposizioni di alcun tipo dal nome del file.
                     \end{itemize}
                 \subparagraph{Glossario}
@@ -113,7 +129,7 @@
                 \subparagraph{Elenchi puntati}\mbox{}\\ [1mm]
                     Ogni voce dell'elenco puntato sarà preceduta da un "•" (punto elenco) per quanto riguarda il primo livello e da un "-" per il secondo.
                     Alla fine di ogni elemento, invece, si aggiunge il carattere ";" a meno che non sia l'ultimo dove va messo il segno di punteggiatura ".".
-                    Se la voce dell'elenco è del tipo termine-spiegazione/definizione il termine va in grassetto.
+                    Se la voce dell'elenco è del tipo "Termine: spiegazione/definizione" il termine va in grassetto e con la prima lettera maiuscola, altrimenti vengono utilizzate le normali regole grammaticali della lingua italiana.
                 \subparagraph{Convenzioni}\mbox{}\\ [1mm]
                     Vengono usate tre convenzioni per la data, l'orario (i quali prendono come riferimento ISO 8601) e la valuta. Le date saranno espresse nella forma: \newline \newline
                     \centerline{\textbf{YYYY-MM-DD}} \newline \newline
@@ -137,32 +153,32 @@
                         \item \textbf{XXXX}: rappresenta la parte intera della somma;
                         \item \textbf{YY}: rappresenta la parte decimale della somma.
                     \end{itemize}
+                \subparagraph{Riferimenti}\mbox{}\\ [1mm]
+                    I riferimenti, nel nostro caso, possono essere informativi o normativi. I riferimenti informativi sono delle linee guida a cui non è necessario aderire in tutto e per tutto, al contrario invece i riferimenti normativi devono essere rispettati nella loro totalità. I riferimenti possono essere le slide del corso, libri (di cui è obbligatorio citare edizione e parti prese in esame) ed in generale ogni contenuto online e non che può dare un valore aggiunto alla realizzazione del progetto\glo. Questo documento e le risorse relative al capitolato\glosp scelto (\textit{Predire in Grafana}) sono da considerarsi sempre riferimenti normativi.
+                \subparagraph{Commenti}\mbox{}\\ [1mm]
+                    \LaTeX\xspace dà la possibilità di inserire commenti all'interno del codice tramite il carattere "\%". Tali commenti possono essere usati dai componenti del gruppo per appuntare delle indicazioni riguardanti i contenuti da aggiungere o modificare in un secondo momento. È obbligatorio che queste note siano sempre provviste del carattere sopracitato e che non vengano pubblicate.
             \paragraph{Produzione}\mbox{}\\ [1mm]
-                    Il progetto\glosp prevede la stesura di documenti che si dividono in interni ed esterni a seconda dei destinatari. Questi elaborati verranno poi valutati
-                    in quattro revisioni. Tali elementi progettuali saranno elencati e spiegati di seguito con le rispettive sigle.
+                    Il progetto\glosp prevede la stesura di documenti che si dividono in interni ed esterni a seconda dei destinatari. Questi elaborati verranno poi valutati in quattro revisioni. Tali elementi progettuali saranno elencati e spiegati di seguito con le rispettive sigle e la denominazione del file in questione adottata dal gruppo (solo nel caso in cui il documento sia già attivo).
                 \subparagraph{Documenti esterni}
                     \begin{itemize}
-                        \item \textbf{Analisi dei Requisiti - AdR}: contiene la descrizione degli attori\glosp del sistema e la loro interazione con i casi d'uso\glo,
-                                                                    fornendo una visione chiara ai progettisti sul problema da trattare;
+                        \item \textbf{Analisi dei Requisiti - AdR (analisi\_dei\_requisiti\_vx.y.z)}: contiene la descrizione degli attori\glosp del sistema e la loro interazione con i casi d'uso\glo, fornendo una visione chiara ai progettisti sul problema da trattare;
                         \item \textbf{Manuale Utente - MU}: serve per guidare l'utente nell'utilizzo del software;
                         \item \textbf{Manuale Sviluppatore - MS}: ha lo scopo di spiegare a eventuali sviluppatori esterni il funzionamento
                                                                   del sistema;
-                        \item \textbf{Piano di Progetto - PdP}: dà indicazioni sulle tempistiche e i costi che il gruppo prevede d'impiegare
-                                                                per la realizzazione del progetto\glo;
-                        \item \textbf{Piano di Qualifica - PdQ}: fornisce le specifiche riguardanti il controllo qualità dei processi\glosp e dei
-                                                                 prodotti\glosp tramite delle metriche\glosp misurabili.
+                        \item \textbf{Piano di Progetto - PdP (piano\_di\_progetto\_vx.y.z)}: dà indicazioni sulle tempistiche e i costi che il gruppo prevede d'impiegare
+                                                                                           per la realizzazione del progetto\glo;
+                        \item \textbf{Piano di Qualifica - PdQ (piano\_di\_qualifica\_vx.y.z)}: fornisce le specifiche riguardanti il controllo qualità dei processi\glosp e dei prodotti\glosp tramite delle metriche\glosp misurabili.
                     \end{itemize}
                 \subparagraph{Documenti interni}
                     \begin{itemize}
-                        \item \textbf{Glossario - G}: documento dove sono riportate i termini che necessitano di spiegazione o che potrebbero causare confusione o
-                                                      fraintendimenti;
-                        \item \textbf{Norme di Progetto - NdP}: linee guida per la gestione delle attività di progetto\glo;
-                        \item \textbf{Studio di Fattibilità - SdF}: breve analisi di tutti i capitolati\glosp proposti.
+                        \item \textbf{Glossario - G (glossario\_vx.y.z)}: documento dove sono riportate i termini che necessitano di spiegazione o che potrebbero causare confusione o fraintendimenti;
+                        \item \textbf{Norme di Progetto - NdP (norme\_di\_progetto\_vx.y.z)}: linee guida per la gestione delle attività di progetto\glo;
+                        \item \textbf{Studio di Fattibilità - SdF (studio\_di\_fattibilità\_vx.y.z)}: breve analisi di tutti i capitolati\glosp proposti.
                     \end{itemize}
                 \subparagraph{Verbale}\mbox{}\\ [1mm]
                     Il verbale della riunione è un documento particolare in quanto può essere sia interno che esterno. Sarà interno quando
-                    i partecipanti saranno solo i componenti del gruppo; esterno quando saranno presenti anche referenti dell'azienda.
-                    È inoltre presente la tabella "Riepilogo dei tracciamenti" che tiene segno delle modifiche discusse e
+                    i partecipanti saranno solo i componenti del gruppo; esterno quando saranno presenti anche referenti dell'azienda. I file in questione sono denominati (seguendo le convenzioni riguardanti la nomenclatura e le date) come: "verbale\_YYYY\_MM\_DD.tex".
+                    È presente, solo in questo tipo di documenti, la tabella "Riepilogo dei tracciamenti" che tiene segno delle modifiche discusse e
                     approvate in sede d'incontro. Questo prospetto presenta una colonna con un codice nel formato: \newline \newline
                     \centerline{\textbf{V(I/E)\_X.Y}} \newline \newline
                     dove:
