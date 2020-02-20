@@ -96,7 +96,6 @@
 			Per svolgere semplici calcoli, creazione di grafici, diagrammi e tabelle si è scelto di utilizzare il software Microsoft Excel.
 			\paragraph{Microsoft Project}\mbox{}\\ [1mm]
 			Per realizzare il diagramma di Gantt necessario per la pianificazione, in particolare di tempi, risorse e analisi dei carichi di lavoro, si è scelto di utilizzare Microsoft Project.
-
 	\subsection{Sviluppo}
 		\subsubsection{Scopo}
 		Lo scopo del processo\glosp di sviluppo è svolgere e normare le attività necessarie per la realizzazione del prodotto\glosp richiesto.
@@ -230,45 +229,99 @@
 		\end{itemize}		
 		\pagebreak
 		\paragraph{Progettazione}
-		\subparagraph*{Scopo}\mbox{}\\ [1mm]
-		Lo scopo della progettazione\glosp è descrivere una soluzione soddisfacente per gli stakeholder\glo. Questa attività definisce l'architettura logica del prodotto\glosp software richiesto, a partire dall'\textit{Analisi dei Requisiti}
-		Viene quindi definita l'architettura del prodotto\glosp finale che dovrà:
-		\begin{itemize}
-			\item soddisfare i requisiti individuati nell'\textit{Analisi dei Requisiti};
-			\item essere comprensibile;
-			\item essere modulare;
-			\item definire le proprie parti con specifiche chiare e coese;
-			\item garantire robustezza al fine di riuscire a gestire errori improvvisi;
-			\item essere organizzata per facilitare cambiamenti futuri.
-		\end{itemize}
-		\subparagraph*{Descrizione}\mbox{}\\ [1mm]
-		La progettazione\glosp è composta da due sezioni:
-		\begin{itemize}
-			\item technology baseline\glo;
-			\item product baseline\glo.	
-		\end{itemize}
-		\textbf*{Technology Baseline}\mbox{}\\ [1mm]
-		Nella technology baseline\glosp si trovano:
-		\begin{itemize}
-			\item \textbf{Tecnologie utilizzate}: descrizione con l'indicazione di vantaggi e svantaggi e l'utilizzo;
-			\item \textbf{Design pattern}: descrizione del design pattern utilizzati all'interno dell'architettura. Per ciascuno di essi deve essere fornito un diagramma che ne definisce la struttura e una descrizione;
-			\item \textbf{Diagrammi UML}:
-			\begin{itemize}
-				\item \textbf{Diagrammi delle classi};
-				\item \textbf{Diagrammi dei package};
-				\item \textbf{Diagrammi di attività};
-				\item \textbf{Diagrammi di sequenza}.
-			\end{itemize}
-			\item \textbf{Tracciamento delle componenti}: riferimento di ogni requisito al componente che lo soddisfa;
-			\item \textbf{Test di integrazione}: necessari per verificare che l'unione delle parti funzioni correttamente.
-		\end{itemize}
-		\paragraph*{Product Baseline}\mbox{}\\ [1mm]
-		Nella product baseline\glosp sono presenti:
-		\begin{itemize}
-			\item \textbf{Descrizione delle classi}: descrizione degli obiettivi e delle funzionalità di ogni classe;
-			\item \textbf{Tracciamento delle classi}: riferimento di ogni requisito alla classe che lo soddisfa;
-			\item \textbf{Test di unità}: necessari per verificare il corretto funzionamento di ogni singola parte del software.
-		\end{itemize}
+\subparagraph*{Scopo}\mbox{}\\ [1mm]
+Lo scopo della progettazione\glosp è descrivere una soluzione soddisfacente per gli stakeholder\glo. Questa attività definisce l'architettura logica del prodotto\glosp software richiesto, a partire dall'\textit{Analisi dei Requisiti}. 
+Deve precedere la codifica e permette di: 
+\begin{itemize}
+	\item governare la complessità del prodotto organizzando e ripartendo i compiti implementativi;
+	\item garantire la qualità, cioè l'efficacia del prodotto;
+	\item garantire l'efficienza nella produzione attraverso l'ottimizzazione dell'uso delle risorse.
+\end{itemize}
+Viene quindi definita l'architettura del prodotto\glosp finale che dovrà possedere le seguenti qualità:
+\begin{itemize}
+	\item \textbf{Sufficienza}: deve essere in grado di soddisfare i requisiti individuati nell'\textit{Analisi dei Requisiti};
+	\item \textbf{Comprensibilità}: deve essere capita da tutti gli stakeholder\glo;
+	\item \textbf{Modularità}: deve essere suddivisa in parti chiare e distinte;
+	\item \textbf{Semplicità}: ogni parte non deve contenere niente di superfluo;
+	\item \textbf{Incapsulazione}: l'interno delle parti non deve essere visibile dall'esterno;
+	\item \textbf{Coesione}: le parti che vengono unite devono avere gli stessi obiettivi;
+	\item \textbf{Basso accoppiamento}: si devono evitare le dipendenze fra le parti;
+	\item \textbf{Robustezza}: deve essere capace di sopportare ingressi diversi dall'utente e dall'ambiente;
+	\item \textbf{Flessibilità}: deve permettere di attuare modifiche per fronteggiare i cambiamenti dei requisiti a costi contenuti; 
+	\item \textbf{Riusabilità}: possono essere impiegate parti in altre applicazioni;
+	\item \textbf{Efficienza} nell'utilizzo delle risorse;
+	\item \textbf{Affidabilità}: deve svolgere il compito per cui è stata ideata;
+	\item \textbf{Disponibilità}: il sistema deve essere interrotto per un tempo limitato o non essere interrotto durante le operazioni di manutenzione;
+	\item \textbf{Sicurezza} rispetto a malfunzionamenti e intrusioni.	
+\end{itemize}
+\paragraph*{Descrizione}\mbox{}\\ [1mm]
+La progettazione\glosp è composta da due sezioni:
+\begin{itemize}
+	\item \textbf{Technology baseline\glo}: contiene le specifiche della progettazione ad alto livello del prodotto e delle sue componenti, i diagrammi UML che la descrivono e i test di verifica;
+	\item \textbf{Product baseline\glo}: integra ciò che è stato definito nella technology baseline\glosp rendendo più dettagliata la progettazione; contiene inoltre i test di verifica.	
+\end{itemize}
+
+I progettisti devono seguire le seguenti regole per progettare un'architettura di qualità:
+\begin{itemize}
+	\item ove necessario, implementare i design pattern\glo;
+	\item evitare la creazione di package vuoti;
+	\item evitare la creazione di classi e parametri non utilizzati;
+	\item evitare la creazione di dipendenze circolari;
+	\item ove possibile, prediligere l'utilizzo di interfacce e classi astratte;
+	\item utilizzare nomi significativi per le classi e i metodi;
+	\item assegnare le visibilità strettamente necessarie seguendo il principio di information hiding.
+\end{itemize}
+
+\subparagraph*{Technology Baseline}\mbox{}\\ [1mm]
+Nella technology baseline\glosp si trovano:
+\begin{itemize}
+	\item \textbf{Tecnologie utilizzate}: descrizione con l'indicazione di vantaggi e svantaggi e l'utilizzo;
+	\item \textbf{Design pattern};
+	\item \textbf{Diagrammi UML};
+	\item \textbf{Tracciamento delle componenti}: riferimento di ogni requisito al componente che lo soddisfa;
+	\item \textbf{Test di integrazione}: necessari per verificare che l'unione delle parti funzioni correttamente.
+\end{itemize}
+\subparagraph*{Design Pattern}
+Viene fornita la descrizione dei design pattern utilizzati all'interno dell'architettura. Per ciascuno di essi deve essere presentato un diagramma che ne definisce la struttura e una descrizione.
+\subparagraph*{Diagrammi UML}
+Per rendere più chiare e complete le scelte progettuali adottate, vengono utilizzati dei diagrammi UML usando la versione 2.0 del linguaggio. Ogni diagramma deve essere seguito dalla descrizione di ciò che rappresenta.
+Vengono utilizzati i seguenti diagrammi:
+\begin{itemize}
+	\item \textbf{Diagrammi delle classi}: descrivono gli elementi del sistema e le loro interazioni;
+	\item \textbf{Diagrammi dei package}: descrivono le dipendenze tra gli oggetti raggruppati in un package;
+	\item \textbf{Diagrammi di attività}: descrivono la logica procedurale, utili per descrivere gli aspetti dinamici dei casi d'uso;
+	\item \textbf{Diagrammi di sequenza}: descrivono la collaborazione di più elementi volti all'implementazione di un dato comportamento.
+\end{itemize}
+\subparagraph*{Product Baseline}\mbox{}\\ [1mm]
+Nella product baseline\glosp sono presenti:
+\begin{itemize}
+	\item \textbf{Descrizione delle classi}: descrizione degli obiettivi e delle funzionalità di ogni classe seguendo il seguente schema:
+	\begin{itemize}
+		\item nome;
+		\item visibilità;
+		\item attributi;
+		\item metodi;
+		\item scopo e funzionalità.
+	\end{itemize}
+	\item \textbf{Tracciamento delle classi}: riferimento di ogni requisito alla classe che lo soddisfa;
+	\item \textbf{Test di unità}: necessari per verificare il corretto funzionamento di ogni singola parte del software.
+\end{itemize}
+\subparagraph{Metriche di qualità} \mbox{} \\
+Per la progettazione le metriche di qualità utilizzate sono:
+\begin{itemize}
+	\item \textbf{Accoppiamento tra le classi di oggetti (CBO)}: indica se una classe è accoppiata ad una seconda. Con accoppiamento s'intende l'utilizzo, da parte della prima classe, di metodi o variabili definiti nella seconda; 
+	\begin{itemize}
+		\item[] \textbf{Formula}: si calcola con un valore intero;
+	\end{itemize}
+	\item \textbf{Profondità della gerarchia}: indica la profondità massima della gerarchia delle classi. È limitare per mantenere un basso accoppiamento;
+	\begin{itemize}
+		\item[] \textbf{Formula}: si calcola con un valore intero.
+	\end{itemize} 	
+	\item \textbf{Numero di design pattern}: indica il numero di design pattern applicati. La presenza di design pattern può aiutare all'innalzamento della qualità del prodotto ma un uso eccessivo può comportare un'elevata complessità. Va quindi mantenuto un numero di design pattern ragionevole.
+	\begin{itemize}
+		\item[] \textbf{Formula}: si calcola con un valore intero.
+	\end{itemize} 	
+\end{itemize}
 		\paragraph{Codifica}
 		\paragraph*{Scopo}\mbox{}\\ [1mm]
 		Lo scopo di questa attività è dare una norma che definisca tutte le regole di codifica per garantire leggibilità e manutenibilità del codice.
