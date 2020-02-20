@@ -214,17 +214,12 @@
 			\item mantenere uniforme la spaziatura tra gruppi analoghi di elementi della stessa tipologia;
 			\item tutti gli attori principali sono raggruppati nella parte sinistra del diagramma mentre quelli secondari sono raggruppati nella parte destra.
 		\end{itemize}
-		\subparagraph{Metriche di qualità} %INSERIRE QUALITA DEI REQUISITI VEDI RA 8LAB
+		\subparagraph{Metriche di qualità} 
 		Le metriche di qualità utilizzate per valutare la qualità dell'analisi dei requisiti sono:
 		\begin{itemize}
-			\item \textbf{percentuale di requisiti obbligatori soddisfatti (PROS)}: indica la percentuale di requisiti obbligatori che sono stati soddisfatti. Questo valore deve essere massimizzato per garantire che i vincoli col proponente vengano rispettati;
+			\item \textbf{M01 Scostamento dei requisiti individuati}: indica la differenza in numero dei requisiti individuati in ogni periodo. Se elevato, questo valore indica che l'attività di analisi dei requisiti non è stata svolta con qualità sufficiente.
 			\begin{itemize}
-				\item[] \textbf{formula}: $\frac{requisiti \; obbligatori \; soddisfatti}{requisiti \; obbligatori \; totali}$;
-			\end{itemize} 
-			\item \textbf{percentuale di requisiti desiderabili soddisfatti (PRDS)}:
-			indica la percentuale di requisiti desiderabili che sono stati soddisfatti. Un valore elevato denota una maggior copertura delle richieste del proponente;
-			\begin{itemize}
-				\item[] \textbf{formula}: $\frac{requisiti \; desiderabili \; soddisfatti}{requisiti \; desiderabili \; totali}$.
+				\item[] \textbf{formula}: $R_{p-1}-R{p}}$ dove $R{p}$ indica il numero di requisiti individuati in un periodo e $R{p-1}$ indica il numero di requisiti individuati nel periodo precedente.
 			\end{itemize} 
 		\end{itemize}		
 		\pagebreak
@@ -309,15 +304,15 @@ Nella product baseline\glosp sono presenti:
 \subparagraph{Metriche di qualità} \mbox{} \\
 Per la progettazione le metriche di qualità utilizzate sono:
 \begin{itemize}
-	\item \textbf{Accoppiamento tra le classi di oggetti (CBO)}: indica se una classe è accoppiata ad una seconda. Con accoppiamento s'intende l'utilizzo, da parte della prima classe, di metodi o variabili definiti nella seconda; 
+	\item \textbf{M02 Accoppiamento tra le classi di oggetti (CBO)}: indica se una classe è accoppiata ad una seconda. Con accoppiamento s'intende l'utilizzo, da parte della prima classe, di metodi o variabili definiti nella seconda; 
 	\begin{itemize}
 		\item[] \textbf{Formula}: si calcola con un valore intero;
 	\end{itemize}
-	\item \textbf{Profondità della gerarchia}: indica la profondità massima della gerarchia delle classi. È limitare per mantenere un basso accoppiamento;
+	\item \textbf{M03 Profondità della gerarchia}: indica la profondità massima della gerarchia delle classi. È limitare per mantenere un basso accoppiamento;
 	\begin{itemize}
 		\item[] \textbf{Formula}: si calcola con un valore intero.
 	\end{itemize} 	
-	\item \textbf{Numero di design pattern}: indica il numero di design pattern applicati. La presenza di design pattern può aiutare all'innalzamento della qualità del prodotto ma un uso eccessivo può comportare un'elevata complessità. Va quindi mantenuto un numero di design pattern ragionevole.
+	\item \textbf{M04 Numero di design pattern}: indica il numero di design pattern applicati. La presenza di design pattern può aiutare all'innalzamento della qualità del prodotto ma un uso eccessivo può comportare un'elevata complessità. Va quindi mantenuto un numero di design pattern ragionevole.
 	\begin{itemize}
 		\item[] \textbf{Formula}: si calcola con un valore intero.
 	\end{itemize} 	
@@ -347,11 +342,15 @@ Per la progettazione le metriche di qualità utilizzate sono:
 		\subparagraph{Metriche di qualità}
 		Per la codifica le metriche di qualità sono:
 		\begin{itemize}
-			\item \textbf{livello di annidamento}: indica il livello di annidamento all'interno dei metodi. Se questo valore è alto il codice è più complesso e difficile da manutenere. Perciò è opportuno suddividere il metodo in più metodi distinti per ottenere un livello di annidamento basso;
+			\item \textbf{M05 livello di annidamento}: indica il livello di annidamento all'interno dei metodi. Se questo valore è alto il codice è più complesso e difficile da manutenere. Perciò è opportuno suddividere il metodo in più metodi distinti per ottenere un livello di annidamento basso;
 			\begin{itemize}
 				\item[] \textbf{formula}: si calcola con un valore intero;
 			\end{itemize}
-			\item \textbf{numero di parametri per metodo}: indica il numero di parametri presenti in ciascun metodo. Se il valore è elevato è molto probabile che il grado di complessità del metodo sia elevato. Perciò è opportuno limitare questo numero ed eventualmente suddividere il metodo in più metodi distinti;
+			\item \textbf{M06 numero di parametri per metodo}: indica il numero di parametri presenti in ciascun metodo. Se il valore è elevato è molto probabile che il grado di complessità del metodo sia elevato. Perciò è opportuno limitare questo numero ed eventualmente suddividere il metodo in più metodi distinti;
+			\begin{itemize}
+				\item[] \textbf{formula}: si calcola con un valore intero.
+			\end{itemize}
+			\item \textbf{M07 numero di metodi per classe}: indica il numero di metodi presenti in ciascuna classe. Se il valore è elevato è molto probabile che il grado di complessità del metodo sia elevato. Perciò è opportuno limitare questo numero in modo da avere una classe facilmente comprensibile e con uno scopo ben preciso;
 			\begin{itemize}
 				\item[] \textbf{formula}: si calcola con un valore intero.
 			\end{itemize}
