@@ -53,9 +53,14 @@
     \item \textbf{Titolo}: selezione del modello di predizione su cui applicare l'addestramento;
     \item \textbf{Attori primari}: utente;
     \item \textbf{Descrizione}: l'utente seleziona quale modello di predizione applicare durante l'addestramento;
-    \item \textbf{Precondizioni}: il file JSON è stato inserito correttamente;
+    \item \textbf{Precondizioni}: il file JSON di configurazione è stato inserito correttamente;
     \item \textbf{Postcondizioni}: il modello di predizione è stato scelto correttamente;
-    \item \textbf{Scenario principale}: l'utente seleziona un modello di predizione per eseguire l'addestramento.   
+    \item \textbf{Scenario principale}: l'utente seleziona un modello di predizione per eseguire l'addestramento tra SVM\glosp e RL\glo.
+    \item \textbf{Specializzazione}:
+    \begin{itemize}
+    	\item selezione del modello di predizione SVM\glosp (UC4.2.1);
+    	\item selezione del modello di predizione RL\glosp (UC4.2.2).
+    \end{itemize}   
 \end{itemize}
 \subsubsection{UC4.2.1 - Selezione del modello di predizione SVM}
 \begin{itemize}
@@ -64,9 +69,9 @@
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
 	\item \textbf{Descrizione}: l'utente seleziona SVM\glosp come modello di predizione da applicare durante l'addestramento;
-	\item \textbf{Precondizioni}: il file JSON è stato inserito correttamente;
+	\item \textbf{Precondizioni}: il file JSON di configurazione è stato inserito correttamente;
 	\item \textbf{Postcondizioni}: l'utente ha selezionato correttamente SVM\glosp come modello di predizione da applicare;
-	\item \textbf{Scenario principale}: l'utente seleziona un modello di predizione per eseguire l'addestramento.
+	\item \textbf{Scenario principale}: l'utente seleziona il modello di predizione SVM\glosp per eseguire l'addestramento.
 \end{itemize}
 \subsubsection{UC4.2.2 - Selezione del modello di predizione RL}
 \begin{itemize}
@@ -75,9 +80,9 @@
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
 	\item \textbf{Descrizione}: l'utente seleziona RL\glosp come modello di predizione da applicare durante l'addestramento;
-	\item \textbf{Precondizioni}: il file JSON è stato inserito correttamente;
+	\item \textbf{Precondizioni}: il file JSON di configurazione è stato inserito correttamente;
 	\item \textbf{Postcondizioni}: l'utente ha selezionato correttamente RL\glosp come modello di predizione da applicare;
-	\item \textbf{Scenario principale}: l'utente seleziona un modello di predizione per eseguire l'addestramento.
+	\item \textbf{Scenario principale}: l'utente seleziona il modello di predizione RL\glosp per eseguire l'addestramento.
 \end{itemize}
 
 \subsubsection{UC4.3 - Avvio dell'addestramento}
@@ -93,19 +98,19 @@
 
 \paragraph{UC4.4 - Arresto dell'addestramento}
 \begin{itemize}
-	\item \textbf{Codice identificativo}: UC1.4;
+	\item \textbf{Codice identificativo}: UC4.4;
 	\item \textbf{Titolo}: arresto dell'addestramento;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
 	\item \textbf{Descrizione}: l'utente arresta l'addestramento prima della sua normale conclusione;
 	\item \textbf{Precondizioni}: l'addestramento è stato avviato con successo;
 	\item \textbf{Postcondizioni}: l'addestramento è stato fermato con successo;
-	\item \textbf{Scenario principale}: l'utente visualizza un messaggio di conferma che l'addestramento è stato concluso.
+	\item \textbf{Scenario principale}: l'utente arresta forzatamente l'addestramento.
 \end{itemize}
 
 \paragraph{UC4.6 - Visualizzazione del messaggio di conferma}
 \begin{itemize}
-	\item \textbf{Codice identificativo}: UC4.4;
+	\item \textbf{Codice identificativo}: UC4.6;
 	\item \textbf{Titolo}: visualizzazione del messaggio di conferma;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Descrizione}: l'utente visualizza un messaggio di conferma che l'addestramento è stato eseguito correttamente;
