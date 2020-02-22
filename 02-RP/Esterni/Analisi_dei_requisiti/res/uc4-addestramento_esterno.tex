@@ -4,10 +4,6 @@
 %\caption{Schema generale: addestramento degli algoritmi di predizione con applicativo esterno con estensioni}
 %\end{figure}
 \subsection{UC4 - Addestramento degli algoritmi di predizione con applicativo esterno}
-\begin{figure}[H]
-\includegraphics{img/UC4 - Addestramento degli algoritmi di predizione con applicativo esterno.png}
-\caption{Diagramma degli use case di UC4}
-\end{figure}
 \begin{itemize}
     \item \textbf{Codice identificativo}: UC4;
     \item \textbf{Titolo}: addestramento degli algoritmi di predizione con applicativo esterno;
@@ -17,11 +13,13 @@
     \item \textbf{Postcondizioni}: l'utente ha completato l'addestramento degli algoritmi di predizione;
     \item \textbf{Scenario principale}: 
         \begin{enumerate}
-            \item inserimento del file in formato JSON contenente i dati di testing (UC4.1);
+            \item inserimento del file in formato CSV contenente i dati di testing (UC4.1);
+            \item inserimento del file in formato JSON contenente la configurazione (UC4.7);
             \item selezione del modello di predizione su cui applicare l'addestramento (UC4.2);
             \item avvio dell'addestramento (UC4.3);
-            \item conclusione dell'addestramento (UC4.4);
-            \item ricezione del file JSON (UC4.5). 
+            \item arresto dell'addestramento (UC4.4);
+            \item ricezione del file JSON (UC4.5);
+            \item visualizzazione del messaggio di conferma (UC4.6). 
         \end{enumerate}
     \item \textbf{Estensioni}:
     \begin{itemize}
@@ -29,23 +27,26 @@
     \end{itemize}
 \end{itemize}
 
-\subsubsection{UC4.1 - Inserimento del file in formato JSON contenente i dati di testing}
-\begin{figure}[H]
-\includegraphics{img/UC4_1_-_Inserimento_del_file_in_formato_JSON_contenente_i_dati_di_testing.png}
-\caption{Diagramma degli use case di UC4.1}
-\end{figure}
+\subsubsection{UC4.1 - Inserimento del file in formato CSV contenente i dati di testing}
 \begin{itemize}
     \item \textbf{Codice identificativo}: UC4.1;
-    \item \textbf{Titolo}: inserimento del file in formato JSON contenente i dati di testing;
+    \item \textbf{Titolo}: inserimento del file in formato CSV contenente i dati di testing;
     \item \textbf{Attori primari}: utente;
-    \item \textbf{Descrizione}: l'utente inserisce un file in formato JSON contenente i dati di testing nell'applicazione esterna;
+    \item \textbf{Descrizione}: l'utente inserisce un file in formato CSV contenente i dati di testing nell'applicazione esterna;
     \item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glo;
-    \item \textbf{Postcondizioni}: l'utente ha inserito correttamente il file JSON;
-    \item \textbf{Scenario principale}:
-		\begin{enumerate}
-			\item selezione del file JSON (UC4.1.1);
-			\item caricamento del file JSON (UC4.1.2).
-		\end{enumerate}
+    \item \textbf{Postcondizioni}: l'utente ha inserito correttamente il file in formato CSV;
+    \item \textbf{Scenario principale}: l'utente inserisce il file in formato CSV contenente i dati di testing.
+\end{itemize}
+\subsubsection{UC4.7 - Inserimento del file in formato JSON contenente la configurazione}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC4.7;
+	\item \textbf{Titolo}: inserimento del file in formato JSON contenente la configurazione;
+	\item \textbf{Attori primari}: utente;
+	\item \textbf{Attori secondari}: Grafana\glo;
+	\item \textbf{Descrizione}: l'utente inserisce nell'applicazione esterna il file in formato JSON che contiene i dati di configurazione per addestrare nuovamente l'algoritmo di predizione partendo con una configurazione precedente;
+	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glosp e sta riaddestrando l'algoritmo, nell'applicazione esterna, con la stessa tipologia di dati precedentemente addestrata;
+	\item \textbf{Postcondizioni}: il file in formato JSON contenente la configurazione è stato inserito correttamente;
+	\item \textbf{Scenario principale}: l'utente inserisce il file in formato JSON contenente la configurazione.
 \end{itemize}
 \subsubsection{UC4.2 - Selezione del modello di predizione su cui applicare l'addestramento}
 \begin{itemize}
@@ -53,34 +54,34 @@
     \item \textbf{Titolo}: selezione del modello di predizione su cui applicare l'addestramento;
     \item \textbf{Attori primari}: utente;
     \item \textbf{Descrizione}: l'utente seleziona quale modello di predizione applicare durante l'addestramento;
-    \item \textbf{Precondizioni}: il file JSON di configurazione è stato inserito correttamente;
+    \item \textbf{Precondizioni}: il file CSV contenente i dati di testing ed eventualmente il file JSON di configurazione sono stati inseriti correttamente nell'applicazione esterna;
     \item \textbf{Postcondizioni}: il modello di predizione è stato scelto correttamente;
-    \item \textbf{Scenario principale}: l'utente seleziona un modello di predizione per eseguire l'addestramento tra SVM\glosp e RL\glo.
+    \item \textbf{Scenario principale}: l'utente seleziona un modello di predizione per eseguire l'addestramento tra SVM\glosp e RL\glo;
     \item \textbf{Specializzazione}:
     \begin{itemize}
-    	\item selezione del modello di predizione SVM\glosp (UC4.2.1);
-    	\item selezione del modello di predizione RL\glosp (UC4.2.2).
+    	\item selezione del modello di predizione SVM\glosp (UC4.8);
+    	\item selezione del modello di predizione RL\glosp (UC4.9).
     \end{itemize}   
 \end{itemize}
-\subsubsection{UC4.2.1 - Selezione del modello di predizione SVM}
+\subsubsection{UC4.8 - Selezione del modello di predizione SVM}
 \begin{itemize}
-	\item \textbf{Codice identificativo}: UC4.2.1;
+	\item \textbf{Codice identificativo}: UC4.8;
 	\item \textbf{Titolo}: selezione del modello di predizione SVM\glo;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
-	\item \textbf{Descrizione}: l'utente seleziona SVM\glosp come modello di predizione da applicare durante l'addestramento;
-	\item \textbf{Precondizioni}: il file JSON di configurazione è stato inserito correttamente;
+	\item \textbf{Descrizione}: l'utente seleziona SVM\glosp come modello di predizione da applicare durante l'addestramento nell'applicazione esterna;
+	\item \textbf{Precondizioni}: il file CSV contenente i dati di testing ed eventualmente il file JSON di configurazione sono stati inseriti correttamente nell'applicazione esterna;
 	\item \textbf{Postcondizioni}: l'utente ha selezionato correttamente SVM\glosp come modello di predizione da applicare;
 	\item \textbf{Scenario principale}: l'utente seleziona il modello di predizione SVM\glosp per eseguire l'addestramento.
 \end{itemize}
-\subsubsection{UC4.2.2 - Selezione del modello di predizione RL}
+\subsubsection{UC4.9 - Selezione del modello di predizione RL}
 \begin{itemize}
-	\item \textbf{Codice identificativo}: UC4.2.2;
+	\item \textbf{Codice identificativo}: UC4.9;
 	\item \textbf{Titolo}: selezione del modello di predizione RL\glo;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
-	\item \textbf{Descrizione}: l'utente seleziona RL\glosp come modello di predizione da applicare durante l'addestramento;
-	\item \textbf{Precondizioni}: il file JSON di configurazione è stato inserito correttamente;
+	\item \textbf{Descrizione}: l'utente seleziona RL\glosp come modello di predizione da applicare durante l'addestramento nell'applicazione esterna;
+	\item \textbf{Precondizioni}: il file CSV contenente i dati di testing ed eventualmente il file JSON di configurazione sono stati inseriti correttamente nell'applicazione esterna;
 	\item \textbf{Postcondizioni}: l'utente ha selezionato correttamente RL\glosp come modello di predizione da applicare;
 	\item \textbf{Scenario principale}: l'utente seleziona il modello di predizione RL\glosp per eseguire l'addestramento.
 \end{itemize}
@@ -91,7 +92,7 @@
     \item \textbf{Titolo}: avvio dell'addestramento;
     \item \textbf{Attori primari}: utente;
     \item \textbf{Descrizione}: viene fornito all'utente un modo per avviare l'addestramento;
-    \item \textbf{Precondizioni}: il file JSON è stato inserito correttamente e il modello di predizione è stato selezionato;
+    \item \textbf{Precondizioni}: il file CSV ed eventualmente il file JSON sono stati inseriti correttamente e il modello di predizione è stato selezionato;
     \item \textbf{Postcondizioni}: l'addestramento è stato avviato con successo;
     \item \textbf{Scenario principale}: l'utente avvia l'addestramento.
 \end{itemize}
@@ -124,8 +125,8 @@
     \item \textbf{Codice identificativo}: UC4.5;
     \item \textbf{Titolo}: ricezione del file JSON;
     \item \textbf{Attori primari}: utente;
-    \item \textbf{Descrizione}: l'applicazione restituisce un file JSON con l'addestramento dei dati completato;
-    \item \textbf{Precondizioni}: l'applicazione esterna ha concluso l'addestramento con successo;
-    \item \textbf{Postcondizioni}: l'utente ha ricevuto il file JSON dei risultati dell'addestramento;
-    \item \textbf{Scenario principale}: l'utente riceve il file JSON dei risultati dell'addestramento.
+    \item \textbf{Descrizione}: l'applicazione restituisce un file JSON risultato dal completamento dell'addestramento dei dati e contenente i predittori per la predizione;
+    \item \textbf{Precondizioni}: l'applicazione esterna ha concluso l'addestramento con successo secondo il suo normale flusso di esecuzione;
+    \item \textbf{Postcondizioni}: l'utente ha ricevuto il file JSON risultato dall'addestramento e contenente i predittori;
+    \item \textbf{Scenario principale}: l'utente riceve il file JSON risultato dall'addestramento e contenente i predittori.
 \end{itemize}
