@@ -20,17 +20,23 @@
     \subsection{Argomenti trattati}
         In questo incontro con il proponente \textit{Zucchetti} il gruppo ha presentato l'approccio che intende avere nella technology baseline e ha ricevuto nel riscontro anche considerazioni generali sul progetto\glo; qui di seguito viene riportato un riassunto delle tematiche trattate:
         \begin{enumerate}
-            \item formato input e output addestramento;
+            \item formato input CSV;
             \item funzionalità aggiuntive;
             \item errori dell'utente;
-            \item definizione di uno standard per i file JSON.
+            \item definizione di uno standard per i file JSON;
+            \item definizione più precisa di UC5;
+            \item rimozione di UC11.
         \end{enumerate}
 \section{Verbale}
         \subsection{Punto 1}
-            Durante la discussione con il dottor Piccoli è emerso che è preferibile usare un file in formato CSV come input dell'addestramento, in quanto è un formato facilmente ottenibile partendo da un foglio di calcolo. In output invece verrà generato un file in formato JSON con i risultati dell'addestramento.
+            Durante la discussione con il dottor Piccoli è emerso che è preferibile avere anche la possibilità di usare un file in formato CSV come input dell'addestramento, in quanto è un formato facilmente ottenibile partendo da un foglio di calcolo.
         \subsection{Punto 2}
             Il dottor Piccoli inoltre ci ha suggerito di usare (opzionalmente e se il tempo lo permette) la tecnica del k-fold cross-validation sul campione di dati osservato. L'addestramento interno al plug-in invece ci ha consigliato di prenderlo in considerazione solo quando avremo soddisfatto tutti gli altri requisiti.
         \subsection{Punto 3}
             Ci ha poi assicurato che è compito dell'utente collegare il risultato dell'addestramento al predittore corretto e perciò non bisogna fare controlli a riguardo.
         \subsection{Punto 4}
-            Il proponente \textit{Zucchetti} ci ha successivamente detto che bisogna definire uno standard per i file JSON tale per cui i file abbiano un identificativo ed una versione.
+            Il proponente \textit{Zucchetti} ha successivamente detto che bisogna definire uno standard per i file JSON tale per cui i file abbiano un identificativo ed una versione.
+        \subsection{Punto 5}
+        	Il gruppo aveva deciso dopo la video-chiamata del 2020/02/18 con il prof. Cardin che UC5 (visualizzazione grafico di qualità delle previsioni) andava descritto in modo più specifico. Il dott. Piccoli ci ha suggerito di indicare precision, recall e $R^{2}$ per raggiungere l'obiettivo.
+        \subsection{Punto 6}
+        	Il dott. Piccoli ha fatto notare che i risultati della previsione andranno dentro a un database InfluxDB, quindi il gruppo \textit{VRAM Software} ha deciso di rimuovere UC11 (Visualizzazione dei risultati della previsione) poiché l'utente non li visualizza.
