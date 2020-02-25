@@ -1,0 +1,29 @@
+% \textbf = grassetto; \Large = font più grande
+% \rowcolors{quanti colori alternare}{colore numero riga pari}{colore numero riga dispari}: colori alternati per riga
+% \rowcolor{color}: cambia colore di una riga
+% p{larghezza colonna}: p è un tipo di colonna di testo verticalmente allineata sopra, ci sarebbe anche m che è centrata a metà ma non è precisa per questo utilizzo TBStrut; la sintassi >{\centering} indica che il contenuto della colonna dovrà essere centrato
+% \TBstrut fa parte di alcuni comandi che ho inserito in config.tex che permetto di aggiungere un po' di padding al testo
+% \\ [2mm] : questra scrittura indica che lo spazio dopo una break line deve essere di 2mm
+
+%\setcounter{secnumdepth}{0}
+%\hfill \break
+%\textbf{\Large{Diario delle modifiche}} \\
+\section{Riepilogo tracciamenti}
+\rowcolors{2}{gray!25}{gray!15}
+\begin{longtable} {
+		>{\centering}p{17mm} 
+		%>{\centering}p{19.5mm}
+		%>{\centering}p{24mm} 
+		%>{\centering}p{24mm} 
+		>{}p{120mm}}
+	\rowcolor{gray!50}
+	\textbf{Codice} & \multicolumn{1}{c}{\textbf{Decisione}} \\%\textbf{Decisione} \\ %\TBstrut \\
+	VI\_9.1 & Scelto di migliorare le descrizioni di UC13.2 e UC13.3. \TBstrut \\ [2mm]
+	VI\_9.2 & Scelta la rimozione degli schemi generali. \TBstrut \\ [2mm]
+	VI\_9.3 & Scelto lo spostamento di R1V1.2 nei requisiti di vincolo. \TBstrut \\ [2mm]
+	VI\_9.4 & Scelto lo spostamento di R1V4 nei requisiti di qualità. \TBstrut \\ [2mm]
+	VI\_9.5 & Scelta la rimozione dei sotto-casi di UC1.1. \TBstrut \\ [2mm]
+	VI\_9.6 & Scelta la rimozione  di UC1.4 e promozione di UC1.4.1 a caso d'uso a sé stante. \TBstrut \\ [2mm]
+	VI\_9.7 & Scelto di migliorare la descrizione di UC5 e UC11 e di espanderli con dei sotto-casi. \TBstrut \\ [2mm]
+	
+\end{longtable}
