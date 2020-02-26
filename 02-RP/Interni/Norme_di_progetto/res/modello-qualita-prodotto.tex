@@ -4,17 +4,17 @@ Per descrivere il modello di qualità del prodotto\glosp software il nostro grup
 	Per adeguatezza funzionale si intende la capacità di un prodotto\glosp software di fornire funzioni che soddisfano i requisiti impliciti ed espliciti, quando usati in un determinato contesto sotto specifiche condizioni. \\
 	Le metriche\glosp sono:
 	\begin{itemize}
-		\item \textbf{M21 Percentuale di requisiti obbligatori soddisfatti (PROS)}: indica la percentuale di requisiti obbligatori che sono stati soddisfatti. Questo valore deve essere massimizzato per garantire che i vincoli col proponente vengano rispettati;
+		\item \textbf{M21 Percentuale di requisiti obbligatori soddisfatti}: indica la percentuale di requisiti obbligatori che sono stati soddisfatti. Questo valore deve essere massimizzato per garantire che i vincoli col proponente vengano rispettati;
 		\begin{itemize}
 			\item[] \textbf{formula}: $\frac{requisiti \; obbligatori \; soddisfatti}{requisiti \; obbligatori \; totali}$;
 		\end{itemize} 
-		\item \textbf{M22 Percentuale di requisiti desiderabili soddisfatti (PRDS)}:
+		\item \textbf{M22 Percentuale di requisiti desiderabili soddisfatti}:
 		indica la percentuale di requisiti desiderabili che sono stati soddisfatti. Un valore elevato denota una maggior copertura delle richieste del proponente;
 		\begin{itemize}
 			\item[] \textbf{formula}: $\frac{requisiti \; desiderabili \; soddisfatti}{requisiti \; desiderabili \; totali}$.
 		\end{itemize} 
 		\item \textbf{M23 Percentuale di requisiti opzionali soddisfatti}:
-		indica la percentuale di requisiti opzionali che sono stati soddisfatti. Un valore elevato denota una maggior copertura delle richieste del proponente;
+		indica la percentuale di requisiti opzionali che sono stati soddisfatti. Un valore elevato denota una maggior copertura delle richieste non indispensabili  del proponente;
 		\begin{itemize}
 			\item[] \textbf{formula}: $\frac{requisiti \; opzionali \; soddisfatti}{requisiti \; opzionali \; totali}$.
 		\end{itemize} 
@@ -26,17 +26,17 @@ Per descrivere il modello di qualità del prodotto\glosp software il nostro grup
 	\end{itemize}
 
 	\paragraph{Affidabilità} \mbox{}\\[1mm]
-	Un prodotto\glosp software è considerato affidabile quando mantiene un livello di prestazioni costanti per un determinato intervallo di tempo sotto precise condizioni che possono variare nel tempo.\\
+	Un prodotto\glosp software è considerato affidabile quando mantiene un livello di prestazioni costante per un determinato intervallo di tempo sotto precise condizioni che possono variare nel tempo.\\
 	Le metriche\glosp sono:
 	\begin{itemize}
-		\item \textbf{M25 Densità degli errori}: indica la percentuale di errori critici messa sotto controllo; 
+		\item \textbf{M25 Densità degli errori}: indica la percentuale di errori critici rilevati; 
 		\begin{itemize}
 			\item[] \textbf{formula}: $\frac{N_{ER}}{N_{T}}\cdot100$ dove $N_{ER}$ sono gli errori rilevati e $N_T$ sono i test eseguiti.
 		\end{itemize}
 	\end{itemize}
 
 	\paragraph{Efficienza prestazionale} \mbox{}\\
-	L'efficienza prestazionale è la caratteristica relativa alle prestazioni rispetto al numero di risorse usate sotto condizioni precise. Dato che il nostro progetto si appoggia sul sistema Grafana\glosp e su algoritmi forniti dal proponente, l'efficienza prestazionale viene delegata a questi due strumenti.
+	L'efficienza prestazionale è una caratteristica che indica le prestazioni rispetto al numero di risorse utilizzate sotto condizioni precise. Dato che il nostro progetto si appoggia sul sistema Grafana\glosp e su algoritmi forniti dal proponente, l'efficienza prestazionale viene delegata a questi due strumenti.
 	%\begin{itemize}
 	%	\item \textbf{Comportamento rispetto al tempo}: la capacità del software di eseguire le funzioni in un tempo di risposta, tempo processionale e un volume di produzione che soddisfa i requisiti;
 	%	\item \textbf{Utilizzo delle risorse}: la capacità del software di eseguire le funzioni usando un numero di risorse disponibili che soddisfa i requisiti;
@@ -50,13 +50,13 @@ Per descrivere il modello di qualità del prodotto\glosp software il nostro grup
 	%\end{itemize}
 		
 	\paragraph{Sicurezza} \mbox{}\\
-	Per sicurezza in un prodotto\glosp software si intende il grado di protezione che il software ha sui dati per evitare che persone o servizi non autorizzati li ricevano.
+	Per sicurezza in un prodotto\glosp software si intende il grado di protezione che il software ha sui dati che manipola per evitare che persone o servizi non autorizzati li ricevano.
 	\begin{itemize}
-		\item \textbf{Confidenzialità}: la capacità del software di assicurare la confidenzialità dei dati alle persone che hanno l'autorizzazione di accedere a tali informazioni;
-		\item \textbf{Integrità}: la capacità del software di evitare modifiche o accessi non autorizzati;
-		\item \textbf{Non ripudio}: la capacità del software di dimostrare che eventi o azioni sono avvenuti, in modo da non ripudiarli in un secondo momento;
-		\item \textbf{Responsabilità}: la capacità del software di risalire a una sola entità a partire da una azione di una entità;
-		\item \textbf{Autenticità}: la capacità del software di provare l'identità delle risorse utilizzate.
+		\item \textbf{Confidenzialità}: capacità del software di assicurare la confidenzialità dei dati alle persone che hanno l'autorizzazione di accedere a tali informazioni;
+		\item \textbf{Integrità}: capacità del software di evitare modifiche o accessi non autorizzati;
+		\item \textbf{Non ripudio}: capacità del software di dimostrare che eventi o azioni sono avvenuti, in modo da non ripudiarli in un secondo momento;
+		\item \textbf{Responsabilità}: capacità del software di risalire a una sola entità a partire da una azione di una entità;
+		\item \textbf{Autenticità}: capacità del software di provare l'identità delle risorse utilizzate.
 	\end{itemize}
 
 	\paragraph{Manutenibilità} \mbox{}\\[1mm]
