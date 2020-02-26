@@ -7,19 +7,17 @@
     			\item \textbf{Correttezza}: grado di errori ortografici presenti nel documento.
     		\end{itemize}
 	    \subsubsection{Metriche}
-	    \textbf{Indice di Gulpease}: indica la leggibilità di un testo.
+	    \textbf{M08 Indice di Gulpease}
 	    \begin{itemize}
-	    	\item \textbf{Misurazione}: 89+$\frac{300\cdot numero \; di \; frasi-10\cdot numero \; di \; lettere}{numero \; di \; parole}$;
 	    	\item \textbf{Valore preferibile}: 60 $\le I_{G} \le$ 100;
 	    	\item \textbf{Valore accettabile}: 40 $\le I_{G} \le$ 100.
 	    \end{itemize}
-	    \textbf{Correttezza ortografica}: indica la quantità di errori ortografici nei documenti.
+	    \textbf{M09 correttezza ortografica}
 	    \begin{itemize}
-	    	\item \textbf{Misurazione}: numero intero;
 	    	\item \textbf{Valore preferibile}: 0;
 	    	\item \textbf{Valore accettabile}: 0.
 	    \end{itemize}
-    \subsection{Idoneità funzionale}
+    \subsection{Copertura funzionale}
         Il grado con cui un prodotto\glosp o un sistema fornisce funzioni che soddisfano i requisti dichiarati e impliciti nell'\textit{Analisi dei Requisiti}.
         \subsubsection{Obiettivi}
             \begin{itemize}
@@ -28,13 +26,26 @@
                 \item \textbf{Adeguatezza}: grado con cui le funzioni facilitano il compimento di attività e obiettivi specifici.
             \end{itemize}
         \subsubsection{Metriche}
-            \textbf{Copertura funzionale}: percentuale di requisiti soddisfatti su tutti i requisiti individuati durante l'analisi.
+            \textbf{M21 Percentuale di requisiti obbligatori soddisfatti (PROS)}
                 \begin{itemize}
-                    \item \textbf{Misurazione}: $C_F=(1-N_{RNS}/N_{RI})*100$ \\
-                    dove N$_{RNS}$ sono i requisiti non sviluppati e N$_{RI}$ i requisiti trovati durante l'\textit{Analisi dei Requisiti};
                     \item \textbf{Valore preferibile}: 100\%;
                     \item \textbf{Valore accettabile}: 100\%.
                 \end{itemize}
+            \textbf{M22 Percentuale di requisiti desiderabili soddisfatti (PRDS)}
+            \begin{itemize}
+            	\item \textbf{Valore preferibile}: 100\%;
+            	\item \textbf{Valore accettabile}: 85\%.
+            \end{itemize}
+        	\textbf{M23 Percentuale di requisiti opzionali soddisfatti}
+        	\begin{itemize}
+        		\item \textbf{Valore preferibile}: 100\%;
+        		\item \textbf{Valore accettabile}: \%.
+        	\end{itemize}
+        	\textbf{M24 Percentuale di test passati}
+        	\begin{itemize}
+        		\item \textbf{Valore preferibile}: \%;
+        		\item \textbf{Valore accettabile}: \%.
+        	\end{itemize}
     \subsection{Usabilità}
         Il grado con cui il prodotto\glosp o il sistema può essere usato da specifici utenti per completare particolari attività con efficacia, efficienza e soddisfazione. Nel caso del nostro prodotto\glosp ci si riferisce all'applicativo esterno adibito all'apprendimento degli algoritmi di previsione.
         \subsubsection{Obiettivi}
@@ -42,21 +53,21 @@
                 \item \textbf{Apprendibilità}: grado con cui il prodotto\glosp o il sistema può essere appreso con efficacia, efficienza e soddisfazione da uno specifico utente;
                 \item \textbf{Appropriatezza-Riconoscibilità}: grado con cui gli utenti possono riconoscere che un determinato prodotto\glosp o sistema è appropriato per i propri bisogni.
             \end{itemize}
-        \subsubsection{Metriche}
-            \textbf{Completezza della documentazione}: percentuale delle funzioni descritta nella documentazione con un dettaglio tale da consentire all’utente di utilizzarle.
-                \begin{itemize}
-                    \item \textbf{Misurazione}: $C_{DOC}=(N_{FD}/N_{FI})*100$ \\
-                    dove N$_{FD}$ sono le funzioni definite sulla documentazione e N$_{FI}$ sono le funzioni individuate nella documentazione;
-                    \item \textbf{Valore preferibile}: 100\%;
-                    \item \textbf{Valore accettabile}: 100\%.
-                \end{itemize}
-            \textbf{Completezza di descrizione}: percentuale degli scenari d’uso descritta nella documentazione effettivamente presenti nel prodotto\glosp finale.
-                \begin{itemize}
-                    \item \textbf{Misurazione}: $C_{DESC}=(N_{UCI}/N_{UCE})*100$ \\
-                    dove N$_{UCI}$ è il numero di casi d'uso\glosp individuati e N$_{UCE}$ è il numero di casi d'uso effettivi del prodotto\glo;
-                    \item \textbf{Valore preferibile}: 100\%;
-                    \item \textbf{Valore accettabile}: 100\%.
-                \end{itemize}
+        %\subsubsection{Metriche}
+         %   \textbf{Completezza della documentazione}: percentuale delle funzioni descritta nella documentazione con un dettaglio tale da consentire all’utente di utilizzarle.
+          %      \begin{itemize}
+           %         \item \textbf{Misurazione}: $C_{DOC}=(N_{FD}/N_{FI})*100$ \\
+            %        dove N$_{FD}$ sono le funzioni definite sulla documentazione e N$_{FI}$ sono le funzioni individuate nella documentazione;
+             %       \item \textbf{Valore preferibile}: 100\%;
+              %      \item \textbf{Valore accettabile}: 100\%.
+               % \end{itemize}
+            %\textbf{Completezza di descrizione}: percentuale degli scenari d’uso descritta nella documentazione effettivamente presenti nel prodotto\glosp finale.
+             %   \begin{itemize}
+               %     \item \textbf{Misurazione}: $C_{DESC}=(N_{UCI}/N_{UCE})*100$ \\
+                %    dove N$_{UCI}$ è il numero di casi d'uso\glosp individuati e N$_{UCE}$ è il numero di casi d'uso effettivi del prodotto\glo;
+                 %   \item \textbf{Valore preferibile}: 100\%;
+                  %  \item \textbf{Valore accettabile}: 100\%.
+                %\end{itemize}
     \subsection{Affidabilità}
         Il grado con cui un sistema, un prodotto\glosp o un componente esegue delle funzioni sotto delle specifiche condizioni per uno specifico periodo di tempo.
         \subsubsection{Obiettivi}
@@ -65,10 +76,8 @@
                 \item \textbf{Tolleranza agli errori}: grado con cui un sistema, un prodotto\glosp o un componente riesce ad operare anche in presenza di errori hardware o software.
             \end{itemize}
         \subsubsection{Metriche}
-            \textbf{Robustezza agli errori}: percentuale di errori critici messa sotto controllo.
+            \textbf{M25 Densità degli errori}
                 \begin{itemize}
-                    \item \textbf{Misurazione}: $R_E=N_{ER}/N_{T}*100$ \\
-                    dove N$_ER$ sono gli errori rilevati e N$_T$ sono i test eseguiti;
                     \item \textbf{Valore preferibile}: 0\%;
                     \item \textbf{Valore accettabile}: 10\%.
                 \end{itemize}
@@ -80,15 +89,13 @@
             \item \textbf{Modificabilità}: grado con cui un prodotto\glosp o un sistema può essere modificato efficacemente ed efficientemente, cioè senza introdurre difetti o degradando la qualità esistente.
         \end{itemize}
         \subsubsection{Metriche}
-            \textbf{Semplicità delle funzioni}: valore dato dal numero di parametri che ogni metodo richiede.
+            \textbf{M26 Structural fan-in}
                 \begin{itemize}
-                    \item \textbf{Misurazione}: numero di parametri nei metodi;
-                    \item \textbf{Valore preferibile}: $\leq 3$;
-                    \item \textbf{Valore accettabile}: $\leq 6$.
+                    \item \textbf{Valore preferibile}: 
+                    \item \textbf{Valore accettabile}:
                 \end{itemize}
-            \textbf{Modularità del prodotto}: facilità di aggiungere, correggere o adattare classi al prodotto\glo.
+            \textbf{M27 Structural fan-out}
                 \begin{itemize}
-                    \item \textbf{Misurazione}: numero di metodi nelle classi;
-                    \item \textbf{Valore preferibile}: $\leq 8$;
-                    \item \textbf{Valore accettabile}: $\leq 15$.
+                    \item \textbf{Valore preferibile}: 
+                    \item \textbf{Valore accettabile}: 
                 \end{itemize}
