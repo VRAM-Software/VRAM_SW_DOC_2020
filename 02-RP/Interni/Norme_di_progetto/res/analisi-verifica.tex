@@ -66,8 +66,8 @@ Il software testing è un procedimento importante per misurare la qualità di un
 \begin{itemize}
 	\item \textbf{Test di accettazione};
 	\item \textbf{Test di sistema};
-	\item \textbf{Test d'integrazione};
-	\item \textbf{Test d'unità}.
+	\item \textbf{Test di integrazione};
+	\item \textbf{Test di unità}.
 \end{itemize}
 \subparagraph*{Codifica dei test}
 Per ogni test vengono definiti il codice identificativo, la descrizione, lo stato e l'esito.
@@ -79,7 +79,7 @@ Per ogni test vengono definiti il codice identificativo, la descrizione, lo stat
 		\begin{itemize}
 			\item \textbf{TA}: test di accettazione;
 			\item \textbf{TS}: test di sistema;
-			\item \textbf{TI}: test d'integrazione;
+			\item \textbf{TI}: test di integrazione;
 			\item \textbf{TU}: test di unità.
 		\end{itemize}
 		\item \textbf{codice\_padre}: numero che identifica univocamente il test;
@@ -99,11 +99,11 @@ Per ogni test vengono definiti il codice identificativo, la descrizione, lo stat
 	\end{itemize}
 \end{itemize}
 
-\subparagraph*{Test d'unità} \mbox{}\\ [1mm]
-I test d'unità si definiscono tali perché controllano il corretto funzionamento di una sezione di codice specifica chiamata unità. Usualmente questi tipi di test vengono eseguiti su funzioni o, se si parla di programmazione ad oggetti, su un metodo di una classe, quindi su una parte minimale del codice. Il loro scopo è verificare che gli input forniti diano gli output attesi. È buona norma rendere questi test automatici per minimizzare il tempo di esecuzione senza richiedere l'interazione dello sviluppatore. Questo tipo di test viene scritto dal programmatore che sviluppa le singole unità mediate l'ausilio di driver\glosp e stub\glo, per verificare l'assenza di errori e documentare il funzionamento dell'unità.
+\subparagraph*{Test di unità} \mbox{}\\ [1mm]
+I test di unità si definiscono tali perché controllano il corretto funzionamento di una sezione di codice specifica chiamata unità. Usualmente questi tipi di test vengono eseguiti su funzioni o, se si parla di programmazione ad oggetti, su un metodo di una classe, quindi su una parte minimale del codice. Il loro scopo è verificare che gli input forniti diano gli output attesi. È buona norma rendere questi test automatici per minimizzare il tempo di esecuzione senza richiedere l'interazione dello sviluppatore. Questo tipo di test viene scritto dal programmatore che sviluppa le singole unità mediante l'ausilio di driver\glosp e stub\glo, per verificare l'assenza di errori e documentare il funzionamento dell'unità.
 
-\subparagraph*{Test d'integrazione} \mbox{}\\ [1mm]
-Successivamente ai test d'unità, si assemblano gruppi di unità progressivamente che formeranno degli agglomerati sempre più grandi. Questo tipo di test, infatti, si concentra nella ricerca di anomalie ed errori tra le interfacce dei singoli componenti. Una volta concluso un singolo test, si otterrà un agglomerato che costituirà una nuova unità da cui partire per ulteriori test d'integrazione. Per svolgere questo test si è scelto un approccio iterativo.
+\subparagraph*{Test di integrazione} \mbox{}\\ [1mm]
+Successivamente ai test di unità, si assemblano gruppi di unità progressivamente che formeranno degli agglomerati sempre più grandi. Questo tipo di test, infatti, si concentra nella ricerca di anomalie ed errori tra le interfacce dei singoli componenti. Una volta concluso un singolo test, si otterrà un agglomerato che costituirà una nuova unità da cui partire per ulteriori test di integrazione. Per svolgere questo test si è scelto un approccio iterativo.
 
 \subparagraph*{Test di sistema} \mbox{}\\ [1mm]
 I test di sistema controllano il funzionamento corretto del prodotto\glosp e verificano che il sistema soddisfi tutti i requisiti definiti nel documento: \textit{Analisi dei Requisiti}. Con l'esecuzione di questi test si riesce a definire e documentare tutte le funzionalità del sistema e possono individuare criticità come il problema del black-box\glo. Il gruppo svolgerà questo test quando si raggiungerà uno stato di rilascio per il prodotto\glosp sviluppato.
