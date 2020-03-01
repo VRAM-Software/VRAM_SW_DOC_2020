@@ -260,7 +260,6 @@ La progettazione\glosp è composta da due sezioni:
 	\item \textbf{Technology baseline\glo}: contiene le specifiche della progettazione ad alto livello del prodotto e delle sue componenti, i diagrammi UML che la descrivono e i test di verifica;
 	\item \textbf{Product baseline\glo}: integra ciò che è stato definito nella technology baseline\glosp rendendo più dettagliata la progettazione; contiene inoltre i test di verifica.	
 \end{itemize}
-
 I progettisti devono seguire le seguenti regole per progettare un'architettura di qualità:
 \begin{itemize}
 	\item ove necessario, implementare i design pattern\glo;
@@ -273,39 +272,44 @@ I progettisti devono seguire le seguenti regole per progettare un'architettura d
 \end{itemize}
 
 \subparagraph*{Technology Baseline}\mbox{}\\ [1mm]
-Nella technology baseline\glosp si trovano:
+Nella technology baseline\glosp sono presenti:
 \begin{itemize}
-	\item \textbf{Tecnologie utilizzate}: descrizione con l'indicazione di vantaggi e svantaggi e l'utilizzo;
-	\item \textbf{Design pattern};
-	\item \textbf{Diagrammi UML};
+	\item \textbf{Tecnologie utilizzate}: descrizione di tutte le tecnologie che vengono utilizzate per l'implementazione del prodotto\glosp con l'indicazione di vantaggi e svantaggi;
+	\item \textbf{Proof of Concept (PoC)}: implementazione di un PoC\glosp che utilizzi e dimostri la fattibilità delle tecnologie che utilizziamo per implementare il prodotto\glosp software;
 	\item \textbf{Tracciamento delle componenti}: riferimento di ogni requisito al componente che lo soddisfa;
-	\item \textbf{Test di integrazione}: necessari per verificare che l'unione delle parti funzioni correttamente.
 \end{itemize}
-\subparagraph*{Design Pattern}
-Viene fornita la descrizione dei design pattern utilizzati all'interno dell'architettura. Per ciascuno di essi deve essere presentato un diagramma che ne definisce la struttura e una descrizione.
-\subparagraph*{Diagrammi UML}
-Per rendere più chiare e complete le scelte progettuali adottate, vengono utilizzati dei diagrammi UML usando la versione 2.0 del linguaggio. Ogni diagramma deve essere seguito dalla descrizione di ciò che rappresenta.
-Vengono utilizzati i seguenti diagrammi:
+\subparagraph*{Proof of Concept}
+Abbiamo deciso di implementare un PoC\glosp in modo incrementale. Perciò, in accordo con il proponente, vengono selezionati degli incrementi da sviluppare. Questa decisione viene presa con l'intenzione di esplorare tutte le tecnologie che devono essere utilizzate nel prodotto\glosp finale. Queste tecnologie sono:
 \begin{itemize}
-	\item \textbf{Diagrammi delle classi}: descrivono gli elementi del sistema e le loro interazioni;
-	\item \textbf{Diagrammi dei package}: descrivono le dipendenze tra gli oggetti raggruppati in un package;
-	\item \textbf{Diagrammi di attività}: descrivono la logica procedurale, utili per descrivere gli aspetti dinamici dei casi d'uso;
-	\item \textbf{Diagrammi di sequenza}: descrivono la collaborazione di più elementi volti all'implementazione di un dato comportamento.
+	\item %DA DEFINIRE 
+	\item
 \end{itemize}
 \subparagraph*{Product Baseline}\mbox{}\\ [1mm]
 Nella product baseline\glosp sono presenti:
 \begin{itemize}
-	\item \textbf{Descrizione delle classi}: descrizione degli obiettivi e delle funzionalità di ogni classe seguendo il seguente schema:
+	\item \textbf{Design pattern}: viene fornita la descrizione dei design pattern utilizzati all'interno dell'architettura. Per ciascuno di essi deve essere presentato un diagramma che ne definisce la struttura e una descrizione;
+	\item \textbf{Diagrammi UML}: per rendere più chiare e complete le scelte progettuali adottate, vengono utilizzati dei diagrammi UML usando la versione 2.0 del linguaggio. Ogni diagramma deve essere seguito dalla descrizione di ciò che rappresenta.
+	\subparagraph*{Diagrammi UML}
 	\begin{itemize}
-		\item nome;
-		\item visibilità;
-		\item attributi;
-		\item metodi;
-		\item scopo e funzionalità.
+		\item \textbf{Diagrammi delle classi}: descrivono gli elementi del sistema e le loro interazioni;
+		\item \textbf{Descrizione delle classi}: descrizione degli obiettivi e delle funzionalità di ogni classe seguendo il seguente schema:
+		\begin{itemize}
+			\item nome;
+			\item visibilità;
+			\item attributi;
+			\item metodi;
+			\item scopo e funzionalità.
+		\end{itemize}
+		\item \textbf{Tracciamento delle classi}: riferimento di ogni requisito alla classe che lo soddisfa;
+		\item \textbf{Diagrammi dei package}: descrivono le dipendenze tra gli oggetti raggruppati in un package;
+		\item \textbf{Diagrammi di attività}: descrivono la logica procedurale, utili per descrivere gli aspetti dinamici dei casi d'uso;
+		\item \textbf{Diagrammi di sequenza}: descrivono la collaborazione di più elementi volti all'implementazione di un dato comportamento;
+		\item \textbf{Test di sistema}: test necessari per verificare il corretto funzionamento dell'intero prodotto\glosp software;
+		\item \textbf{Test di integrazione}: test necessari per verificare che l'unione delle parti funzioni correttamente;
+		\item \textbf{Test di unità}: necessari per verificare il corretto funzionamento di ogni singola parte del software.
 	\end{itemize}
-	\item \textbf{Tracciamento delle classi}: riferimento di ogni requisito alla classe che lo soddisfa;
-	\item \textbf{Test di unità}: necessari per verificare il corretto funzionamento di ogni singola parte del software.
 \end{itemize}
+
 \subparagraph{Metriche di qualità} \mbox{} \\
 Per la progettazione le metriche di qualità utilizzate sono:
 \begin{itemize}
