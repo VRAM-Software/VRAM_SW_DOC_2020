@@ -14,11 +14,13 @@
     \item \textbf{Scenario principale}: 
         \begin{enumerate}
             \item inserimento del file in formato CSV contenente i dati per l'addestramento (UC4.1);
+            \item visualizzazione grafico dei dati per l'addestramento (UC4.6);
             \item inserimento del file in formato JSON contenente i dati di una configurazione precedente (UC4.7);
+            \item inserimento delle note per l'utente (UC4.8);
             \item selezione del modello di predizione su cui eseguire l'addestramento (UC4.2);
             \item avvio dell'addestramento (UC4.3);
             \item ricezione del file JSON contenente i predittori (UC4.5);
-            \item visualizzazione del messaggio di conferma della conclusione dell'addestramento (UC4.6). 
+            \item visualizzazione del messaggio di conferma della conclusione dell'addestramento (UC4.9). 
         \end{enumerate}
     \item \textbf{Scenari alternativi}:
     \begin{enumerate}
@@ -41,6 +43,16 @@
     \item \textbf{Postcondizioni}: l'utente ha inserito correttamente il file in formato CSV contenente i dati per l'addestramento;
     \item \textbf{Scenario principale}: l'utente inserisce il file in formato CSV contenente i dati per l'addestramento.
 \end{itemize}
+\subsubsection{UC4.6 - Visualizzazione grafico dei dati per l'addestramento}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC4.6;
+	\item \textbf{Titolo}: visualizzazione grafico dei dati per l'addestramento;
+	\item \textbf{Attori primari}: utente;
+	\item \textbf{Descrizione}: l'utente visualizza il grafico a dispersione rappresentante i dati che ha inserito per l'addestramento;
+	\item \textbf{Precondizioni}: il file CSV contenente i dati per l'addestramento è stato inserito correttamente nell'applicazione esterna;
+	\item \textbf{Postcondizioni}: l'utente ha visualizzato il grafico a dispersione rappresentante i dati che ha inserito;
+	\item \textbf{Scenario principale}: l'utente visualizza il grafico a dispersione rappresentante i dati che ha inserito.
+\end{itemize}
 \subsubsection{UC4.7 - Inserimento del file in formato JSON contenente una configurazione precedente}
 \begin{itemize}
 	\item \textbf{Codice identificativo}: UC4.7;
@@ -51,6 +63,16 @@
 	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glo;
 	\item \textbf{Postcondizioni}: il file in formato JSON contenente una configurazione precedente è stato inserito correttamente;
 	\item \textbf{Scenario principale}: l'utente inserisce il file in formato JSON contenente una configurazione precedente.
+\end{itemize}
+\subsubsection{UC4.8 - Inserimento delle note per l'utente}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC4.8;
+	\item \textbf{Titolo}: inserimento delle note per l'utente;
+	\item \textbf{Attori primari}: utente;
+	\item \textbf{Descrizione}: l'utente inserisce le note che compariranno nel file JSON risultante dall'addestramento dell'algoritmo;
+	\item \textbf{Precondizioni}: il file CSV contenente i dati per l'addestramento è stato inserito correttamente nell'applicazione esterna;
+	\item \textbf{Postcondizioni}: l'utente ha inserito correttamente le note che compariranno nel file JSON risultante dall'addestramento dell'algoritmo;
+	\item \textbf{Scenario principale}: l'utente inserisce le note che compariranno nel file JSON risultante dall'addestramento dell'algoritmo.
 \end{itemize}
 \subsubsection{UC4.2 - Selezione del modello di predizione su cui eseguire l'addestramento}
 \begin{itemize}
@@ -63,13 +85,13 @@
     \item \textbf{Scenario principale}: l'utente seleziona un modello di predizione su cui eseguire l'addestramento tra SVM\glosp e RL\glo;
     \item \textbf{Specializzazione}:
     \begin{itemize}
-    	\item selezione del modello di predizione SVM\glosp (UC4.8);
-    	\item selezione del modello di predizione RL\glosp (UC4.9).
+    	\item selezione del modello di predizione SVM\glosp (UC4.10);
+    	\item selezione del modello di predizione RL\glosp (UC4.11).
     \end{itemize}   
 \end{itemize}
-\subsubsection{UC4.8 - Selezione del modello di predizione SVM}
+\subsubsection{UC4.10 - Selezione del modello di predizione SVM}
 \begin{itemize}
-	\item \textbf{Codice identificativo}: UC4.8;
+	\item \textbf{Codice identificativo}: UC4.10;
 	\item \textbf{Titolo}: selezione del modello di predizione SVM\glo;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
@@ -78,9 +100,9 @@
 	\item \textbf{Postcondizioni}: l'utente ha selezionato SVM\glosp come modello di predizione da applicare;
 	\item \textbf{Scenario principale}: l'utente seleziona il modello di predizione SVM\glosp su cui eseguire l'addestramento.
 \end{itemize}
-\subsubsection{UC4.9 - Selezione del modello di predizione RL}
+\subsubsection{UC4.11 - Selezione del modello di predizione RL}
 \begin{itemize}
-	\item \textbf{Codice identificativo}: UC4.9;
+	\item \textbf{Codice identificativo}: UC4.11;
 	\item \textbf{Titolo}: selezione del modello di predizione RL\glo;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
@@ -113,9 +135,9 @@
 	\item \textbf{Scenario principale}: l'utente arresta forzatamente l'addestramento.
 \end{itemize}
 
-\paragraph{UC4.6 - Visualizzazione del messaggio di conferma della conclusione dell'addestramento}
+\paragraph{UC4.9 - Visualizzazione del messaggio di conferma della conclusione dell'addestramento}
 \begin{itemize}
-	\item \textbf{Codice identificativo}: UC4.6;
+	\item \textbf{Codice identificativo}: UC4.9;
 	\item \textbf{Titolo}: visualizzazione del messaggio di conferma della conclusione dell'addestramento;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Descrizione}: l'utente visualizza un messaggio di conferma che l'addestramento è stato concluso ed eseguito correttamente;
