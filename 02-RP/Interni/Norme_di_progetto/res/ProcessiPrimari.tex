@@ -399,14 +399,14 @@ var myVar = 0;
 		\item \textbf{Y}: rappresenta l'indice di versione parziale, un avanzamento di questo numero indica l'applicazione di una modifica rilevante nel codice.
 	\end{itemize}
 	Tutte le modifiche effettuate al codice vengono verificate e al raggiungimento di una versione stabile e con sufficienti modifiche rilevanti si aumenterà l'indice di versione principale e si azzererà il parziale, la prima versione stabile, ad esempio, sarà la 1.0.
-	\item \textbf{Indentazione}: i blocchi annidati devono essere indentati con una tabulazione di quattro spazi. A tal fine le IDE di tutti i componenti del gruppo dovranno essere configurate per rispettare suddette indicazioni. Segue un esempio di indentazione corretta:
+	\item \textbf{Indentazione}: i blocchi annidati devono essere indentati con una tabulazione di quattro spazi. A tal fine gli IDE di tutti i componenti del gruppo dovranno essere configurate per rispettare suddette indicazioni. Segue un esempio di indentazione corretta:
 \begin{lstlisting}
 // OK!
 function() {
 	var x = 1;
 }
 \end{lstlisting}
-	\item \textbf{Commenti}: i commenti nel codice devono essere concisi ma sufficientemente descrittivi. Essi precedono l'implementazione di metodi e classi descrivendoli brevemente la loro funzione. Sono possibili due tipi di commenti: in linea tramite l'utilizzo del doppio slash (//) o a blocco tramite la costruzione //**...*/.  È inoltre possibile usare i commenti //TODO e //FIXME che indicano rispettivamente delle sezioni di codice da fare in un secondo momento e sezioni di codice da correggere. Segue un esempio di queste pratiche:
+	\item \textbf{Commenti}: i commenti nel codice devono essere concisi ma sufficientemente descrittivi. Essi precedono l'implementazione di metodi e classi descrivendo brevemente la loro funzione. Sono possibili due tipi di commenti: in linea tramite l'utilizzo del doppio slash (//) o a blocco tramite la costruzione //**...*/.  È inoltre possibile usare i commenti //TODO e //FIXME che indicano rispettivamente delle sezioni di codice da fare in un secondo momento e sezioni di codice da correggere. Segue un esempio di queste pratiche:
 \begin{lstlisting}
 //** This is a test class.
 * OK!
@@ -486,7 +486,7 @@ Per quanto concerne i restanti aspetti riguardanti lo stile e le best practises 
 	\centering\url{https://www.sonarsource.com/products/codeanalyzers/sonarjs.html}
 	\item \textbf{SonarTS}: insieme di regole riguardanti TypeScript che, oltre alla segnalazione di bug, indicano anche delle linee guida per una migliore fruizione del codice. Tale obiettivo viene raggiunto anche grazie all'utilizzo di SonarLint, uno strumento atto all'analisi del codice per segnalare eventuali incongruenze con le best practises\\
 	\centering\url{https://www.sonarsource.com/products/codeanalyzers/sonarts.html}
-	\item \textbf{W3C}: per quanto riguarda l'HTML e il CSS invece il gruppo si atterrà alle regole imposte dal World Wide Web Consortium. Per assicurarsi il raggiungimento di tali norme il codice prodotto verrà verificato tramite i validatori offerti da suddetto consorzio. Di seguito il link ai validatori utilizzati:
+	\item \textbf{W3C}: per quanto riguarda l'HTML e il CSS invece il gruppo si attiene alle regole imposte dal World Wide Web Consortium. Per assicurarsi il raggiungimento di tali norme il codice prodotto verrà verificato tramite i validatori offerti da suddetto consorzio. Di seguito il link ai validatori utilizzati:
 	\begin{itemize}
 		\item \url{https://validator.w3.org/};
 		\item \url{https://jigsaw.w3.org/css-validator/}.
