@@ -58,7 +58,6 @@
 	\item \textbf{Codice identificativo}: UC4.7;
 	\item \textbf{Titolo}: inserimento del file in formato JSON contenente una configurazione precedente;
 	\item \textbf{Attori primari}: utente;
-	\item \textbf{Attori secondari}: Grafana\glo;
 	\item \textbf{Descrizione}: l'utente inserisce nell'applicazione esterna un file in formato JSON che contiene i dati di una configurazione per addestrare nuovamente l'algoritmo di predizione partendo con una configurazione precedente;
 	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glo;
 	\item \textbf{Postcondizioni}: il file in formato JSON contenente una configurazione precedente è stato inserito correttamente;
@@ -94,7 +93,6 @@
 	\item \textbf{Codice identificativo}: UC4.10;
 	\item \textbf{Titolo}: selezione del modello di predizione SVM\glo;
 	\item \textbf{Attori primari}: utente;
-	\item \textbf{Attori secondari}: Grafana\glo;
 	\item \textbf{Descrizione}: l'utente seleziona il modello di predizione SVM\glosp da applicare durante l'addestramento nell'applicazione esterna;
 	\item \textbf{Precondizioni}: il file CSV contenente i dati per l'addestramento è stato inserito correttamente nell'applicazione esterna;
 	\item \textbf{Postcondizioni}: l'utente ha selezionato SVM\glosp come modello di predizione da applicare;
@@ -105,7 +103,6 @@
 	\item \textbf{Codice identificativo}: UC4.11;
 	\item \textbf{Titolo}: selezione del modello di predizione RL\glo;
 	\item \textbf{Attori primari}: utente;
-	\item \textbf{Attori secondari}: Grafana\glo;
 	\item \textbf{Descrizione}: l'utente seleziona il modello di predizione RL\glosp da applicare durante l'addestramento nell'applicazione esterna;
 	\item \textbf{Precondizioni}: il file CSV contenente i dati per l'addestramento è stato inserito correttamente nell'applicazione esterna;
 	\item \textbf{Postcondizioni}: l'utente ha selezionato RL\glosp come modello di predizione da applicare;
@@ -128,7 +125,6 @@
 	\item \textbf{Codice identificativo}: UC4.4;
 	\item \textbf{Titolo}: arresto dell'addestramento;
 	\item \textbf{Attori primari}: utente;
-	\item \textbf{Attori secondari}: Grafana\glo;
 	\item \textbf{Descrizione}: l'utente arresta l'addestramento prima della sua normale conclusione;
 	\item \textbf{Precondizioni}: l'addestramento è stato avviato con successo;
 	\item \textbf{Postcondizioni}: l'addestramento è stato arrestato con successo;
@@ -151,8 +147,8 @@
     \item \textbf{Codice identificativo}: UC4.5;
     \item \textbf{Titolo}: ricezione del file JSON contenente i predittori;
     \item \textbf{Attori primari}: utente;
-    \item \textbf{Descrizione}: l'applicazione restituisce un file JSON risultato dal completamento dell'addestramento dei dati e contenente i predittori per eseguire la predizione;
+    \item \textbf{Descrizione}: l'applicazione restituisce un file JSON, risultato dal completamento dell'addestramento dei dati, contenente i predittori per eseguire la predizione;
     \item \textbf{Precondizioni}: l'applicazione esterna ha concluso l'addestramento con successo secondo il suo normale flusso di esecuzione;
-    \item \textbf{Postcondizioni}: l'utente ha ricevuto il file JSON risultato dall'addestramento e contenente i predittori per eseguire la predizione;
-    \item \textbf{Scenario principale}: l'utente riceve il file JSON risultato dall'addestramento e contenente i predittori per eseguire la predizione.
+    \item \textbf{Postcondizioni}: l'utente ha ricevuto il file JSON, risultato dall'addestramento, contenente i predittori per eseguire la predizione;
+    \item \textbf{Scenario principale}: l'utente riceve il file JSON, risultato dall'addestramento, contenente i predittori per eseguire la predizione.
 \end{itemize}
