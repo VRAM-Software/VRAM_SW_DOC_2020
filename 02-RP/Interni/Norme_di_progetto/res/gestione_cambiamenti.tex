@@ -54,3 +54,11 @@ Deve essere istanziato il processo\glosp di gestione dei cambiamenti per gestire
 Quando dei cambiamenti, comprese le non conformità ed i problemi, sono rilevati in un prodotto\glosp software o in un'attività, deve essere realizzato un report che li descriva. Questo report deve essere usato come componente del ciclo chiuso del punto §3.6.4.1: dall'individuazione dei cambiamenti al processo di indagine, analisi e risoluzione, fino all'individuazione della causa ed alla sua analisi per individuare le tendenze.
 Per svolgere quanto descritto, ci si appoggia all'Issue Tracking System di GitHub. Esso consente di aggiungere delle issues che corrispondono ai cambiamenti o ai problemi che si devono svolgere e di assegnarle ad incaricati e responsabili. Dunque viene assegnata un'istanza dello schema precedentemente descritto e, in base alle priorità, si procederà alla loro risoluzione.
 
+\subsubsection{Metriche di qualità}
+Le metriche di qualità utilizzate per valutare la qualità della gestione dei cambiamenti sono:
+\begin{itemize}
+	\item \textbf{M20 Tempo medio di risoluzione degli errori}: indica il tempo medio di risoluzione degli errori segnalati. Se elevato, questo valore indica che la gestione dei cambiamenti non è adeguata;
+	\begin{itemize}
+		\item[] \textbf{formula}: $\frac{TRE}{NE}$ dove $TRE$ indica il tempo totale per la risoluzione degli errori e $NE$ il numero di errori risolti.
+	\end{itemize} 
+\end{itemize}		
