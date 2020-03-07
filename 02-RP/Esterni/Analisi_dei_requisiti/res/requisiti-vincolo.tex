@@ -104,27 +104,27 @@
 
 	R1V4.4 & 
 	Obbligatorio & 
-	L'interfaccia utente dell'applicazione esterna deve essere sviluppata tramite il framework Javascript: React &
+	L'interfaccia utente dell'applicazione esterna deve essere sviluppata tramite il framework Javascript React &
 	Interno  \TBstrut \\ [2mm]
 
 	R1V4.5 & 
 	Obbligatorio & 
-	La logica dell'applicazione, quindi l'interazione tra il sistema operativo e l'applicazione, deve essere sviluppata mediante codice NodeJs &
+	La logica dell'applicazione, ovvero l'interazione tra il sistema operativo e l'applicazione, deve essere sviluppata mediante codice NodeJs &
 	Interno  \TBstrut \\ [2mm]
 
 	R1V4.6 & 
 	Obbligatorio & 
-	Per sviluppare l'applicazione esterna deve essere utilizzato il framework Javascript Electron per gestire il rendering e la logica del prodotto &
+	Per sviluppare l'applicazione esterna deve essere utilizzato il framework Javascript Electron che permette di gestire il rendering e la logica del prodotto &
 	Interno  \TBstrut \\ [2mm]
 	
 	R1V5 & 
 	Obbligatorio & 
-	L'applicazione esterna deve funzionare nei sistemi operativi più recenti data la caratteristica di Electron di essere multipiattaforma & 
+	L'applicazione esterna deve funzionare nei sistemi operativi più recenti data la caratteristica di Electron di essere multi-piattaforma & 
 	Interno  \TBstrut \\ [2mm]
 
 	R1V5.1 & 
 	Obbligatorio & 
-	L'applicazione esterna deve funzionare per il sistema operativo: Windows 10 &
+	L'applicazione esterna deve funzionare per il sistema operativo Windows 10 &
 	Interno  \TBstrut \\ [2mm]
 
 	R1V5.2 & 
@@ -134,12 +134,8 @@
 
 	R1V5.3 & 
 	Obbligatorio & 
-	L'applicazione esterna deve funzionare per il sistema operativo: MacOS Catalina &
+	L'applicazione esterna deve funzionare per il sistema operativo MacOS Catalina &
 	Interno  \TBstrut \\ [2mm]
-
-	%MARCO R.
-	%PROSEGUIRE SEGUENDO IL REQUISITO DI VINCOLO v2 E AGGIUNGENDO LE COSE CORRISPONDENTI CHE MANCANO
-	%ESEMPIO: NELL'APP NON DEVE FUNZIONARE SUI BROWSER MA TRAMITE NODEJS + ELECTRON + REACT E QUINDI AGGIUGERE QUELLA COSA Lì ECC ECC
 		
 	R2V3 &
 	Desiderabile &
@@ -148,12 +144,22 @@
 	
 	R2V3.1 &
 	Desiderabile &
-	Il codice sorgente deve essere analizzato staticamente mediante SonarJs\glo &
+	Il codice sorgente dell'applicazione esterna deve essere analizzato staticamente mediante SonarJs\glo &
+	Interno  \TBstrut \\ [2mm]
+	
+	R2V3.1 &
+	Desiderabile &
+	Il codice sorgente del plug-in deve essere analizzato staticamente mediante SonarTs\glo &
 	Interno  \TBstrut \\ [2mm]
 	
 	R2V3.2 &
 	Desiderabile &
-	Il codice sorgente deve essere analizzato dinamicamente mediante GitHub Actions e JS Unit Testing &
+	Il codice sorgente deve essere analizzato dinamicamente mediante GitHub Actions &
+	Interno  \TBstrut \\ [2mm]
+	
+	R1V3.4 &
+	Obbligatorio &
+	Il codice sorgente deve essere testato mediante lo strumento Jest &
 	Interno  \TBstrut \\ [2mm]
 	
 	R2V3.3 &
@@ -161,8 +167,6 @@
 	Devono essere eseguiti test funzionali mediante il framework: Selenium &
 	Interno  \TBstrut \\ [2mm]
 	
-	%MARCO DALLAS
-	%AGGIUNGERE EVENTUALMENTE DEI DETTAGLI SUI VINCOLI NELL'UTILIZZO DI GIT IN GENERALE
 	\rowcolor{white}
 	\caption{Requisiti vincolo}
 \end{longtable}
