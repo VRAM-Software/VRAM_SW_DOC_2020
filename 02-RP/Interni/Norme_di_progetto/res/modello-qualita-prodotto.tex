@@ -1,58 +1,102 @@
-\subsubsection{Modello di qualità del prodotto} 
-Per descrivere il modello di qualità del prodotto\glosp software il nostro gruppo ha deciso di utilizzare lo standard ISO/IEC 25010, che determina le caratteristiche della qualità di un prodotto\glosp software che verranno valutate. Il modello di qualità del prodotto\glo, definito nello standard, è suddiviso nelle seguenti caratteristiche:
-	\paragraph{Idoneità funzionale} \mbox{}\\[1mm]
-	Per adeguatezza funzionale si intende la capacità di un prodotto\glosp software di fornire funzioni che soddisfano i requisiti impliciti ed espliciti, quando usati in un determinato contesto sotto specifiche condizioni. \\
-	Le metriche\glosp sono:
+\subsubsection{Modello di qualità del prodotto}
+	\paragraph{Qualità dei documenti}
+	Le metriche utilizzate per misurare la qualità dei documenti sono:
 	\begin{itemize}
-		\item \textbf{Copertura funzionale}: percentuale di requisiti soddisfatti rispetto a tutti quelli individuati e si calcola con la formula
-		\[C_F=(1-N_{RNS}/N_{RI})*100\]
-		dove N$_{RNS}$ sono i requisiti non sviluppati e N$_{RI}$ i requisiti trovati durante l'\textit{Analisi dei Requisiti}.
+		\item \textbf{Indice di Gulpease}: indica il livello di leggibilità di un testo: più alto questo valore e più è alta la leggibilità del testo. In particolare con valore inferiore a 80 risultata difficile da leggere per chi ha la licenza elementare; inferiore a 60 risultata difficile da leggere per chi ha la licenza media; inferiore a 40 risultata difficile da leggere per chi ha un diploma superiore;
+		\begin{itemize}
+			\item[] \textbf{formula}: 89+$\frac{300\cdot numero \; di \; frasi-10\cdot numero \; di \; lettere}{numero \; di \; parole}$;
+		\end{itemize}                	
+		\item \textbf{Correttezza ortografica}: indica la quantità di errori ortografici presenti nel documento.
+		\begin{itemize}
+			\item[] \textbf{formula}: si calcola con un valore intero;
+		\end{itemize}
 	\end{itemize}
-	%\paragraph{Efficienza prestazionale} \mbox{}\\
-	%L'efficienza prestazionale è la caratteristica relativa alle prestazioni rispetto al numero di risorse usate sotto condizioni precise.
-	%\begin{itemize}
-	%	\item \textbf{Comportamento rispetto al tempo}: la capacità del software di eseguire le funzioni in un tempo di risposta, tempo processionale e un volume di produzione che soddisfa i requisiti;
-	%	\item \textbf{Utilizzo delle risorse}: la capacità del software di eseguire le funzioni usando un numero di risorse disponibili che soddisfa i requisiti;
-	%	\item \textbf{Capacità}: la capacità del software di avere limiti prestazionali massimi che soddisfano i requisiti.
-	%\end{itemize}
-	%\paragraph{Compatibilità} \mbox{}\\
-	%La compatibilità è la caratteristica di un software di scambiare informazioni con altri prodotti\glo, ed eseguire le sue funzioni mentre viene condiviso lo stesso ambiente hardware o software.
-	%\begin{itemize}
-	%	\item \textbf{Coesistenza}: la capacità del software di eseguire le sue funzionalità senza impatti negativi mentre condivide lo stesso ambiente con un altro software;
-	%	\item \textbf{Interoperabilità}: la capacità di due o più software di scambiare informazioni tra loro e usare tali dati per i loro scopi.
-	%\end{itemize}
+	\paragraph{Qualità del software} 
+	Per descrivere il modello di qualità del prodotto\glosp software il nostro gruppo ha deciso di utilizzare lo standard ISO/IEC 25010, che determina le caratteristiche della qualità di un prodotto\glosp software che verranno valutate. Il modello di qualità del prodotto\glo, definito nello standard, è suddiviso nelle seguenti caratteristiche:
+		\subparagraph{Idoneità funzionale} \mbox{}\\[1mm]
+		Per adeguatezza funzionale si intende la capacità di un prodotto\glosp software di fornire funzioni che soddisfano i requisiti impliciti ed espliciti, quando usati in un determinato contesto sotto specifiche condizioni. \\
+		Le metriche\glosp sono:
+		\begin{itemize}
+			\item \textbf{M21 Percentuale di requisiti obbligatori soddisfatti}: indica la percentuale di requisiti obbligatori che sono stati soddisfatti. Questo valore deve essere massimizzato per garantire che i vincoli col proponente vengano rispettati;
+			\begin{itemize}
+				\item[] \textbf{formula}: $\frac{requisiti \; obbligatori \; soddisfatti}{requisiti \; obbligatori \; totali}$;
+			\end{itemize} 
+			\item \textbf{M22 Percentuale di requisiti desiderabili soddisfatti}:
+			indica la percentuale di requisiti desiderabili che sono stati soddisfatti. Un valore elevato denota una maggior copertura delle richieste del proponente;
+			\begin{itemize}
+				\item[] \textbf{formula}: $\frac{requisiti \; desiderabili \; soddisfatti}{requisiti \; desiderabili \; totali}$.
+			\end{itemize} 
+			\item \textbf{M23 Percentuale di requisiti opzionali soddisfatti}:
+			indica la percentuale di requisiti opzionali che sono stati soddisfatti. Un valore elevato denota una maggior copertura delle richieste non indispensabili  del proponente;
+			\begin{itemize}
+				\item[] \textbf{formula}: $\frac{requisiti \; opzionali \; soddisfatti}{requisiti \; opzionali \; totali}$.
+			\end{itemize} 
+			\item \textbf{M24 Percentuale di test passati}:
+			indica la percentuale di test passati. Un valore basso indica che la qualità del prodotto è insufficiente. 
+			\begin{itemize}
+				\item[] \textbf{formula}: $\frac{test \; passati}{totale \; test \; effettuati}$.
+			\end{itemize}
+		\end{itemize}
+	
+		\subparagraph{Affidabilità} \mbox{}\\[1mm]
+		Un prodotto\glosp software è considerato affidabile quando mantiene un livello di prestazioni costante per un determinato intervallo di tempo sotto precise condizioni che possono variare nel tempo.\\
+		Le metriche\glosp sono:
+		\begin{itemize}
+			\item \textbf{M25 Densità degli errori}: indica la percentuale di errori critici rilevati; 
+			\begin{itemize}
+				\item[] \textbf{formula}: $\frac{N_{ER}}{N_{T}}\cdot100$ dove $N_{ER}$ sono gli errori rilevati e $N_T$ sono i test eseguiti.
+			\end{itemize}
+		\end{itemize}
+	
+		\subparagraph{Efficienza prestazionale} \mbox{}\\
+		L'efficienza prestazionale è una caratteristica che indica le prestazioni rispetto al numero di risorse utilizzate sotto condizioni precise. Dato che il nostro progetto si appoggia sul sistema Grafana\glosp e su algoritmi forniti dal proponente, l'efficienza prestazionale viene delegata a questi due strumenti.
+		%\begin{itemize}
+		%	\item \textbf{Comportamento rispetto al tempo}: la capacità del software di eseguire le funzioni in un tempo di risposta, tempo processionale e un volume di produzione che soddisfa i requisiti;
+		%	\item \textbf{Utilizzo delle risorse}: la capacità del software di eseguire le funzioni usando un numero di risorse disponibili che soddisfa i requisiti;
+		%	\item \textbf{Capacità}: la capacità del software di avere limiti prestazionali massimi che soddisfano i requisiti.
+		%\end{itemize}
+		%\paragraph{Compatibilità} \mbox{}\\
+		%La compatibilità è la caratteristica di un software di scambiare informazioni con altri prodotti\glo, ed eseguire le sue funzioni mentre viene condiviso lo stesso ambiente hardware o software.
+		%\begin{itemize}
+		%	\item \textbf{Coesistenza}: la capacità del software di eseguire le sue funzionalità senza impatti negativi mentre condivide lo stesso ambiente con un altro software;
+		%	\item \textbf{Interoperabilità}: la capacità di due o più software di scambiare informazioni tra loro e usare tali dati per i loro scopi.
+		%\end{itemize}
+			
+		\subparagraph{Sicurezza} \mbox{}\\
+		Per sicurezza in un prodotto\glosp software si intende il grado di protezione che il software ha sui dati che manipola per evitare che persone o servizi non autorizzati li ricevano.
+		\begin{itemize}
+			\item \textbf{Confidenzialità}: capacità del software di assicurare la confidenzialità dei dati alle persone che hanno l'autorizzazione di accedere a tali informazioni;
+			\item \textbf{Integrità}: capacità del software di evitare modifiche o accessi non autorizzati;
+			\item \textbf{Non ripudio}: capacità del software di dimostrare che eventi o azioni sono avvenuti, in modo da non ripudiarli in un secondo momento;
+			\item \textbf{Responsabilità}: capacità del software di risalire a una sola entità a partire da una azione di una entità;
+			\item \textbf{Autenticità}: capacità del software di provare l'identità delle risorse utilizzate.
+		\end{itemize}
+	
+		\subparagraph{Manutenibilità} \mbox{}\\[1mm]
+		Per manutenibilità si intende la capacità di un prodotto\glosp software di essere modificato e aggiornato senza l'introduzione di problemi e anomalie in seguito a cambiamenti dell'ambiente e/o dei requisiti.
+		Le metriche\glosp sono:
+		\begin{itemize}
+			\item \textbf{M26 Structural fan-in}: indica quante componenti utilizzano un dato modulo, un valore elevato indica un alto riuso del modulo stesso;
+			\begin{itemize}
+				\item[] \textbf{formula}: si calcola con un valore intero;
+			\end{itemize}
+			\item \textbf{M27 Structural fan-out}: indica quante componenti vengono utilizzate dalla componente in esame, un valore elevato indica un alto accoppiamento delle componenti, è quindi preferibile mantenerlo il più basso possibile;
+			\begin{itemize}
+				\item[] \textbf{formula}: si calcola con un valore intero.
+			\end{itemize}
+		\end{itemize}
+		\item \textbf{M32 Presenza di code smells}: indica la presenza di debolezze nel codice;
+		\begin{itemize}
+			\item[] \textbf{formula}: si calcola con un valore intero.
+		\end{itemize}
+	\end{itemize}
+	\paragraph{Portabilità} \mbox{}\\ 
+	Per portabilità si intende la caratteristica del software di essere utilizzato in modo efficacie quando esso viene trasferito su diversi hardware o software.
+	\begin{itemize}
+		\item \textbf{Adattabilità}: la capacità del software di essere adattato per hardware o software in continuo cambiamento;
+		\item \textbf{Installabilità}: la capacità del software di essere installato o disinstallato efficacemente in un ambiete specifico;
+		\item \textbf{Sostituibilità}: la capacità del software di rimpiazzare un altro prodotto\glosp con lo stesso scopo nello stesso ambiente.
+	\end{itemize}
 
-	\paragraph{Affidabilità} \mbox{}\\[1mm]
-	Un prodotto\glosp software è considerato affidabile quando mantiene un livello di prestazioni costanti per un determinato intervallo di tempo sotto precise condizioni che possono variare nel tempo.\\
-	Le metriche\glosp sono:
-	\begin{itemize}
-		\item \textbf{Robustezza agli errori}: percentuale di errori critici messa sotto controllo. Si calcola con la formula
-		\[R_E=N_{ER}/N_{T}*100\]
-		dove N$_ER$ sono gli errori rilevati e N$_T$ sono i test eseguiti.
-	\end{itemize}
-	%\paragraph{Sicurezza} \mbox{}\\
-	%Per sicurezza in un prodotto\glosp software si intende il grado di protezione che il software ha sui dati per evitare che persone o servizi non autorizzati li ricevano.
-	%\begin{itemize}
-	%	\item \textbf{Confidenzialità}: la capacità del software di assicurare la confidenzialità dei dati alle persone che hanno l'autorizzazione di accedere a tali informazioni;
-	%	\item \textbf{Integrità}: la capacità del software di evitare modifiche o accessi non autorizzati;
-	%	\item \textbf{Non ripudio}: la capacità del software di dimostrare che eventi o azioni sono avvenuti, in modo da non ripudiarli in un secondo momento;
-	%	\item \textbf{Responsabilità}: la capacità del software di risalire a una sola entità a partire da una azione di una entità;
-	%	\item \textbf{Autenticità}: la capacità del software di provare l'identità delle risorse utilizzate.
-	%\end{itemize}
-	\paragraph{Manutenibilità} \mbox{}\\[1mm]
-	Per manutenibilità si intende la capacità di un prodotto\glosp software di essere modificato e aggiornato senza l'introduzione di problemi e anomalie in seguito a cambiamenti dell'ambiente e/o dei requisiti.
-	Le metriche\glosp sono:
-	\begin{itemize}
-		\item \textbf{Semplicità delle funzioni}: numero di parametri che richiede ogni metodo
-		\item \textbf{Modularità del prodotto}\glo: numero di metodi presenti per ogni classe.
-	\end{itemize}
-	%\paragraph{Portabilità} \mbox{}\\ 
-	%Per portabilità si intende la caratteristica del software di essere utilizzato in modo efficacie quando esso viene trasferito su diversi hardware o software.
-	%\begin{itemize}
-	%	\item \textbf{Adattabilità}: la capacità del software di essere adattato per hardware o software in continuo cambiamento;
-	%	\item \textbf{Installabilità}: la capacità del software di essere installato o disinstallato efficacemente in un ambiete specifico;
-	%	\item \textbf{Sostituibilità}: la capacità del software di rimpiazzare un altro prodotto\glosp con lo stesso scopo nello stesso ambiente.
-	%\end{itemize}
 	\paragraph{Usabilità} \mbox{}\\[1mm]
-	L'usabilità è una caratteristica di un software definita come l'efficacia, l'efficienza e la soddisfazione con le quali determinati utenti raggiungono determinati obiettivi in determinati contesti.\\
-	Le metriche\glosp sono:
+	L'usabilità è una caratteristica di un software definita come l'efficacia, l'efficienza e la soddisfazione con le quali determinati utenti raggiungono determinati obiettivi in determinati contesti.

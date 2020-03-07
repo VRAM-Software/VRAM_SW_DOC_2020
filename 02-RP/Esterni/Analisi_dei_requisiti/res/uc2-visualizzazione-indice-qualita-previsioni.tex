@@ -1,15 +1,45 @@
-\subsection{UC2 - Visualizzazione indice della qualità delle previsioni}
+\subsection{UC2 - Visualizzazione degli indici di qualità delle previsioni interna a Grafana}
 \begin{figure}[H]
 \includegraphics{img/UC2_-_Visualizzazione_indice_della_qualit_delle_previsioni.png}
 \caption{Diagramma degli use case di UC2}
 \end{figure}
 \begin{itemize}
 	\item \textbf{Codice identificativo}: UC2;
-	\item \textbf{Titolo}: visualizzazione indice della qualità delle previsioni;
+	\item \textbf{Titolo}: visualizzazione degli indici della qualità delle previsioni;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
-	\item \textbf{Descrizione}: l'utente visualizza l'indice della qualità delle previsioni eseguite sui dati forniti;
-	\item \textbf{Precondizioni}: l'utente ha eseguito l'addestramento interno a Grafana\glo;
-	\item \textbf{Postcondizioni}: l'utente ha visualizzato l'indice della qualità delle previsioni;
-	\item \textbf{Scenario principale}: l'utente visualizza l'indice della qualità delle previsioni.
+	\item \textbf{Descrizione}: l'utente visualizza gli indici numerici che rappresentano la misura di qualità delle previsioni sui dati forniti dall'addestramento;
+	\item \textbf{Precondizioni}: l'addestramento nel plug-in interno a Grafana\glosp è stato eseguito correttamente;
+	\item \textbf{Postcondizioni}: l'utente ha visualizzato gli indici numerici della qualità delle previsioni;
+	\item \textbf{Scenario principale}: l'utente visualizza gli indici numerici della qualità delle previsioni.
 \end{itemize}
+\subsubsection{UC2.1 - Visualizzazione dell'indice di qualità delle previsioni R$^{2}$}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC2.1;
+	\item \textbf{Titolo}: visualizzazione dell'indice di qualità delle previsioni R$^{2}$\glo;
+	\item \textbf{Attori primari}: utente;
+	\item \textbf{Descrizione}: l'utente visualizza l'indice numerico che rappresenta la misura di qualità delle previsioni sui dati forniti attraverso il meccanismo R$^{2}$\glo;
+	\item \textbf{Precondizioni}: l'addestramento nel plug-in interno a Grafana\glosp è stato eseguito correttamente;
+	\item \textbf{Postcondizioni}: l'utente ha visualizzato l'indice di qualità delle previsioni R$^{2}$\glo;
+	\item \textbf{Scenario principale}: l'utente visualizza l'indice di qualità delle previsioni R$^{2}$\glo.
+\end{itemize} 
+\subsubsection{UC2.2 - Visualizzazione degli indici di qualità delle previsioni Precision}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC2.2;
+	\item \textbf{Titolo}: visualizzazione degli indici di qualità delle previsioni Precision\glo;
+	\item \textbf{Attori primari}: utente;
+	\item \textbf{Descrizione}: l'utente visualizza l'indice numerico che rappresenta la misura di qualità delle previsioni sui dati forniti attraverso il meccanismo Precision\glo;
+	\item \textbf{Precondizioni}: l'addestramento nel plug-in interno a Grafana\glosp è stato eseguito correttamente;
+	\item \textbf{Postcondizioni}: l'utente ha visualizzato l'indice di qualità delle previsioni Precision\glo;
+	\item \textbf{Scenario principale}: l'utente visualizza l'indici di qualità delle previsioni Precision\glo.
+\end{itemize} 
+\subsubsection{UC2.3 - Visualizzazione degli indici di qualità delle previsioni Recall}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC2.3;
+	\item \textbf{Titolo}: visualizzazione degli indici di qualità delle previsioni Recall\glo;
+	\item \textbf{Attori primari}: utente;
+	\item \textbf{Descrizione}: l'utente visualizza l'indice numerico che rappresenta la misura di qualità delle previsioni sui dati forniti attraverso il meccanismo Recall\glo;
+	\item \textbf{Precondizioni}: l'addestramento nel plug-in interno a Grafana\glosp è stato eseguito correttamente;
+	\item \textbf{Postcondizioni}: l'utente ha visualizzato l'indici di qualità delle previsioni Recall\glo;
+	\item \textbf{Scenario principale}: l'utente visualizza l'indici di qualità delle previsioni Recall\glo.
+\end{itemize} 
