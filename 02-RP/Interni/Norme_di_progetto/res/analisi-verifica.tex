@@ -36,10 +36,6 @@ La verifica della documentazione può essere effettuata manualmente in due modi:
 	\rowcolor{white}
 	\caption{Tabella errori più frequenti}
 \end{longtable}
-\subparagraph{Metriche di qualità}
-%Frequenza commit nella repository
-%Numero moduli non testati
-%Metriche di SonarCloud
 
 \paragraph{Analisi dinamica} \mbox{}\\ [1mm]
 L'analisi dinamica è una tecnica che consiste nell'esecuzione del prodotto\glosp software eseguendo dei test su un insieme finito di casi.
@@ -116,6 +112,30 @@ I test di accettazione, o di collaudo, vengono effettuati ad ogni pre-rilascio, 
 Per identificare un test di accettazione viene utilizzata una codifica con il seguente formato:\\
 \textbf{TA[codice]}
 Dove codice è un numero progressivo nel formato: [X].[Y] con X e Y numeri maggiori di zero.
+\subsubsection{Metriche di qualità}
+Le metriche di qualità utilizzate per valutare la qualità della verifica sono:
+\begin{itemize}
+	\item \textbf{M28 Code coverage}: indica la percentuale di codice coperto da test rispetto al totale delle righe di codice;
+	\begin{itemize}
+		\item[] \textbf{formula}: $\frac{righe \; di \; codice \; coperto}{righe \; di \; codice \; totali}$;
+	\end{itemize} 
+
+	\item \textbf{M29 Condition coverage}: indica la percentuale di codice coperto da test rispetto al totale delle righe di codice;
+	\begin{itemize}
+		\item[] \textbf{formula}: $\frac{righe \; di \; codice \; coperto}{righe \; di \; codice \; totali}$;
+	\end{itemize} 
+
+	\item \textbf{M30 Percentuale bug sistemati}: indica la percentuale dei bug sistemati dando così una traccia dell'avanzamento;
+	\begin{itemize}
+		\item[] \textbf{formula}: $\frac{bug \; sistemati}{bug \; totali}$;
+	\end{itemize} 
+
+	\item \textbf{M31 Copertura dei test eseguiti}: indica la percentuale di test effettivamente eseguiti;
+	\begin{itemize}
+		\item[] \textbf{formula}: $\frac{test \; eseguiti}{test \; totali}$;
+	\end{itemize} 
+
+\end{itemize}
 \subsubsection{Strumenti di supporto}
 	\paragraph{Correzione ortografica}\mbox{}\\ [1mm]
 	Il nostro gruppo ha utilizzato, per la ricerca di errori ortografici o stilistici nel testo dei documenti, la libreria HunSpell utilizzata con l'editor di test: TexStudio. Esso permette di avere un controllo in tempo reale su errori ortografici in lingua inglese e italiana (sottolineati in rosso) e ripetizioni di parole a breve distanza (sottolineati in verde).

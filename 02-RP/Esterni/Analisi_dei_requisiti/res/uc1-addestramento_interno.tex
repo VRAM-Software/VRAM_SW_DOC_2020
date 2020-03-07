@@ -13,79 +13,109 @@
 	\item \textbf{Titolo}: addestramento degli algoritmi di predizione interno a Grafana\glo;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
-	\item \textbf{Descrizione}: attività di addestramento degli algoritmi di predizione interna a Grafana\glosp utilizzando dei dati inseriti da un utente autenticato;
+	\item \textbf{Descrizione}: attività di addestramento degli algoritmi di predizione interna a Grafana\glo, utilizzando dei dati inseriti da un utente autenticato;
 	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glo;
-	\item \textbf{Postcondizioni}: Grafana\glosp riceve i dati di predizione dopo l'addestramento dei dati caricati da utente;
+	\item \textbf{Postcondizioni}: Grafana\glosp riceve i dati generati dall'addestramento;
 	\item \textbf{Scenario principale}: 
 		\begin{enumerate}
-			\item inserimento del file in formato JSON contenente i dati di testing (UC1.1);
-			\item selezione del modello di predizione su cui applicare l'addestramento (UC1.2);
+			\item inserimento del file in formato CSV contenente i dati per l'addestramento (UC1.1);
+			\item visualizzazione grafico dei dati per l'addestramento (UC1.5);
+			\item inserimento del file in formato JSON contenente i dati di una configurazione precedente (UC1.6);
+			\item inserimento delle note per l'utente (UC1.7);
+			\item selezione del modello di predizione su cui eseguire l'addestramento (UC1.2);
 			\item avvio dell'addestramento (UC1.3);
-			\item visualizzazione del messaggio di conferma (UC1.5).
+			\item visualizzazione del messaggio di conferma della conclusione dell'addestramento (UC1.8).
 		\end{enumerate}
 	\item \textbf{Scenari alternativi}:
 		\begin{enumerate}
 			\item arresto dell'addestramento (UC1.4).
+		\end{enumerate}
 	\item \textbf{Estensioni}:
 	\begin{itemize}
-		\item se il caricamento del file JSON non è avvenuto con successo viene visualizzato un messaggio di errore (UC3).
+		\item se il caricamento del file CSV non è avvenuto con successo, viene visualizzato un messaggio di errore (UC17);
+		\item se il caricamento del file JSON non è avvenuto con successo, viene visualizzato un messaggio di errore (UC3).
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{UC1.1 - Inserimento del file in formato JSON contenente i dati di testing}
-\begin{figure}[H]
-\includegraphics{img/UC1_1_-_Inserimento_del_file_in_formato_JSON_contenente_i_dati_di_testing.png}
-\caption{Diagramma degli use case di UC1.1}
-\end{figure}
+\subsubsection{UC1.1 - Inserimento del file in formato CSV contenente i dati per l'addestramento}
 \begin{itemize}
 	\item \textbf{Codice identificativo}: UC1.1;
-	\item \textbf{Titolo}: inserimento del file in formato JSON contenente i dati di testing;
+	\item \textbf{Titolo}: inserimento del file in formato CSV contenente i dati per l'addestramento;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
-	\item \textbf{Descrizione}: l'utente inserisce nel sistema di Grafana\glosp il file JSON che contiene dati di testing per l'addestramento degli algoritmi di predizione;
+	\item \textbf{Descrizione}: l'utente inserisce nel sistema Grafana\glosp il file in formato CSV che contiene dati per l'addestramento dell'algoritmo di predizione;
 	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glo;
-	\item \textbf{Postcondizioni}: il file JSON contenente i dati di testing è stato inserito correttamente;
-	\item \textbf{Scenario principale}:
-		\begin{enumerate}
-			\item selezione del file JSON (UC1.1.1);
-			\item caricamento del file JSON (UC1.1.2).
-		\end{enumerate}
+	\item \textbf{Postcondizioni}: il file in formato CSV contenente i dati per l'addestramento è stato inserito correttamente;
+	\item \textbf{Scenario principale}: l'utente inserisce il file in formato CSV contenente i dati per l'addestramento.
 \end{itemize}
-
-\paragraph{UC1.1.1 - Selezione del file JSON}
+\subsubsection{UC1.5 - Visualizzazione grafico dei dati per l'addestramento}
 \begin{itemize}
-	\item \textbf{Codice identificativo}: UC1.1.1;
-	\item \textbf{Titolo}: selezione del file JSON;
+	\item \textbf{Codice identificativo}: UC1.5;
+	\item \textbf{Titolo}: visualizzazione grafico dei dati per l'addestramento;
+	\item \textbf{Attori primari}: utente;
+	\item \textbf{Descrizione}: l'utente visualizza il grafico a dispersione rappresentante i dati che ha inserito per l'addestramento;
+	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glosp e il file CSV contenente i dati per l'addestramento è stato inserito correttamente;
+	\item \textbf{Postcondizioni}: l'utente ha visualizzato il grafico a dispersione rappresentante i dati che ha inserito;
+	\item \textbf{Scenario principale}: l'utente visualizza il grafico a dispersione rappresentante i dati che ha inserito.
+\end{itemize}
+\subsubsection{UC1.6 - Inserimento del file in formato JSON contenente una configurazione precedente}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC1.6;
+	\item \textbf{Titolo}: inserimento del file in formato JSON contenente una configurazione precedente;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
-	\item \textbf{Descrizione}: l'utente seleziona il file JSON da inserire nel sistema;
+	\item \textbf{Descrizione}: l'utente inserisce nel sistema Grafana\glosp un file JSON che contiene i dati di una configurazione precedente per addestrare nuovamente l'algoritmo di predizione;
 	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glo;
-	\item \textbf{Postcondizioni}: il file JSON è stato selezionato correttamente;
-	\item \textbf{Scenario principale}: l'utente seleziona il file JSON.
+	\item \textbf{Postcondizioni}: il file in formato JSON contenente una configurazione precedente è stato inserito correttamente;
+	\item \textbf{Scenario principale}: l'utente inserisce il file in formato JSON contenente una configurazione precedente.
 \end{itemize}
-
-\paragraph{UC1.1.2 - Caricamento del file JSON}
+\subsubsection{UC1.7 - Inserimento delle note per l'utente}
 \begin{itemize}
-	\item \textbf{Codice identificativo}: UC1.1.2;
-	\item \textbf{Titolo}: caricamento del file JSON;
+	\item \textbf{Codice identificativo}: UC1.7;
+	\item \textbf{Titolo}: inserimento delle note per l'utente;
 	\item \textbf{Attori primari}: utente;
-	\item \textbf{Attori secondari}: Grafana\glo;
-	\item \textbf{Descrizione}: l'utente carica il file JSON selezionato;
-	\item \textbf{Precondizioni}: l'utente autenticato ha selezionato il file JSON da caricare;
-	\item \textbf{Postcondizioni}: il file JSON è stato caricato correttamente;
-	\item \textbf{Scenario principale}: l'utente carica del file JSON.
+	\item \textbf{Descrizione}: l'utente inserisce le note che compariranno nel file JSON risultante dall'addestramento dell'algoritmo;
+	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glosp e il file CSV contenente i dati per l'addestramento è stato inserito correttamente;
+	\item \textbf{Postcondizioni}: l'utente ha inserito correttamente le note che compariranno nel file JSON risultante dall'addestramento dell'algoritmo;
+	\item \textbf{Scenario principale}: l'utente inserisce le note che compariranno nel file JSON risultante dall'addestramento dell'algoritmo.
 \end{itemize}
-
-\subsubsection{UC1.2 - Selezione del modello di predizione su cui applicare l'addestramento}
+\subsubsection{UC1.2 - Selezione del modello di predizione su cui eseguire l'addestramento}
 \begin{itemize}
 	\item \textbf{Codice identificativo}: UC1.2;
-	\item \textbf{Titolo}: selezione del modello di predizione su cui applicare l'addestramento;
+	\item \textbf{Titolo}: selezione del modello di predizione su cui eseguire l'addestramento;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
-	\item \textbf{Descrizione}: l'utente seleziona quale modello di predizione applicare durante l'addestramento;
-	\item \textbf{Precondizioni}: il file JSON è stato inserito correttamente;
+	\item \textbf{Descrizione}: l'utente seleziona il modello di predizione da applicare durante l'addestramento;
+	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glosp e il file CSV contenente i dati per l'addestramento è stato inserito correttamente;
 	\item \textbf{Postcondizioni}: l'utente ha selezionato correttamente il modello di predizione;
-	\item \textbf{Scenario principale}: l'utente seleziona un modello di predizione per eseguire l'addestramento.
+	\item \textbf{Scenario principale}: l'utente seleziona un modello di predizione per eseguire l'addestramento tra SVM\glosp e RL\glo;
+	\item \textbf{Specializzazione}:
+	\begin{itemize}
+		\item selezione del modello di predizione SVM\glosp (UC1.7);
+		\item selezione del modello di predizione RL\glosp (UC1.8).
+	\end{itemize}
+\end{itemize}
+\subsubsection{UC1.9 - Selezione del modello di predizione SVM}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC1.9;
+	\item \textbf{Titolo}: selezione del modello di predizione SVM\glo;
+	\item \textbf{Attori primari}: utente;
+	\item \textbf{Attori secondari}: Grafana\glo;
+	\item \textbf{Descrizione}: l'utente seleziona il modello di predizione SVM\glosp da applicare durante l'addestramento;
+	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glosp e il file CSV contenente i dati per l'addestramento è stato inserito correttamente;
+	\item \textbf{Postcondizioni}: l'utente ha selezionato SVM\glosp come modello di predizione da applicare;
+	\item \textbf{Scenario principale}: l'utente seleziona il modello di predizione SVM\glosp su cui eseguire l'addestramento.
+\end{itemize}
+\subsubsection{UC1.10 - Selezione del modello di predizione RL}
+\begin{itemize}
+	\item \textbf{Codice identificativo}: UC1.10;
+	\item \textbf{Titolo}: selezione del modello di predizione RL\glo;
+	\item \textbf{Attori primari}: utente;
+	\item \textbf{Attori secondari}: Grafana\glo;
+	\item \textbf{Descrizione}: l'utente seleziona RL\glosp come modello di predizione da applicare durante l'addestramento;
+	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glosp e il file CSV contenente i dati per l'addestramento è stato inserito correttamente;
+	\item \textbf{Postcondizioni}: l'utente ha selezionato RL\glosp come modello di predizione da applicare;
+	\item \textbf{Scenario principale}: l'utente seleziona il modello di predizione RL\glosp su cui eseguire l'addestramento.
 \end{itemize}
 
 \subsubsection{UC1.3 - Avvio dell'addestramento}
@@ -94,32 +124,32 @@
 	\item \textbf{Titolo}: avvio dell'addestramento;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
-	\item \textbf{Descrizione}: l'utente avvia l'addestramento dei dati;
-	\item \textbf{Precondizioni}: il file JSON è stato inserito correttamente e il modello di predizione è stato selezionato;
+	\item \textbf{Descrizione}: l'utente avvia l'addestramento dell'algoritmo di predizione;
+	\item \textbf{Precondizioni}: il file CSV è stato inserito correttamente e il modello di predizione è stato selezionato;
 	\item \textbf{Postcondizioni}: l'addestramento è stato avviato con successo;
 	\item \textbf{Scenario principale}: l'utente avvia l'addestramento.
 \end{itemize}
 
-\paragraph{UC1.4 - Arresto dell'addestramento}
+\subsubsection{UC1.4 - Arresto dell'addestramento}
 \begin{itemize}
 	\item \textbf{Codice identificativo}: UC1.4;
 	\item \textbf{Titolo}: arresto dell'addestramento;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
-	\item \textbf{Descrizione}: l'addestramento è stato fermato dall'utente prima del suo completamento;
+	\item \textbf{Descrizione}: l'utente arresta l'addestramento prima della sua normale conclusione;
 	\item \textbf{Precondizioni}: l'addestramento è stato avviato con successo;
-	\item \textbf{Postcondizioni}: l'addestramento è stato fermato con successo;
-	\item \textbf{Scenario principale}: l'utente visualizza un messaggio di conferma che l'addestramento è stato concluso.
+	\item \textbf{Postcondizioni}: l'addestramento è stato arrestato con successo;
+	\item \textbf{Scenario principale}: l'utente arresta forzatamente l'addestramento.
 \end{itemize}
 
-\paragraph{UC1.5 - Visualizzazione del messaggio di conferma}
+\subsubsection{UC1.8 - Visualizzazione del messaggio di conferma della conclusione dell'addestramento}
 \begin{itemize}
-	\item \textbf{Codice identificativo}: UC1.5;
-	\item \textbf{Titolo}: visualizzazione del messaggio di conferma;
+	\item \textbf{Codice identificativo}: UC1.8;
+	\item \textbf{Titolo}: visualizzazione del messaggio di conferma della conclusione dell'addestramento;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Attori secondari}: Grafana\glo;
-	\item \textbf{Descrizione}: l'utente visualizza un messaggio di conferma che l'addestramento è stato eseguito correttamente;
-	\item \textbf{Precondizioni}: l'addestramento è stato avviato con successo;
-	\item \textbf{Postcondizioni}: l'utente ha visualizzato un messaggio di conferma che l'addestramento è stato eseguito correttamente;
-	\item \textbf{Scenario principale}: l'utente visualizza un messaggio di conferma che l'addestramento è stato eseguito correttamente.
+	\item \textbf{Descrizione}: l'utente visualizza un messaggio di conferma che l'addestramento è stato concluso ed eseguito correttamente;
+	\item \textbf{Precondizioni}: l'addestramento è stato concluso con successo secondo il suo normale flusso di esecuzione;
+	\item \textbf{Postcondizioni}: l'utente ha visualizzato un messaggio di conferma che l'addestramento è stato concluso ed eseguito correttamente;
+	\item \textbf{Scenario principale}: l'utente visualizza un messaggio di conferma che l'addestramento è stato concluso ed eseguito correttamente.
 \end{itemize}
