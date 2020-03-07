@@ -19,17 +19,27 @@
 	
 	R1V1.5 &
 	Obbligatorio &
-	I dati prodotti dovranno essere disponibili al sistema di Grafana\glosp per la creazione di grafici e dashboard\glo  &
+	Tutti i dati prodotti dovranno essere disponibili al sistema di Grafana\glosp per la creazione di grafici e dashboard\glo &
 	Capitolato  \TBstrut \\ [2mm]
+	
+	R3V1.5.1 &
+	Opzionale &
+	Tutti i dati prodotti dal plug-in di Grafana\glosp dovranno essere disponibili al sistema stesso per la creazione di grafici e dashboard\glo &
+	Interno  \TBstrut \\ [2mm]
+	
+	R1V1.5.2 &
+	Obbligatorio &
+	Tutti i dati prodotti dall'applicazione esterna per l'addestramento degli algoritmi di predizione dovranno essere disponibili al sistema di Grafana\glosp per la creazione di grafici e dashboard\glo &
+	Interno  \TBstrut \\ [2mm]
 
 	R1V2 & 
 	Obbligatorio & 
-	Il plug-in deve essere sviluppato mediante tecnologie web &
+	Il plug-in deve essere sviluppato attraverso tecnologie web &
 	Capitolato  \TBstrut \\ [2mm]
 	
 	R1V2.1 & 
 	Obbligatorio & 
-	Il linguaggio di programmazione per il plug-in di Grafana\glosp deve essere javascript e deve utilizzare lo standard \textit{ECMAScript6} (\textit{ES6}) dato l'utilizzo di Grafana\glosp dello stesso standard &
+	Il linguaggio di programmazione per il plug-in di Grafana\glosp deve essere Typescript &
 	Interno  \TBstrut \\ [2mm]
 	
 	R1V2.2 & 
@@ -71,6 +81,30 @@
 	Desiderabile &
 	La struttura dei file del plug-in deve essere simile alla struttura usata nella documentazione di Grafana\glo &
 	Interno  \TBstrut \\ [2mm]
+	
+	R1V4 & 
+	Obbligatorio & 
+	L'applicazione esterna deve essere sviluppata attraverso tecnologie web &
+	Capitolato \TBstrut \\ [2mm]
+	
+	R1V4.1 & 
+	Obbligatorio & 
+	Il linguaggio di programmazione per l'applicazione esterna deve essere Javascript e deve utilizzare lo standard \textit{ECMAScript6} (\textit{ES6}) &
+	Interno  \TBstrut \\ [2mm]
+	
+	R1V4.2 & 
+	Obbligatorio & 
+	Il linguaggio di markup per l'applicazione esterna deve essere HTML5 e deve seguire lo standard W3C &
+	Interno  \TBstrut \\ [2mm]
+	
+	R1V4.3 & 
+	Obbligatorio & 
+	Il linguaggio di presentazione per l'applicazione esterna deve essere CSS3 e deve seguire lo standard W3C &
+	Interno  \TBstrut \\ [2mm]
+	
+	%MARCO R.
+	%PROSEGUIRE SEGUENDO IL REQUISITO DI VINCOLO v2 E AGGIUNGENDO LE COSE CORRISPONDENTI CHE MANCANO
+	%ESEMPIO: NELL'APP NON DEVE FUNZIONARE SUI BROWSER MA TRAMITE NODEJS + ELECTRON + REACT E QUINDI AGGIUGERE QUELLA COSA Lì ECC ECC
 		
 	R2V3 &
 	Desiderabile &
@@ -91,6 +125,9 @@
 	Desiderabile &
 	Devono essere eseguiti test funzionali mediante il framework: Selenium &
 	Interno  \TBstrut \\ [2mm]
+	
+	%MARCO DALLAS
+	%AGGIUNGERE EVENTUALMENTE DEI DETTAGLI SUI VINCOLI NELL'UTILIZZO DI GIT IN GENERALE
 	\rowcolor{white}
 	\caption{Requisiti vincolo}
 \end{longtable}
