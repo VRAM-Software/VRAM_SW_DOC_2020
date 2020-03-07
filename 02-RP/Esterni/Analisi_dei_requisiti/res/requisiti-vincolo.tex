@@ -19,17 +19,27 @@
 	
 	R1V1.5 &
 	Obbligatorio &
-	I dati prodotti dovranno essere disponibili al sistema di Grafana\glosp per la creazione di grafici e dashboard\glo  &
+	Tutti i dati prodotti dovranno essere disponibili al sistema di Grafana\glosp per la creazione di grafici e dashboard\glo &
 	Capitolato  \TBstrut \\ [2mm]
+	
+	R3V1.5.1 &
+	Opzionale &
+	Tutti i dati prodotti dal plug-in di Grafana\glosp dovranno essere disponibili al sistema stesso per la creazione di grafici e dashboard\glo &
+	Interno  \TBstrut \\ [2mm]
+	
+	R1V1.5.2 &
+	Obbligatorio &
+	Tutti i dati prodotti dall'applicazione esterna per l'addestramento degli algoritmi di predizione dovranno essere disponibili al sistema di Grafana\glosp per la creazione di grafici e dashboard\glo &
+	Interno  \TBstrut \\ [2mm]
 
 	R1V2 & 
 	Obbligatorio & 
-	Il plug-in deve essere sviluppato mediante tecnologie web &
+	Il plug-in deve essere sviluppato attraverso tecnologie web &
 	Capitolato  \TBstrut \\ [2mm]
 	
 	R1V2.1 & 
 	Obbligatorio & 
-	Il linguaggio di programmazione per il plug-in di Grafana\glosp deve essere javascript e deve utilizzare lo standard \textit{ECMAScript6} (\textit{ES6}) dato l'utilizzo di Grafana\glosp dello stesso standard &
+	Il linguaggio di programmazione per il plug-in di Grafana\glosp deve essere Typescript &
 	Interno  \TBstrut \\ [2mm]
 	
 	R1V2.2 & 
@@ -71,6 +81,61 @@
 	Desiderabile &
 	La struttura dei file del plug-in deve essere simile alla struttura usata nella documentazione di Grafana\glo &
 	Interno  \TBstrut \\ [2mm]
+	
+	R1V4 & 
+	Obbligatorio & 
+	L'applicazione esterna deve essere sviluppata attraverso tecnologie web &
+	Capitolato \TBstrut \\ [2mm]
+	
+	R1V4.1 & 
+	Obbligatorio & 
+	Il linguaggio di programmazione per l'applicazione esterna deve essere Javascript e deve utilizzare lo standard \textit{ECMAScript6} (\textit{ES6}) &
+	Interno  \TBstrut \\ [2mm]
+	
+	R1V4.2 & 
+	Obbligatorio & 
+	Il linguaggio di markup per l'applicazione esterna deve essere HTML5 e deve seguire lo standard W3C &
+	Interno  \TBstrut \\ [2mm]
+	
+	R1V4.3 & 
+	Obbligatorio & 
+	Il linguaggio di presentazione per l'applicazione esterna deve essere CSS3 e deve seguire lo standard W3C &
+	Interno  \TBstrut \\ [2mm]
+
+	R1V4.4 & 
+	Obbligatorio & 
+	L'interfaccia utente dell'applicazione esterna deve essere sviluppata tramite il framework Javascript React &
+	Interno  \TBstrut \\ [2mm]
+
+	R1V4.5 & 
+	Obbligatorio & 
+	La logica dell'applicazione, ovvero l'interazione tra il sistema operativo e l'applicazione, deve essere sviluppata mediante codice NodeJs &
+	Interno  \TBstrut \\ [2mm]
+
+	R1V4.6 & 
+	Obbligatorio & 
+	Per sviluppare l'applicazione esterna deve essere utilizzato il framework Javascript Electron che permette di gestire il rendering e la logica del prodotto &
+	Interno  \TBstrut \\ [2mm]
+	
+	R1V5 & 
+	Obbligatorio & 
+	L'applicazione esterna deve funzionare nei sistemi operativi più recenti data la caratteristica di Electron di essere multi-piattaforma & 
+	Interno  \TBstrut \\ [2mm]
+
+	R1V5.1 & 
+	Obbligatorio & 
+	L'applicazione esterna deve funzionare per il sistema operativo Windows 10 &
+	Interno  \TBstrut \\ [2mm]
+
+	R1V5.2 & 
+	Desiderabile & 
+	L'applicazione esterna deve funzionare per una qualsiasi distribuzione recente di Linux &
+	Interno  \TBstrut \\ [2mm]
+
+	R1V5.3 & 
+	Desiderabile & 
+	L'applicazione esterna deve funzionare per il sistema operativo MacOS Catalina &
+	Interno  \TBstrut \\ [2mm]
 		
 	R2V3 &
 	Desiderabile &
@@ -79,18 +144,29 @@
 	
 	R2V3.1 &
 	Desiderabile &
-	Il codice sorgente deve essere analizzato staticamente mediante SonarJs\glo &
+	Il codice sorgente dell'applicazione esterna deve essere analizzato staticamente mediante SonarJs\glo &
+	Interno  \TBstrut \\ [2mm]
+	
+	R2V3.1 &
+	Desiderabile &
+	Il codice sorgente del plug-in deve essere analizzato staticamente mediante SonarTs\glo &
 	Interno  \TBstrut \\ [2mm]
 	
 	R2V3.2 &
 	Desiderabile &
-	Il codice sorgente deve essere analizzato dinamicamente mediante GitHub Actions e JS Unit Testing &
+	Il codice sorgente deve essere analizzato dinamicamente mediante GitHub Actions &
+	Interno  \TBstrut \\ [2mm]
+	
+	R1V3.4 &
+	Obbligatorio &
+	Il codice sorgente deve essere testato mediante lo strumento Jest &
 	Interno  \TBstrut \\ [2mm]
 	
 	R2V3.3 &
 	Desiderabile &
 	Devono essere eseguiti test funzionali mediante il framework: Selenium &
 	Interno  \TBstrut \\ [2mm]
+	
 	\rowcolor{white}
 	\caption{Requisiti vincolo}
 \end{longtable}
