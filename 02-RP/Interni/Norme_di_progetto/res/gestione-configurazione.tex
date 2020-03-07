@@ -9,7 +9,9 @@
 	\subsubsection{Attività}
 		\paragraph{Versionamento}\mbox{}\\ [1mm]
 		Le modifiche effettuate ai documenti ed ai file contenenti codice sorgente sono identificate da un numero di versione presente all'interno dei file stessi. Per quanto riguarda i documenti, ogni numero di versione sarà presente nel nome del file ed avrà una corrispondente riga nella tabella delle modifiche così da avere uno storico delle modifiche effettuate al documento. Per il codice sorgente del software le modifiche effettuate in una versione saranno consultabili sulla sezione rilasci di GitHub e saranno identificate da opportuni tag.
-		\subparagraph*{Numerazione delle versioni del documento} %AGGIUNGERE NUMERAZIONE CODICE SORGENTE
+		\newline
+		La numerazione per il versionamento del codice sorgente si applicherà in modo indipendente alle singole componenti software che compongono il prodotto finale, tuttavia esisterà un'unico versione per il prodotto finale, che seguirà le linee guida del versionamento del codice sorgente basate su risoluzione di problemi e nuove funzionalità minori/maggiori. Nelle note di rilascio del prodotto finale saranno poi riportate le versioni dei singoli componenti che lo compongono ovvero documentazione, plugin Grafana\glosp e applicativo di addestramento esterno. Le modifche ed i rilasci saranno tracciabili tramite il repository principale grafana\_prediction che contiene al suo interno gli altri repository come sottomoduli.
+		\subparagraph*{Numerazione delle versioni del documento}
 		Per identificare univocamente le versioni dei documenti seguiamo le indicazioni dell'ente ETSI, dunque la numerazione delle versioni è composta da 3 cifre nel formato X.Y.Z e la prima bozza ha versione 0.0.1. Le modifiche al documento aggiorneranno le cifre nel seguente modo:
 		\begin{itemize}
 			\item \textbf{Z} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche editoriali\glosp al documento, es. X.Y.1, X.Y.2 etc.;
@@ -24,27 +26,48 @@
 		\newline
 		Ogni incremento sulle singole cifre è rigorosamente un +1, non possono essere saltati numeri.
 		
-		\paragraph{Utilizzo di Git} %SPIEGARE UTILIZZO DI GIT DA PARTE NOSTRA 3.2.2.6 NDP 8-LAB RA
+		\subparagraph*{Numerazione delle versioni del codice sorgente}
+		Per identificare univocamente le versioni del codice sorgente utilizziamo una numerazione basata su 3 cifre nel formato X.Y.Z, la prima bozza avrà versione 0.0.0 e le modifiche aggiorneranno le cifre della versione nel modo seguente:
+		\begin{itemize}
+			\item \textbf{Z} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche al codice sorgente al fine di risolvere problemi riscontrati nel software;
+			\item \textbf{Y} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche al codice sorgente al fine di aggiungere nuove funzionalità di entità minore al software, la nuova versione deve inoltre presentare piena compatibilità con le versioni precedenti. Se sono state eseguite modifiche sia per risolvere problemi che per aggiungere nuove funzionalità minori allora entrambe le cifre Z e Y saranno incrementate, es. X.1.1, X.2.2 etc;
+			\item \textbf{X} : Questa cifra viene incrementata ogni volta che vengono effettuate modifiche al codice al fine di aggiungere nuove funzionalità di entità maggiore al software, ad esempio novità che cambino in modo importante l'uso del software o le funzionalità che esso offre. Un aumento di versione di questo tipo può, se necessario, non essere retrocompatibile.
+		\end{itemize}
+		La prima versione finale ha versione 1.0.0.
+		\newline
+		Ogni incremento sulle singole cifre è rigorosamente un +1, non possono essere saltati numeri.
 		
 	\paragraph{Gestione delle modifiche}\mbox{}\\ [1mm]
 		Al fine di monitorare e limitare le modifiche al ramo principale del repository\glo, master, è utilizzato il meccanismo di pull request fornito da GitHub. Ogni membro del gruppo può creare branch secondari, secondo il workflow\glosp feature branch, su cui effettuare modifiche, tuttavia per unirle al branch master è necessario aprire una pull request che dovrà essere revisionata dai verificatori tramite i servizi di revisione integrati in GitHub. Una volta revisionata positivamente è compito del responsabile del documento approvare la pull request ed effettuare quindi l'effettiva unione delle modifiche nel branch master.
 		\newline
-		In sintesi, per effettuare modifiche ai documenti sono previsti i seguenti passaggi:
+		In sintesi, per effettuare modifiche ai file sono previsti i seguenti passaggi:
 		\begin{itemize}
-			\item contattare il responsabile del documento affinché autorizzi la modifica del documento;
-			\item creare un branch secondario ed effettuare le modifiche al documento;
+			\item contattare il responsabile del file affinché autorizzi la modifica del file stesso;
+			\item creare un branch secondario ed effettuare le modifiche al file;
 			\item aprire una pull request per unire le modifiche al ramo master;
 			\item i verificatori revisionano la pull request ed eventualmente richiedono aggiornamenti;
 			\item completata la revisione il responsabile approva la pull request.
 		\end{itemize}
+	
+		Il meccanismo appena esposto di applica anche al codice sorgente, dove inoltre sono presenti dei sistemi di verifica automatica e di continuous integration che possono bloccare le pull request se le modifiche effettuate non rispettano i livelli di qualità desiderati o se interrompono la compilazione o il superamento dei test automatici sul codice. In particolare, gli strumenti utilizzati a questo scopo sono le Github Actions per implementare la continuous integration, JEst per l'esecuzione dei test automatici sul codice sorgente ed i servizi Coveralls e SonarCloud per controllare la qualità del codice sorgente.
 		
 	\paragraph{Repository}\mbox{}\\ [1mm]
 		Per tenere traccia di versioni e modifiche fatte a documenti e codice è utilizzato il sistema di versionamento\glosp distribuito Git, che può essere utilizzato tramite riga di comando o utilità grafiche come GitHub Desktop o GitKraken.
-		Il repository\glosp dei documenti è ospitato sul sito GitHub all'indirizzo: 
+		La struttura dei repository utlizzati è la seguente:
+		\newline
+		\dirtree{%
+			.1 grafana\_prediction.
+			.2 VRAM\_SW\_DOC\_2020.
+			.2 grafana\_prediction\_plugin.
+			.2 prediction\_configuration.
+		}
+		\mbox{}\\ % forza un newline
+		Dove grafana\_prediction è il repository principale e gli altri sono suoi sottomoduli, configurati tramite la funzionalità Git submodules di Git.
+		Il repository\glosp principale, contenente quindi i sottomoduli, è ospitato sul sito GitHub all'indirizzo: 
 		\begin{center}
-			\url{https://github.com/marcoDallas/VRAM_SW_DOC_2020/}
+			\url{https://github.com/VRAM-Software/grafana_prediction}
 		\end{center}
-		\subparagraph{Struttura del repository} %VERIFICARE COM'E ORA LA STRUTTURA ED EVENTUALMENTE AGGIORNARLA
+		\subparagraph{Struttura del repository VRAM\_SW\_DOC\_2020}
 		Al fine di fornire una navigazione agevole e standardizzata, il contenuto del repository\glosp è organizzato in modo gerarchico tramite directory secondo il seguente schema:
 		\newline
 		\dirtree{%
@@ -85,14 +108,31 @@
 		\begin{itemize}
 			\item file sorgente \LaTeX \xspace con estensione .tex;
 			\item file immagine, preferibilmente in formato .png;
-			\item file testuali in formato .md o .txt.			
+			\item file testuali in formato .md o .txt;
+			\item tutti i file di codice sorgente come .js, .ts etc.		
 		\end{itemize}
 	\subsubsection{Strumenti di supporto}
-	\paragraph{GitHub} %VEDI TECNOLOGIE 3.2.2.2 NDP 8-LAB DELL'RA
+	\paragraph{GitHub}
 	\subparagraph*{Strumenti GitHub utilizzati}\mbox{}\\ [1mm]
 		In aggiunta ai servizi già elencati, al fine di migliorare efficacia ed efficienza, vengono utilizzate le funzionalità di "Issue Tracking System",
 		% milestone qui è usato come nome di funzione github quindi non va a glossario  
 		"Milestone" e "Project Board" integrate in GitHub. Ognuna di queste funzionalità viene usata solo da chi autorizzato, ad esempio rilasci di versioni, creazione e chiusura di milestone sono concesse solo al responsabile di progetto\glo.
 		\newline
-		Per il repository\glosp contenente il codice sorgente del software saranno usate anche le GitHub Actions al fine di implementare la pratica della continuous integration.
+		Vengono inoltre utilizzate le "Labels" offerte dallo Issue Tracking System Github di per definire le tipologie di problemi e le loro priorità.
+		\newline
+		Per il repository\glosp contenente il codice sorgente del software sono utilizzate le GitHub Actions al fine di implementare la pratica della continuous integration, che utilizzerà strumenti quali JEst, SonarCloud e Coveralls per eseguire le verifiche automatiche sul codice sorgente.
+	\paragraph{SonarCloud}
+	I repository del codice sorgente sono stati collegati al servizio SonarCloud ed è stata inserita la sua analisi statica del codice sorgente nei controlli eseguiti dalla continuous integration. Le pagine sonarcloud dei repository sono disponibili al seguente indirizzo: 
+	\begin{center}
+		\url{https://sonarcloud.io/organizations/vram-software/projects}
+	\end{center}
+	\paragraph{Coveralls}
+	Poiché SonarCloud, nella versione disponibile al momento dello svolgimento del progetto\glo, non supporta l'analisi del code coverage tramite Github Actions utilizziamo il servizio offerto da Coveralls e sempre integrato nella continuous integration. Le pagine Coveralls dei repository sono disponibili ai seguenti indirizzi:
+	\begin{center}
+		\url{https://coveralls.io/github/VRAM-Software/grafana_prediction_plugin}
+	\end{center}
+	\begin{center}
+	\url{https://coveralls.io/github/VRAM-Software/prediction_configuration_utility}
+	\end{center}
+	
 		
