@@ -4,6 +4,10 @@
 %\caption{Schema generale: addestramento degli algoritmi di predizione con applicativo esterno con estensioni}
 %\end{figure}
 \subsection{UC4 - Addestramento degli algoritmi di predizione con applicativo esterno}
+\begin{figure}[H]
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/UC4_-_Addestramento_degli_algoritmi_di_predizione_con_applicativo_esterno.png}
+	\caption{Diagramma degli use case di UC4}
+\end{figure}
 \begin{itemize}
     \item \textbf{Codice identificativo}: UC4;
     \item \textbf{Titolo}: addestramento degli algoritmi di predizione con applicativo esterno;
@@ -19,18 +23,15 @@
             \item inserimento delle note per l'utente (UC4.8);
             \item selezione del modello di predizione su cui eseguire l'addestramento (UC4.2);
             \item avvio dell'addestramento (UC4.3);
+    		\item arresto dell'addestramento (UC4.4);
             \item ricezione del file JSON contenente i predittori (UC4.5);
             \item visualizzazione del messaggio di conferma della conclusione dell'addestramento (UC4.9). 
         \end{enumerate}
-    \item \textbf{Scenari alternativi}:
-    \begin{enumerate}
-    	\item arresto dell'addestramento (UC4.4).
-    \end{enumerate}
     \item \textbf{Estensioni}:
-    \begin{enumerate}
-    	\item se il caricamento del file CSV non è avvenuto con successo viene visualizzato un messaggio di errore (UC18);
-    	\item se il caricamento del file JSON non è avvenuto con successo viene visualizzato un messaggio di errore (UC6).
-    \end{enumerate}
+	    \begin{enumerate}
+	    	\item se il caricamento del file CSV non è avvenuto con successo viene visualizzato un messaggio di errore (UC18);
+	    	\item se il caricamento del file JSON non è avvenuto con successo viene visualizzato un messaggio di errore (UC6).
+	    \end{enumerate}
 \end{itemize}
 
 \subsubsection{UC4.1 - Inserimento del file in formato CSV contenente i dati per l'addestramento}
