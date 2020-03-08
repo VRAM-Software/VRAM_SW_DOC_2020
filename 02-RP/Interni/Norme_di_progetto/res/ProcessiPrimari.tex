@@ -322,6 +322,14 @@ Per la progettazione le metriche di qualità utilizzate sono:
 		\item[] \textbf{Formula}: si calcola con un valore intero.
 	\end{itemize} 	
 \end{itemize}
+
+\subparagraph{Integrazione} \mbox{} \\
+L'attività di integrazione del software avviene in parte in automatico ed in parte tramite azioni e verifiche manuali.
+\newline
+Per l'integrazione automatica utilizziamo le Github Actions, offerte da Github, con cui implementiamo la continuous integration. L'integrazione continua automatica viene eseguita ad ogni push effettuato sul repository remoto ed esegue la compilazione, i test di unità, analisi statica\glosp del codice per verificare che soddisfi i livelli di qualità desisderati e calcola il code coverage. I servizi utilizzati per eseguire i controlli sono JEst per i test d'unità, Coveralls per il code coverage e SonarCloud per l'analisi statica\glosp del codice.
+\newline
+L'integrazione manuale consiste invece nel verificare il corretto funzionamento dell'applicativo esterno di addestramento, del plugin Grafana\glosp e del loro dialogo. La verifica dei singoli componenti verrà automatizzata, per quanto possibile, tramite Selenium\glo. Queste integrazioni vengono effettuate in seguito all'implementazione di ogni incremento del modello di sviluppo incrementale, quindi alla creazione di ogni nuova baseline\glo.
+
 \paragraph{Codifica}
 \subparagraph*{Scopo}\mbox{}\\ [1mm]
 Lo scopo di questa attività è dare una norma che definisca tutte le regole di codifica per garantire leggibilità e manutenibilità del codice.
@@ -377,28 +385,16 @@ var myVar = 0;
 		\item nome completo del file con relativa estensione;
 		\item autore del file;
 		\item data di creazione;
-		\item versione;
-		\item breve descrizione del contenuto del file;
-		\item registro delle modifiche.
+		\item breve descrizione del contenuto del file.
 	\end{itemize}
 \begin{lstlisting}
-//**
+/**
 * File: fileName
 * Author: Name Surname
 * Creation date: YYYY-MM-DD
-* Version: X.Y
 * Description: This header is for demonstration purpose only.
-*
-* Version ||   Author   ||   Date   || Changes
-*  X.Y.Z    Name Surname  YYYY-MM-DD   Placeholder
 */
 \end{lstlisting}
-	La versione del file sarà indicata con la notazione X.Y dove:
-	\begin{itemize}
-		\item \textbf{X}: rappresenta l'indice di versione principale, un avanzamento di questo numero indica il raggiungimento di una versione stabile che porta Y ad essere azzerato;
-		\item \textbf{Y}: rappresenta l'indice di versione parziale, un avanzamento di questo numero indica l'applicazione di una modifica rilevante nel codice.
-	\end{itemize}
-	Tutte le modifiche effettuate al codice vengono verificate e al raggiungimento di una versione stabile e con sufficienti modifiche rilevanti si aumenterà l'indice di versione principale e si azzererà il parziale, la prima versione stabile, ad esempio, sarà la 1.0.
 	\item \textbf{Indentazione}: i blocchi annidati devono essere indentati con una tabulazione di quattro spazi. A tal fine gli IDE di tutti i componenti del gruppo dovranno essere configurati per rispettare suddette indicazioni. Segue un esempio di indentazione corretta:
 \begin{lstlisting}
 // OK!
