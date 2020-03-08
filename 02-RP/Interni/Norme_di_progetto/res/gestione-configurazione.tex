@@ -10,7 +10,7 @@
 		\paragraph{Versionamento}\mbox{}\\ [1mm]
 		Le modifiche effettuate ai documenti ed ai file contenenti codice sorgente sono identificate da un numero di versione presente all'interno dei file stessi. Per quanto riguarda i documenti, ogni numero di versione sarà presente nel nome del file ed avrà una corrispondente riga nella tabella delle modifiche così da avere uno storico delle modifiche effettuate al documento. Per il codice sorgente del software le modifiche effettuate in una versione saranno consultabili sulla sezione rilasci di GitHub e saranno identificate da opportuni tag.
 		\newline
-		La numerazione per il versionamento del codice sorgente si applicherà in modo indipendente alle singole componenti software che compongono il prodotto finale, tuttavia esisterà un'unico versione per il prodotto finale, che seguirà le linee guida del versionamento del codice sorgente basate su risoluzione di problemi e nuove funzionalità minori/maggiori. Nelle note di rilascio del prodotto finale saranno poi riportate le versioni dei singoli componenti che lo compongono ovvero documentazione, plugin Grafana\glosp e applicativo di addestramento esterno. Le modifche ed i rilasci saranno tracciabili tramite il repository principale grafana\_prediction che contiene al suo interno gli altri repository come sottomoduli.
+		La numerazione per il versionamento del codice sorgente applica in modo indipendente alle singole componenti software che compongono il prodotto finale. Tuttavia esiste un'unica versione per il prodotto finale, che segue le linee guida del versionamento del codice sorgente basate su risoluzione di problemi e nuove funzionalità minori/maggiori. Nelle note di rilascio del prodotto finale, saranno poi riportate le versioni dei singoli componenti che lo compongono ovvero documentazione, plugin Grafana\glosp e applicativo di addestramento esterno. Le modifche ed i rilasci saranno tracciabili tramite il repository principale grafana\_prediction che contiene al suo interno gli altri repository come sottomoduli.
 		\subparagraph*{Numerazione delle versioni del documento}
 		Per identificare univocamente le versioni dei documenti seguiamo le indicazioni dell'ente ETSI, dunque la numerazione delle versioni è composta da 3 cifre nel formato X.Y.Z e la prima bozza ha versione 0.0.1. Le modifiche al documento aggiorneranno le cifre nel seguente modo:
 		\begin{itemize}
@@ -27,7 +27,7 @@
 		Ogni incremento sulle singole cifre è rigorosamente un +1, non possono essere saltati numeri.
 		
 		\subparagraph*{Numerazione delle versioni del codice sorgente}
-		Per identificare univocamente le versioni del codice sorgente utilizziamo una numerazione basata su 3 cifre nel formato X.Y.Z, la prima bozza avrà versione 0.0.0 e le modifiche aggiorneranno le cifre della versione nel modo seguente:
+		Per identificare univocamente le versioni del codice sorgente utilizziamo una numerazione basata su 3 cifre nel formato X.Y.Z, la prima bozza ha versione 0.0.0 e le modifiche al codice aggiorneranno le cifre della versione nel modo seguente:
 		\begin{itemize}
 			\item \textbf{Z} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche al codice sorgente al fine di risolvere problemi riscontrati nel software;
 			\item \textbf{Y} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche al codice sorgente al fine di aggiungere nuove funzionalità di entità minore al software, la nuova versione deve inoltre presentare piena compatibilità con le versioni precedenti. Se sono state eseguite modifiche sia per risolvere problemi che per aggiungere nuove funzionalità minori allora entrambe le cifre Z e Y saranno incrementate, es. X.1.1, X.2.2 etc;
@@ -49,7 +49,7 @@
 			\item completata la revisione il responsabile approva la pull request.
 		\end{itemize}
 	
-		Il meccanismo appena esposto di applica anche al codice sorgente, dove inoltre sono presenti dei sistemi di verifica automatica e di continuous integration che possono bloccare le pull request se le modifiche effettuate non rispettano i livelli di qualità desiderati o se interrompono la compilazione o il superamento dei test automatici sul codice. In particolare, gli strumenti utilizzati a questo scopo sono le Github Actions per implementare la continuous integration, JEst per l'esecuzione dei test automatici sul codice sorgente ed i servizi Coveralls e SonarCloud per controllare la qualità del codice sorgente.
+		Il meccanismo sopra esposto si applica anche al codice sorgente. Inoltre in esso sono presenti anche dei sistemi di verifica automatica e di continuous integration che possono bloccare le pull request qualora le modifiche effettuate non rispettino i livelli di qualità desiderati o interrompano la compilazione o il superamento dei test automatici sul codice. In particolare, gli strumenti utilizzati a questo scopo sono Github Actions per implementare la continuous integration, JEst per l'esecuzione dei test automatici sul codice sorgente ed i servizi Coveralls e SonarCloud per controllare la qualità del codice sorgente.
 		
 	\paragraph{Repository}\mbox{}\\ [1mm]
 		Per tenere traccia di versioni e modifiche fatte a documenti e codice è utilizzato il sistema di versionamento\glosp distribuito Git, che può essere utilizzato tramite riga di comando o utilità grafiche come GitHub Desktop o GitKraken.
@@ -62,8 +62,8 @@
 			.2 prediction\_configuration.
 		}
 		\mbox{}\\ % forza un newline
-		Dove grafana\_prediction è il repository principale e gli altri sono suoi sottomoduli, configurati tramite la funzionalità Git submodules di Git.
-		Il repository\glosp principale, contenente quindi i sottomoduli, è ospitato sul sito GitHub all'indirizzo: 
+		grafana\_prediction è il repository principale e gli altri sono suoi sottomoduli, configurati tramite la funzionalità Git submodules di Git.
+		Il repository\glosp principale, contenente i sottomoduli, è ospitato sul sito GitHub all'indirizzo: 
 		\begin{center}
 			\url{https://github.com/VRAM-Software/grafana_prediction}
 		\end{center}
@@ -118,16 +118,16 @@
 		% milestone qui è usato come nome di funzione github quindi non va a glossario  
 		"Milestone" e "Project Board" integrate in GitHub. Ognuna di queste funzionalità viene usata solo da chi autorizzato, ad esempio rilasci di versioni, creazione e chiusura di milestone sono concesse solo al responsabile di progetto\glo.
 		\newline
-		Vengono inoltre utilizzate le "Labels" offerte dallo Issue Tracking System Github di per definire le tipologie di problemi e le loro priorità.
+		Vengono inoltre utilizzate le "Labels" offerte dall'Issue Tracking System di Github per definire le tipologie di problemi e le loro priorità.
 		\newline
-		Per il repository\glosp contenente il codice sorgente del software sono utilizzate le GitHub Actions al fine di implementare la pratica della continuous integration, che utilizzerà strumenti quali JEst, SonarCloud e Coveralls per eseguire le verifiche automatiche sul codice sorgente.
+		Per il repository\glosp contenente il codice sorgente del software sono utilizzate le GitHub Actions al fine di implementare la pratica della continuous integration che, a sua volta, utilizza strumenti quali JEst, SonarCloud e Coveralls per eseguire le verifiche automatiche sul codice sorgente.
 	\paragraph{SonarCloud}
-	I repository del codice sorgente sono stati collegati al servizio SonarCloud ed è stata inserita la sua analisi statica del codice sorgente nei controlli eseguiti dalla continuous integration. Le pagine sonarcloud dei repository sono disponibili al seguente indirizzo: 
+	I repository del codice sorgente sono collegati al servizio SonarCloud ed è inserita la sua analisi statica del codice sorgente nei controlli eseguiti dalla continuous integration. Le pagine sonarcloud dei repository sono disponibili al seguente indirizzo: 
 	\begin{center}
 		\url{https://sonarcloud.io/organizations/vram-software/projects}
 	\end{center}
 	\paragraph{Coveralls}
-	Poiché SonarCloud, nella versione disponibile al momento dello svolgimento del progetto\glo, non supporta l'analisi del code coverage tramite Github Actions utilizziamo il servizio offerto da Coveralls e sempre integrato nella continuous integration. Le pagine Coveralls dei repository sono disponibili ai seguenti indirizzi:
+	Poiché SonarCloud, nella versione disponibile al momento dello svolgimento del progetto\glo, non supporta l'analisi del code coverage tramite Github Actions, utilizziamo il servizio offerto da Coveralls che abbiamo integrato nella continuous integration. Le pagine Coveralls dei repository sono disponibili ai seguenti indirizzi:
 	\begin{center}
 		\url{https://coveralls.io/github/VRAM-Software/grafana_prediction_plugin}
 	\end{center}
