@@ -54,6 +54,11 @@
 											
 	\subsection{Processo di Sviluppo}
 		\subsubsection{Analisi dei Requisiti} 
+			\paragraph{Obiettivi di qualità}
+			Per l'analisi dei requisiti gli obiettivi di qualità sono:
+			\begin{itemize}
+				\item \textbf{Individuazione completa dei requisiti}: ci prefiggiamo di fare fin da subito un'individuazione più completa possibile dei requisiti per evitare il cambiamento degli stessi nel tempo.
+			\end{itemize}
 			\paragraph{Metriche} \mbox{} \\ \\
 				\textbf{M01 Scostamento dei requisiti individuati} 
 				\begin{itemize}
@@ -61,7 +66,13 @@
 					\item \textbf{Valore accettabile}: 5;
 				\end{itemize}
 			
-		\subsubsection{Progettazione} 
+		\subsubsection{Progettazione}
+			\paragraph{Obiettivi}
+			 Per la progettazione gli obiettivi di qualità sono:
+			 \begin{itemize}
+			 	\item \textbf{Semplificazione della gerarchia}: ci prefiggiamo di mantenere la gerarchia il più semplice possibile, evitando ove possibile di aumentarne la profondità;
+			 	\item \textbf{Usare un numero limitato di design pattern}: ci prefiggiamo di usare design pattern solo nel caso in cui questi effettivamente semplifichino la struttura del progetto.
+			 \end{itemize}
 			\paragraph{Metriche} \mbox{} \\ \\
 				\textbf{M02 Accoppiamento tra le classi di oggetti} 
 				\begin{itemize}
@@ -79,7 +90,12 @@
 					\item \textbf{Valore accettabile}: $2 \le x \le 15$; 
 				\end{itemize}
 			
-			\subsubsection{Codifica} 
+		\subsubsection{Codifica}
+			\paragraph{Obiettivi}
+			Per la codifica gli obiettivi di qualità sono:
+			\begin{itemize}
+				\item \textbf{Rispetto delle norme di codifica}: ci prefiggiamo di attenerci alle norme di codifica indicate nelle \textit{Norme di Progetto} al fine di garantire la comprensibilità del codice.
+			\end{itemize}	 
 			\paragraph{Metriche} \mbox{} \\ \\
 			\textbf{M05 livello di annidamento} 
 			\begin{itemize}
@@ -98,17 +114,41 @@
 			\end{itemize}
 	
 			
-	\subsection{Processi di supporto}	
-		
+	\subsection{Processi di supporto}			
 		\subsubsection{Gestione della qualità}
+			\paragraph{Obiettivi}
+			Per la gestione della qualità gli obiettivi sono:
+			\begin{itemize}
+				\item \textbf{Mantenimento di adeguati standard di qualità}: ci prefiggiamo di mantenere degli adeguati standard di qualità in tutti i processi svolti e in ogni prodotto risultante;
+				\item \textbf{Monitoraggio della qualità}: ci prefiggiamo di mantenere monitorata la qualità dei processi svolti e dei prodotti risultanti al fine di migliorare, ove necessario, i risultati.
+			\end{itemize}	 
 			\paragraph{Metriche} \mbox{} \\ \\
 				\textbf{M10 Percentuale di metriche soddisfatte}
 				\begin{itemize}
 					\item \textbf{Valore preferibile}: $100\%$;
 					\item \textbf{Valore accettabile}: $\ge 60\%$.
 				\end{itemize}
-			
+        
+		\subsubsection{Gestione dei rischi} 
+			\paragraph{Obiettivi}
+			Per la gestione dei rischi gli obiettivi di qualità sono:
+			\begin{itemize}
+				\item \textbf{Individuazione completa dei rischi}: ci prefiggiamo di fare fin da subito un'individuazione più completa possibile dei rischi per evitare il cambiamento degli stessi nel tempo, in modo da essere preparati nel caso si verificassero.
+			\end{itemize}
+			\paragraph{Metriche} \mbox{} \\ \\
+			\textbf{M19 Rischi non preventivati} 
+			\begin{itemize}
+				\item \textbf{Valore preferibile}: 0;
+				\item \textbf{Valore accettabile}: $ \le 5$;
+			\end{itemize}
+
 		\subsubsection{Verifica}
+		\paragraph{Obiettivi}
+		Per la verifica gli obiettivi di qualità sono:
+		\begin{itemize}
+			\item \textbf{Completezza della verifica}: ci prefiggiamo di svolgere una verifica completa su ogni parte dei nostri prodotti;
+			\item \textbf{Efficacia della verifica}: ci prefiggiamo di risolvere ogni difetto rilevato dalla verifica al fine di renderla efficacie.
+		\end{itemize}
 		\paragraph{Metriche} \mbox{} \\ \\
 		\textbf{M28 Code coverage}
 		\begin{itemize}
@@ -130,15 +170,63 @@
 			\item \textbf{Valore preferibile}: $100\%$
 			\item \textbf{Valore accettabile}: $\ge 90\%$  
 		\end{itemize}
-
-		
 			
 		\subsubsection{Gestione dei cambiamenti}
+		\paragraph{Obiettivi}
+		Per la gestione dei cambiamenti gli obiettivi di qualità sono:
+		\begin{itemize}
+			\item \textbf{Efficacia nel tempo}: ci prefiggiamo di gestire ogni cambiamento necessario in tempi ragionevoli.
+		\end{itemize}
 		 	\paragraph{Metriche} \mbox{} \\ \\
 		 	\textbf{M20 Tempo medio risoluzione errori}
 			\begin{itemize}
 				\item \textbf{Valore preferibile}: $\le 10$minuti;
 				\item \textbf{Valore accettabile}: $\le 120$minuti.
+			\end{itemize}
+      
+     \subsection{Processi organizzativi}
+		\subsubsection{Pianificazione delle risorse}
+			\paragraph{Obiettivi}
+			Per la pianificazione delle risorse gli obiettivi di qualità sono:
+			\begin{itemize}
+				\item \textbf{Rispetto delle tempistiche preventivate}: ci prefiggiamo di rispettare le tempistiche indicate nel preventivo nel documento \textit{Piano di Progetto};
+				\item \textbf{Rispetto dei costi preventivati}: ci prefiggiamo di rispettare i costi indicati nel preventivo nel documento \textit{Piano di Progetto};
+			\end{itemize}	
+			\paragraph{Metriche} \mbox{} \\ \\
+			\textbf{M12 Planned Value}
+			\begin{itemize}
+				\item \textbf{Valore preferibile}: $\ge$ 0;
+				\item \textbf{Valore accettabile}: $\ge$0.
+			\end{itemize}
+			\textbf{M13 Earned Value}
+			\begin{itemize}
+				\item \textbf{Valore preferibile}: = PV;
+				\item \textbf{Valore accettabile}: $\ge$ 0.
+			\end{itemize}
+			\textbf{M14 Actual cost}
+			\begin{itemize}
+				\item \textbf{Valore preferibile}: 0 $\le$ AC $\le$ PV;
+				\item \textbf{Valore accettabile}: 0 $\le$ AC $\le$ budget totale.
+			\end{itemize}
+			\textbf{M15 Cost Performance Index}
+			\begin{itemize}
+				\item \textbf{Valore preferibile}: = 1;
+				\item \textbf{Valore accettabile}: 0.95 $\le$ CPI $\le$ 1.05.
+			\end{itemize}
+			\textbf{M16 Schedule Performance Index}
+			\begin{itemize}
+				\item \textbf{Valore preferibile}: = 1;
+				\item \textbf{Valore accettabile}: 0.95 $\le$ SPI $\le$ 1.05.
+			\end{itemize}
+			\textbf{M17 Estimated Cost at Completion}
+			\begin{itemize}
+				\item \textbf{Valore preferibile}: pari a quanto preventivato;
+				\item \textbf{Valore accettabile}: preventivo-5\% $\le$ EAC $\le$ preventivo+5\%.
+			\end{itemize}
+			\textbf{M18 Schedule at Completion}
+			\begin{itemize}
+				\item \textbf{Valore preferibile}: pari a quanto preventivato;
+				\item \textbf{Valore accettabile}: pari a quanto preventivato.
 			\end{itemize}
 
 	\subsection{Tabella riassuntiva delle metriche adottate}

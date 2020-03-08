@@ -1,0 +1,10 @@
+\section{Utilizzo di Git}
+Il repository\glosp Git è composto da varie sezioni chiamate \textit{branch}. Il loro scopo è garantire lo sviluppo isolato e parallelo di diversi compiti. Il branch principale si chiama master, e in esso si trovano tutte le funzionalità che sono state implementate ed approvate tramite verifica. Ad ogni nuova funzionalità da implementare, è necessario creare un nuovo branch e svilupparla al suo interno. Quando si è conclusa l'implementazione, la funzionalità deve essere verificata e ciò viene fatto tramite il meccanismo chiamato pull request. Questo meccanismo impone dei controlli automatici effettuati tramite continuous integration ed una verifica obbligatoria da parte di un verificatore. Solo quando egli approverà la funzionalità, sarà possibile effettuare il merge nel ramo master.
+Qui vengono elencate le regole da seguire per l'utilizzo di Git:
+\begin{itemize}
+	\item non si lavora mai sul branch master, in quanto nel master devono essere presenti solo i contenuti verificati;
+	\item si deve usare un branch dedicato alla funzionalità su cui si sta lavorando;
+	\item solo dopo la verifica del contenuto di un qualsiasi branch si può procedere al merge nel branch master;
+	\item prima di iniziare a lavorare bisogna scaricare in locale le modifiche effettuate al repository\glosp dagli altri componenti del gruppo;
+	\item bisogna inserire un messaggio di commit chiaro ed esplicativo.
+\end{itemize}
