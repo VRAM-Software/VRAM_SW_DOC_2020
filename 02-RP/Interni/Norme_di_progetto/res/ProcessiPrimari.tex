@@ -385,28 +385,16 @@ var myVar = 0;
 		\item nome completo del file con relativa estensione;
 		\item autore del file;
 		\item data di creazione;
-		\item versione;
-		\item breve descrizione del contenuto del file;
-		\item registro delle modifiche.
+		\item breve descrizione del contenuto del file.
 	\end{itemize}
 \begin{lstlisting}
-//**
+/**
 * File: fileName
 * Author: Name Surname
 * Creation date: YYYY-MM-DD
-* Version: X.Y
 * Description: This header is for demonstration purpose only.
-*
-* Version ||   Author   ||   Date   || Changes
-*  X.Y.Z    Name Surname  YYYY-MM-DD   Placeholder
 */
 \end{lstlisting}
-	La versione del file sarà indicata con la notazione X.Y dove:
-	\begin{itemize}
-		\item \textbf{X}: rappresenta l'indice di versione principale, un avanzamento di questo numero indica il raggiungimento di una versione stabile che porta Y ad essere azzerato;
-		\item \textbf{Y}: rappresenta l'indice di versione parziale, un avanzamento di questo numero indica l'applicazione di una modifica rilevante nel codice.
-	\end{itemize}
-	Tutte le modifiche effettuate al codice vengono verificate e al raggiungimento di una versione stabile e con sufficienti modifiche rilevanti si aumenterà l'indice di versione principale e si azzererà il parziale, la prima versione stabile, ad esempio, sarà la 1.0.
 	\item \textbf{Indentazione}: i blocchi annidati devono essere indentati con una tabulazione di quattro spazi. A tal fine gli IDE di tutti i componenti del gruppo dovranno essere configurati per rispettare suddette indicazioni. Segue un esempio di indentazione corretta:
 \begin{lstlisting}
 // OK!
