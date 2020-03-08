@@ -24,11 +24,8 @@
 			\item inserimento delle note per l'utente (UC1.7);
 			\item selezione del modello di predizione su cui eseguire l'addestramento (UC1.2);
 			\item avvio dell'addestramento (UC1.3);
-			\item visualizzazione del messaggio di conferma della conclusione dell'addestramento (UC1.8).
-		\end{enumerate}
-	\item \textbf{Scenari alternativi}:
-		\begin{enumerate}
 			\item arresto dell'addestramento (UC1.4).
+			\item visualizzazione del messaggio di conferma della conclusione dell'addestramento (UC1.8).
 		\end{enumerate}
 	\item \textbf{Estensioni}:
 	\begin{itemize}
@@ -74,6 +71,7 @@
 	\item \textbf{Codice identificativo}: UC1.7;
 	\item \textbf{Titolo}: inserimento delle note per l'utente;
 	\item \textbf{Attori primari}: utente;
+	\item \textbf{Attori secondari}: Grafana\glo;
 	\item \textbf{Descrizione}: l'utente inserisce le note che compariranno nel file JSON risultante dall'addestramento dell'algoritmo;
 	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glosp e il file CSV contenente i dati per l'addestramento è stato inserito correttamente;
 	\item \textbf{Postcondizioni}: l'utente ha inserito correttamente le note che compariranno nel file JSON risultante dall'addestramento dell'algoritmo;
