@@ -7,20 +7,47 @@ Lo scopo del processo\glosp di validazione\glosp è accertare che il prodotto\gl
 Le aspettative del gruppo sono di normare adeguatamente il processo\glosp di validazione\glosp al fine di rilasciare un prodotto\glosp privo di errori gravi e capace di rispondere alle richieste del proponente.
 
 \subsubsection{Descrizione}
-Le attese sono quelle del committente e corrispondono, se stilata correttamente, all'\textit{Analisi dei Requisiti}. 
+Le attese sono quelle del committente e corrispondono, se stilata correttamente, all'\textit{Analisi dei Requisiti v. 3.1.1}. 
 Per eseguire una validazione\glosp si deve avere un prodotto\glosp che è a un sufficiente livello di avanzamento, quindi il numero di validazioni svolte è molto minore rispetto al numero delle verifiche, che iniziano a venire eseguite prima.
+Durante questo processo vengono svolti i test di accettazione tramite i quali il proponente valida il prodotto\glosp software.
 
 \subsubsection{Attività}
-	\paragraph{Validazione}
-	Ci sono due tipologie di validazione\glo:
-	\begin{itemize}
-		\item interna: ha successo se i requisiti in precedenza scritti sono soddisfatti;
-		\item esterna: ha successo se il committente fornisce un riscontro positivo ed è soddisfatto.
-	\end{itemize}
-	Più nel particolare la validazione\glosp consiste nel:	
-	\begin{itemize}
-		\item selezionare i requisiti da soddisfare;
-		\item individuare dei test specifici per misurare il soddisfacimento dei requisiti selezionati;
-		\item eseguire i test;
-		\item analizzare i risultati dei test.
-	\end{itemize}
+	\paragraph{Test di accettazione}
+		\subparagraph*{Codifica del test}
+		Per ogni test vengono definiti il codice identificativo, la descrizione, lo stato e l'esito.
+		\begin{itemize}
+			\item il codice identificativo è scritto in questo formato:\\
+			\textbf{tipologia[codice\_padre].[codice\_figlio]}
+			\begin{itemize}
+				\item \textbf{tipologia}:
+				\begin{itemize}
+					\item \textbf{TA}: test di accettazione;
+				\end{itemize}
+				\item \textbf{codice\_padre}: numero che identifica univocamente il test;
+				\item \textbf{codice\_figlio}: numero progressivo che indica i sotto-test che compongono il padre. 
+			\end{itemize}
+			\item descrizione: spiegazione concisa e completa di ciò che verifica il test;
+			\item stato:
+			\begin{itemize}
+				\item \textbf{I}: implementato;
+				\item \textbf{NI}: non implementato.
+			\end{itemize}
+			\item Esito:
+			\begin{itemize}
+				\item \textbf{P}: positivo;
+				\item \textbf{N}: negativo;
+				\item \textbf{NE}: non eseguito.
+			\end{itemize}
+		\end{itemize}
+		\subparagraph*{Descrizione} \mbox{}\\ [1mm]
+		I test di accettazione, o di collaudo, vengono effettuati ad ogni pre-rilascio, quindi dopo l'esecuzione dei test di sistema. Essi servono a confermare il soddisfacimento dei requisiti da parte del committente; infatti questi tipi di test ne richiedono la presenza. Se questi test vengono superati significa che il prodotto\glosp software è pronto per il rilascio. 
+		Per identificare un test di accettazione viene utilizzata una codifica con il seguente formato:\\
+		\textbf{TA[codice]}
+		Dove codice è un numero progressivo nel formato: [X].[Y] con X e Y numeri maggiori di zero.
+\subsection{Strumenti di supporto}
+\paragraph{Jest}\mbox{}\\ [1mm]
+Per la gestione dei test del codice JavaScript il nostro gruppo ha utilizzato il framework Jest per eseguire test d'unità sul codice React e NodeJS.
+\paragraph{React Testing Library}\mbox{}\\ [1mm]
+A supporto del framework Jest, viene utilizzata la libreria Testing Library per React che facilita la scrittura di test manutenibili per componenti React.
+\paragraph{Coveralls}\mbox{}\\ [1mm]
+Coveralls è uno strumento che permette di quantificare la percentuale di codice testato.

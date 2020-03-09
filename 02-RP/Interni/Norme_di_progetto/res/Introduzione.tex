@@ -1,18 +1,19 @@
 \section{Introduzione}
 \subsection{Scopo del documento}
-Il presente documento ha come scopo la definizione di regole e convenzioni che stanno alla base del progetto\glosp e che tutti i membri del gruppo devono seguire. In questo modo si garantisce consistenza e omogeneità in tutto il materiale del progetto\glosp stesso. Infatti ogni componente del gruppo è obbligato a visionare questo documento e a rispettarne rigorosamente le norme al fine di lavorare secondo una metodologia coesa e uniforme.
+Il presente documento ha come scopo la definizione di regole e convenzioni che stanno alla base del progetto\glosp e che tutti i membri del gruppo devono seguire. In questo modo si garantisce consistenza e omogeneità in tutto il materiale del progetto\glosp stesso. Infatti ogni componente del gruppo è obbligato a visionare questo documento e a rispettarne rigorosamente le regole definite al fine di lavorare secondo una metodologia coesa e uniforme.
 \subsection{Scopo del prodotto}
-Il capitolato\glosp C4 ha lo scopo di implementare un plug-in di Grafana\glosp scritto in linguaggio Javascript che eseguirà gli algoritmi di Support Vector Machine SVM\glosp o Regressione Lineare RL\glo, i quali, leggendo da un file JSON la loro configurazione, saranno in grado di generare previsioni che potranno essere aggiunte al flusso di monitoraggio. Il plug-in dovrà prevedere il superamento di determinati livelli di soglia per generare un allarme, oppure permettere agli operatori del servizio cloud\glosp di generare segnalazioni dei punti critici che l'erogazione mette in evidenza. Il plug-in utilizzerà un applicativo esterno per addestrare gli algoritmi di SVM\glosp ed RL\glo.
-Dunque il plug-in permetterà un'azione di monitoraggio grazie alla quale gli operatori potranno intervenire con ogni cognizione di causa sul sistema.
+Il capitolato\glosp C4 ha lo scopo di implementare un plug-in di Grafana\glosp scritto in linguaggio Javascript che esegue gli algoritmi di Support Vector Machine SVM\glosp o Regressione Lineare RL\glo, i quali, leggendo da un file JSON la loro configurazione, saranno in grado di generare previsioni che potranno essere aggiunte al flusso di monitoraggio. Il plug-in prevede il superamento di determinati livelli di soglia per generare un allarme attraverso il meccanismo di Grafana\glosp detto alert\glo. Il plug-in utilizza un applicativo esterno per addestrare gli algoritmi di SVM\glosp ed RL\glosp o altri algoritmi di predizione.
+Dunque il plug-in permette un'attività di monitoraggio grazie alla quale gli operatori possono intervenire con ogni cognizione di causa sul sistema.
 \subsection{Ambiguità e glossario}
-Questo documento verrà corredato da un \textit{Glossario v. 1.1.1} dove saranno illustrati i termini tecnici o altamente specifici per evitare ambiguità in essi. Le voci interessate saranno identificate da una 'G' a pedice.
+Questo documento è corredato da un \textit{Glossario v. 2.1.1} dove saranno illustrati i termini tecnici o altamente specifici per evitare ambiguità in essi. Le voci interessate sono identificate da una 'G' a pedice.
 \subsection{Classificazione delle metriche}
+In questo documento vengono definite delle metriche che garantiscono qualità di processo\glosp e di prodotto\glosp in modo misurabile.
 Per avere un riferimento univoco alle metriche che permetta di individuarle facilmente all'interno dei documenti, viene utilizzato un codice identificativo. Questo codice avrà la seguente struttura: \\
 \textbf{M[Numero]} \\
 dove 
 \begin{itemize}
 	\item \textbf{M} indica che si tratta di una metrica;
-	\item \textbf{Numero} è un numero progressivo di due cifre.
+	\item \textbf{Numero} è un numero intero progressivo di due cifre.
 \end{itemize}
 \subsection{Riferimenti}
 \subsubsection{Riferimenti normativi}
