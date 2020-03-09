@@ -13,7 +13,7 @@
 		\item visualizzare il risultato su grafici e dashboard\glosp definite dall'utente.
 	\end{itemize}
 	Dai grafici risultanti, l'utente monitora i dati e, tramite degli alert\glosp che può definire, capisce se il suo sistema sta entrando in una situazione critica oppure se è stabile.
-	Inoltre vengono forniti i dati di bontà del modello di previsione tramite i meccanismi di Precision\glosp e Recall\glosp in caso di SVM\glosp e R\^{}2\glosp per RL\glo. Questi offrono una stima della qualità delle previsioni per garantirne una miglior coerenza.
+	Inoltre vengono forniti i dati di bontà del modello di previsione tramite i meccanismi di Precision\glosp e Recall\glosp in caso di SVM\glosp e R$^{2}$\glosp per RL\glo. Questi offrono una stima della qualità delle previsioni per garantirne una miglior coerenza.
 	\subsection{Caratteristiche degli utenti}
 	Il plug-in di Grafana\glosp è contraddistinto da un ambito di utilizzo molto specifico e non presenta una caratterizzazione degli utenti. Esso infatti è rivolto agli utenti che hanno eseguito l'autenticazione presso la piattaforma Grafana\glosp che vogliono monitorare il proprio flusso di dati.
 	\subsection{Vincoli generali}
@@ -21,7 +21,7 @@
 	I vincoli obbligatori sono i seguenti:
 	\begin{itemize}
 		\item produrre un file JSON dai dati di addestramento contenente i parametri per le previsioni con SVM\glosp per le classificazioni oppure RL\glo;
-		\item fornire dati sulla qualità dei modelli di previsione tramite meccanismi di Precision\glosp e Recall\glosp per le SVM\glosp e R\^{}2\glosp per la RL\glo;
+		\item fornire dati sulla qualità dei modelli di previsione tramite meccanismi di Precision\glosp e Recall\glosp per le SVM\glosp e R$^{2}$\glosp per la RL\glo;
 		\item leggere la definizione del predittore\glosp dal file JSON;
 		\item associare i predittori\glosp letti dal file JSON al flusso di dati statico che l'utente ha caricato su Grafana\glo;
 		\item applicare la previsione sui dati e fornire il risultati ottenuti al sistema di Grafana\glo;
