@@ -3,17 +3,17 @@
 	L'obiettivo del progetto\glosp \textit{Predire in Grafana}\glosp è realizzare un plug-in per la piattaforma Grafana\glosp che fornisce delle previsioni su un flusso dati ricevuto in input.
 	Più in dettaglio, il plug-in riceve in input un insieme di dati da analizzare e fornisce in output informazioni sulle previsioni fatte su quei dati e visualizzate su grafici scelti dall'utente. Inoltre offre la possibilità di definire degli alert\glosp che rappresentano segnalazioni configurabili dall'utente in caso di situazioni d'allarme, sulla base delle previsioni fatte. 
 	\subsection{Caratteristiche del prodotto}
-	Il prodotto\glosp dispone di molte caratteristiche e le due principali sono l'addestramento di algoritmi per le previsioni e la visualizzazione delle previsioni stesse.
-	L'addestramento viene fatto da un programma esterno, possibilmente integrato al plug-in, il cui scopo è allenare uno tra gli algoritmi di machine learning\glosp proposti: SVM\glo, SVM\glosp adattata alla regressione, reti neurali\glosp per la classificazione, RL\glosp e altri algoritmi di regressione non lineari quali logaritmica ed esponenziale. L'utente fornisce in input un insieme di dati di test, seleziona l'algoritmo da allenare e avvia l'esecuzione. Al termine, il programma restituisce un file JSON con i parametri per le previsioni.
-	L'utente, solo dopo aver eseguito l'addestramento, può avviare il programma di previsione dei dati. Più in dettaglio, fornisce in input un flusso di dati da monitorare, che possono essere statici oppure in tempo reale, e un file JSON ottenuto dall'operazione precedente. Seleziona il pannello su cui visualizzare i dati, lo personalizza secondo le sue necessità e avvia l'attività di previsione. Quest'ultima attività consiste nei seguenti passi:
+	Il prodotto\glosp dispone di molte caratteristiche e le due principali sono l'addestramento di algoritmi per le previsioni e l'esecuzione con la visualizzazione delle previsioni stesse.
+	L'addestramento viene fatto da un programma esterno, possibilmente integrato al plug-in, il cui scopo è allenare uno tra gli algoritmi di machine learning\glosp proposti: SVM\glo, SVM\glosp adattata alla regressione, reti neurali\glosp per la classificazione, RL\glosp e altri algoritmi di regressione non lineari quali logaritmica ed esponenziale. L'utente fornisce in input un insieme di dati di test, seleziona l'algoritmo da allenare e avvia l'esecuzione. Al termine, il programma restituisce un file JSON con i predittori\glosp per le previsioni.
+	L'utente, solo dopo aver eseguito l'addestramento, può avviare il programma di previsione dei dati. Più in dettaglio, fornisce in input un flusso di dati da monitorare, che possono essere statici o in tempo reale, e un file JSON ottenuto dall'operazione precedente. Seleziona il pannello su cui visualizzare i dati, lo personalizza secondo le sue necessità e avvia l'attività di previsione. Quest'ultima attività consiste nei seguenti passi:
 	\begin{itemize}
 		\item leggere la definizione di uno o più predittori\glosp presenti nel file JSON;
 		\item associare i predittori\glosp al flusso di dati caricato, sia esso statico o dinamico;
 		\item applicare le previsioni;
 		\item visualizzare il risultato su grafici e dashboard\glosp definite dall'utente.
 	\end{itemize}
-	Dai grafici risultanti, l'utente monitora i dati e, tramite degli alert\glosp che definisce, può capire se il suo sistema sta entrando in una situazione critica oppure se è stabile.
-	Inoltre vengono forniti i dati di bontà del modello di previsione tramite i meccanismi di Precision e Recall in caso di SVM e R\^{}2 per RL\glo. Questi offrono una stima della qualità delle previsioni per garantirne una miglior coerenza.
+	Dai grafici risultanti, l'utente monitora i dati e, tramite degli alert\glosp che può definire, capisce se il suo sistema sta entrando in una situazione critica oppure se è stabile.
+	Inoltre vengono forniti i dati di bontà del modello di previsione tramite i meccanismi di Precision\glosp e Recall\glosp in caso di SVM\glosp e R$^{2}$\glosp per RL\glo. Questi offrono una stima della qualità delle previsioni per garantirne una miglior coerenza.
 	\subsection{Caratteristiche degli utenti}
 	Il plug-in di Grafana\glosp è contraddistinto da un ambito di utilizzo molto specifico e non presenta una caratterizzazione degli utenti. Esso infatti è rivolto agli utenti che hanno eseguito l'autenticazione presso la piattaforma Grafana\glosp che vogliono monitorare il proprio flusso di dati.
 	\subsection{Vincoli generali}
@@ -21,6 +21,7 @@
 	I vincoli obbligatori sono i seguenti:
 	\begin{itemize}
 		\item produrre un file JSON dai dati di addestramento contenente i parametri per le previsioni con SVM\glosp per le classificazioni oppure RL\glo;
+		\item fornire dati sulla qualità dei modelli di previsione tramite meccanismi di Precision\glosp e Recall\glosp per le SVM\glosp e R$^{2}$\glosp per la RL\glo;
 		\item leggere la definizione del predittore\glosp dal file JSON;
 		\item associare i predittori\glosp letti dal file JSON al flusso di dati statico che l'utente ha caricato su Grafana\glo;
 		\item applicare la previsione sui dati e fornire il risultati ottenuti al sistema di Grafana\glo;
@@ -29,7 +30,6 @@
 	I vincoli opzionali sono i seguenti:
 	\begin{itemize}
 		\item permettere all'utente di definire alert\glosp in base ai livelli di soglia raggiunti dai nodi collegati alle previsioni;
-		\item fornire dati sulla qualità dei modelli di previsione tramite meccanismi di Precision e Recall per le SVM\glosp e R\^{}2 per la RL\glo;
 		\item permette all'utente di applicare algoritmi di regressione non lineare quali logaritmica ed esponenziale;
 		\item implementare meccanismi di apprendimento di flusso per dati in tempo reale;
 		\item usare metodi di previsione differenti e più complessi quali SVM\glosp adattate alla regressione oppure piccole reti neurali\glosp per la classificazione.

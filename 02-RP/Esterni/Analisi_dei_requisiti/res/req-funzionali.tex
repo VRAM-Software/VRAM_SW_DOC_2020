@@ -6,7 +6,7 @@ Per descrivere un requisito viene utilizzata la seguente struttura:
 	\item descrizione;
 	\item fonti.
 \end{itemize} 
-Il \textbf{Codice Identificativo} sarà scritto in questo formato: \\
+Il \textbf{Codice identificativo} sarà scritto in questo formato: \\
 \textbf{R[Importanza][Tipologia][Codice]} \\
 Dove:
 \begin{itemize}
@@ -62,10 +62,10 @@ Le \textbf{Fonti} possono essere:
 		R3F1.3 & Opzionale & L'utente deve poter avviare l'addestramento dell'algoritmo di predizione & Interno UC1.3 \TBstrut \\ [2mm]
 		R3F1.4 & Opzionale & L'utente deve poter addestrare l'addestramento dell'algoritmo di predizione & Interno UC1.4 \TBstrut \\ [2mm]
 		R3F1.8 & Opzionale & Se l'addestramento va a buon fine, l'utente deve visualizzare un messaggio di conferma & Interno UC1.8 \TBstrut \\ [2mm]		
-		R3F2 & Opzionale & L'utente deve visualizzare gli indici di qualità delle previsioni sul plug-in interno a Grafana\glosp & Capitolato UC2 \TBstrut \\ [2mm]
+		R3F2 & Opzionale & L'utente deve visualizzare gli indici di qualità delle previsioni sul plug-in interno a Grafana\glo & Capitolato UC2 \TBstrut \\ [2mm]
 		R3F2.1 & Opzionale & L'utente deve visualizzare l'indice di qualità delle previsioni R$^{2}$\glo & Capitolato UC2.1 \TBstrut \\ [2mm]
-		R3F2.2 & Opzionale & L'utente deve visualizzare gli indici di qualità delle previsioni Precision & Capitolato UC2.2 \TBstrut \\ [2mm]
-		R3F2.3 & Opzionale & L'utente deve visualizzare gli indici di qualità delle previsioni Recall & Capitolato UC2.3 \TBstrut \\ [2mm]
+		R3F2.2 & Opzionale & L'utente deve visualizzare gli indici di qualità delle previsioni Precision\glo & Capitolato UC2.2 \TBstrut \\ [2mm]
+		R3F2.3 & Opzionale & L'utente deve visualizzare gli indici di qualità delle previsioni Recall\glo & Capitolato UC2.3 \TBstrut \\ [2mm]
 		R3F3 & Opzionale & Se l'utente inserisce un file formato CSV non valido nel plug-in per l'addestramento interno, deve visualizzare un messaggio di errore & Interno UC3 \TBstrut \\ [2mm]
 		R3F17 & Opzionale & Se l'utente inserisce un file formato JSON non valido nel plug-in per l'addestramento interno, deve visualizzare un messaggio di errore & Interno UC17 \TBstrut \\ [2mm]	
 		R1F4 & Obbligatorio & L'utente deve poter addestrare gli algoritmi di previsione su un'applicazione esterna & Capitolato UC4 \TBstrut \\ [2mm]		
@@ -87,24 +87,24 @@ Le \textbf{Fonti} possono essere:
 		R1F4.4 & Obbligatorio & L'utente deve poter avviare l'addestramento dell'algoritmo di predizione & Interno UC4.3 \TBstrut \\ [2mm]
 		R1F4.5 & Obbligatorio & L'utente deve poter chiudere l'addestramento dell'algoritmo di predizione & Interno UC4.4 \TBstrut \\ [2mm]		
 		R2F4.6 & Desiderabile & Se l'addestramento va a buon fine, l'utente deve visualizzare un messaggio di conferma & Interno UC4.9 \TBstrut \\ [2mm]		
-		R1F4.7 & Obbligatorio & L'utente deve ricevere il file JSON con i predittori per eseguire le previsioni & Capitolato UC4.5 \TBstrut \\ [2mm]
+		R1F4.7 & Obbligatorio & L'utente deve ricevere il file JSON con i predittori\glosp per eseguire le previsioni & Capitolato UC4.5 \TBstrut \\ [2mm]
 		R1F5 & Obbligatorio & L'utente deve poter visualizzare gli indici qualità delle previsioni eseguite sull'applicazione esterna & Capitolato UC5 \TBstrut \\ [2mm]
 		R1F5.1 & Obbligatorio & L'utente deve poter visualizzare l'indice di qualità delle previsioni R$^{2}$\glo & Capitolato UC5.1 \TBstrut \\ [2mm]
-		R1F5.2 & Obbligatorio & L'utente deve poter visualizzare gli indici di qualità delle previsioni Precision & Capitolato UC5.2 \TBstrut \\ [2mm]
-		R1F5.3 & Obbligatorio & L'utente deve poter visualizzare gli indici di qualità delle previsioni Recall & Capitolato UC5.3 \TBstrut \\ [2mm]
+		R1F5.2 & Obbligatorio & L'utente deve poter visualizzare gli indici di qualità delle previsioni Precision\glo & Capitolato UC5.2 \TBstrut \\ [2mm]
+		R1F5.3 & Obbligatorio & L'utente deve poter visualizzare gli indici di qualità delle previsioni Recall\glo & Capitolato UC5.3 \TBstrut \\ [2mm]
 		R2F6 & Desiderabile & Se l'utente inserisce un file CSV non valido deve visualizzare un messaggio di errore & Interno UC6 \TBstrut \\ [2mm]
 		R2F18 & Desiderabile & Se l'utente inserisce un file JSON non valido deve visualizzare un messaggio di errore & Interno UC18 \TBstrut \\ [2mm]
 		R1F19 & Obbligatorio & L'utente deve poter abilitare il plug-in & Interno UC19 \TBstrut \\ [2mm]
 		R1F7 & Obbligatorio & L'utente deve poter avviare il plug-in & Capitolato UC7 \TBstrut \\ [2mm]
 		R1F21 & Obbligatorio & L'utente deve poter visualizzare la dashboard\glosp fornita dal plug-in & Interno UC21 \TBstrut \\ [2mm]
 		R1F8 & Obbligatorio & L'utente deve poter caricare all'interno del plug-in il file JSON contenente i dati risultanti dall'addestramento & Capitolato UC8 \TBstrut \\ [2mm]
-		R1F9 & Obbligatorio & L'utente deve poter associare il predittore letto dal file JSON al flusso dati & Capitolato UC9 \TBstrut \\ [2mm]
-		R1F9.1 & Obbligatorio & L'utente deve poter selezionare il predittore & Capitolato UC9.1 \TBstrut \\ [2mm]
+		R1F9 & Obbligatorio & L'utente deve poter associare il predittore\glosp letto dal file JSON al flusso dati & Capitolato UC9 \TBstrut \\ [2mm]
+		R1F9.1 & Obbligatorio & L'utente deve poter selezionare il predittore\glo & Capitolato UC9.1 \TBstrut \\ [2mm]
 		R1F9.2 & Obbligatorio & L'utente deve poter selezionare un flusso dati statico su cui eseguire le previsioni & Capitolato UC9.2 \TBstrut \\ [2mm]
 		R3F9.3 & Opzionale & L'utente deve poter selezionare un flusso dati continuo su cui eseguire le previsioni & Capitolato UC9.2 \TBstrut \\ [2mm]
-		R1F9.4 & Obbligatorio & L'utente deve poter collegare il predittore scelto al flusso dati & Capitolato UC9.3 \TBstrut \\ [2mm]
-		R2F9.5 & Desiderabile & Se il collegamento del predittore al flusso dati va a buon fine l'utente deve visualizzare un messaggio di conferma & Capitolato UC9.4 \TBstrut \\ [2mm]
-		R2F10 & Desiderabile & Se il collegamento del predittore al flusso dati non va a buon fine l'utente deve visualizzare un messaggio di errore & Interno UC10 \TBstrut \\ [2mm]
+		R1F9.4 & Obbligatorio & L'utente deve poter collegare il predittore\glosp scelto al flusso dati & Capitolato UC9.3 \TBstrut \\ [2mm]
+		R2F9.5 & Desiderabile & Se il collegamento del predittore\glosp al flusso dati va a buon fine l'utente deve visualizzare un messaggio di conferma & Capitolato UC9.4 \TBstrut \\ [2mm]
+		R2F10 & Desiderabile & Se il collegamento del predittore\glosp al flusso dati non va a buon fine l'utente deve visualizzare un messaggio di errore & Interno UC10 \TBstrut \\ [2mm]
 		R1F11 & Obbligatorio & L'utente deve poter visualizzare i risultati della previsione sotto forma di grafici all'interno di una dashboard\glosp configurata & Capitolato \TBstrut \\ [2mm]
 		R1F12 & Obbligatorio & L'utente deve poter rimuovere il pannello del plug-in dalla dashboard\glo & Capitolato UC12 \TBstrut \\ [2mm]	
 		R1F20 & Obbligatorio & L'utente deve poter disabilitare il plug-in & Interno UC20 \TBstrut \\ [2mm]	
