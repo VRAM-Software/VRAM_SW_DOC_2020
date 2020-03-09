@@ -28,46 +28,7 @@
 				\item assegnazione dei ruoli e, per ognuno di essi, delle attività;
 				\item gestione del controllo e dell'esecuzione di tutte le attività;
 				\item valutazione periodica dello stato e dell'esecuzione delle attività rispetto a quanto pianificato.
-			\end{itemize}
-		\subsubsection{Metriche di qualità del processo}
-		\paragraph*{Pianificazione delle risorse}\mbox{}\\ [1mm]
-		I parametri utilizzati per valutare la qualità della pianificazione sono:
-		\begin{itemize}		
-			\item \textbf{M07 Planned value}: indica il valore dei lavoro pianificato fino a quel momento;
-			\begin{itemize}
-				\item[] \textbf{formula}: BAC $\cdot$ \%lavoro pianificato con BAC=budget totale;
-			\end{itemize}
-		
-			\item \textbf{M08 Earned value}: indica il valore del lavoro svolto fino a quel momento;
-			\begin{itemize}
-				\item[] \textbf{formula}: BAC $\cdot$ \%lavoro svolto BAC=budget totale;
-			\end{itemize} 
-		
-			\item \textbf{M09 Actual cost}: indica il denaro speso fino a quel momento; 
-			\begin{itemize}
-				\item[] \textbf{formula}: si calcola con un valore intero;
-			\end{itemize}
-		
-			\item \textbf{M10 Cost performance index}: rappresenta un indice per i costi effettivi rispetto a quelli previsti, se è $\le$1 indica che si sta spendendo più di quanto preventivato;
-			\begin{itemize}
-				\item[] \textbf{formula}: $\frac{EV}{AC}$; 
-			\end{itemize}
-
-			\item \textbf{M11 Schedule performance index}: rappresenta un indice per i tempi effettivi rispetto a quelli previsti, se è $\le$1 indica che si sta impiegando più tempo di quanto preventivato;
-			\begin{itemize}
-				\item[] \textbf{formula}: $\frac{EV}{PV}$; 
-			\end{itemize}
-			 
-			\item \textbf{M12 Estimated cost at completion}: rappresenta il budget totale stimato del progetto\glosp con il CPI del momento;
-			\begin{itemize}
-				\item[] \textbf{formula}: $AC+\frac{BT-EV}{CPI}$; 
-			\end{itemize} 
-			
-			\item \textbf{M13 Schedule at completion}: rappresenta il tempo totale stimato del progetto\glosp con SPI del momento;
-			\begin{itemize}
-				\item[] \textbf{formula}: $\frac{TT}{SPI}$; con TT=Tempo Totale. 
-			\end{itemize} 
-		\end{itemize}	
+			\end{itemize}			
 		\subsubsection{Attività}
 		\paragraph{Ruoli di progetto}
 			\subparagraph{Assegnazione}\mbox{}\\ [1mm]
@@ -127,6 +88,47 @@
 					\item ispezione dei documenti al fine di controllare che siano conformi allo standard previsto nelle \textit{Norme di Progetto};
 					\item segnalazione di eventuali errori nelle parti di prodotto\glosp a chi ha responsabilità su di esse.
 				\end{itemize}
+			
+			\paragraph{Pianificazione delle risorse}\mbox{}\\ [1mm]
+				Per gestire le risorse disponibili per il nostro progetto\glosp dobbiamo monitorare il rispetto dei costi e dei tempi preventivati. 
+			\subparagraph{Metriche di qualità}\mbox{}\\ [1mm]
+			Le metriche\glosp utilizzate per valutare la qualità della pianificazione delle risorse a nostra disposizione sono:
+			\begin{itemize}		
+				\item \textbf{M07 Planned value}: indica il valore dei lavoro pianificato fino a quel momento;
+				\begin{itemize}
+					\item[] \textbf{formula}: BAC $\cdot$ \%lavoro pianificato con BAC=budget totale;
+				\end{itemize}
+				
+				\item \textbf{M08 Earned value}: indica il valore del lavoro svolto fino a quel momento;
+				\begin{itemize}
+					\item[] \textbf{formula}: BAC $\cdot$ \%lavoro svolto BAC=budget totale;
+				\end{itemize} 
+				
+				\item \textbf{M09 Actual cost}: indica il denaro speso fino a quel momento; 
+				\begin{itemize}
+					\item[] \textbf{formula}: si calcola con un valore intero;
+				\end{itemize}
+				
+				\item \textbf{M10 Cost performance index}: rappresenta un indice per i costi effettivi rispetto a quelli previsti, se è $\le$1 indica che si sta spendendo più di quanto preventivato;
+				\begin{itemize}
+					\item[] \textbf{formula}: $\frac{EV}{AC}$; 
+				\end{itemize}
+				
+				\item \textbf{M11 Schedule performance index}: rappresenta un indice per i tempi effettivi rispetto a quelli previsti, se è $\le$1 indica che si sta impiegando più tempo di quanto preventivato;
+				\begin{itemize}
+					\item[] \textbf{formula}: $\frac{EV}{PV}$; 
+				\end{itemize}
+				
+				\item \textbf{M12 Estimated cost at completion}: rappresenta il budget totale stimato del progetto\glosp con il CPI del momento;
+				\begin{itemize}
+					\item[] \textbf{formula}: $AC+\frac{BT-EV}{CPI}$; 
+				\end{itemize} 
+				
+				\item \textbf{M13 Schedule at completion}: rappresenta il tempo totale stimato del progetto\glosp con SPI del momento;
+				\begin{itemize}
+					\item[] \textbf{formula}: $\frac{TT}{SPI}$; con TT=Tempo Totale. 
+				\end{itemize} 
+			\end{itemize}
 		\paragraph{Gestione dei rischi}\mbox{}\\ [1mm]
 		La gestione e l'analisi dei rischi è un'attività a carico del responsabile di progetto\glosp che deve essere documentata nel documento \textit{Piano di Progetto v. 6.1.1}.
 		La procedura per la gestione dei rischi è composta dai seguenti passi:
