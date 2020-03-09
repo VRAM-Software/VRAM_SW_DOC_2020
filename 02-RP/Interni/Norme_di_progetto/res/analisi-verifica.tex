@@ -101,9 +101,6 @@ Successivamente ai test di unità, si assemblano gruppi di unità progressivamen
 
 \subparagraph*{Test di sistema} \mbox{}\\ [1mm]
 I test di sistema controllano il funzionamento corretto del prodotto\glosp e verificano che il sistema soddisfi tutti i requisiti definiti nel documento \textit{Analisi dei Requisiti v. 3.1.1}. Con l'esecuzione di questi test si riesce a definire e documentare tutte le funzionalità del sistema e possono individuare criticità come il problema del black-box\glo. Il gruppo svolgerà questo test quando si raggiungerà uno stato di rilascio per il prodotto\glosp sviluppato.
-Per identificare un test di unità viene utilizzata una codifica con il seguente formato:\\
-\textbf{TS[codice]}
-Dove codice è un numero progressivo nel formato: [X].[Y] con X e Y numeri maggiori di zero.
 
 \subparagraph{Metriche di qualità}
 Le metriche di qualità utilizzate per valutare la qualità della verifica sono:
@@ -137,8 +134,14 @@ Le metriche di qualità utilizzate per valutare la qualità della verifica sono:
 	\paragraph{SonarTS}\mbox{}\\ [1mm]
 	Per l'analisi statica\glosp del codice Typescript viene utilizzato il code analyzer SonarJS\glosp della piattaforma SonarCloud.
 	\paragraph{Validazione W3C}\mbox{}\\ [1mm]
-	Le pagine di markup scritte il linguaggio HTML5 vengono validate attraverso il validatore W3C reperible al seguente indirizzo:\\ \url{https://validator.w3.org/}
-	Le pagine di presentazione scritte in linguaggio CSS3 vengono validate attraverso il validatore W3C reperibile al seguente indirizzo:\\ \url{https://jigsaw.w3.org/css-validator/}
+	Le pagine di markup scritte il linguaggio HTML5 vengono validate attraverso il validatore W3C reperible al seguente indirizzo: 
+	\begin{center}
+		\url{https://validator.w3.org/}
+	\end{center}
+	Le pagine di presentazione scritte in linguaggio CSS3 vengono validate attraverso il validatore W3C reperibile al seguente indirizzo:
+	\begin{center}
+		\url{https://jigsaw.w3.org/css-validator/}
+	\end{center}
 	\paragraph{Jest}\mbox{}\\ [1mm]
 	Per la gestione dei test del codice JavaScript il nostro gruppo ha utilizzato il framework Jest per eseguire test d'unità sul codice React e NodeJS.
 	\paragraph{React Testing Library}\mbox{}\\ [1mm]
