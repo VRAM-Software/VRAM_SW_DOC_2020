@@ -334,12 +334,12 @@ Nella product baseline\glosp sono presenti:
 %	\end{itemize} 	
 %\end{itemize}
 
-\subparagraph*{Integrazione} \mbox{} \\
-L'attività di integrazione del software avviene in parte in automatico ed in parte tramite azioni e verifiche manuali.
-\newline
-Per l'integrazione automatica utilizziamo le Github Actions, offerte da Github, con cui implementiamo la continuous integration. L'integrazione continua automatica viene eseguita ad ogni push effettuato sul repository remoto ed esegue la compilazione, i test di unità, analisi statica\glosp del codice per verificare che soddisfi i livelli di qualità desisderati e calcola il code coverage. I servizi utilizzati per eseguire i controlli sono JEst per i test d'unità, Coveralls per il code coverage e SonarCloud per l'analisi statica\glosp del codice.
-\newline
-L'integrazione manuale consiste invece nel verificare il corretto funzionamento dell'applicativo esterno di addestramento, del plugin Grafana\glosp e del loro dialogo. La verifica dei singoli componenti verrà automatizzata, per quanto possibile, tramite Selenium\glo. Queste integrazioni vengono effettuate in seguito all'implementazione di ogni incremento del modello di sviluppo incrementale, quindi alla creazione di ogni nuova baseline\glo.
+%\subparagraph*{Integrazione software} \mbox{} \\
+%L'attività di integrazione del software avviene in parte in automatico ed in parte tramite azioni e verifiche manuali.
+%\newline
+%Per l'integrazione automatica utilizziamo le Github Actions, offerte da Github, con cui implementiamo la continuous integration. L'integrazione continua automatica viene eseguita ad ogni push effettuato sul repository\glosp remoto ed esegue la compilazione, i test di unità, analisi statica\glosp del codice per verificare che soddisfi i livelli di qualità desisderati e calcola il code coverage. I servizi utilizzati per eseguire i controlli sono JEst per i test d'unità, Coveralls per il code coverage e SonarCloud per l'analisi statica\glosp del codice.
+%\newline
+%L'integrazione manuale consiste invece nel verificare il corretto funzionamento dell'applicativo esterno di addestramento, del plugin Grafana\glosp e del loro dialogo. La verifica dei singoli componenti verrà automatizzata, per quanto possibile, tramite Selenium\glo. Queste integrazioni vengono effettuate in seguito all'implementazione di ogni incremento del modello di sviluppo incrementale, quindi alla creazione di ogni nuova baseline\glo.
 
 \paragraph{Codifica}
 \subparagraph*{Scopo}\mbox{}\\ [1mm]
@@ -350,11 +350,11 @@ Il prodotto\glosp dell'attività di codifica è il codice necessario per realizz
 \subparagraph*{Linguaggi di programmazione}\mbox{}\\ [1mm]
 I principali linguaggi di programmazione utilizzati sono:
 \begin{itemize}
-	\item \textbf{JavaScript}: linguaggio di scripting attraverso il quale si intende sviluppare l'applicativo di addestramento esterno. Tramite la sua estensione JSX (JavaScript XML) è in grado di incorporare la sintassi HTML;
+	\item \textbf{JavaScript}: linguaggio di scripting attraverso il quale si intende sviluppare l'applicativo di addestramento esterno. Tramite la sua estensione JSX (JavaScript XML) è in grado di incorporare la sintassi HTML5;
 	\item \textbf{React}: libreria JavaScript usata per costruire elementi per interfaccia utente dell'applicativo esterno;
 	\item \textbf{D3.js}: libreria JavaScript usata per visualizzare i grafici nell'applicativo esterno partendo da dei dati organizzati;
 	\item \textbf{TypeScript}: estensione di JavaScript tramite la quale si intende sviluppare il plug-in su Grafana\glo;
-	\item \textbf{AngularJS}: framework JavaScript che permette di estendere il codice HTML attraverso l'utilizzo di direttive ed espressioni;
+	\item \textbf{AngularJS}: framework JavaScript che permette di estendere il codice HTML5 attraverso l'utilizzo di direttive ed espressioni;
 	\item \textbf{Plotly.js}: libreria JavaScript (basata su D3.js) che permette di visualizzare grafici personalizzati su Grafana\glo; 
 	\item \textbf{HTML5}: linguaggio di mark-up che nell'ambito del progetto\glosp viene principalmente generato dall'estensione JSX e gestisce il front-end dell'applicazione;
 	\item \textbf{CSS3}: linguaggio usato per formattare in modo corretto documenti HTML5. Nell'ambito di questo progetto\glosp viene utilizzato per impartire regole stilistiche al codice generato per gestire il front-end e la rappresentazione degli elementi grafici.
@@ -515,13 +515,22 @@ Per quanto concerne i restanti aspetti riguardanti lo stile e le best practises 
 				\item[] \textbf{formula}: si calcola con un valore intero.
 			\end{itemize}
 		\end{itemize}
-		\paragraph{Integrazione software}
-		%AGGIUNGERE
 		\subsubsection{Strumenti di supporto}
 		Nella valutazione dei costi da affrontare per lo sviluppo del software e per la formazione del personale, abbiamo già identificato le principali tecnologie e strumenti che verranno utilizzare durante il progetto\glo.
 		\paragraph{TeXstudio}\mbox{}\\ [1mm]
 		Per la stesura dell'\textit{Analisi dei Requisiti} viene utilizzato TeXStudio come ambiente di sviluppo.
 		\paragraph{WebStorm}\mbox{}\\ [1mm]
 		Per la codifica viene utilizzato WebStorm, un ambiente di sviluppo integrato per JavaScript che offre piena compatibilità con Windows, Linux e SonarJS\glo.
-		\paragraph{LucidChart}\mbox{}\\ [1mm]
-		Per la realizzazione dei diagrammi UML\glo.	
+		\paragraph{Chrome}\mbox{}\\ [1mm]
+		Per provare verificare il funzionamento del nostro plug-in usiamo come browser Chrome versione 58 o successiva.
+		\paragraph{Microsoft Edge}\mbox{}\\ [1mm]
+		Per provare verificare il funzionamento del nostro plug-in usiamo come browser Edge versione 14 o successiva.
+		\paragraph{Firefox}\mbox{}\\ [1mm]
+		Per provare verificare il funzionamento del nostro plug-in usiamo come browser Firefox versione 54 o successiva.
+		\paragraph{Safari}\mbox{}\\ [1mm]
+		Per provare verificare il funzionamento del nostro plug-in usiamo come browser Safari versione 10 o successiva.
+		\paragraph{Opera}\mbox{}\\ [1mm]
+		Per provare verificare il funzionamento del nostro plug-in usiamo come browser Opera versione 55 o successiva.
+		\paragraph{Lucidchart}\mbox{}\\ [1mm]
+		Per la creazione dei diagrammi UML\glosp e di altro tipo viene usata la piattaforma online Lucidchart che consente agli utenti di collaborare alla stesura, alla revisione e alla condivisione di grafici. \newline \newline
+		\centerline{\url{https://www.lucidchart.com}}
