@@ -1,0 +1,92 @@
+\subsection{Installazione applicativo esterno}
+\subsubsection{Requisiti}
+\begin{itemize}
+    \item \textbf{Node}: runtime Javascript che permette di eseguire codice Javascript fuori da un browser;
+    \item \textbf{Git}: sistema di versionamento distribuito.
+\end{itemize}
+
+\subsubsection{Installazione degli strumenti}
+\paragraph{Node}
+Per installare il runtime Javascript Node.js andate sul sito \href{https://nodejs.org}. Qui potrete trovare il download di Node.js per tutti i sistemi operativi. Alternativamente, su sistemi operativi basati su Linux potrete utilizzare lo strumento d'installazione di pacchetti fornito per installare i pacchetti del runtime Node.js.
+\textbf{Debian/Ubuntu} \\
+\begin{verbatim}
+    apt-get install nodejs
+\end{verbatim}
+\textbf{OpenSUSE} \\
+L'alias: \verb{nodejs4} potrebbe variare a seconda della versione del vostro sistema operativo.
+\begin{verbatim}
+    zypper install nodejs4
+\end{verbatim}
+\textbf{Arch Linux} \\
+\begin{verbatim}
+    pacman -S nodejs npm
+\end{verbatim}
+
+\paragraph{Git}
+Per installare il sistema di versionamento distribuito Git visitate la pagina \href{https://git-scm.com/downloads}. Qui potrete trovare il download per MacOS, Windows e sistemi operativi basati su Linux/Unix.
+
+\subsubsection{Installazione dell'applicazione}
+\paragraph{Clonare la repository da GitHub}
+Per clonare la repository dell'applicazione aprite un terminale e usate il comando \verb{cd} per muovervi in una cartella del vostro computer, eseguite il comando: \verb{git clone https://github.com/VRAM-Software/grafana_prediction.git}. Infine con il comando \verb{cd ./prediction_configuration_utility} spostatevi nella cartella che contiene il codice sorgente dell'applicativo esterno.
+
+\paragraph{Contenuto file: \verb{package.json}}
+Il file \verb{package.json} contiene tutte le informazioni e i requisiti necessari della nostra applicazione. Le informazioni importanti sono i seguenti attributi:
+\textbf{"main"} \\
+Questo attributo ha come valore il percorso del file che si occupa di gestire il processo principale dell'applicazione Electron
+\textbf{"dependencies"} \\
+Questo attributo contiene la seguente lista di pacchetti che sono necessari per il corretto funzionamento dell'applicazione.
+\begin{itemize}
+    \item csvtojson
+    \item d3
+    \item electron-is-dev
+    \item ml-modules
+    \item react
+    \item react-dom
+    \item react-router-dom
+    \item react-scripts
+    \item @testing-library/jest-dom
+    \item @testing-library/react
+    \item @testing-library/user-event
+\end{itemize}
+\textbf{"devDependencies"} \\
+Questo attributo contiene la seguente lista di pacchetti che sono necessari per il corretto funzionamento dell'applicazione durante lo sviluppo.
+\begin{itemize}
+    \item electron
+    \item electron-packager
+    \item coveralls
+\end{itemize}
+\textbf{"scripts"} \\
+Questo attributo contiene una lista di tutti i comandi, utili per uno sviluppatore, che possono essere eseguiti da linea di comando.
+\begin{itemize}
+    \item \textbf{electron}: \verb{npm run electron}, questo comando fa partire un'istanza di Electron;
+    \item \textbf{start}: \verb{npm start}, questo comando fa partire un server NodeJs alla porta 3000;
+    \item \textbf{build}: \verb{npm build}, questo comando genera una cartella: \verb{build} che contiene i file di produzione di React;
+    \item \textbf{test}: \verb{npm test}, questo comando fa eseguire tutti i test dell'applicazione;
+    \item \textbf{package-mac}: \verb{npm run package-mac}, questo comando genera una release di produzione per il sistema operativo: MacOS;
+    \item \textbf{package-win}: \verb{npm run package-win}, questo comando genera una release di produzione per il sistema operativo: Windows;
+    \item \textbf{package-linux}: \verb{npm run package-linux}, questo comando genera una release di produzione per una qualsiasi distribuzione di Linux.
+\end{itemize}
+
+\paragraph{Installare le dipendenze}
+Per il corretto funzionamento dell'applicazione è necessario installare tutte le dipendenze elencate precedentemente, per farlo eseguite il comando \verb{npm install}.
+
+\paragraph{Eseguire l'applicazione}
+Per eseguire l'applicazione eseguire in un terminale, nella cartella dell'applicazione, il comando \verb{npm start}. Questo comando farà partire un server Node.js nella porta 3000. A questo punto eseguite, in un altro terminale, il comando \verb{npm run electron} per far partire l'applicazione.
+
+\paragraph{Impacchettare l'applicazione}
+Per generare una release di produzione si hanno tre possibilità a seconda di quale sistema operativo si vuole utilizzare.
+\textbf{Windows}: per il sistema operativo Windows. \\
+\begin{verbatim}
+    npm build
+    npm run package-win 
+\end{verbatim}
+\textbf{MacOS}: per il sistema operativo MacOS \\
+\begin{verbatim}
+    npm build
+    npm run package-mac 
+\end{verbatim}
+\textbf{Linux}: per una distribuzione linux \\
+\begin{verbatim}
+    npm build
+    npm run package-linux 
+\end{verbatim}
