@@ -1,0 +1,27 @@
+\section{Introduzione}
+\subsection{Glossario}
+Per rendere il documento il meno possibile prono ad ambiguità e incomprensioni è fornito nell'appendice §{METTERE SEZIONE!!!!} un glossario interno del documento che raccoglie tutti i termini bisognosi di spiegazione; tali termini sono individuati da una G a pedice.
+\subsection{Contenuti}
+In questo manuale vengono trattati:
+\begin{itemize}
+	\item gli strumenti necessari
+	\item le tecnologie usate
+	\item le modalità di installazione
+	\item i requisiti necessari
+	\item le scelte progettuali
+	\item l'architettura software
+\end{itemize}
+
+\subsection{Scopo del manuale}
+Questo manuale si rivolge allo sviluppatore che vuole mantenere o estendere il prodotto\glosp \textit{Predire in Grafana}. Lo scopo del documento è quindi di facilitare il lavoro di manutenzione ed estensione fornendo una spiegazione dettagliata del prodotto\glo.
+
+\subsection{Scopo del prodotto}
+Lo scopo del prodotto è implementare un plug-in di Grafana\glosp scritto in linguaggio Javascript che esegue gli algoritmi di Support Vector Machine SVM\glosp o Regressione Lineare RL\glo, i quali, leggendo da un file JSON la loro configurazione, saranno in grado di generare previsioni che potranno essere aggiunte al flusso di monitoraggio. Il plug-in prevede il superamento di determinati livelli di soglia per generare un allarme attraverso il meccanismo di Grafana\glosp detto alert\glo. Il plug-in utilizza un applicativo esterno per addestrare gli algoritmi di SVM\glosp ed RL\glosp o altri algoritmi di predizione. Dunque il plug-in permette un'attività di monitoraggio grazie alla quale gli operatori possono intervenire con ogni cognizione di causa sul sistema.
+
+\subsection{Riferimenti}
+\begin{itemize}
+	\item https://nodejs.org/
+	\item https://www.npmjs.com/
+	\item https://reactjs.org/
+	\item https://www.electronjs.org/
+\end{itemize}
