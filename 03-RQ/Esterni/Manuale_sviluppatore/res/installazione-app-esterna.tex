@@ -12,15 +12,13 @@ Gli strumenti necessari per installare correttamente l'applicativo esterno sono:
 Questi strumenti possono essere installati con diverse metodologie, ci limiteremo a elencare alcuni esempi per non appesantire questo manuale con informazioni non strettamente pertinenti all'applicativo esterno.
 
 \paragraph{Node}
-Per installare il runtime Javascript Node.js si può visitare il sito \href{https://nodejs.org}. Qui è possibile trovare il download di Node.js per tutti i sistemi operativi. Alternativamente, su sistemi operativi basati su Linux è possibile utilizzare lo strumento di gestione di pacchetti fornito dal sistema operativo per installare i pacchetti del runtime Node.js. Di seguito un esempio:
-\textbf{Debian/Ubuntu} \\
+Per installare il runtime Javascript Node.js si può visitare il sito \href{https://nodejs.org}. Qui è possibile trovare il download di Node.js per tutti i sistemi operativi. Alternativamente, su sistemi operativi basati su Linux è possibile utilizzare lo strumento di gestione di pacchetti fornito dal sistema operativo per installare i pacchetti del runtime Node.js. Di seguito un esempio per sistemi operativi basati Debian/Ubuntu: \\
 \begin{verbatim}
     apt-get install nodejs
 \end{verbatim}
 
 \paragraph{Git}
-Per installare il sistema di versionamento distribuito Git si può visitare la pagina web \href{https://git-scm.com/downloads}. Qui è possibile trovare il download per MacOS, Windows e sistemi operativi basati su Linux/Unix. Alternativamente, su sistemi operativi basati su Linux è possibile utilizzare lo strumento di gestione di pacchetti fornito dal sistema operativo. Di seguito un esempio:
-\textbf{Debian/Ubuntu} \\
+Per installare il sistema di versionamento distribuito Git si può visitare la pagina web \href{https://git-scm.com/downloads}. Qui è possibile trovare il download per MacOS, Windows e sistemi operativi basati su Linux/Unix. Alternativamente, su sistemi operativi basati su Linux è possibile utilizzare lo strumento di gestione di pacchetti fornito dal sistema operativo.  Di seguito un esempio per sistemi operativi basati Debian/Ubuntu: \\
 \begin{verbatim}
     apt-get install git
 \end{verbatim}
@@ -32,44 +30,55 @@ L'installazione dell'applicazione è suddivisa in questi due passaggi che descri
     \item Installare le dipendenze.
 \end{enumerate}
 
-\paragraph{Clonare la repository da GitHub}
-Per clonare la repository dell'applicazione aprite un terminale e usate il comando \verb{cd} per muovervi in una cartella del vostro computer, eseguite il comando: \verb{git clone https://github.com/VRAM-Software/grafana_prediction.git} per clonare la repository principale del nostro prodotto. Infine con il comando \verb{cd ./prediction_configuration_utility} spostatevi nella cartella che contiene il codice sorgente dell'applicativo esterno.
+\paragraph{Clonare la repository da GitHub \\}
+Per clonare la repository dell'applicazione aprite un terminale e usate il comando \texttt{cd} per muovervi in una cartella del vostro computer, eseguite il seguente comando per clonare la repository principale del nostro prodotto.
+\begin{verbatim}
+git clone https://github.com/VRAM-Software/grafana_prediction.git
+\end{verbatim}
+Infine spostatevi nella cartella che contiene il codice sorgente dell'applicativo esterno. 
+\begin{verbatim}
+cd ./prediction_configuration_utility
+\end{verbatim}
 
 \paragraph{Installare le dipendenze}
-Per il corretto funzionamento dell'applicazione è necessario installare tutte le dipendenze elencate nel file \verb{package.json}, per farlo eseguite il comando \verb{npm install} da terminale nella cartella \verb{prediction_configuration_utility}. I pacchetti che verranno installati si suddividono in dipendenze e dipendenze sviluppatore, di seguito verrano spiegate le due categorie.
-\textbf{Dipendenze} \\
+Per il corretto funzionamento dell'applicazione è necessario installare tutte le dipendenze elencate nel file \texttt{package.json}, per farlo eseguite il comando \texttt{npm install} da terminale nella cartella \verb|prediction_configuration_utility|. I pacchetti che verranno installati si suddividono in dipendenze e dipendenze sviluppatore, di seguito verrano spiegate le due categorie.
+
+\subparagraph{Dipendenze \\}
 Nella seguente tabella sono elencate tutte le dipendenze necessarie per la corretta esecuzione dell'applicazione.
 \rowcolors{2}{gray!25}{gray!15}
 	\setcounter{table}{0}
 	\begin{longtable} {
-		>{}p{50mm} 
-		>{}p{50mm}
+		>{}p{65mm} 
+		>{}p{30mm}
 		}
-	\rowcolor{gray!50}
-    @testing-library/jest-dom & ^4.2.4 \TBstrut \\ [2mm]
-    @testing-library/react & ^9.3.2 \TBstrut \\ [2mm]
-    @testing-library/user-event & ^7.1.2 \TBstrut \\ [2mm]
-    csvtojson & 2.0.10 \TBstrut \\ [2mm]
-    d3 & ^5.15.0 \TBstrut \\ [2mm]
-    electron-is-dev & ^1.1.0 \TBstrut \\ [2mm]
-    ml-modules & "https://github.com/Max09081998/ml-modules/tarball/master" \TBstrut \\ [2mm]
-    react & ^16.13.0 \TBstrut \\ [2mm]
-    react-dom & ^16.13.0 \TBstrut \\ [2mm]
-    react-router-dom & ^5.1.2 \TBstrut \\ [2mm]
-    react-scripts & 3.4.0 \TBstrut \\ [2mm]
-
-\textbf{Dipendenze sviluppatore} \\
+    \rowcolor{gray!50}
+    \textbf{Pacchetto} & \textbf{Versione} \TBstrut \\ [2mm]
+    \verb|@testing-library/jest-dom| & \verb|^4.2.4|  \TBstrut \\ [2mm]
+    \verb|@testing-library/react| & \verb|^9.3.2| \TBstrut \\ [2mm]
+    \verb|@testing-library/user-event| & \verb|^7.1.2| \TBstrut \\ [2mm]
+    \verb|csvtojson| & \verb|2.0.10| \TBstrut \\ [2mm]
+    \verb|d3| & \verb|^5.15.0| \TBstrut \\ [2mm]
+    \verb|electron-is-dev| & \verb|^1.1.0| \TBstrut \\ [2mm]
+    \verb|ml-modules|\footnote{Il pacchetto \texttt{ml-modules} usato nel nostro progetto è una versione modificata dell'ononimo pacchetto} & \verb|0.1.0| \TBstrut \\ [2mm]
+    \verb|react| & \verb|^16.13.0| \TBstrut \\ [2mm]
+    \verb|react-dom| & \verb|^16.13.0| \TBstrut \\ [2mm]
+    \verb|react-router-dom| & \verb|^5.1.2| \TBstrut \\ [2mm]
+    \verb|react-scripts| & \verb|3.4.0| \TBstrut \\ [2mm]
+    \end{longtable}
+    
+\subparagraph{Dipendenze sviluppatore \\}
 Nella seguente tabella sono elencate tutte le dipendenze necessarie per la corretta esecuzione dell'applicazione durante lo sviluppo della stessa.
 \rowcolors{2}{gray!25}{gray!15}
 	\setcounter{table}{0}
 	\begin{longtable} {
-		>{}p{50mm} 
-		>{}p{50mm}
+		>{}p{65mm} 
+		>{}p{30mm}
 		}
-	\rowcolor{gray!50}
-    electron & ^8.02 \TBstrut \\ [2mm]
-    electron-packager & ^14.2.1 \TBstrut \\ [2mm]
-    coveralls & ^3.0.9 \TBstrut \\ [2mm]
-
+    \rowcolor{gray!50}
+    \textbf{Pacchetto} & \textbf{Versione} \TBstrut \\ [2mm]
+    \verb|electron| & \verb|^8.02| \TBstrut \\ [2mm]
+    \verb|electron-packager| & \verb|^14.2.1| \TBstrut \\ [2mm]
+    \verb|coveralls| & \verb|^3.0.9| \TBstrut \\ [2mm]
+    \end{longtable}
 \subsubsection{Conclusione}
 Seguendo i due passaggi descritti nei precedenti paragrafi avrete correttamente installato l'applicazione esterna.
