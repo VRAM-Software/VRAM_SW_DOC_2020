@@ -1,0 +1,137 @@
+\subsection{Gestione della configurazione}
+	\subsubsection{Scopo}
+		L'obiettivo di questo processo\glosp è rendere documenti e codice sorgente univocamente identificati e facilmente riconoscibili, evidenziando versioni e modifiche. Vuole anche agevolare l'identificazione delle relazioni esistenti fra gli elementi e fa da supporto alla fase di verifica.
+	\subsubsection{Aspettative}
+		Questa sezione ha lo scopo supportare i processi\glosp di documentazione, di sviluppo e manutenzione del software rendendoli definiti e ripetibili.  
+	\subsubsection{Descrizione} 
+		Questo processo descrive come il gruppo ha gestito la configurazione degli strumenti e delle risorse utilizzate per svolgere il progetto\glo.
+		Sarà quindi descritta la configurazione del repository\glosp su GitHub, del sistema di versionamento\glosp Git e dei servizi GitHub.
+	\subsubsection{Attività}
+		\paragraph{Versionamento}\mbox{}\\ [1mm]
+		Le modifiche effettuate ai documenti ed ai file contenenti codice sorgente sono identificate da un numero di versione presente all'interno dei file stessi. Per quanto riguarda i documenti, ogni numero di versione è presente nel nome del file ed ha una corrispondente riga nella tabella delle modifiche così da avere uno storico delle modifiche effettuate al documento. Per il codice sorgente del software le modifiche effettuate in una versione, sono consultabili sulla sezione rilasci di GitHub e saranno identificate da opportuni tag.
+		\newline
+		La numerazione per il versionamento\glosp del codice sorgente applica in modo indipendente alle singole componenti software che compongono il prodotto\glosp finale. Tuttavia esiste un'unica versione per il prodotto\glosp finale, che segue le linee guida del versionamento\glosp del codice sorgente basate su risoluzione di problemi e nuove funzionalità minori o maggiori. Nelle note di rilascio del prodotto\glosp finale, saranno poi riportate le versioni dei singoli componenti che lo compongono ovvero documentazione, plugin Grafana\glosp e applicativo di addestramento esterno. Le modifche ed i rilasci saranno tracciabili tramite il repository\glosp principale grafana\_prediction che contiene al suo interno gli altri repository\glosp come sottomoduli.
+		\subparagraph*{Numerazione delle versioni del documento}
+		Per identificare univocamente le versioni dei documenti seguiamo le indicazioni dell'ente ETSI, dunque la numerazione delle versioni è composta da 3 cifre nel formato X.Y.Z e la prima bozza ha versione 0.0.1. Le modifiche al documento aggiorneranno le cifre nel seguente modo:
+		\begin{itemize}
+			\item \textbf{Z} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche editoriali\glosp al documento, es. X.Y.1, X.Y.2 etc.;
+			\item \textbf{Y} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche tecniche\glosp al documento. Se sono state eseguite modifiche sia editoriali\glosp che tecniche\glosp allora entrambe le cifre Z e Y saranno incrementate, es. X.1.1, X.2.2 etc;
+			\item \textbf{X} : Questa cifra viene incrementata ogni volta che viene rilasciata una nuova versione finale del documento, ovvero una versione di rilascio.			
+		\end{itemize}
+		La prima versione finale ha versione 1.1.1.
+		\newline
+		Durante la modifica e la revisione del documento le bozze vengono incrementate le cifre Z ed Y, es. 1.2.0, 1.2.1, 1.3.0, etc.
+		\newline
+		Quando il documento viene approvato come finale allora viene incrementata la cifra X, ad esempio la bozza 1.5.3 diventa la versione finale 2.1.1.
+		\newline
+		Ogni incremento sulle singole cifre è rigorosamente un +1, non possono essere saltati numeri.
+		
+		\subparagraph*{Numerazione delle versioni del codice sorgente}
+		Per identificare univocamente le versioni del codice sorgente utilizziamo una numerazione basata su 3 cifre nel formato X.Y.Z, la prima bozza ha versione 0.0.0 e le modifiche al codice aggiorneranno le cifre della versione nel modo seguente:
+		\begin{itemize}
+			\item \textbf{Z} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche al codice sorgente al fine di risolvere problemi riscontrati nel software;
+			\item \textbf{Y} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche al codice sorgente al fine di aggiungere nuove funzionalità di entità minore al software, la nuova versione deve inoltre presentare piena compatibilità con le versioni precedenti. Se sono state eseguite modifiche sia per risolvere problemi che per aggiungere nuove funzionalità minori allora entrambe le cifre Z e Y saranno incrementate, es. X.1.1, X.2.2 etc;
+			\item \textbf{X} : Questa cifra viene incrementata ogni volta che vengono effettuate modifiche al codice al fine di aggiungere nuove funzionalità di entità maggiore al software, ad esempio novità che cambino in modo importante l'uso del software o le funzionalità che esso offre. Un aumento di versione di questo tipo può, se necessario, non essere retrocompatibile. Un aggiornamento di questa cifra comporta l'azzeramento delle cifre Y e Z, es 2.0.0, 3.0.0 etc.
+		\end{itemize}
+		La prima versione finale ha versione 1.0.0.
+		\newline
+		Ogni incremento sulle singole cifre è rigorosamente un +1, non possono essere saltati numeri.
+		
+	\paragraph{Gestione delle modifiche}\mbox{}\\ [1mm]
+		Al fine di monitorare e limitare le modifiche al ramo principale del repository\glo, master, è utilizzato il meccanismo di pull request fornito da GitHub. Ogni membro del gruppo può creare branch secondari, secondo il workflow\glosp feature branch, su cui effettuare modifiche, tuttavia per unirle al branch master è necessario aprire una pull request che dovrà essere revisionata dai verificatori tramite i servizi di revisione integrati in GitHub. Una volta revisionata positivamente è compito del responsabile del documento approvare la pull request ed effettuare quindi l'effettiva unione delle modifiche nel branch master.
+		\newline
+		In sintesi, per effettuare modifiche ai file sono previsti i seguenti passaggi:
+		\begin{itemize}
+			\item contattare il responsabile del file affinché autorizzi la modifica del file stesso;
+			\item creare un branch secondario ed effettuare le modifiche al file;
+			\item aprire una pull request per unire le modifiche al ramo master;
+			\item i verificatori revisionano la pull request ed eventualmente richiedono aggiornamenti;
+			\item completata la revisione il responsabile approva la pull request.
+		\end{itemize}
+	
+		Il meccanismo sopra esposto si applica anche al codice sorgente. Inoltre in esso sono presenti anche dei sistemi di verifica automatica e di continuous integration che possono bloccare le pull request qualora le modifiche effettuate non rispettino i livelli di qualità desiderati o interrompano la compilazione o il superamento dei test automatici sul codice. In particolare, gli strumenti utilizzati a questo scopo sono Github Actions per implementare la continuous integration, JEst per l'esecuzione dei test automatici sul codice sorgente ed i servizi Coveralls e SonarCloud per controllare la qualità del codice sorgente.
+		
+	\paragraph{Repository}\mbox{}\\ [1mm]
+		Per tenere traccia di versioni e modifiche fatte a documenti e codice è utilizzato il sistema di versionamento\glosp distribuito Git, che può essere utilizzato tramite riga di comando o utilità grafiche come GitHub Desktop o GitKraken.
+		La struttura dei repository\glosp utlizzati è la seguente:
+		\newline
+		\dirtree{%
+			.1 grafana\_prediction.
+			.2 VRAM\_SW\_DOC\_2020.
+			.2 grafana\_prediction\_plugin.
+			.2 prediction\_configuration.
+		}
+		\mbox{}\\ % forza un newline
+		grafana\_prediction è il repository\glosp principale e gli altri sono suoi sottomoduli, configurati tramite la funzionalità Git submodules di Git.
+		Il repository\glosp principale, contenente i sottomoduli, è ospitato sul sito GitHub all'indirizzo: 
+		\begin{center}
+			\url{https://github.com/VRAM-Software/grafana_prediction}
+		\end{center}
+		\subparagraph*{Struttura del repository VRAM\_SW\_DOC\_2020}
+		Al fine di fornire una navigazione agevole e standardizzata, il contenuto del repository\glosp è organizzato in modo gerarchico tramite directory secondo il seguente schema:
+		\newline
+		\dirtree{%
+			.1 root.
+				.2 RR.
+					.3 Esterni.
+					.3 Interni.
+				.2 RP.
+					.3 Esterni.
+					.3 Interni.
+				.2 RQ.
+					.3 Esterni.
+					.3 Interni.
+				.2 RA.
+					.3 Esterni.
+					.3 Interni.
+				.2 Guide.
+				.2 Template.
+					.3 Images.
+					.3 config.
+					.3 img.
+					.3 res.
+		}
+		\mbox{}\\ % forza un newline
+		Nel dettaglio:
+		\begin{itemize}
+			\item \textbf{RR}: contiene i sorgenti \LaTeX \xspace dei documenti relativi alla revisione dei requisiti;
+			\item \textbf{RP}: contiene i sorgenti \LaTeX \xspace dei documenti relativi alla revisione di progettazione\glo;
+			\item \textbf{RQ}: contiene i sorgenti \LaTeX \xspace dei documenti relativi alla revisione di qualifica;
+			\item \textbf{RA}: contiene i sorgenti \LaTeX \xspace dei documenti relativi alla revisione di accettazione; 
+			\item \textbf{Guide}: contiene brevi indicazioni interne su come usare i comandi \LaTeX \xspace usati nei documenti e su come riutilizzare il template per generare nuovi documenti;
+			\item \textbf{Template}: contiene i sorgenti \LaTeX \xspace usati per generare la base comune di tutti i documenti.
+		\end{itemize}
+		È inoltre disponibile una directory condivisa su Google Drive, con la stessa struttura gerarchica sopra esposta, che contiene tutti e soli i file PDF in versione finale. Lo scopo di questa directory condivisa è facilitare la consultazione e la condivisione dei file PDF stessi.
+		
+	\paragraph{Tipologie di file non accettate}\mbox{}\\ [1mm]
+		Tramite un apposito file .gitignore presente nella root directory della gerarchia vengono definiti i tipi di file non accettati all'interno del repository\glo. Vengono esclusi tutti i file di compilazione, compilati o temporanei in quanto il repository\glosp dovrebbe contenere solamente i seguenti formati di file:
+		\begin{itemize}
+			\item file sorgente \LaTeX \xspace con estensione .tex;
+			\item file immagine, preferibilmente in formato .png;
+			\item file testuali in formato .md o .txt;
+			\item tutti i file di codice sorgente come .js, .ts etc.		
+		\end{itemize}
+	\subsubsection{Strumenti di supporto}
+	\paragraph{GitHub}
+	\subparagraph*{Strumenti GitHub utilizzati}\mbox{}\\ [1mm]
+		In aggiunta ai servizi già elencati, al fine di migliorare efficacia ed efficienza, vengono utilizzate le funzionalità di "Issue Tracking System",  
+		"Milestone" e "Project Board" integrate in GitHub. Ognuna di queste funzionalità viene usata solo da chi autorizzato, ad esempio rilasci di versioni, creazione e chiusura di milestone sono concesse solo al responsabile di progetto\glo.
+		\newline
+		Vengono inoltre utilizzate le "Labels" offerte dall'Issue Tracking System di Github per definire le tipologie di problemi e le loro priorità.
+		\newline
+		Per il repository\glosp contenente il codice sorgente del software sono utilizzate le GitHub Actions al fine di implementare la pratica della continuous integration che, a sua volta, utilizza strumenti quali JEst, SonarCloud e Coveralls per eseguire le verifiche automatiche sul codice sorgente.
+	\paragraph{SonarCloud}
+	I repository\glosp del codice sorgente sono collegati al servizio SonarCloud ed è inserita la sua analisi statica\glosp del codice sorgente nei controlli eseguiti dalla continuous integration. Le pagine sonarcloud dei repository sono disponibili al seguente indirizzo: 
+	\begin{center}
+		\url{https://sonarcloud.io/organizations/vram-software/projects}
+	\end{center}
+	\paragraph{Coveralls}
+	Poiché SonarCloud, nella versione disponibile al momento dello svolgimento del progetto\glo, non supporta l'analisi del code coverage tramite Github Actions, utilizziamo il servizio offerto da Coveralls che abbiamo integrato nella continuous integration. Le pagine Coveralls dei repository sono disponibili ai seguenti indirizzi:
+	\begin{center}
+		\url{https://coveralls.io/github/VRAM-Software/grafana_prediction_plugin}
+	\end{center}
+	\begin{center}
+	\url{https://coveralls.io/github/VRAM-Software/prediction_configuration_utility}
+	\end{center}
+	
+		
