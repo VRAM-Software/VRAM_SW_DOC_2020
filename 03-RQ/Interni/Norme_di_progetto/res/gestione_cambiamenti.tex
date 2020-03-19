@@ -1,0 +1,64 @@
+\subsection{Gestione dei cambiamenti}
+\subsubsection{Scopo}
+Lo scopo di questo processo\glosp è fornire un metodo tempestivo, disciplinato e documentato per assicurare che tutti i cambiamenti, compresi i problemi, riscontrati nel corso del progetto\glo, siano identificati, analizzati e risolti.
+\subsubsection{Aspettative}
+L'applicazione di questo processo\glosp deve comportare maggior tempestività ed efficacia nell'individuazione e nella risoluzione dei problemi, con un conseguente aumento di efficacia ed efficienza del processo\glosp di verifica. Inoltre questo processo\glosp deve permettere di individuare i problemi maggiormente ricorrenti.
+%grazie anche al tracciamento dei problemi più frequenti.
+\subsubsection{Descrizione} 
+Il processo\glosp di gestione dei cambiamenti analizza e risolve tutti i cambiamenti programmati e improvvisi, quali i problemi, riscontrati durante l'esecuzione dei processi\glosp di sviluppo e di fornitura, indipendentemente dalla loro natura e dalla loro origine. 
+\subsubsection{Attività}
+\paragraph{Implementazione del processo}\mbox{}\\ [1mm]
+Deve essere istanziato il processo\glosp di gestione dei cambiamenti per gestire ogni nuova modifica, comprese le non conformità ed i problemi non pianificati, rilevato nei prodotti\glosp software o nelle attività. Questo processo\glosp deve essere conforme alle seguenti proprietà:
+\begin{itemize}
+	\item il processo\glosp deve essere circolare e chiuso, assicurando che:
+	\begin{itemize} 
+		\item tutti i cambiamenti siano prontamente segnalati e gestiti tramite il processo di risoluzione dei cambiamenti;
+		\item i cambiamenti vengano presi in carico e gestiti;
+		\item vengano inviate delle notifiche per informare gli interessati della presenza dell'eventuale problema;
+		\item le cause del problema vengano identificate, analizzate e, dove possibile, eliminate;
+		\item la risoluzione e le decisioni prese siano archiviate e storicizzate;
+		\item lo stato del cambiamento sia tracciato, aggiornato e comporti delle notifiche al cambio di stato;
+		\item venga mantenuto un registro di tutti i problemi riscontrati.
+	\end{itemize}
+	\item Il processo\glosp definisce uno schema per categorizzare e dare priorità ai cambiamenti. Questo schema è composto da:
+	\begin{itemize} 
+		\item \textbf{Identificativo}: codice numerico progressivo per identificare il singolo cambiamento;
+		\item \textbf{Tipologia}: denota il tipo di cambiamento e può essere:
+		\begin{itemize}
+			\item \textbf{Editoriale}: cambiamento che comporta modifiche editoriali\glosp sulla documentazione;
+			\item \textbf{Tecnico}: cambiamento che comporta modifiche tecniche\glosp sulla documentazione;
+			\item \textbf{Funzionale}: cambiamento che influenza le caratteristiche funzionali del prodotto\glosp software;
+			\item \textbf{Conformità}: cambiamento che comporta violazioni di conformità del prodotto\glosp software;
+			\item \textbf{Validazione}: cambiamento riscontrato durante il processo\glosp di Validazione\glosp del prodotto\glosp software.
+		\end{itemize}
+		\item \textbf{Priorità}: può essere:
+		\begin{itemize}
+			\item bloccante;
+			\item urgente;
+			\item alta;
+			\item media;
+			\item bassa.
+		\end{itemize}
+		\item \textbf{Stato}: può essere:
+		\begin{itemize}
+			\item da fare;
+			\item in corso;
+			\item completato.
+		\end{itemize}
+	\end{itemize}
+	\item I cambiamenti rilevati ed archiviati vengono analizzati per identificare quelli più frequenti ed eventuali tendenze;
+	\item La modalità di gestione e di risoluzione individuate per i cambiamenti e per i problemi sono analizzate e valutate al fine di verificare che siano stati effettivamente risolti e che le modifiche siano state correttamente implementate nei prodotti\glosp software e nelle attività. Inoltre l'analisi deve permettere di individuare dei pattern di risoluzione ed aiutare a determinare quando vengono introdotti ulteriori problemi.			
+\end{itemize}
+
+\paragraph{Risoluzione dei problemi}\mbox{}\\ [1mm]
+Quando dei cambiamenti, comprese le non conformità ed i problemi, sono rilevati in un prodotto\glosp software o in un'attività, deve essere realizzato un report che li descriva. Questo report deve essere usato come componente del ciclo chiuso del punto §3.6.4.1: dall'individuazione dei cambiamenti al processo di indagine, analisi e risoluzione, fino all'individuazione della causa ed alla sua analisi per individuare le tendenze.
+Per svolgere quanto descritto, ci si appoggia all'Issue Tracking System di GitHub. Esso consente di aggiungere delle issues che corrispondono ai cambiamenti o ai problemi che si devono svolgere e di assegnarle ad incaricati e responsabili. Dunque viene assegnata un'istanza dello schema precedentemente descritto e, in base alle priorità, si procederà alla loro risoluzione.
+
+\subparagraph{Metriche di qualità}
+La metrica di qualità utilizzata per valutare la qualità della risoluzione dei problemi è:
+\begin{itemize}
+	\item \textbf{M06 Tempo medio di risoluzione degli errori}: indica il tempo medio di risoluzione degli errori segnalati. Se elevato, questo valore indica che la gestione dei cambiamenti non è adeguata;
+	\begin{itemize}
+		\item[] \textbf{formula}: $\frac{TRE}{NE}$ dove $TRE$ indica il tempo totale per la risoluzione degli errori e $NE$ il numero di errori risolti.
+	\end{itemize} 
+\end{itemize}		
