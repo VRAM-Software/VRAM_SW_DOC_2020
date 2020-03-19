@@ -7,16 +7,20 @@ In questo manuale vengono trattati:
 	\item gli strumenti necessari
 	\item le tecnologie usate
 	\item le modalità di installazione
+	\item le modalità di test
 	\item i requisiti necessari
 	\item le scelte progettuali
 	\item l'architettura software
 \end{itemize}
 
 \subsection{Scopo del manuale}
-Questo manuale si rivolge allo sviluppatore che vuole mantenere o estendere il prodotto\glosp \textit{Predire in Grafana}. Lo scopo del documento è quindi di facilitare il lavoro di manutenzione ed estensione fornendo una spiegazione dettagliata del prodotto\glo.
+Questo manuale si rivolge allo sviluppatore che vuole mantenere o estendere il prodotto\glosp \textit{Predire in Grafana}. Lo scopo del documento è quindi di facilitarne il lavoro fornendo una spiegazione dettagliata del prodotto\glo.
 
 \subsection{Scopo del prodotto}
-Lo scopo del prodotto è implementare un plug-in di Grafana\glosp scritto in linguaggio Javascript che esegue gli algoritmi di Support Vector Machine SVM\glosp o Regressione Lineare RL\glo, i quali, leggendo da un file JSON la loro configurazione, saranno in grado di generare previsioni che potranno essere aggiunte al flusso di monitoraggio. Il plug-in prevede il superamento di determinati livelli di soglia per generare un allarme attraverso il meccanismo di Grafana\glosp detto alert\glo. Il plug-in utilizza un applicativo esterno per addestrare gli algoritmi di SVM\glosp ed RL\glosp o altri algoritmi di predizione. Dunque il plug-in permette un'attività di monitoraggio grazie alla quale gli operatori possono intervenire con ogni cognizione di causa sul sistema.
+Lo scopo del prodotto è implementare un plug-in di Grafana\glosp scritto in linguaggio TypeScript che esegua un algoritmo di previsione  per generare previsioni che potranno essere aggiunte al flusso di monitoraggio e un applicativo esterno che crei un file JSON di configurazione adeguato tramite l'addestramento del suddetto algoritmo. \\
+Gli algoritmi di previsione implementati sono Support Vector Machine e Regressione Lineare.
+Il plug-in prevede inoltre la possibilità di per generare un allarme attraverso il meccanismo di Grafana\glosp detto alert\glosp al superamento di determinati livelli di soglia impostati dall'utente.
+Lo scopo del nostro prodotto è dunque quello di permettere un'attività di monitoraggio grazie alla quale gli operatori possono intervenire con ogni cognizione di causa sul sistema.
 
 \subsection{Riferimenti}
 \begin{itemize}
