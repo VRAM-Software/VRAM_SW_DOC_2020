@@ -1,0 +1,84 @@
+%File principale del documento su cui invocare la compilazione, vedi "istruzioni.txt" per più info
+
+%Preambolo: la parte prima del \begin{document}
+\documentclass[12pt,a4paper]{article} %formato del documento e grandezza caratteri
+
+%Input del file metadata.tex della cartella locale "res/"
+\input{res/metadata.tex} %Contiene le varibili che descrivono il documento
+
+%Input di file di configurazione presi dalla cartella "Template-LaTeX/config/", uguali per tutti i documenti
+%Attenzione bisogna impostare il percorso del file!
+\input{../../../Template-LaTeX/config/package.tex} %Inclusione pacchetti
+\input{../../../Template-LaTeX/config/config.tex}  %Configurazione pacchetti
+
+\begin{document}
+	%Input del file "frontmatter" preso dalla cartella "Template-LaTeX/config/", uguale per tutti i documenti
+	%Attenzione bisogna impostare il percorso del file!
+	\input{../../../Template-LaTeX/config/frontmatter.tex} %Imposta il frontespizio, l'indice, header e footer	
+	
+	\listoftables
+	\pagebreak
+	\listoffigures
+	\pagebreak
+	
+	%Tutte le sezioni del documento
+	%\input{res/inserire nome sezione 1} 
+	% ...
+	%\input{res/inserire nome sezione n} 
+	\input{res/introduzione.tex}
+	\pagebreak
+	\input{res/DescrizioneRequisiti.tex}
+	\pagebreak
+	\input{res/uc1-addestramento_interno.tex}
+	\pagebreak
+	\input{res/uc2-visualizzazione-indice-qualita-previsioni.tex}
+	\pagebreak
+	\input{res/uc3-errore-addestramento-interno-CSV.tex}
+	\pagebreak
+	\input{res/uc17-errore-addestramento-interno-JSON.tex}
+	\pagebreak
+	\input{res/uc4-addestramento_esterno.tex}
+	\pagebreak
+	\input{res/uc5-visualizzazione-grafico-qualita-previsioni.tex}
+	\pagebreak
+	\input{res/uc6-errore-addestramento-esterno-CSV.tex}
+	\pagebreak
+	\input{res/uc18-errore-addestramento-esterno-JSON.tex}
+	\pagebreak
+	\input{res/uc7-avvio-plugin.tex}
+	\pagebreak
+	\input{res/uc21-visualizzazione-dashboard-plugin.tex}
+	\pagebreak
+	\input{res/uc8-caricamento-file-JSON.tex}
+	\pagebreak
+	\input{res/uc9-associazione-nodi-flusso-dati.tex}
+	\pagebreak
+	\input{res/uc10.tex}
+	\pagebreak
+	%\input{res/uc11.tex}
+	%\pagebreak
+	\input{res/uc12.tex}
+	\pagebreak
+	\input{res/uc13-definizione-alert.tex}
+	\pagebreak
+	\input{res/uc14-errore-alert-input-errato.tex}
+	\pagebreak
+	\input{res/uc15-sospensione-alert.tex}
+	\pagebreak
+	\input{res/uc16-rimozione-alert.tex}
+	\pagebreak
+	\input{res/req-funzionali.tex}
+	\pagebreak
+	\input{res/req-qualitativi.tex}
+	\pagebreak
+	\input{res/requisiti-vincolo.tex}
+	\pagebreak
+	\input{res/req-prestazionali.tex}
+	\pagebreak
+	\input{res/tracciamento.tex}
+	\pagebreak
+	
+	
+	%Input del file "decision_table" della cartella locale "res/"
+	%\input{res/decision_table.tex} %Tabella delle decisioni (solo per i verbali)
+\end{document}
