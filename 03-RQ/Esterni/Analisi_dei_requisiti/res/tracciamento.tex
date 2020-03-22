@@ -1,0 +1,332 @@
+\section{Tracciamento}
+	\subsection{Fonte - Requisiti}
+	\rowcolors{2}{gray!25}{gray!15}
+	\begin{longtable} {
+		>{\centering}p{28mm}  
+		>{}p{20mm}
+		}
+	\rowcolor{gray!50}
+		\textbf{Fonte} & \textbf{Requisiti}	\TBstrut \\
+
+		capitolato & 
+		R3F1
+		R3F1.6
+		R3F1.2
+		R3F1.9
+		R3F1.10
+		R3F1.11
+		R3F1.12
+		R3F1.13
+		R3F1.14
+		R3F2
+		R3F2.1
+		R3F2.2
+		R3F2.3
+		R1F4
+		R1F4.9
+		R1F4.2
+		R1F4.11
+		R1F4.12
+		R3F4.13
+		R3F4.14
+		R3F4.15
+		R3F4.16
+		R1F4.7
+		R1F5 
+		R1F5.1
+		R1F5.2
+		R1F5.3
+		R1F7
+		R1F8
+		R1F9
+		R1F9.1
+		R1F9.2
+		R3F9.3
+		R1F9.4
+		R2F9.5  \TBstrut \\ [2mm]
+
+		capitolato &
+		R1F11
+		R1F12
+		R2F13
+		R1Q1 
+		R1Q3 
+		R1Q4 
+		R1Q5 
+		R2Q6
+		R1Q8
+		 
+		R1V1.5
+		R1V2
+		R1V4 \TBstrut \\ [2mm]
+				
+		interno & 
+		R3F1.1
+		R3F1.1.1
+		R3F1.1.2
+		R3F1.6.1
+		R3F1.6.2
+		R3F1.3
+		R3F1.4
+		R3F1.8
+		R3F3
+		R3F17
+		R1F4.1
+		R1F4.1.1
+		R1F4.1.2
+		R1F4.9.1
+		R1F4.9.2
+		R1F4.4
+		R1F4.5
+		R2F4.6
+		R2F6
+		R2F18
+		R1F19
+		R1F21  
+		R2F10
+		R1F20
+		R2F13.2
+		R2F13.3
+		F2F13.4
+		R2F14
+		R2F15 \TBstrut \\ [2mm]
+
+		interno &
+		R2F16
+		
+		R1Q2 
+		R1Q10
+		R1Q7
+		R1Q9
+		R1Q11
+
+		R1V1
+		R3V1.5.1
+		R1V1.5.2 
+		R1V2.1 
+		R1V2.2 
+		R1V2.2.1 
+		R1V2.2.2 
+		R1V2.2.3 
+		R1V2.2.4 
+		R1V2.2.5 
+		R1V2.3 
+		R2V2.5 
+		R1V4.1
+		R1V4.2
+		R1V4.3
+		R1V4.4
+		R1V4.5
+		R1V4.6
+		R1V5
+		R1V5.1
+		R1V5.2
+		R1V5.3
+		R2V3 
+		R2V3.1 
+		R2V3.2 
+		R2V3.3
+		R1V3.4
+		R2V3.5 \TBstrut \\ [2mm]
+
+		proponente &
+		R3F1.5
+		R3F1.7
+		R1F4.8
+		R1F4.10 \TBstrut \\ [2mm]
+				
+		UC1 & R3F1 \TBstrut \\ [2mm]
+		UC1.1 & R3F1.1 \TBstrut \\ [2mm]
+		UC1.2 & R3F1.2 \TBstrut \\ [2mm]
+		UC1.3 & R3F1.3 \TBstrut \\ [2mm]
+		UC1.4 & R3F1.4 \TBstrut \\ [2mm]
+		UC1.5 & R3F1.5 \TBstrut \\ [2mm]
+		UC1.6 & R3F1.6 \TBstrut \\ [2mm]
+		UC1.7 & R3F1.7 \TBstrut \\ [2mm]
+		UC1.8 & R3F1.8 \TBstrut \\ [2mm]
+		UC1.9 & R3F1.9 \TBstrut \\ [2mm]
+		UC1.10 & R3F1.10 \TBstrut \\ [2mm]
+		UC1.11 & R3F1.11 \TBstrut \\ [2mm]
+		UC1.12 & R3F1.12 \TBstrut \\ [2mm]
+		UC1.13 & R3F1.13 \TBstrut \\ [2mm]
+		UC1.14 & R3F1.14 \TBstrut \\ [2mm]
+		UC2 & R3F2 \TBstrut \\ [2mm]
+		UC2.1 & R3F2.1 \TBstrut \\ [2mm]
+		UC2.2 & R3F2.2 \TBstrut \\ [2mm]
+		UC2.3 & R3F2.3 \TBstrut \\ [2mm]
+		UC3 & R3F3 \TBstrut \\ [2mm]
+		UC4 & R1F4 \TBstrut \\ [2mm]
+		UC4.1 & R1F4.1 \TBstrut \\ [2mm]
+		UC4.2 & R1F4.2 \TBstrut \\ [2mm]
+		UC4.3 & R1F4.4 \TBstrut \\ [2mm]
+		UC4.4 & R1F4.5 \TBstrut \\ [2mm]
+		UC4.5 & R1F4.7 \TBstrut \\ [2mm]
+		UC4.6 & R1F4.8 \TBstrut \\ [2mm]
+		UC4.7 & R1F4.9 \TBstrut \\ [2mm]
+		UC4.8 & R1F4.10 \TBstrut \\ [2mm]
+		UC4.9 & R2F4.6 \TBstrut \\ [2mm]
+		UC4.10 & R1F4.11 \TBstrut \\ [2mm]
+		UC4.11 & R1F4.12 \TBstrut \\ [2mm]
+		UC4.12 & R3F4.13 \TBstrut \\ [2mm]
+		UC4.13 & R3F4.14 \TBstrut \\ [2mm]
+		UC4.14 & R3F4.15 \TBstrut \\ [2mm]
+		UC4.15 & R3F4.16 \TBstrut \\ [2mm]
+		UC5 & R1F5 \TBstrut \\ [2mm]
+		UC5.1 & R1F5.1 \TBstrut \\ [2mm]
+		UC5.2 & R1F5.2 \TBstrut \\ [2mm]
+		UC5.3 & R1F5.3 \TBstrut \\ [2mm]
+		UC6 & R2F6 \TBstrut \\ [2mm]
+		UC7 & R1F7 \TBstrut \\ [2mm]
+		UC8 & R1F8 \TBstrut \\ [2mm]
+		UC9 & R1F9 \TBstrut \\ [2mm]
+		UC9.1 & R1F9.1 \TBstrut \\ [2mm]
+		UC9.2 & R1F9.2 R3F9.3 \TBstrut \\ [2mm]
+		UC9.3 & R1F9.4 \TBstrut \\ [2mm]
+		UC9.4 & R1F9.5 \TBstrut \\ [2mm]
+		UC10 & R2F10 \TBstrut \\ [2mm]
+		UC12 & R1F12 \TBstrut \\ [2mm]
+		UC13 & R2F13 \TBstrut \\ [2mm]
+		UC13.2 & R2F13.2 \TBstrut \\ [2mm]
+		UC13.3 & R2F13.3 \TBstrut \\ [2mm]
+		UC13.4 & R2F13.4 \TBstrut \\ [2mm]
+		UC14 & R2F14 \TBstrut \\ [2mm]
+		UC15 & R2F15 \TBstrut \\ [2mm]
+		UC16 & R2F16 \TBstrut \\ [2mm]
+		UC17 & R3F17 \TBstrut \\ [2mm]
+		UC18 & R2F18 \TBstrut \\ [2mm]
+		UC19 & R1F19 \TBstrut \\ [2mm]
+		UC20 & R1F20 \TBstrut \\ [2mm]
+		UC21 & R1F21 \TBstrut \\ [2mm]
+		\rowcolor{white}
+		\caption{Tracciamento Fonte-Requisito}
+	\end{longtable}
+
+	\subsection{Requisito - Fonti}
+	\rowcolors{2}{gray!25}{gray!15}
+	\begin{longtable} {
+			>{\centering}p{28mm}  
+			>{}p{20mm}
+		}
+		\rowcolor{gray!50}
+		\textbf{Requisito} & \textbf{Fonti}	\TBstrut \\
+		R3F1 & Capitolato UC1 \TBstrut \\ [2mm]	
+		R3F1.1 & Interno UC1.1 \TBstrut \\ [2mm]
+		R3F1.1.1 & Interno \TBstrut \\ [2mm]
+		R3F1.1.2 & Interno \TBstrut \\ [2mm]				
+		R3F1.2 & Capitolato UC1.2 \TBstrut \\ [2mm]		
+		R3F1.3 & Interno UC1.3 \TBstrut \\ [2mm]				
+		R3F1.4 & Interno UC1.4 \TBstrut \\ [2mm]
+		R3F1.5 & Proponente UC1.5 \TBstrut \\ [2mm]
+		R3F1.6 & Capitolato UC1.6 \TBstrut \\ [2mm]
+		R3F1.6.1 & Interno \TBstrut \\ [2mm]
+		R3F1.6.2 & Interno \TBstrut \\ [2mm]
+		R3F1.7 & Proponente UC1.7 \TBstrut \\ [2mm]
+		R3F1.8 & Interno UC1.8 \TBstrut \\ [2mm]
+		R3F1.9 & Capitolato UC1.9 \TBstrut \\ [2mm]
+		R3F1.10 & Capitolato UC1.10 \TBstrut \\ [2mm]
+		R3F1.11 & Capitolato UC1.11 \TBstrut \\ [2mm]
+		R3F1.12 & Capitolato UC1.12 \TBstrut \\ [2mm]
+		R3F1.13 & Capitolato UC1.13 \TBstrut \\ [2mm]
+		R3F1.14 & Capitolato UC1.14 \TBstrut \\ [2mm]
+		R3F2 & Capitolato UC2 \TBstrut \\ [2mm]
+		R3F2.1 & Capitolato UC2.1 \TBstrut \\ [2mm]
+		R3F2.2 & Capitolato UC2.2 \TBstrut \\ [2mm]
+		R3F2.3 & Capitolato UC2.3 \TBstrut \\ [2mm]
+		R3F3 & Interno UC3 \TBstrut \\ [2mm]		
+		R1F4 & Capitolato UC4 \TBstrut \\ [2mm]	
+		R1F4.1 & Interno UC4.1 \TBstrut \\ [2mm]		
+		R1F4.1.1 & Interno \TBstrut \\ [2mm]
+		R1F4.1.2 & Interno \TBstrut \\ [2mm]		
+		R1F4.2 & Capitolato UC4.2 \TBstrut \\ [2mm]				
+		R1F4.4 & Interno UC4.3 \TBstrut \\ [2mm]
+		R1F4.5 & Interno UC4.4 \TBstrut \\ [2mm]
+		R2F4.6 & Interno UC4.9 \TBstrut \\ [2mm]
+		R1F4.7 & Capitolato UC4.5 \TBstrut \\ [2mm]
+		R1F4.8 & Proponente UC4.6 \TBstrut \\ [2mm]
+		R1F4.9 & Capitolato UC4.7 \TBstrut \\ [2mm]
+		R1F4.9.1 & Interno \TBstrut \\ [2mm]
+		R1F4.9.2 & Interno \TBstrut \\ [2mm]
+		R1F4.10 & Proponente UC4.8 \TBstrut \\ [2mm]
+		R1F4.11 & Capitolato UC4.10 \TBstrut \\ [2mm]
+		R1F4.12 & Capitolato UC4.11 \TBstrut \\ [2mm]
+		R3F4.13 & Capitolato UC4.12 \TBstrut \\ [2mm]
+		R3F4.14 & Capitolato UC4.13 \TBstrut \\ [2mm]
+		R3F4.15 & Capitolato UC4.14 \TBstrut \\ [2mm]
+		R3F4.16 & Capitolato UC4.15 \TBstrut \\ [2mm]
+		R1F5 & Capitolato UC5 \TBstrut \\ [2mm]
+		R1F5.1 & Capitolato UC5.1 \TBstrut \\ [2mm]
+		R1F5.2 & Capitolato UC5.2 \TBstrut \\ [2mm]
+		R1F5.3 & Capitolato UC5.3 \TBstrut \\ [2mm]
+		R2F6 & Interno UC6 \TBstrut \\ [2mm]		
+		R1F7 & Capitolato UC7 \TBstrut \\ [2mm]
+		R1F8 & Capitolato UC8 \TBstrut \\ [2mm]
+		R1F9 & Capitolato UC9 \TBstrut \\ [2mm]
+		R1F9.1 & Capitolato UC9.1 \TBstrut \\ [2mm]
+		R1F9.2 & Capitolato UC9.2 \TBstrut \\ [2mm]
+		R3F9.3 & Capitolato UC9.2 \TBstrut \\ [2mm]
+		R1F9.4 & Capitolato UC9.3 \TBstrut \\ [2mm]
+		R2F9.5 & Capitolato UC9.4 \TBstrut \\ [2mm]
+		R2F10 & Interno UC10 \TBstrut \\ [2mm]
+		R1F11 & Capitolato \TBstrut \\ [2mm]		
+		R1F12 & Capitolato UC12 \TBstrut \\ [2mm]	
+		R2F13 & Capitolato UC13 \TBstrut \\ [2mm]		
+		R2F13.2 & Interno UC13.2 \TBstrut \\ [2mm]		
+		R2F13.3 & Interno UC13.3 \TBstrut \\ [2mm]	
+		R2F13.4 & Interno UC13.4 \TBstrut \\ [2mm]	
+		R2F14 & Interno UC14 \TBstrut \\ [2mm]		
+		R2F15 & Interno UC15 \TBstrut \\ [2mm]		
+		R2F16 & Interno UC16 \TBstrut \\ [2mm]
+		R3F17 & Interno UC17 \TBstrut \\ [2mm]
+		R2F18 & Interno UC18 \TBstrut \\ [2mm]
+		R1F19 & Interno UC19 \TBstrut \\ [2mm]
+		R1F20 & Interno UC20 \TBstrut \\ [2mm]
+		R1F21 & Interno UC21 \TBstrut \\ [2mm]
+		
+		R1Q1 & Capitolato \TBstrut \\ [2mm]
+		R1Q2 & Interno \TBstrut \\ [2mm]
+		R1Q3 & Capitolato \TBstrut \\ [2mm]
+		R1Q4 & Capitolato \TBstrut \\ [2mm]
+		R1Q5 & Capitolato \TBstrut \\ [2mm]
+		R2Q6 & Capitolato \TBstrut \\ [2mm]
+		R1Q7 & Interno \TBstrut \\ [2mm]
+		R1Q8 & Capitolato \TBstrut \\ [2mm]
+		R1Q9 & Interno \TBstrut \\ [2mm]
+		R1Q10 & Interno \TBstrut \\ [2mm]
+		R1Q11 & Interno \TBstrut \\ [2mm]
+		
+		R1V1 & Interno \TBstrut \\ [2mm]
+		R1V1.5 & Capitolato \TBstrut \\ [2mm]
+		R3V1.5.1 & Interno \TBstrut \\ [2mm]
+		R1V1.5.2 & Interno \TBstrut \\ [2mm]
+		R1V2 & Capitolato \TBstrut \\ [2mm]
+		R1V2.1 & Interno \TBstrut \\ [2mm]
+		R1V2.2 & Interno \TBstrut \\ [2mm]
+		R1V2.2.1 & Interno \TBstrut \\ [2mm]
+		R1V2.2.2 & Interno \TBstrut \\ [2mm]
+		R1V2.2.3 & Interno \TBstrut \\ [2mm]
+		R1V2.2.4 & Interno \TBstrut \\ [2mm]
+		R1V2.2.5 & Interno \TBstrut \\ [2mm]
+		R1V2.3 & Interno \TBstrut \\ [2mm]
+		R2V2.5 & Interno \TBstrut \\ [2mm]
+		R2V3 & Interno \TBstrut \\ [2mm]
+		R2V3.1 & Interno \TBstrut \\ [2mm]
+		R2V3.2 & Interno \TBstrut \\ [2mm]
+		R2V3.3 & Interno \TBstrut \\ [2mm]
+		R1V3.4 & Interno \TBstrut \\ [2mm]
+		R2V3.5 & Interno \TBstrut \\ [2mm]
+		R1V4 & Capitolato \TBstrut \\ [2mm]
+		R1V4.1 & Interno \TBstrut \\ [2mm]
+		R1V4.2 & Interno \TBstrut \\ [2mm]
+		R1V4.3 & Interno \TBstrut \\ [2mm]
+		R1V4.4 & Interno \TBstrut \\ [2mm]
+		R1V4.5 & Interno \TBstrut \\ [2mm]
+		R1V4.6 & Interno \TBstrut \\ [2mm]
+		R1V5 & Interno \TBstrut \\ [2mm]
+		R1V5.1 & Interno \TBstrut \\ [2mm]
+		R1V5.2 & Interno \TBstrut \\ [2mm]
+		R1V5.3 & Interno \TBstrut \\ [2mm]
+		\rowcolor{white}
+		\caption{Tracciamento Requisito-Fonti}
+	\end{longtable}
+	\subsection{Considerazioni}
+	Nelle prossime revisioni potranno esserci cambiamenti ai requisiti dovuti all'avanzamento dello sviluppo e a una migliore comprensione delle richieste del proponente. Nel caso in cui il carico di lavoro relativo ai requisiti obbligatori venga esaurito prima del previsto, il gruppo si riserva la possibilità di sviluppare i requisiti desiderabili e opzionali.
