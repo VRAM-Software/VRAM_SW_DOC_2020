@@ -1,3 +1,4 @@
+\section{Configurazione dell'ambiente di lavoro}
 \subsection{Configurazione ambiente di sviluppo integrato WebStorm}
 La configurazione base di WebStorm prevede la corretta configurazione dei path di sistema e l'apertura di un progetto.
 \subsubsection{Configurazione dei path di sistema}
@@ -31,7 +32,7 @@ Scegliere un nome e creare il token, copiarlo quindi nella finestra WebStorm pre
 %\\
 %\\
 %\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/sonarcloud.png}
-La connessione verrà verificata e sarà possibile visualizzarla nell'elenco delle connessioni.
+La connessione viene verificata ed è possibile visualizzarla nell'elenco delle connessioni.
 \subsubsection{Configurazione per progetto}
 Dopo aver terminato la configurazione globale è possibile configurare i singoli progetti. Per farlo aprire le impostazioni di WebStorm dal suo menù "File", Quindi nella sezione "Tools" espandere la voce "SonarLint" e selezionare "Project Settings".
 \\
@@ -44,53 +45,47 @@ Selezionare la connessione a SonarCloud desiderata ed inserire una delle chiavi 
 \end{itemize}
 
 \subsection{Configurazione ambiente plug-in Grafana}
-\subsubsection{Contenuto file: package.json}
+\subsubsection{Contenuto file package.json}
 Il file package.json contiene tutte le informazioni e i requisiti necessari della nostra applicazione. Le informazioni importanti sono i seguenti attributi:
-\paragraph{dependencies}\mbox{}\\ [1mm]
-Questo attributo contiene la seguente lista di pacchetti che sono necessari per il corretto funzionamento dell'applicazione:
 \begin{itemize}
-	\item jquery;
-	\item lodash;
-	\item moment;
-	\item plotly.js;
-	\item scriptjs.
-\end{itemize}
-\paragraph{devDependencies}\mbox{}\\ [1mm]
-Questo attributo contiene la seguente lista di pacchetti che sono necessari per il corretto funzionamento dell'applicazione durante lo sviluppo:
-\begin{itemize}
-	\item @grafana/data;
-	\item @grafana/toolkit;
-	\item @grafana/ui;
-	\item @types/grafana;
-	\item grafana-sdk-mocks;
-	\item coveralls.
-\end{itemize}
-\paragraph{scripts}\mbox{}\\ [1mm]
-Questo attributo contiene una lista di tutti i comandi, utili per uno sviluppatore, che possono essere eseguiti da linea di comando:
-\begin{itemize}
-	\item \textbf{build}: 
-	\begin{verbatim}
-		npm run build
-	\end{verbatim}
-	questo comando genera una cartella: dist che contiene i file di produzione del plug-in Grafana\glo;
-	\item \textbf{test}: 
-	\begin{verbatim}
-		npm test
-	\end{verbatim}
-	questo comando fa eseguire tutti i test automatici dell'applicazione;
-	\item \textbf{dev}: 
-	\begin{verbatim}
-		npm run dev
-	\end{verbatim}
-	questo comando genera una release di debug da utilizzare durante lo sviluppo, eseguendo inoltre i linting integrati nella dipendenza npm @grafana/toolkit. Non esegue i test automatici;
-	\item \textbf{ci-test}:
-	\begin{verbatim}
-		npm run ci-test
-	\end{verbatim}
-	questo comando, pensato per essere eseguito nell'ambiente di continuos integration, fa eseguire tutti i test automatici dell'applicazione e calcola il code coverage del codice;
-	\item \textbf{watch}: 
-	\begin{verbatim}
-		npm run watch
-	\end{verbatim}
-	questo comando esegue il comando "dev" in modalità "watch", ovvero segnalando in automatico gli errori di linting durante la scrittura del codice.
+	\item dependencies: contiene la seguente lista di pacchetti che sono necessari per il corretto funzionamento dell'applicazione:
+		\begin{itemize}
+			\item jquery;
+			\item lodash;
+			\item moment;
+			\item plotly.js;
+			\item scriptjs.
+		\end{itemize}
+	\item devDependencies: questo attributo contiene la seguente lista di pacchetti che sono necessari per il corretto funzionamento dell'applicazione durante lo sviluppo:
+		\begin{itemize}
+			\item @grafana/data;
+			\item @grafana/toolkit;
+			\item @grafana/ui;
+			\item @types/grafana;
+			\item grafana-sdk-mocks;
+			\item coveralls.
+		\end{itemize}
+	\item{scripts}: questo attributo contiene una lista di tutti i comandi, utili per uno sviluppatore, che possono essere eseguiti da linea di comando:
+		\begin{itemize}
+			\item \textbf{build}: il comando seguente genera una cartella chiamata dist che contiene i file di produzione del plug-in Grafana\glo;
+			\begin{verbatim}
+				npm run build
+			\end{verbatim}
+			\item \textbf{test}: il comando fa eseguire tutti i test automatici dell'applicazione;
+			\begin{verbatim}
+				npm test
+			\end{verbatim}
+			\item \textbf{dev}: il comando genera una release di debug da utilizzare durante lo sviluppo, eseguendo inoltre i linting integrati nella dipendenza npm @grafana/toolkit. Non esegue i test automatici;
+			\begin{verbatim}
+				npm run dev
+			\end{verbatim}
+			\item \textbf{ci-test}: il comando, pensato per essere eseguito nell'ambiente di continuous integration, fa eseguire tutti i test automatici dell'applicazione e calcola il code coverage del codice;
+			\begin{verbatim}
+				npm run ci-test
+			\end{verbatim}
+			\item \textbf{watch}: il comando esegue il comando "dev" in modalità "watch", ovvero segnalando in automatico gli errori di linting durante la scrittura del codice.
+			\begin{verbatim}
+				npm run watch
+			\end{verbatim}
+		\end{itemize}
 \end{itemize}
