@@ -1,0 +1,244 @@
+\section{Qualità di processo}
+	\subsection{Processo di Sviluppo}
+		\subsubsection{Analisi dei Requisiti} 
+			\paragraph{Obiettivi}
+			Per l'analisi dei requisiti gli obiettivi di qualità sono:
+			\begin{itemize}
+				\item \textbf{Individuazione completa dei requisiti}: ci prefiggiamo di individuare da subito i requisiti in modo completo per evitare dei cambiamenti in futuro.
+			\end{itemize}
+			\paragraph{Metriche} \mbox{}
+			\rowcolors{2}{gray!25}{gray!15}
+			\begin{longtable} {
+					>{}p{80mm} 
+					>{}p{25mm}
+					>{}p{25mm}
+				}
+				\rowcolor{gray!50}
+				\textbf{Metrica} & \textbf{Preferibile} & \textbf{Accettabile} \TBstrut \TBstrut \\
+				M01 Scostamento dei requisiti individuati & 0 & $\le 10$ \TBstrut \\ [2mm]
+			\end{longtable}
+			
+		%\subsubsection{Progettazione}
+		%	\paragraph{Obiettivi}
+		%	 Per la progettazione gli obiettivi di qualità sono:
+		%	 \begin{itemize}
+		%	 	\item \textbf{Semplificazione della gerarchia}: ci prefiggiamo di mantenere la gerarchia il più semplice possibile, evitando ove possibile di aumentarne la profondità;
+		%	 	\item \textbf{Usare un numero limitato di design pattern}: ci prefiggiamo di usare design pattern solo nel caso in cui questi effettivamente semplifichino la struttura del progetto.
+		%	 \end{itemize}
+			%\paragraph{Metriche} \mbox{} \\ \\
+			%	\textbf{M02 Accoppiamento tra le classi di oggetti} 
+			%	\begin{itemize}
+			%		\item \textbf{Valore preferibile}: $\le 1$;
+			%		\item \textbf{Valore accettabile}: $\le 6$;
+			%	\end{itemize}
+			%	\textbf{M03 Profondità della gerarchia} 
+			%	\begin{itemize}
+			%		\item \textbf{Valore preferibile}: $\le 4$;
+			%		\item \textbf{Valore accettabile}: $\le 7$;
+			%	\end{itemize}			
+			%	\textbf{M04 Numero di design pattern} 
+			%	\begin{itemize}
+			%		\item \textbf{Valore preferibile}: $5 \le x \le 6$; 
+			%		\item \textbf{Valore accettabile}: $2 \le x \le 15$; 
+			%	\end{itemize}
+			
+		\subsubsection{Codifica}
+			\paragraph{Obiettivi}
+			Per la codifica gli obiettivi di qualità sono:
+			\begin{itemize}
+				\item \textbf{Rispetto delle norme di codifica}: ci prefiggiamo di attenerci alle norme di codifica indicate nelle \textit{Norme di Progetto} al fine di garantire la comprensibilità del codice.
+			\end{itemize}	 
+			\paragraph{Metriche} \mbox{}
+			%\textbf{M05 livello di annidamento} 
+			%\begin{itemize}
+			%	\item \textbf{Valore preferibile}: $1 \le x \le 3$; 
+			%	\item \textbf{Valore accettabile}: $1 \le x \le 7$; 
+			%\end{itemize}
+			\begin{longtable} {
+					>{}p{80mm} 
+					>{}p{25mm}
+					>{}p{25mm}
+				}
+				\rowcolor{gray!50}
+				\textbf{Metrica} & \textbf{Preferibile} & \textbf{Accettabile} \TBstrut \TBstrut \\
+				M02 Numero di parametri per metodo & $ \le 3$ & $ \le 5$ \TBstrut \\ [2mm]
+				M03 Numero di metodi per classe & $ \le 8$ & $ \le 15$ \TBstrut \\ [2mm]
+			\end{longtable}
+	
+			
+	\subsection{Processi di supporto}
+		\subsubsection{Gestione dei cambiamenti}
+			\paragraph{Obiettivi}
+			Per la gestione dei cambiamenti gli obiettivi di qualità sono:
+			\begin{itemize}
+				\item \textbf{Efficacia nel tempo}: ci prefiggiamo di gestire ogni cambiamento necessario in tempi ragionevoli.
+			\end{itemize}
+			\paragraph{Metriche} \mbox{}			
+			\begin{longtable} {
+					>{}p{80mm} 
+					>{}p{25mm}
+					>{}p{25mm}
+				}
+				\rowcolor{gray!50}
+				\textbf{Metrica} & \textbf{Preferibile} & \textbf{Accettabile} \TBstrut \TBstrut \\
+				M06 Tempo medio risoluzione errori & $\le 10$ minuti & $\le 120$ minuti \TBstrut \\ [2mm]
+			\end{longtable}			
+		\subsubsection{Gestione della qualità}
+			\paragraph{Obiettivi}
+			Per la gestione della qualità gli obiettivi sono:
+			\begin{itemize}
+				\item \textbf{Mantenimento di adeguati standard di qualità}: ci prefiggiamo di mantenere degli adeguati standard di qualità in tutti i processi svolti e in ogni prodotto risultante;
+				\item \textbf{Monitoraggio della qualità}: ci prefiggiamo di mantenere monitorata la qualità dei processi svolti e dei prodotti risultanti al fine di migliorare, ove necessario, i risultati.
+			\end{itemize}	 
+			\paragraph{Metriche} \mbox{} 
+			\begin{longtable} {
+					>{}p{80mm} 
+					>{}p{25mm}
+					>{}p{25mm}
+				}
+				\rowcolor{gray!50}
+				\textbf{Metrica} & \textbf{Preferibile} & \textbf{Accettabile} \TBstrut \TBstrut \\
+				M04 Percentuale di metriche soddisfatte & $100\%$ & $\ge 60\%$ \TBstrut \\ [2mm]
+			\end{longtable}
+
+		\subsubsection{Verifica}
+			\paragraph{Obiettivi}
+			Per la verifica gli obiettivi di qualità sono:
+			\begin{itemize}
+				\item \textbf{Completezza della verifica}: ci prefiggiamo di svolgere una verifica completa su ogni parte dei nostri prodotti;
+				\item \textbf{Efficacia della verifica}: ci prefiggiamo di risolvere ogni difetto rilevato dalla verifica al fine di renderla efficace.
+			\end{itemize}
+			\paragraph{Metriche} \mbox{}
+			\begin{longtable} {
+					>{}p{80mm} 
+					>{}p{25mm}
+					>{}p{25mm}
+				}
+				\rowcolor{gray!50}
+				\textbf{Metrica} & \textbf{Preferibile} & \textbf{Accettabile} \TBstrut \TBstrut \\
+				M05 Percentuale bug sistemati & $100\%$ & $100\%$ \TBstrut \\ [2mm]
+			\end{longtable}
+			
+			
+			%\textbf{M28 Code coverage}
+			%\begin{itemize}
+			%	\item \textbf{Valore preferibile}: $100\%$
+			%	\item \textbf{Valore accettabile}: $\ge 85\%$
+			%\end{itemize}
+			%\textbf{M29 Branch coverage}
+			%\begin{itemize}
+			%	\item \textbf{Valore preferibile}: $100\%$
+			%	\item \textbf{Valore accettabile}: $\ge 85\%$ 
+			%\end{itemize}
+			%\textbf{M31 Copertura dei test eseguiti}
+			%\begin{itemize}
+			%	\item \textbf{Valore preferibile}: $100\%$
+			%	\item \textbf{Valore accettabile}: $\ge 90\%$  
+			%\end{itemize}		
+
+	\subsection{Processi organizzativi}
+		\subsubsection{Pianificazione delle risorse}
+			\paragraph{Obiettivi}
+			Per la pianificazione delle risorse gli obiettivi di qualità sono:
+			\begin{itemize}
+				\item \textbf{Rispetto delle tempistiche preventivate}: ci prefiggiamo di rispettare le tempistiche indicate nel preventivo nel documento \textit{Piano di Progetto};
+				\item \textbf{Rispetto dei costi preventivati}: ci prefiggiamo di rispettare i costi indicati nel preventivo nel documento \textit{Piano di Progetto}.
+			\end{itemize}	
+			\paragraph{Metriche} \mbox{} 
+			\begin{longtable} {
+					>{}p{60mm} 
+					>{}p{35mm}
+					>{}p{50mm}
+				}
+				\rowcolor{gray!50}
+				\textbf{Metrica} & \textbf{Preferibile} & \textbf{Accettabile} \TBstrut \TBstrut \\
+				M07 Planned Value & $\ge$ 0 & $\ge$ 0 \TBstrut \\ [2mm]
+				M08 Earned Value & = PV & $\ge$ 0 \TBstrut \\ [2mm]
+				M09 Actual cost & 0 $\le$ AC $\le$ PV &0 $\le$ AC $\le$ budget totale \TBstrut \\ [2mm]				
+				M10 Cost Performance Index & 1 & 0.95 $\le$ CPI $\le$ 1.05 \TBstrut \\ [2mm]				
+				M11 Schedule Performance Index & 1 & 0.95 $\le$ SPI $\le$ 1.05 \TBstrut \\ [2mm]				
+				M12 Estimated Cost at Completion & quanto preventivato & preventivo-5\% $\le$ EAC $\le$ preventivo+5\% \TBstrut \\ [2mm]
+				M13 Schedule at Completion & quanto preventivato & quanto preventivato \TBstrut \\ [2mm]				
+			\end{longtable}
+
+		\subsubsection{Gestione dei rischi} 
+			\paragraph{Obiettivi}
+			Per la gestione dei rischi gli obiettivi di qualità sono:
+			\begin{itemize}
+				\item \textbf{Individuazione completa dei rischi}: ci prefiggiamo di fare fin da subito un'individuazione più completa possibile dei rischi per evitare il cambiamento degli stessi nel tempo, in modo da essere preparati nel caso si verificassero.
+			\end{itemize}
+			\paragraph{Metriche} \mbox{} 
+			\begin{longtable} {
+					>{}p{80mm} 
+					>{}p{25mm}
+					>{}p{25mm}
+				}
+				\rowcolor{gray!50}
+				\textbf{Metrica} & \textbf{Preferibile} & \textbf{Accettabile} \TBstrut \TBstrut \\
+				M14 Rischi non preventivati & 0 & $ \le 5$ \TBstrut \\ [2mm]
+			\end{longtable}
+			
+
+	\subsection{Tabella riassuntiva delle metriche adottate}
+	\rowcolors{2}{gray!25}{gray!15}
+	\begin{longtable} {
+		>{}p{50mm}  
+		>{}p{80mm}
+		}
+
+		\rowcolor{gray!50}
+		\multicolumn{2}{c}{\textbf{Processi di sviluppo}}\\
+	\rowcolor{gray!50}
+	\textbf{Attività} & \textbf{Metriche} \TBstrut \\ [2mm]
+
+		Analisi dei requisiti &
+		M01 Scostamento dei requisiti individuati \TBstrut \\ [2mm]
+
+		%Progettazione &
+		%M02 Accoppiamento tra le classi di oggetti \newline
+		%M03 Profondità della gerarchia \newline
+		%M04 Numero di design pattern \TBstrut \\ [2mm]
+
+		Codifica &
+		%M05 Livello di annidamento \newline
+		M02 Numero di parametri per metodo \newline
+		M03 Numero di metodi per classe \TBstrut \\ [2mm]
+
+		\rowcolor{gray!50}
+		\multicolumn{2}{c}{\textbf{Processi di supporto}}\\
+	\rowcolor{gray!50}
+	\textbf{Attività} & \textbf{Metriche} \TBstrut \\ [2mm]
+
+		Gestione della qualità &
+		M04 Percentuale di metriche soddisfatte \TBstrut \\ [2mm]
+
+		Verifica &
+		%M28 Code coverage \newline
+		%M29 Condition coverage \newline
+		M05 Percentuale bug sistemati \TBstrut \\ [2mm]
+		%M31 Copertura dei test eseguiti \TBstrut \\ [2mm]
+
+		Gestione dei cambiamenti &
+		M06 Tempo medio risoluzione errori \TBstrut \\ [2mm]
+
+	\rowcolor{gray!50}
+		\multicolumn{2}{c}{\textbf{Processi organizzativi}}\\
+	\rowcolor{gray!50}
+		\textbf{Attività} & \textbf{Metriche} \TBstrut \\ [2mm]
+
+		Pianificazione delle risorse & 
+		%M07 Budget at Completion \newline
+		M07 Planned Value \newline
+		M08 Earned Value \newline 
+		M09 Actual cost \newline
+		M10 Cost Performance Index \newline
+		M11 Schedule Performance Index \newline
+		M12 Estimated Cost at Completion \newline
+		M13 Schedule at Completion \TBstrut \\ [2mm]
+
+		Gestione dei rischi & 
+		M14 Rischi non preventivati \TBstrut \\ [2mm]
+
+		\rowcolor{white}
+		\caption{Tabella riassuntiva metriche\glosp adottate per la qualità di processo\glo}
+	\end{longtable}
