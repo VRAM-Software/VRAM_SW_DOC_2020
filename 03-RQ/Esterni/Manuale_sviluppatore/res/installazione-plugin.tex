@@ -1,0 +1,79 @@
+\subsection{Installazione ambiente di sviluppo integrato WebStorm}
+Per installare l'ambiente di sviluppo integrato WebStorm, visitare la pagina \url{https://www.jetbrains.com/webstorm/download/}. Qui è possibile trovare il download per MacOS, Windows e sistemi operativi basati su Linux/Unix.
+\\
+\\
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/webstorm.png}
+
+\pagebreak
+\subsection{Installazione plug-in SonarLint per WebStorm}
+Per installare il plug-in SonarLint per WebStorm, aprire le impostazioni di WebStorm dal suo menù "File". Quindi nella sezione "Plugins" cercare ed installare "SonarLint".
+\\
+\\
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/sonarlint.png}
+
+\subsection{Grafana}
+Per installare Grafana\glo, visitare la pagina \url{https://grafana.com/get}. Qui è possibile trovare il download per MacOS, Windows e sistemi operativi basati su Linux/Unix.
+\subsubsection{Eseguire il servizio WEB Grafana} Per eseguire il servizio WEB Grafana\glo, aprire la cartella "bin" dell'installazione Grafana\glosp ed a seconda del sistema operativo eseguire:
+\begin{itemize}
+	\item \textbf{Windows}: doppio click sul file "grafana-server";
+	\item \textbf{Linux, Mac}: eseguire in una shell il comando
+		\begin{verbatim}
+			./grafana-server web.
+		\end{verbatim}
+\end{itemize}
+Collegarsi quindi con un browser all'indirizzo \url{http://localhost:3000/}. Le credenziali richieste al primo avvio sono username "admin" e password "admin".
+\begin{center}
+\includegraphics[width=10cm,height=\textheight,keepaspectratio]{img/grafana-server.png}
+\mbox{}\\ [5mm]
+\includegraphics[width=10cm,height=\textheight,keepaspectratio]{img/grafana-login.png}
+\end{center}
+
+\subsection{Installazione plug-in Grafana}
+\subsubsection{Requisiti}
+\begin{itemize}
+	\item \textbf{Grafana\glo};
+	\item \textbf{Node.js}: runtime Javascript che permette di eseguire codice Javascript fuori da un browser. L'installazione di npm (Node Package Manager) non è richiesta dato che viene installato automaticamente durante l'installazione di Node.js;
+	\item \textbf{Git}: sistema di versionamento distribuito.
+\end{itemize}
+
+\subsubsection{Installazione degli strumenti}
+
+\paragraph{Node}\mbox{}\\ [1mm]
+Per installare il runtime Javascript Node.js si può visitare il sito \url{https://nodejs.org}. Qui è possibile trovare il download di Node.js per tutti i sistemi operativi. Alternativamente, nei sistemi operativi basati su Linux è possibile utilizzare lo strumento di gestione dei pacchetti fornito dal sistema operativo per installare quelli del runtime Node.js. Di seguito un esempio:
+\textbf{Debian/Ubuntu}
+\begin{verbatim}
+apt-get install nodejs
+\end{verbatim}
+
+\paragraph{Git}\mbox{}\\ [1mm]
+Per installare il sistema di versionamento distribuito Git, visitare la pagina \url{https://git-scm.com/downloads}. Qui è possibile trovare il download per MacOS, Windows e sistemi operativi basati su Linux/Unix.
+
+\subsubsection{Installazione del plug-in}
+\paragraph{Clonare la repository da GitHub}\mbox{}\\ [1mm]
+Per clonare la repository dell'applicazione, aprire un terminale e usare il comando cd per spostarsi in una cartella a propria scelta ed eseguire il comando:
+\begin{verbatim}git clone https://github.com/VRAM-Software/grafana_prediction.git
+\end{verbatim}
+Infine con il comando 
+\begin{verbatim}
+	cd ./grafana_prediction_plugin
+\end{verbatim}
+si accede alla cartella che contiene il codice sorgente del plug-in.
+
+\paragraph{Installare le dipendenze}\mbox{}\\ [1mm]
+Per il corretto funzionamento dell'applicazione è necessario installare tutte le dipendenze elencate precedentemente. Per farlo eseguite il comando:
+\begin{verbatim}
+	npm install
+\end{verbatim}
+
+\paragraph{Eseguire il plug-in}\mbox{}\\ [1mm]
+Per eseguire l'applicazione è necessario copiare il contenuto del repository "grafana\_prediction\_plugin", ad eccezione delle cartelle "node\_modules" e "coverage", all'interno della cartella "data/plugins" dell'installazione Grafana\glo. Accedendo all'interfaccia web si potrà quindi abilitare il plug-in dall'apposita sezione plug-in delle impostazioni.
+\\
+\\
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/plugin-directory.png}
+
+\paragraph{Impacchettare il plug-in}\mbox{}\\ [1mm]
+Per generare una release di produzione basta eseguire il comando:
+\begin{verbatim}
+	npm run build	
+\end{verbatim}
+e successivamente creare un archivio zip dell'intero repository escludendo le cartelle "node\_modules" e "coverage". Questo plug-in potrà poi esser distribuito e installato da altri utenti. 
