@@ -1,51 +1,39 @@
-\subsection{Installazione applicazione esterna a Grafana}
-In questa sezione verrà descritta la modalità con cui è possibile installare l'applicazione esterna.
-
-\subsubsection{Installazione degli strumenti}
-\paragraph{Strumenti}\mbox{}\\ [1mm]
-Gli strumenti necessari per installare correttamente l'applicativo esterno sono:
-\begin{itemize}
-    \item \textbf{Node.js}: runtime Javascript che permette di eseguire codice Javascript fuori da un browser, l'installazione di npm (Node Package Manager) non è richiesta in quanto viene installato automaticamente durante l'installazione di Node.js;
-    \item \textbf{Git}: sistema di versionamento distribuito.
-\end{itemize}
-\mbox{}\\ [1mm]
-Questi strumenti possono essere installati con diverse metodologie; tuttavia presentiamo un esempio per non appesantire questo manuale con informazioni non strettamente pertinenti all'applicativo esterno.
-
-\paragraph{Node}\mbox{}\\ [1mm]
-Per installare il runtime Javascript Node.js si può visitare il sito \url{https://nodejs.org}. Qui è possibile trovare il download di Node.js per tutti i sistemi operativi. Alternativamente, nei sistemi operativi basati su Linux, è possibile utilizzare lo strumento di gestione dei pacchetti fornito per installare quelli del runtime Node.js. Di seguito un esempio per sistemi operativi basati Debian/Ubuntu: \\
-\begin{verbatim}
-    apt-get install nodejs
-\end{verbatim}
-
-\paragraph{Git}\mbox{}\\ [1mm]
-Per installare il sistema di versionamento distribuito Git si può visitare la pagina web \url{https://git-scm.com/downloads}. Qui è possibile trovare il download per MacOS, Windows e sistemi operativi basati su Linux/Unix. Alternativamente, nei sistemi operativi basati su Linux, è possibile utilizzare lo strumento di gestione dei pacchetti fornito. Di seguito un esempio per sistemi operativi basati Debian/Ubuntu: \\
-\begin{verbatim}
-    apt-get install git
-\end{verbatim}
-
-\subsubsection{Installazione dell'applicazione}
+\subsection{Installazione dell'applicazione esterna a Grafana}
 L'installazione dell'applicazione è suddivisa in due passaggi che descriviamo in dettaglio nei prossimi paragrafi.
 \begin{enumerate}
     \item clonare la repository da GitHub;
     \item installare le dipendenze.
 \end{enumerate}
 
-\paragraph{Clonare la repository da GitHub}\mbox{}\\ [1mm]
-Per clonare la repository dell'applicazione, aprire un terminale e usare il comando \texttt{cd} per spostarsi in una cartella a vostra scelta. Quindi eseguire il comando \verb|git clone https://github.com/VRAM-Software/grafana_prediction.git| per clonare la repository principale del nostro prodotto.
-Infine per spostarsi nella cartella che contiene il codice sorgente dell'applicativo esterno si usa il comando: \verb|cd ./prediction_configuration_utility|.
-\\
-\\
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/directoryProject.png}
+\subsubsection{Clonare la repository da GitHub}%\mbox{}\\ [1mm]
+Per clonare il repository dell'applicazione, aprire un terminale e usare il comando \texttt{cd} per spostarsi in una cartella a vostra scelta. Quindi per clonare il repository principale del nostro prodotto eseguire il comando:
+\begin{verbatim}
+	git clone https://github.com/VRAM-Software/grafana_prediction.git
+\end{verbatim}
+Infine per spostarsi nella cartella che contiene il codice sorgente dell'applicativo esterno si usa il comando:
+\begin{verbatim}
+	cd ./prediction_configuration_utility
+\end{verbatim}
+
+\begin{center}
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/directoryProject.png}
+\end{center}
 
 
-\paragraph{Installare le dipendenze}\mbox{}\\ [1mm]
-Per il corretto funzionamento dell'applicazione è necessario installare tutte le dipendenze elencate nel file \texttt{package.json}. Per farlo eseguire il comando \texttt{npm install} da terminale nella cartella \verb|prediction_configuration_utility|. I pacchetti che vengono installati si suddividono in dipendenze e dipendenze sviluppatore, di seguito sono spiegate le due categorie.
-\\
-\\
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/packageInstallation.png}
 
-\subparagraph*{Dipendenze}\mbox{}\\ [1mm]
+\subsubsection{Installare le dipendenze}%\mbox{}\\ [1mm]
+Per il corretto funzionamento dell'applicazione è necessario installare tutte le dipendenze elencate nel file \texttt{package.json}. Per farlo, eseguire da terminale nella cartella \verb|prediction_configuration_utility| il comando:
+\begin{verbatim}
+	npm install
+\end{verbatim}
+I pacchetti che vengono installati si suddividono in dipendenze e dipendenze sviluppatore.
+%\\
+%\\POCO VISIBILE
+%\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/packageInstallation.png}
+
+\paragraph*{Dipendenze}\mbox{}\\ [1mm]
 Nella seguente tabella sono elencate tutte le dipendenze necessarie per la corretta esecuzione dell'applicazione.
+\mbox{}\\ [1mm]
 \rowcolors{2}{gray!25}{gray!15}
 	\setcounter{table}{0}
 	\begin{longtable} {
@@ -67,7 +55,7 @@ Nella seguente tabella sono elencate tutte le dipendenze necessarie per la corre
     \verb|react-scripts| & \verb|3.4.0| \TBstrut \\ [2mm]
     \end{longtable}
     
-\subparagraph*{Dipendenze sviluppatore}\mbox{}\\ [1mm]
+\paragraph*{Dipendenze sviluppatore}\mbox{}\\ [1mm]
 Nella seguente tabella sono elencate tutte le dipendenze necessarie per la corretta esecuzione dell'applicazione durante lo sviluppo della stessa.
 \rowcolors{2}{gray!25}{gray!15}
 	\setcounter{table}{0}
@@ -83,3 +71,16 @@ Nella seguente tabella sono elencate tutte le dipendenze necessarie per la corre
     \end{longtable}
     \mbox{}\\ [1mm]
 Seguendo i due passaggi descritti nei precedenti paragrafi, l'applicazione esterna è installata correttamente.
+
+\subsection{Installazione ambiente di sviluppo integrato WebStorm}
+Per installare l'ambiente di sviluppo integrato WebStorm, visitare la pagina \url{https://www.jetbrains.com/webstorm/download/}. Qui è possibile trovare il download per MacOS, Windows e sistemi operativi basati su Linux/Unix.
+\\
+%\\
+%\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/webstorm.png}
+
+%\pagebreak
+\subsubsection{Installazione plug-in SonarLint per WebStorm}
+Per installare il plug-in SonarLint per WebStorm, aprire le impostazioni di WebStorm dal suo menù "File". Quindi nella sezione "Plugins" cercare ed installare "SonarLint".
+\\
+\\
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/sonarlint.png}
