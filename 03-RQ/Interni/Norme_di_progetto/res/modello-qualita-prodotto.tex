@@ -3,11 +3,11 @@
 	\subsection{Qualità dei documenti}
 	Le metriche utilizzate per misurare la qualità dei documenti sono:
 	\begin{itemize}
-		\item \textbf{M15 Indice di Gulpease}: indica il livello di leggibilità di un testo: più alto questo valore e più è alta la leggibilità del testo. In particolare con valore inferiore a 80 risultata difficile da leggere per chi ha la licenza elementare; inferiore a 60 risultata difficile da leggere per chi ha la licenza media; inferiore a 40 risultata difficile da leggere per chi ha un diploma superiore;
+		\item \textbf{M-PROD15 Indice di Gulpease}: indica il livello di leggibilità di un testo: più alto questo valore e più è alta la leggibilità del testo. In particolare con valore inferiore a 80 risultata difficile da leggere per chi ha la licenza elementare; inferiore a 60 risultata difficile da leggere per chi ha la licenza media; inferiore a 40 risultata difficile da leggere per chi ha un diploma superiore;
 		\begin{itemize}
 			\item[] \textbf{formula}: 89+$\frac{300\cdot numero \; di \; frasi-10\cdot numero \; di \; lettere}{numero \; di \; parole}$;
 		\end{itemize}                	
-		\item \textbf{M19 Correttezza ortografica}: indica la quantità di errori ortografici presenti nel documento.
+		\item \textbf{M-PROD19 Correttezza ortografica}: indica la quantità di errori ortografici presenti nel documento.
 		\begin{itemize}
 			\item[] \textbf{formula}: si calcola con un valore intero;
 		\end{itemize}
@@ -18,21 +18,21 @@
 		Per idoneità funzionale si intende la capacità di un prodotto\glosp software di fornire funzioni che soddisfano i requisiti impliciti ed espliciti, quando usati in un determinato contesto sotto specifiche condizioni. \\
 		Le metriche\glosp sono:
 		\begin{itemize}
-			\item \textbf{M16 Percentuale di requisiti obbligatori soddisfatti}: indica la percentuale di requisiti obbligatori che sono stati soddisfatti. Questo valore deve essere massimizzato per garantire che i vincoli col proponente vengano rispettati;
+			\item \textbf{M-PROD16 Percentuale di requisiti obbligatori soddisfatti}: indica la percentuale di requisiti obbligatori che sono stati soddisfatti. Questo valore deve essere massimizzato per garantire che i vincoli col proponente vengano rispettati;
 			\begin{itemize}
 				\item[] \textbf{formula}: $\frac{requisiti \; obbligatori \; soddisfatti}{requisiti \; obbligatori \; totali}$;
 			\end{itemize} 
-			\item \textbf{M17 Percentuale di requisiti desiderabili soddisfatti}:
+			\item \textbf{M-PROD17 Percentuale di requisiti desiderabili soddisfatti}:
 			indica la percentuale di requisiti desiderabili che sono stati soddisfatti. Un valore elevato denota una maggior copertura delle richieste del proponente;
 			\begin{itemize}
 				\item[] \textbf{formula}: $\frac{requisiti \; desiderabili \; soddisfatti}{requisiti \; desiderabili \; totali}$.
 			\end{itemize} 
-			\item \textbf{M18 Percentuale di requisiti opzionali soddisfatti}:
+			\item \textbf{M-PROD18 Percentuale di requisiti opzionali soddisfatti}:
 			indica la percentuale di requisiti opzionali che sono stati soddisfatti. Un valore elevato denota una maggior copertura delle richieste non indispensabili  del proponente;
 			\begin{itemize}
 				\item[] \textbf{formula}: $\frac{requisiti \; opzionali \; soddisfatti}{requisiti \; opzionali \; totali}$.
 			\end{itemize} 
-			%\item \textbf{M24 Percentuale di test passati}:
+			%\item \textbf{M-PROD24 Percentuale di test passati}:
 			%indica la percentuale di test passati. Un valore basso indica che la qualità del prodotto è insufficiente. 
 			%\begin{itemize}
 			%	\item[] \textbf{formula}: $\frac{test \; passati}{totale \; test \; effettuati}$.
@@ -43,7 +43,7 @@
 		%Un prodotto\glosp software è considerato affidabile quando mantiene un livello di prestazioni costante per un determinato intervallo di tempo sotto precise condizioni che possono variare nel tempo.\\
 		%Le metriche\glosp sono:
 		%\begin{itemize}
-		%	\item \textbf{M25 Densità degli errori}: indica la percentuale di errori critici rilevati; 
+		%	\item \textbf{M-PROD25 Densità degli errori}: indica la percentuale di errori critici rilevati; 
 		%	\begin{itemize}
 		%		\item[] \textbf{formula}: $\frac{N_{ER}}{N_{T}}\cdot100$ dove $N_{ER}$ sono gli errori rilevati e $N_T$ sono i test eseguiti.
 		%	\end{itemize}
@@ -77,15 +77,15 @@
 		%Per manutenibilità si intende la capacità di un prodotto\glosp software di essere modificato e aggiornato senza l'introduzione di problemi e anomalie in seguito a cambiamenti dell'ambiente e/o dei requisiti.
 		%Le metriche\glosp sono:
 		%\begin{itemize}
-		%	\item \textbf{M26 Structural fan-in}: indica quante componenti utilizzano un dato modulo, un valore elevato indica un alto riuso del modulo stesso;
+		%	\item \textbf{M-PROD26 Structural fan-in}: indica quante componenti utilizzano un dato modulo, un valore elevato indica un alto riuso del modulo stesso;
 		%	\begin{itemize}
 		%		\item[] \textbf{formula}: si calcola con un valore intero;
 		%	\end{itemize}
-		%	\item \textbf{M27 Structural fan-out}: indica quante componenti vengono utilizzate dalla componente in esame, un valore elevato indica un alto accoppiamento delle componenti, è quindi preferibile mantenerlo il più basso possibile;
+		%	\item \textbf{M-PROD27 Structural fan-out}: indica quante componenti vengono utilizzate dalla componente in esame, un valore elevato indica un alto accoppiamento delle componenti, è quindi preferibile mantenerlo il più basso possibile;
 		%	\begin{itemize}
 		%		\item[] \textbf{formula}: si calcola con un valore intero.
 		%	\end{itemize}		
-		%	\item \textbf{M32 Presenza di code smells}: indica la presenza di debolezze nel codice;
+		%	\item \textbf{M-PROD32 Presenza di code smells}: indica la presenza di debolezze nel codice;
 		%	\begin{itemize}
 		%		\item[] \textbf{formula}: si calcola con un valore intero.
 		%	\end{itemize}
