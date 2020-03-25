@@ -1,12 +1,10 @@
 \section{Qualità di processo}
-	\subsection{Processo di Sviluppo}
-		\subsubsection{Analisi dei Requisiti} 
-			\paragraph{Obiettivi}
-			Per l'analisi dei requisiti gli obiettivi di qualità sono:
-			\begin{itemize}
-				\item \textbf{Individuazione completa dei requisiti}: ci prefiggiamo di individuare da subito i requisiti in modo completo per evitare dei cambiamenti in futuro.
-			\end{itemize}
-			\paragraph{Metriche} \mbox{}
+Per misurare la qualità di processo\glosp il gruppo ha definito degli obiettivi di qualità e delle metriche che li rendano quantificabili.
+%AGGIUNGERE LO STANDARD DI RIFERIMENTO
+	\subsection{PRC-Q1 Processo di Sviluppo}
+		\subsubsection{OP-1 Individuazione completa dei requisiti} 
+			Ci prefiggiamo individuare in modo corretto e completo i requisiti sin da subito per evitare modifiche che comportano un grosso dispendio di tempo.
+			\paragraph{Metriche di qualità} \mbox{}
 			\rowcolors{2}{gray!25}{gray!15}
 			\begin{longtable} {
 					>{}p{80mm} 
@@ -18,42 +16,9 @@
 				M01 Scostamento dei requisiti individuati & 0 & $\le 10$ \TBstrut \\ [2mm]
 			\end{longtable}
 			
-		%\subsubsection{Progettazione}
-		%	\paragraph{Obiettivi}
-		%	 Per la progettazione gli obiettivi di qualità sono:
-		%	 \begin{itemize}
-		%	 	\item \textbf{Semplificazione della gerarchia}: ci prefiggiamo di mantenere la gerarchia il più semplice possibile, evitando ove possibile di aumentarne la profondità;
-		%	 	\item \textbf{Usare un numero limitato di design pattern}: ci prefiggiamo di usare design pattern solo nel caso in cui questi effettivamente semplifichino la struttura del progetto.
-		%	 \end{itemize}
-			%\paragraph{Metriche} \mbox{} \\ \\
-			%	\textbf{M02 Accoppiamento tra le classi di oggetti} 
-			%	\begin{itemize}
-			%		\item \textbf{Valore preferibile}: $\le 1$;
-			%		\item \textbf{Valore accettabile}: $\le 6$;
-			%	\end{itemize}
-			%	\textbf{M03 Profondità della gerarchia} 
-			%	\begin{itemize}
-			%		\item \textbf{Valore preferibile}: $\le 4$;
-			%		\item \textbf{Valore accettabile}: $\le 7$;
-			%	\end{itemize}			
-			%	\textbf{M04 Numero di design pattern} 
-			%	\begin{itemize}
-			%		\item \textbf{Valore preferibile}: $5 \le x \le 6$; 
-			%		\item \textbf{Valore accettabile}: $2 \le x \le 15$; 
-			%	\end{itemize}
-			
-		\subsubsection{Codifica}
-			\paragraph{Obiettivi}
-			Per la codifica gli obiettivi di qualità sono:
-			\begin{itemize}
-				\item \textbf{Rispetto delle norme di codifica}: ci prefiggiamo di attenerci alle norme di codifica indicate nelle \textit{Norme di Progetto} al fine di garantire la comprensibilità del codice.
-			\end{itemize}	 
-			\paragraph{Metriche} \mbox{}
-			%\textbf{M05 livello di annidamento} 
-			%\begin{itemize}
-			%	\item \textbf{Valore preferibile}: $1 \le x \le 3$; 
-			%	\item \textbf{Valore accettabile}: $1 \le x \le 7$; 
-			%\end{itemize}
+		\subsubsection{OP-2 Sviluppo di codice comprensibile e manutenibile}
+			Ci prefiggiamo di scrivere codice che segua le norme di codifica indicate nelle \textit{Norme di Progetto} e sia manutenibile nel tempo, al fine di garantire comprensibilità e manutenibilità del codice.
+			\paragraph{Metriche di qualità} \mbox{}
 			\begin{longtable} {
 					>{}p{80mm} 
 					>{}p{25mm}
@@ -63,34 +28,29 @@
 				\textbf{Metrica} & \textbf{Preferibile} & \textbf{Accettabile} \TBstrut \TBstrut \\
 				M02 Numero di parametri per metodo & $ \le 3$ & $ \le 5$ \TBstrut \\ [2mm]
 				M03 Numero di metodi per classe & $ \le 8$ & $ \le 15$ \TBstrut \\ [2mm]
+				M? Livello di annidamento & $1 \le x \le 3$ & $1 \le x \le 7$ \TBstrut \\ [2mm]
 			\end{longtable}
 	
+		\subsubsection{OP-? Semplificazione della gerarchia}
+		Ci prefiggiamo di mantenere la gerarchia il più semplice possibile evitando, ove possibile, di aumentarne profondità e grado di accoppiamento;
+		\paragraph{Metriche di qualità} \mbox{}
+		\rowcolors{2}{gray!25}{gray!15}
+		\begin{longtable} {
+				>{}p{80mm} 
+				>{}p{25mm}
+				>{}p{25mm}
+			}
+			\rowcolor{gray!50}
+			\textbf{Metrica} & \textbf{Preferibile} & \textbf{Accettabile} \TBstrut \TBstrut \\
+			M? Accoppiamento tra le classi di oggetti & $\le 1$ & $\le 6$ \TBstrut \\ [2mm]
+			M? Profondità della gerarchia & $\le 4$ & $\le 7$ \TBstrut \\ [2mm]
+			M? Numero di design pattern & $5 \le x \le 6$ & $2 \le x \le 15$ \TBstrut \\ [2mm]
+		\end{longtable}
 			
-	\subsection{Processi di supporto}
-		\subsubsection{Gestione dei cambiamenti}
-			\paragraph{Obiettivi}
-			Per la gestione dei cambiamenti gli obiettivi di qualità sono:
-			\begin{itemize}
-				\item \textbf{Efficacia nel tempo}: ci prefiggiamo di gestire ogni cambiamento necessario in tempi ragionevoli.
-			\end{itemize}
-			\paragraph{Metriche} \mbox{}			
-			\begin{longtable} {
-					>{}p{80mm} 
-					>{}p{25mm}
-					>{}p{25mm}
-				}
-				\rowcolor{gray!50}
-				\textbf{Metrica} & \textbf{Preferibile} & \textbf{Accettabile} \TBstrut \TBstrut \\
-				M06 Tempo medio risoluzione errori & $\le 10$ minuti & $\le 120$ minuti \TBstrut \\ [2mm]
-			\end{longtable}			
-		\subsubsection{Gestione della qualità}
-			\paragraph{Obiettivi}
-			Per la gestione della qualità gli obiettivi sono:
-			\begin{itemize}
-				\item \textbf{Mantenimento di adeguati standard di qualità}: ci prefiggiamo di mantenere degli adeguati standard di qualità in tutti i processi svolti e in ogni prodotto risultante;
-				\item \textbf{Monitoraggio della qualità}: ci prefiggiamo di mantenere monitorata la qualità dei processi svolti e dei prodotti risultanti al fine di migliorare, ove necessario, i risultati.
-			\end{itemize}	 
-			\paragraph{Metriche} \mbox{} 
+	\subsection{PRC-Q2 Processo di garanzia della qualità}
+		\subsubsection{OP-3 Monitoraggio della qualità}
+			Ci prefiggiamo di monitorare la qualità dei processi\glosp e dei prodotti\glosp al fine di ottenere un controllo e un miglioramento continuo. 
+			\paragraph{Metriche di qualità} \mbox{} 
 			\begin{longtable} {
 					>{}p{80mm} 
 					>{}p{25mm}
@@ -101,14 +61,10 @@
 				M04 Percentuale di metriche soddisfatte & $100\%$ & $\ge 60\%$ \TBstrut \\ [2mm]
 			\end{longtable}
 
-		\subsubsection{Verifica}
-			\paragraph{Obiettivi}
-			Per la verifica gli obiettivi di qualità sono:
-			\begin{itemize}
-				\item \textbf{Completezza della verifica}: ci prefiggiamo di svolgere una verifica completa su ogni parte dei nostri prodotti;
-				\item \textbf{Efficacia della verifica}: ci prefiggiamo di risolvere ogni difetto rilevato dalla verifica al fine di renderla efficace.
-			\end{itemize}
-			\paragraph{Metriche} \mbox{}
+	\subsection{PRC-Q3 Processo di verifica}
+		\subsubsection{OP-4 Efficacia dei test}
+			Ci prefiggiamo di svolgere una verifica efficace su ogni parte dei nostri prodotti\glo.
+			\paragraph{Metriche di qualità} \mbox{}
 			\begin{longtable} {
 					>{}p{80mm} 
 					>{}p{25mm}
@@ -118,33 +74,39 @@
 				\textbf{Metrica} & \textbf{Preferibile} & \textbf{Accettabile} \TBstrut \TBstrut \\
 				M05 Percentuale bug sistemati & $100\%$ & $100\%$ \TBstrut \\ [2mm]
 			\end{longtable}
+		\subsubsection{OP-5 Completezza dei test}
+		Ci prefiggiamo di svolgere una verifica efficace su ogni parte dei nostri prodotti\glo.
+		\paragraph{Metriche di qualità} \mbox{}
+		\begin{longtable} {
+				>{}p{80mm} 
+				>{}p{25mm}
+				>{}p{25mm}
+			}
+			\rowcolor{gray!50}
+			\textbf{Metrica} & \textbf{Preferibile} & \textbf{Accettabile} \TBstrut \TBstrut \\
+			M? Code coverage & $100\%$ & $\ge 85\%$ \TBstrut \\ [2mm]
+			M? Branch coverage & $100\%$ & $\ge 85\%$ \TBstrut \\ [2mm]
+			M? Copertura dei test eseguiti & $\ge 90\%$ & $100\%$ \TBstrut \\ [2mm]
+		\end{longtable}	
 			
-			
-			%\textbf{M28 Code coverage}
-			%\begin{itemize}
-			%	\item \textbf{Valore preferibile}: $100\%$
-			%	\item \textbf{Valore accettabile}: $\ge 85\%$
-			%\end{itemize}
-			%\textbf{M29 Branch coverage}
-			%\begin{itemize}
-			%	\item \textbf{Valore preferibile}: $100\%$
-			%	\item \textbf{Valore accettabile}: $\ge 85\%$ 
-			%\end{itemize}
-			%\textbf{M31 Copertura dei test eseguiti}
-			%\begin{itemize}
-			%	\item \textbf{Valore preferibile}: $100\%$
-			%	\item \textbf{Valore accettabile}: $\ge 90\%$  
-			%\end{itemize}		
+	\subsection{PRC-Q4 Processo di gestione dei cambiamenti}
+		\subsubsection{OP-6 Risoluzione efficace dei problemi}
+			Ci prefiggiamo di gestire ogni cambiamento necessario in tempi ragionevoli.
+			\paragraph{Metriche di qualità} \mbox{}			
+			\begin{longtable} {
+					>{}p{80mm} 
+					>{}p{25mm}
+					>{}p{25mm}
+				}
+				\rowcolor{gray!50}
+				\textbf{Metrica} & \textbf{Preferibile} & \textbf{Accettabile} \TBstrut \TBstrut \\
+				M06 Tempo medio risoluzione errori & $\le 10$ minuti & $\le 120$ minuti \TBstrut \\ [2mm]
+			\end{longtable}					
 
-	\subsection{Processi organizzativi}
-		\subsubsection{Pianificazione delle risorse}
-			\paragraph{Obiettivi}
-			Per la pianificazione delle risorse gli obiettivi di qualità sono:
-			\begin{itemize}
-				\item \textbf{Rispetto delle tempistiche preventivate}: ci prefiggiamo di rispettare le tempistiche indicate nel preventivo nel documento \textit{Piano di Progetto};
-				\item \textbf{Rispetto dei costi preventivati}: ci prefiggiamo di rispettare i costi indicati nel preventivo nel documento \textit{Piano di Progetto}.
-			\end{itemize}	
-			\paragraph{Metriche} \mbox{} 
+	\subsection{PRC-Q5 Processo di gestione organizzativa}
+		\subsubsection{OP-7 Pianificazione efficace delle risorse}
+			Ci prefiggiamo di rispettare le tempistiche e i costi indicati nel preventivo nel documento \textit{Piano di Progetto}.
+			\paragraph{Metriche di qualità} \mbox{} 
 			\begin{longtable} {
 					>{}p{60mm} 
 					>{}p{35mm}
@@ -161,13 +123,9 @@
 				M13 Schedule at Completion & quanto preventivato & quanto preventivato \TBstrut \\ [2mm]				
 			\end{longtable}
 
-		\subsubsection{Gestione dei rischi} 
-			\paragraph{Obiettivi}
-			Per la gestione dei rischi gli obiettivi di qualità sono:
-			\begin{itemize}
-				\item \textbf{Individuazione completa dei rischi}: ci prefiggiamo di fare fin da subito un'individuazione più completa possibile dei rischi per evitare il cambiamento degli stessi nel tempo, in modo da essere preparati nel caso si verificassero.
-			\end{itemize}
-			\paragraph{Metriche} \mbox{} 
+		\subsubsection{OP-8 Prevenzione dei rischi} 
+			Ci prefiggiamo di individuare fin da subito i rischi in modo completo per evitare il cambiamento degli stessi nel tempo e prevenirli.
+			\paragraph{Metriche di qualità} \mbox{} 
 			\begin{longtable} {
 					>{}p{80mm} 
 					>{}p{25mm}
@@ -187,47 +145,57 @@
 		}
 
 		\rowcolor{gray!50}
-		\multicolumn{2}{c}{\textbf{Processi di sviluppo}}\\
+		\multicolumn{2}{c}{\textbf{PRC-Q1 Processo di sviluppo}}\\
 	\rowcolor{gray!50}
-	\textbf{Attività} & \textbf{Metriche} \TBstrut \\ [2mm]
+	\textbf{Obiettivi} & \textbf{Metriche} \TBstrut \\ [2mm]
 
-		Analisi dei requisiti &
+		OP-1 Individuazione completa dei requisiti &
 		M01 Scostamento dei requisiti individuati \TBstrut \\ [2mm]
 
-		%Progettazione &
-		%M02 Accoppiamento tra le classi di oggetti \newline
-		%M03 Profondità della gerarchia \newline
-		%M04 Numero di design pattern \TBstrut \\ [2mm]
-
-		Codifica &
+		OP-2 Sviluppo di codice comprensibile e manutenibile &
 		%M05 Livello di annidamento \newline
 		M02 Numero di parametri per metodo \newline
 		M03 Numero di metodi per classe \TBstrut \\ [2mm]
+		
+		OP-? Semplificazione della gerarchia &
+		M? Accoppiamento tra le classi di oggetti \newline
+		M? Profondità della gerarchia \newline
+		M? Numero di design pattern \TBstrut \\ [2mm]
 
 		\rowcolor{gray!50}
-		\multicolumn{2}{c}{\textbf{Processi di supporto}}\\
+		\multicolumn{2}{c}{\textbf{PRC-Q2 Processo di garanzia della qualità}}\\
 	\rowcolor{gray!50}
-	\textbf{Attività} & \textbf{Metriche} \TBstrut \\ [2mm]
+	\textbf{Obiettivi} & \textbf{Metriche} \TBstrut \\ [2mm]
 
-		Gestione della qualità &
+		OP-3 Monitoraggio della qualità &
 		M04 Percentuale di metriche soddisfatte \TBstrut \\ [2mm]
+		
+	\rowcolor{gray!50}
+	\multicolumn{2}{c}{\textbf{PRC-Q3 Processo di verifica}}\\
+	\rowcolor{gray!50}
+	\textbf{Obiettivi} & \textbf{Metriche} \TBstrut \\ [2mm]
 
-		Verifica &
-		%M28 Code coverage \newline
-		%M29 Condition coverage \newline
+		OP-4 Efficacia dei test &
 		M05 Percentuale bug sistemati \TBstrut \\ [2mm]
-		%M31 Copertura dei test eseguiti \TBstrut \\ [2mm]
+		OP-5 Completezza dei test & 
+		M? Code coverage \newline
+		M? Condition coverage \newline
+		M? Copertura dei test eseguiti \TBstrut \\ [2mm]
 
-		Gestione dei cambiamenti &
+	\rowcolor{gray!50}
+	\multicolumn{2}{c}{\textbf{PRC-Q4 Processo di gestione dei cambiamenti}}\\
+	\rowcolor{gray!50}
+	\textbf{Obiettivi} & \textbf{Metriche} \TBstrut \\ [2mm]
+
+		OP-6 Risoluzione efficace dei problemi &
 		M06 Tempo medio risoluzione errori \TBstrut \\ [2mm]
 
 	\rowcolor{gray!50}
-		\multicolumn{2}{c}{\textbf{Processi organizzativi}}\\
+		\multicolumn{2}{c}{\textbf{PRC-Q5 Processo di gestione organizzativa}}\\
 	\rowcolor{gray!50}
-		\textbf{Attività} & \textbf{Metriche} \TBstrut \\ [2mm]
+		\textbf{Obiettiiv} & \textbf{Metriche} \TBstrut \\ [2mm]
 
-		Pianificazione delle risorse & 
-		%M07 Budget at Completion \newline
+		OP-7 Pianificazione efficace delle risorse & 
 		M07 Planned Value \newline
 		M08 Earned Value \newline 
 		M09 Actual cost \newline
@@ -236,7 +204,7 @@
 		M12 Estimated Cost at Completion \newline
 		M13 Schedule at Completion \TBstrut \\ [2mm]
 
-		Gestione dei rischi & 
+		OP-8 Prevenzione dei rischi & 
 		M14 Rischi non preventivati \TBstrut \\ [2mm]
 
 		\rowcolor{white}
