@@ -485,56 +485,81 @@
 			\end{itemize}
 		
 	\subsubsection{Metriche di qualità}
-		\paragraph{PR-Q1 Sviluppo}
-		\subparagraph{OPRC-1 Individuazione completa dei requisiti}
-		\paragraph*{Obiettivo}
-		L'obiettivo è individuare correttamente i requisiti nella prima attività di analisi in modo che con l'avanzare del progetto non ci siano cambiamenti che comportano un grosso dispendio di tempo.
-		\paragraph*{Metriche}
-		Le metriche utilizzate sono:
-		\begin{itemize}
-			\item \textbf{M01 Scostamento dei requisiti individuati}: indica la differenza in numero dei requisiti individuati in ogni periodo. Se elevato, questo valore indica che l'attività di analisi dei requisiti non è stata svolta con qualità sufficiente;
+		\paragraph{PRC-Q1 Processo di sviluppo}
+			\subparagraph{OP-1 Individuazione completa dei requisiti}
+			\subparagraph*{Obiettivo}\mbox{}\\ [1mm]
+			L'obiettivo è individuare correttamente i requisiti nella prima attività di analisi in modo che con l'avanzare del progetto non ci siano cambiamenti che comportano un grosso dispendio di tempo.
+			\subparagraph*{Metriche}\mbox{}\\ [1mm]
+			Le metriche\glosp utilizzate sono:
 			\begin{itemize}
-				\item[] \textbf{formula}: $R_{p-1}-R{p}$ dove $R{p}$ indica il numero di requisiti individuati in un periodo e $R{p-1}$ indica il numero di requisiti individuati nel periodo precedente.
-			\end{itemize} 
-		\end{itemize}
-		%\subparagraph{OPRC-2 Progettazione architetturale}
-		%\paragraph*{Obiettivo}
-		%L'obiettivo è progettare il l'architettura del prodotto software così da renderlo efficace ed efficiente.
-		%\paragraph*{Metriche}
-		%Le metriche utilizzate sono:
-		%\begin{itemize}
-		%	\item \textbf{M02 Accoppiamento tra le classi di oggetti}: indica se una classe è accoppiata ad una seconda. Con accoppiamento s'intende l'utilizzo, da parte della prima classe, di metodi o variabili definiti nella seconda; 
-		%	\begin{itemize}
-		%		\item[] \textbf{Formula}: si calcola con un valore intero.
-		%	\end{itemize}
-		%	\item \textbf{M03 Profondità della gerarchia}: indica la profondità massima della gerarchia delle classi. Deve essere limitata per mantenere un basso accoppiamento;
-		%	\begin{itemize}
-		%		\item[] \textbf{Formula}: si calcola con un valore intero.
-		%	\end{itemize} 	
-		%	\item \textbf{M04 Numero di design pattern}: indica il numero di design pattern applicati. La presenza di design pattern può aiutare all'innalzamento della qualità del prodotto ma un uso eccessivo può comportare un'elevata complessità. Va quindi mantenuto un numero di design pattern ragionevole.
-		%	\begin{itemize}
-		%		\item[] \textbf{Formula}: si calcola con un valore intero.
-		%	\end{itemize} 	
-		%\end{itemize}
-		\subparagraph{OPRC-2 Sviluppo di codice manutenibile}
-		\paragraph*{Obiettivo}
-		L'obiettivo è sviluppare codice facilmente testabile e manutenibile.
-		\paragraph*{Metriche}
-		Le metriche utilizzate sono:
-			\begin{itemize}
-			%\item \textbf{M05 livello di annidamento}: indica il livello di annidamento all'interno dei metodi. Se questo valore è alto, il codice è più complesso e difficile da manutenere. Perciò è opportuno suddividere il metodo in più metodi distinti per ottenere un livello di annidamento basso;
-			%\begin{itemize}
-			%	\item[] \textbf{formula}: si calcola con un valore intero.
-			%\end{itemize}
-			\item \textbf{M02 Numero di parametri per metodo}: indica il numero di parametri presenti in ciascun metodo. Se il valore è elevato è molto probabile che il grado di complessità del metodo sia elevato. Perciò è opportuno limitare questo numero ed eventualmente suddividere il metodo in più metodi distinti;
-			\begin{itemize}
-				\item[] \textbf{formula}: si calcola con un valore intero.
+				\item \textbf{M01 Scostamento dei requisiti individuati}: indica la differenza in numero dei requisiti individuati in ogni periodo. Se elevato, questo valore indica che l'attività di analisi dei requisiti non è stata svolta con qualità sufficiente;
+				\begin{itemize}
+					\item[] \textbf{formula}: $R_{p-1}-R{p}$. Dove $R{p}$ indica il numero di requisiti individuati in un periodo e $R{p-1}$ indica il numero di requisiti individuati nel periodo precedente.
+				\end{itemize} 
 			\end{itemize}
-			\item \textbf{M03 Numero di metodi per classe}: indica il numero di metodi presenti in ciascuna classe. Se il valore è elevato è molto probabile che il grado di complessità del metodo sia elevato. Perciò è opportuno limitare questo numero in modo da avere una classe facilmente comprensibile e con uno scopo preciso;
+			
+			\subparagraph{OP-2 Sviluppo di codice comprensibile e manutenibile}
+			\subparagraph*{Obiettivo}\mbox{}\\ [1mm]
+			L'obiettivo è sviluppare codice che rispetti quando definito nell'attività di codifica e sia facilmente comprensibile e manutenibile.
+			\subparagraph*{Metriche}\mbox{}\\ [1mm]
+			Le metriche\glosp utilizzate sono:
+				\begin{itemize}
+					\item \textbf{M02 Numero di parametri per metodo}: indica il numero di parametri presenti in ciascun metodo. Se il valore è elevato è molto probabile che il grado di complessità del metodo sia elevato. Perciò è opportuno limitare questo numero ed eventualmente suddividere il metodo in più metodi distinti;
+					\begin{itemize}
+						\item[] \textbf{formula}: si calcola con un valore intero.
+					\end{itemize}
+					\item \textbf{M03 Numero di metodi per classe}: indica il numero di metodi presenti in ciascuna classe. Se il valore è elevato è molto probabile che il grado di complessità del metodo sia elevato. Perciò è opportuno limitare questo numero in modo da avere una classe facilmente comprensibile e con uno scopo preciso;
+					\begin{itemize}
+						\item[] \textbf{formula}: si calcola con un valore intero.
+					\end{itemize}
+					\item \textbf{M? livello di annidamento}: indica il livello di annidamento all'interno dei metodi. Se questo valore è alto, il codice è più complesso e difficile da manutenere. Perciò è opportuno suddividere il metodo in più metodi distinti per ottenere un livello di annidamento basso;
+					\begin{itemize}
+						\item[] \textbf{formula}: si calcola con un valore intero.
+					\end{itemize}
+				\end{itemize}
+		
+			\subparagraph{OP-? Forte disaccoppiamento tra le componenti architetturali}
+			\subparagraph*{Obiettivo}\mbox{}\\ [1mm]
+			L'obiettivo è progettare il l'architettura del prodotto software così da renderlo efficace ed efficiente.
+			\subparagraph*{Metriche}\mbox{}\\ [1mm]
+			Le metriche\glosp utilizzate sono:
 			\begin{itemize}
-				\item[] \textbf{formula}: si calcola con un valore intero.
+				\item \textbf{M? Accoppiamento tra le classi di oggetti}: indica se una classe è accoppiata ad una seconda. Con accoppiamento s'intende l'utilizzo, da parte della prima classe, di metodi o variabili definiti nella seconda; 
+				\begin{itemize}
+					\item[] \textbf{Formula}: si calcola con un valore intero.
+				\end{itemize}
+				\item \textbf{M? Profondità della gerarchia}: indica la profondità massima della gerarchia delle classi. Deve essere limitata per mantenere un basso accoppiamento;
+				\begin{itemize}
+					\item[] \textbf{Formula}: si calcola con un valore intero.
+				\end{itemize} 	
+				\item \textbf{M? Numero di design pattern}: indica il numero di design pattern applicati. La presenza di design pattern può aiutare all'innalzamento della qualità del prodotto ma un uso eccessivo può comportare un'elevata complessità. Va quindi mantenuto un numero di design pattern ragionevole.
+				\begin{itemize}
+					\item[] \textbf{Formula}: si calcola con un valore intero.
+				\end{itemize} 	
 			\end{itemize}
-		\end{itemize}
+		
+		\paragraph{PRD-Q2 Appropriatezza funzionale}
+		\subparagraph{CP-3 Completezza e adeguatezza dei requisiti}
+		\subparagraph*{Caratteristica}\mbox{}\\ [1mm]
+		Questa caratteristica descrive di individuare correttamente i requisiti nella prima attività di analisi in modo che con l'avanzare del progetto non ci siano cambiamenti che comportano un grosso dispendio di tempo.
+		\subparagraph*{Metriche}\mbox{}\\ [1mm]
+		Le metriche\glosp utilizzate sono:
+			\begin{itemize}
+				\item \textbf{M? Percentuale di requisiti obbligatori soddisfatti}: indica la percentuale di requisiti obbligatori che sono stati soddisfatti. Questo valore deve essere massimizzato per garantire che i vincoli col proponente vengano rispettati;
+				\begin{itemize}
+					\item[] \textbf{formula}: $\frac{requisiti \; obbligatori \; soddisfatti}{requisiti \; obbligatori \; totali}$;
+				\end{itemize} 
+				\item \textbf{M? Percentuale di requisiti desiderabili soddisfatti}:
+				indica la percentuale di requisiti desiderabili che sono stati soddisfatti. Un valore elevato denota una maggior copertura delle richieste del proponente;
+				\begin{itemize}
+					\item[] \textbf{formula}: $\frac{requisiti \; desiderabili \; soddisfatti}{requisiti \; desiderabili \; totali}$.
+				\end{itemize} 
+				\item \textbf{M? Percentuale di requisiti opzionali soddisfatti}:
+				indica la percentuale di requisiti opzionali che sono stati soddisfatti. Un valore elevato denota una maggior copertura delle richieste non indispensabili  del proponente;
+				\begin{itemize}
+					\item[] \textbf{formula}: $\frac{requisiti \; opzionali \; soddisfatti}{requisiti \; opzionali \; totali}$.
+				\end{itemize} 
+			\end{itemize}
 		
 		\subsubsection{Strumenti di supporto}
 		Nella valutazione dei costi da affrontare per lo sviluppo del software e per la formazione del personale, abbiamo già identificato le principali tecnologie e strumenti che verranno utilizzare durante il progetto\glo.

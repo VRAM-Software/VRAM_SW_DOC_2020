@@ -94,52 +94,63 @@ Per ogni test vengono definiti il codice identificativo, la descrizione, lo stat
 	\end{itemize}
 \end{itemize}
 
-\paragraph*{Test di unità} %\mbox{}\\ [1mm]
+\paragraph*{Test di unità} \mbox{}\\ [1mm]
 I test di unità si definiscono tali perché controllano il corretto funzionamento di una sezione di codice specifica chiamata unità. Solitamente questi tipi di test vengono eseguiti su funzioni o, se si parla di programmazione ad oggetti, su un metodo di una classe, quindi su una parte minimale del codice. Il loro scopo è verificare che gli input forniti diano gli output attesi. È buona norma rendere questi test automatici per minimizzare il tempo di esecuzione senza richiedere l'interazione dello sviluppatore. Questo tipo di test viene scritto dal programmatore che sviluppa le singole unità mediante l'ausilio di driver\glosp e stub\glo, per verificare l'assenza di errori e documentare il funzionamento dell'unità.
 
-\paragraph*{Test di integrazione} %\mbox{}\\ [1mm]
+\paragraph*{Test di integrazione} \mbox{}\\ [1mm]
 Successivamente ai test di unità, si assemblano gruppi di unità progressivamente che formeranno degli agglomerati sempre più grandi. Questo tipo di test, infatti, si concentra nella ricerca di anomalie ed errori tra le interfacce dei singoli componenti. Una volta concluso un singolo test, si otterrà un agglomerato che costituirà una nuova unità da cui partire per ulteriori test di integrazione. Per svolgere questo test si è scelto un approccio iterativo.
 
-\paragraph*{Test di sistema} %\mbox{}\\ [1mm]
+\paragraph*{Test di sistema} \mbox{}\\ [1mm]
 I test di sistema controllano il funzionamento corretto del prodotto\glosp e verificano che il sistema soddisfi tutti i requisiti definiti nel documento \textit{Analisi dei Requisiti v. 3.1.1}. Con l'esecuzione di questi test si riesce a definire e documentare tutte le funzionalità del sistema e possono individuare criticità come il problema del black-box\glo. Il gruppo svolgerà questo test quando si raggiungerà uno stato di rilascio per il prodotto\glosp sviluppato.
 
 \subsubsection{Metriche di qualità}
-	\paragraph{PR-Q3 Verifica}
-		\subparagraph{OPRC-4 Completezza dei test}
-		\paragraph*{Obiettivo}
-		L'obiettivo è garantire che il prodotto software sia testato in modo completo.
-		\paragraph*{Metriche}
+	\paragraph{PRC-Q3 Processo di verifica}
+		\subparagraph{OP-4 Efficacia dei test}
+		\paragraph*{Obiettivo}\mbox{}\\ [1mm]
+		L'obiettivo è garantire che il prodotto software testato in modo efficace su ogni singola parte del nostro prodotto.
+		\paragraph*{Metriche}\mbox{}\\ [1mm]
 		Le metriche utilizzate sono:
 		\begin{itemize}
-			\item \textbf{M28 Code coverage}: indica la percentuale di codice coperto da test rispetto al totale delle righe di codice;
-			\begin{itemize}
-				\item[] \textbf{formula}: $\frac{righe \; di \; codice \; coperto}{righe \; di \; codice \; totali}$;
-			\end{itemize} 
-		
-			\item \textbf{M29 Branch coverage}: indica la percentuale di codice coperto da test rispetto al totale delle righe di codice;
-			\begin{itemize}
-				\item[] \textbf{formula}: $\frac{righe \; di \; codice \; coperto}{righe \; di \; codice \; totali}$;
-			\end{itemize} 
-		
-			\item \textbf{M31 Copertura dei test eseguiti}: indica la percentuale di test effettivamente eseguiti;
-			\begin{itemize}
-				\item[] \textbf{formula}: $\frac{test \; eseguiti}{test \; totali}$;
-			\end{itemize} 
-		\subparagraph{OPRC-5 Validità dei test}
-		\paragraph*{Obiettivo}
-		L'obiettivo è garantire che il prodotto software testato sia correttamente funzionante.
-		\paragraph*{Metriche}
-		Le metriche utilizzate sono:
 			\item \textbf{M05 Percentuale bug sistemati}: indica la percentuale dei bug sistemati dando così una traccia dell'avanzamento;
 			\begin{itemize}
 				\item[] \textbf{formula}: $\frac{bug \; sistemati}{bug \; totali}$;
 			\end{itemize}
-			%\item \textbf{M? Percentuale di test passati}: indica la percentuale dei test che sono stati superati
-			%\begin{itemize}
-			%	\item[] \textbf{formula}: ??
-			%\end{itemize}
-
-\end{itemize}
+		\end{itemize}
+	
+		\subparagraph{OP-5 Completezza dei test}
+		\paragraph*{Obiettivo}\mbox{}\\ [1mm]
+		L'obiettivo è garantire che il prodotto software sia testato in modo completo.
+		\paragraph*{Metriche}\mbox{}\\ [1mm]
+		Le metriche utilizzate sono:
+		\begin{itemize}
+			\item \textbf{M? Code coverage}: indica la percentuale di codice coperto da test rispetto al totale delle righe di codice;
+			\begin{itemize}
+				\item[] \textbf{formula}: $\frac{righe \; di \; codice \; coperto}{righe \; di \; codice \; totali}$;
+			\end{itemize} 
+		
+			\item \textbf{M? Branch coverage}: indica la percentuale di codice coperto da test rispetto al totale delle righe di codice;
+			\begin{itemize}
+				\item[] \textbf{formula}: $\frac{righe \; di \; codice \; coperto}{righe \; di \; codice \; totali}$;
+			\end{itemize} 
+		
+			\item \textbf{M? Copertura dei test eseguiti}: indica la percentuale di test effettivamente eseguiti;
+			\begin{itemize}
+				\item[] \textbf{formula}: $\frac{test \; eseguiti}{test \; totali}$;
+			\end{itemize} 
+		\end{itemize}
+	\paragraph{PRD-Q2 Appropriatezza funzionale}
+		\subparagraph{CP-3 Correttezza delle funzionalità implementate}
+		\paragraph*{Caratteristica}\mbox{}\\ [1mm]
+		Questa caratteristica descrive come le funzionalità implementate siano corrette.
+		\paragraph*{Metriche}\mbox{}\\ [1mm]
+		Le metriche utilizzate sono:
+		\begin{itemize}
+			\item \textbf{M? percentuale di test superati}: indica la percentuale di test che sono stati superati;
+			\begin{itemize}
+				\item[] \textbf{formula}: $\frac{test \; superati}{test \; eseguiti}$;
+			\end{itemize}
+		\end{itemize}
+	
 \subsubsection{Strumenti di supporto}
 	\paragraph{Correzione ortografica}\mbox{}\\ [1mm]
 	Il nostro gruppo ha utilizzato, per la ricerca di errori ortografici o stilistici nel testo dei documenti, la libreria HunSpell utilizzata con l'editor di test: TexStudio. Esso permette di avere un controllo in tempo reale su errori ortografici in lingua inglese e italiana (sottolineati in rosso) e ripetizioni di parole a breve distanza (sottolineati in verde).
