@@ -1,5 +1,5 @@
 \section{Processi primari}
-	\subsection{Fornitura}
+	\subsection{PRC-Q1 Fornitura}
 		\subsubsection{Scopo}
 		Lo scopo del processo\glosp di fornitura è stabilire norme, tempi e risorse necessarie a svolgere l'intero progetto\glo.
 		Inizialmente è necessario comprendere le richieste dei proponenti svolgendo un'analisi sui capitolati\glo e sulla loro fattibilità. Una volta compresi, viene redatto il documento \textit{Studio di Fattibilità} nel quale viene manifestata la decisione del capitolato\glosp scelto.
@@ -95,7 +95,7 @@
 			Per svolgere semplici calcoli, creazione di grafici, diagrammi e tabelle si è scelto di utilizzare il software Microsoft Excel.
 			\paragraph{Microsoft Project}\mbox{}\\ [1mm]
 			Per realizzare il diagramma di Gantt necessario per la pianificazione, in particolare di tempi, risorse e analisi dei carichi di lavoro, si è scelto di utilizzare Microsoft Project.
-	\subsection{Sviluppo}
+	\subsection{PRC-Q2 Sviluppo}
 		\subsubsection{Scopo}
 		Lo scopo del processo\glosp di sviluppo è svolgere e normare le attività necessarie per la realizzazione del prodotto\glosp richiesto.
 		\subsubsection{Aspettative}
@@ -485,58 +485,57 @@
 			\end{itemize}
 		
 	\subsubsection{Metriche di qualità}
-		\paragraph{PRC-Q1 Processo di sviluppo}
-			\subparagraph{OP-1 Individuazione completa dei requisiti}
-			\subparagraph*{Obiettivo}\mbox{}\\ [1mm]
-			L'obiettivo è individuare correttamente i requisiti nella prima attività di analisi in modo che con l'avanzare del progetto non ci siano cambiamenti che comportano un grosso dispendio di tempo.
-			\subparagraph*{Metriche}\mbox{}\\ [1mm]
-			Le metriche\glosp utilizzate sono:
+		\paragraph{OP-1 Individuazione completa dei requisiti}
+		\paragraph*{Obiettivo}\mbox{}\\ [1mm]
+		L'obiettivo è individuare correttamente i requisiti nella prima attività di analisi in modo che con l'avanzare del progetto non ci siano cambiamenti che comportano un grosso dispendio di tempo.
+		\paragraph*{Metriche}\mbox{}\\ [1mm]
+		Le metriche\glosp utilizzate sono:
+		\begin{itemize}
+			\item \textbf{M01 Scostamento dei requisiti individuati}: indica la differenza in numero dei requisiti individuati in ogni periodo. Se elevato, questo valore indica che l'attività di analisi dei requisiti non è stata svolta con qualità sufficiente;
 			\begin{itemize}
-				\item \textbf{M01 Scostamento dei requisiti individuati}: indica la differenza in numero dei requisiti individuati in ogni periodo. Se elevato, questo valore indica che l'attività di analisi dei requisiti non è stata svolta con qualità sufficiente;
-				\begin{itemize}
-					\item[] \textbf{formula}: $R_{p-1}-R{p}$. Dove $R{p}$ indica il numero di requisiti individuati in un periodo e $R{p-1}$ indica il numero di requisiti individuati nel periodo precedente.
-				\end{itemize} 
-			\end{itemize}
-			
-			\subparagraph{OP-2 Sviluppo di codice comprensibile e manutenibile}
-			\subparagraph*{Obiettivo}\mbox{}\\ [1mm]
-			L'obiettivo è sviluppare codice che rispetti quando definito nell'attività di codifica e sia facilmente comprensibile e manutenibile.
-			\subparagraph*{Metriche}\mbox{}\\ [1mm]
-			Le metriche\glosp utilizzate sono:
-				\begin{itemize}
-					\item \textbf{M02 Numero di parametri per metodo}: indica il numero di parametri presenti in ciascun metodo. Se il valore è elevato è molto probabile che il grado di complessità del metodo sia elevato. Perciò è opportuno limitare questo numero ed eventualmente suddividere il metodo in più metodi distinti;
-					\begin{itemize}
-						\item[] \textbf{formula}: si calcola con un valore intero.
-					\end{itemize}
-					\item \textbf{M03 Numero di metodi per classe}: indica il numero di metodi presenti in ciascuna classe. Se il valore è elevato è molto probabile che il grado di complessità del metodo sia elevato. Perciò è opportuno limitare questo numero in modo da avere una classe facilmente comprensibile e con uno scopo preciso;
-					\begin{itemize}
-						\item[] \textbf{formula}: si calcola con un valore intero.
-					\end{itemize}
-					\item \textbf{M? livello di annidamento}: indica il livello di annidamento all'interno dei metodi. Se questo valore è alto, il codice è più complesso e difficile da manutenere. Perciò è opportuno suddividere il metodo in più metodi distinti per ottenere un livello di annidamento basso;
-					\begin{itemize}
-						\item[] \textbf{formula}: si calcola con un valore intero.
-					\end{itemize}
-				\end{itemize}
+				\item[] \textbf{formula}: $R_{p-1}-R{p}$. Dove $R{p}$ indica il numero di requisiti individuati in un periodo e $R{p-1}$ indica il numero di requisiti individuati nel periodo precedente.
+			\end{itemize} 
+		\end{itemize}
 		
-			\subparagraph{OP-? Forte disaccoppiamento tra le componenti architetturali}
-			\subparagraph*{Obiettivo}\mbox{}\\ [1mm]
-			L'obiettivo è progettare il l'architettura del prodotto\glosp software così da renderlo efficace, efficiente e manutenibile.
-			\subparagraph*{Metriche}\mbox{}\\ [1mm]
-			Le metriche\glosp utilizzate sono:
+		\paragraph{OP-2 Sviluppo di codice comprensibile e manutenibile}
+		\paragraph*{Obiettivo}\mbox{}\\ [1mm]
+		L'obiettivo è sviluppare codice che rispetti quando definito nell'attività di codifica e sia facilmente comprensibile e manutenibile.
+		\paragraph*{Metriche}\mbox{}\\ [1mm]
+		Le metriche\glosp utilizzate sono:
 			\begin{itemize}
-				\item \textbf{M? Accoppiamento tra le classi di oggetti}: indica se una classe è accoppiata ad una seconda. Con accoppiamento s'intende l'utilizzo, da parte della prima classe, di metodi o variabili definiti nella seconda; 
+				\item \textbf{M02 Numero di parametri per metodo}: indica il numero di parametri presenti in ciascun metodo. Se il valore è elevato è molto probabile che il grado di complessità del metodo sia elevato. Perciò è opportuno limitare questo numero ed eventualmente suddividere il metodo in più metodi distinti;
 				\begin{itemize}
-					\item[] \textbf{Formula}: si calcola con un valore intero.
+					\item[] \textbf{formula}: si calcola con un valore intero.
 				\end{itemize}
-				\item \textbf{M? Profondità della gerarchia}: indica la profondità massima della gerarchia delle classi. Deve essere limitata per mantenere un basso accoppiamento;
+				\item \textbf{M03 Numero di metodi per classe}: indica il numero di metodi presenti in ciascuna classe. Se il valore è elevato è molto probabile che il grado di complessità del metodo sia elevato. Perciò è opportuno limitare questo numero in modo da avere una classe facilmente comprensibile e con uno scopo preciso;
 				\begin{itemize}
-					\item[] \textbf{Formula}: si calcola con un valore intero.
-				\end{itemize} 	
-				\item \textbf{M? Numero di design pattern}: indica il numero di design pattern applicati. La presenza di design pattern può aiutare all'innalzamento della qualità del prodotto ma un uso eccessivo può comportare un'elevata complessità. Va quindi mantenuto un numero di design pattern ragionevole.
+					\item[] \textbf{formula}: si calcola con un valore intero.
+				\end{itemize}
+				\item \textbf{M? livello di annidamento}: indica il livello di annidamento all'interno dei metodi. Se questo valore è alto, il codice è più complesso e difficile da manutenere. Perciò è opportuno suddividere il metodo in più metodi distinti per ottenere un livello di annidamento basso;
 				\begin{itemize}
-					\item[] \textbf{Formula}: si calcola con un valore intero.
-				\end{itemize} 	
+					\item[] \textbf{formula}: si calcola con un valore intero.
+				\end{itemize}
 			\end{itemize}
+	
+		\paragraph{OP-? Forte disaccoppiamento tra le componenti architetturali}
+		\paragraph*{Obiettivo}\mbox{}\\ [1mm]
+		L'obiettivo è progettare il l'architettura del prodotto\glosp software così da renderlo efficace, efficiente e manutenibile.
+		\paragraph*{Metriche}\mbox{}\\ [1mm]
+		Le metriche\glosp utilizzate sono:
+		\begin{itemize}
+			\item \textbf{M? Accoppiamento tra le classi di oggetti}: indica se una classe è accoppiata ad una seconda. Con accoppiamento s'intende l'utilizzo, da parte della prima classe, di metodi o variabili definiti nella seconda; 
+			\begin{itemize}
+				\item[] \textbf{Formula}: si calcola con un valore intero.
+			\end{itemize}
+			\item \textbf{M? Profondità della gerarchia}: indica la profondità massima della gerarchia delle classi. Deve essere limitata per mantenere un basso accoppiamento;
+			\begin{itemize}
+				\item[] \textbf{Formula}: si calcola con un valore intero.
+			\end{itemize} 	
+			\item \textbf{M? Numero di design pattern}: indica il numero di design pattern applicati. La presenza di design pattern può aiutare all'innalzamento della qualità del prodotto ma un uso eccessivo può comportare un'elevata complessità. Va quindi mantenuto un numero di design pattern ragionevole.
+			\begin{itemize}
+				\item[] \textbf{Formula}: si calcola con un valore intero.
+			\end{itemize} 	
+		\end{itemize}
 		
 		\paragraph{PRD-Q2 Appropriatezza funzionale}
 		\subparagraph{CP-3 Completezza e adeguatezza dei requisiti}
