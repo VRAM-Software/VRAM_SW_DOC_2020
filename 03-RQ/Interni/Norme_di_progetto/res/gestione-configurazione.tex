@@ -10,16 +10,16 @@
 		\paragraph{Versionamento}\mbox{}\\ [1mm]
 		A partire dalla versione 7.0.0 del prodotto, è stato introdotto un nuovo sistema di versionamento univoco per l'intero prodotto, di seguito descritto.
 		\newline
+		Le modifiche effettuate ai documenti ed ai file contenenti codice sorgente sono identificate da un numero di versione, comune per l'interno prodotto, consultabile direttamente tramite le issue su Github, all'interno delle quali sono anche identificabili i singoli commit che compongono la modifica. 
 		\newline
-		Le modifiche effettuate ai documenti ed ai file contenenti codice sorgente sono identificate da un numero di versione, comune per l'interno prodotto, presente all'interno dei file stessi. Per quanto riguarda i documenti, il numero di versione possiede sempre una corrispondente riga nella tabella delle modifiche, presente nei file stessi, che descrive i cambiamenti avvenuti all'interno dei singoli file. I salti di versione in queste tabelle, dovuti all'aggiornamento degli altri sottoprodotti, saranno indicati in modo sintetico nella tabella stessa. Il numero di versione viene inoltre inserito, ad ogni rilascio del prodotto, nel nome dei documenti.
+		Nello specifico caso dei documenti, il numero di versione possiede sempre una corrispondente riga nella tabella delle modifiche, presente nei documenti stessi, che descrive i cambiamenti avvenuti all'interno dei singoli file. I salti di versione in queste tabelle, dovuti all'aggiornamento degli altri sottoprodotti, sono indicati in modo sintetico all'interno delle stesse. Il numero di versione viene inoltre inserito nel nome dei documenti pdf generati.
 		\newline
-		Per il codice sorgente del software, le modifiche effettuate in una versione sono consultabili direttamente sulla sezione rilasci di GitHub e saranno identificate da opportuni tag.
+		L'insieme delle modifiche effettuate in un rilascio del prodotto è consultabile dall'utente finale su Github nella sezione rilasci del repository grafana\_prediction, dove ogni rilascio è identificato da un tag.
 		\newline
-		\newline
-		La numerazione per il versionamento\glosp del prodotto si base sulle modifiche applicate al repository\glosp principale grafana\_prediction, che contiene al suo interno gli altri repository\glosp come sottomoduli. Ad ogni modifica in esso effettuata, indipendentemente dal sottomodulo che la causa, il numero di versione del prodotto viene incrementato secondo lo schema seguente.
+		La numerazione per il versionamento\glosp del prodotto si base sulle modifiche applicate al repository\glosp principale grafana\_prediction, che contiene al suo interno gli altri repository\glosp come sottomoduli. Ad ogni modifica in esso effettuata il numero di versione del prodotto viene incrementato secondo lo schema seguente.
 		
 		\subparagraph*{Numerazione delle versioni del prodotto}
-		Per identificare univocamente le versioni del prodotto utilizziamo una numerazione basata su 3 cifre nel formato X.Y.Z, la prima bozza ha versione 0.0.0 e le modifiche al codice aggiorneranno le cifre della versione nel modo seguente:
+		Per identificare univocamente le versioni del prodotto utilizziamo una numerazione basata su 3 cifre nel formato X.Y.Z, la prima bozza ha versione 0.0.0 e le modifiche ai file aggiorneranno le cifre della versione nel modo seguente:
 		\begin{itemize}
 			\item \textbf{Z} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche al codice sorgente o ai documenti al fine di risolvere problemi riscontrati nel prodotto;
 			\item \textbf{Y} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche al codice sorgente o ai documenti al fine di aggiungere nuove funzionalità di entità minore al prodotto(modifiche minori\glo), la nuova versione deve inoltre presentare piena compatibilità con le versioni precedenti. Un aggiornamento di questa cifra comporta l'azzeramento della cifra Z, es 1.1.0, 1.2.0 etc;
