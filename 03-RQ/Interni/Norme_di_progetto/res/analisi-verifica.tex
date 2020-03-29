@@ -1,4 +1,4 @@
-\subsection{Verifica}
+\subsection{PRC-Q6 Verifica}
 \subsubsection{Scopo}
 Il processo\glosp di verifica ha lo scopo di accertare che i risultati ottenuti da tutte le attività, attuate in un periodo preso in considerazione, raggiungano tutti i requisiti richiesti senza aver introdotto degli errori. La verifica deve essere svolta durante il ciclo di vita del software, più precisamente al passare di ogni baseline\glo.
 \subsubsection{Aspettative}
@@ -68,7 +68,8 @@ Il software testing è un procedimento importante per misurare la qualità di un
 Per ogni test vengono definiti il codice identificativo, la descrizione, lo stato e l'esito.
 \begin{itemize}
 	\item il codice identificativo è scritto in questo formato:\\
-	\textbf{tipologia[codice\_padre].[codice\_figlio]}
+	\\ \textbf{tipologia[codice\_padre].[codice\_figlio]} \\
+	\\ Dove:
 	\begin{itemize}
 		\item \textbf{tipologia}:
 		\begin{itemize}
@@ -76,8 +77,8 @@ Per ogni test vengono definiti il codice identificativo, la descrizione, lo stat
 			\item \textbf{TI}: test di integrazione;
 			\item \textbf{TU}: test di unità.
 		\end{itemize}
-		\item \textbf{codice\_padre}: numero che identifica univocamente il test;
-		\item \textbf{codice\_figlio}: numero progressivo che indica i sotto-test che compongono il padre. 
+		\item \textbf{codice\_padre}: numero intero progressivo maggiore di zero che identifica univocamente il test;
+		\item \textbf{codice\_figlio}: numero intero progressivo maggiore di zero che indica i sotto-test che compongono il padre. 
 	\end{itemize}
 	\item descrizione: spiegazione concisa e completa di ciò che verifica il test;
 	\item stato:
@@ -93,39 +94,62 @@ Per ogni test vengono definiti il codice identificativo, la descrizione, lo stat
 	\end{itemize}
 \end{itemize}
 
-\subparagraph*{Test di unità} \mbox{}\\ [1mm]
+\paragraph*{Test di unità} \mbox{}\\ [1mm]
 I test di unità si definiscono tali perché controllano il corretto funzionamento di una sezione di codice specifica chiamata unità. Solitamente questi tipi di test vengono eseguiti su funzioni o, se si parla di programmazione ad oggetti, su un metodo di una classe, quindi su una parte minimale del codice. Il loro scopo è verificare che gli input forniti diano gli output attesi. È buona norma rendere questi test automatici per minimizzare il tempo di esecuzione senza richiedere l'interazione dello sviluppatore. Questo tipo di test viene scritto dal programmatore che sviluppa le singole unità mediante l'ausilio di driver\glosp e stub\glo, per verificare l'assenza di errori e documentare il funzionamento dell'unità.
 
-\subparagraph*{Test di integrazione} \mbox{}\\ [1mm]
+\paragraph*{Test di integrazione} \mbox{}\\ [1mm]
 Successivamente ai test di unità, si assemblano gruppi di unità progressivamente che formeranno degli agglomerati sempre più grandi. Questo tipo di test, infatti, si concentra nella ricerca di anomalie ed errori tra le interfacce dei singoli componenti. Una volta concluso un singolo test, si otterrà un agglomerato che costituirà una nuova unità da cui partire per ulteriori test di integrazione. Per svolgere questo test si è scelto un approccio iterativo.
 
-\subparagraph*{Test di sistema} \mbox{}\\ [1mm]
+\paragraph*{Test di sistema} \mbox{}\\ [1mm]
 I test di sistema controllano il funzionamento corretto del prodotto\glosp e verificano che il sistema soddisfi tutti i requisiti definiti nel documento \textit{Analisi dei Requisiti v. 3.1.1}. Con l'esecuzione di questi test si riesce a definire e documentare tutte le funzionalità del sistema e possono individuare criticità come il problema del black-box\glo. Il gruppo svolgerà questo test quando si raggiungerà uno stato di rilascio per il prodotto\glosp sviluppato.
 
-\subparagraph{Metriche di qualità}
-Le metriche di qualità utilizzate per valutare la qualità della verifica sono:
-\begin{itemize}
-	%\item \textbf{M-PROC28 Code coverage}: indica la percentuale di codice coperto da test rispetto al totale delle righe di codice;
-	%\begin{itemize}
-	%	\item[] \textbf{formula}: $\frac{righe \; di \; codice \; coperto}{righe \; di \; codice \; totali}$;
-	%\end{itemize} 
-
-	%\item \textbf{M-PROC29 Branch coverage}: indica la percentuale di codice coperto da test rispetto al totale delle righe di codice;
-	%\begin{itemize}
-	%	\item[] \textbf{formula}: $\frac{righe \; di \; codice \; coperto}{righe \; di \; codice \; totali}$;
-	%\end{itemize} 
-
-	\item \textbf{M-PROC05 Percentuale bug sistemati}: indica la percentuale dei bug sistemati dando così una traccia dell'avanzamento;
+\subsubsection{Metriche di qualità}
+	\paragraph{OP-4 Efficacia dei test}
+	\paragraph*{Obiettivo}\mbox{}\\ [1mm]
+	L'obiettivo è garantire che il prodotto\glosp software venga testato in modo efficace in ogni sua singola parte.
+	\paragraph*{Metriche}\mbox{}\\ [1mm]
+	Le metriche\glosp utilizzate sono:
 	\begin{itemize}
-		\item[] \textbf{formula}: $\frac{bug \; sistemati}{bug \; totali}$;
-	\end{itemize} 
+		\item \textbf{M-PROC05 Percentuale bug sistemati}: indica la percentuale dei bug sistemati dando così una traccia dell'avanzamento;
+		\begin{itemize}
+			\item[] \textbf{formula}: $\frac{bug \; sistemati}{bug \; totali}$;
+		\end{itemize}
+	\end{itemize}
 
-	%\item \textbf{M-PROC31 Copertura dei test eseguiti}: indica la percentuale di test effettivamente eseguiti;
-	%\begin{itemize}
-	%	\item[] \textbf{formula}: $\frac{test \; eseguiti}{test \; totali}$;
-	%\end{itemize} 
-
-\end{itemize}
+	\paragraph{OP-5 Completezza dei test}
+	\paragraph*{Obiettivo}\mbox{}\\ [1mm]
+	L'obiettivo è garantire che il prodotto software sia testato in modo completo.
+	\paragraph*{Metriche}\mbox{}\\ [1mm]
+	Le metriche\glosp utilizzate sono:
+	\begin{itemize}
+		\item \textbf{M? Code coverage}: indica la percentuale di codice coperto da test rispetto al totale delle righe di codice;
+		\begin{itemize}
+			\item[] \textbf{formula}: $\frac{righe \; di \; codice \; coperto}{righe \; di \; codice \; totali}$;
+		\end{itemize} 
+	
+		\item \textbf{M? Branch coverage}: indica la percentuale di codice coperto da test rispetto al totale delle righe di codice;
+		\begin{itemize}
+			\item[] \textbf{formula}: $\frac{righe \; di \; codice \; coperto}{righe \; di \; codice \; totali}$;
+		\end{itemize} 
+	
+		\item \textbf{M? Copertura dei test eseguiti}: indica la percentuale di test effettivamente eseguiti;
+		\begin{itemize}
+			\item[] \textbf{formula}: $\frac{test \; eseguiti}{test \; totali}$;
+		\end{itemize} 
+	\end{itemize}
+	\paragraph{PRD-Q2 Appropriatezza funzionale}
+		\subparagraph{CP-3 Correttezza delle funzionalità implementate}
+		\paragraph*{Caratteristica}\mbox{}\\ [1mm]
+		Questa caratteristica descrive se le funzionalità implementate sono corrette.
+		\paragraph*{Metriche}\mbox{}\\ [1mm]
+		Le metriche\glosp utilizzate sono:
+		\begin{itemize}
+			\item \textbf{M? percentuale di test superati}: indica la percentuale di test che sono stati superati;
+			\begin{itemize}
+				\item[] \textbf{formula}: $\frac{test \; superati}{test \; eseguiti}$;
+			\end{itemize}
+		\end{itemize}
+	
 \subsubsection{Strumenti di supporto}
 	\paragraph{Correzione ortografica}\mbox{}\\ [1mm]
 	Il nostro gruppo ha utilizzato, per la ricerca di errori ortografici o stilistici nel testo dei documenti, la libreria HunSpell utilizzata con l'editor di test: TexStudio. Esso permette di avere un controllo in tempo reale su errori ortografici in lingua inglese e italiana (sottolineati in rosso) e ripetizioni di parole a breve distanza (sottolineati in verde).
