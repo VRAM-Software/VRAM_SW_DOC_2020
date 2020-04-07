@@ -17,21 +17,27 @@
 			\textit{SvmPrediction} è la classe che implementa l'algoritmo SVM ed importa la libreria ml-modules mentre \textit{RlPrediction} è quella che implementa RL ed importa LinearRegression dalla libreria \textit{regression.module}. Entrambe sono caratterizzate da un campo dati writeInflux che rappresenta un oggetto di Classe WriteInflux che viene quindi istanziato nel costruttore. Questo rappresenta una dipendenza di tipo composizione e risulta essere esplicita. 
 			Infine la classe concreta \textit{WriteInflux} che importa la libreria \textit{node-influx} rappresenta la connessione con il database influxDB e di conseguenza una dipendenza con esso. In questo caso non si è scelto di fornire un'interfaccia in quanto all'intero di Grafana viene utilizzato questo db come standard. Presenta due metodi per la scrittura sul database rispettivamente \textit{WriteArrayToInflux(data, timeStamp)} che permette di scrivere i dati e \textit{writeStampsToInflux(point, timeStamp)} che permette di inserire il timeStamp, caratteristico di un database TimeScale come Influx. 
 			\mbox{}
-			\begin{figure} [H]
-				\includegraphics[width=\linewidth]{./img/Diagrammi/d1.png}
-				\caption{Diagramma delle classi del Model}
-			\end{figure}
+			\begin{landscape}
+				\begin{figure}
+					\begin{figure} [H]
+						\includegraphics[width=\linewidth]{./img/Diagrammi/d1.png}
+						\caption{Diagramma delle classi del Model}
+					\end{figure}
+				\end{figure}
+			\end{landscape}
 			Per la comunicazione dei dati tra Model e View ci appoggiamo al funzionamento di Grafana che la implementata utilizzando un design pattern Observer. 
 			\paragraph{View}
 			All'interno della vista abbiamo inserito la componente Panel rappresentata dalla classe \textit{PanelCtrl} che estende la classe \textit{MetricsPanelCtrl} di Angular. Essa permette la visualizzazione dei risultati delle query su Influx.
 			Inoltre è presente la classe \textit{SelectInfluxDBCtrl} che rappresenta la componente di ricezione della datasource definita e connessa dall'utente tramite l'interfaccia grafica. Essa è in relazione di composizione con \textit{PanelCtrl} che la contiene e ne gestisce il ciclo di vita; infatti non ha senso di esistere al di fuori del pannello che permette la visualizzazione dei dati che legge.
-			Per implementare i grafici, invece, abbiamo deciso di utilizzare un componente della libreria Plotly che importiamo e gestiamo interamente dentro \textit{PanelCtrl}.
+			Per implementare i grafici, invece, abbiamo deciso di utilizzare un componente della libreria Plotly che importiamo e gestiamo internamente dentro \textit{PanelCtrl}.
 			Infine nella classe \textit{PanelCtrl} è presente un campo dati che rappresenta un oggetto di tipo ProcessData che viene gestito interamente. Perciò è presente una dipendenza di composizione tra queste due classi che definisce anche la relazione che sussiste tra View e Model del nostro prodotto. 
 			\mbox{}
+			\begin{landscape}
 			\begin{figure} [H]
-				\includegraphics[width=\linewidth]{./img/Diagrammi/d3.png}
+				\includegraphics[width=\linewidth]{./img/Diagrammi/d2.png}
 				\caption{Diagramma delle classi della View}
 			\end{figure}
+		\end{landscape}
 			\paragraph{Controller}
 			All'interno del controller viene implementata la mappatura tra i dati e le richieste ricevute dalla View e le chiamate alla business logic per la loro esecuzione. Abbiamo deciso di implementare un design pattern strategy ottenendo la seguente struttura:
 			\begin{itemize}
@@ -42,10 +48,12 @@
 			\end{itemize}
 			All'interno di \textit{ProcessSvm} e \textit{ProcessRl} è presente un attributo rispettivamente SvmPredicter e RlPredicter che definisce una dipendenza di tipo composizione e di conseguenza il collegamento tra Controller e Model.
 			\mbox{}
+			\begin{landscape}
 			\begin{figure} [H]
-				\includegraphics[width=\linewidth]{./img/Diagrammi/d2.png}
+				\includegraphics[width=\linewidth]{./img/Diagrammi/d3.png}
 				\caption{Diagramma delle classi del Controller}
 			\end{figure}
+		\end{landscape}
 	\subsection{Applicazione esterna alla piattaforma Grafana}
 	Per poter apprezzare la suddivisione del prodotto viene riportato il diagramma dei Package, allegato nel file %DOBBIAMO_DEVIDERE_IL_NOME.PNG, che rappresenta le dipendenze definite ad alto livello tra le componenti.
 		\subsubsection{Progettazione architetturale}
@@ -67,7 +75,7 @@
 				\caption{Diagramma delle classi del Template Method Read}
 			\end{figure}
 			\textbf{Write} \mbox{} \\ 
-			Progettando la gestione degli output ci si è accorti che indipendentemente dall'estensione del file da scrivere, l'algoritmo di scrittura aveva uno scheletro comune. È stato quindi deciso di implementare un template method per eventuali sviluppi futuri. La classe astratta Write implementa il metodo writeToDisk(path, name, data, notes, callback) che definisce l'algoritmo comune. Viene chiamata la funzione buildTrainedFile(result, notes), implementata nella classe concreta WriteJson, che restituisce una map<String, double> che rappresenta l'oggetto da scrivere nel file da dare in output. Viene poi chiamata la funzione parser(data, callback), implementata nella classe concreta WriteJson, che trasformerà questo oggetto in una stringa. Il metodo writeToDisk(path, name, data, notes, callback) riceverà infine questa stringa tramite la callback e la scriverà in un file da dare in output.
+			Progettando la gestione degli output ci si è accorti che indipendentemente dall'estensione del file da scrivere, l'algoritmo di scrittura aveva uno scheletro comune. È stato quindi deciso di implementare un template method per eventuali sviluppi futuri. La classe astratta Write implementa il metodo writeToDisk(path, name, data, notes, callback) che definisce l'algoritmo comune. Viene chiamata la funzione buildTrainedFile(result, notes), implementata nella classe concreta WriteJson, che restituisce una map<String, double> che rappresenta l'oggetto da scrivere nel file da dare in output. Viene poi chiamata la funzione parser(data, callback), implementata nella classe concreta WriteJson, che trasforma questo oggetto in una stringa. Il metodo writeToDisk(path, name, data, notes, callback) riceverà infine questa stringa tramite la callback e la scriverà in un file da dare in output.
 			\mbox{}
 			\begin{figure} [H]
 				\includegraphics[width=\linewidth]{./img/Diagrammi/write.png}
@@ -76,10 +84,12 @@
 			Inoltre abbiamo implementato gli algoritmi di predizione attraverso un'interfaccia \textit{AlgorithmTrainer}. Essa permette l'estensibilità a qualunque algoritmo purché rispetti il contratto definito. Attualmente abbiamo implementato \textit{SvmTrainer} e \textit{RlTrainer} ovvero le classi rispettivamente dell'addestramento di Svm ed Rl.
 			Per le funzionalità sopra elencate, implementiamo l'invio delle notifiche alla ViewModel per l'aggiornamento dei dati tramite il meccanismo di callback.
 			\mbox{}
+			\begin{landscape}
 			\begin{figure} [H]
 				\includegraphics[width=\linewidth]{./img/Diagrammi/Training.png}
 				\caption{Diagramma delle classi di Training}
-			\end{figure}			
+			\end{figure}	
+			\end{landscape}		
 			\paragraph{View}
 			La parte di presentazione dei dati verso l'utente è realizzata tramite dei componenti di React, contenuti nella classe principale App che li renderizza. Inoltre per la visualizzazione del grafico risultante dalla predizione abbiamo deciso di utilizzare la libreria D3. 
 			La gestione dello stato dell'applicazione è delegata al ViewModel che si occupa di aggiornare lo stato che verrà poi renderizzato dalla vista. 	
@@ -100,7 +110,7 @@
 			\end{figure}
 			\textbf{Writing} \mbox{} \\ 
 			\begin{itemize}
-				\item \textbf{ProcessWriting}: questa è una classe concreta che rappresenta il context e al suo interno viene scelto, sulla base dei dati e della richieste ricevute, quale strategia seguire, che in questo caso scrivere un file in base alla sua estensione;
+				\item \textbf{ProcessWriting}: questa è una classe concreta che rappresenta il context e al suo interno viene scelto, sulla base dei dati e della richieste ricevute, quale strategia seguire, che in questo caso è scrivere un file in base alla sua estensione;
 				\item \textbf{PerformWriting}: questa è un'interfaccia che rappresenta la strategia astratta. Essa definisce il contratto che un componente che deve scrivere un file da dare in output deve avere per essere tale;
 				\item \textbf{ProcessWritingJson}: questa è una classe concreta che implementa \textit{PerformWriting} e rappresenta il componente che esegue la scrittura dei dati su un file Json;
 			\end{itemize}
@@ -108,7 +118,7 @@
 			
 				\begin{figure} [H]
 					\begin{center}
-					\includegraphics[width=70mm]{./img/Diagrammi/dAppW.png}
+					\includegraphics[width=90mm]{./img/Diagrammi/dAppW.png}
 				\end{center}
 					\caption{Diagramma delle classi dello Strategy Writing}
 				\end{figure}
@@ -120,8 +130,12 @@
 				\item \textbf{ProcessTrainingRl}: questa è una classe concreta che implementa \textit{PerformTraining} e rappresenta il componente che esegue la mappatura e il controllo dei dati per fornirli all'algoritmo di predizione Rl per eseguire il suo addestramento;
 				\item \textbf{ProcessTrainingSvm}: questa è una classe concreta che implementa \textit{PerformTraining} e rappresenta il componente che esegue la mappatura e il controllo dei dati per fornirli all'algoritmo di predizione Svm per eseguire il suo addestramento.
 			\end{itemize}
-			\mbox{}
+		\mbox{}			
+			\begin{landscape}
 			\begin{figure} [H]
-				\includegraphics[width=\linewidth]{./img/Diagrammi/dAppT.png}
-				\caption{Diagramma delle classi dello Strategy Training}
+				\begin{center}
+					\includegraphics[width=350mm,height=110mm,keepaspectratio]{./img/Diagrammi/dAppT.png}
+					\caption{Diagramma delle classi dello Strategy Training}
+				\end{center}
 			\end{figure}
+			\end{landscape}
