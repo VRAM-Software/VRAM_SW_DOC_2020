@@ -1,7 +1,7 @@
 \section{Architettura}
 	Il nostro prodotto è composto da un plug-in sviluppato per la piattaforma Grafana e un'applicazione esterna a quest'ultima. L'analisi dell'architettura sarà quindi divisa per questi due componenti.
 	\subsection{Plug-in interno a Grafana}
-		Per poter apprezzare la suddivisione del prodotto viene riportato il diagramma dei Package, allegato nel file %DOBBIAMO_DEVIDERE_IL_NOME.PNG, che rappresenta le dipendenze definite ad alto livello tra le componenti.
+		Per poter apprezzare la suddivisione del prodotto viene riportato il diagramma dei Package, allegato nel file plug-in-package.png, che rappresenta le dipendenze definite ad alto livello tra le componenti.
 		\subsubsection{Progettazione architetturale}
 		Per la progettazione architetturale del plug-in si è deciso di utilizzare il design pattern MVC. Abbiamo preso questa decisione perché si adatta bene allo sviluppo di software all'interno della piattaforma Grafana. In particolare è così strutturata:
 		\begin{itemize}
@@ -9,7 +9,7 @@
 			\item \textbf{View}: all'interno della View gestiamo la presentation logic del nostro prodotto, più in dettaglio la creazione di un pannello della dashboard di Grafana e le sue interazioni con l'utente;
 			\item \textbf{Controller}: all'interno del Controller gestiamo l'application logic del nostro prodotto, più in dettaglio la necessaria trasformazione dei dati forniti dall'utente in un formato utilizzabile dai componenti del Model.
 		\end{itemize}
-		In allegato forniamo il diagramma delle classi nel file %DOBBIAMO_DECIDERE_IL_NOME.PNG .
+		In allegato forniamo il diagramma delle classi nel file plug-in-diagramma-classi.png .
 		\subsubsection{Progettazione di dettaglio}
 			\paragraph{Model}
 			Come prima cosa all'interno del modello abbiamo inserito gli algoritmi di predizione. Per la progettazione dei componenti che li implementano, abbiamo deciso di privilegiare l'estensibilità creando un'interfaccia \textit{AlgorithmPrediction} che da contratto fornisce il metodo \textit{predict(dataset, configuration, influxParams)} che riceve in input i dati e la configurazione per eseguire l'algoritmo e i parametri per connettersi e salvare il risultato su InfluxDB.
@@ -55,7 +55,7 @@
 			\end{figure}
 		\end{landscape}
 	\subsection{Applicazione esterna alla piattaforma Grafana}
-	Per poter apprezzare la suddivisione del prodotto viene riportato il diagramma dei Package, allegato nel file %DOBBIAMO_DEVIDERE_IL_NOME.PNG, che rappresenta le dipendenze definite ad alto livello tra le componenti.
+	Per poter apprezzare la suddivisione del prodotto viene riportato il diagramma dei Package, allegato nel file app-package.png, che rappresenta le dipendenze definite ad alto livello tra le componenti.
 		\subsubsection{Progettazione architetturale}
 			Per la progettazione architetturale dell'applicazione esterna a Grafana si è deciso di utilizzare il design pattern MVVM. Abbiamo preso questa decisione perché si adatta molto bene alle tecnologie che utilizziamo ovvero React ed Electron. In particolare è così strutturata:
 		\begin{itemize}
@@ -63,7 +63,7 @@
 			\item \textbf{View}: all'interno della View gestiamo la presentazione dei dati attraverso React;
 			\item \textbf{ViewModel}: all'interno del ViewModel implementiamo il binding tra la vista ed il modello. Più in dettaglio il binding tra View e ViewModel ci viene fornito da Electron mentre quello tra Model e ViewModel viene implementato tramite l'utilizzo delle callback.
 		\end{itemize}
-		In allegato forniamo il diagramma delle classi nel file %DOBBIAMO_DECIDERE_IL_NOME.PNG .
+		In allegato forniamo il diagramma delle classi nel file app-diagramma-classi.png.
 		\subsubsection{Progettazione di dettaglio}
 			\paragraph{Model}
 			Progettando il modello dell'applicazione esterna abbiamo riscontrato la necessità di utilizzare in due diversi casi un Template Method: \\
