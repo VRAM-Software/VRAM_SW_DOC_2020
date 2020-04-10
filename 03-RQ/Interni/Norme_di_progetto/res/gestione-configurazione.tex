@@ -1,34 +1,34 @@
 \subsection{PRC-Q4 Gestione della configurazione}
 	\subsubsection{Scopo}
-		L'obiettivo di questo processo\glosp è rendere documenti e codice sorgente univocamente identificati e facilmente riconoscibili, evidenziando versioni e modifiche. Vuole anche agevolare l'identificazione delle relazioni esistenti fra gli elementi e fa da supporto alla fase di verifica.
+		L'obiettivo di questo processo\glosp è rendere documenti e codice sorgente univocamente identificati e facilmente riconoscibili, evidenziando versioni e modifiche. Vuole anche agevolare l'identificazione delle relazioni esistenti fra gli elementi e fornire supporto alla fase di verifica.
 	\subsubsection{Aspettative}
 		Questa sezione ha lo scopo supportare i processi\glosp di documentazione, di sviluppo e manutenzione del software rendendoli definiti e ripetibili.  
 	\subsubsection{Descrizione} 
 		Questo processo descrive come il gruppo ha gestito la configurazione degli strumenti e delle risorse utilizzate per svolgere il progetto\glo.
-		Sarà quindi descritta la configurazione del repository\glosp su GitHub, del sistema di versionamento\glosp Git e dei servizi GitHub.
+		Viene quindi descritta la configurazione del repository\glosp su GitHub, del sistema di versionamento\glosp Git e dei servizi GitHub.
 	\subsubsection{Attività}
 		\paragraph{Versionamento}\mbox{}\\ [1mm]
 		A partire dalla versione 7.0.0 del prodotto, è stato introdotto un nuovo sistema di versionamento univoco per l'intero prodotto\glo, di seguito descritto.
 		\newline
-		Le modifiche effettuate ai documenti ed ai file contenenti codice sorgente sono identificate da un numero di versione comune per l'intero prodotto\glosp e consultabile direttamente tramite le issue su GitHub. All'interno di quest'ultime sono inoltre identificabili i singoli commit che compongono la modifica.
+		Le modifiche effettuate ai documenti ed ai file contenenti codice sorgente sono identificate da un numero di versione comune per l'intero prodotto\glosp e consultabile direttamente tramite le issue su GitHub. Inoltre, all'interno di quest'ultime, sono identificabili i singoli commit che compongono la modifica.
 		\newline
 		Nello specifico caso dei documenti, il numero di versione possiede sempre una corrispondente riga nella tabella delle modifiche, presente nei documenti stessi, che descrive i cambiamenti avvenuti all'interno dei singoli file. Gli eventuali salti di versione in queste tabelle sono dovuti all'aggiornamento degli altri sottoprodotti e vengono indicati in modo sintetico all'interno delle stesse. Inoltre il numero di versione viene inserito nel nome dei documenti pdf generati.
 		\newline
 		L'insieme delle modifiche effettuate in un rilascio del prodotto\glosp è consultabile dall'utente finale su Github nella sezione rilasci del repository grafana\_prediction, dove ogni rilascio è identificato da un tag.
 		\newline
-		La numerazione per il versionamento\glosp del prodotto\glosp si base sulle modifiche applicate al repository\glosp principale grafana\_prediction, che contiene al suo interno gli altri repository\glosp come sottomoduli. In esso, ad ogni modifica effettuata, il numero di versione del prodotto\glosp è incrementato secondo lo schema seguente.
+		La numerazione per il versionamento\glosp del prodotto\glosp si basa sulle modifiche applicate al repository\glosp principale grafana\_prediction, che contiene al suo interno gli altri repository\glosp come sottomoduli. In esso, ad ogni modifica effettuata, il numero di versione del prodotto\glosp è incrementato secondo lo schema seguente.
 		
 		\subparagraph*{Numerazione delle versioni del prodotto}
 		Per identificare univocamente le versioni del prodotto utilizziamo una numerazione basata su 3 cifre nel formato X.Y.Z. La prima bozza ha versione 0.0.0 e le modifiche ai file aggiornano le cifre della versione nel modo seguente:
 		\begin{itemize}
 			\item \textbf{Z} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche al codice sorgente o ai documenti al fine di risolvere problemi riscontrati nel prodotto\glo;
 			\item \textbf{Y} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche al codice sorgente o ai documenti al fine di aggiungere nuove funzionalità di entità minore al prodotto\glo(modifiche minori\glo). Inoltre la nuova versione deve presentare piena compatibilità con le versioni precedenti. Un aggiornamento di questa cifra comporta l'azzeramento della cifra Z, es 1.1.0, 1.2.0 etc;
-			\item \textbf{X} : Questa cifra viene incrementata ogni volta che vengono effettuate modifiche al codice sorgente o ai documenti al fine di aggiungere nuove funzionalità di entità maggiore al prodotto\glo(modifiche maggiori\glo), ad esempio novità che cambino in modo importante il suo uso o le funzionalità che esso offre. Un aumento di versione di questo tipo può, se necessario, non essere retrocompatibile. Un aggiornamento di questa cifra comporta l'azzeramento delle cifre Y e Z, es 2.0.0, 3.0.0 etc.
+			\item \textbf{X} : Questa cifra viene incrementata ogni volta che vengono effettuate modifiche al codice sorgente o ai documenti al fine di aggiungere nuove funzionalità di entità maggiore al prodotto\glo(modifiche maggiori\glo), ad esempio novità che cambino in modo importante il suo uso o le funzionalità che offre. Un aumento di versione di questo tipo può, solo se necessario, non essere retrocompatibile. Un aggiornamento di questa cifra comporta l'azzeramento delle cifre Y e Z, es 2.0.0, 3.0.0 etc.
 		\end{itemize}
 		Ogni incremento sulle singole cifre è rigorosamente un +1, non possono essere saltati numeri.
 		
 	\paragraph{Gestione delle modifiche}\mbox{}\\ [1mm]
-		Al fine di monitorare e limitare le modifiche al ramo principale del repository\glo, master, è utilizzato il meccanismo di pull request fornito da GitHub. Ogni membro del gruppo può creare branch secondari, secondo il workflow\glosp feature branch, su cui effettuare modifiche, tuttavia per unirle al branch master è necessario aprire una pull request che dovrà essere revisionata dai verificatori tramite i servizi di revisione integrati in GitHub. Una volta revisionata positivamente è compito del responsabile del documento approvare la pull request ed effettuare quindi l'effettiva unione delle modifiche nel branch master.
+		Al fine di monitorare e limitare le modifiche al ramo principale del repository\glo, master, è utilizzato il meccanismo di pull request fornito da GitHub. Ogni membro del gruppo può creare branch secondari, secondo il workflow\glosp feature branch, su cui effettuare modifiche, tuttavia per unirle al branch master è necessario aprire una pull request che dovrà essere revisionata dai verificatori tramite i servizi di revisione integrati in GitHub. Una volta revisionata positivamente è compito del responsabile del documento approvare la pull request ed effettuare quindi l'unione delle modifiche nel branch master.
 		\newline
 		In sintesi, per effettuare modifiche ai file sono previsti i seguenti passaggi:
 		\begin{itemize}
