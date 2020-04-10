@@ -1,13 +1,13 @@
 \section{Test}
 	\subsection{Esecuzione dei test}
 		\subsubsection{Applicativo di addestramento}
-			Una volta avviato il server NodeJS, i test di unità vengono avviati con il comando \textbf{npm test} e scegliendo successivamente l'opzione \textbf{a}, che avvierà i test con Enzyme e Jest. I risultati dei test vengono visualizzati direttamente nel terminale, inoltre i test vengono rieseguiti automaticamente alla modifica del codice.
+			Una volta avviato il server NodeJS, i test di unità con Enzyme e Jest vengono avviati con il comando \textbf{npm test} scegliendo l'opzione \textbf{a}. I loro risultati vengono visualizzati direttamente nel terminale. Inoltre i test vengono rieseguiti automaticamente ad ogni modifica del loro codice.
 		\subsubsection{Plug-in}
-			I test di unità vengono avviati con il comando \textbf{npm run test}, che avvierà i test con Jest. L'esito dei test viene visualizzato direttamente nel terminale. In alternativa, tramite il comando \textbf{npm run ci-test} oltre ai test verrà effettuato il calcolo della coperatura, visualizzato tramite una tabella direttamente nel terminale.
+			I test di unità con Jest vengono avviati con il comando \textbf{npm run test} e il loro esito viene visualizzato direttamente nel terminale. In alternativa, possono essere eseguiti tramite il comando \textbf{npm run ci-test} il quale, oltre all'esecuzione dei test, effettua il calcolo della copertura sul codice totale visualizzandola tramite una tabella nel terminale.
 	\subsection{Scrittura dei test}
-		Per ogni componente viene creato un file di test, con il nome \textbf{<nome componente>.test.js}, all'interno del quale vengono definiti i test con Jest ed Enzyme.	L'obiettivo dei test di unità è quello di verificare il funzionamento e la correttezza dei singoli componenti, 
-		analizzandone la costruzione ed il caricamento, l'elaborazione dei dati e le chiamate ad altri metodi.
+		Per ogni componente viene creato un file di test, con nome \textbf{<nome componente>.test.js} per l'applicativo esterno e \textbf{<nome componente>.test.ts} per il plug-in, all'interno del quale vengono definiti. L'obiettivo dei test di unità è verificare il funzionamento e la correttezza dei singoli componenti, 
+		analizzandone la costruzione, il caricamento, l'elaborazione dei dati e le chiamate ad altri metodi.
 	\subsection{SonarCloud}
-		SonarCloud misura la qualità del codice, ad ogni commit infatti analizza i sorgenti ed estrae indici su manutenibilità, complessità, affidabilità, duplicazione del codice, numero di bug e vulnerabilità. L'obiettivo è quello di avere codice sempre in buono stato e pronto al rilascio.
-	\subsection{Coperatura dei test}
-		La copertura dei test viene controllata da Coveralls, che ad ogni nuovo commit esegue il calcolo e ne mantiene uno storico. Per accedere alle statistiche sulla copertura dei test bisogna premere sull'apposito badge nelle repository\glo, che apre la rispettiva pagina sul sito di Coveralls. Nel caso del plug-in, è possibile misurare la copertura anche tramite l'apposito comando di test.
+		SonarCloud misura la qualità del codice. Infatti ad ogni commit analizza i sorgenti ed estrae indici su manutenibilità, complessità, affidabilità, duplicazione del codice, numero di bug e vulnerabilità. L'obiettivo è quello di avere codice sempre in buono stato e pronto al rilascio.
+	\subsection{Copertura dei test}
+		La copertura dei test viene controllata da Coveralls, che ad ogni nuova build eseguita dalla continuous integration esegue il calcolo e ne mantiene uno storico. Per accedere alle statistiche sulla copertura dei test bisogna premere sull'apposito badge nelle repository\glosp che apre la rispettiva pagina sul sito di Coveralls. Nel caso del plug-in, è possibile misurare la copertura anche tramite l'apposito comando di test.
