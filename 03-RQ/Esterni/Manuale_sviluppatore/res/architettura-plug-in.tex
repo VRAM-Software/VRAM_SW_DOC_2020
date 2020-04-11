@@ -16,7 +16,7 @@ Abbiamo deciso di utilizzare un design pattern architetturale Model-View-Control
 \end{landscape}
 Analizzando i componenti, la nostra architettura è così strutturata: 
 \begin{itemize}
-	\item \textbf{Model}: modulo che gestisce la business logic. Più in dettaglio, contiene gli algoritmi di predizione dei dati che sono stati attualmente implementati e la scrittura del risultato delle predizioni su un database Influx;
+	\item \textbf{Model}: modulo che gestisce la business logic\glo. Più in dettaglio, contiene gli algoritmi di predizione dei dati che sono stati attualmente implementati e la scrittura del risultato delle predizioni su un database Influx;
 	\item \textbf{View}: modulo che gestisce la presentation logic. Più in dettaglio, permette la creazione di una pannello grafico personalizzato all'interno di una dashboard Grafana\glosp. Con questo pannello l'utente potrà selezionare le impostazioni degli algoritmi di predizione, i flussi di dati in ingresso, le impostazioni del grafico presente nel pannello e le impostazioni del database influx su cui scrivere i risultati;
 	\item \textbf{Controller}: modulo che gestisce l'application logic. Più in dettaglio, trasforma i dati ottenuti dalle interazioni dell'utente ed i flussi dati ottenuti da grafana in un formato adatto per l'esecuzione delle azioni da parte del Model.
 \end{itemize}
