@@ -11,7 +11,7 @@
             \caption{Pagina di configurazione del plug-in atta all'abilitazione.}
         \end{figure}
     \subsection{Aggiunta panel}
-        Ad abilitazione avvenuta, la prima cosa da fare per interagire con il plug-in è aggiungere il pannello di \textit{VRAM Software} nella dashboard\glo. Per farlo bisogna seguire i seguenti passi:
+        Ad abilitazione avvenuta, la prima cosa da fare per interagire con il plug-in è aggiungere il pannello di \textit{VRAM Software} in una dashboard\glo. Per farlo bisogna seguire i seguenti passi:
         \begin{enumerate}
             \item dal menù laterale cliccare la voce "Dashboard" dentro alla sezione "Create" (simbolo "+");
             \item scegliere l'opzione "Choose Visualization" dal riquadro;
@@ -22,7 +22,7 @@
             \caption{Pagina della scelta visualizzazione della dashboard\glo.}
         \end{figure}
     \subsection{Modificare il pannello}
-        Una volta aggiunto il pannello sarà possibile modificare la sua configurazione. Per fare ciò si devono seguire i seguenti passaggi dalla homepage di Grafana\glo:
+        Una volta aggiunto il pannello, sarà possibile modificare la sua configurazione. Per fare ciò si devono seguire i seguenti passaggi dalla homepage di Grafana\glo:
         \begin{enumerate}
             \item dal menù laterale cliccare sulla voce "Manage" dentro alla sezione "Dashboard" (icona con i quattro riquadri);
             \item cliccare il nome della dashboard\glosp a cui si vuole accedere (eventualmente usare i vari filtri offerti da Grafana\glosp per facilitare la ricerca);
@@ -34,7 +34,7 @@
         \end{figure}
         In alternativa, se la dashboard\glosp è stata usata recentemente, è possibile trovare il suo nome direttamente in homepage. Diventa quindi sufficiente seguire le istruzioni sopracitate dal punto numero 2.
     \subsection{Importazione e rimozione file JSON dei predittori}
-        Nel pannello è possibile aggiungere un file JSON contenente i predittori\glosp precedentemente calcolati tramite l'applicativo esterno. Per farlo bisogna seguire i seguenti passi:
+        Nel pannello è possibile aggiungere un file JSON contenente la configurazione degli algoritmi di predizione precedentemente calcolata tramite l'applicativo esterno. Per farlo bisogna seguire i seguenti passi:
         \begin{enumerate}
             \item entrare nella sezione di modifica del pannello;
             \item nel menù laterale cliccare la voce "Visualization" (icona del grafico);
@@ -65,7 +65,7 @@
             \item nel menù laterale cliccare la voce "Visualization" (icona del grafico);
             \item nel riquadro "Configure influxDB destination" bisogna inserire:
             \begin{enumerate}
-                \item datasource (per ora è disponibile solo InfluxDB);
+                \item datasource di tipo InfluxDB;
                 \item nome del database;
                 \item measurement;
                 \item field key.
@@ -77,7 +77,7 @@
             \caption{Riquadro "Configure influxDB destination".}
         \end{figure}
     \subsection{Modifiche di visualizzazione del grafico}
-        Infine sono presenti due riquadri ("Display" e "Traces") e una toolbar nel grafico tramite i quali è possibile modificare l'aspetto del grafico utilizzando varie opzioni come ad esempio l'aggiunta di tracce che possono evidenziare altre query inserite.
+        Per quanto riguarda il grafico sono presenti due riquadri, "Display" e "Traces", che offrono molte opzioni per personalizzare l'aspetto del grafico. Inoltre, come impostazioni predefinita, è presente una toolbar direttamente sul grafico per compiere azioni veloci come l'aggiornamento automatico della scala degli assi o l'esportazione dell'area visualizzata. Infine è possibile aggiungere nuove tracce per visualizzare molteplici query su uno stesso grafico.
         \begin{figure}[H]
             \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/display.png}
             \caption{Riquadro "Display".}
