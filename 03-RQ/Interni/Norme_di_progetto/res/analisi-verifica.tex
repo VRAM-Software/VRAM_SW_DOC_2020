@@ -1,0 +1,176 @@
+\subsection{PRC-Q6 Verifica}
+\subsubsection{Scopo}
+Il processo\glosp di verifica ha lo scopo di accertare che i risultati ottenuti da tutte le attività, attuate in un periodo preso in considerazione, raggiungano tutti i requisiti richiesti senza aver introdotto degli errori. La verifica deve essere svolta durante il ciclo di vita del software, più precisamente al passare di ogni baseline\glo.
+\subsubsection{Aspettative}
+La verifica viene effettuata per raggiungere i seguenti obiettivi:
+\begin{itemize}
+	\item cercare consistenza, completezza e correttezza nelle singole attività;
+	\item ottenere supporto per una successiva validazione\glosp del prodotto\glo;
+	\item avere a disposizione dei criteri e procedure, comprensibili e affidabili, da seguire.
+\end{itemize}
+\subsubsection{Descrizione}
+Il processo\glosp di verifica assicura che tutte le attività svolte della fase in esame, attraverso analisi e test successivamente definiti, siano conformi alle aspettative.
+\subsubsection{Attività}
+Le attività che si effettuano durante la verifica sono due tipi di analisi: l'analisi statica\glosp e l'analisi dinamica. \\[2mm]
+\paragraph{Analisi statica}\mbox{}\\ [1mm]
+L'analisi statica\glosp è lo studio della documentazione e del codice sorgente, essa non richiede l'esecuzione delle singole parti del sistema software che si sta sviluppando, quindi viene applicata ad ogni prodotto\glosp di processo\glo.
+\subparagraph*{Verifica della documentazione} 
+La verifica della documentazione può essere effettuata manualmente in due modi:
+\begin{itemize}
+	\item \textbf{Walkthrough}: metodo di lettura in cui tutti i componenti del gruppo analizzano tutti i documenti e codice realizzato, senza tralasciare nulla, in modo da rilevare eventuali errori. Questa ricerca è ad ampio spettro, infatti viene effettuata anche se a priori non si può sapere se verranno trovate anomalie;
+	\item \textbf{Inspection}: metodo di lettura o desk check per cercare errori specifici utilizzando liste di controllo o check list, la tabella successiva rappresenta gli errori che i nostri verificatori hanno identificato come essere i più frequenti.
+\end{itemize}
+\rowcolors{2}{gray!25}{gray!15}
+\setcounter{table}{0}
+\begin{longtable} {
+		>{}p{55mm} 
+		>{}p{55mm}
+		>{}p{0mm}}
+	\rowcolor{gray!50}
+	\textbf{Oggetto da controllare} & \textbf{Correzione} & \TBstrut \\[2mm]
+	Formato data dei documenti & Tutte le date devono utilizzare la seguente scrittura: \textit{YYYY-MM-DD}  &  \TBstrut \\[2mm]
+	Sintassi nome documenti citati & I documenti, interni o esterni, citati nella documentazione devono essere scritti in italico utilizzando il comando: \verb|\textit{}|  &  \TBstrut \\[2mm]
+	Sintassi parole da enfatizzare & Le parole da enfatizzare, come titolo di liste puntate, devono essere scritte i grassetto utilizzando il comando: \verb|\textbf{}|  &  \TBstrut \\[2mm]
+	Punteggiatura liste puntate & Ogni elemento nelle liste puntate deve iniziare con una lettera maiuscola o minuscola (a seconda del contesto) e deve finire con un punto e virgola &  \TBstrut \\[2mm]
+	Uso corretto dei comandi \verb|\glo| e \verb|\glosp| & I comandi \verb|\glo| e \verb|\glosp|, sono stati creati per identificare le parole da inserire nel glossario, \verb|\glo| dovrà essere usato se la parola del glossario precede un carattere di punteggiatura. Il comando \verb|\glosp| sarà invece usato per le parole che precedono uno spazio &  \TBstrut \\	[2mm]
+	\rowcolor{white}
+	\caption{Tabella errori più frequenti}
+\end{longtable}
+
+\paragraph{Analisi dinamica} \mbox{}\\ [1mm]
+L'analisi dinamica è una tecnica che consiste nell'esecuzione del prodotto\glosp software eseguendo dei test su un insieme finito di casi.
+\subparagraph{Test}\mbox{}\\ [1mm]
+Per la corretta verifica del codice, i test devono seguire regole ben precise che definiscono i parametri e le proprietà che devono avere test per essere considerati efficaci: \mbox{}\\ [1mm]
+\textbf{Parametri da definire}:
+\begin{itemize}
+	\item \textbf{Input}: l'input preso in considerazione;
+	\item \textbf{Output}: l'output che si aspetta di ricevere;
+	\item \textbf{Ambiente}: l'ambiente, quindi hardware e sistema operativo, in cui viene eseguito il test;
+	\item \textbf{Stato iniziale}: lo stato iniziale del prodotto\glo, precedente all'esecuzione del test;
+	\item \textbf{Istruzioni opzionali}: l'utilizzo di istruzioni opzionali aggiuntive deve essere noto.
+\end{itemize} 
+Un test può essere definito efficace se:
+\begin{itemize}
+	\item i parametri citati sopra sono correttamente indicati;
+	\item il nome di un test deve essere autoesplicativo per capire subito che cosa si sta testando;
+	\item esso è ripetibile, quindi ci si aspetta un risultato costante per tutte le esecuzioni di quel test;
+	\item in caso di fallimento del test, esso devo fornire informazioni utili a risolvere il problema identificato;
+	\item in caso di possibili effetti indesiderati ci si aspetta un avvertimento;
+	\item esso è esaustivo e accurato, infatti devono poter identificare una parte del progetto\glosp che potrebbe essere causa di errori.
+\end{itemize}
+Il software testing è un procedimento importante per misurare la qualità di un prodotto\glosp software, per questo motivo sono definiti quattro livelli che dividono i tipi di test da effettuare secondo una gerarchia. Nel processo\glosp di verifica essi sono: 
+\begin{itemize}
+	\item \textbf{Test di sistema};
+	\item \textbf{Test di integrazione};
+	\item \textbf{Test di unità}.
+\end{itemize}
+\subparagraph*{Codifica dei test}
+Per ogni test vengono definiti il codice identificativo, la descrizione, lo stato e l'esito.
+\begin{itemize}
+	\item il codice identificativo è scritto in questo formato:\\
+	\\ \textbf{tipologia[codice\_padre].[codice\_figlio]} \\
+	\\ Dove:
+	\begin{itemize}
+		\item \textbf{tipologia}:
+		\begin{itemize}
+			\item \textbf{TS}: test di sistema;
+			\item \textbf{TI}: test di integrazione;
+			\item \textbf{TU}: test di unità.
+		\end{itemize}
+		\item \textbf{codice\_padre}: numero intero progressivo maggiore di zero che identifica univocamente il test;
+		\item \textbf{codice\_figlio}: numero intero progressivo maggiore di zero che indica i sotto-test che compongono il padre. 
+	\end{itemize}
+	\item descrizione: spiegazione concisa e completa di ciò che verifica il test;
+	\item stato:
+	\begin{itemize}
+		\item \textbf{I}: implementato;
+		\item \textbf{NI}: non implementato.
+	\end{itemize}
+	\item Esito:
+	\begin{itemize}
+		\item \textbf{P}: positivo;
+		\item \textbf{N}: negativo;
+		\item \textbf{NE}: non eseguito.
+	\end{itemize}
+\end{itemize}
+
+\paragraph*{Test di unità} \mbox{}\\ [1mm]
+I test di unità si definiscono tali perché controllano il corretto funzionamento di una sezione di codice specifica chiamata unità. Solitamente questi tipi di test vengono eseguiti su funzioni o, se si parla di programmazione ad oggetti, su un metodo di una classe, quindi su una parte minimale del codice. Il loro scopo è verificare che gli input forniti diano gli output attesi. È buona norma rendere questi test automatici per minimizzare il tempo di esecuzione senza richiedere l'interazione dello sviluppatore. Questo tipo di test viene scritto dal programmatore che sviluppa le singole unità mediante l'ausilio di driver\glosp e stub\glo, per verificare l'assenza di errori e documentare il funzionamento dell'unità.
+
+\paragraph*{Test di integrazione} \mbox{}\\ [1mm]
+Successivamente ai test di unità, si assemblano gruppi di unità progressivamente che formeranno degli agglomerati sempre più grandi. Questo tipo di test, infatti, si concentra nella ricerca di anomalie ed errori tra le interfacce dei singoli componenti. Una volta concluso un singolo test, si otterrà un agglomerato che costituirà una nuova unità da cui partire per ulteriori test di integrazione. Per svolgere questo test si è scelto un approccio iterativo.
+
+\paragraph*{Test di sistema} \mbox{}\\ [1mm]
+I test di sistema controllano il funzionamento corretto del prodotto\glosp e verificano che il sistema soddisfi tutti i requisiti definiti nel documento \textit{Analisi dei Requisiti v. 3.1.1}. Con l'esecuzione di questi test si riesce a definire e documentare tutte le funzionalità del sistema e possono individuare criticità come il problema del black-box\glo. Il gruppo svolgerà questo test quando si raggiungerà uno stato di rilascio per il prodotto\glosp sviluppato.
+
+\subsubsection{Metriche di qualità}
+	\paragraph{OP-4 Efficacia dei test}
+	\paragraph*{Obiettivo}\mbox{}\\ [1mm]
+	L'obiettivo è garantire che il prodotto\glosp software venga testato in modo efficace in ogni sua singola parte.
+	\paragraph*{Metriche}\mbox{}\\ [1mm]
+	Le metriche\glosp utilizzate sono:
+	\begin{itemize}
+		\item \textbf{M-PROC05 Percentuale bug sistemati}: indica la percentuale dei bug sistemati dando così una traccia dell'avanzamento;
+		\begin{itemize}
+			\item[] \textbf{formula}: $\frac{bug \; sistemati}{bug \; totali}$;
+		\end{itemize}
+	\end{itemize}
+
+	\paragraph{OP-5 Completezza dei test}
+	\paragraph*{Obiettivo}\mbox{}\\ [1mm]
+	L'obiettivo è garantire che il prodotto software sia testato in modo completo.
+	\paragraph*{Metriche}\mbox{}\\ [1mm]
+	Le metriche\glosp utilizzate sono:
+	\begin{itemize}
+		\item \textbf{M? Code coverage}: indica la percentuale di codice coperto da test rispetto al totale delle righe di codice;
+		\begin{itemize}
+			\item[] \textbf{formula}: $\frac{righe \; di \; codice \; coperto}{righe \; di \; codice \; totali}$;
+		\end{itemize} 
+	
+		\item \textbf{M? Branch coverage}: indica la percentuale di codice coperto da test rispetto al totale delle righe di codice;
+		\begin{itemize}
+			\item[] \textbf{formula}: $\frac{righe \; di \; codice \; coperto}{righe \; di \; codice \; totali}$;
+		\end{itemize} 
+	
+		\item \textbf{M? Copertura dei test eseguiti}: indica la percentuale di test effettivamente eseguiti;
+		\begin{itemize}
+			\item[] \textbf{formula}: $\frac{test \; eseguiti}{test \; totali}$;
+		\end{itemize} 
+	\end{itemize}
+	\paragraph{PRD-Q2 Appropriatezza funzionale}
+		\subparagraph{CP-3 Correttezza delle funzionalità implementate}
+		\paragraph*{Caratteristica}\mbox{}\\ [1mm]
+		Questa caratteristica descrive se le funzionalità implementate sono corrette.
+		\paragraph*{Metriche}\mbox{}\\ [1mm]
+		Le metriche\glosp utilizzate sono:
+		\begin{itemize}
+			\item \textbf{M? percentuale di test superati}: indica la percentuale di test che sono stati superati;
+			\begin{itemize}
+				\item[] \textbf{formula}: $\frac{test \; superati}{test \; eseguiti}$;
+			\end{itemize}
+		\end{itemize}
+	
+\subsubsection{Strumenti di supporto}
+	\paragraph{Correzione ortografica}\mbox{}\\ [1mm]
+	Il nostro gruppo ha utilizzato, per la ricerca di errori ortografici o stilistici nel testo dei documenti, la libreria HunSpell utilizzata con l'editor di test: TexStudio. Esso permette di avere un controllo in tempo reale su errori ortografici in lingua inglese e italiana (sottolineati in rosso) e ripetizioni di parole a breve distanza (sottolineati in verde).
+	\paragraph{SonarJS}\mbox{}\\ [1mm]
+	Per l'analisi statica\glosp del codice Javascript viene utilizzato il code analyzer SonarJS\glosp della piattaforma SonarCloud.
+	\paragraph{SonarTS}\mbox{}\\ [1mm]
+	Per l'analisi statica\glosp del codice Typescript viene utilizzato il code analyzer SonarJS\glosp della piattaforma SonarCloud.
+	\paragraph{Validazione W3C}\mbox{}\\ [1mm]
+	Le pagine di markup scritte il linguaggio HTML5 vengono validate attraverso il validatore W3C reperible al seguente indirizzo: 
+	\begin{center}
+		\url{https://validator.w3.org/}
+	\end{center}
+	Le pagine di presentazione scritte in linguaggio CSS3 vengono validate attraverso il validatore W3C reperibile al seguente indirizzo:
+	\begin{center}
+		\url{https://jigsaw.w3.org/css-validator/}
+	\end{center}
+	\paragraph{Jest}\mbox{}\\ [1mm]
+	Per la gestione dei test del codice JavaScript il nostro gruppo ha utilizzato il framework Jest per eseguire test d'unità sul codice React e NodeJS.
+	\paragraph{Enzyme}\mbox{}\\ [1mm]
+	Abbiamo scelto di utilizzare Enzyme in quanto è uno strumento di supporto specifico per la scrittura di test sui componenti React e si integra con il framework Jest.
+	\paragraph{React Testing Library}\mbox{}\\ [1mm]
+	A supporto del framework Jest, viene utilizzata la libreria Testing Library per React che facilita la scrittura di test manutenibili per componenti React.
+	\paragraph{Coveralls}\mbox{}\\ [1mm]
+	Coveralls è uno strumento che permette di quantificare la percentuale di codice testato.
