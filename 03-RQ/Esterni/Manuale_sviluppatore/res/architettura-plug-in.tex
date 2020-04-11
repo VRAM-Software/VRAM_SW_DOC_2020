@@ -17,11 +17,11 @@ Abbiamo deciso di utilizzare un design pattern architetturale Model-View-Control
 Analizzando i componenti, la nostra architettura è così strutturata: 
 \begin{itemize}
 	\item \textbf{Model}: modulo che gestisce la business logic\glo. Più in dettaglio, contiene gli algoritmi di predizione dei dati che sono stati attualmente implementati e la scrittura del risultato delle predizioni su un database Influx;
-	\item \textbf{View}: modulo che gestisce la presentation logic. Più in dettaglio, permette la creazione di una pannello grafico personalizzato all'interno di una dashboard Grafana\glosp. Con questo pannello l'utente potrà selezionare le impostazioni degli algoritmi di predizione, i flussi di dati in ingresso, le impostazioni del grafico presente nel pannello e le impostazioni del database influx su cui scrivere i risultati;
+	\item \textbf{View}: modulo che gestisce la presentation logic. Più in dettaglio, permette la creazione di un pannello grafico personalizzato all'interno di una dashboard Grafana\glo. Con questo pannello l'utente può selezionare le impostazioni degli algoritmi di predizione, i flussi di dati in ingresso, le impostazioni del grafico presente nel pannello e le impostazioni del database influx su cui scrivere i risultati;
 	\item \textbf{Controller}: modulo che gestisce l'application logic. Più in dettaglio, trasforma i dati ottenuti dalle interazioni dell'utente ed i flussi dati ottenuti da grafana in un formato adatto per l'esecuzione delle azioni da parte del Model.
 \end{itemize}
 \subsubsection{Progettazione di dettaglio}
-Di seguito viene descritta in dettaglio la progettazione del plug-in. In allegato viene fornito il file \textit{diagramma-classi-plug-in.png} contenente l'intero diagramma delle classi.
+Di seguito viene descritta in dettaglio la progettazione del plug-in. In allegato viene inoltre fornito il file \textit{diagramma-classi-plug-in.png} contenente l'intero diagramma delle classi.
 \paragraph{Model} \mbox{}
 L'elemento principale contenuto all'interno del modello è il componente degli algoritmi di predizione. Abbiamo implementato due algoritmi di predizione: Support Vector Machine lineare\glosp e Regressione lineare\glo. Esse sono rappresentate rispettivamente dalle classi concrete \textit{SvmPrediction} e \textit{RlPrediction}. In senso più generale abbiamo riscontrato che per le famiglie di algoritmi di Support Vector Machine e di Regressione è possibile ricondursi ad un'interfaccia unica che abbiamo chiamato \textit{AlgorithmPrediction}. Essa fornisce il metodo astratto \textit{predict(data, configuration, influxParameter)} che è implementato dalle classi concrete dei singoli algoritmi.
 Queste due classi hanno una dipendenza di tipo composizione con la classe concreta \textit{WriteInflux} che importa la libreria \textit{InfluxDB} e contiene le funzionalità di scrittura su un database Influx. Essa presenta due metodi per la scrittura sul database.
@@ -53,8 +53,8 @@ Abbiamo deciso di implementare un design pattern strategy ottenendo la seguente 
 \begin{itemize}
 	\item \textbf{ProcessData}: è una classe concreta che rappresenta il context del nostro strategy. Al suo interno, infatti, viene scelto quale algoritmo di predizione processare sulla base dei dati e delle richieste ricevute. Inoltre essa ha una dipendenza di tipo aggregazione con l'interfaccia \textit{PerformPrediction};
 	\item \textbf{PerformPrediction}: è un'interfaccia che rappresenta la strategia astratta. Essa definisce il contratto da rispettare per poter implementare una nuova classe concreta che processa i dati da fornire ad un determinato algoritmo;
-	\item \textbf{ProcessSvm}: è una classe concreta che implementa \textit{PerformPrediction} e rappresenta il componente che processa e trasforma i dati da fornire per l'esecuzione dell'algoritmo Svm sul Model;
-	\item \textbf{ProcessSvm}: è una classe concreta che implementa \textit{PerformPrediction} e rappresenta il componente che processa e trasforma i dati da fornire per l'esecuzione dell'algoritmo Rl sul Model;
+	\item \textbf{ProcessSvm}: è una classe concreta che implementa \textit{PerformPrediction} e rappresenta il componente che processa e trasforma i dati da fornire per l'esecuzione dell'algoritmo Svm\glosp sul Model;
+	\item \textbf{ProcessSvm}: è una classe concreta che implementa \textit{PerformPrediction} e rappresenta il componente che processa e trasforma i dati da fornire per l'esecuzione dell'algoritmo Rl sul Model.
 \end{itemize}
 \mbox{}
 \begin{landscape}
