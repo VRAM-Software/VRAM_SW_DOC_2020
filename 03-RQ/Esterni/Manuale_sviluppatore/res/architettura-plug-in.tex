@@ -16,9 +16,9 @@ Abbiamo deciso di utilizzare un design pattern architetturale Model-View-Control
 \end{landscape}
 Analizzando i componenti, la nostra architettura è così strutturata: 
 \begin{itemize}
-	\item \textbf{Model}: modulo che gestisce la business logic. Più in dettaglio contiene gli algoritmi di predizione dei dati che sono stati implementati, la lettura dei dati di input ed infine la scrittura del risultato delle predizioni su un database Influx;
-	\item \textbf{View}: modulo che gestisce la presentation logic. Più in dettaglio permette la creazione di una pannello personalizzato della dashboard di Grafana\glosp dal quale l'utente può interagire;
-	\item \textbf{Controller}: modulo che gestisce l'application logic. Più in dettaglio vengono trasformate le interazioni dell'utente in un formato adatto per l'esecuzione corrispettiva delle azioni da parte del Model.
+	\item \textbf{Model}: modulo che gestisce la business logic. Più in dettaglio, contiene gli algoritmi di predizione dei dati che sono stati attualmente implementati e la scrittura del risultato delle predizioni su un database Influx;
+	\item \textbf{View}: modulo che gestisce la presentation logic. Più in dettaglio, permette la creazione di una pannello grafico personalizzato all'interno di una dashboard Grafana\glosp. Con questo pannello l'utente potrà selezionare le impostazioni degli algoritmi di predizione, i flussi di dati in ingresso, le impostazioni del grafico presente nel pannello e le impostazioni del database influx su cui scrivere i risultati;
+	\item \textbf{Controller}: modulo che gestisce l'application logic. Più in dettaglio, trasforma i dati ottenuti dalle interazioni dell'utente ed i flussi dati ottenuti da grafana in un formato adatto per l'esecuzione delle azioni da parte del Model.
 \end{itemize}
 \subsubsection{Progettazione di dettaglio}
 Di seguito viene descritta in dettaglio la progettazione del plug-in. In allegato viene fornito il file \textit{diagramma-classi-plug-in.png} contenente l'intero diagramma delle classi.
@@ -36,7 +36,8 @@ Queste due classi hanno una dipendenza di tipo composizione con la classe concre
 \end{landscape}
 \paragraph{View} \mbox{}
 All'interno della View abbiamo inserito la componente Panel rappresentata dalla classe \textit{PanelCtrl} che estende \textit{MetricPanelControl} di Grafana\glo. Essa rappresenta il nostro pannello principale dal quale gli utenti possono interagire con il plug-in.
-Ha una dipendenza di tipo composizione con un componente della libreria Plotly per la creazione dei grafici personalizzati e con la classe \textit{SelectinfluxDBCtrl} per la ricezione dei dati dalla datasource definita e connessa dall'utente. In questo modo, sfruttiamo il meccanismo di Grafana che dalla scrittura dei dati sul database a questo componente, permette l'aggiornamento continuo della View.
+Ha una dipendenza di tipo composizione con un componente della libreria Plotly per la creazione del grafico personalizzato e con la classe \textit{SelectinfluxDBCtrl} per la selezione dalla datasource Grafana\glosp di tipo Influx su cui scrivere i risultati delle predizioni. In questo modo, sfruttiamo il meccanismo di Grafana\glosp che dalla scrittura dei dati sul database a questo componente, permette l'aggiornamento continuo della View.
+Infine, sempre all'interno di \textit{PanelCtrl}, c'è una dipendenza verso il componente \textit{ProcessData} del Controller che ne permette il collegamento.
 \mbox{}
 \begin{landscape}
 	\begin{figure}
@@ -46,9 +47,8 @@ Ha una dipendenza di tipo composizione con un componente della libreria Plotly p
 		\end{figure}
 	\end{figure}
 \end{landscape}
-Infine, sempre all'interno di \textit{PanelCtrl}, c'è una dipendenza verso il componente \textit{ProcessData} del Controller che ne permette il collegamento.
 \paragraph{Controller} \mbox{}
-All'interno del Controller viene implementata la trasformazione dei dati ricevuti dalla View, che rappresentano le interazioni dell'utente con il nostro pannello, ad azioni da eseguire sul Model.
+All'interno del Controller viene implementata la trasformazione dei dati ricevuti dalla View, che rappresentano le interazioni dell'utente con il nostro pannello ed i flussi di dati ottenuti da Grafana\glo, ad azioni da eseguire sul Model.
 Abbiamo deciso di implementare un design pattern strategy ottenendo la seguente struttura:
 \begin{itemize}
 	\item \textbf{ProcessData}: è una classe concreta che rappresenta il context del nostro strategy. Al suo interno, infatti, viene scelto quale algoritmo di predizione processare sulla base dei dati e delle richieste ricevute. Inoltre essa ha una dipendenza di tipo aggregazione con l'interfaccia \textit{PerformPrediction};
