@@ -27,11 +27,6 @@
 			\item arresto dell'addestramento (UC1.4);
 			\item visualizzazione del messaggio di conferma della conclusione dell'addestramento (UC1.8).
 		\end{enumerate}
-	\item \textbf{Estensioni}:
-	\begin{itemize}
-		\item se il caricamento del file CSV non è avvenuto con successo, viene visualizzato un messaggio di errore (UC17);
-		\item se il caricamento del file JSON non è avvenuto con successo, viene visualizzato un messaggio di errore (UC3).
-	\end{itemize}
 \end{itemize}
 
 \subsubsection{UC1.1 - Inserimento del file in formato CSV contenente i dati per l'addestramento}
@@ -43,7 +38,11 @@
 	\item \textbf{Descrizione}: l'utente inserisce nel sistema Grafana\glosp il file in formato CSV che contiene dati per l'addestramento dell'algoritmo di predizione;
 	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glo;
 	\item \textbf{Postcondizioni}: il file in formato CSV contenente i dati per l'addestramento è stato inserito correttamente;
-	\item \textbf{Scenario principale}: l'utente inserisce il file in formato CSV contenente i dati per l'addestramento.
+	\item \textbf{Scenario principale}: l'utente inserisce il file in formato CSV contenente i dati per l'addestramento;
+	\item \textbf{Estensioni}:
+	\begin{enumerate}
+		\item se il caricamento del file CSV non è avvenuto con successo, viene visualizzato un messaggio di errore (UC3).
+	\end{enumerate}
 \end{itemize}
 
 \subsubsection{UC1.2 - Selezione del modello di predizione su cui eseguire l'addestramento}
@@ -57,10 +56,10 @@
 	\item \textbf{Postcondizioni}: l'utente ha selezionato correttamente il modello di predizione;
 	\item \textbf{Scenario principale}: l'utente seleziona un modello di predizione per eseguire l'addestramento tra SVM\glosp e RL\glo;
 	\item \textbf{Specializzazione}:
-	\begin{itemize}
+	\begin{enumerate}
 		\item selezione del modello di predizione SVM\glosp (UC1.9);
 		\item selezione del modello di predizione RL\glosp (UC1.10).
-	\end{itemize}
+	\end{enumerate}
 \end{itemize}
 
 \subsubsection{UC1.3 - Avvio dell'addestramento}
@@ -106,7 +105,11 @@
 	\item \textbf{Descrizione}: l'utente inserisce nel sistema Grafana\glosp un file JSON che contiene i dati di una configurazione precedente per addestrare nuovamente l'algoritmo di predizione;
 	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glo;
 	\item \textbf{Postcondizioni}: il file in formato JSON contenente una configurazione precedente è stato inserito correttamente;
-	\item \textbf{Scenario principale}: l'utente inserisce il file in formato JSON contenente una configurazione precedente.
+	\item \textbf{Scenario principale}: l'utente inserisce il file in formato JSON contenente una configurazione precedente;
+	\item \textbf{Estensioni}:
+	\begin{enumerate}
+		\item se il caricamento del file JSON non è avvenuto con successo, viene visualizzato un messaggio di errore (UC17).
+	\end{enumerate}
 \end{itemize}
 \subsubsection{UC1.7 - Inserimento delle note per l'utente}
 \begin{itemize}

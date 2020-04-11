@@ -27,11 +27,6 @@
             \item ricezione del file JSON contenente i predittori (UC4.5);
             \item visualizzazione del messaggio di conferma della conclusione dell'addestramento (UC4.9). 
         \end{enumerate}
-    \item \textbf{Estensioni}:
-	    \begin{enumerate}
-	    	\item se il caricamento del file CSV non è avvenuto con successo viene visualizzato un messaggio di errore (UC18);
-	    	\item se il caricamento del file JSON non è avvenuto con successo viene visualizzato un messaggio di errore (UC6).
-	    \end{enumerate}
 \end{itemize}
 
 \subsubsection{UC4.1 - Inserimento del file in formato CSV contenente i dati per l'addestramento}
@@ -42,7 +37,11 @@
     \item \textbf{Descrizione}: l'utente inserisce un file in formato CSV contenente i dati per l'addestramento nell'applicazione esterna;
     \item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glo;
     \item \textbf{Postcondizioni}: l'utente ha inserito correttamente il file in formato CSV contenente i dati per l'addestramento;
-    \item \textbf{Scenario principale}: l'utente inserisce il file in formato CSV contenente i dati per l'addestramento.
+    \item \textbf{Scenario principale}: l'utente inserisce il file in formato CSV contenente i dati per l'addestramento;
+    \item \textbf{Estensioni}:
+	\begin{enumerate}
+		\item se il caricamento del file CSV non è avvenuto con successo viene visualizzato un messaggio di errore (UC6);
+	\end{enumerate}
 \end{itemize}
 
 \subsubsection{UC4.2 - Selezione del modello di predizione su cui eseguire l'addestramento}
@@ -55,10 +54,10 @@
 	\item \textbf{Postcondizioni}: il modello di predizione è stato selezionato correttamente;
 	\item \textbf{Scenario principale}: l'utente seleziona un modello di predizione su cui eseguire l'addestramento tra SVM\glosp e RL\glo;
 	\item \textbf{Specializzazione}:
-	\begin{itemize}
+	\begin{enumerate}
 		\item selezione del modello di predizione SVM\glosp (UC4.10);
 		\item selezione del modello di predizione RL\glosp (UC4.11).
-	\end{itemize}   
+	\end{enumerate}   
 \end{itemize}
 
 \subsubsection{UC4.3 - Avvio dell'addestramento}
@@ -112,7 +111,11 @@
 	\item \textbf{Descrizione}: l'utente inserisce nell'applicazione esterna un file in formato JSON che contiene i dati di una configurazione per addestrare nuovamente l'algoritmo di predizione partendo con una configurazione precedente;
 	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glo;
 	\item \textbf{Postcondizioni}: il file in formato JSON contenente una configurazione precedente è stato inserito correttamente;
-	\item \textbf{Scenario principale}: l'utente inserisce il file in formato JSON contenente una configurazione precedente.
+	\item \textbf{Scenario principale}: l'utente inserisce il file in formato JSON contenente una configurazione precedente;
+	\item \textbf{Estensioni}:
+	\begin{enumerate}
+		\item se il caricamento del file JSON non è avvenuto con successo viene visualizzato un messaggio di errore (UC18);
+	\end{enumerate}
 \end{itemize}
 \subsubsection{UC4.8 - Inserimento delle note per l'utente}
 \begin{itemize}
