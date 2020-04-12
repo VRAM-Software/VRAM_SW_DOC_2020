@@ -7,13 +7,13 @@ Dall'analisi del progetto\glosp è stato identificato come modello di sviluppo p
 Si è quindi ritenuto che il modello incrementale con utilizzo, dove opportuno, di modello a componenti sia la soluzione migliore per realizzare il prodotto\glosp richiesto, in quanto permetterà di agevolare e strutturare in modo efficace ed efficiente lo sviluppo, portando continuamente valore aggiunto al prodotto\glosp e velocizzando lo sviluppo tramite il riuso di componenti esistenti.
 
 \subsection{Modello incrementale}
-Il modello di sviluppo incrementale rappresenta il principale modello di sviluppo che sarà utilizzato per sviluppare il plug-in, in quanto la sua natura ad incrementi porterà i seguenti vantaggi:
+Il modello di sviluppo incrementale rappresenta il principale modello di sviluppo utilizzato per sviluppare il plug-in, in quanto la sua natura ad incrementi porta i seguenti vantaggi:
 \begin{itemize}
-	\item agevolazione dell'organizzazione dello sviluppo, in quanto ci sarà corrispondenza fra requisiti ed incrementi;
-	\item agevolazione della verifica in quanto potrà essere effettuata ad ogni incremento senza dover necessariamente bloccare lo sviluppo degli altri incrementi;
-	\item agevolazione del monitoraggio dei progressi, in quanto ogni incremento porterà valore aggiunto al prodotto\glo.
+	\item agevolazione dell'organizzazione dello sviluppo, attraverso una corrispondenza fra requisiti ed incrementi;
+	\item agevolazione della verifica che viene effettuata ad ogni incremento, senza dover necessariamente bloccare lo sviluppo degli altri incrementi;
+	\item agevolazione del monitoraggio dei progressi, in quanto ogni incremento porta valore aggiunto al prodotto\glo.
 \end{itemize}
-La prima attività del modello di sviluppo incrementale consiste nell'individuazione dei requisiti da implementare, che vanno classificati in base alla loro rilevanza per gli stakeholder\glo. È così possibile sviluppare per primi i requisiti ad importanza critica che rappresentano le funzionalità cardine del prodotto\glo, lasciando in secondo piano i requisiti non prioritari, facendo corrispondere appunto ad ogni incremento uno o più requisiti.
+La prima attività del modello di sviluppo incrementale consiste nell'individuazione dei requisiti da implementare, che vanno classificati in base alla loro rilevanza per gli stakeholder\glo. È così possibile sviluppare per primi i requisiti di importanza critica che rappresentano le funzionalità cardine del prodotto\glo, lasciando in secondo piano quelli non prioritari e facendo corrispondere ad ogni incremento uno o più requisiti.
 Il metodo di lavoro incrementale è quindi così riassunto:
 \begin{itemize}
 	\item individuare i requisiti del prodotto\glo;
@@ -30,7 +30,7 @@ Il metodo di lavoro incrementale è quindi così riassunto:
 \end{itemize}
 
 \subsubsection{Incrementi individuati}
-La seguente tabella riporta i principali incrementi individuati e definiti inizialmente. Essi sono identificati da un numero intero progressivo maggiore di zero, la loro priorità è data agli incrementi che implementano i requisiti obbligatori, seguiti dagli incrementi riguardanti i requisiti desiderabili. Infine sono riportati degli incrementi che potrebbero, se necessario, implementare i requisiti opzionali.
+La seguente tabella riporta i principali incrementi individuati e definiti inizialmente. Essi sono identificati da un numero intero progressivo maggiore di zero, la loro priorità è data agli incrementi che implementano i requisiti obbligatori, seguiti dagli incrementi riguardanti i requisiti desiderabili. Infine sono riportati degli incrementi che implementano i requisiti opzionali e che verrano svolti qualora fosse possibile o necessario.
 \rowcolors{2}{gray!25}{gray!15}
 \begin{longtable} {
 		>{\raggedright\arraybackslash}p{85mm}
@@ -109,5 +109,5 @@ I componenti evidenziati dall'analisi sono principalmente gli elementi esistenti
 In particolare tali elementi vengono inquadrati nelle seguenti classi di componenti:
 \begin{itemize}
 	\item \textbf{Elementi Grafana}\glo: Sono le librerie e le funzionalità fornite da Grafana\glo, il loro uso viene quindi inquadrato come component reuse;
-	\item \textbf{Algoritmi di predittività}: Sono gli algoritmi che ci sono stati forniti da \textit{Zucchetti} e saranno riutilizzabili come librerie durante lo sviluppo del plug-in, il loro uso viene quindi inquadrato come object and function reuse.
+	\item \textbf{Algoritmi di predittività}: Sono gli algoritmi che ci sono stati forniti da \textit{Zucchetti} e saranno riutilizzabili come librerie durante lo sviluppo del plug-in. Il loro uso viene quindi inquadrato come object and function reuse.
 \end{itemize}
