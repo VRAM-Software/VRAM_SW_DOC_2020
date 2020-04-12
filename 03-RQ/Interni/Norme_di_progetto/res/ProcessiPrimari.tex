@@ -398,30 +398,30 @@
 				\item \textbf{Nomenclatura}: i nomi di classi, metodi e variabili devono essere univoci, esplicativi ed uniformi. Segue la nomenclatura decisa per i vari elementi del codice:
 				\begin{itemize}
 					\item \textbf{Classi}: il nome di ciascuna classe deve seguire la pratica del PascalCase, cioè la prima lettera di ogni parola deve essere maiuscola. Segue un esempio corretto di dichiarazione di una classe:
-			\begin{lstlisting}
+			\begin{verbatim}
 			// OK!
 			class MyClass {
-				//...
+			    //...
 			}
-			\end{lstlisting} 
+			\end{verbatim} 
 					\item \textbf{Costanti}: i nomi delle costanti devono essere seguendo la pratica dell'ALL\_CAPS, cioè tutte le parole in maiuscolo e divise dal carattere underscore (\_). Segue un esempio corretto di dichiarazione di una costante:
-			\begin{lstlisting}
+			\begin{verbatim}
 			const CONSTANT_VALUE = "This string won't change";
-			\end{lstlisting}
+			\end{verbatim}
 					\item \textbf{Metodi}: il nome di ciascun metodo deve iniziare con una lettera minuscola. Nei metodi con nome composto, la prima parola avrà la prima lettera minuscola, mentre le seguenti avranno la prima lettera maiuscola, come indicato dalla pratica del camelCase. Segue un esempio della corretta implementazione di suddetta pratica:
-			\begin{lstlisting}
+			\begin{verbatim}
 			class MyClass {
-			// OK!
-			myMethod() {
-				//...
+			    // OK!
+			    myMethod() {
+			        //...
+			    }
 			}
-			}
-			\end{lstlisting}
+			\end{verbatim}
 				\item \textbf{Variabili}: il nome di ciascuna variabile deve iniziare con una lettera minuscola. Nelle varibili con nome composto, la prima parola avrà la prima lettera minuscola, mentre le seguenti avranno la prima lettera maiuscola, come indicato dalla pratica del camelCase. Segue un esempio della corretta implementazione di suddetta pratica:
-			\begin{lstlisting}
+			\begin{verbatim}
 			// OK!
-			var myVar = 0;
-			\end{lstlisting}
+			let myVar = 0;
+			\end{verbatim}
 				\end{itemize}
 				\item \textbf{Intestazione dei file}: ogni file deve avere un'intestazione contenuta in un blocco di commento dove vengono indicati:
 				\begin{itemize}
@@ -430,89 +430,89 @@
 					\item data di creazione;
 					\item breve descrizione del contenuto del file.
 				\end{itemize}
-			\begin{lstlisting}
+			\begin{verbatim}
 			/**
 			* File: fileName
 			* Author: Name Surname
 			* Creation date: YYYY-MM-DD
 			* Description: This header is for demonstration purpose only.
 			*/
-			\end{lstlisting}
+			\end{verbatim}
 				\item \textbf{Indentazione}: i blocchi annidati devono essere indentati con una tabulazione di quattro spazi. A tal fine gli IDE di tutti i componenti del gruppo dovranno essere configurati per rispettare suddette indicazioni. Segue un esempio di indentazione corretta:
-			\begin{lstlisting}
+			\begin{verbatim}
 			// OK!
 			function() {
-				var x = 1;
+			    let x = 1;
 			}
-			\end{lstlisting}
+			\end{verbatim}
 				\item \textbf{Commenti}: i commenti nel codice devono essere concisi ma sufficientemente descrittivi. Essi precedono l'implementazione di metodi e classi descrivendo brevemente la loro funzione. Sono possibili due tipi di commenti: in linea tramite l'utilizzo del doppio slash (//) o a blocco tramite la costruzione //**...*/.  È inoltre possibile usare i commenti //TODO e //FIXME che indicano rispettivamente delle sezioni di codice da fare in un secondo momento e sezioni di codice da correggere. Segue un esempio di queste pratiche:
-			\begin{lstlisting}
+			\begin{verbatim}
 			//** This is a test class.
 			* OK!
 			*/
 			class MyClass {
-				// This is a test method.
-				myMethod() {
-					var myVar = undefined; //FIXME
-					if (condition) {
-						//TODO
-					} else {
-						//TODO
-					}
-				}
+			    // This is a test method.
+			    myMethod() {
+		        let myVar = undefined; //FIXME
+			        if (condition) {
+			            //TODO
+			        } else {
+			            //TODO
+			        }
+			    }
 			}
-			\end{lstlisting}
+			\end{verbatim}
 				\item \textbf{Blocchi if-else}: ogni blocco if deve avere un corrispondente blocco else che verrà posizionato in linea con la parentesi graffa di chiusura del blocco if precedente. Se i blocchi sono di una singola riga la parentesi graffa può essere omessa. Segue un esempio della corretta applicazione di questa pratiche:
-			\begin{lstlisting}
+			\begin{verbatim}
 			// OK!
 			if (condition) {
-				//TODO
+			    //TODO
 			} else {
-				//TODO
+			    //TODO
 			}
 			
 			if (condition)
-			return true;
-			\end{lstlisting}
+			    return true;
+			\end{verbatim}
 				\item \textbf{Parentesizzazione}: le parentesi di delimitazione dei costrutti devono essere inserite in linea precedute da uno spazio. Segue esempio di utilizzo corretto di tale pratica:
-			\begin{lstlisting}
+			\begin{verbatim}
 			// OK!
 			class MyClass {
-				//TODO
+			    //TODO
 			}
-			\end{lstlisting}
+			\end{verbatim}
 				\item \textbf{Apici}: gli apici da utilizzare per la scrittura di stringhe sono i doppi apici ("). L'utilizzo dell'apice singolo è giustificato solo nel caso in cui la stringa presa in esame necessiti della presenza di apici al suo interno. Segue un esempio esplicativo:
-			\begin{lstlisting}
+			\begin{verbatim}
 			// OK!
-			var myString1 = "This is a string";
-			var myString2 = "He said 'This is a string'";
-			\end{lstlisting}
+			let myString1 = "This is a string";
+			let myString2 = "He said 'This is a string'";
+			\end{verbatim}
 				\item \textbf{Spaziatura tra operandi}: prima e dopo ciascun operando vanno inseriti degli spazi al fine di rendere più ordinato e leggibile il codice. Segue un esempio di tale pratica:
-			\begin{lstlisting}
+			\begin{verbatim}
 			// OK!
-			var myVar1 = 1;
-			var myVar2 = 2;
-			var myVar3 = myVar1 + myVar2;
-			\end{lstlisting}
+			let myVar1 = 1;
+			let myVar2 = 2;
+			let myVar3 = myVar1 + myVar2;
+			\end{verbatim}
 				\item \textbf{Dichiarazioni in linea}: è sconsigliata la dichiarazione di variabili in linea a favore dell'ordine e della leggibilità del codice. Segue un esempio esplicativo:
-			\begin{lstlisting}
+			\begin{verbatim}
 			// NO!
-			var x = 1, y = 2;
+			let x = 1, y = 2;
 			// OK!
-			var x = 1;
-			var y = 2;
-			\end{lstlisting}
+			let x = 1;
+			let y = 2;
+			\end{verbatim}
 				\item \textbf{Spaziatura del codice}: tra i costrutti di codice è obbligatorio lasciare una riga vuota per rendere più ordinato e leggibile il codice. Segue un esempio di tale pratica:
-			\begin{lstlisting}
+			\begin{verbatim}
 			// OK!
 			function() {
-				//TODO
+			    //TODO
 			}
 			
 			myMethod() {
-				//TODO
+			    //TODO
 			}
-			\end{lstlisting}
+			\end{verbatim}
 				\item \textbf{Struttura dei metodi}: ogni metodo deve avere uno ed un solo compito e il suo contenuto dev'essere il più possibile breve in termini di righe di codice;
 				\item \textbf{Condizioni}: l'uso di condizioni multiple è da evitare ove possibile per limitare la complessità delle singole espressioni;
 				\item \textbf{Lingua}: la lingua con cui vengono scritti codice e commenti deve essere l'inglese;
