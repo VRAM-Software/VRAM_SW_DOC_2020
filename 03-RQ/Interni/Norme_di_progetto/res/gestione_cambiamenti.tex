@@ -1,9 +1,8 @@
-\subsection{Gestione dei cambiamenti}
+\subsection{PRC-Q8 Gestione dei cambiamenti}
 \subsubsection{Scopo}
 Lo scopo di questo processo\glosp è fornire un metodo tempestivo, disciplinato e documentato per assicurare che tutti i cambiamenti, compresi i problemi, riscontrati nel corso del progetto\glo, siano identificati, analizzati e risolti.
 \subsubsection{Aspettative}
 L'applicazione di questo processo\glosp deve comportare maggior tempestività ed efficacia nell'individuazione e nella risoluzione dei problemi, con un conseguente aumento di efficacia ed efficienza del processo\glosp di verifica. Inoltre questo processo\glosp deve permettere di individuare i problemi maggiormente ricorrenti.
-%grazie anche al tracciamento dei problemi più frequenti.
 \subsubsection{Descrizione} 
 Il processo\glosp di gestione dei cambiamenti analizza e risolve tutti i cambiamenti programmati e improvvisi, quali i problemi, riscontrati durante l'esecuzione dei processi\glosp di sviluppo e di fornitura, indipendentemente dalla loro natura e dalla loro origine. 
 \subsubsection{Attività}
@@ -25,11 +24,11 @@ Deve essere istanziato il processo\glosp di gestione dei cambiamenti per gestire
 		\item \textbf{Identificativo}: codice numerico progressivo per identificare il singolo cambiamento;
 		\item \textbf{Tipologia}: denota il tipo di cambiamento e può essere:
 		\begin{itemize}
-			\item \textbf{Editoriale}: cambiamento che comporta modifiche editoriali\glosp sulla documentazione;
-			\item \textbf{Tecnico}: cambiamento che comporta modifiche tecniche\glosp sulla documentazione;
-			\item \textbf{Funzionale}: cambiamento che influenza le caratteristiche funzionali del prodotto\glosp software;
-			\item \textbf{Conformità}: cambiamento che comporta violazioni di conformità del prodotto\glosp software;
-			\item \textbf{Validazione}: cambiamento riscontrato durante il processo\glosp di Validazione\glosp del prodotto\glosp software.
+			\item \textbf{Maggiore}: cambiamento che comporta modifiche maggiori\glosp al prodotto\glo;
+			\item \textbf{Minore}: cambiamento che comporta modifiche minori\glosp al prodotto\glo;
+			\item \textbf{Funzionale}: cambiamento che influenza le caratteristiche funzionali del prodotto\glosp;
+			\item \textbf{Conformità}: cambiamento che comporta violazioni di conformità del prodotto\glosp;
+			\item \textbf{Validazione}: cambiamento riscontrato durante il processo\glosp di Validazione\glosp del prodotto\glosp.
 		\end{itemize}
 		\item \textbf{Priorità}: può essere:
 		\begin{itemize}
@@ -54,11 +53,15 @@ Deve essere istanziato il processo\glosp di gestione dei cambiamenti per gestire
 Quando dei cambiamenti, comprese le non conformità ed i problemi, sono rilevati in un prodotto\glosp software o in un'attività, deve essere realizzato un report che li descriva. Questo report deve essere usato come componente del ciclo chiuso del punto §3.6.4.1: dall'individuazione dei cambiamenti al processo di indagine, analisi e risoluzione, fino all'individuazione della causa ed alla sua analisi per individuare le tendenze.
 Per svolgere quanto descritto, ci si appoggia all'Issue Tracking System di GitHub. Esso consente di aggiungere delle issues che corrispondono ai cambiamenti o ai problemi che si devono svolgere e di assegnarle ad incaricati e responsabili. Dunque viene assegnata un'istanza dello schema precedentemente descritto e, in base alle priorità, si procederà alla loro risoluzione.
 
-\subparagraph{Metriche di qualità}
-La metrica di qualità utilizzata per valutare la qualità della risoluzione dei problemi è:
-\begin{itemize}
-	\item \textbf{M06 Tempo medio di risoluzione degli errori}: indica il tempo medio di risoluzione degli errori segnalati. Se elevato, questo valore indica che la gestione dei cambiamenti non è adeguata;
+\subsubsection{Obiettivi di qualità}
+	\paragraph{OP-6 Risoluzione efficace dei problemi} \mbox{}\\ [1mm]
+	%\paragraph*{Obiettivo}\mbox{}\\ [1mm]
+	L'obiettivo è garantire una corretta risoluzione dei problemi nel più breve tempo possibile.
+	\subparagraph{Metriche}\mbox{}\\ [1mm]
+	Le metriche\glosp utilizzate sono:
 	\begin{itemize}
-		\item[] \textbf{formula}: $\frac{TRE}{NE}$ dove $TRE$ indica il tempo totale per la risoluzione degli errori e $NE$ il numero di errori risolti.
-	\end{itemize} 
-\end{itemize}		
+		\item \textbf{M-PROC06 Tempo medio di risoluzione degli errori}: indica il tempo medio di risoluzione degli errori segnalati. Se elevato, questo valore indica che la gestione dei cambiamenti non è adeguata;
+		\begin{itemize}
+			\item[] \textbf{formula}: $\frac{TRE}{NE}$ dove $TRE$ indica il tempo totale per la risoluzione degli errori e $NE$ il numero di errori risolti.
+		\end{itemize} 
+	\end{itemize}		

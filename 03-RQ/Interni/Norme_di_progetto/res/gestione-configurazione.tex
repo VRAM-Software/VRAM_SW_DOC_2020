@@ -1,44 +1,34 @@
-\subsection{Gestione della configurazione}
+\subsection{PRC-Q4 Gestione della configurazione}
 	\subsubsection{Scopo}
-		L'obiettivo di questo processo\glosp è rendere documenti e codice sorgente univocamente identificati e facilmente riconoscibili, evidenziando versioni e modifiche. Vuole anche agevolare l'identificazione delle relazioni esistenti fra gli elementi e fa da supporto alla fase di verifica.
+		L'obiettivo di questo processo\glosp è rendere documenti e codice sorgente univocamente identificati e facilmente riconoscibili, evidenziando versioni e modifiche. Vuole anche agevolare l'identificazione delle relazioni esistenti fra gli elementi e fornire supporto alla fase di verifica.
 	\subsubsection{Aspettative}
 		Questa sezione ha lo scopo supportare i processi\glosp di documentazione, di sviluppo e manutenzione del software rendendoli definiti e ripetibili.  
 	\subsubsection{Descrizione} 
 		Questo processo descrive come il gruppo ha gestito la configurazione degli strumenti e delle risorse utilizzate per svolgere il progetto\glo.
-		Sarà quindi descritta la configurazione del repository\glosp su GitHub, del sistema di versionamento\glosp Git e dei servizi GitHub.
+		Viene quindi descritta la configurazione del repository\glosp su GitHub, del sistema di versionamento\glosp Git e dei servizi GitHub.
 	\subsubsection{Attività}
 		\paragraph{Versionamento}\mbox{}\\ [1mm]
-		Le modifiche effettuate ai documenti ed ai file contenenti codice sorgente sono identificate da un numero di versione presente all'interno dei file stessi. Per quanto riguarda i documenti, ogni numero di versione è presente nel nome del file ed ha una corrispondente riga nella tabella delle modifiche così da avere uno storico delle modifiche effettuate al documento. Per il codice sorgente del software le modifiche effettuate in una versione, sono consultabili sulla sezione rilasci di GitHub e saranno identificate da opportuni tag.
+		A partire dalla versione 7.0.0 del prodotto, è stato introdotto un nuovo sistema di versionamento univoco per l'intero prodotto\glo, di seguito descritto.
 		\newline
-		La numerazione per il versionamento\glosp del codice sorgente applica in modo indipendente alle singole componenti software che compongono il prodotto\glosp finale. Tuttavia esiste un'unica versione per il prodotto\glosp finale, che segue le linee guida del versionamento\glosp del codice sorgente basate su risoluzione di problemi e nuove funzionalità minori o maggiori. Nelle note di rilascio del prodotto\glosp finale, saranno poi riportate le versioni dei singoli componenti che lo compongono ovvero documentazione, plugin Grafana\glosp e applicativo di addestramento esterno. Le modifche ed i rilasci saranno tracciabili tramite il repository\glosp principale grafana\_prediction che contiene al suo interno gli altri repository\glosp come sottomoduli.
-		\subparagraph*{Numerazione delle versioni del documento}
-		Per identificare univocamente le versioni dei documenti seguiamo le indicazioni dell'ente ETSI, dunque la numerazione delle versioni è composta da 3 cifre nel formato X.Y.Z e la prima bozza ha versione 0.0.1. Le modifiche al documento aggiorneranno le cifre nel seguente modo:
-		\begin{itemize}
-			\item \textbf{Z} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche editoriali\glosp al documento, es. X.Y.1, X.Y.2 etc.;
-			\item \textbf{Y} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche tecniche\glosp al documento. Se sono state eseguite modifiche sia editoriali\glosp che tecniche\glosp allora entrambe le cifre Z e Y saranno incrementate, es. X.1.1, X.2.2 etc;
-			\item \textbf{X} : Questa cifra viene incrementata ogni volta che viene rilasciata una nuova versione finale del documento, ovvero una versione di rilascio.			
-		\end{itemize}
-		La prima versione finale ha versione 1.1.1.
+		Le modifiche effettuate ai documenti ed ai file contenenti codice sorgente sono identificate da un numero di versione comune per l'intero prodotto\glosp e consultabile direttamente tramite le issue su GitHub. Inoltre, all'interno di quest'ultime, sono identificabili i singoli commit che compongono la modifica.
 		\newline
-		Durante la modifica e la revisione del documento le bozze vengono incrementate le cifre Z ed Y, es. 1.2.0, 1.2.1, 1.3.0, etc.
+		Nello specifico caso dei documenti, il numero di versione possiede sempre una corrispondente riga nella tabella delle modifiche, presente nei documenti stessi, che descrive i cambiamenti avvenuti all'interno dei singoli file. Gli eventuali salti di versione in queste tabelle sono dovuti all'aggiornamento degli altri sottoprodotti e vengono indicati in modo sintetico all'interno delle stesse. Inoltre il numero di versione viene inserito nel nome dei documenti pdf generati.
 		\newline
-		Quando il documento viene approvato come finale allora viene incrementata la cifra X, ad esempio la bozza 1.5.3 diventa la versione finale 2.1.1.
+		L'insieme delle modifiche effettuate in un rilascio del prodotto\glosp è consultabile dall'utente finale su Github nella sezione rilasci del repository grafana\_prediction, dove ogni rilascio è identificato da un tag.
 		\newline
-		Ogni incremento sulle singole cifre è rigorosamente un +1, non possono essere saltati numeri.
+		La numerazione per il versionamento\glosp del prodotto\glosp si basa sulle modifiche applicate al repository\glosp principale grafana\_prediction, che contiene al suo interno gli altri repository\glosp come sottomoduli. In esso, ad ogni modifica effettuata, il numero di versione del prodotto\glosp è incrementato secondo lo schema seguente.
 		
-		\subparagraph*{Numerazione delle versioni del codice sorgente}
-		Per identificare univocamente le versioni del codice sorgente utilizziamo una numerazione basata su 3 cifre nel formato X.Y.Z, la prima bozza ha versione 0.0.0 e le modifiche al codice aggiorneranno le cifre della versione nel modo seguente:
+		\paragraph*{Numerazione delle versioni del prodotto} \mbox{}
+		Per identificare univocamente le versioni del prodotto utilizziamo una numerazione basata su 3 cifre nel formato X.Y.Z. La prima bozza ha versione 0.0.0 e le modifiche ai file aggiornano le cifre della versione nel modo seguente:
 		\begin{itemize}
-			\item \textbf{Z} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche al codice sorgente al fine di risolvere problemi riscontrati nel software;
-			\item \textbf{Y} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche al codice sorgente al fine di aggiungere nuove funzionalità di entità minore al software, la nuova versione deve inoltre presentare piena compatibilità con le versioni precedenti. Se sono state eseguite modifiche sia per risolvere problemi che per aggiungere nuove funzionalità minori allora entrambe le cifre Z e Y saranno incrementate, es. X.1.1, X.2.2 etc;
-			\item \textbf{X} : Questa cifra viene incrementata ogni volta che vengono effettuate modifiche al codice al fine di aggiungere nuove funzionalità di entità maggiore al software, ad esempio novità che cambino in modo importante l'uso del software o le funzionalità che esso offre. Un aumento di versione di questo tipo può, se necessario, non essere retrocompatibile. Un aggiornamento di questa cifra comporta l'azzeramento delle cifre Y e Z, es 2.0.0, 3.0.0 etc.
+			\item \textbf{Z} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche al codice sorgente o ai documenti al fine di risolvere problemi riscontrati nel prodotto\glo;
+			\item \textbf{Y} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche al codice sorgente o ai documenti al fine di aggiungere nuove funzionalità di entità minore al prodotto\glo(modifiche minori\glo). Inoltre la nuova versione deve presentare piena compatibilità con le versioni precedenti. Un aggiornamento di questa cifra comporta l'azzeramento della cifra Z, es 1.1.0, 1.2.0 etc;
+			\item \textbf{X} : Questa cifra viene incrementata ogni volta che vengono effettuate modifiche al codice sorgente o ai documenti al fine di aggiungere nuove funzionalità di entità maggiore al prodotto\glo(modifiche maggiori\glo), ad esempio novità che cambino in modo importante il suo uso o le funzionalità che offre. Un aumento di versione di questo tipo può, solo se necessario, non essere retrocompatibile. Un aggiornamento di questa cifra comporta l'azzeramento delle cifre Y e Z, es 2.0.0, 3.0.0 etc.
 		\end{itemize}
-		La prima versione finale ha versione 1.0.0.
-		\newline
 		Ogni incremento sulle singole cifre è rigorosamente un +1, non possono essere saltati numeri.
 		
 	\paragraph{Gestione delle modifiche}\mbox{}\\ [1mm]
-		Al fine di monitorare e limitare le modifiche al ramo principale del repository\glo, master, è utilizzato il meccanismo di pull request fornito da GitHub. Ogni membro del gruppo può creare branch secondari, secondo il workflow\glosp feature branch, su cui effettuare modifiche, tuttavia per unirle al branch master è necessario aprire una pull request che dovrà essere revisionata dai verificatori tramite i servizi di revisione integrati in GitHub. Una volta revisionata positivamente è compito del responsabile del documento approvare la pull request ed effettuare quindi l'effettiva unione delle modifiche nel branch master.
+		Al fine di monitorare e limitare le modifiche al ramo principale del repository\glo, master, è utilizzato il meccanismo di pull request fornito da GitHub. Ogni membro del gruppo può creare branch secondari, secondo il workflow\glosp feature branch, su cui effettuare modifiche, tuttavia per unirle al branch master è necessario aprire una pull request che dovrà essere revisionata dai verificatori tramite i servizi di revisione integrati in GitHub. Una volta revisionata positivamente è compito del responsabile del documento approvare la pull request ed effettuare quindi l'unione delle modifiche nel branch master.
 		\newline
 		In sintesi, per effettuare modifiche ai file sono previsti i seguenti passaggi:
 		\begin{itemize}

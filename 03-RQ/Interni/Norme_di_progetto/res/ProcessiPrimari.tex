@@ -1,5 +1,5 @@
 \section{Processi primari}
-	\subsection{Fornitura}
+	\subsection{PRC-Q1 Fornitura}
 		\subsubsection{Scopo}
 		Lo scopo del processo\glosp di fornitura è stabilire norme, tempi e risorse necessarie a svolgere l'intero progetto\glo.
 		Inizialmente è necessario comprendere le richieste dei proponenti svolgendo un'analisi sui capitolati\glo e sulla loro fattibilità. Una volta compresi, viene redatto il documento \textit{Studio di Fattibilità} nel quale viene manifestata la decisione del capitolato\glosp scelto.
@@ -95,7 +95,7 @@
 			Per svolgere semplici calcoli, creazione di grafici, diagrammi e tabelle si è scelto di utilizzare il software Microsoft Excel.
 			\paragraph{Microsoft Project}\mbox{}\\ [1mm]
 			Per realizzare il diagramma di Gantt necessario per la pianificazione, in particolare di tempi, risorse e analisi dei carichi di lavoro, si è scelto di utilizzare Microsoft Project.
-	\subsection{Sviluppo}
+	\subsection{PRC-Q2 Sviluppo}
 		\subsubsection{Scopo}
 		Lo scopo del processo\glosp di sviluppo è svolgere e normare le attività necessarie per la realizzazione del prodotto\glosp richiesto.
 		\subsubsection{Aspettative}
@@ -114,7 +114,7 @@
 		\end{itemize}
 		\subsubsection{Attività}
 		\paragraph{Analisi dei requisiti}
-		\subparagraph*{Scopo}\mbox{}\\ [1mm] 
+		\paragraph*{Scopo}\mbox{}\\ [1mm] 
 		Lo scopo di questa attività è:
 		\begin{itemize}
 			\item individuare lo scopo del lavoro;
@@ -125,7 +125,7 @@
 			\item a partire dai requisiti e dai casi d'uso\glosp fissati, procedere per raffinamenti continui per garantire un miglioramento continuo del proprio prodotto\glo;
 			\item tracciare i requisiti e fornire dei riferimenti per le attività di controllo dei test da fornire ai verificatori;
 		\end{itemize}
-		\subparagraph*{Descrizione}\mbox{}\\ [1mm]
+		\paragraph*{Descrizione}\mbox{}\\ [1mm]
 		Le attività che devono essere eseguite per raggiungere gli obiettivi fissati sono:
 		\begin{itemize}
 			\item \textbf{Comprensione del capitolato}\glo: eseguita attraverso la lettura e l'analisi della documentazione fornita;
@@ -133,7 +133,7 @@
 			\item \textbf{Comunicazione interna}: eseguita tra i membri del gruppo;
 			\item \textbf{Analisi dei possibili casi d'uso}\glo.
 		\end{itemize}
-		\subparagraph*{Analisi dei Requisiti}\mbox{}\\ [1mm]
+		\paragraph*{Analisi dei Requisiti}\mbox{}\\ [1mm]
 		Un prodotto di quest'attività che formalizza gli obiettivi descritti sopra è un documento chiamato \textit{Analisi Dei Requisiti}. Esso è composto da:
 		\begin{itemize}
 			\item \textbf{Introduzione}: descrizione generale del documento che specifica anche lo scopo del documento e del prodotto\glo;
@@ -145,7 +145,7 @@
 			\item \textbf{Requisiti prestazionali}: definizione dei requisiti prestazionali individuati;
 			\item \textbf{Tracciamento dei requisiti}: definizione del tracciamento tra fonti e requisiti e viceversa.
 		\end{itemize}
-		\subparagraph*{Classificazione dei casi d'uso}\mbox{}\\ [1mm]
+		\paragraph*{Classificazione dei casi d'uso}\mbox{}\\ [1mm]
 		Un caso d'uso\glosp definisce un insieme di scenari con un obiettivo finale in comune per un attore\glo. Sono ottenuti attraverso la valutazione di ogni requisito e descrivono l'insieme delle funzionalità fornite dal sistema dal punto di vista degli utenti.
 		Per descrivere ogni caso d'uso\glosp viene utilizzata la seguente struttura:
 		\begin{itemize}
@@ -164,13 +164,13 @@
 			\item Diagramma UML (ove necessario).	
 		\end{itemize}
 		Il codice identificativo sarà scritto in questo formato: \\
-		\textbf{UC[codice\_padre].[codice\_figlio]} \\
-		Dove:
+		\\ \textbf{UC[codice\_padre].[codice\_figlio]} \\
+		\\ Dove:
 		\begin{itemize}
-			\item \textbf{codice\_padre}: numero che identifica univocamente i casi d'uso\glo;
-			\item \textbf{codice\_figlio}: numero progressivo che identifica i sotto-casi;
+			\item \textbf{codice\_padre}: numero intero progressivo maggiore di zero che identifica univocamente i casi d'uso\glo;
+			\item \textbf{codice\_figlio}: numero intero progressivo maggiore di zero che identifica i sotto-casi.
 		\end{itemize}
-		\subparagraph*{Classificazione dei requisiti}\mbox{}\\ [1mm]
+		\paragraph*{Classificazione dei requisiti}\mbox{}\\ [1mm]
 		Per descrivere un requisito viene utilizzata la seguente struttura:
 		\begin{itemize}
 			\item codice identificativo;
@@ -179,8 +179,8 @@
 			\item fonti.
 		\end{itemize} 
 		\textbf{Codice identificativo}: codice univoco scritto nel seguente formato: \\
-		\textbf{R[Importanza][Tipologia][Codice]} \\
-		Dove:
+		\\ \textbf{R[Importanza][Tipologia][codice\_padre].[codice\_figlio]} \\
+		\\ Dove:
 		\begin{itemize}
 			\item \textbf{Importanza}: può assumere i seguenti valori:
 			\begin{itemize}
@@ -195,7 +195,8 @@
 				\item P: qualitativo;
 				\item V: vincolo.
 			\end{itemize}
-			\item\textbf{Codice}: numero progressivo identificativo strutturato nel formato: [codice\_padre].[codice\_figlio]
+			\item \textbf{codice\_padre}: numero intero progressivo maggiore di zero che identifica univocamente il requisito;
+			\item \textbf{codice\_figlio}: numero intero progressivo maggiore di zero che indica i sotto-requisiti che compongono il padre. 
 		\end{itemize}
 		\begin{itemize}
 			\item \textbf{classificazione}: definisce l'importanza che, nonostante sia già presente nel codice identificativo, aumenta la facilità di lettura e di comprensione;
@@ -208,7 +209,7 @@
 				\item proponente: il requisito è stato individuato in seguito ad un colloquio con il proponente.
 			\end{itemize}
 		\end{itemize}
-		\subparagraph*{Diagrammi UML}\mbox{}\\ [1mm]
+		\paragraph*{Diagrammi UML}\mbox{}\\ [1mm]
 		\label{UML}
 		I diagrammi UML\glosp vengono realizzati usando la versione 2.0 del linguaggio con il servizio online LucidChart. Per la creazione si deve procedere in questo modo: 
 		\begin{itemize}
@@ -225,315 +226,343 @@
 			\item mantenere uniforme la spaziatura tra gruppi analoghi di elementi della stessa tipologia;
 			\item tutti gli attori principali sono raggruppati nella parte sinistra del diagramma mentre quelli secondari sono raggruppati nella parte destra.
 		\end{itemize}
-		\subparagraph{Metriche di qualità} \mbox{}\\ [1mm]
-		Le metriche di qualità utilizzate per valutare la qualità dell'analisi dei requisiti sono:
-		\begin{itemize}
-			\item \textbf{M01 Scostamento dei requisiti individuati}: indica la differenza in numero dei requisiti individuati in ogni periodo. Se elevato, questo valore indica che l'attività di analisi dei requisiti non è stata svolta con qualità sufficiente;
+		
+		\paragraph{Progettazione}
+			\paragraph*{Scopo}\mbox{}\\ [1mm]
+			Lo scopo della progettazione\glosp è descrivere una soluzione soddisfacente per gli stakeholder\glo. Questa attività definisce l'architettura logica del prodotto\glosp software richiesto, a partire dall' analisi dei requisiti. 
+			Deve precedere la codifica e permette di: 
 			\begin{itemize}
-				\item[] \textbf{formula}: $R_{p-1}-R{p}$ dove $R{p}$ indica il numero di requisiti individuati in un periodo e $R{p-1}$ indica il numero di requisiti individuati nel periodo precedente.
+				\item governare la complessità del prodotto organizzando e ripartendo i compiti implementativi;
+				\item garantire la qualità, cioè l'efficacia del prodotto;
+				\item garantire l'efficienza nella produzione attraverso l'ottimizzazione dell'uso delle risorse.
+			\end{itemize}
+			Viene quindi definita l'architettura del prodotto\glosp finale che dovrà possedere le seguenti qualità:
+			\begin{itemize}
+				\item \textbf{Sufficienza}: deve essere in grado di soddisfare i requisiti individuati nel documento \textit{Analisi dei Requisiti};
+				\item \textbf{Comprensibilità}: deve essere capita da tutti gli stakeholder\glo;
+				\item \textbf{Modularità}: deve essere suddivisa in parti chiare e distinte;
+				\item \textbf{Semplicità}: ogni parte non deve contenere niente di superfluo;
+				\item \textbf{Incapsulazione}: l'interno delle parti non deve essere visibile dall'esterno;
+				\item \textbf{Coesione}: le parti che vengono unite devono avere gli stessi obiettivi;
+				\item \textbf{Basso accoppiamento}: si devono evitare le dipendenze fra le parti;
+				\item \textbf{Robustezza}: deve essere capace di sopportare ingressi diversi dall'utente e dall'ambiente;
+				\item \textbf{Flessibilità}: deve permettere di attuare modifiche per fronteggiare i cambiamenti dei requisiti a costi contenuti; 
+				\item \textbf{Riusabilità}: possono essere impiegate parti in altre applicazioni;
+				\item \textbf{Efficienza} nell'utilizzo delle risorse;
+				\item \textbf{Affidabilità}: deve svolgere il compito per cui è stata ideata;
+				\item \textbf{Disponibilità}: il sistema deve essere interrotto per un tempo limitato o non essere interrotto durante le operazioni di manutenzione;
+				\item \textbf{Sicurezza} rispetto a malfunzionamenti e intrusioni.	
+			\end{itemize}
+			\paragraph*{Descrizione}\mbox{}\\ [1mm]
+			La progettazione\glosp è composta da due sezioni:
+			\begin{itemize}
+				\item \textbf{Technology baseline\glo}: contiene le specifiche della progettazione ad alto livello del prodotto e delle sue componenti, i diagrammi UML che la descrivono e i test di verifica;
+				\item \textbf{Product baseline\glo}: integra ciò che è stato definito nella technology baseline\glosp rendendo più dettagliata la progettazione; contiene inoltre i test di verifica.	
+			\end{itemize}
+			I progettisti devono seguire le seguenti regole per progettare un'architettura di qualità:
+			\begin{itemize}
+				\item ove necessario, implementare i design pattern\glo;
+				\item evitare la creazione di package vuoti;
+				\item evitare la creazione di classi e parametri non utilizzati;
+				\item evitare la creazione di dipendenze circolari;
+				\item ove possibile, prediligere l'utilizzo di interfacce e classi astratte;
+				\item utilizzare nomi significativi per le classi e i metodi;
+				\item assegnare le visibilità strettamente necessarie seguendo il principio di information hiding.
+			\end{itemize}
+			
+			\paragraph*{Technology Baseline}\mbox{}\\ [1mm]
+			Nella technology baseline\glosp sono presenti:
+			\begin{itemize}
+				\item \textbf{Tecnologie utilizzate}: descrizione di tutte le tecnologie che vengono utilizzate per l'implementazione del prodotto\glosp con l'indicazione di vantaggi e svantaggi;
+				\item \textbf{Proof of Concept (PoC)}: implementazione di un PoC\glosp che utilizzi e dimostri la fattibilità delle tecnologie che utilizziamo per implementare il prodotto\glosp software;
+				\item \textbf{Tracciamento delle componenti}: riferimento di ogni requisito al componente che lo soddisfa;
+			\end{itemize}
+			\paragraph*{Proof of Concept}
+			Abbiamo deciso di implementare un PoC\glosp in modo incrementale. Perciò, in accordo con il proponente, vengono selezionati degli incrementi da sviluppare. Questa decisione viene presa con l'intenzione di esplorare tutte le tecnologie che devono essere utilizzate nel prodotto\glosp finale. Queste tecnologie sono:
+			\begin{itemize}
+				\item Node.js;
+				\item Electron;
+				\item React;
+				\item SVM;
+				\item Javascript;
+				\item Typescript;
+				\item JSON;
+				\item CSS3;
+				\item HTML5;
+				\item D3.js;
+				\item Grafana;
+				\item Plotly;
+				\item AngularJS.
+			\end{itemize}
+			\paragraph*{Product Baseline}\mbox{}\\ [1mm]
+			Nella product baseline\glosp sono presenti:
+			\begin{itemize}
+				\item \textbf{Design pattern}: viene fornita la descrizione dei design pattern utilizzati all'interno dell'architettura. Per ciascuno di essi deve essere presentato un diagramma che ne definisce la struttura e una descrizione;
+				\item \textbf{Diagrammi UML}: per rendere più chiare e complete le scelte progettuali adottate, vengono utilizzati dei diagrammi UML usando la versione 2.0 del linguaggio. Ogni diagramma deve essere seguito dalla descrizione di ciò che rappresenta.
+				\subparagraph*{Diagrammi UML}
+				Gli utilizzi dei diagrammi UML sono i seguenti:
+				\begin{itemize}
+					\item \textbf{Diagrammi delle classi}: descrivono gli elementi del sistema e le loro interazioni;
+					\item \textbf{Descrizione delle classi}: descrizione degli obiettivi e delle funzionalità di ogni classe seguendo il seguente schema:
+					\begin{itemize}
+						\item nome;
+						\item visibilità;
+						\item attributi;
+						\item metodi;
+						\item scopo e funzionalità.
+					\end{itemize}
+					\item \textbf{Tracciamento delle classi}: riferimento di ogni requisito alla classe che lo soddisfa;
+					\item \textbf{Diagrammi dei package}: descrivono le dipendenze tra gli oggetti raggruppati in un package;
+					\item \textbf{Diagrammi di attività}: descrivono la logica procedurale, utili per descrivere gli aspetti dinamici dei casi d'uso\glo;
+					\item \textbf{Diagrammi di sequenza}: descrivono la collaborazione di più elementi volti all'implementazione di un dato comportamento;
+					\item \textbf{Test di sistema}: test necessari per verificare il corretto funzionamento dell'intero prodotto\glosp software;
+					\item \textbf{Test di integrazione}: test necessari per verificare che l'unione delle parti funzioni correttamente;
+					\item \textbf{Test di unità}: necessari per verificare il corretto funzionamento di ogni singola parte del software.
+				\end{itemize}
+			\end{itemize}
+			
+			\paragraph{Codifica}
+			\paragraph*{Scopo}\mbox{}\\ [1mm]
+			Lo scopo di questa attività è dare una norma che definisca tutte le regole di codifica per garantire leggibilità e manutenibilità del codice.
+			L'obiettivo della codifica è creare un prodotto\glosp coerente con i requisiti e le aspettative del proponente, il cui codice sia leggibile, uniforme e permetta di eseguire più facilmente le attività di manutenzione e verifica. Dunque i programmatori sono tenuti a seguire tali regole durante l'attività di codifica.
+			\paragraph*{Descrizione}\mbox{}\\ [1mm]
+			Il prodotto\glosp dell'attività di codifica è il codice necessario per realizzare il capitolato\glo. La sua struttura dovrà rispettare le regole definite nel documento \textit{Piano di Qualifica} al fine di garantire una buona qualità.
+			\paragraph*{Linguaggi di programmazione}\mbox{}\\ [1mm]
+			I principali linguaggi di programmazione utilizzati sono:
+			\begin{itemize}
+				\item \textbf{JavaScript}: linguaggio di scripting attraverso il quale si intende sviluppare l'applicativo di addestramento esterno. Tramite la sua estensione JSX (JavaScript XML) è in grado di incorporare la sintassi HTML5;
+				\item \textbf{React}: libreria JavaScript usata per costruire elementi per interfaccia utente dell'applicativo esterno;
+				\item \textbf{D3.js}: libreria JavaScript usata per visualizzare i grafici nell'applicativo esterno partendo da dei dati organizzati;
+				\item \textbf{TypeScript}: estensione di JavaScript tramite la quale si intende sviluppare il plug-in su Grafana\glo;
+				\item \textbf{AngularJS}: framework JavaScript che permette di estendere il codice HTML5 attraverso l'utilizzo di direttive ed espressioni;
+				\item \textbf{Plotly.js}: libreria JavaScript (basata su D3.js) che permette di visualizzare grafici personalizzati su Grafana\glo; 
+				\item \textbf{HTML5}: linguaggio di mark-up che nell'ambito del progetto\glosp viene principalmente generato dall'estensione JSX e gestisce il front-end dell'applicazione;
+				\item \textbf{CSS3}: linguaggio usato per formattare in modo corretto documenti HTML5. Nell'ambito di questo progetto\glosp viene utilizzato per impartire regole stilistiche al codice generato per gestire il front-end e la rappresentazione degli elementi grafici.
+			\end{itemize}
+			Tutti i linguaggi elencati devono rispettare le regole indicate nel seguente paragrafo ove applicabili.
+			\paragraph*{Stile di codifica}\mbox{}\\ [1mm]
+			In seguito vengono elencate le norme da rispettare nell'attività di codifica:
+			\begin{itemize}
+				\item \textbf{Nomenclatura}: i nomi di classi, metodi e variabili devono essere univoci, esplicativi ed uniformi. Segue la nomenclatura decisa per i vari elementi del codice:
+				\begin{itemize}
+					\item \textbf{Classi}: il nome di ciascuna classe deve seguire la pratica del PascalCase, cioè la prima lettera di ogni parola deve essere maiuscola. Segue un esempio corretto di dichiarazione di una classe:
+			\begin{lstlisting}
+			// OK!
+			class MyClass {
+				//...
+			}
+			\end{lstlisting} 
+					\item \textbf{Costanti}: i nomi delle costanti devono essere seguendo la pratica dell'ALL\_CAPS, cioè tutte le parole in maiuscolo e divise dal carattere underscore (\_). Segue un esempio corretto di dichiarazione di una costante:
+			\begin{lstlisting}
+			const CONSTANT_VALUE = "This string won't change";
+			\end{lstlisting}
+					\item \textbf{Metodi}: il nome di ciascun metodo deve iniziare con una lettera minuscola. Nei metodi con nome composto, la prima parola avrà la prima lettera minuscola, mentre le seguenti avranno la prima lettera maiuscola, come indicato dalla pratica del camelCase. Segue un esempio della corretta implementazione di suddetta pratica:
+			\begin{lstlisting}
+			class MyClass {
+			// OK!
+			myMethod() {
+				//...
+			}
+			}
+			\end{lstlisting}
+				\item \textbf{Variabili}: il nome di ciascuna variabile deve iniziare con una lettera minuscola. Nelle varibili con nome composto, la prima parola avrà la prima lettera minuscola, mentre le seguenti avranno la prima lettera maiuscola, come indicato dalla pratica del camelCase. Segue un esempio della corretta implementazione di suddetta pratica:
+			\begin{lstlisting}
+			// OK!
+			var myVar = 0;
+			\end{lstlisting}
+				\end{itemize}
+				\item \textbf{Intestazione dei file}: ogni file deve avere un'intestazione contenuta in un blocco di commento dove vengono indicati:
+				\begin{itemize}
+					\item nome completo del file con relativa estensione;
+					\item autore del file;
+					\item data di creazione;
+					\item breve descrizione del contenuto del file.
+				\end{itemize}
+			\begin{lstlisting}
+			/**
+			* File: fileName
+			* Author: Name Surname
+			* Creation date: YYYY-MM-DD
+			* Description: This header is for demonstration purpose only.
+			*/
+			\end{lstlisting}
+				\item \textbf{Indentazione}: i blocchi annidati devono essere indentati con una tabulazione di quattro spazi. A tal fine gli IDE di tutti i componenti del gruppo dovranno essere configurati per rispettare suddette indicazioni. Segue un esempio di indentazione corretta:
+			\begin{lstlisting}
+			// OK!
+			function() {
+				var x = 1;
+			}
+			\end{lstlisting}
+				\item \textbf{Commenti}: i commenti nel codice devono essere concisi ma sufficientemente descrittivi. Essi precedono l'implementazione di metodi e classi descrivendo brevemente la loro funzione. Sono possibili due tipi di commenti: in linea tramite l'utilizzo del doppio slash (//) o a blocco tramite la costruzione //**...*/.  È inoltre possibile usare i commenti //TODO e //FIXME che indicano rispettivamente delle sezioni di codice da fare in un secondo momento e sezioni di codice da correggere. Segue un esempio di queste pratiche:
+			\begin{lstlisting}
+			//** This is a test class.
+			* OK!
+			*/
+			class MyClass {
+				// This is a test method.
+				myMethod() {
+					var myVar = undefined; //FIXME
+					if (condition) {
+						//TODO
+					} else {
+						//TODO
+					}
+				}
+			}
+			\end{lstlisting}
+				\item \textbf{Blocchi if-else}: ogni blocco if deve avere un corrispondente blocco else che verrà posizionato in linea con la parentesi graffa di chiusura del blocco if precedente. Se i blocchi sono di una singola riga la parentesi graffa può essere omessa. Segue un esempio della corretta applicazione di questa pratiche:
+			\begin{lstlisting}
+			// OK!
+			if (condition) {
+				//TODO
+			} else {
+				//TODO
+			}
+			
+			if (condition)
+			return true;
+			\end{lstlisting}
+				\item \textbf{Parentesizzazione}: le parentesi di delimitazione dei costrutti devono essere inserite in linea precedute da uno spazio. Segue esempio di utilizzo corretto di tale pratica:
+			\begin{lstlisting}
+			// OK!
+			class MyClass {
+				//TODO
+			}
+			\end{lstlisting}
+				\item \textbf{Apici}: gli apici da utilizzare per la scrittura di stringhe sono i doppi apici ("). L'utilizzo dell'apice singolo è giustificato solo nel caso in cui la stringa presa in esame necessiti della presenza di apici al suo interno. Segue un esempio esplicativo:
+			\begin{lstlisting}
+			// OK!
+			var myString1 = "This is a string";
+			var myString2 = "He said 'This is a string'";
+			\end{lstlisting}
+				\item \textbf{Spaziatura tra operandi}: prima e dopo ciascun operando vanno inseriti degli spazi al fine di rendere più ordinato e leggibile il codice. Segue un esempio di tale pratica:
+			\begin{lstlisting}
+			// OK!
+			var myVar1 = 1;
+			var myVar2 = 2;
+			var myVar3 = myVar1 + myVar2;
+			\end{lstlisting}
+				\item \textbf{Dichiarazioni in linea}: è sconsigliata la dichiarazione di variabili in linea a favore dell'ordine e della leggibilità del codice. Segue un esempio esplicativo:
+			\begin{lstlisting}
+			// NO!
+			var x = 1, y = 2;
+			// OK!
+			var x = 1;
+			var y = 2;
+			\end{lstlisting}
+				\item \textbf{Spaziatura del codice}: tra i costrutti di codice è obbligatorio lasciare una riga vuota per rendere più ordinato e leggibile il codice. Segue un esempio di tale pratica:
+			\begin{lstlisting}
+			// OK!
+			function() {
+				//TODO
+			}
+			
+			myMethod() {
+				//TODO
+			}
+			\end{lstlisting}
+				\item \textbf{Struttura dei metodi}: ogni metodo deve avere uno ed un solo compito e il suo contenuto dev'essere il più possibile breve in termini di righe di codice;
+				\item \textbf{Condizioni}: l'uso di condizioni multiple è da evitare ove possibile per limitare la complessità delle singole espressioni;
+				\item \textbf{Lingua}: la lingua con cui vengono scritti codice e commenti deve essere l'inglese;
+				\item \textbf{Ricorsione}: l'uso della ricorsione è da evitare ove possibile in quanto aumenterebbe la complessità computazionale del codice.
+			\end{itemize}
+			\paragraph*{Linee guida}\mbox{}\\ [1mm]
+			Per quanto concerne i restanti aspetti riguardanti lo stile e le best practises sul codice vengono prese come riferimento dal gruppo le seguenti fonti:
+			\begin{itemize}
+				\item \textbf{SonarJS}: insieme di regole riguardanti JavaScript che, oltre alla segnalazione di bug, indicano anche delle linee guida per una migliore fruizione del codice. Tale obiettivo viene raggiunto anche grazie all'utilizzo di SonarLint, uno strumento atto all'analisi statica\glosp del codice per segnalare eventuali incongruenze con le best practises
+				\begin{center}
+				\url{https://www.sonarsource.com/products/codeanalyzers/sonarjs.html}
+				\end{center}	
+				\item \textbf{SonarTS}: insieme di regole riguardanti TypeScript che, oltre alla segnalazione di bug, indicano anche delle linee guida per una migliore fruizione del codice. Tale obiettivo viene raggiunto anche grazie all'utilizzo di SonarLint, uno strumento atto all'analisi statica\glosp del codice per segnalare eventuali incongruenze con le best practises
+				\begin{center}
+				\url{https://www.sonarsource.com/products/codeanalyzers/sonarts.html}
+				\end{center}
+				\item \textbf{W3C}: per quanto riguarda l'HTML5 e il CSS3 il gruppo si attiene alle regole imposte dal World Wide Web Consortium. Per assicurarsi il raggiungimento di tali norme il codice prodotto verrà verificato tramite i validatori offerti da suddetto consorzio. Di seguito il link ai validatori utilizzati:
+				\begin{itemize}
+					\item \url{https://validator.w3.org/};
+					\item \url{https://jigsaw.w3.org/css-validator/}.
+				\end{itemize}
+			\end{itemize}
+		
+	\subsubsection{Obiettivi di qualità}
+		\paragraph{OP-1 Individuazione completa dei requisiti}
+		%\paragraph*{Obiettivo}\mbox{}\\ [1mm]
+		L'obiettivo è individuare correttamente i requisiti nella prima attività di analisi in modo che con l'avanzare del progetto non ci siano cambiamenti che comportano un grosso dispendio di tempo.
+		\subparagraph{Metriche}\mbox{}\\ [1mm]
+		Le metriche\glosp utilizzate sono:
+		\begin{itemize}
+			\item \textbf{M-PROC01 Scostamento dei requisiti individuati}: indica la differenza in numero dei requisiti individuati in ogni periodo. Se elevato, questo valore indica che l'attività di analisi dei requisiti non è stata svolta con qualità sufficiente;
+			\begin{itemize}
+				\item[] \textbf{formula}: $R_{p-1}-R{p}$. Dove $R{p}$ indica il numero di requisiti individuati in un periodo e $R{p-1}$ indica il numero di requisiti individuati nel periodo precedente.
 			\end{itemize} 
 		\end{itemize}		
-		\pagebreak
-		\paragraph{Progettazione}
-\subparagraph*{Scopo}\mbox{}\\ [1mm]
-Lo scopo della progettazione\glosp è descrivere una soluzione soddisfacente per gli stakeholder\glo. Questa attività definisce l'architettura logica del prodotto\glosp software richiesto, a partire dall' analisi dei requisiti. 
-Deve precedere la codifica e permette di: 
-\begin{itemize}
-	\item governare la complessità del prodotto organizzando e ripartendo i compiti implementativi;
-	\item garantire la qualità, cioè l'efficacia del prodotto;
-	\item garantire l'efficienza nella produzione attraverso l'ottimizzazione dell'uso delle risorse.
-\end{itemize}
-Viene quindi definita l'architettura del prodotto\glosp finale che dovrà possedere le seguenti qualità:
-\begin{itemize}
-	\item \textbf{Sufficienza}: deve essere in grado di soddisfare i requisiti individuati nel documento \textit{Analisi dei Requisiti};
-	\item \textbf{Comprensibilità}: deve essere capita da tutti gli stakeholder\glo;
-	\item \textbf{Modularità}: deve essere suddivisa in parti chiare e distinte;
-	\item \textbf{Semplicità}: ogni parte non deve contenere niente di superfluo;
-	\item \textbf{Incapsulazione}: l'interno delle parti non deve essere visibile dall'esterno;
-	\item \textbf{Coesione}: le parti che vengono unite devono avere gli stessi obiettivi;
-	\item \textbf{Basso accoppiamento}: si devono evitare le dipendenze fra le parti;
-	\item \textbf{Robustezza}: deve essere capace di sopportare ingressi diversi dall'utente e dall'ambiente;
-	\item \textbf{Flessibilità}: deve permettere di attuare modifiche per fronteggiare i cambiamenti dei requisiti a costi contenuti; 
-	\item \textbf{Riusabilità}: possono essere impiegate parti in altre applicazioni;
-	\item \textbf{Efficienza} nell'utilizzo delle risorse;
-	\item \textbf{Affidabilità}: deve svolgere il compito per cui è stata ideata;
-	\item \textbf{Disponibilità}: il sistema deve essere interrotto per un tempo limitato o non essere interrotto durante le operazioni di manutenzione;
-	\item \textbf{Sicurezza} rispetto a malfunzionamenti e intrusioni.	
-\end{itemize}
-\paragraph*{Descrizione}\mbox{}\\ [1mm]
-La progettazione\glosp è composta da due sezioni:
-\begin{itemize}
-	\item \textbf{Technology baseline\glo}: contiene le specifiche della progettazione ad alto livello del prodotto e delle sue componenti, i diagrammi UML che la descrivono e i test di verifica;
-	\item \textbf{Product baseline\glo}: integra ciò che è stato definito nella technology baseline\glosp rendendo più dettagliata la progettazione; contiene inoltre i test di verifica.	
-\end{itemize}
-I progettisti devono seguire le seguenti regole per progettare un'architettura di qualità:
-\begin{itemize}
-	\item ove necessario, implementare i design pattern\glo;
-	\item evitare la creazione di package vuoti;
-	\item evitare la creazione di classi e parametri non utilizzati;
-	\item evitare la creazione di dipendenze circolari;
-	\item ove possibile, prediligere l'utilizzo di interfacce e classi astratte;
-	\item utilizzare nomi significativi per le classi e i metodi;
-	\item assegnare le visibilità strettamente necessarie seguendo il principio di information hiding.
-\end{itemize}
-
-\subparagraph*{Technology Baseline}\mbox{}\\ [1mm]
-Nella technology baseline\glosp sono presenti:
-\begin{itemize}
-	\item \textbf{Tecnologie utilizzate}: descrizione di tutte le tecnologie che vengono utilizzate per l'implementazione del prodotto\glosp con l'indicazione di vantaggi e svantaggi;
-	\item \textbf{Proof of Concept (PoC)}: implementazione di un PoC\glosp che utilizzi e dimostri la fattibilità delle tecnologie che utilizziamo per implementare il prodotto\glosp software;
-	\item \textbf{Tracciamento delle componenti}: riferimento di ogni requisito al componente che lo soddisfa;
-\end{itemize}
-\subparagraph*{Proof of Concept}
-Abbiamo deciso di implementare un PoC\glosp in modo incrementale. Perciò, in accordo con il proponente, vengono selezionati degli incrementi da sviluppare. Questa decisione viene presa con l'intenzione di esplorare tutte le tecnologie che devono essere utilizzate nel prodotto\glosp finale. Queste tecnologie sono:
-\begin{itemize}
-	\item Node.js;
-	\item Electron;
-	\item React;
-	\item SVM;
-	\item Javascript;
-	\item Typescript;
-	\item JSON;
-	\item CSS3;
-	\item HTML5;
-	\item D3.js;
-	\item Grafana;
-	\item Plotly;
-	\item AngularJS.
-\end{itemize}
-\subparagraph*{Product Baseline}\mbox{}\\ [1mm]
-Nella product baseline\glosp sono presenti:
-\begin{itemize}
-	\item \textbf{Design pattern}: viene fornita la descrizione dei design pattern utilizzati all'interno dell'architettura. Per ciascuno di essi deve essere presentato un diagramma che ne definisce la struttura e una descrizione;
-	\item \textbf{Diagrammi UML}: per rendere più chiare e complete le scelte progettuali adottate, vengono utilizzati dei diagrammi UML usando la versione 2.0 del linguaggio. Ogni diagramma deve essere seguito dalla descrizione di ciò che rappresenta.
-	\subparagraph*{Diagrammi UML}
-	Gli utilizzi dei diagrammi UML sono i seguenti:
-	\begin{itemize}
-		\item \textbf{Diagrammi delle classi}: descrivono gli elementi del sistema e le loro interazioni;
-		\item \textbf{Descrizione delle classi}: descrizione degli obiettivi e delle funzionalità di ogni classe seguendo il seguente schema:
-		\begin{itemize}
-			\item nome;
-			\item visibilità;
-			\item attributi;
-			\item metodi;
-			\item scopo e funzionalità.
-		\end{itemize}
-		\item \textbf{Tracciamento delle classi}: riferimento di ogni requisito alla classe che lo soddisfa;
-		\item \textbf{Diagrammi dei package}: descrivono le dipendenze tra gli oggetti raggruppati in un package;
-		\item \textbf{Diagrammi di attività}: descrivono la logica procedurale, utili per descrivere gli aspetti dinamici dei casi d'uso\glo;
-		\item \textbf{Diagrammi di sequenza}: descrivono la collaborazione di più elementi volti all'implementazione di un dato comportamento;
-		\item \textbf{Test di sistema}: test necessari per verificare il corretto funzionamento dell'intero prodotto\glosp software;
-		\item \textbf{Test di integrazione}: test necessari per verificare che l'unione delle parti funzioni correttamente;
-		\item \textbf{Test di unità}: necessari per verificare il corretto funzionamento di ogni singola parte del software.
-	\end{itemize}
-\end{itemize}
-
-%\subparagraph{Metriche di qualità} \mbox{} \\
-%Per la progettazione le metriche di qualità utilizzate sono:
-%\begin{itemize}
-%	\item \textbf{M02 Accoppiamento tra le classi di oggetti}: indica se una classe è accoppiata ad una seconda. Con accoppiamento s'intende l'utilizzo, da parte della prima classe, di metodi o variabili definiti nella seconda; 
-%	\begin{itemize}
-%		\item[] \textbf{Formula}: si calcola con un valore intero;
-%	\end{itemize}
-%	\item \textbf{M03 Profondità della gerarchia}: indica la profondità massima della gerarchia delle classi. Deve essere limitata per mantenere un basso accoppiamento;
-%	\begin{itemize}
-%		\item[] \textbf{Formula}: si calcola con un valore intero.
-%	\end{itemize} 	
-%	\item \textbf{M04 Numero di design pattern}: indica il numero di design pattern applicati. La presenza di design pattern può aiutare all'innalzamento della qualità del prodotto ma un uso eccessivo può comportare un'elevata complessità. Va quindi mantenuto un numero di design pattern ragionevole.
-%	\begin{itemize}
-%		\item[] \textbf{Formula}: si calcola con un valore intero.
-%	\end{itemize} 	
-%\end{itemize}
-
-%\subparagraph*{Integrazione software} \mbox{} \\
-%L'attività di integrazione del software avviene in parte in automatico ed in parte tramite azioni e verifiche manuali.
-%\newline
-%Per l'integrazione automatica utilizziamo le Github Actions, offerte da Github, con cui implementiamo la continuous integration. L'integrazione continua automatica viene eseguita ad ogni push effettuato sul repository\glosp remoto ed esegue la compilazione, i test di unità, analisi statica\glosp del codice per verificare che soddisfi i livelli di qualità desisderati e calcola il code coverage. I servizi utilizzati per eseguire i controlli sono JEst per i test d'unità, Coveralls per il code coverage e SonarCloud per l'analisi statica\glosp del codice.
-%\newline
-%L'integrazione manuale consiste invece nel verificare il corretto funzionamento dell'applicativo esterno di addestramento, del plugin Grafana\glosp e del loro dialogo. La verifica dei singoli componenti verrà automatizzata, per quanto possibile, tramite Selenium\glo. Queste integrazioni vengono effettuate in seguito all'implementazione di ogni incremento del modello di sviluppo incrementale, quindi alla creazione di ogni nuova baseline\glo.
-
-\paragraph{Codifica}
-\subparagraph*{Scopo}\mbox{}\\ [1mm]
-Lo scopo di questa attività è dare una norma che definisca tutte le regole di codifica per garantire leggibilità e manutenibilità del codice.
-L'obiettivo della codifica è creare un prodotto\glosp coerente con i requisiti e le aspettative del proponente, il cui codice sia leggibile, uniforme e permetta di eseguire più facilmente le attività di manutenzione e verifica. Dunque i programmatori sono tenuti a seguire tali regole durante l'attività di codifica.
-\subparagraph*{Descrizione}\mbox{}\\ [1mm]
-Il prodotto\glosp dell'attività di codifica è il codice necessario per realizzare il capitolato\glo. La sua struttura dovrà rispettare le regole definite nel documento \textit{Piano di Qualifica} al fine di garantire una buona qualità.
-\subparagraph*{Linguaggi di programmazione}\mbox{}\\ [1mm]
-I principali linguaggi di programmazione utilizzati sono:
-\begin{itemize}
-	\item \textbf{JavaScript}: linguaggio di scripting attraverso il quale si intende sviluppare l'applicativo di addestramento esterno. Tramite la sua estensione JSX (JavaScript XML) è in grado di incorporare la sintassi HTML5;
-	\item \textbf{React}: libreria JavaScript usata per costruire elementi per interfaccia utente dell'applicativo esterno;
-	\item \textbf{D3.js}: libreria JavaScript usata per visualizzare i grafici nell'applicativo esterno partendo da dei dati organizzati;
-	\item \textbf{TypeScript}: estensione di JavaScript tramite la quale si intende sviluppare il plug-in su Grafana\glo;
-	\item \textbf{AngularJS}: framework JavaScript che permette di estendere il codice HTML5 attraverso l'utilizzo di direttive ed espressioni;
-	\item \textbf{Plotly.js}: libreria JavaScript (basata su D3.js) che permette di visualizzare grafici personalizzati su Grafana\glo; 
-	\item \textbf{HTML5}: linguaggio di mark-up che nell'ambito del progetto\glosp viene principalmente generato dall'estensione JSX e gestisce il front-end dell'applicazione;
-	\item \textbf{CSS3}: linguaggio usato per formattare in modo corretto documenti HTML5. Nell'ambito di questo progetto\glosp viene utilizzato per impartire regole stilistiche al codice generato per gestire il front-end e la rappresentazione degli elementi grafici.
-\end{itemize}
-Tutti i linguaggi elencati devono rispettare le regole indicate nel seguente paragrafo ove applicabili.
-\subparagraph*{Stile di codifica}\mbox{}\\ [1mm]
-In seguito vengono elencate le norme da rispettare nell'attività di codifica:
-\begin{itemize}
-	\item \textbf{Nomenclatura}: i nomi di classi, metodi e variabili devono essere univoci, esplicativi ed uniformi. Segue la nomenclatura decisa per i vari elementi del codice:
-	\begin{itemize}
-		\item \textbf{Classi}: il nome di ciascuna classe deve seguire la pratica del PascalCase, cioè la prima lettera di ogni parola deve essere maiuscola. Segue un esempio corretto di dichiarazione di una classe:
-\begin{lstlisting}
-// OK!
-class MyClass {
-	//...
-}
-\end{lstlisting} 
-		\item \textbf{Costanti}: i nomi delle costanti devono essere seguendo la pratica dell'ALL\_CAPS, cioè tutte le parole in maiuscolo e divise dal carattere underscore (\_). Segue un esempio corretto di dichiarazione di una costante:
-\begin{lstlisting}
-const CONSTANT_VALUE = "This string won't change";
-\end{lstlisting}
-		\item \textbf{Metodi}: il nome di ciascun metodo deve iniziare con una lettera minuscola. Nei metodi con nome composto, la prima parola avrà la prima lettera minuscola, mentre le seguenti avranno la prima lettera maiuscola, come indicato dalla pratica del camelCase. Segue un esempio della corretta implementazione di suddetta pratica:
-\begin{lstlisting}
-class MyClass {
-// OK!
-myMethod() {
-	//...
-}
-}
-\end{lstlisting}
-	\item \textbf{Variabili}: il nome di ciascuna variabile deve iniziare con una lettera minuscola. Nelle varibili con nome composto, la prima parola avrà la prima lettera minuscola, mentre le seguenti avranno la prima lettera maiuscola, come indicato dalla pratica del camelCase. Segue un esempio della corretta implementazione di suddetta pratica:
-\begin{lstlisting}
-// OK!
-var myVar = 0;
-\end{lstlisting}
-	\end{itemize}
-	\item \textbf{Intestazione dei file}: ogni file deve avere un'intestazione contenuta in un blocco di commento dove vengono indicati:
-	\begin{itemize}
-		\item nome completo del file con relativa estensione;
-		\item autore del file;
-		\item data di creazione;
-		\item breve descrizione del contenuto del file.
-	\end{itemize}
-\begin{lstlisting}
-/**
-* File: fileName
-* Author: Name Surname
-* Creation date: YYYY-MM-DD
-* Description: This header is for demonstration purpose only.
-*/
-\end{lstlisting}
-	\item \textbf{Indentazione}: i blocchi annidati devono essere indentati con una tabulazione di quattro spazi. A tal fine gli IDE di tutti i componenti del gruppo dovranno essere configurati per rispettare suddette indicazioni. Segue un esempio di indentazione corretta:
-\begin{lstlisting}
-// OK!
-function() {
-	var x = 1;
-}
-\end{lstlisting}
-	\item \textbf{Commenti}: i commenti nel codice devono essere concisi ma sufficientemente descrittivi. Essi precedono l'implementazione di metodi e classi descrivendo brevemente la loro funzione. Sono possibili due tipi di commenti: in linea tramite l'utilizzo del doppio slash (//) o a blocco tramite la costruzione //**...*/.  È inoltre possibile usare i commenti //TODO e //FIXME che indicano rispettivamente delle sezioni di codice da fare in un secondo momento e sezioni di codice da correggere. Segue un esempio di queste pratiche:
-\begin{lstlisting}
-//** This is a test class.
-* OK!
-*/
-class MyClass {
-	// This is a test method.
-	myMethod() {
-		var myVar = undefined; //FIXME
-		if (condition) {
-			//TODO
-		} else {
-			//TODO
-		}
-	}
-}
-\end{lstlisting}
-	\item \textbf{Blocchi if-else}: ogni blocco if deve avere un corrispondente blocco else che verrà posizionato in linea con la parentesi graffa di chiusura del blocco if precedente. Se i blocchi sono di una singola riga la parentesi graffa può essere omessa. Segue un esempio della corretta applicazione di questa pratiche:
-\begin{lstlisting}
-// OK!
-if (condition) {
-	//TODO
-} else {
-	//TODO
-}
-
-if (condition)
-return true;
-\end{lstlisting}
-	\item \textbf{Parentesizzazione}: le parentesi di delimitazione dei costrutti devono essere inserite in linea precedute da uno spazio. Segue esempio di utilizzo corretto di tale pratica:
-\begin{lstlisting}
-// OK!
-class MyClass {
-	//TODO
-}
-\end{lstlisting}
-	\item \textbf{Apici}: gli apici da utilizzare per la scrittura di stringhe sono i doppi apici ("). L'utilizzo dell'apice singolo è giustificato solo nel caso in cui la stringa presa in esame necessiti della presenza di apici al suo interno. Segue un esempio esplicativo:
-\begin{lstlisting}
-// OK!
-var myString1 = "This is a string";
-var myString2 = "He said 'This is a string'";
-\end{lstlisting}
-	\item \textbf{Spaziatura tra operandi}: prima e dopo ciascun operando vanno inseriti degli spazi al fine di rendere più ordinato e leggibile il codice. Segue un esempio di tale pratica:
-\begin{lstlisting}
-// OK!
-var myVar1 = 1;
-var myVar2 = 2;
-var myVar3 = myVar1 + myVar2;
-\end{lstlisting}
-	\item \textbf{Dichiarazioni in linea}: è sconsigliata la dichiarazione di variabili in linea a favore dell'ordine e della leggibilità del codice. Segue un esempio esplicativo:
-\begin{lstlisting}
-// NO!
-var x = 1, y = 2;
-// OK!
-var x = 1;
-var y = 2;
-\end{lstlisting}
-	\item \textbf{Spaziatura del codice}: tra i costrutti di codice è obbligatorio lasciare una riga vuota per rendere più ordinato e leggibile il codice. Segue un esempio di tale pratica:
-\begin{lstlisting}
-// OK!
-function() {
-	//TODO
-}
-
-myMethod() {
-	//TODO
-}
-\end{lstlisting}
-	\item \textbf{Struttura dei metodi}: ogni metodo deve avere uno ed un solo compito e il suo contenuto dev'essere il più possibile breve in termini di righe di codice;
-	\item \textbf{Condizioni}: l'uso di condizioni multiple è da evitare ove possibile per limitare la complessità delle singole espressioni;
-	\item \textbf{Lingua}: la lingua con cui vengono scritti codice e commenti deve essere l'inglese;
-	\item \textbf{Ricorsione}: l'uso della ricorsione è da evitare ove possibile in quanto aumenterebbe la complessità computazionale del codice.
-\end{itemize}
-\subparagraph*{Linee guida}\mbox{}\\ [1mm]
-Per quanto concerne i restanti aspetti riguardanti lo stile e le best practises sul codice vengono prese come riferimento dal gruppo le seguenti fonti:
-\begin{itemize}
-	\item \textbf{SonarJS}: insieme di regole riguardanti JavaScript che, oltre alla segnalazione di bug, indicano anche delle linee guida per una migliore fruizione del codice. Tale obiettivo viene raggiunto anche grazie all'utilizzo di SonarLint, uno strumento atto all'analisi statica\glosp del codice per segnalare eventuali incongruenze con le best practises
-	\begin{center}
-	\url{https://www.sonarsource.com/products/codeanalyzers/sonarjs.html}
-	\end{center}	
-	\item \textbf{SonarTS}: insieme di regole riguardanti TypeScript che, oltre alla segnalazione di bug, indicano anche delle linee guida per una migliore fruizione del codice. Tale obiettivo viene raggiunto anche grazie all'utilizzo di SonarLint, uno strumento atto all'analisi statica\glosp del codice per segnalare eventuali incongruenze con le best practises
-	\begin{center}
-	\url{https://www.sonarsource.com/products/codeanalyzers/sonarts.html}
-	\end{center}
-	\item \textbf{W3C}: per quanto riguarda l'HTML5 e il CSS3 il gruppo si attiene alle regole imposte dal World Wide Web Consortium. Per assicurarsi il raggiungimento di tali norme il codice prodotto verrà verificato tramite i validatori offerti da suddetto consorzio. Di seguito il link ai validatori utilizzati:
-	\begin{itemize}
-		\item \url{https://validator.w3.org/};
-		\item \url{https://jigsaw.w3.org/css-validator/}.
-	\end{itemize}
-\end{itemize}
-		\subparagraph{Metriche di qualità}
-		Per la codifica le metriche di qualità sono:
-		\begin{itemize}
-			%\item \textbf{M05 livello di annidamento}: indica il livello di annidamento all'interno dei metodi. Se questo valore è alto, il codice è più complesso e difficile da manutenere. Perciò è opportuno suddividere il metodo in più metodi distinti per ottenere un livello di annidamento basso;
-			%\begin{itemize}
-			%	\item[] \textbf{formula}: si calcola con un valore intero;
-			%\end{itemize}
-			\item \textbf{M02 Numero di parametri per metodo}: indica il numero di parametri presenti in ciascun metodo. Se il valore è elevato è molto probabile che il grado di complessità del metodo sia elevato. Perciò è opportuno limitare questo numero ed eventualmente suddividere il metodo in più metodi distinti;
+		\paragraph{OP-2 Sviluppo di codice comprensibile e manutenibile}
+		%\paragraph*{Obiettivo}\mbox{}\\ [1mm]
+		L'obiettivo è sviluppare codice che rispetti quando definito nell'attività di codifica e sia facilmente comprensibile e manutenibile.
+		\subparagraph{Metriche}\mbox{}\\ [1mm]
+		Le metriche\glosp utilizzate sono:
 			\begin{itemize}
-				\item[] \textbf{formula}: si calcola con un valore intero.
+				\item \textbf{M-PROC02 Numero di parametri per metodo}: indica il numero di parametri presenti in ciascun metodo. Se il valore è elevato è molto probabile che il grado di complessità del metodo sia elevato. Perciò è opportuno limitare questo numero ed eventualmente suddividere il metodo in più metodi distinti;
+				\begin{itemize}
+					\item[] \textbf{formula}: si calcola con un valore intero.
+				\end{itemize}
+				\item \textbf{M-PROC03 Numero di metodi per classe}: indica il numero di metodi presenti in ciascuna classe. Se il valore è elevato è molto probabile che il grado di complessità del metodo sia elevato. Perciò è opportuno limitare questo numero in modo da avere una classe facilmente comprensibile e con uno scopo preciso;
+				\begin{itemize}
+					\item[] \textbf{formula}: si calcola con un valore intero.
+				\end{itemize}
+				\item \textbf{M? livello di annidamento}: indica il livello di annidamento all'interno dei metodi. Se questo valore è alto, il codice è più complesso e difficile da manutenere. Perciò è opportuno suddividere il metodo in più metodi distinti per ottenere un livello di annidamento basso;
+				\begin{itemize}
+					\item[] \textbf{formula}: si calcola con un valore intero.
+				\end{itemize}
 			\end{itemize}
-			\item \textbf{M03 Numero di metodi per classe}: indica il numero di metodi presenti in ciascuna classe. Se il valore è elevato è molto probabile che il grado di complessità del metodo sia elevato. Perciò è opportuno limitare questo numero in modo da avere una classe facilmente comprensibile e con uno scopo preciso;
+	
+		\paragraph{OP-? Forte disaccoppiamento tra le componenti architetturali}
+		%\paragraph*{Obiettivo}\mbox{}\\ [1mm]
+		L'obiettivo è progettare il l'architettura del prodotto\glosp software così da renderlo efficace, efficiente e manutenibile.
+		\subparagraph{Metriche}\mbox{}\\ [1mm]
+		Le metriche\glosp utilizzate sono:
+		\begin{itemize}
+			\item \textbf{M? Accoppiamento tra le classi di oggetti}: indica se una classe è accoppiata ad una seconda. Con accoppiamento s'intende l'utilizzo, da parte della prima classe, di metodi o variabili definiti nella seconda; 
 			\begin{itemize}
-				\item[] \textbf{formula}: si calcola con un valore intero.
+				\item[] \textbf{Formula}: si calcola con un valore intero.
 			\end{itemize}
+			\item \textbf{M? Profondità della gerarchia}: indica la profondità massima della gerarchia delle classi. Deve essere limitata per mantenere un basso accoppiamento;
+			\begin{itemize}
+				\item[] \textbf{Formula}: si calcola con un valore intero.
+			\end{itemize} 	
+			\item \textbf{M? Numero di design pattern}: indica il numero di design pattern applicati. La presenza di design pattern può aiutare all'innalzamento della qualità del prodotto ma un uso eccessivo può comportare un'elevata complessità. Va quindi mantenuto un numero di design pattern ragionevole.
+			\begin{itemize}
+				\item[] \textbf{Formula}: si calcola con un valore intero.
+			\end{itemize} 	
 		\end{itemize}
+		
+		\paragraph{PRD-Q2 Appropriatezza funzionale}
+		\subparagraph{CP-3 Completezza e adeguatezza dei requisiti}
+		%\subparagraph*{Caratteristica}\mbox{}\\ [1mm]
+		Questa caratteristica descrive di individuare correttamente i requisiti nella prima attività di analisi in modo che con l'avanzare del progetto non ci siano cambiamenti che comportano un grosso dispendio di tempo.
+		\subparagraph{Metriche}\mbox{}\\ [1mm]
+		Le metriche\glosp utilizzate sono:
+			\begin{itemize}
+				\item \textbf{M? Percentuale di requisiti obbligatori soddisfatti}: indica la percentuale di requisiti obbligatori che sono stati soddisfatti. Questo valore deve essere massimizzato per garantire che i vincoli col proponente vengano rispettati;
+				\begin{itemize}
+					\item[] \textbf{formula}: $\frac{requisiti \; obbligatori \; soddisfatti}{requisiti \; obbligatori \; totali}$;
+				\end{itemize} 
+				\item \textbf{M? Percentuale di requisiti desiderabili soddisfatti}:
+				indica la percentuale di requisiti desiderabili che sono stati soddisfatti. Un valore elevato denota una maggior copertura delle richieste del proponente;
+				\begin{itemize}
+					\item[] \textbf{formula}: $\frac{requisiti \; desiderabili \; soddisfatti}{requisiti \; desiderabili \; totali}$.
+				\end{itemize} 
+				\item \textbf{M? Percentuale di requisiti opzionali soddisfatti}:
+				indica la percentuale di requisiti opzionali che sono stati soddisfatti. Un valore elevato denota una maggior copertura delle richieste non indispensabili  del proponente;
+				\begin{itemize}
+					\item[] \textbf{formula}: $\frac{requisiti \; opzionali \; soddisfatti}{requisiti \; opzionali \; totali}$.
+				\end{itemize} 
+			\end{itemize}
+		
 		\subsubsection{Strumenti di supporto}
 		Nella valutazione dei costi da affrontare per lo sviluppo del software e per la formazione del personale, abbiamo già identificato le principali tecnologie e strumenti che verranno utilizzare durante il progetto\glo.
 		\paragraph{TeXstudio}\mbox{}\\ [1mm]
-		Per la stesura dell'\textit{Analisi dei Requisiti} viene utilizzato TeXStudio come ambiente di sviluppo.
+		Per la stesura del documento \textit{Analisi dei Requisiti} viene utilizzato TeXStudio come ambiente di sviluppo.
 		\paragraph{WebStorm}\mbox{}\\ [1mm]
 		Per la codifica viene utilizzato WebStorm, un ambiente di sviluppo integrato per JavaScript che offre piena compatibilità con Windows, Linux e SonarJS\glo.
 		\paragraph{Chrome}\mbox{}\\ [1mm]
@@ -546,6 +575,8 @@ Per quanto concerne i restanti aspetti riguardanti lo stile e le best practises 
 		Per provare verificare il funzionamento del nostro plug-in usiamo come browser Safari versione 10 o successiva.
 		\paragraph{Opera}\mbox{}\\ [1mm]
 		Per provare verificare il funzionamento del nostro plug-in usiamo come browser Opera versione 55 o successiva.
+		\paragraph{Internet Explorer}\mbox{}\\ [1mm]
+		Per provare verificare il funzionamento del nostro plug-in usiamo come browser Internet Explorer versione 11.
 		\paragraph{Lucidchart}\mbox{}\\ [1mm]
 		Per la creazione dei diagrammi UML\glosp e di altro tipo viene usata la piattaforma online Lucidchart che consente agli utenti di collaborare alla stesura, alla revisione e alla condivisione di grafici. \newline \newline
 		\centerline{\url{https://www.lucidchart.com}}
