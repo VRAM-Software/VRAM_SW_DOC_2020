@@ -27,6 +27,11 @@
 			\item arresto dell'addestramento (UC1.4);
 			\item visualizzazione del messaggio di conferma della conclusione dell'addestramento (UC1.8).
 		\end{enumerate}
+	\item \textbf{Estensioni}:
+		\begin{enumerate}
+			\item se il caricamento del file CSV non è avvenuto con successo, viene visualizzato un messaggio di errore (UC3);
+			\item se il caricamento del file JSON non è avvenuto con successo, viene visualizzato un messaggio di errore (UC17).
+		\end{enumerate}
 \end{itemize}
 
 \subsubsection{UC1.1 - Inserimento del file in formato CSV contenente i dati per l'addestramento}
@@ -39,10 +44,6 @@
 	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glo;
 	\item \textbf{Postcondizioni}: il file in formato CSV contenente i dati per l'addestramento è stato inserito correttamente;
 	\item \textbf{Scenario principale}: l'utente inserisce il file in formato CSV contenente i dati per l'addestramento;
-	\item \textbf{Estensioni}:
-	\begin{enumerate}
-		\item se il caricamento del file CSV non è avvenuto con successo, viene visualizzato un messaggio di errore (UC3).
-	\end{enumerate}
 \end{itemize}
 
 \subsubsection{UC1.2 - Selezione del modello di predizione su cui eseguire l'addestramento}
@@ -106,10 +107,6 @@
 	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glo;
 	\item \textbf{Postcondizioni}: il file in formato JSON contenente una configurazione precedente è stato inserito correttamente;
 	\item \textbf{Scenario principale}: l'utente inserisce il file in formato JSON contenente una configurazione precedente;
-	\item \textbf{Estensioni}:
-	\begin{enumerate}
-		\item se il caricamento del file JSON non è avvenuto con successo, viene visualizzato un messaggio di errore (UC17).
-	\end{enumerate}
 \end{itemize}
 \subsubsection{UC1.7 - Inserimento delle note per l'utente}
 \begin{itemize}
