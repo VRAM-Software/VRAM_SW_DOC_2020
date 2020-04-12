@@ -30,7 +30,7 @@ Il metodo di lavoro incrementale è quindi così riassunto:
 \end{itemize}
 
 \subsubsection{Incrementi individuati}
-La seguente tabella riporta i principali incrementi individuati e definiti inizialmente. La priorità è data agli incrementi che implementano i requisiti obbligatori, seguiti dagli incrementi riguardanti i requisiti desiderabili. Infine sono riportati degli incrementi che potrebbero, se necessario, implementare i requisiti opzionali.
+La seguente tabella riporta i principali incrementi individuati e definiti inizialmente. Essi sono identificati da un numero intero progressivo maggiore di zero, la loro priorità è data agli incrementi che implementano i requisiti obbligatori, seguiti dagli incrementi riguardanti i requisiti desiderabili. Infine sono riportati degli incrementi che potrebbero, se necessario, implementare i requisiti opzionali.
 \rowcolors{2}{gray!25}{gray!15}
 \begin{longtable} {
 		>{\raggedright\arraybackslash}p{85mm}
@@ -46,14 +46,14 @@ La seguente tabella riporta i principali incrementi individuati e definiti inizi
 	Incremento 2: importazione file CSV e file JSON su applicativo esterno & 
 	R1F4.1, R1F4.1.1, R1F4.1.2, R1F4.8, R1F4.9, R1F4.9.1, R1F4.9.2  \TBstrut \\ [2mm]
 	
-	Incremento 3: sviluppo algoritmo addestramento SVM\glosp & 
-	R1F4.2, R1F4.10  \TBstrut \\ [2mm]
+	Incremento 3: sviluppo algoritmo addestramento SVM\glosp e sviluppo algoritmo predizione SVM\glosp nel plug-in& 
+	R1F4.2, R1F4.10, R2F4.6  \TBstrut \\ [2mm]
 	
-	Incremento 4: sviluppo algoritmo addestramento RL\glosp & 
-	R1F4.11  \TBstrut \\ [2mm]
+	Incremento 4: sviluppo algoritmo addestramento RL\glosp e sviluppo algoritmo predizione RL\glosp nel plug-in & 
+	R1F4.11, R1F11  \TBstrut \\ [2mm]
 	
 	Incremento 6: selezione modello e avvio addestramento & 
-	R1F4.11, R1F4.12, R1F4.4 \TBstrut \\ [2mm]
+	R1F4.4, R1F4.11, R1F4.12 \TBstrut \\ [2mm]
 	
 	Incremento 7: creazione ed esportazione file JSON con i parametri addestramento &
 	R1F4.5, R1F4.6, R1F4.7 \TBstrut \\ [2mm]
@@ -64,38 +64,26 @@ La seguente tabella riporta i principali incrementi individuati e definiti inizi
 	Incremento 9: realizzazione struttura base plug-in Grafana\glosp &
 	R1F7, R1F19, R1F20 \TBstrut \\ [2mm]
 	
-	Incremento 10: sviluppo algoritmo predizione SVM\glosp nel plug-in &
-	R1F11 \TBstrut \\ [2mm]
-	
-	Incremento 11: sviluppo algoritmo predizione RL\glosp nel plug-in &
-	R1F11 \TBstrut \\ [2mm]
-	
 	Incremento 12: importazione file JSON nel plug-in &
 	R1F8 \TBstrut \\ [2mm]
 	
 	Incremento 13: lettura file JSON e configurazione algoritmi plug-in &
 	R1F8, R1F11 \TBstrut \\ [2mm]
 	
-	Incremento 14: associazione nodi al flusso dati &
-	R1F9, R1F9.1, R1F9.2, R1F9.4, R1F9.5 \TBstrut \\ [2mm]
-	
-	Incremento 15: elaborazione e visualizzazione dei dati &
-	R1F11 \TBstrut \\ [2mm]
+	Incremento 14: associazione nodi al flusso dati, elaborazione e visualizzazione dei dati &
+	R1F9, R1F9.1, R1F9.2, R1F9.4, R1F9.5, R1F11 \TBstrut \\ [2mm]
 	
 	Incremento 16: arresto del plug-in &
 	R1F12, R1F20 \TBstrut \\ [2mm]
 	
-	Incremento 17: errore JSON e CSV non validi &
-	R2F6, R2F18 \TBstrut \\ [2mm]
-	
-	Incremento 18: errore collegamento nodi &
-	R2F10 \TBstrut \\ [2mm]
+	Incremento 17: errore JSON e CSV non validi ed errore collegamento nodi &
+	R2F6, R2F18, R2F10 \TBstrut \\ [2mm]
 	
 	Incremento 19: predisposizione addestramento interno &
 	R3F1, R3F1.1, R3F1.1.1, R3F1.1.2, R3F1.5, R3F1.6, R3F1.6.1, R3F1.6.2 \TBstrut \\ [2mm]
 	
 	Incremento 20: addestramento interno &
-	R3F1.2, R3F1.7,R3F1.3, R3F1.4 \TBstrut \\ [2mm]
+	R3F1.2, R3F1.3, R3F1.4, R3F1.7 \TBstrut \\ [2mm]
 	
 	Incremento 21: chiusura addestramento interno &
 	R3F1.4, R3F1.8 \TBstrut \\ [2mm]
@@ -104,10 +92,10 @@ La seguente tabella riporta i principali incrementi individuati e definiti inizi
 	R3F2, R3F2.1, R3F2.2, R3F2.3 \TBstrut \\ [2mm]
 	
 	Incremento 23: sviluppo algoritmo regressione non lineare &
-	R3F4.3, R3F1.11 \TBstrut \\ [2mm]
+	R3F1.11, R3F4.3 \TBstrut \\ [2mm]
 	
 	Incremento 24: sviluppo algoritmo reti neurali\glo &
-	R3F4.3, R3F1.11 \TBstrut \\ [2mm]
+	R3F1.11, R3F4.3 \TBstrut \\ [2mm]
 	
 	Incremento 25: flusso dati continuo &
 	R3F9.3 \TBstrut \\ [2mm]
