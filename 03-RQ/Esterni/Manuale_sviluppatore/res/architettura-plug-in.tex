@@ -22,8 +22,8 @@ Analizzando i componenti, la nostra architettura è così strutturata:
 \end{itemize}
 \subsubsection{Progettazione di dettaglio}
 Di seguito viene descritta in dettaglio la progettazione del plug-in. In allegato viene inoltre fornito il file \textit{diagramma-classi-plug-in.png} contenente l'intero diagramma delle classi.
-\paragraph{Model} \mbox{}
-L'elemento principale contenuto all'interno del modello è il componente degli algoritmi di predizione. Abbiamo implementato due algoritmi di predizione: Support Vector Machine lineare\glosp e Regressione lineare\glo. Esse sono rappresentate rispettivamente dalle classi concrete \textit{SvmPrediction} e \textit{RlPrediction}. In senso più generale abbiamo riscontrato che per le famiglie di algoritmi di Support Vector Machine e di Regressione è possibile ricondursi ad un'interfaccia unica che abbiamo chiamato \textit{AlgorithmPrediction}. Essa fornisce il metodo astratto \textit{predict(data, configuration, influxParameter)} che è implementato dalle classi concrete dei singoli algoritmi.
+\paragraph{Model} \mbox{}\\ [1mm]
+L'elemento principale contenuto all'interno del modello è il componente degli algoritmi di predizione. Abbiamo implementato due algoritmi di predizione: Support Vector Machine lineare\glosp e Regressione lineare\glo. Esse sono rappresentate rispettivamente dalle classi concrete \textit{SvmPrediction} e \textit{RlPrediction}. In senso più generale, abbiamo riscontrato che per le famiglie di algoritmi di Support Vector Machine e di Regressione è possibile ricondursi ad un'interfaccia unica che abbiamo chiamato \textit{AlgorithmPrediction}. Essa fornisce il metodo astratto \textit{predict(data, configuration, influxParameter)} che è implementato dalle classi concrete dei singoli algoritmi.
 Queste due classi hanno una dipendenza di tipo composizione con la classe concreta \textit{WriteInflux} che importa la libreria \textit{InfluxDB} e contiene le funzionalità di scrittura su un database Influx. Essa presenta due metodi per la scrittura sul database.
 \mbox{}
 \begin{landscape}
@@ -34,7 +34,7 @@ Queste due classi hanno una dipendenza di tipo composizione con la classe concre
 		\end{figure}
 	\end{figure}
 \end{landscape}
-\paragraph{View} \mbox{}
+\paragraph{View} \mbox{}\\ [1mm]
 All'interno della View abbiamo inserito la componente Panel rappresentata dalla classe \textit{PanelCtrl} che estende \textit{MetricPanelControl} di Grafana\glo. Essa rappresenta il nostro pannello principale dal quale gli utenti possono interagire con il plug-in.
 Ha una dipendenza di tipo composizione con un componente della libreria Plotly per la creazione del grafico personalizzato e con la classe \textit{SelectinfluxDBCtrl} per la selezione dalla datasource Grafana\glosp di tipo Influx su cui scrivere i risultati delle predizioni. In questo modo, sfruttiamo il meccanismo di Grafana\glosp che dalla scrittura dei dati sul database a questo componente, permette l'aggiornamento continuo della View.
 Infine, sempre all'interno di \textit{PanelCtrl}, c'è una dipendenza verso il componente \textit{ProcessData} del Controller che ne permette il collegamento.
@@ -47,7 +47,7 @@ Infine, sempre all'interno di \textit{PanelCtrl}, c'è una dipendenza verso il c
 		\end{figure}
 	\end{figure}
 \end{landscape}
-\paragraph{Controller} \mbox{}
+\paragraph{Controller} \mbox{}\\ [1mm]
 All'interno del Controller viene implementata la trasformazione dei dati ricevuti dalla View, che rappresentano le interazioni dell'utente con il nostro pannello ed i flussi di dati ottenuti da Grafana\glo, ad azioni da eseguire sul Model.
 Abbiamo deciso di implementare un design pattern strategy ottenendo la seguente struttura:
 \begin{itemize}

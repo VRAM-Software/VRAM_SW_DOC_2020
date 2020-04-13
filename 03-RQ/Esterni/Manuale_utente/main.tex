@@ -15,7 +15,15 @@
 	%Input del file "frontmatter" preso dalla cartella "Template-LaTeX/config/", uguale per tutti i documenti
 	%Attenzione bisogna impostare il percorso del file!
 	\input{../../../Template-LaTeX/config/frontmatter.tex} %Imposta il frontespizio, l'indice, header e footer
+	
+	%\listoftables
+	%\pagebreak
+	\listoffigures
+	\pagebreak
+	
 	\input{res/introduzione.tex}
+	\pagebreak
+	\input{res/requisiti.tex}
 	\pagebreak
 	\input{res/installazione.tex}
 	\pagebreak
@@ -26,6 +34,10 @@
 	\input{res/strutturaFile.tex}
 	\pagebreak
 	\input{res/segnalazioneErrori.tex}
+	
+	\appendix
+	\pagebreak
+	\input{res/glossario.tex}
 	%Tutte le sezioni del documento
 	%\input{res/inserire nome sezione 1} 
 	% ...
