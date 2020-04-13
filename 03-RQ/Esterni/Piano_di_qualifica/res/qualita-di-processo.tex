@@ -27,11 +27,11 @@ Per misurare la qualità di processo\glosp il gruppo ha definito degli obiettivi
 				\textbf{Metrica} & \textbf{Preferibile} & \textbf{Accettabile} \TBstrut \TBstrut \\
 				M02 Numero di parametri per metodo & $ \le 3$ & $ \le 5$ \TBstrut \\ [2mm]
 				M03 Numero di metodi per classe & $ \le 8$ & $ \le 15$ \TBstrut \\ [2mm]
-				M? Livello di annidamento & $1 \le x \le 3$ & $1 \le x \le 7$ \TBstrut \\ [2mm]
+				M20 Livello di annidamento & $1 \le x \le 3$ & $1 \le x \le 7$ \TBstrut \\ [2mm]
 			\end{longtable}
 	
-		\subsubsection{OP-? Forte disaccoppiamento tra le componenti architetturali}
-		Ci prefiggiamo di progettare l'architettura del prodotto\glosp software con un forte disaccoppiamnto tra le componenti in modo che sia efficace, efficiente e facilmente manutenibile;
+		\subsubsection{OP-9 Forte disaccoppiamento tra le componenti architetturali}
+		Ci prefiggiamo di progettare l'architettura del prodotto\glosp software con un forte disaccoppiamento tra le componenti in modo che sia efficace, efficiente e facilmente manutenibile;
 		\paragraph{Metriche di qualità} \mbox{}
 		\rowcolors{2}{gray!25}{gray!15}
 		\begin{longtable} {
@@ -41,9 +41,8 @@ Per misurare la qualità di processo\glosp il gruppo ha definito degli obiettivi
 			}
 			\rowcolor{gray!50}
 			\textbf{Metrica} & \textbf{Preferibile} & \textbf{Accettabile} \TBstrut \TBstrut \\
-			M? Accoppiamento tra le classi di oggetti & $\le 1$ & $\le 6$ \TBstrut \\ [2mm]
-			M? Profondità della gerarchia & $\le 4$ & $\le 7$ \TBstrut \\ [2mm]
-			M? Numero di design pattern & $5 \le x \le 6$ & $2 \le x \le 15$ \TBstrut \\ [2mm]
+			M21 Profondità della gerarchia & $\le 4$ & $\le 7$ \TBstrut \\ [2mm]
+			M22 Numero di design pattern & $5 \le x \le 6$ & $2 \le x \le 15$ \TBstrut \\ [2mm]
 		\end{longtable}
 			
 	\subsection{PRC-Q5 Processo di garanzia della qualità}
@@ -83,9 +82,9 @@ Per misurare la qualità di processo\glosp il gruppo ha definito degli obiettivi
 			}
 			\rowcolor{gray!50}
 			\textbf{Metrica} & \textbf{Preferibile} & \textbf{Accettabile} \TBstrut \TBstrut \\
-			M? Code coverage & $100\%$ & $\ge 85\%$ \TBstrut \\ [2mm]
-			M? Branch coverage & $100\%$ & $\ge 85\%$ \TBstrut \\ [2mm]
-			M? Copertura dei test eseguiti & $\ge 90\%$ & $100\%$ \TBstrut \\ [2mm]
+			M23 Code coverage & $100\%$ & $\ge 80\%$ \TBstrut \\ [2mm]
+			M24 Branch coverage & $100\%$ & $\ge 80\%$ \TBstrut \\ [2mm]
+			M25 Copertura dei test eseguiti & $\ge 90\%$ & $100\%$ \TBstrut \\ [2mm]
 		\end{longtable}	
 			
 	\subsection{PRC-Q8 Processo di gestione dei cambiamenti}
@@ -152,14 +151,13 @@ Per misurare la qualità di processo\glosp il gruppo ha definito degli obiettivi
 		M01 Scostamento dei requisiti individuati \TBstrut \\ [2mm]
 
 		OP-2 Sviluppo di codice comprensibile e manutenibile &
-		%M05 Livello di annidamento \newline
+		M20 Livello di annidamento \newline
 		M02 Numero di parametri per metodo \newline
 		M03 Numero di metodi per classe \TBstrut \\ [2mm]
 		
-		OP-? Forte disaccoppiamento tra le componenti architetturali &
-		M? Accoppiamento tra le classi di oggetti \newline
-		M? Profondità della gerarchia \newline
-		M? Numero di design pattern \TBstrut \\ [2mm]
+		OP-9 Forte disaccoppiamento tra le componenti architetturali &
+		M21 Profondità della gerarchia \newline
+		M22 Numero di design pattern \TBstrut \\ [2mm]
 
 		\rowcolor{gray!50}
 		\multicolumn{2}{c}{\textbf{PRC-Q2 Processo di garanzia della qualità}}\\
@@ -177,9 +175,9 @@ Per misurare la qualità di processo\glosp il gruppo ha definito degli obiettivi
 		OP-4 Efficacia dei test &
 		M05 Percentuale bug sistemati \TBstrut \\ [2mm]
 		OP-5 Completezza dei test & 
-		M? Code coverage \newline
-		M? Condition coverage \newline
-		M? Copertura dei test eseguiti \TBstrut \\ [2mm]
+		M23 Code coverage \newline
+		M24 Branch coverage \newline
+		M25 Copertura dei test eseguiti \TBstrut \\ [2mm]
 
 	\rowcolor{gray!50}
 	\multicolumn{2}{c}{\textbf{PRC-Q4 Processo di gestione dei cambiamenti}}\\
