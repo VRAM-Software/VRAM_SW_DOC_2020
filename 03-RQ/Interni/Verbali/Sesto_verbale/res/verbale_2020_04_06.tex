@@ -20,12 +20,12 @@
         \begin{itemize}
             \item implementazione incremento 14;
             \item gestione dei test sul codice;
-            \item discussione riguardo alla stesura del manuale utente.
+            \item approfondimento dell'operazione di scrittura in InfluxDB da Grafana\glo.
         \end{itemize}
 \section{Verbale}
     \subsection{Punto 1}
         È stato analizzato lo sviluppo dell'incremento 14 ed è risultata la corretta implementazione della funzionalità di associazione dei predittori al flusso dati.
     \subsection{Punto 2}
-        In seguito è stato revisionato il proseguimento della stesura del manuale dello sviluppatore, il quale risulta ad un buon livello di completamento, ed è stata organizzata la redazione del manuale utente tramite l'organizzazione di uno scheletro e la divisione delle varie sezioni.
-    \subsection{Punto 3}
         È stata in seguito discussa la gestione dei test, che si dividono in test di unità e test di integrazione. Per quanto riguarda i primi, sono già in fase di sviluppo, ed in particolare l'applicazione di addestramento è già a buon punto, mentre per il plug-in la copertura risulta ancora non conforme alle metriche\glo. I test di integrazione invece richiedono approfondimento da parte di un componente del gruppo che andrà poi a condividere le conoscenze apprese ed implementare questi test. Il documento del \textit{Piano di Progetto} verrà inoltre aggiornato con i nuovi test sviluppati.
+    \subsection{Punto 3}
+        Infine è stato effettuato da un membro del gruppo un approfondimento per gli altri componenti mirato a comprendere meglio il processo\glosp di scrittura dei dati in InfluxDB. Queste indicazioni hanno portato alla decisione di adottare node-influx, un client InfluxDB da utilizzare nei browser e con Node.js .
