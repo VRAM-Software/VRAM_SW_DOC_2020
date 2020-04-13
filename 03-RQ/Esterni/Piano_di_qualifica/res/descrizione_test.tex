@@ -107,24 +107,24 @@ All'interno del documento \textit{Norme di Progetto v. 4.1.1} vengono definite l
 	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato} & \textbf{Esito} &\TBstrut \\
 	%------->Test app esterna
 	%TI      &  & I & P  &\TBstrut \\ [2mm]
-	TI1      &  Verificare che venga chiusa la finestra per scegliere il nome del file json dopo che l’utente ha schiacciato il pulsante chiudi nella medesima finestra e quindi dimostrare la correttezza del metodo handleCloseModal(event) del componente App.& I & P  &\TBstrut \\ [2mm]
-	TI2      &  Verificare che venga chiusa la finestra per scegliere il nome del file json dopo che l’utente ha schiacciato fuori dalla medesima finestra per dimostrare la correttezza del metodo handleCloseModal(event) del componente App.& I & P  &\TBstrut \\ [2mm]
+	TI1      &  Verificare che venga chiusa la finestra per scegliere il nome del file json dopo che l'utente ha schiacciato il pulsante chiudi nella medesima finestra e quindi dimostrare la correttezza del metodo 'handleCloseModal(event)' del componente App.& I & P  &\TBstrut \\ [2mm]
+	TI2      &  Verificare che venga chiusa la finestra per scegliere il nome del file json dopo che l’utente ha schiacciato fuori dalla medesima finestra per dimostrare la correttezza del metodo 'handleCloseModal(event)' del componente App.& I & P  &\TBstrut \\ [2mm]
 	TI3      &  Verificare che quando viene cliccato il pulsante Salva json il componente Modal venga nascosto.& I & P  &\TBstrut \\ [2mm]
-	TI4      &  Verificare che venga cambiato lo stato del componente principale che indica il nome del file da salvare quando vengono effettuati cambiamenti all'input di testo della finestra per cambiare il nome del file json per dimostrare la correttezza del metodo handleChangeFileName(event) del componente App.& I & P  &\TBstrut \\ [2mm]
-	TI5      &  Verificare che venga cambiato lo stato del componente principale che indica le note che possono essere inserite nel file json di output handleChangeNotes(event) del componente App.& I & P  &\TBstrut \\ [2mm]
+	TI4      &  Verificare che venga cambiato lo stato del componente principale che indica il nome del file da salvare quando vengono effettuati cambiamenti all'input di testo della finestra, per cambiare il nome del file json. Dimostra la correttezza del metodo 'handleChangeFileName(event)' del componente App.& I & P  &\TBstrut \\ [2mm]
+	TI5      &  Verificare che venga cambiato lo stato del componente principale che indica le note che possono essere inserite nel file json di output 'handleChangeNotes(event)' del componente App.& I & P  &\TBstrut \\ [2mm]
 	TI6      &  Verificare che venga cambiato l'algoritmo dopo aver cliccato il bottone del componente Checkbox.& I & P  &\TBstrut \\ [2mm]
 	TI7      &  Verificare che venga cambiato l'algoritmo dopo aver cliccato il test relativo al bottone del componente Checkbox.& I & P  &\TBstrut \\ [2mm]
-	TI8      &  Verificare che il metodo onChange(e) eseguito quando vengono selezionati i file di input, inserisca correttamente le informazioni del file json all'interno dello stato del componente principale 'App'.& I & P  &\TBstrut \\ [2mm]
-	TI9      &  Verificare che il metodo onChange(e) eseguito quando vengono selezionati i file di input, inserisca correttamente le informazioni del file csv all'interno dello stato del componente principale 'App'.& I & P  &\TBstrut \\ [2mm]
+	TI8      &  Verificare che il metodo 'onChange(e)' eseguito quando vengono selezionati i file di input, inserisca correttamente le informazioni del file json all'interno dello stato del componente principale 'App'.& I & P  &\TBstrut \\ [2mm]
+	TI9      &  Verificare che il metodo 'onChange(e)' eseguito quando vengono selezionati i file di input, inserisca correttamente le informazioni del file csv all'interno dello stato del componente principale 'App'.& I & P  &\TBstrut \\ [2mm]
 	TI10      &  Verificare che la scelta di un file non corretto venga segnalata correttamente tramite il log della console sviluppatore.& I & P  &\TBstrut \\ [2mm]
 	TI11      &  Verificare che la scelta di un file nullo venga segnalata correttamente tramite il log della console sviluppatore.& I & P  &\TBstrut \\ [2mm]
 	TI12      &  Verificare che la scelta di un algoritmo già scelto venga segnalata correttamente tramite il log della console sviluppatore.& I & P  &\TBstrut \\ [2mm]
 
 	%------->Test plugin
-	TI12		& Verificare che la classe processData quando viene inizializzata con un json di configurazione con proprietà "pluginAim" uguale a "svm", chiami la funzione PerformPrediction della ProcessSvm che a sua volta chiami il metodo predict di SvmPrediction che ritornerà il risulato della predizione sui dati inseriti con i metodi setter di processData.& I & P &\TBstrut \\ [2mm]
-	TI13		& Verificare che la classe processData quando viene inizializzata con un json di configurazione con proprietà "pluginAim" uguale a "rl", chiami la funzione PerformPrediction della ProcessRl che a sua volta chiami il metodo predict di RlPrediction che ritornerà il risulato della predizione sui dati inseriti con i metodi setter di processData.& I & P &\TBstrut \\ [2mm]
-	TI14		& Verificare che la classe WriteInflux venga istanziata correttamente tramite costruttore, creando un'istanza InfluxDB collegata ad un database contenuto nell'immagine docker InfluxDB scaricata da dockerhub.& I & P &\TBstrut \\ [2mm]
-	TI15	& Verificare che i metodi writeArrayToInflux e writePointToInflux scrivano correttamente i dati in un istanza docker influxDB scaricata da dockerhub.& I & P &\TBstrut \\ [2mm]
+	TI13		& Verificare che la classe processData quando viene inizializzata con un json di configurazione con proprietà 'pluginAim' uguale a 'svm', chiami la funzione PerformPrediction della ProcessSvm che a sua volta chiami il metodo predict di SvmPrediction che ritornerà il risulato della predizione sui dati inseriti con i metodi setter di processData.& I & P &\TBstrut \\ [2mm]
+	TI14		& Verificare che la classe processData quando viene inizializzata con un json di configurazione con proprietà 'pluginAim' uguale a 'rl', chiami la funzione PerformPrediction della ProcessRl che a sua volta chiami il metodo predict di RlPrediction che ritornerà il risulato della predizione sui dati inseriti con i metodi setter di processData.& I & P &\TBstrut \\ [2mm]
+	TI15		& Verificare che la classe WriteInflux venga istanziata correttamente tramite costruttore, creando un'istanza InfluxDB collegata ad un database contenuto nell'immagine docker InfluxDB scaricata da dockerhub.& I & P &\TBstrut \\ [2mm]
+	TI16	& Verificare che i metodi writeArrayToInflux e writePointToInflux scrivano correttamente i dati in un istanza docker influxDB scaricata da dockerhub.& I & P &\TBstrut \\ [2mm]
 	
 	\rowcolor{white}
 	\caption{Test di integrazione}
@@ -147,7 +147,7 @@ All'interno del documento \textit{Norme di Progetto v. 4.1.1} vengono definite l
 	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato} & \textbf{Esito} &\TBstrut \\
 	%TU		& & I & P &\TBstrut \\ [2mm]
 	%------->App
-	TU1		    & Verificare che la scritta ‘VRAM Software Applicativo Esterno - PoC 3’ venga renderizzata per dimostrare il corretto funzionamento del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
+	TU1		    & Verificare che la scritta ‘VRAM Software Applicativo Esterno’ venga renderizzata per dimostrare il corretto funzionamento del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
 	TU2			& Verificare che i due componenti utilizzati per l’input dei file vengano correttamente renderizzati dimostrando quindi la correttezza del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
 	TU3			& Verificare che vengano renderizzati il grafico e l'input di testo per inserire le note, se sono presenti, nello stato del componente principale, i dati provenienti dal file csv dato in input dall'utente e quindi dimostrare la correttezza del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
 	TU4			& Verificare che non vengano renderizzati il grafico e l’input di testo per inserire le note, se non sono presenti i dati provenienti dal file csv dato in input dall’utente e quindi dimostrare la correttezza del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
@@ -191,15 +191,15 @@ All'interno del documento \textit{Norme di Progetto v. 4.1.1} vengono definite l
 	%------->Graph
 	TU37    	& Verificare il corretto caricamento del componente ScatterPlot, utilizzato nella costruzione del grafico. & I & P &\TBstrut \\ [2mm]
 	%------->Modal
-	TU38    	& Verificare il rendering dei botttoni per la chiusura e il salvataggio del file JSON. & I & P &\TBstrut \\ [2mm]
+	TU38    	& Verificare il rendering dei bottoni per la chiusura e il salvataggio del file JSON. & I & P &\TBstrut \\ [2mm]
 	TU39    	& Verificare la chiamata alla funzione di chiusura al click del pulsante chiudi. & I & P &\TBstrut \\ [2mm]
-	TU40    	& Verificare la chiamata della funzione di saltavataggio al click del pulsante 'Salva JSON'. & I & P &\TBstrut \\ [2mm]
+	TU40    	& Verificare la chiamata della funzione di salvataggio al click del pulsante 'Salva JSON'. & I & P &\TBstrut \\ [2mm]
 	TU41    	& Verificare la chiusura della finestra di salvataggio quando perde il focus emulando un click nel background. & I & P &\TBstrut \\ [2mm]
 	%------->ParamModal
-	TU42		& Verificare che il componente ParamModal sia renderizzaro correttamente. & I & P &\TBstrut \\ [2mm]
+	TU42		& Verificare che il componente ParamModal sia renderizzato correttamente. & I & P &\TBstrut \\ [2mm]
 	%------->RenderCircles
 	TU43		& Verificare che siano renderizzati dei cerchi.& I & P &\TBstrut \\ [2mm]
-	TU44		& Verificare che siano renderizzati dei cerchi verdi se l'algoritimo selezionato è SVM e l'etichetta è 1.& I & P &\TBstrut \\ [2mm]
+	TU44		& Verificare che siano renderizzati dei cerchi verdi se l'algoritmo selezionato è SVM e l'etichetta è 1.& I & P &\TBstrut \\ [2mm]
 	TU45		& Verificare che siano renderizzati dei cerchi rossi se l'algoritmo selezionato è SVM e l'etichetta è diversa da 1.& I & P &\TBstrut \\ [2mm]
 	TU46		& Verificare che siano renderizzati dei cerchi neri se l'algoritmo selezionato è RL.& I & P &\TBstrut \\ [2mm]
 	%------->SaveFileName
@@ -207,7 +207,7 @@ All'interno del documento \textit{Norme di Progetto v. 4.1.1} vengono definite l
 	TU48    	& Verificare la chiamata della funzione passata come parametro al verificarsi dell'evento onChange nella casella di testo per il nome del file. & I & P &\TBstrut \\ [2mm]
 	%------->Scatterplot
 	TU49		& Verificare che il componente renderizzi il componente RenderCircles per verificare la correttezza del metodo render().& I & P &\TBstrut \\ [2mm]
-	TU50		& Verificare che il componente renderizzi il componente Grid se esiste il la proprieta' result che contiene il json del risultato dell'addestramento per verificare la correttezza del metodo render().& I & P &\TBstrut \\ [2mm]
+	TU50		& Verificare che il componente renderizzi il componente Grid se esiste il la proprietà result che contiene il json del risultato dell'addestramento per verificare la correttezza del metodo render().& I & P &\TBstrut \\ [2mm]
 	TU51		& Verificare che il componente renderizzi il componente Axis X per verificare la correttezza del metodo render().& I & P &\TBstrut \\ [2mm]
 	TU52		& Verificare che il componente renderizzi il componente Axis Y per verificare la correttezza del metodo render().& I & P &\TBstrut \\ [2mm]
 	%------->TrendLine
@@ -218,15 +218,15 @@ All'interno del documento \textit{Norme di Progetto v. 4.1.1} vengono definite l
 	TU56    	& Verificare che il rendering della casella di testo per le note dell'utente sia avvenuto con successo. & I & P &\TBstrut \\ [2mm]
 	TU57    	& Verificare che il metodo passato come parametro venga chiamato al verificarsi dell'evento onChange nella casella di testo per le note. & I & P &\TBstrut \\ [2mm]
 	%------->RlTrainer
-	TU58		& Verificare che il metodo translateData ritorni correttamente i dati nell'array quando gli input sono minori 4.& I & P &\TBstrut \\ [2mm]
-	TU59		& Verificare che il metodo translateData ritorni correttamente i dati nell'array quando gli input sono maggiori o uguali a 4.& I & P &\TBstrut \\ [2mm]
+	TU58		& Verificare che il metodo translateData per 'RL\glo' ritorni correttamente i dati nell'array quando gli input sono maggiori o uguali a 3.& I & P &\TBstrut \\ [2mm]
+	TU59		& Verificare che il metodo translateData per RL\glo' ritorni correttamente i dati nell'array quando gli input sono minori di 3.& I & P &\TBstrut \\ [2mm]
 	TU60		& Verificare che il metodo train chiami il suo omonimo presente in regression.module. & I & P &\TBstrut \\ [2mm]
 	TU61		& Verificare che il metodo buildTrainedObject ritorni un oggetto js con i giusti parametri. & I & P &\TBstrut \\ [2mm]
 	TU62		& Verificare che il metodo setParams abbia impostato corettamente i parametri su RlTrainer. & I & P &\TBstrut \\ [2mm]
 	TU63		& Verificare che il metodo setOptions abbia impostato corettamente i parametri su RlTrainer. & I & P &\TBstrut \\ [2mm]
 	%------->Svmtrainer
-	TU64		& Verificare che il metodo translateData ritorni correttamente i dati nell'array quando gli input sono minori 4.& I & P &\TBstrut \\ [2mm]
-	TU65		& Verificare che il metodo translateData ritorni correttamente i dati nell'array quando gli input sono maggiori o uguali a 4.& I & P &\TBstrut \\ [2mm]
+	TU64		& Verificare che il metodo translateData per 'SVM\glo' ritorni correttamente i dati nell'array quando gli input sono minori di 4.& I & P &\TBstrut \\ [2mm]
+	TU65		& Verificare che il metodo translateData per 'SVM\glo' ritorni correttamente i dati nell'array quando gli input sono maggiori o uguali a 4.& I & P &\TBstrut \\ [2mm]
 	TU66		& Verificare che il metodo train chiami il suo omonimo presente in ml-modules.& I & P &\TBstrut \\ [2mm]
 	TU67		& Verificare che il metodo buildTrainedObject ritorni un oggetto js con i giusti parametri.& I & P &\TBstrut \\ [2mm]
 	TU68		& Verificare che il metodo setParams abbia impostato corettamente i parametri su SvmTrainer.& I & P &\TBstrut \\ [2mm]
@@ -239,7 +239,7 @@ All'interno del documento \textit{Norme di Progetto v. 4.1.1} vengono definite l
 	TU72		& Verificare che il metodo buildTraindedFile ritorni un oggetto JavaScript che contenga i giusti parametri.& I & P &\TBstrut \\ [2mm]
 	%------->Read
 	TU73		& Verificare che sia lanciato un errore se viene tentata l'inizializzazione di Read.& I & P &\TBstrut \\ [2mm]
-	TU74		& Verificare che sia lanciato un errore se i metodi delle classe figlie non sono implementat.e& I & P &\TBstrut \\ [2mm]
+	TU74		& Verificare che sia lanciato un errore se i metodi delle classe figlie non sono implementate.& I & P &\TBstrut \\ [2mm]
 	TU75		& Verificare che il metodo readFile legga i file correttamente.& I & P &\TBstrut \\ [2mm]
 	TU76		& Verificare che sia lanciato un errore se la lettura del file fallisce.& I & P &\TBstrut \\ [2mm]
 	%------->Write
@@ -269,8 +269,8 @@ All'interno del documento \textit{Norme di Progetto v. 4.1.1} vengono definite l
 	TU97		& Verificare che il metodo 'onRefresh', collegato all'evento di aggiornamento del pannello, chiami il metodo di aggiornamento del grafico.& I & P &\TBstrut \\ [2mm]
 	TU98		& Verificare che in caso non sia presente l'elemento contenitore per il grafico, non venga chiamato il metodo per il ridimensionamento.& I & P &\TBstrut \\ [2mm]
 	TU99		& Verificare che in caso non sia presente l'elemento contenitore per il grafico, non venga chiamato il metodo per l'aggiornamento.& I & P &\TBstrut \\ [2mm]
-	TU100		& Verificare che il metodo 'onRender' non avvi il render del grafico se un altro pannello è in modalità schermo intero.& I & P &\TBstrut \\ [2mm]
-	TU101		& Verificare che il metodo 'onRefresh' non avvi il refresh del grafico se un altro pannello è in modalità schermo intero.& I & P &\TBstrut \\ [2mm]
+	TU100		& Verificare che il metodo 'onRender' non avvii il render del grafico se un altro pannello è in modalità schermo intero.& I & P &\TBstrut \\ [2mm]
+	TU101		& Verificare che il metodo 'onRefresh' non avvii il refresh del grafico se un altro pannello è in modalità schermo intero.& I & P &\TBstrut \\ [2mm]
 	TU102		& Verificare che un nuovo pannello, in assenza di configurazioni salvate all'interno di Grafana, carichi le configurazioni di default.& I & P &\TBstrut \\ [2mm]
 	%------->config
 	TU103		& Verificare che il costruttore della classe 'GrafanaPredictionControl' inizializzi tutti i campi dell'oggetto.& I & P &\TBstrut \\ [2mm]
@@ -278,23 +278,28 @@ All'interno del documento \textit{Norme di Progetto v. 4.1.1} vengono definite l
 	TU105		& Verificare che il metodo 'postUpdate' possa aggiornare lo stato della classe 'GrafanaPredictionControl' in 'abilitato'.& I & P &\TBstrut \\ [2mm]
 	%------->datasource
 	TU106		& Verificare il funzionamento del metodo statico di duplicazione di una fonte dati.& I & P &\TBstrut \\ [2mm]
-	TU107		& Verificare il funzionamento del metodo per ottenere l'indirizzo della fonte dati& I & P &\TBstrut \\ [2mm]
+	TU107		& Verificare il funzionamento del metodo per ottenere l'indirizzo della fonte dati.& I & P &\TBstrut \\ [2mm]
 	TU108		& Verificare il funzionamento del metodo per ottenere la porta della fonte dati.& I & P &\TBstrut \\ [2mm]
 	TU109		& Verificare il funzionamento del metodo per ottenere il nome del database della fonte dati.& I & P &\TBstrut \\ [2mm]
 	TU110		& Verificare il funzionamento del metodo per ottenere il nome utente per l'accesso al database della fonte dati.& I & P &\TBstrut \\ [2mm]
 	TU111		& Verificare il funzionamento del metodo 'getPassword' per ottenere la password del database della fonte dati.& I & P &\TBstrut \\ [2mm]
 	TU112		& Verificare il funzionamento del metodo 'getUrl' per ottenere l'url del database della fonte dati.& I & P &\TBstrut \\ [2mm]
-	TU113		& & I & P &\TBstrut \\ [2mm]
-	TU114		& & I & P &\TBstrut \\ [2mm]
-	TU115		& & I & P &\TBstrut \\ [2mm]
+	TU113		& Verificare il corretto funzionamento del metodo che restituisce il tipo di una fonte dati. & I & P &\TBstrut \\ [2mm]
+	TU114		& Verificare il corretto funzionamento del metodo che restituisce il nome di una fonte dati. & I & P &\TBstrut \\ [2mm]
+	TU115		& Verificare il corretto funzionamento del metodo per ottenere l'id che Grafana\glosp ha assegnato alla fonte dati. & I & P &\TBstrut \\ [2mm]
 	TU116		& Verificare il funzionamento del metodo di clonazione di una fonte dati.& I & P &\TBstrut \\ [2mm]
-	TU117		& & I & P &\TBstrut \\ [2mm]
+	TU117		& Verificare il corretto funzionamento del metodo di clonazione di una fonte dati con database alternativo. & I & P &\TBstrut \\ [2mm]
 	TU118		& Verificare che il metodo per la clonazione di una fonte dati con un nome alternativo lanci un'eccezione se non viene passato un parametro contenente il nuovo nome.& I & P &\TBstrut \\ [2mm]
-	TU119		& & I & P &\TBstrut \\ [2mm]
-	TU120		& Verificare che alla costruzione della fonte dati sia lanciata un'eccezione se non è presente un parametro URL valido.& I & P &\TBstrut \\ [2mm]
-	TU121		& Verificare che alla costruzione della fonte dati sia lanciata un'eccezione se non è presente un parametro URL valido.& I & P &\TBstrut \\ [2mm]
+	TU119		& Verificare il corretto funzionamento del metodo di comparazione tra fonti dati in base all'indirizzo dell'host. & I & P &\TBstrut \\ [2mm]
+	TU120		& Verificare che alla costruzione della fonte dati sia lanciata un'eccezione se non è presente un parametro 'URL' valido.& I & P &\TBstrut \\ [2mm]
+	TU121		& Verificare che alla costruzione della fonte dati sia lanciata un'eccezione se non è presente un parametro 'type' valido.& I & P &\TBstrut \\ [2mm]
 	TU122		& Verificare che alla costruzione della fonte dati sia lanciata un'eccezione se non è presente un nome.& I & P &\TBstrut \\ [2mm]
-	TU123		& & I & P &\TBstrut \\ [2mm]
+	TU123		& Verificare che il metodo statico per la clonazione lanci un'eccezione se la fonte dati passata non ha un formato valido. & I & P &\TBstrut \\ [2mm]
+	TU124		& Verificare che il metodo 'getStrategy' della classe 'ProcessData' ritorni la strategia correntemente inizializzata nel controller. & I & P &\TBstrut \\ [2mm]
+	TU125		& Verificare che l'inizializzazione della classe 'ProcessData' con la strategia SVM\glosp avvenga con successo. & I & P &\TBstrut \\ [2mm]
+	TU126		& Verificare che l'inizializzazione della classe 'ProcessData' con la strategia di regressione lineare\glosp avvenga con successo. & I & P &\TBstrut \\ [2mm]
+	TU127		& Verificare che se viene avviato il controller con un parametro 'datalist' non valido venga segnalato un errore. & I & P &\TBstrut \\ [2mm]
+	TU128		& Verificare che se viene avviato il controller con un parametro mancante venga segnalato un errore. & I & P &\TBstrut \\ [2mm]
 	
 	\rowcolor{white}
 	\caption{Test di unità}
