@@ -1,5 +1,5 @@
 \subsection{Installazione dell'applicazione esterna a Grafana}
-L'installazione dell'applicazione è suddivisa in due passaggi che descriviamo in dettaglio nei prossimi paragrafi.
+L'installazione dell'applicazione è suddivisa in due passaggi che descriviamo in dettaglio nei prossimi paragrafi:
 \begin{enumerate}
     \item clonare la repository da GitHub;
     \item installare le dipendenze.
@@ -15,9 +15,12 @@ Infine per spostarsi nella cartella che contiene il codice sorgente dell'applica
 	cd ./prediction_configuration_utility
 \end{verbatim}
 
-\begin{center}
-	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/directoryProject.png}
-\end{center}
+\begin{figure}[H] 	
+	\begin{center}
+		\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/directoryProject.png}
+	\end{center}
+	\caption{Selezione app nella directory}	
+\end{figure}
 
 
 
@@ -53,6 +56,8 @@ Nella seguente tabella sono elencate tutte le dipendenze necessarie per la corre
     \verb|react-dom| & \verb|^16.13.0| \TBstrut \\ [2mm]
     \verb|react-router-dom| & \verb|^5.1.2| \TBstrut \\ [2mm]
     \verb|react-scripts| & \verb|3.4.0| \TBstrut \\ [2mm]
+    \rowcolor{white}
+    \caption{Dipendenze per eseguire applicazione}
     \end{longtable}
     
 \paragraph*{Dipendenze sviluppatore}\mbox{}\\ [1mm]
@@ -71,6 +76,8 @@ Nella seguente tabella sono elencate tutte le dipendenze necessarie per la corre
     \verb|enzyme| & \verb|^3.11.0| \TBstrut \\ [2mm]
     \verb|enzyme-adapter-react-16| & \verb|^1.15.2| \TBstrut \\ [2mm]
     \verb|spectron| & \verb|^10.0.1| \TBstrut \\ [2mm]
+    \rowcolor{white}
+    \caption{Dipendenze specifiche per lo sviluppatore}
     \end{longtable}
     \mbox{}\\ [1mm]
 Seguendo i due passaggi descritti nei precedenti paragrafi, l'applicazione esterna è installata correttamente.
@@ -86,4 +93,10 @@ Per installare l'ambiente di sviluppo integrato WebStorm, visitare la pagina \ur
 Per installare il plug-in SonarLint per WebStorm, aprire le impostazioni di WebStorm dal suo menù "File". Quindi nella sezione "Plugins" cercare ed installare "SonarLint".
 \\
 \\
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/sonarlint.png}
+\begin{figure}[H] 	
+	\begin{center}
+		\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/sonarlint.png}
+	\end{center}
+	\caption{Installazione SonarLint}	
+\end{figure}
+
