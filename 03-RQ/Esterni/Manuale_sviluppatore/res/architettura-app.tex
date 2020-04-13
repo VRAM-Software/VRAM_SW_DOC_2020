@@ -78,7 +78,7 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		\paragraph{ViewModel} \mbox{} \\[1mm]
 		La ViewModel contiene i dati da visualizzare nella vista e le trasformazioni per richiamare le operazioni da eseguire nel modello.
 		In particolare è legato alla View tramite Electron che gestisce la loro comunicazione in modo asincrono appoggiandosi al nostro componente \textit{EventManager} e al Model attraverso il meccanismo asincrono di callback.
-		Abbiamo riscontrato la necessità di implementare il design\glosp pattern strategy in tre casi diversi:
+		Abbiamo riscontrato la necessità di implementare il design pattern\glosp strategy in tre casi diversi:
 		\paragraph*{Algorithm} \mbox{}
 		\begin{itemize}
 			\item \textbf{ProcessTraining}: è una classe concreta che rappresenta il context. In essa viene scelto quale algoritmo addestrare sulla base dei dati ricevuti ed ha una dipendenza di tipo aggregazione dall'interfaccia \textit{PerformTraining};
