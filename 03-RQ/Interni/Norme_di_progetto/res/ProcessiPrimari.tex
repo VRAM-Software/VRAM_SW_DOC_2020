@@ -562,49 +562,49 @@
 				\begin{itemize}
 					\item[] \textbf{formula}: si calcola con un valore intero.
 				\end{itemize}
-				\item \textbf{M? livello di annidamento}: indica il livello di annidamento all'interno dei metodi. Se questo valore è alto, il codice è più complesso e difficile da manutenere. Perciò è opportuno suddividere il metodo in più metodi distinti per ottenere un livello di annidamento basso;
+				\item \textbf{M-PROC20 livello di annidamento}: indica il livello di annidamento all'interno dei metodi. Se questo valore è alto, il codice è più complesso e difficile da manutenere. Perciò è opportuno suddividere il metodo in più metodi distinti per ottenere un livello di annidamento basso;
 				\begin{itemize}
 					\item[] \textbf{formula}: si calcola con un valore intero.
 				\end{itemize}
 			\end{itemize}
 	
-		\paragraph{OP-? Forte disaccoppiamento tra le componenti architetturali}
+		\paragraph{OP-9 Forte disaccoppiamento tra le componenti architetturali}
 		%\paragraph*{Obiettivo}\mbox{}\\ [1mm]
 		L'obiettivo è progettare il l'architettura del prodotto\glosp software così da renderlo efficace, efficiente e manutenibile.
 		\subparagraph{Metriche}\mbox{}\\ [1mm]
 		Le metriche\glosp utilizzate sono:
 		\begin{itemize}
-			\item \textbf{M? Accoppiamento tra le classi di oggetti}: indica se una classe è accoppiata ad una seconda. Con accoppiamento s'intende l'utilizzo, da parte della prima classe, di metodi o variabili definiti nella seconda; 
-			\begin{itemize}
-				\item[] \textbf{Formula}: si calcola con un valore intero.
-			\end{itemize}
-			\item \textbf{M? Profondità della gerarchia}: indica la profondità massima della gerarchia delle classi. Deve essere limitata per mantenere un basso accoppiamento;
+			%\item \textbf{M-PROC Accoppiamento tra le classi di oggetti}: indica se una classe è accoppiata ad una seconda. Con accoppiamento s'intende l'utilizzo, da parte della prima classe, di metodi o variabili definiti nella seconda; 
+			%\begin{itemize}
+			%	\item[] \textbf{Formula}: si calcola con un valore intero.
+			%\end{itemize}
+			\item \textbf{M-PROC21 Profondità della gerarchia}: indica la profondità massima della gerarchia delle classi nel caso peggiore. Deve essere limitata per mantenere un basso accoppiamento;
 			\begin{itemize}
 				\item[] \textbf{Formula}: si calcola con un valore intero.
 			\end{itemize} 	
-			\item \textbf{M? Numero di design pattern}: indica il numero di design pattern applicati. La presenza di design pattern può aiutare all'innalzamento della qualità del prodotto ma un uso eccessivo può comportare un'elevata complessità. Va quindi mantenuto un numero di design pattern ragionevole.
+			\item \textbf{M-PROC22 Numero di design pattern}: indica il numero di design pattern applicati. La presenza di design pattern può aiutare all'innalzamento della qualità del prodotto ma un uso eccessivo può comportare un'elevata complessità. Va quindi mantenuto un numero di design pattern ragionevole.
 			\begin{itemize}
 				\item[] \textbf{Formula}: si calcola con un valore intero.
 			\end{itemize} 	
 		\end{itemize}
 		
-		\paragraph{PRD-Q2 Appropriatezza funzionale}
-		\subparagraph{CP-3 Completezza e adeguatezza dei requisiti}
+		\subsubsection{PRD-Q2 Appropriatezza funzionale}
+		\paragraph{CP-3 Completezza e adeguatezza dei requisiti}
 		%\subparagraph*{Caratteristica}\mbox{}\\ [1mm]
 		Questa caratteristica descrive di individuare correttamente i requisiti nella prima attività di analisi in modo che con l'avanzare del progetto non ci siano cambiamenti che comportano un grosso dispendio di tempo.
 		\subparagraph{Metriche}\mbox{}\\ [1mm]
 		Le metriche\glosp utilizzate sono:
 			\begin{itemize}
-				\item \textbf{M? Percentuale di requisiti obbligatori soddisfatti}: indica la percentuale di requisiti obbligatori che sono stati soddisfatti. Questo valore deve essere massimizzato per garantire che i vincoli col proponente vengano rispettati;
+				\item \textbf{M-PROD16 Percentuale di requisiti obbligatori soddisfatti}: indica la percentuale di requisiti obbligatori che sono stati soddisfatti. Questo valore deve essere massimizzato per garantire che i vincoli col proponente vengano rispettati;
 				\begin{itemize}
 					\item[] \textbf{formula}: $\frac{requisiti \; obbligatori \; soddisfatti}{requisiti \; obbligatori \; totali}$;
 				\end{itemize} 
-				\item \textbf{M? Percentuale di requisiti desiderabili soddisfatti}:
+				\item \textbf{M-PROD17 Percentuale di requisiti desiderabili soddisfatti}:
 				indica la percentuale di requisiti desiderabili che sono stati soddisfatti. Un valore elevato denota una maggior copertura delle richieste del proponente;
 				\begin{itemize}
 					\item[] \textbf{formula}: $\frac{requisiti \; desiderabili \; soddisfatti}{requisiti \; desiderabili \; totali}$.
 				\end{itemize} 
-				\item \textbf{M? Percentuale di requisiti opzionali soddisfatti}:
+				\item \textbf{M-PROD18 Percentuale di requisiti opzionali soddisfatti}:
 				indica la percentuale di requisiti opzionali che sono stati soddisfatti. Un valore elevato denota una maggior copertura delle richieste non indispensabili  del proponente;
 				\begin{itemize}
 					\item[] \textbf{formula}: $\frac{requisiti \; opzionali \; soddisfatti}{requisiti \; opzionali \; totali}$.
