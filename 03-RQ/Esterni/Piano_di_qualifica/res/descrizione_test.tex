@@ -71,11 +71,22 @@ All'interno del documento \textit{Norme di Progetto v. 4.1.1} vengono definite l
 	\rowcolor{gray!50}
 	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato} & \textbf{Esito} &\TBstrut \\
 	TS1 & Verificare che l'addestramento degli algoritmi produca un file JSON con i parametri per le previsioni & NI & NE  &\TBstrut \\ [2mm]
-	TS2 & Verificare la corretta visualizzazione della bontà dei modelli di previsione a seguito dell'addestramento sui dati & NI & NE  &\TBstrut \\ [2mm]
-	TS3 & Verificare la corretta visualizzazione del grafico relativo ai dati e alla modifica dello stesso in seguito all'addestramento dei dati & NI & NE  &\TBstrut \\ [2mm]
-	TS4 & Verificare che in seguito all'inserimento di un file JSON di configurazione venga effettuato il caricamento delle informazioni di una addestramento precedente & NI & NE  &\TBstrut \\ [2mm]
-	TS5 & Verificare che i nodi ricavati dal file JSON siano associati correttamente al flusso dati scelto in Grafana\glo & NI & NE &\TBstrut \\ [2mm]
-	TS6 & Applicare le previsioni su un flusso dati statico e visualizzare correttamente i dati ottenuti all'interno di un grafico contenuto nella dashboard\glo & NI & NE  &\TBstrut \\ [2mm]
+	TS2 & Verificare che l'addestramento possa essere fermato dall'utente & NI & NE  &\TBstrut \\ [2mm]
+	TS3 & Verificare che la previsione possa essere fermata dall'utente & NI & NE  &\TBstrut \\ [2mm]
+	TS4 & Verificare che successivamente al caricamento del file CSV venga effettutata la lettura e il caricamento dei dati nello stato dell'applicazione & NI & NE  &\TBstrut \\ [2mm]
+	TS5 & Verificare che successivamente al caricamento del file JSON venga effettutata la lettura e il caicamento della configurazione di un'addestramento precedente nello stato dell'applicazione & NI & NE  &\TBstrut \\ [2mm]
+	TS6 & Verificare che le note scritte dall'utente vengano inserite nel file JSON di output & NI & NE  &\TBstrut \\ [2mm]
+	TS7 & Verificare la corretta visualizzazione della bontà dei modelli di previsione a seguito dell'addestramento sui dati & NI & NE  &\TBstrut \\ [2mm]
+	TS8 & Verificare la corretta visualizzazione del grafico relativo ai dati e alla modifica dello stesso in seguito all'addestramento dei dati & NI & NE  &\TBstrut \\ [2mm]
+	TS9 & Verificare che i nodi ricavati dal file JSON siano associati correttamente al flusso dati scelto in Grafana\glo & NI & NE &\TBstrut \\ [2mm]
+	TS10 & Applicare le previsioni su un flusso dati statico e visualizzare correttamente i dati ottenuti all'interno di un grafico contenuto nella dashboard\glo & NI & NE  &\TBstrut \\ [2mm]
+	TS11 & Verificare che l'utente possa definire il comportamento di un alert & NI & NE  &\TBstrut \\ [2mm]
+	TS12 & Verificare che l'utente possa aggiungere un alert al nostro pannello per monitorare i dati della previsione & NI & NE  &\TBstrut \\ [2mm]
+	TS13 & Verificare che l'utente possa rimuovere un alert dal nostro pannello & NI & NE  &\TBstrut \\ [2mm]
+	TS14 & Verificare che la rimozione del nostro pannello implichi la fermata del plug-in & NI & NE  &\TBstrut \\ [2mm]
+	TS15 & Verificare che i messaggi d'errore relativi agli alert vengano visualizzati & NI & NE  &\TBstrut \\ [2mm]
+	TS16 & Verificare che i messaggi d'errore relativi ad un caricamento di un file JSON non valido vengano visualizzati & NI & NE  &\TBstrut \\ [2mm]
+	TS17 & Verificare che i messaggi d'errore relativi all'associazione dei predittorei vengano visualizzati & NI & NE  &\TBstrut \\ [2mm]
 	\rowcolor{white}
 	\caption{Test di sistema}
 \end{longtable}
