@@ -4,7 +4,7 @@ Il nostro prodotto\glosp è composto da un plug-in sviluppato per la piattaforma
 \subsection{Plug-in}
 Per poter visualizzare la suddivisione delle componenti del plug-in e le dipendenze che sussistono tra loro ad alto livello, viene riportato il diagramma dei Package in allegato nel file \textit{diagramma-package-plug-in.png}.
 \subsubsection{Progettazione architetturale}
-Abbiamo deciso di utilizzare un design pattern architetturale Model-View-Controller (MVC) perché si adatta bene allo sviluppo software all'interno di Grafana\glo. In particolare, come si può vedere nella figura seguente, abbiamo la View che scambia informazioni sulle interazioni dell'utente con il Controller che a sua volta le trasforma in azioni sui dati eseguite da Model. Infine vi è una comunicazione tra Model e View per il costante aggiornamento di quest'ultima, grazie ad una funzionalità fornita dalla piattaforma Grafana\glo.
+Abbiamo deciso di utilizzare un design pattern\glosp architetturale Model-View-Controller (MVC) perché si adatta bene allo sviluppo software all'interno di Grafana\glo. In particolare, come si può vedere nella figura seguente, abbiamo la View che scambia informazioni sulle interazioni dell'utente con il Controller che a sua volta le trasforma in azioni sui dati eseguite da Model. Infine vi è una comunicazione tra Model e View per il costante aggiornamento di quest'ultima, grazie ad una funzionalità fornita dalla piattaforma Grafana\glo.
 \mbox{}
 \begin{landscape}
 	\begin{figure}
@@ -49,7 +49,7 @@ Infine, sempre all'interno di \textit{PanelCtrl}, c'è una dipendenza verso il c
 \end{landscape}
 \paragraph{Controller} \mbox{}\\ [1mm]
 All'interno del Controller viene implementata la trasformazione dei dati ricevuti dalla View, che rappresentano le interazioni dell'utente con il nostro pannello ed i flussi di dati ottenuti da Grafana\glo, ad azioni da eseguire sul Model.
-Abbiamo deciso di implementare un design pattern strategy ottenendo la seguente struttura:
+Abbiamo deciso di implementare un design pattern\glosp strategy ottenendo la seguente struttura:
 \begin{itemize}
 	\item \textbf{ProcessData}: è una classe concreta che rappresenta il context del nostro strategy. Al suo interno, infatti, viene scelto quale algoritmo di predizione processare sulla base dei dati e delle richieste ricevute. Inoltre essa ha una dipendenza di tipo aggregazione con l'interfaccia \textit{PerformPrediction};
 	\item \textbf{PerformPrediction}: è un'interfaccia che rappresenta la strategia astratta. Essa definisce il contratto da rispettare per poter implementare una nuova classe concreta che processa i dati da fornire ad un determinato algoritmo;
