@@ -20,7 +20,7 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 	\end{itemize}
 	\subsubsection{Progettazione di dettaglio}
 		Di seguito viene descritta in dettaglio la progettazione dell'applicazione. In allegato viene fornito il file \textit{diagramma-classi-app.png} contenente l'intero diagramma delle classi.
-		\paragraph{Model} \mbox{} 
+		\paragraph{Model} \mbox{}
 		\paragraph*{Algorithm} \mbox{} \\[1mm]
 		Per la gestione degli algoritmi di addestramento abbiamo scelto di implementare due classi distinte \textit{SvmTrainer} e \textit{RlTrainer} che hanno una dipendenza di tipo composizione dalle rispettive classi delle librerie e del tipo di risultato ottenuto.
 		All'interno di ognuna di esse viene fornita la possibilità di addestrare l'algoritmo e di calcolarne gli indici di qualità.
@@ -121,7 +121,7 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 				\end{figure}
 		%	\end{figure}
 		%\end{landscape}
-		\paragraph*{Writing} \mbox{} \\[1mm]
+		\paragraph*{Writing} \mbox{}
 		\begin{itemize}
 			\item \textbf{ProcessWriting}: è una classe concreta che rappresenta il context. in essa viene scelta la tipologia di file su cui scrivere in base ai dati ricevuti ed ha una dipendenza di tipo aggregazione dall'interfaccia \textit{PerformWriting};
 			\item \textbf{PerformWriting}: è un'interfaccia che rappresenta la strategia astratta. Essa definisce il contratto da rispettare per le classi che implementano la lettura da file;

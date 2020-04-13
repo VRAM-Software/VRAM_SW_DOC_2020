@@ -5,7 +5,12 @@ La configurazione base di WebStorm prevede la corretta configurazione dei path d
 Aprire le impostazioni di WebStorm dal suo menù "File" ed utilizzando la barra di ricerca cercare "Node.js and NPM". Verificare quindi che entrambe le voci "Node interpreter" e "Package manager" siano correttamente impostate.
 \\
 \\
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/node-npm.png}
+\begin{figure}[H] 	
+	\begin{center}
+		\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/node-npm.png}
+	\end{center}
+	\caption{Configurazione path di sistema}	
+\end{figure}
 \subsubsection{Importazione di un progetto}
 Dal menu "File" selezionare la voce "Open" e successivamente la root directory del repository desiderato.
 
@@ -15,20 +20,23 @@ Dal menu "File" selezionare la voce "Open" e successivamente la root directory d
 Per configurare il plug-in SonarLint, aprire le impostazioni di WebStorm dal suo menù "File". Quindi nella sezione "Tools" selezionare la voce "SonarLint". Nella finestra "Visualizzare", selezionare il "+" per aggiungere una connessione al servizio WEB SonarCloud.
 \\
 \\
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/connection.png}
+\begin{figure}[H] 	
+	\begin{center}
+		\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/connection.png}
+	\end{center}
+	\caption{Aggiungere una connessione a SonarCloud}	
+\end{figure}
 \pagebreak
-\\
 Dare un nome al collegamento e selezionare SonarCloud, successivamente premere "Next".
 \\
 \\
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/connection-name.png}
-\\
-Premere su "Create Token".
-\\
-\\
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/token.png}
-\\
-Scegliere un nome e creare il token, copiarlo quindi nella finestra WebStorm precedente.
+\begin{figure}[H] 	
+	\begin{center}
+		\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/connection-name.png}
+	\end{center}
+	\caption{Selezionare come collegamento SonarCloud}	
+\end{figure}
+Premere su "Create Token". Scegliere un nome e creare il token, copiarlo quindi nella finestra WebStorm precedente. \\
 %\\
 %\\
 %\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/sonarcloud.png}
@@ -37,7 +45,13 @@ La connessione viene verificata ed è possibile visualizzarla nell'elenco delle 
 Dopo aver terminato la configurazione globale è possibile configurare i singoli progetti. Per farlo, aprire le impostazioni di WebStorm dal suo menù "File". Quindi, nella sezione "Tools", espandere la voce "SonarLint" e selezionare "Project Settings".
 \\
 \\
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/sonarlint-project.png}
+\begin{figure}[H] 	
+	\begin{center}
+		\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/sonarlint-project.png}
+	\end{center}
+	\caption{Impostazione connessione SonarCloud}
+\end{figure}
+
 Selezionare la connessione a SonarCloud desiderata ed inserire una delle chiavi seguenti, a seconda del progetto che si sta configurando:
 \begin{itemize}
 	\item \textbf{plug-in Grafana}: VRAM-Software\_grafana\_prediction\_plugin;
@@ -73,7 +87,7 @@ Il file package.json contiene tutte le informazioni e i requisiti necessari dell
 			\end{verbatim}
 			\item \textbf{test}: il comando fa eseguire tutti i test automatici dell'applicazione;
 			\begin{verbatim}
-				npm test
+				npm run test
 			\end{verbatim}
 			\item \textbf{dev}: il comando genera una release di debug da utilizzare durante lo sviluppo, eseguendo inoltre i linting integrati nella dipendenza npm @grafana/toolkit. Non esegue i test automatici;
 			\begin{verbatim}
