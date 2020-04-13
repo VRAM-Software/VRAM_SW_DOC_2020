@@ -2,7 +2,7 @@
 \subsection{Applicazione esterna alla piattaforma Grafana}
 Per poter visualizzare la suddivisione delle componenti dell'applicazione esterna e le dipendenze che sussistono tra loro ad alto livello, viene riportato il diagramma dei Package in allegato nel file \textit{diagramma-package-app.png}.
 	\subsubsection{Progettazione architetturale}
-	Abbiamo deciso di utilizzare un design pattern architetturale Model-View-ViewModel (MVVM) perché si adatta bene alle tecnologie che vengono utilizzate ovvero React ed Electron. In particolare, come si può vedere dalla figura seguente, la View invia dati a ViewModel che a sua volta fornisce delle risposte che permettono di tenere la vista sempre aggiornata. Questo scambio di dati è asincrono ed è fornito interamente da Electron. Inoltre abbiamo la comunicazione tra ViewModel e Model che avviene con la richiesta di esecuzione delle operazioni da parte del ViewModel e la conseguente risposta da parte del Model. Anche questo scambio di messaggi è asincrono ed è implementato da un meccanismo di callback.
+	Abbiamo deciso di utilizzare un design pattern\glosp architetturale Model-View-ViewModel (MVVM) perché si adatta bene alle tecnologie che vengono utilizzate ovvero React ed Electron. In particolare, come si può vedere dalla figura seguente, la View invia dati a ViewModel che a sua volta fornisce delle risposte che permettono di tenere la vista sempre aggiornata. Questo scambio di dati è asincrono ed è fornito interamente da Electron. Inoltre abbiamo la comunicazione tra ViewModel e Model che avviene con la richiesta di esecuzione delle operazioni da parte del ViewModel e la conseguente risposta da parte del Model. Anche questo scambio di messaggi è asincrono ed è implementato da un meccanismo di callback\glo.
 	\mbox{}
 	\begin{landscape}
 		\begin{figure}
@@ -14,9 +14,9 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 	\end{landscape}
 	Analizzando i componenti, la nostra architettura è così strutturata: 
 	\begin{itemize}
-		\item \textbf{Model}: modulo che gestisce la business logic. Più in dettaglio esegue l'addestramento dei dati attraverso gli algoritmi di predizione e le operazioni di input/output dei file;
+		\item \textbf{Model}: modulo che gestisce la business logic\glo. Più in dettaglio esegue l'addestramento dei dati attraverso gli algoritmi di predizione e le operazioni di input/output dei file;
 		\item \textbf{View}: modulo che gestisce la presentazione dei dati attraverso React;
-		\item \textbf{ViewModel}: modulo che gestisce il binding tra View e Model con un meccanismo detto two-way-data-binding.
+		\item \textbf{ViewModel}: modulo che gestisce il binding\glosp tra View e Model con un meccanismo detto two-way-data-binding.
 	\end{itemize}
 	\subsubsection{Progettazione di dettaglio}
 		Di seguito viene descritta in dettaglio la progettazione dell'applicazione. In allegato viene fornito il file \textit{diagramma-classi-app.png} contenente l'intero diagramma delle classi.
@@ -28,7 +28,7 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		\begin{landscape}
 			\begin{figure}
 				\begin{figure} [H]
-					\includegraphics[width=\linewidth]{./img/Diagrammi/algorithm-app.png}
+					\includegraphics[width=\linewidth]{img/Diagrammi/algorithm-app.png}
 					\caption{Diagramma delle classi per gli algoritmi nel Model}
 				\end{figure}
 			\end{figure}
@@ -40,20 +40,20 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		%\begin{landscape}
 			%\begin{figure}
 				\begin{figure} [H]
-					\includegraphics[width=\linewidth]{./img/Diagrammi/read-app.png}
+					\includegraphics[width=\linewidth]{img/Diagrammi/read-app.png}
 					\caption{Diagramma delle classi per la Read nel Model}
 				\end{figure}
 			%\end{figure}
 		%\end{landscape}
 		\paragraph*{Write} \mbox{} \\[1mm]
-		Anche nella gestione dell'output abbiamo riscontrato che, indipendentemente dalla tipologia di file su cui scrivere, l'algoritmo per eseguire la scrittura di quest'ultimo ha uno scheletro comune. È stato quindi deciso di implementare il design pattern template method.
+		Anche nella gestione dell'output abbiamo riscontrato che, indipendentemente dalla tipologia di file su cui scrivere, l'algoritmo per eseguire la scrittura di quest'ultimo ha uno scheletro comune. È stato quindi deciso di implementare il design pattern\glosp template method.
 		La classe astratta \textit{Write} implementa il metodo \textit{writeToDisk(path, name, data, notes, callback)} che rappresenta la parte comune dell'algortimo di scrittura su file. Inoltre contiene il metodo astratto \textit{parser(data, callback)} che invece rappresenta la trasformazione dell'oggetto che vogliamo scrivere sul file nel formato corretto. Nel nostro caso abbiamo implementato la classe concreta \textit{WriteJson} ma è estendile a tutti i formati di file desiderati estendendo \textit{Write}.
 		\mbox{}
 		%\begin{landscape}
 		%	\begin{figure}
 				\begin{figure} [H]
 					\begin{center}
-						\includegraphics[width=120mm]{./img/Diagrammi/write-app.png}
+						\includegraphics[width=120mm]{img/Diagrammi/write-app.png}
 					\end{center}
 					\caption{Diagramma delle classi per la Write nel Model}
 				\end{figure}
@@ -68,7 +68,7 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		%	\begin{figure}
 				\begin{figure} [H]
 					\begin{center}
-						\includegraphics[width=100mm]{./img/Diagrammi/view-app.png}
+						\includegraphics[width=100mm]{img/Diagrammi/view-app.png}
 					\end{center}
 					\caption{Diagramma delle classi della View}
 				\end{figure}
@@ -78,7 +78,7 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		\paragraph{ViewModel} \mbox{} \\[1mm]
 		La ViewModel contiene i dati da visualizzare nella vista e le trasformazioni per richiamare le operazioni da eseguire nel modello.
 		In particolare è legato alla View tramite Electron che gestisce la loro comunicazione in modo asincrono appoggiandosi al nostro componente \textit{EventManager} e al Model attraverso il meccanismo asincrono di callback.
-		Abbiamo riscontrato la necessità di implementare il design pattern strategy in tre casi diversi:
+		Abbiamo riscontrato la necessità di implementare il design pattern\glosp strategy in tre casi diversi:
 		\paragraph*{Algorithm} \mbox{}
 		\begin{itemize}
 			\item \textbf{ProcessTraining}: è una classe concreta che rappresenta il context. In essa viene scelto quale algoritmo addestrare sulla base dei dati ricevuti ed ha una dipendenza di tipo aggregazione dall'interfaccia \textit{PerformTraining};
@@ -90,7 +90,7 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		\begin{landscape}
 			\begin{figure}
 				\begin{figure} [H]
-					\includegraphics[width=\linewidth]{./img/Diagrammi/ViewModel-train-app.png}
+					\includegraphics[width=\linewidth]{img/Diagrammi/ViewModel-train-app.png}
 					\caption{Diagramma delle classi per il training nel ViewModel}
 				\end{figure}
 			\end{figure}
@@ -100,7 +100,7 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		\begin{landscape}
 			\begin{figure}
 				\begin{figure} [H]
-					\includegraphics[width=\linewidth]{./img/Diagrammi/ds-app.png}
+					\includegraphics[width=\linewidth]{img/Diagrammi/ds-app.png}
 					\caption{Diagramma di sequenza di processo dei dati per SVM}
 				\end{figure}
 			\end{figure}
@@ -116,7 +116,7 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		%\begin{landscape}
 		%	\begin{figure}
 				\begin{figure} [H]
-					\includegraphics[width=\linewidth]{./img/Diagrammi/ViewModel-read-app.png}
+					\includegraphics[width=\linewidth]{img/Diagrammi/ViewModel-read-app.png}
 					\caption{Diagramma delle classi per la Read nel ViewModel}
 				\end{figure}
 		%	\end{figure}
@@ -131,7 +131,7 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		%\begin{landscape}
 		%	\begin{figure}
 				\begin{figure} [H]
-					\includegraphics[width=\linewidth]{./img/Diagrammi/ViewModel-write-app.png}
+					\includegraphics[width=\linewidth]{img/Diagrammi/ViewModel-write-app.png}
 					\caption{Diagramma delle classi per la Write nel ViewModel}
 				\end{figure}
 		%	\end{figure}
