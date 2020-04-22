@@ -1,0 +1,47 @@
+% \textbf = grassetto; \Large = font più grande
+% \rowcolors{quanti colori alternare}{colore numero riga pari}{colore numero riga dispari}: colori alternati per riga
+% \rowcolor{color}: cambia colore di una riga
+% p{larghezza colonna}: p è un tipo di colonna di testo verticalmente allineata sopra, ci sarebbe anche m che è centrata a metà ma non è precisa per questo utilizzo TBStrut; la sintassi >{\centering} indica che il contenuto della colonna dovrà essere centrato
+% \TBstrut fa parte di alcuni comandi che ho inserito in config.tex che permetto di aggiungere un po' di padding al testo
+% \\ [2mm] : questra scrittura indica che lo spazio dopo una break line deve essere di 2mm
+% 
+
+%\setcounter{secnumdepth}{0}
+%\hfill \break
+%\textbf{\Large{Diario delle modifiche}} \\
+
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %Inserire questo per escludere una sezione dall'indice.
+
+\section*{Registro delle modifiche} %Asterisco per fare sezione non numerata
+\rowcolors{2}{gray!25}{gray!15}
+\begin{longtable} {
+		>{\centering}p{17mm} 
+		>{\centering}p{19.5mm}
+		>{\centering}p{24mm} 
+		>{\centering}p{24mm} 
+		>{}p{32mm}}
+	\rowcolor{gray!50}
+	\textbf{Versione} & \textbf{Data} & \textbf{Nominativo} & \textbf{Ruolo} & \textbf{Descrizione} \TBstrut \\
+	9.0.0 & 2020-03-27 & Schiavon Rebecca, Santagiuliana Vittorio e Dalla Libera Marco & \textit{Analista}, \textit{Verificatore} e \textit{Responsabile di progetto} & Aggiornamento e verifica del paragrafo §3.21 e approvazione del documento. \TBstrut \\ [2mm]
+	\rowcolor{gray!50}
+	\multicolumn{5}{c}{\textbf{Incrementi di versione dovuti a modifiche in altri sottoprodotti}}\\	
+	7.1.0 & 2020-03-18 & Dalla Libera Marco e Toffoletto Massimo & \textit{Analista} e \textit{Verificatore} & Riordinamento dei casi d'uso e conseguente verifica. \TBstrut \\ [2mm]
+	\rowcolor{gray!50}
+	\multicolumn{5}{c}{\textbf{Incrementi di versione dovuti a modifiche in altri sottoprodotti}}\\	
+	\rowcolor{gray!50}
+	\multicolumn{5}{c}{\textbf{Prodotto uniformato alla versione 7.0.0}}\\	
+	3.1.1 & 2020-02-14 & Corrizzato Vittorio, Toffoletto Massimo e Schiavon Rebecca & \textit{Analista}, \textit{Verificatore} e \textit{Responsabile di progetto} & Aggiornamento e verifica dei paragrafi §4 e §5 con approvazione finale del documento. \TBstrut \\ [2mm]
+	2.1.1 & 2020-02-08 & Toffoletto Massimo, Santagiuliana Vittorio e Rampazzo Marco & \textit{Analista}, \textit{Verificatore} e \textit{Responsabile di progetto} & Aggiornamento e verifica dei paragrafi §3.2, §3.3, §3.4, §3.6, §3.6.1, §3.7, §3.8 e §3.16 e approvazione del documento. \TBstrut \\ [2mm]
+	1.3.3 & 2020-02-04 & Spreafico Alessandro e Schiavon Rebecca & \textit{Analista} e \textit{Verificatore} & Stesura e verifica dei paragrafi §3.2.1-§3.2.14, §3.3.1-§3.3.3, §3.6.2-§3.6.4, §3.6.6-§3.6.11, §3.6.13-3.6.15, §3.7.1-§3.7.3, §3.9-§3.10, §3.12 e §3.17. \TBstrut \\ [2mm]
+	1.2.2 & 2020-02-03 & Toffoletto Massimo e Corrizzato Vittorio & \textit{Analista} e \textit{Verificatore} & Correzione della struttura dei casi d'uso, dei riferimenti, del posizionamento di alcuni requisiti e della loro spiegazione, dello stile tipografico, del registro delle modifiche e degli schemi generali tutto come segnalato dal committente. \TBstrut \\ [2mm]
+	1.1.1 & 2020-01-07 & Corrizzato Vittorio, Santagiuliana Vittorio e Toffoletto Massimo & \textit{Analista}, \textit{Verificatore} e \textit{Responsabile di progetto} & Stesura e verifica dei paragrafi §3.15-§3.18 e approvazione del documento. \TBstrut \\ [2mm]
+	0.5.5 & 2020-01-05 & Dalla Libera Marco e Spreafico Alessandro & \textit{Analista} e \textit{Verificatore} & Stesura e verifica dei paragrafi §4 e §5. \TBstrut \\ [2mm]
+	0.4.4 & 2020-01-05 & Schiavon Rebecca e Spreafico Alessandro & \textit{Analista} e \textit{Verificatore} & Stesura e verifica dei paragrafi §3.19-§3.21. \TBstrut \\ [2mm]
+	0.3.3 & 2019-12-28 & Schiavon Rebecca e Spreafico Alessandro & \textit{Analista} e \textit{Verificatore} & Stesura e verifica dei paragrafi §3.1 e §3.10-§3.14. \TBstrut \\ [2mm]
+	0.2.2 & 2019-12-27 & Toffoletto Massimo e Spreafico Alessandro & \textit{Analista} e \textit{Verificatore} & Stesura e verifica dei paragrafi §2 e §3.6-§3.9. \TBstrut \\ [2mm]
+	0.1.1 & 2019-12-26 & Dalla Libera Marco e Santagiuliana Vittorio & \textit{Analista} e \textit{Verificatore} & Stesura e verifica dei paragrafi §1 e §3.2-§3.5. \TBstrut \\ [2mm]
+	
+\end{longtable}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{4}} %Inserire questo per ripristinare il normale inserimento delle sezioni nell'indice. 4 significa fino al paragrah

@@ -1,0 +1,46 @@
+% \textbf = grassetto; \Large = font più grande
+% \rowcolors{quanti colori alternare}{colore numero riga pari}{colore numero riga dispari}: colori alternati per riga
+% \rowcolor{color}: cambia colore di una riga
+% p{larghezza colonna}: p è un tipo di colonna di testo verticalmente allineata sopra, ci sarebbe anche m che è centrata a metà ma non è precisa per questo utilizzo TBStrut; la sintassi >{\centering} indica che il contenuto della colonna dovrà essere centrato
+% \TBstrut fa parte di alcuni comandi che ho inserito in config.tex che permetto di aggiungere un po' di padding al testo
+% \\ [2mm] : questra scrittura indica che lo spazio dopo una break line deve essere di 2mm
+% 
+
+%\setcounter{secnumdepth}{0}
+%\hfill \break
+%\textbf{\Large{Diario delle modifiche}} \\
+
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %Inserire questo per escludere una sezione dall'indice.
+
+\section*{Registro delle modifiche} %Asterisco per fare sezione non numerata
+\rowcolors{2}{gray!25}{gray!15}
+\begin{longtable} {
+		>{\centering}p{17mm} 
+		>{\centering}p{19.5mm}
+		>{\centering}p{24mm} 
+		>{\centering}p{24mm} 
+		>{}p{32mm}}
+	\rowcolor{gray!50}
+	\textbf{Versione} & \textbf{Data} & \textbf{Nominativo} & \textbf{Ruolo} & \textbf{Descrizione} \TBstrut \\
+	16.0.0 & 2020-04-12 & Corrizzato Vittorio, Rampazzo Marco e Santagiuliana Vittorio & \textit{Progettista}, \textit{Verificatore} e \textit{Responsabile di progetto} & Stesura e verifica del glossario e approvazione del documento. \TBstrut \\ [2mm]
+	\rowcolor{gray!50}
+	\multicolumn{5}{c}{\textbf{Incrementi di versione dovuti a modifiche in altri sottoprodotti}}\\	
+	13.3.0 & 2020-04-07 & Toffoletto Massimo e Rampazzo Marco & \textit{Progettista} e \textit{Verificatore} & Stesura e verifica del paragrafo §7. \TBstrut \\ [2mm]
+	\rowcolor{gray!50}
+	\multicolumn{5}{c}{\textbf{Incrementi di versione dovuti a modifiche in altri sottoprodotti}}\\	
+	12.3.1 & 2020-04-05 & Schiavon Rebecca e Toffoletto Massimo & \textit{Progettista} e \textit{Verificatore} & Aggiornamento e verifica dei paragrafi §5-§6. \TBstrut \\ [2mm]
+	12.3.0 & 2020-04-05 & Spreafico Alessandro e Toffoletto Massimo & \textit{Progettista} e \textit{Verificatore} & Stesura e verifica del paragrafo §6. \TBstrut \\ [2mm]
+	12.2.0 & 2020-04-05 & Corrizzato Vittorio e Toffoletto Massimo & \textit{Progettista} e \textit{Verificatore} & Stesura e verifica del paragrafo §5. \TBstrut \\ [2mm]
+	\rowcolor{gray!50}
+	\multicolumn{5}{c}{\textbf{Incrementi di versione dovuti a modifiche in altri sottoprodotti}}\\	
+	10.4.1 & 2020-04-01 & Schiavon Rebecca e Santagiuliana Vittorio & \textit{Progettista} e \textit{Verificatore} & Aggiornamento e verifica dei paragrafi §1-§4. \TBstrut \\ [2mm]
+	10.4.0 & 2020-04-01 & Toffoletto Massimo e Dalla Libera Marco & \textit{Progettista} e \textit{Verificatore} & Stesura e verifica del paragrafo §4. \TBstrut \\ [2mm]
+	\rowcolor{gray!50}
+	\multicolumn{5}{c}{\textbf{Incrementi di versione dovuti a modifiche in altri sottoprodotti}}\\	
+	9.4.0 & 2020-03-29 & Dalla Libera Marco e Toffoletto Massimo & \textit{Progettista} e \textit{Verificatore} & Stesura e verifica del paragrafo §3. \TBstrut \\ [2mm]
+	9.3.0 & 2020-03-28 & Corrizzato Vittorio e Santagiuliana Vittorio & \textit{Progettista} e \textit{Verificatore} & Stesura e verifica dei paragrafi §1 e §2. \TBstrut \\ [2mm]
+	9.2.0 & 2020-03-28 & Santagiuliana Vittorio e Spreafico Alessandro & \textit{Progettista} e \textit{Verificatore} & Creazione template manuale sviluppatore. \TBstrut \\ [2mm]
+\end{longtable}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{4}} %Inserire questo per ripristinare il normale inserimento delle sezioni nell'indice. 4 significa fino al paragrah

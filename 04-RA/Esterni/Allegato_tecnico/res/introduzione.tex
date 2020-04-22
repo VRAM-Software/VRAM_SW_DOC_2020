@@ -1,0 +1,23 @@
+\section{Introduzione}
+    \subsection{Scopo del documento}
+        L'obiettivo di questo documento è riportare in modo puramente tecnico le scelte architetturali, strutturali e logiche intraprese dal gruppo \textit{VRAM Software} nel corso dello sviluppo del progetto \textit{Predire in Grafana}. Tale allegato sarà quindi corredato di vari diagrammi UML 2.x (classe, package e sequenza) che dimostreranno i vari design pattern adottati, la struttura del prodotto e i suoi scenari di esecuzione.
+    \subsection{Scopo del prodotto}
+        Il prodotto che il gruppo \textit{VRAM Software} sta approfondendo prevede lo sviluppo di un applicativo esterno e di un plug-in per la piattaforma di analisi Grafana\glosp per la predizione di dati tramite gli algoritmi di support vector machine (SVM) e di regressione lineare (RL). L'applicativo esterno fungerà da trainer generando un file JSON (predittore) partendo da dei dati in CSV a cui viene applicato l'algoritmo di predizione scelto dall'utente. Il file JSON ottenuto sarà poi inserito nel software Grafana tramite l'apposito plug-in e, dopo aver associato i nodi che si vogliono analizzare con i rispettivi predittori, sarà possibile visualizzare la previsione sul grafico della dashboard di Grafana. È inoltre presente la possibilità di salvare suddetti dati su un database InfluxDB. In tal modo il gruppo \textit{VRAM Software} insieme al proponente \textit{Zucchetti} punta ad agevolare l'attività di DevOps fornendo un valido strumento di predizione e monitoraggio dei dati.
+    \subsection{Riferimenti}
+        \subsubsection{Normativi}
+            \begin{itemize}
+                \item \textbf{Norme di Progetto}: \textit{Norme di Progetto v. 14.2.0};
+                \item \textbf{Capitolato}\glosp \textbf{d'appalto}: \textit{C4 - Zucchetti - Predire in Grafana} \\
+                 \url{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C4.pdf}.
+            \end{itemize}
+        \subsection{Informativi}
+        \begin{itemize}
+        	\item \textbf{Analisi dei Requisiti}: \textit{Analisi dei Requisiti v. 13.3.0}
+        \end{itemize}
+        \subsection{Tecnici}
+            \begin{itemize}
+                \item \textbf{TypeScript}: \url{https://www.typescriptlang.org/docs/home.html};
+                \item \textbf{JavaScript}: \url{https://developer.mozilla.org/it/docs/Web/JavaScript};
+                \item \textbf{AngularJS}: \url{https://docs.angularjs.org/api};
+                \item \textbf{React}: \url{https://it.reactjs.org/docs}.
+            \end{itemize}
