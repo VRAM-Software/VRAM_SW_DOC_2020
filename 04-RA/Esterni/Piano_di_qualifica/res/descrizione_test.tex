@@ -1,0 +1,307 @@
+\section{Specifica dei test}
+Il nostro gruppo ha scelto di adottare il Modello a V\glosp per garantire la qualità del nostro prodotto\glo. In particolare, questo modello prevede lo sviluppo dei test durante le attività di analisi dei requisiti, progettazione\glosp architetturale e progettazione\glosp di dettaglio oltre a validazione\glosp e collaudo.
+In questo modo è possibile verificare la correttezza sia di tutti gli aspetti che compongono il progetto\glosp che delle singole parti sviluppate. Sono state individuate quattro tipologie di test:
+\begin{itemize}
+	\item test di accettazione;
+	\item test di sistema;
+	\item test di integrazione;
+	\item test di unità.
+\end{itemize}
+Ogni volta che viene svolta un'attività viene definita una tabella con i test di una tipologia.
+All'interno del documento \textit{Norme di Progetto v. 4.1.1} vengono definite le caratteristiche dei test e i codici che identificano univocamente i singoli test.
+
+\subsection{Test di accettazione}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %Inserire questo per escludere una sezione dall'indice.
+
+\rowcolors{2}{gray!25}{gray!15}
+\setcounter{table}{0}
+\begin{longtable} {
+		>{}p{15mm} 
+		>{}p{79.5mm}
+		>{}p{15mm} 
+		>{}p{15mm}
+		>{}p{0mm}}
+	\rowcolor{gray!50}
+	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato} & \textbf{Esito} &\TBstrut \\
+	TA1 & Verificare che l'utente possa addestrare gli algoritmi di previsione sull'applicazione esterna & NI & NE &\TBstrut \\ [2mm]
+	TA1.1 & Verificare che l'utente possa selezionare e caricare, dal suo dispositivo, un file CSV contenente i dati su cui effettuare l'addestramento & NI & NE &\TBstrut \\ [2mm]
+	TA1.2 & Verificare che l'utente possa selezionare e caricare, dal suo dispositivo, un file JSON contenente la configurazione di un addestramento precedentemente eseguito & NI & NE &\TBstrut \\ [2mm]
+	TA1.1.1 & Verificare che l'inserimento di un file CSV non valido venga visualizzato un messaggio d'errore & NI & NE &\TBstrut \\ [2mm]
+	TA1.2.1 & Verificare che l'inserimento di un file JSON non valido venga visualizzato un messaggio d'errore & NI & NE &\TBstrut \\ [2mm]
+	TA2 & Verificare che l'utente possa visualizzare un grafico a dispersione che rappresenti i dati utilizzati per l'addestramento nell'applicazione esterna & NI & NE &\TBstrut \\ [2mm] 
+	TA3 & Verificare che l'utente possa inserire delle note che verranno scritte nel file JSON contenente il risultato dell'addestramento & NI & NE&\TBstrut \\ [2mm]
+	TA4 & Verificare che l'utente possa scegliere quale algoritmo utilizzare per effettuare l'addestramento dei dati & NI & NE &\TBstrut \\ [2mm] 
+	TA5 & Verificare che l'utente posso avviare l'addestramento dell'algoritmo di predizione scelto utilizzando i dati inseriti & NI & NE &\TBstrut \\ [2mm]
+	TA5.1 & Verificare che l'utente possa fermare l'addestramento dell'algoritmo di predizione & NI & NE &\TBstrut \\ [2mm]
+	TA6 & Verificare che, alla fine del processo di addestramento, venga visualizzato un messaggio di conferma & NI & NE &\TBstrut \\ [2mm]
+	TA7 & Verificare che, alla fine del processo di addestramento, vengano visualizzati gli indici di qualità delle previsioni eseguite sull'app esterna & NI & NE &\TBstrut \\ [2mm]
+	TA8 & Verificare che l'utente, alla fine del processo di addestramento, riceva un file JSON contenente il risultato dell'addestramento & NI & NE &\TBstrut \\ [2mm]
+	TA9	& Verificare che l'utente possa avviare il plug-in & NI & NE  &\TBstrut \\ [2mm]
+	TA10 & Verificare che l'utente possa caricare il file JSON ottenuto dall'addestramento effettuato dall'applicazione esterna & NI & NE  &\TBstrut \\ [2mm]
+	TA11 & Verificare che l'utente possa associare i predittori letti dal file JSON al flusso dati & NI & NE  &\TBstrut \\ [2mm]
+	TA11.1 & Verificare che l'utente possa selezionare un flusso di dati statico su cui eseguire delle previsioni & NI & NE  &\TBstrut \\ [2mm]
+	TA11.2 & Verificare che l'utente possa visualizzare un messaggio che conferma il successo nel collegamento dei nodi al flusso dati & NI & NE  &\TBstrut \\ [2mm]
+	TA12 & Verificare che, se il collegamento dei nodi al flusso dati non va a buon file, l'utente visualizzi un messaggio di errore & NI & NE  &\TBstrut \\ [2mm]
+	TA13 & Verificare che l'utente possa visualizzare il grafico dei risultati della previsione all'interno di una dashboard\glosp precedentemente configurata & NI & NE  &\TBstrut \\ [2mm]
+	TA14 & Verificare che l'utente possa fermare l'esecuzione del plug-in rimuovendo il relativo pannello dalla dashboard\glo & NI & NE  &\TBstrut \\ [2mm]
+	TA15 & Verificare che l'utente possa definire un alert\glosp all'interno del pannello della dashboard\glosp su cui si è applicato il plug-in & NI & NE  &\TBstrut \\ [2mm]
+	TA15.1 & Verificare che l'utente possa inserire un alert\glosp nel pannello della dashboard\glo & NI & NE  &\TBstrut \\ [2mm]
+	TA15.2 & Verificare che l'utente possa definire le regole di funzionamento di un alert\glo & NI & NE  &\TBstrut \\ [2mm]
+	TA15.3 & L'utente deve poter definire le condizioni di funzionamento di un alert\glo & NI & NE  &\TBstrut \\ [2mm]
+	TA15.4 & L'utente deve poter definire il comportamento legato all'assenza di dati  & NI & NE  &\TBstrut \\ [2mm]
+	TA16 & Verificare che l'utente visualizzi un messaggio di errore se viene inserito un input errato nella definizione di un alert\glo & NI & NE  &\TBstrut \\ [2mm]
+	TA17 & Verificare che l'utente possa sospendere un alert\glo & NI & NE  &\TBstrut \\ [2mm]
+	TA18 & Verificare che l'utente possa rimuovere un alert\glo & NI & NE  &\TBstrut \\ [2mm]
+	\rowcolor{white}
+	\caption{Test di accettazione}
+\end{longtable}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{4}} %Inserire questo per ripristinare il normale inserimento delle sezioni nell'indice. 4 significa fino al paragrah
+
+\subsection{Test di sistema}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %Inserire questo per escludere una sezione dall'indice.
+
+\rowcolors{2}{gray!25}{gray!15}
+\begin{longtable} {
+		>{}p{15mm} 
+		>{}p{79.5mm}
+		>{}p{15mm} 
+		>{}p{15mm}
+		>{}p{0mm}}
+	\rowcolor{gray!50}
+	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato} & \textbf{Esito} &\TBstrut \\
+	TS1 & Verificare che l'addestramento degli algoritmi produca un file JSON con i parametri per le previsioni & NI & NE  &\TBstrut \\ [2mm]
+	TS2 & Verificare che l'addestramento possa essere fermato dall'utente & NI & NE  &\TBstrut \\ [2mm]
+	TS3 & Verificare che la previsione possa essere fermata dall'utente & NI & NE  &\TBstrut \\ [2mm]
+	TS4 & Verificare che successivamente al caricamento del file CSV venga effettutata la lettura e il caricamento dei dati nello stato dell'applicazione & NI & NE  &\TBstrut \\ [2mm]
+	TS5 & Verificare che successivamente al caricamento del file JSON venga effettutata la lettura e il caicamento della configurazione di un'addestramento precedente nello stato dell'applicazione & NI & NE  &\TBstrut \\ [2mm]
+	TS6 & Verificare che le note scritte dall'utente vengano inserite nel file JSON di output & NI & NE  &\TBstrut \\ [2mm]
+	TS7 & Verificare la corretta visualizzazione della bontà dei modelli di previsione a seguito dell'addestramento sui dati & NI & NE  &\TBstrut \\ [2mm]
+	TS8 & Verificare la corretta visualizzazione del grafico relativo ai dati e alla modifica dello stesso in seguito all'addestramento dei dati & NI & NE  &\TBstrut \\ [2mm]
+	TS9 & Verificare che i nodi ricavati dal file JSON siano associati correttamente al flusso dati scelto in Grafana\glo & NI & NE &\TBstrut \\ [2mm]
+	TS10 & Applicare le previsioni su un flusso dati statico e visualizzare correttamente i dati ottenuti all'interno di un grafico contenuto nella dashboard\glo & NI & NE  &\TBstrut \\ [2mm]
+	TS11 & Verificare che l'utente possa definire il comportamento di un alert & NI & NE  &\TBstrut \\ [2mm]
+	TS12 & Verificare che l'utente possa aggiungere un alert al nostro pannello per monitorare i dati della previsione & NI & NE  &\TBstrut \\ [2mm]
+	TS13 & Verificare che l'utente possa rimuovere un alert dal nostro pannello & NI & NE  &\TBstrut \\ [2mm]
+	TS14 & Verificare che la rimozione del nostro pannello implichi la fermata del plug-in & NI & NE  &\TBstrut \\ [2mm]
+	TS15 & Verificare che i messaggi d'errore relativi agli alert vengano visualizzati & NI & NE  &\TBstrut \\ [2mm]
+	TS16 & Verificare che i messaggi d'errore relativi ad un caricamento di un file JSON non valido vengano visualizzati & NI & NE  &\TBstrut \\ [2mm]
+	TS17 & Verificare che i messaggi d'errore relativi all'associazione dei predittorei vengano visualizzati & NI & NE  &\TBstrut \\ [2mm]
+	\rowcolor{white}
+	\caption{Test di sistema}
+\end{longtable}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{4}} %Inserire questo per ripristinare il normale inserimento delle sezioni nell'indice. 4 significa fino al paragrah
+
+\subsection{Test di integrazione}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %Inserire questo per escludere una sezione dall'indice.
+
+\rowcolors{2}{gray!25}{gray!15}
+\begin{longtable} {
+		>{}p{15mm} 
+		>{}p{79.5mm}
+		>{}p{15mm} 
+		>{}p{15mm}
+		>{}p{0mm}}
+	\rowcolor{gray!50}
+	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato} & \textbf{Esito} &\TBstrut \\
+	%------->Test app esterna
+	%TI      &  & I & P  &\TBstrut \\ [2mm]
+	TI1      &  Verificare che venga chiusa la finestra per scegliere il nome del file json dopo che l'utente ha schiacciato il pulsante chiudi nella medesima finestra e quindi dimostrare la correttezza del metodo 'handleCloseModal(event)' del componente App.& I & P  &\TBstrut \\ [2mm]
+	TI2      &  Verificare che venga chiusa la finestra per scegliere il nome del file json dopo che l’utente ha schiacciato fuori dalla medesima finestra per dimostrare la correttezza del metodo 'handleCloseModal(event)' del componente App.& I & P  &\TBstrut \\ [2mm]
+	TI3      &  Verificare che quando viene cliccato il pulsante Salva json il componente Modal venga nascosto.& I & P  &\TBstrut \\ [2mm]
+	TI4      &  Verificare che venga cambiato lo stato del componente principale che indica il nome del file da salvare quando vengono effettuati cambiamenti all'input di testo della finestra, per cambiare il nome del file json. Dimostra la correttezza del metodo 'handleChangeFileName(event)' del componente App.& I & P  &\TBstrut \\ [2mm]
+	TI5      &  Verificare che venga cambiato lo stato del componente principale che indica le note che possono essere inserite nel file json di output 'handleChangeNotes(event)' del componente App.& I & P  &\TBstrut \\ [2mm]
+	TI6      &  Verificare che venga cambiato l'algoritmo dopo aver cliccato il bottone del componente Checkbox.& I & P  &\TBstrut \\ [2mm]
+	TI7      &  Verificare che venga cambiato l'algoritmo dopo aver cliccato il test relativo al bottone del componente Checkbox.& I & P  &\TBstrut \\ [2mm]
+	TI8      &  Verificare che il metodo 'onChange(e)' eseguito quando vengono selezionati i file di input, inserisca correttamente le informazioni del file json all'interno dello stato del componente principale 'App'.& I & P  &\TBstrut \\ [2mm]
+	TI9      &  Verificare che il metodo 'onChange(e)' eseguito quando vengono selezionati i file di input, inserisca correttamente le informazioni del file csv all'interno dello stato del componente principale 'App'.& I & P  &\TBstrut \\ [2mm]
+	TI10      &  Verificare che la scelta di un file non corretto venga segnalata correttamente tramite il log della console sviluppatore.& I & P  &\TBstrut \\ [2mm]
+	TI11      &  Verificare che la scelta di un file nullo venga segnalata correttamente tramite il log della console sviluppatore.& I & P  &\TBstrut \\ [2mm]
+	TI12      &  Verificare che la scelta di un algoritmo già scelto venga segnalata correttamente tramite il log della console sviluppatore.& I & P  &\TBstrut \\ [2mm]
+
+	%------->Test plugin
+	TI13		& Verificare che la classe processData quando viene inizializzata con un json di configurazione con proprietà 'pluginAim' uguale a 'svm', chiami la funzione PerformPrediction della ProcessSvm che a sua volta chiami il metodo predict di SvmPrediction che ritornerà il risulato della predizione sui dati inseriti con i metodi setter di processData.& I & P &\TBstrut \\ [2mm]
+	TI14		& Verificare che la classe processData quando viene inizializzata con un json di configurazione con proprietà 'pluginAim' uguale a 'rl', chiami la funzione PerformPrediction della ProcessRl che a sua volta chiami il metodo predict di RlPrediction che ritornerà il risulato della predizione sui dati inseriti con i metodi setter di processData.& I & P &\TBstrut \\ [2mm]
+	TI15		& Verificare che la classe WriteInflux venga istanziata correttamente tramite costruttore, creando un'istanza InfluxDB collegata ad un database contenuto nell'immagine docker InfluxDB scaricata da dockerhub.& I & P &\TBstrut \\ [2mm]
+	TI16	& Verificare che i metodi writeArrayToInflux e writePointToInflux scrivano correttamente i dati in un istanza docker influxDB scaricata da dockerhub.& I & P &\TBstrut \\ [2mm]
+	
+	\rowcolor{white}
+	\caption{Test di integrazione}
+\end{longtable}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{4}} %Inserire questo per ripristinare il normale inserimento delle sezioni nell'indice. 4 significa fino al paragrah
+
+
+\subsection{Test di unità}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %Inserire questo per escludere una sezione dall'indice.
+
+\rowcolors{2}{gray!25}{gray!15}
+\begin{longtable} {
+		>{}p{15mm} 
+		>{}p{79.5mm}
+		>{}p{15mm} 
+		>{}p{15mm}
+		>{}p{0mm}}
+	\rowcolor{gray!50}
+	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato} & \textbf{Esito} &\TBstrut \\
+	%TU		& & I & P &\TBstrut \\ [2mm]
+	%------->App
+	TU1		    & Verificare che la scritta ‘VRAM Software Applicativo Esterno’ venga renderizzata per dimostrare il corretto funzionamento del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
+	TU2			& Verificare che i due componenti utilizzati per l’input dei file vengano correttamente renderizzati dimostrando quindi la correttezza del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
+	TU3			& Verificare che vengano renderizzati il grafico e l'input di testo per inserire le note, se sono presenti, nello stato del componente principale, i dati provenienti dal file csv dato in input dall'utente e quindi dimostrare la correttezza del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
+	TU4			& Verificare che non vengano renderizzati il grafico e l’input di testo per inserire le note, se non sono presenti i dati provenienti dal file csv dato in input dall’utente e quindi dimostrare la correttezza del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
+	TU5			& Verificare che il componente Modal, cioè la finestra utilizzata durante il salvataggio del file Json per cambiare il nome, venga renderizzato se la variabile di stato showModal ha valore 'true'.& I & P &\TBstrut \\ [2mm]
+	TU6			& Verificare che il componente ParamModal  venga renderizzato se la variabile di stato isParamModalEnabled ha valore 'true'.& I & P &\TBstrut \\ [2mm]
+	TU7			& Verificare che non venga effettuato il render del componente modal quando viene inizializzata l'applicazione per dimostrare la correttezza del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
+	TU8			& Verificare che il pulsante ‘Inizia addestramento svm’ sia disabilitato quando viene inizializzata l’applicazione e quindi dimostrare la correttezza del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
+	TU9			& Verificare che il pulsante ‘Inizia addestramento rl’ sia disabilitato quando viene inizializzata l’applicazione e quindi dimostrare la correttezza del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
+	TU10		& Verificare che il pulsante ‘Inizia addestramento svm’ sia abilitato quando vengono salvati nello stato del componente principale le informazioni del file csv e quindi dimostrare la correttezza del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
+	TU11    	& Verificare che il pulsante ‘Inizia addestramento rl’ sia abilitato quando vengono salvati nello stato del componente principale le informazioni del file csv e quindi dimostrare la correttezza del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
+	TU12    	& Verificare che il pulsante ‘Salva json’ sia disabilitato quando viene inizializzata l’applicazione, in quanto non è ancora stato inserito un file csv e non è stato eseguito l’addestramento.& I & P &\TBstrut \\ [2mm]
+	TU13     	& Verificare che il pulsante ‘Salva json’ sia abilitato dopo che è stato eseguito l’addestramento dei dati inseriti da utente e quindi dimostrare la correttezza del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
+	TU14	    & Verificare che non vengono renderizzati i path dei file csv e json se non sono stati selezionati dall’utente e quindi dimostrare la correttezza del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
+	TU15     	& Verificare che venga renderizzato il path del file csv se è stato precedentemente selezionato dall’utente e quindi dimostrare la correttezza del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
+	TU16	    & Verificare che venga renderizzato il path del file json se è stato precedentemente selezionato dall’utente e quindi dimostrare la correttezza del metodo render() del componente App.& I & P &\TBstrut \\ [2mm]
+	TU17		& Verificare che il componente CheckBox non venga renderizzato senza che venga inserito alcun dato in input dall'utente, per dimostrare la correttezza del metodo render() di App.& I & P &\TBstrut \\ [2mm]
+	TU18		& Verificare che il componente CheckBox venga renderizzato quando vengono inseriti dei dati in input dall'utente, per dimostrare la correttezza del metodo render() di App.& I & P &\TBstrut \\ [2mm]
+	TU19		& Verificare che quando viene effettuato l'addestramento il pulsante 'Inizia addestramento' cambi l'etichetta in 'Addestrando...' se la variabile di stato isTraining ha valore 'true', per dimostrare la correttezza del metodo render() di App.& I & P &\TBstrut \\ [2mm]
+	TU20		& Verificare che il pulsante venga renderizzato non mostrando 'Addestrando' se la variabile di stato isTraining ha valore 'false'.& I & P &\TBstrut \\ [2mm]
+	TU21		& Verificare che il metodo onChange resetti lo stato quando jsonFileInfo non è nullo.& I & P &\TBstrut \\ [2mm]
+	TU22		& Verificare che il metodo onChange resetti lo stato quando csvFileInfo non è nullo.& I & P &\TBstrut \\ [2mm]
+	TU23		& Verificare che venga mandato un segnale al processo principale di electron dopo che l’utente ha cliccato sul pulsante ‘Inizia addestramento svm’, per dimostrare la correttezza del metodo handleStartTraining() del componente App.& I & P &\TBstrut \\ [2mm]
+	TU24		& Verificare che venga mandato un segnale al processo principale di electron dopo che l’utente ha cliccato sul pulsante ‘Inizia addestramento rl’, per dimostrare la correttezza del metodo handleStartTraining() del componente App.& I & P &\TBstrut \\ [2mm]
+	TU25		& Verificare che venga aperta la finestra per scegliere il nome del file json dopo che l’utente ha schiacciato il pulsante ‘Salva json’ e quindi dimostrare la correttezza del metodo handleOpenModal(event) del componente App.& I & P &\TBstrut \\ [2mm]
+	TU26		& Verificare che la scelta dell'algoritmo venga segnalata tramite il log della console sviluppatore, per verificare la correttezza del metodo handleChangeAlgorithm(e).& I & P &\TBstrut \\ [2mm]
+	TU27		& Verificare che l'algoritmo possa essere cambiato cliccando il pulsante del componente CheckBox e che quindi vada a cambiare lo stato del componente App, verificando quindi la correttezza del metodo handleChangeAlgorithm().& I & P &\TBstrut \\ [2mm]
+	TU28		& Verificare che l'algoritmo possa essere cambiato cliccando il testo del componente CheckBox e che quindi vada a cambiare lo stato del componente App, verificando quindi la correttezza del metodo handleChangeAlgorithm().& I & P &\TBstrut \\ [2mm]
+	TU29		& Verificare che se viene effettuato il caricamento di un file nullo esso venga segnalato tramite il log della console sviluppatore, per verificare la correttezza del metodo onChange(e).& I & P &\TBstrut \\ [2mm]
+	
+	%------>Checkbox
+	TU30		& Verificare che il componente CheckBox sia renderizzato correttamente.& I & P &\TBstrut \\ [2mm]
+	TU31		& Verificare che siano renderizzati corettamente i due elementi che rappresentano gli algoritmi di RL e SVM.& I & P &\TBstrut \\ [2mm]
+	TU32		& Verificare che la funzione passata come argomento venga chiamata al click sul bottone o sul testo.& I & P &\TBstrut \\ [2mm]
+	
+	%------>Chooser
+	TU33    	& Verificare la corretta renderizzazione del bottone che apre la finestra di dialogo per la selezione del file di test. & I & P &\TBstrut \\ [2mm]
+	TU34		& Verificare che il componente Chooser sia renderizzato correttamente& I & P &\TBstrut \\ [2mm]
+	TU35    	& Verificare che la funzione passata come argomento venga chiamata al verificarsi dell'evento onChange nel selettore di file. & I & P &\TBstrut \\ [2mm]
+	TU36    	& Verificare che il bottone per aprire il selettore di file cambi colore per indicare che un file è stato selezionato. & I & P &\TBstrut \\ [2mm]
+	
+	%------->Graph
+	TU37    	& Verificare il corretto caricamento del componente ScatterPlot, utilizzato nella costruzione del grafico. & I & P &\TBstrut \\ [2mm]
+	%------->Modal
+	TU38    	& Verificare il rendering dei bottoni per la chiusura e il salvataggio del file JSON. & I & P &\TBstrut \\ [2mm]
+	TU39    	& Verificare la chiamata alla funzione di chiusura al click del pulsante chiudi. & I & P &\TBstrut \\ [2mm]
+	TU40    	& Verificare la chiamata della funzione di salvataggio al click del pulsante 'Salva JSON'. & I & P &\TBstrut \\ [2mm]
+	TU41    	& Verificare la chiusura della finestra di salvataggio quando perde il focus emulando un click nel background. & I & P &\TBstrut \\ [2mm]
+	%------->ParamModal
+	TU42		& Verificare che il componente ParamModal sia renderizzato correttamente. & I & P &\TBstrut \\ [2mm]
+	%------->RenderCircles
+	TU43		& Verificare che siano renderizzati dei cerchi.& I & P &\TBstrut \\ [2mm]
+	TU44		& Verificare che siano renderizzati dei cerchi verdi se l'algoritmo selezionato è SVM e l'etichetta è 1.& I & P &\TBstrut \\ [2mm]
+	TU45		& Verificare che siano renderizzati dei cerchi rossi se l'algoritmo selezionato è SVM e l'etichetta è diversa da 1.& I & P &\TBstrut \\ [2mm]
+	TU46		& Verificare che siano renderizzati dei cerchi neri se l'algoritmo selezionato è RL.& I & P &\TBstrut \\ [2mm]
+	%------->SaveFileName
+	TU47    	& Verificare il rendering del campo di input per il nome del file da salvare. & I & P &\TBstrut \\ [2mm]
+	TU48    	& Verificare la chiamata della funzione passata come parametro al verificarsi dell'evento onChange nella casella di testo per il nome del file. & I & P &\TBstrut \\ [2mm]
+	%------->Scatterplot
+	TU49		& Verificare che il componente renderizzi il componente RenderCircles per verificare la correttezza del metodo render().& I & P &\TBstrut \\ [2mm]
+	TU50		& Verificare che il componente renderizzi il componente Grid se esiste il la proprietà result che contiene il json del risultato dell'addestramento per verificare la correttezza del metodo render().& I & P &\TBstrut \\ [2mm]
+	TU51		& Verificare che il componente renderizzi il componente Axis X per verificare la correttezza del metodo render().& I & P &\TBstrut \\ [2mm]
+	TU52		& Verificare che il componente renderizzi il componente Axis Y per verificare la correttezza del metodo render().& I & P &\TBstrut \\ [2mm]
+	%------->TrendLine
+	TU53	    & Verificare che il componente '<line>' venga ritornato in seguito alla creazione del componente 'TrendLine'. & I & P &\TBstrut \\ [2mm]
+	TU54    	& Verificare che, con un set di dati di prova, vengano effettuate delle chiamate ai metodi della libreria D3 con le corrette coordinate che identificano inizio e fine della linea, calcolate a partire dai dati inseriti. & I & P &\TBstrut \\ [2mm]
+    TU55		& Verificare che il componente TrendLine sia renderizzato correttamente. & I & P &\TBstrut \\ [2mm]
+	%------->UserNotes
+	TU56    	& Verificare che il rendering della casella di testo per le note dell'utente sia avvenuto con successo. & I & P &\TBstrut \\ [2mm]
+	TU57    	& Verificare che il metodo passato come parametro venga chiamato al verificarsi dell'evento onChange nella casella di testo per le note. & I & P &\TBstrut \\ [2mm]
+	%------->RlTrainer
+	TU58		& Verificare che il metodo translateData per 'RL\glo' ritorni correttamente i dati nell'array quando gli input sono maggiori o uguali a 3.& I & P &\TBstrut \\ [2mm]
+	TU59		& Verificare che il metodo translateData per RL\glo' ritorni correttamente i dati nell'array quando gli input sono minori di 3.& I & P &\TBstrut \\ [2mm]
+	TU60		& Verificare che il metodo train chiami il suo omonimo presente in regression.module. & I & P &\TBstrut \\ [2mm]
+	TU61		& Verificare che il metodo buildTrainedObject ritorni un oggetto js con i giusti parametri. & I & P &\TBstrut \\ [2mm]
+	TU62		& Verificare che il metodo setParams abbia impostato corettamente i parametri su RlTrainer. & I & P &\TBstrut \\ [2mm]
+	TU63		& Verificare che il metodo setOptions abbia impostato corettamente i parametri su RlTrainer. & I & P &\TBstrut \\ [2mm]
+	%------->Svmtrainer
+	TU64		& Verificare che il metodo translateData per 'SVM\glo' ritorni correttamente i dati nell'array quando gli input sono minori di 4.& I & P &\TBstrut \\ [2mm]
+	TU65		& Verificare che il metodo translateData per 'SVM\glo' ritorni correttamente i dati nell'array quando gli input sono maggiori o uguali a 4.& I & P &\TBstrut \\ [2mm]
+	TU66		& Verificare che il metodo train chiami il suo omonimo presente in ml-modules.& I & P &\TBstrut \\ [2mm]
+	TU67		& Verificare che il metodo buildTrainedObject ritorni un oggetto js con i giusti parametri.& I & P &\TBstrut \\ [2mm]
+	TU68		& Verificare che il metodo setParams abbia impostato corettamente i parametri su SvmTrainer.& I & P &\TBstrut \\ [2mm]
+	%------->ReadCsv
+	TU69		& Verificare che il metodo parser dato un file csv ritorni un array di oggetti js.& I & P &\TBstrut \\ [2mm]
+	%------->ReadJson
+	TU70		& Verificare che il metodo parser dato un file json ritorni un array di oggetti js.& I & P &\TBstrut \\ [2mm]
+	%------->WriteJson
+	TU71		& Verificare che la funzione parser ritorni un array contenente le informazioni dell'oggetto passato in input.& I & P &\TBstrut \\ [2mm]
+	TU72		& Verificare che il metodo buildTraindedFile ritorni un oggetto JavaScript che contenga i giusti parametri.& I & P &\TBstrut \\ [2mm]
+	%------->Read
+	TU73		& Verificare che sia lanciato un errore se viene tentata l'inizializzazione di Read.& I & P &\TBstrut \\ [2mm]
+	TU74		& Verificare che sia lanciato un errore se i metodi delle classe figlie non sono implementate.& I & P &\TBstrut \\ [2mm]
+	TU75		& Verificare che il metodo readFile legga i file correttamente.& I & P &\TBstrut \\ [2mm]
+	TU76		& Verificare che sia lanciato un errore se la lettura del file fallisce.& I & P &\TBstrut \\ [2mm]
+	%------->Write
+	TU77		& Verificare che sia lanciato un errore se viene tentata l'inizializzazione di Write.& I & P &\TBstrut \\ [2mm]
+	TU78		& Verificare che sia lanciato un errore se i metodi delle classe figlie non sono implementate.& I & P &\TBstrut \\ [2mm]
+	TU79		& Verificare che il metodo writeToDisk provveda alla corretta scrittura del file.& I & P &\TBstrut \\ [2mm]
+    TU80		& Verificare che il metodo buildTraindedFile ritorni un oggetto JavaScript che contenga i giusti parametri. & I & P &\TBstrut \\ [2mm]
+
+	%------->ATTENZIONE INIZIO TEST PLUGIN
+	%------->panelCtrl
+	TU81		& Verificare che il costruttore imposti correttamente la gestione di eventi per il pannello.& I & P &\TBstrut \\ [2mm]
+	TU82		& Verificare il funzionamento del metodo 'link' che tramite una chiamata jQuery andrà ad ottenere l'elemento html in cui andrà successivamente inserito il grafico.& I & P &\TBstrut \\ [2mm]
+	TU83		& Verificare che il metodo getter per il contenitore del grafico ritorni il contenuto della proprietà '\_graphDiv' della classe.& I & P &\TBstrut \\ [2mm]
+	TU84		& Verificare che in seguito all'inizializzazione del pannello sia assegnato un numero di versione tra le proprietà del pannello.& I & P &\TBstrut \\ [2mm]
+	TU85		& Verificare che la versione del pannello salvata all'interno della configurazione non venga aggiornata se già superiore o uguale a quella del grafico.& I & P &\TBstrut \\ [2mm]
+	TU86		& Verificare che la funzione 'deleteJsonClick' cancelli la configurazione di predizione attualmente caricata e visualizzi il messaggio di completamento dell'operazione.& I & P &\TBstrut \\ [2mm]
+	TU87		& Verificare che la funzione 'uploadJsonClick' carichi una nuova configurazione di predizione da un file JSON e visualizzi il messaggio di completamento dell'operazione.& I & P &\TBstrut \\ [2mm]
+	TU88		& Verificare che il metodo 'confirmQueries' crei una nuova mappa contenente una lista di query e la passi al controller, chiamando infine il metodo 'onChange'.& I & P &\TBstrut \\ [2mm]
+	TU89		& Verificare che il metodo 'confirmDatabaseSettings' crei un oggetto contente tutte le informazioni necessarie all'accesso al database e lo passi al controller, chiamando infine il metodo 'onChange'.& I & P &\TBstrut \\ [2mm]
+	TU90		& Verificare che il metodo 'onInitEditMode' effettui tutte le chiamate necessarie ad avviare la modalità di modifica del pannello.& I & P &\TBstrut \\ [2mm]
+	TU91		& Verificare che in caso il grafico sia già in modalità modifica, non possa essere attivato il pannello di impostazioni del plug-in.& I & P &\TBstrut \\ [2mm]
+	TU92		& Verificare il caricamento di dati tramite flussi di dati o snapshot.& I & P &\TBstrut \\ [2mm]
+	TU93		& Verificare che il metodo per l'aggiornamento delle fonti dati costruisca una nuova lista delle fonti dati, la compari con quella salvata nella configurazione del plug-in, e la sostituisca solo nel caso vi siano delle differenze. & I & P &\TBstrut \\ [2mm]
+	TU94		& Verificare che il metodo 'onDataError', collegato all'evento di errore nell'aggiornamento della dashboard, chiami il metodo 'plotlyOnDataError' del grafico e il metodo 'render' del pannello.& I & P &\TBstrut \\ [2mm]
+	TU95		& Verificare che il metodo 'onResize', collegato all'evento che segnala il cambiamento delle dimensioni del pannello, chiami il metodo apposito per aggiornare le dimensioni del grafico.& I & P &\TBstrut \\ [2mm]
+	TU96		& Verificare che il metodo 'onRender', collegato all'evento di render del pannello, chiami il metodo di rendering del grafico.& I & P &\TBstrut \\ [2mm]
+	TU97		& Verificare che il metodo 'onRefresh', collegato all'evento di aggiornamento del pannello, chiami il metodo di aggiornamento del grafico.& I & P &\TBstrut \\ [2mm]
+	TU98		& Verificare che in caso non sia presente l'elemento contenitore per il grafico, non venga chiamato il metodo per il ridimensionamento.& I & P &\TBstrut \\ [2mm]
+	TU99		& Verificare che in caso non sia presente l'elemento contenitore per il grafico, non venga chiamato il metodo per l'aggiornamento.& I & P &\TBstrut \\ [2mm]
+	TU100		& Verificare che il metodo 'onRender' non avvii il render del grafico se un altro pannello è in modalità schermo intero.& I & P &\TBstrut \\ [2mm]
+	TU101		& Verificare che il metodo 'onRefresh' non avvii il refresh del grafico se un altro pannello è in modalità schermo intero.& I & P &\TBstrut \\ [2mm]
+	TU102		& Verificare che un nuovo pannello, in assenza di configurazioni salvate all'interno di Grafana, carichi le configurazioni di default.& I & P &\TBstrut \\ [2mm]
+	%------->config
+	TU103		& Verificare che il costruttore della classe 'GrafanaPredictionControl' inizializzi tutti i campi dell'oggetto.& I & P &\TBstrut \\ [2mm]
+	TU104		& Verificare che il metodo 'postUpdate' possa aggiornare lo stato della classe 'GrafanaPredictionControl' in 'disabilitato'.& I & P &\TBstrut \\ [2mm]
+	TU105		& Verificare che il metodo 'postUpdate' possa aggiornare lo stato della classe 'GrafanaPredictionControl' in 'abilitato'.& I & P &\TBstrut \\ [2mm]
+	%------->datasource
+	TU106		& Verificare il funzionamento del metodo statico di duplicazione di una fonte dati.& I & P &\TBstrut \\ [2mm]
+	TU107		& Verificare il funzionamento del metodo per ottenere l'indirizzo della fonte dati.& I & P &\TBstrut \\ [2mm]
+	TU108		& Verificare il funzionamento del metodo per ottenere la porta della fonte dati.& I & P &\TBstrut \\ [2mm]
+	TU109		& Verificare il funzionamento del metodo per ottenere il nome del database della fonte dati.& I & P &\TBstrut \\ [2mm]
+	TU110		& Verificare il funzionamento del metodo per ottenere il nome utente per l'accesso al database della fonte dati.& I & P &\TBstrut \\ [2mm]
+	TU111		& Verificare il funzionamento del metodo 'getPassword' per ottenere la password del database della fonte dati.& I & P &\TBstrut \\ [2mm]
+	TU112		& Verificare il funzionamento del metodo 'getUrl' per ottenere l'url del database della fonte dati.& I & P &\TBstrut \\ [2mm]
+	TU113		& Verificare il corretto funzionamento del metodo che restituisce il tipo di una fonte dati. & I & P &\TBstrut \\ [2mm]
+	TU114		& Verificare il corretto funzionamento del metodo che restituisce il nome di una fonte dati. & I & P &\TBstrut \\ [2mm]
+	TU115		& Verificare il corretto funzionamento del metodo per ottenere l'id che Grafana\glosp ha assegnato alla fonte dati. & I & P &\TBstrut \\ [2mm]
+	TU116		& Verificare il funzionamento del metodo di clonazione di una fonte dati.& I & P &\TBstrut \\ [2mm]
+	TU117		& Verificare il corretto funzionamento del metodo di clonazione di una fonte dati con database alternativo. & I & P &\TBstrut \\ [2mm]
+	TU118		& Verificare che il metodo per la clonazione di una fonte dati con un nome alternativo lanci un'eccezione se non viene passato un parametro contenente il nuovo nome.& I & P &\TBstrut \\ [2mm]
+	TU119		& Verificare il corretto funzionamento del metodo di comparazione tra fonti dati in base all'indirizzo dell'host. & I & P &\TBstrut \\ [2mm]
+	TU120		& Verificare che alla costruzione della fonte dati sia lanciata un'eccezione se non è presente un parametro 'URL' valido.& I & P &\TBstrut \\ [2mm]
+	TU121		& Verificare che alla costruzione della fonte dati sia lanciata un'eccezione se non è presente un parametro 'type' valido.& I & P &\TBstrut \\ [2mm]
+	TU122		& Verificare che alla costruzione della fonte dati sia lanciata un'eccezione se non è presente un nome.& I & P &\TBstrut \\ [2mm]
+	TU123		& Verificare che il metodo statico per la clonazione lanci un'eccezione se la fonte dati passata non ha un formato valido. & I & P &\TBstrut \\ [2mm]
+	TU124		& Verificare che il metodo 'getStrategy' della classe 'ProcessData' ritorni la strategia correntemente inizializzata nel controller. & I & P &\TBstrut \\ [2mm]
+	TU125		& Verificare che l'inizializzazione della classe 'ProcessData' con la strategia SVM\glosp avvenga con successo. & I & P &\TBstrut \\ [2mm]
+	TU126		& Verificare che l'inizializzazione della classe 'ProcessData' con la strategia di regressione lineare\glosp avvenga con successo. & I & P &\TBstrut \\ [2mm]
+	TU127		& Verificare che se viene avviato il controller con un parametro 'datalist' non valido venga segnalato un errore. & I & P &\TBstrut \\ [2mm]
+	TU128		& Verificare che se viene avviato il controller con un parametro mancante venga segnalato un errore. & I & P &\TBstrut \\ [2mm]
+	
+	\rowcolor{white}
+	\caption{Test di unità}
+\end{longtable}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{4}}

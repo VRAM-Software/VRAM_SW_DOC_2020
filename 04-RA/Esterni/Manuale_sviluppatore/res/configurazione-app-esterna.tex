@@ -1,0 +1,57 @@
+\subsection{Configurazione ambiente applicativo esterno}
+\subsubsection{Contenuto file: package.json}
+Il file \verb|package.json | contiene tutte le informazioni e le dipendenze necessarie della nostra applicazione.
+\begin{itemize}
+    \item \textbf{"main"}: questo elemento ha come valore il percorso del file che si occupa di gestire il processo principale dell'applicazione Electron;
+    \item \textbf{"dependencies"}: questo elemento contiene la seguente lista di pacchetti che sono necessari per il corretto funzionamento dell'applicazione:
+        \begin{itemize}
+            \item csvtojson;
+            \item d3;
+            \item electron-is-dev;
+            \item ml-modules;
+            \item react;
+            \item react-dom;
+            \item react-router-dom;
+            \item react-scripts.
+        \end{itemize}
+    \item \textbf{"devDependencies"}: questo elemento contiene la seguente lista di pacchetti necessari per il corretto funzionamento dell'applicazione durante lo sviluppo:
+        \begin{itemize}
+            \item electron;
+            \item electron-packager;
+            \item coveralls;
+            \item enzyme;
+            \item enzyme-adapter-react-16;
+            \item spectron.
+        \end{itemize} 
+    \item \textbf{"scripts"}: questo elemento contiene una lista di tutti i comandi, utili per uno sviluppatore, che possono essere eseguiti da linea di comando:
+        \begin{itemize}
+            \item \textbf{electron}: il comando seguente avvia un'istanza di Electron;
+            \begin{verbatim}
+            	npm run electron
+            \end{verbatim}
+            \item \textbf{start}: il comando seguente avvia un server Node.js alla porta 3000;
+            \begin{verbatim}
+	            npm start
+            \end{verbatim}
+            \item \textbf{build}: il comando seguente genera una cartella: \verb|build| che contiene i file di produzione di React;
+            \begin{verbatim}
+            	npm build
+            \end{verbatim}
+            \item \textbf{test}: il comando seguente esegue tutti i test dell'applicazione;\\
+            \begin{verbatim}
+            	npm test
+            \end{verbatim}
+            \item \textbf{package-mac}: il comando seguente genera una release di produzione\glosp per il sistema operativo: MacOS;
+            \begin{verbatim}
+            	npm run package-mac
+            \end{verbatim}
+            \item \textbf{package-win}: il comando seguente genera una release di produzione\glosp per il sistema operativo: Windows;
+            \begin{verbatim}
+            	npm run package-win
+            \end{verbatim}
+            \item \textbf{package-linux}: il comando seguente genera una release di produzione\glosp per una qualsiasi distribuzione di Linux.
+            \begin{verbatim}
+            	npm run package-linux
+            \end{verbatim}
+        \end{itemize}
+\end{itemize}

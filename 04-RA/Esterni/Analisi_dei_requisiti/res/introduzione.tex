@@ -1,0 +1,44 @@
+\section{Introduzione}
+	\subsection{Scopo del documento}
+	Questo documento contiene una descrizione dettagliata di tutti i requisiti impliciti ed espliciti che il prodotto\glosp deve avere. Il nostro gruppo ha individuato questi requisiti dopo un'analisi delle esigenze e delle fonti realizzata mediante: 
+	\begin{itemize}
+		\item analisi del capitolato\glosp C4 e della sua presentazione; 
+		\item studio di Grafana\glosp e di InfluxDB;
+		\item incontri con il proponente \textit{Zucchetti}.
+	\end{itemize}
+	\subsection{Scopo del prodotto}
+	Il prodotto\glosp da sviluppare è costituito da un plug-in per Grafana\glosp e da un'applicazione esterna per addestrare gli algoritmi di predizione e generare i relativi coefficienti. I dati inseriti dall'utente vengono caricati nell'applicazione esterna che genera i predittori\glosp per la previsione. In seguito questi ultimi vengono mandati al plug-in che esegue la previsione sui dati inseriti dall'utente. Quindi, mediante Grafana\glo, viene creata una dashboard\glosp contenente i grafici necessari alla rappresentazione dei dati. Viene inoltre data la possibilità all'utente di generare degli alert\glosp specifici di Grafana\glosp che lo avvisino in caso di anomalie.
+		
+	\subsection{Glossario}
+	Per facilitare la lettura dei documenti si è deciso di introdurre il documento: \textit{Glossario v. 20.0.0} che contiene una spiegazione delle parole che potrebbero essere considerate ambigue. Queste vengono segnalate con una \textit{G} maiuscola a pedice.  
+	\subsection{Riferimenti}
+		\subsubsection{Riferimenti normativi}
+			\begin{enumerate}
+				\item \textbf{Norme di Progetto}: \textit{Norme di Progetto v. 20.0.0}.
+				\item \textbf{Verbali esterni}:
+				\begin{enumerate}
+					\item \textit{Verbale esterno 2019-12-18};
+					\item \textit{Verbale esterno 2020-01-09};
+					\item \textit{Verbale esterno 2020-02-19};
+					\item \textit{Verbale esterno 2020-03-02}.
+				\end{enumerate}
+				\item \textbf{Capitolato}\glosp \textbf{d'appalto}: \textit{C4 - Zucchetti - Predire in Grafana}\glo \\*
+				\url{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C4.pdf};
+				\item \textbf{Presentazione capitolato}\glosp \textbf{d'appalto} \\*
+				\url{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/C4a.pdf};
+				\item \textbf{Studio di Fattibilità}: \textit{Studio di Fattibilità v. 20.0.0}.
+			\end{enumerate}
+		\subsubsection{Riferimenti informativi}
+			\begin{enumerate}
+				\item \textbf{Materiale didattico}:
+				\begin{enumerate}
+					\item \textbf{Analisi dei Requisiti}: \textit{Lezione T8 e T9} \\*
+					\url{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/L08.pdf};
+					\item \textbf{Diagrammi dei casi d'uso}\glo: \textit{Lezione E3} \\*
+					\url{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/E03.pdf}.
+				\end{enumerate}
+				\item \textbf{Grafana}\glo \\*
+					\url{https://grafana.com/docs/grafana/latest/}.
+				\item \textbf{InfluxDB} \\*
+					\url{https://docs.influxdata.com/influxdb/v1.7/}.
+			\end{enumerate}
