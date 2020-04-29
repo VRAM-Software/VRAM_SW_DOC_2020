@@ -249,6 +249,7 @@ All'interno del documento \textit{Norme di Progetto v. 4.1.1} vengono definite l
     TU80		& Verificare che il metodo buildTraindedFile ritorni un oggetto JavaScript che contenga i giusti parametri. & I & P &\TBstrut \\ [2mm]
 
 	%------->ATTENZIONE INIZIO TEST PLUGIN
+	%TU		& & I & P &\TBstrut \\ [2mm]
 	%------->panelCtrl
 	TU81		& Verificare che il costruttore imposti correttamente la gestione di eventi per il pannello.& I & P &\TBstrut \\ [2mm]
 	TU82		& Verificare il funzionamento del metodo 'link' che tramite una chiamata jQuery andrà ad ottenere l'elemento html in cui andrà successivamente inserito il grafico.& I & P &\TBstrut \\ [2mm]
@@ -256,8 +257,10 @@ All'interno del documento \textit{Norme di Progetto v. 4.1.1} vengono definite l
 	TU84		& Verificare che in seguito all'inizializzazione del pannello sia assegnato un numero di versione tra le proprietà del pannello.& I & P &\TBstrut \\ [2mm]
 	TU85		& Verificare che la versione del pannello salvata all'interno della configurazione non venga aggiornata se già superiore o uguale a quella del grafico.& I & P &\TBstrut \\ [2mm]
 	TU86		& Verificare che la funzione 'deleteJsonClick' cancelli la configurazione di predizione attualmente caricata e visualizzi il messaggio di completamento dell'operazione.& I & P &\TBstrut \\ [2mm]
-	TU87		& Verificare che la funzione 'uploadJsonClick' carichi una nuova configurazione di predizione da un file JSON e visualizzi il messaggio di completamento dell'operazione.& I & P &\TBstrut \\ [2mm]
+	TU		    & Verificare che la funzione 'uploadJsonClick' carichi una nuova configurazione di predizione da un file JSON e visualizzi il messaggio di completamento dell'operazione.& I & P &\TBstrut \\ [2mm]
+	TU87		& Verificare che venga visualizzato un errore se il file JSON caricato dall'utente è firmato da un autore diverso da 'VRAMSoftware'.& I & P &\TBstrut \\ [2mm]
 	TU88		& Verificare che il metodo 'confirmQueries' crei una nuova mappa contenente una lista di query e la passi al controller, chiamando infine il metodo 'onChange'.& I & P &\TBstrut \\ [2mm]
+	TU88		& Verificare che venga visualizzato un errore se l'utente seleziona la stessa fonte dati a più predittori nelle impostazioni del pannello.& I & P &\TBstrut \\ [2mm]
 	TU89		& Verificare che il metodo 'confirmDatabaseSettings' crei un oggetto contente tutte le informazioni necessarie all'accesso al database e lo passi al controller, chiamando infine il metodo 'onChange'.& I & P &\TBstrut \\ [2mm]
 	TU90		& Verificare che il metodo 'onInitEditMode' effettui tutte le chiamate necessarie ad avviare la modalità di modifica del pannello.& I & P &\TBstrut \\ [2mm]
 	TU91		& Verificare che in caso il grafico sia già in modalità modifica, non possa essere attivato il pannello di impostazioni del plug-in.& I & P &\TBstrut \\ [2mm]
@@ -276,6 +279,7 @@ All'interno del documento \textit{Norme di Progetto v. 4.1.1} vengono definite l
 	TU103		& Verificare che il costruttore della classe 'GrafanaPredictionControl' inizializzi tutti i campi dell'oggetto.& I & P &\TBstrut \\ [2mm]
 	TU104		& Verificare che il metodo 'postUpdate' possa aggiornare lo stato della classe 'GrafanaPredictionControl' in 'disabilitato'.& I & P &\TBstrut \\ [2mm]
 	TU105		& Verificare che il metodo 'postUpdate' possa aggiornare lo stato della classe 'GrafanaPredictionControl' in 'abilitato'.& I & P &\TBstrut \\ [2mm]
+	TU	      	& Verificare che il costruttore non sovrascriva la configurazione già salvata in Grafana\glo.& I & P &\TBstrut \\ [2mm]
 	%------->datasource
 	TU106		& Verificare il funzionamento del metodo statico di duplicazione di una fonte dati.& I & P &\TBstrut \\ [2mm]
 	TU107		& Verificare il funzionamento del metodo per ottenere l'indirizzo della fonte dati.& I & P &\TBstrut \\ [2mm]
@@ -295,11 +299,33 @@ All'interno del documento \textit{Norme di Progetto v. 4.1.1} vengono definite l
 	TU121		& Verificare che alla costruzione della fonte dati sia lanciata un'eccezione se non è presente un parametro 'type' valido.& I & P &\TBstrut \\ [2mm]
 	TU122		& Verificare che alla costruzione della fonte dati sia lanciata un'eccezione se non è presente un nome.& I & P &\TBstrut \\ [2mm]
 	TU123		& Verificare che il metodo statico per la clonazione lanci un'eccezione se la fonte dati passata non ha un formato valido. & I & P &\TBstrut \\ [2mm]
+	%------->processdata
 	TU124		& Verificare che il metodo 'getStrategy' della classe 'ProcessData' ritorni la strategia correntemente inizializzata nel controller. & I & P &\TBstrut \\ [2mm]
 	TU125		& Verificare che l'inizializzazione della classe 'ProcessData' con la strategia SVM\glosp avvenga con successo. & I & P &\TBstrut \\ [2mm]
 	TU126		& Verificare che l'inizializzazione della classe 'ProcessData' con la strategia di regressione lineare\glosp avvenga con successo. & I & P &\TBstrut \\ [2mm]
 	TU127		& Verificare che se viene avviato il controller con un parametro 'datalist' non valido venga segnalato un errore. & I & P &\TBstrut \\ [2mm]
 	TU128		& Verificare che se viene avviato il controller con un parametro mancante venga segnalato un errore. & I & P &\TBstrut \\ [2mm]
+	%------->selectinfluxdbtab
+	TU		& Verificare il funzionamento del costruttore del componente 'SelectInfluxDBCtrl'.& I & P &\TBstrut \\ [2mm]
+	TU		& Verificare il funzionamento del metodo 'getDatasources' chiamato dal costruttore del componente 'SelectInfluxDBCtrl'.& I & P &\TBstrut \\ [2mm]
+	TU		& Verificare il funzionamento del metodo che si occupa dell'aggiornamento dei parametri per l'accesso al database in seguito alla selezione da parte dell'utente.& I & P &\TBstrut \\ [2mm]
+	TU		& Verificare che venga visualizzato un messaggio di errore nel caso sia stato inserito un nome del database errato.& I & P &\TBstrut \\ [2mm]
+	TU		& Verificare che venga visualizzato un messaggio di errore nel caso sia stata selezionata una fonte di dati non inizializzata.& I & P &\TBstrut \\ [2mm]
+	TU		& Verificare che venga visualizzato un messaggio di errore nel caso non sia stato inserito un nome per il campo chiave nel database.& I & P &\TBstrut \\ [2mm]
+	TU		& Verificare che venga visualizzato un messaggio di errore nel caso non sia stato inserito un measurement dove scrivere i dati nel database.& I & P &\TBstrut \\ [2mm]
+	TU		& Verificare il funzionamento del metodo 'SelectInfluxDBDirective' utilizzato da Grafana\glosp per inizializzare il componente 'SelectInfluxDBCtrl'.& I & P &\TBstrut \\ [2mm]
+	TU		& Verificare che il metodo 'getDataSources' del componente 'SelectInfluxDBCtrl' ignori i database che non sono di tipo InfluxDB.& I & P &\TBstrut \\ [2mm]
+	TU		& Verificare che in seguito ad una risposta http incompleta non venga effettuato l'aggiornamento della lista di database.& I & P &\TBstrut \\ [2mm]
+	TU		& Verificare che il costruttore inizializzi una lista vuota di fonti dati nel caso questa non sia già presente.& I & P &\TBstrut \\ [2mm]
+	%------->writeinflux
+	TU		& Verificare che se nel costruttore il parametro "host" non è valorizzato venga lanciato un errore.& I & P &\TBstrut \\ [2mm]
+	TU		& Verificare che se nel costruttore il parametro "port" non è valorizzato venga lanciato un errore.& I & P &\TBstrut \\ [2mm]
+	TU		& Verificare che se nel costruttore il parametro "database" non è valorizzato venga lanciato un errore.& I & P &\TBstrut \\ [2mm]
+	TU		& Verificare che se il database esiste già non venga creato.& I & P &\TBstrut \\ [2mm]
+	TU		& Verificare che se nel costruttore il parametro "measurement" non è valorizzato venga lanciato un errore.& I & P &\TBstrut \\ [2mm]
+	TU		& Verificare che se nel costruttore il parametro "fieldKey" non è valorizzato venga lanciato un errore.& I & P &\TBstrut \\ [2mm]
+	TU		& Verificare che il costruttore funzioni senza errori se hai i corretti parametri in input.& I & P &\TBstrut \\ [2mm]
+	
 	
 	\rowcolor{white}
 	\caption{Test di unità}
