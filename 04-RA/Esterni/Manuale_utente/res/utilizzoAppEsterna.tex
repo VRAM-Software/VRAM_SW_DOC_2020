@@ -7,7 +7,7 @@
 		\end{center}
 		\caption{Seleziona file csv}	
 	\end{figure}
-	Si aprirà il file manager di sistema e sarà possibile importare il file desiderato. Una volta selezionato apparirà un pop-up dove sarà possibile scegliere l'algoritmo di predizione che ci desidera addestrare per quei dati, selezionare l'ordine dei predittori. L'ultimo selezionato sarà il predetto.
+	Si aprirà il file manager di sistema e sarà possibile importare il file desiderato. Una volta selezionato, apparirà un pop-up dove sarà possibile scegliere l'algoritmo di predizione che si desidera addestrare per quei dati e selezionare l'ordine dei predittori. L'ultimo selezionato sarà il predetto.
 	\begin{figure}[H] 	
 		\begin{center}
 			\includegraphics[width=\linewidth]{img/2.jpg}
@@ -16,8 +16,8 @@
 	\end{figure}
 	Una volta selezionati apparirà un grafico in base all'ordine scelto.
 	\subsection{Aggiunta di un file di configurazione}
-	Per aggiungere un file di configurazione precedentemente già creato, cliccare sul pulsante "Seleziona un file json".
-	Si aprirà il file manager di sistema e sarà possibile importare il file desiderato. Una volta selezionato verranno automaticamente aggiornate le note dell'addestramento.
+	Per aggiungere un file di configurazione precedentemente creato, cliccare sul pulsante "Seleziona un file json".
+	Si aprirà il file manager di sistema e sarà possibile importare il file desiderato. Una volta selezionato verranno automaticamente caricate e aggiornate le note dell'addestramento.
 	\begin{figure}[H] 	
 		\begin{center}
 			\includegraphics[width=\linewidth]{img/3.jpg}
@@ -25,11 +25,11 @@
 		\caption{Seleziona file Json}	
 	\end{figure}
 	\subsection{Avvio dell'addestramento}
-	Una volta aggiunti i dati di addestramento sarà possibile cliccare sul pulsante "Avvio addestramento". Al termine dell'addestramento verrà visualizzato il messaggio "Addestramento avvenuto" e, se le dimensioni dei dati lo consentono, il risultato sarà visualizzabile nel grafico. Verranno inoltre visualizzati gli indici di qualità con un colore dipendente dalla bontà dell'addestramento, in particolare essi saranno visualizzati:
+	Una volta aggiunti i dati di addestramento sarà possibile cliccare sul pulsante "Avvio addestramento". Al termine dell'addestramento verrà visualizzato il messaggio "Addestramento avvenuto" e, se le dimensioni dei dati lo consentono, il risultato sarà visualizzabile nel grafico. Verranno inoltre visualizzati gli indici di qualità all'interno di un riquadro con un colore dipendente dalla bontà dell'addestramento:
 	\begin{itemize}
-		\item in un riquadro \textbf{verde} se l'indice è superiore al 60\%;
-		\item in un riquadro \textbf{giallo} se l'indice compreso tra il 40\% e il 60\%;
-		\item in un riquadro \textbf{rosso} altrimenti;
+		\item \textbf{verde} se l'indice è superiore al 60\%;
+		\item \textbf{giallo} se l'indice compreso tra il 40\% e il 60\%;
+		\item \textbf{rosso} se l'indice è inferiore al 40\%.
 	\end{itemize}
 	\begin{figure}[H] 	
 		\begin{center}
@@ -45,7 +45,7 @@
 	\end{figure}
 	
 	\subsection{Selezione dati da visualizzare nel grafico}
-	In qualsiasi momento è possibile selezionare se visualizzare sul grafico solo i dati utilizzati per l'addestramento, solo i dati utilizzati per il calcolo degli indici di qualità o entrambi. I primi saranno visualizzati tramite un cerchio, i secondi tramite un quadrato.
+	In qualsiasi momento è possibile selezionare i dati da visualizzare sul grafico: solo i dati utilizzati per l'addestramento, solo i dati utilizzati per il calcolo degli indici di qualità o entrambi. I primi saranno rappresentati con un cerchio, i secondi con un quadrato.
 	\begin{figure}[H] 	
 		\begin{center}
 			\includegraphics[width=\linewidth]{img/6.jpg}
@@ -60,7 +60,7 @@
 	\end{figure}
 
 	\subsection{Aggiunta di note all'addestramento}
-	In qualsiasi momento è possibile aggiungere delle note all'addestramento tramite il box di inserimento note. Queste verranno aggiunte al file json prodotto in seguito all'addestramento.
+	In qualsiasi momento è possibile aggiungere delle note all'addestramento tramite l'apposito box. Queste saranno aggiunte al file json prodotto in seguito all'addestramento.
 	\begin{figure}[H] 	
 		\begin{center}
 			\includegraphics[width=\linewidth]{img/7.jpg}
@@ -69,7 +69,7 @@
 	\end{figure}
 		
 	\subsection{Cambio dei parametri}
-	Cliccando sul pulsante "Cambia parametri" apparirà un pop-up dove sarà possibile cambiare l'ordine dei predittori e il predetto come avviene nell'inserimento del file.
+	Cliccando sul pulsante "Cambia parametri" apparirà un pop-up dove sarà possibile cambiare il predetto e l'ordine dei predittori, come avviene nell'inserimento del file.
 	\begin{figure}[H] 	
 		\begin{center}
 			\includegraphics[width=\linewidth]{img/9.jpg}
@@ -77,7 +77,7 @@
 		\caption{Cambio dei parametri di addestramento}	
 	\end{figure}
 	\subsection{Salvataggio dei risultati}
-	Cliccando sul pulsante "Salva json" apparirà un pop-up in cui si potrà inserire il nome del file e selezionare la cartella in cui lo si vuole salvare. Questo file conterrà tutte le informazioni dell'addestramento necessarie per eseguire la predizione e le eventuali note scritte nel box dell'applicazione.
+	Cliccando sul pulsante "Salva json" apparirà un pop-up in cui si potrà inserire il nome del file e selezionare la cartella in cui lo si vuole salvare. Questo file conterrà tutte le informazioni dell'addestramento necessarie per eseguire la predizione, comprese le eventuali note scritte nel box dell'applicazione.
 	\begin{figure}[H] 	
 		\begin{center}
 			\includegraphics[width=\linewidth]{img/10.jpg}
