@@ -101,27 +101,28 @@
 			\item file testuali in formato .md o .txt;
 			\item tutti i file di codice sorgente come .js, .ts etc.		
 		\end{itemize}
+	\subsubsection{Obiettivi di qualità}
+	Per questo processo non sono stati definiti obiettivi di qualità.
 	\subsubsection{Strumenti di supporto}
-	\paragraph{GitHub}
-	\subparagraph*{Strumenti GitHub utilizzati}\mbox{}\\ [1mm]
-		In aggiunta ai servizi già elencati, al fine di migliorare efficacia ed efficienza, vengono utilizzate le funzionalità di "Issue Tracking System",  
-		"Milestone" e "Project Board" integrate in GitHub. Ognuna di queste funzionalità viene usata solo da chi autorizzato, ad esempio rilasci di versioni, creazione e chiusura di milestone sono concesse solo al responsabile di progetto\glo.
-		\newline
-		Vengono inoltre utilizzate le "Labels" offerte dall'Issue Tracking System di Github per definire le tipologie di problemi e le loro priorità.
-		\newline
-		Per il repository\glosp contenente il codice sorgente del software sono utilizzate le GitHub Actions al fine di implementare la pratica della continuous integration che, a sua volta, utilizza strumenti quali JEst, SonarCloud e Coveralls per eseguire le verifiche automatiche sul codice sorgente.
-	\paragraph{SonarCloud}
-	I repository\glosp del codice sorgente sono collegati al servizio SonarCloud ed è inserita la sua analisi statica\glosp del codice sorgente nei controlli eseguiti dalla continuous integration. Le pagine sonarcloud dei repository sono disponibili al seguente indirizzo: 
-	\begin{center}
-		\url{https://sonarcloud.io/organizations/vram-software/projects}
-	\end{center}
-	\paragraph{Coveralls}
-	Poiché SonarCloud, nella versione disponibile al momento dello svolgimento del progetto\glo, non supporta l'analisi del code coverage tramite Github Actions, utilizziamo il servizio offerto da Coveralls che abbiamo integrato nella continuous integration. Le pagine Coveralls dei repository sono disponibili ai seguenti indirizzi:
-	\begin{center}
-		\url{https://coveralls.io/github/VRAM-Software/grafana_prediction_plugin}
-	\end{center}
-	\begin{center}
-	\url{https://coveralls.io/github/VRAM-Software/prediction_configuration_utility}
-	\end{center}
+		\paragraph{GitHub}
+			In aggiunta ai servizi già elencati, al fine di migliorare efficacia ed efficienza, vengono utilizzate le funzionalità di "Issue Tracking System",  
+			"Milestone" e "Project Board" integrate in GitHub. Ognuna di queste funzionalità viene usata solo da chi autorizzato, ad esempio rilasci di versioni, creazione e chiusura di milestone sono concesse solo al responsabile di progetto\glo.
+			\newline
+			Vengono inoltre utilizzate le "Labels" offerte dall'Issue Tracking System di Github per definire le tipologie di problemi e le loro priorità.
+			\newline
+			Per il repository\glosp contenente il codice sorgente del software sono utilizzate le GitHub Actions al fine di implementare la pratica della continuous integration che, a sua volta, utilizza strumenti quali JEst, SonarCloud e Coveralls per eseguire le verifiche automatiche sul codice sorgente.
+		\paragraph{SonarCloud}
+		I repository\glosp del codice sorgente sono collegati al servizio SonarCloud ed è inserita la sua analisi statica\glosp del codice sorgente nei controlli eseguiti dalla continuous integration. Le pagine sonarcloud dei repository sono disponibili al seguente indirizzo: 
+		\begin{center}
+			\url{https://sonarcloud.io/organizations/vram-software/projects}
+		\end{center}
+		\paragraph{Coveralls}
+		Poiché SonarCloud, nella versione disponibile al momento dello svolgimento del progetto\glo, non supporta l'analisi del code coverage tramite Github Actions, utilizziamo il servizio offerto da Coveralls che abbiamo integrato nella continuous integration. Le pagine Coveralls dei repository sono disponibili ai seguenti indirizzi:
+		\begin{center}
+			\url{https://coveralls.io/github/VRAM-Software/grafana_prediction_plugin}
+		\end{center}
+		\begin{center}
+		\url{https://coveralls.io/github/VRAM-Software/prediction_configuration_utility}
+		\end{center}
 	
 		
