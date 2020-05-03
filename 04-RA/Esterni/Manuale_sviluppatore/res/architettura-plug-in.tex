@@ -23,8 +23,42 @@ Analizzando i componenti, la nostra architettura è così strutturata:
 \subsubsection{Progettazione di dettaglio}
 Di seguito viene descritta in dettaglio la progettazione del plug-in. In allegato viene inoltre fornito il file \textit{diagramma-classi-plug-in.png} contenente l'intero diagramma delle classi.
 \paragraph{Model} \mbox{}\\ [1mm]
-L'elemento principale contenuto all'interno del modello è il componente degli algoritmi di predizione. Abbiamo implementato due algoritmi di predizione: Support Vector Machine lineare\glosp e Regressione lineare\glo. Esse sono rappresentate rispettivamente dalle classi concrete \textit{SvmPrediction} e \textit{RlPrediction}. In senso più generale, abbiamo riscontrato che per le famiglie di algoritmi di Support Vector Machine e di Regressione è possibile ricondursi ad un'interfaccia unica che abbiamo chiamato \textit{AlgorithmPrediction}. Essa fornisce il metodo astratto \textit{predict(data, configuration, influxParameter)} che è implementato dalle classi concrete dei singoli algoritmi.
-Queste due classi hanno una dipendenza di tipo composizione con la classe concreta \textit{WriteInflux} che importa la libreria \textit{InfluxDB} e contiene le funzionalità di scrittura su un database Influx. Essa presenta due metodi per la scrittura sul database.
+Il componente principale del Model è l'interfaccia degli algoritmi di predizione chiamata \textit{AlgorithmPrediction}. A partire da questa, abbiamo implementato due algoritmi: Support Vector Machine\glosp lineare e Regressione lineare\glo. Essi sono rappresentati rispettivamente dalle classi concrete \textit{SvmPrediction} e \textit{RlPrediction}. In senso più generale, abbiamo riscontrato che, per famiglie di algoritmi Support Vector Machine\glosp e Regressione\glo, è possibile ricondursi ad un'interfaccia unica come abbiamo fornito.
+La due classi concrete hanno inoltre una dipendenza di tipo composizione con un'altra classe concreta chiamata \textit{WriteInflux}. Essa permette di eseguire la scrittura su un database Influx attraverso due metodi che differiscono per il tipo di dati da salvare. Infine, importa la libreria \textit{InfluxDB} che utilizza per interfacciarsi con il database stesso.
+\paragraph*{AlgorithmPrediction} \mbox{}\\ [1mm]
+L'interfaccia degli algoritmi di predizione è chiamata \textit{AlgorithmPrediction} e rappresenta il contratto che tutte le classi concrete devono rispettare per poter caratterizzare un algoritmo di predizione. Essa contiene un solo metodo: \textit{predict(DataSet, Result, WriteInfluxParameters)}. Questo permette di eseguire la predizione su un determinato set di dati di tipo DataSet, con degli specifici parametri di configurazione di tipo Result e di scrittura nel database di tipo WriteInfluxParameters.
+\paragraph*{SvmPrediction} \mbox{}\\ [1mm]
+Per implementare l'algoritmo Support Vector Machine\glosp lineare abbiamo realizzato la classe concreta \textit{SvmPrediction}, implementando il metodo \textit{predict(DataSet, Result, WriteInfluxParameters)} dell'interfaccia \textit{AlgorithmPrediction}.
+Questo metodo esegue la predizione sul set di dati e sulla base dei parametri di configurazione forniti in input. Inoltre fa uso di componenti specifici della classe SVM importata dalla libreria \textit{NodeModules} per effettuare la vera e propria previsione. \\
+\textit{SvmPrediction} contiene inoltre due campi dati:
+\begin{itemize}
+	\item writeInflux: è un riferimento alla classe WriteInflux;
+	\item predictor: è un riferimento alla classe SVM.
+\end{itemize}
+Essi vengono istanziati solo al momento dell'utilizzo. \\
+È infine presente il costruttore privo di parametri che permette di eseguire il binding dei metodi alla classe.
+\paragraph*{RlPrediction} \mbox{}\\ [1mm]
+Per implementare l'algoritmo Regressione lineare\glosp abbiamo realizzato la classe concreta \textit{RlPrediction}, implementando il metodo \textit{predict(DataSet, Result, WriteInfluxParameters)} dell'interfaccia \textit{AlgorithmPrediction}.
+Questo metodo esegue la predizione sul set di dati e sulla base dei parametri di configurazione forniti in input. Inoltre fa uso della libreria \textit{LinearRegression}  che viene importata per effettuare la vera e propria previsione. \\
+\textit{RlPrediction} contiene inoltre due campi dati:
+\begin{itemize}
+	\item writeInflux: è un riferimento alla classe WriteInflux;
+	\item predictor: è un riferimento alla classe LinearRegression.
+\end{itemize}
+Essi vengono istanziati solo al momento dell'utilizzo. \\
+È infine presente il costruttore privo di parametri che permette di eseguire il binding dei metodi alla classe.
+\paragraph*{WriteInflux} \mbox{}\\ [1mm]
+Per interfacciarsi e scrivere i dati nel database Influx viene utilizzata la classe \textit{WriteInflux}. Essa viene instanziata all'interno del metodo \textit{predict(DataSet, Result, WriteInfluxParameters)} delle classi rappresentanti gli algoritmi di predizione. Contiene due campi dati:
+\begin{itemize}
+	\item influx: è un riferimento alla classe InfluxDB per Grafana\glo;
+	\item parameters: è un riferimento al tipo WriteInfluxParameters e contiene i parametri per il collegamento e la scrittura nel database.
+\end{itemize}
+È presente il metodo costruttore che riceve in input un WriteInfluxParameters, ne esegue il setting ed instazia InfluxDB.
+Infine sono presenti due metodi:
+\begin{itemize}
+	\item writeArrayToInflux(double[], long[]): esegue la scrittura di un array di dati, solitamente quelli predetti, e dei loro TimeStamps all'interno di InfluxDB;
+	\item writeStampsToInflux(double, long): esegue la scrittura di un singolo dati, solitamente predetto, e del suo relativo TimeStamps all'interno di InfluxDB.
+\end{itemize}
 \mbox{}
 \begin{landscape}
 	\begin{figure}
@@ -34,10 +68,41 @@ Queste due classi hanno una dipendenza di tipo composizione con la classe concre
 		\end{figure}
 	\end{figure}
 \end{landscape}
+
 \paragraph{View} \mbox{}\\ [1mm]
-All'interno della View abbiamo inserito la componente Panel rappresentata dalla classe \textit{PanelCtrl} che estende \textit{MetricPanelControl} di Grafana\glo. Essa rappresenta il nostro pannello principale dal quale gli utenti possono interagire con il plug-in.
-Ha una dipendenza di tipo composizione con un componente della libreria Plotly per la creazione del grafico personalizzato e con la classe \textit{SelectinfluxDBCtrl} per la selezione dalla datasource Grafana\glosp di tipo Influx su cui scrivere i risultati delle predizioni. In questo modo, sfruttiamo il meccanismo di Grafana\glosp che dalla scrittura dei dati sul database a questo componente, permette l'aggiornamento continuo della View.
-Infine, sempre all'interno di \textit{PanelCtrl}, c'è una dipendenza verso il componente \textit{ProcessData} del Controller che ne permette il collegamento.
+All'interno della View abbiamo inserito la componente Panel rappresentata dalla classe \textit{PanelCtrl}. Essa rappresenta il nostro pannello principale dal quale gli utenti possono interagire con il plug-in.
+Inoltre attraverso la classe \textit{SelectInfluxDBCtrl} permettiao la selezione dalla datasource Grafana\glosp di tipo Influx su cui scrivere i risultati delle predizioni. In questo modo, sfruttiamo il meccanismo di Grafana\glosp che, dalla scrittura dei dati sul database a questo componente, permette l'aggiornamento continuo della View.
+\paragraph*{PanelCtrl} \mbox{}\\ [1mm]
+La classe che gestisce il pannello di controllo della nostra View è \textit{PanelCtrl} che estende la classe \textit{MetricsPanelCtrl} di Grafana\glo. \\
+I campi dati di cui è necessaria una descrizione sono i seguenti:
+\begin{itemize}
+	\item nodeMap: contiene la mappatura dei predittori da fornire per la configurazione degli algoritmi;
+	\item databaseParameters: è un oggetto di tipo WriteInfluxParameters e rappresenta quindi i parametri di configurazione del database ricevuti in input dall'utente;
+	\item plotlyPanelUtil: è un oggetto di tipo PlotlyPanelUtil e rappresenta quindi un'istanza di tale classe importata dalla libreria Plotly per la realizzazione di un grafico personalizzato;
+	\item processData: è un oggetto di tipo ProcessData e rappresenta quindi il legame tra View e Controller.
+\end{itemize}
+I metodi di cui è necessaria una descrizione sono i seguenti:
+\begin{itemize}
+	\item onDataReceived(Datalist): permette di ricevere i dati da Grafana\glosp e di realizzare delle operazioni. In particolare riceve i dati da InfluxDB e permette l'aggiornamento continuo dal Model;
+	\item updateNodeMap(): permette l'aggiornamento della configurazione dei predittori e quindi della configurazione degli algoritmi;
+	\item onInitEditMode(): permette la gestione della configurazione del pannello dopo che esso è stato modificato da Grafana\glo.
+\end{itemize}
+Gli altri metodi e campi dati presenti sono documentati dal loro stesso nome.
+\paragraph*{SelectInfluxDBController} \mbox{}\\ [1mm]
+La classe che gestisce il pannello di inserimento dei dati per la scrittura su InfluxDB, contenuto nel pannello di controllo, è SelectInfluxDBController.
+Contiene un campo dati di tipo Datasource[] che rappresenta i parametri di ogni sorgente dati su cui applicare le previsioni. Espone infine i due metodi per interfacciarsi con tali parametri:
+\begin{itemize}
+	\item getDatasources(): permette di ritornare i dati;
+	\item updateDatabaseParams(): aggiorna il contenuto del campo dati.
+\end{itemize}
+\paragraph*{Datasource} \mbox{}\\ [1mm]
+È un tipo di dato che descrive i parametri di una sorgente di dati collegata a Grafana\glosp attraverso dei campi dati.
+\paragraph*{Result}
+\textit{Result} è un'interfaccia utilizzata per i risultati degli algoritmi di predizione. Definisce quindi un contratto che tutte le classi concrete, rappresentanti un nuovo algoritmo di predizione, dovranno rispettare e consiste nel metodo \textit{toStringJson()}. Esso ritorna un oggetto JSON in formato stringa che dovrà contenere tutti i dati caratteristici dell'algoritmo di addestramento.
+\paragraph*{ResultSvm} \mbox{}\\ [1mm]
+\textit{ResultSvm} è una classe concreta che implementa l'interfaccia \textit{Result} e descrive il risultato di un'algoritmo SVM\glosp lineare.
+\paragraph*{ResultRl} \mbox{}\\ [1mm]
+\textit{ResultRl} è una classe concreta che implementa l'interfaccia \textit{Result} e descrive il risultato di un'algoritmo Regressione lineare\glo.
 \mbox{}
 \begin{landscape}
 	\begin{figure}
@@ -47,15 +112,36 @@ Infine, sempre all'interno di \textit{PanelCtrl}, c'è una dipendenza verso il c
 		\end{figure}
 	\end{figure}
 \end{landscape}
+
 \paragraph{Controller} \mbox{}\\ [1mm]
 All'interno del Controller viene implementata la trasformazione dei dati ricevuti dalla View, che rappresentano le interazioni dell'utente con il nostro pannello ed i flussi di dati ottenuti da Grafana\glo, ad azioni da eseguire sul Model.
 Abbiamo deciso di implementare un design pattern\glosp strategy ottenendo la seguente struttura:
 \begin{itemize}
-	\item \textbf{ProcessData}: è una classe concreta che rappresenta il context del nostro strategy. Al suo interno, infatti, viene scelto quale algoritmo di predizione processare sulla base dei dati e delle richieste ricevute. Inoltre essa ha una dipendenza di tipo aggregazione con l'interfaccia \textit{PerformPrediction};
-	\item \textbf{PerformPrediction}: è un'interfaccia che rappresenta la strategia astratta. Essa definisce il contratto da rispettare per poter implementare una nuova classe concreta che processa i dati da fornire ad un determinato algoritmo;
-	\item \textbf{ProcessSvm}: è una classe concreta che implementa \textit{PerformPrediction} e rappresenta il componente che processa e trasforma i dati da fornire per l'esecuzione dell'algoritmo Svm\glosp sul Model;
-	\item \textbf{ProcessSvm}: è una classe concreta che implementa \textit{PerformPrediction} e rappresenta il componente che processa e trasforma i dati da fornire per l'esecuzione dell'algoritmo Rl sul Model.
+	\item \textbf{ProcessData}: classe concreta che rappresenta il context del nostro strategy ed ha una dipendenza di tipo aggregazione con l'interfaccia \textit{PerformPrediction};
+	\item \textbf{PerformPrediction}: interfaccia che rappresenta la strategia astratta;
+	\item \textbf{ProcessSvm}: classe concreta che implementa \textit{PerformPrediction} e processa i dati per l'algoritmo Svm\glosp lineare;
+	\item \textbf{ProcessRl}: classe concreta che implementa \textit{PerformPrediction} e processa i dati per l'algoritmo Regressione lineare\glo.
 \end{itemize}
+
+\paragraph*{ProcessData} \mbox{}\\ [1mm]
+La classe concreta che rappresenta il context del nostro strategy è \textit{ProcessData}. Al suo interno viene scelto quale algoritmo di predizione processare sulla base dei dati e delle richieste ricevute. Inoltre ha una dipendenza di tipo aggregazione con l'interfaccia \textit{PerformPrediction}. \\
+Il campo dati che necessita di una descrizione è \textit{nodeMap} che rappresenta la mappatura dei predittori. Gli altri campi dati, oltre a tutti i metodi, sono documentati dal loro stesso nome.
+\paragraph*{PerformPrediction} \mbox{}\\ [1mm]
+L'interfaccia che rappresenta la strategia astratta è \textit{PerformPrediction}. Essa definisce il contratto da rispettare per poter implementare una nuova classe concreta che processa i dati da fornire ad un algoritmo di predizione attraverso il metodo \textit{performPrediction(DataSet, Result, WriteInfluxParameters)}.
+\paragraph*{ProcessSvm} \mbox{}\\ [1mm]
+La classe concreta che implementa \textit{PerformPrediction} e rappresenta il componente che processa e trasforma i dati da fornire all'algoritmo Svm\glosp è \textit{ProcessSvm}.
+Contiene il campo dati di tipo SvmPrediction che rappresenta la classe che implementa l'algoritmo di predizione all'interno del Model. Esso viene instanziato all'interno del costruttore assieme al binding dei metodi.
+Infine all'interno del metodo \textit{performPrediction(DataSet, Result, WriteInfluxParameters)} viene richiamata la predizione dell'algoritmo.
+\paragraph*{ProcessRl} \mbox{}\\ [1mm]
+La classe concreta che implementa \textit{PerformPrediction} e rappresenta il componente che processa e trasforma i dati da fornire all'algoritmo regressione lineare\glosp è \textit{ProcessRl}.
+Contiene il campo dati di tipo RlPrediction che rappresenta la classe che implementa l'algoritmo di predizione all'interno del Model. Esso viene instanziato all'interno del costruttore assieme al binding dei metodi.
+Infine all'interno del metodo \textit{performPrediction(DataSet, Result, WriteInfluxParameters)} viene richiamata la predizione dell'algoritmo.
+\paragraph*{WriteInfluxParameters} \mbox{}\\ [1mm]
+È un tipo di dato che descrive i parametri necessari alla connessione e alla scrittura in un database Influx.
+\paragraph*{Datalist} \mbox{}\\ [1mm]
+È una classe che descrive i dati 
+\paragraph*{DataSet} \mbox{}\\ [1mm]
+È una classe che descrive il 
 \mbox{}
 \begin{landscape}
 	\begin{figure}
@@ -65,7 +151,8 @@ Abbiamo deciso di implementare un design pattern\glosp strategy ottenendo la seg
 		\end{figure}
 	\end{figure}
 \end{landscape}
-Per spiegare meglio l'insieme di azioni compiute al fine di processare i dati per eseguire la predizione degli algoritmi, illustriamo un diagramma di sequenza che prende in esame SVM\glo. Il procedimento è indicativo anche per gli altri algoritmi.
+\paragraph*{Diagramma di sequenza} \mbox{}\\ [1mm]
+Per spiegare meglio l'insieme di azioni compiute al fine di processare i dati per eseguire la predizione degli algoritmi, illustriamo un diagramma di sequenza che prende in esame SVM\glo. Il procedimento è indicativo anche per gli altri algoritmi ed è auto documentato dal diagramma stesso.
 \mbox{}
 \begin{landscape}
 	\begin{figure}
