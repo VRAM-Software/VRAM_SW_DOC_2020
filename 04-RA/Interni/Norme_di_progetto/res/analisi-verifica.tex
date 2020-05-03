@@ -14,7 +14,7 @@ Il processo\glosp di verifica assicura che tutte le attività svolte della fase 
 Le attività che si effettuano durante la verifica sono due tipi di analisi: l'analisi statica\glosp e l'analisi dinamica. \\[2mm]
 \paragraph{Analisi statica}\mbox{}\\ [1mm]
 L'analisi statica\glosp è lo studio della documentazione e del codice sorgente, essa non richiede l'esecuzione delle singole parti del sistema software che si sta sviluppando, quindi viene applicata ad ogni prodotto\glosp di processo\glo.
-\subparagraph*{Verifica della documentazione} \mbox{} \\ [1mm] 
+\paragraph*{Verifica della documentazione} \mbox{} \\ [1mm] 
 La verifica della documentazione può essere effettuata manualmente in due modi:
 \begin{itemize}
 	\item \textbf{Walkthrough}: metodo di lettura in cui tutti i componenti del gruppo analizzano tutti i documenti e codice realizzato, senza tralasciare nulla, in modo da rilevare eventuali errori. Questa ricerca è ad ampio spettro, infatti viene effettuata anche se a priori non si può sapere se verranno trovate anomalie;
@@ -39,7 +39,7 @@ La verifica della documentazione può essere effettuata manualmente in due modi:
 
 \paragraph{Analisi dinamica} \mbox{}\\ [1mm]
 L'analisi dinamica è una tecnica che consiste nell'esecuzione del prodotto\glosp software eseguendo dei test su un insieme finito di casi.
-\subparagraph{Test}\mbox{}\\ [1mm]
+\paragraph*{Test}\mbox{}\\ [1mm]
 Per la corretta verifica del codice, i test devono seguire regole ben precise che definiscono i parametri e le proprietà che devono avere test per essere considerati efficaci: \mbox{}\\ [1mm]
 \textbf{Parametri da definire}:
 \begin{itemize}
@@ -64,7 +64,7 @@ Il software testing è un procedimento importante per misurare la qualità di un
 	\item \textbf{Test di integrazione};
 	\item \textbf{Test di unità}.
 \end{itemize}
-\subparagraph*{Codifica dei test} \mbox{} \\ [1mm]
+\paragraph*{Codifica dei test} \mbox{} \\ [1mm]
 Per ogni test vengono definiti il codice identificativo, la descrizione, lo stato e l'esito.
 \begin{itemize}
 	\item il codice identificativo è scritto in questo formato:\\
@@ -105,10 +105,8 @@ I test di sistema controllano il funzionamento corretto del prodotto\glosp e ver
 
 \subsubsection{Obiettivi di qualità}
 	\paragraph{OP-4 Efficacia dei test}\mbox{} \\ [1mm]
-	%\paragraph*{Obiettivo}\mbox{}\\ [1mm]
 	L'obiettivo è garantire che il prodotto\glosp software venga testato in modo efficace in ogni sua singola parte.
-	\subparagraph{Metriche}\mbox{}\\ [1mm]
-	Le metriche\glosp utilizzate sono:
+	\subparagraph{Metriche}
 	\begin{itemize}
 		\item \textbf{M-PROC05 Percentuale bug sistemati}: indica la percentuale dei bug sistemati, dando così una traccia dell'avanzamento;
 		\begin{itemize}
@@ -117,10 +115,8 @@ I test di sistema controllano il funzionamento corretto del prodotto\glosp e ver
 	\end{itemize}
 
 	\paragraph{OP-5 Completezza dei test} \mbox{} \\ [1mm]
-	%\paragraph*{Obiettivo}\mbox{}\\ [1mm]
 	L'obiettivo è garantire che il prodotto software sia testato in modo completo.
-	\subparagraph{Metriche}\mbox{}\\ [1mm]
-	Le metriche\glosp utilizzate sono:
+	\subparagraph{Metriche}
 	\begin{itemize}
 		\item \textbf{M-PROC23 Code coverage}: indica la percentuale di codice coperto da test rispetto al totale delle righe di codice;
 		\begin{itemize}
@@ -137,12 +133,10 @@ I test di sistema controllano il funzionamento corretto del prodotto\glosp e ver
 			\item[] \textbf{formula}: $\frac{test \; eseguiti}{test \; totali}$;
 		\end{itemize} 
 	\end{itemize}
-\subsubsection{PRD-Q2 Appropriatezza funzionale}
+%\subsubsection{PRD-Q2 Appropriatezza funzionale}
 	\paragraph{CP-4 Correttezza delle funzionalità implementate} \mbox{}\\ [1mm]
-	%\paragraph*{Caratteristica}\mbox{}\\ [1mm]
-	Questa caratteristica descrive se le funzionalità implementate sono corrette.
-	\subparagraph{Metriche}\mbox{}\\ [1mm]
-	Le metriche\glosp utilizzate sono:
+	Questa caratteristica definisce l'obiettivo di correttezza delle funzionalità implementate.
+	\subparagraph{Metriche}
 	\begin{itemize}
 		\item \textbf{M-PROD26 percentuale di test superati}: indica la percentuale di test che sono stati superati;
 		\begin{itemize}
