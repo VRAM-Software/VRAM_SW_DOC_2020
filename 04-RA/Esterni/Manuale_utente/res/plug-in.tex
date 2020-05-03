@@ -71,6 +71,7 @@
                 \item field key.
             \end{enumerate}
             \item una volta inseriti i dati basterà premere il tasto "Confirm" per convalidare il collegamento.
+        In caso non esista il measurement oppure la field key il plug-in li creerà autonomamente nel database indicato. Contrariamente, nell'eventualità per cui esistessero già questi campi, sovrascriverà i valori presenti con quelli predetti se i due condividono lo stesso timestamp.
         \end{enumerate}
         \begin{figure}[H]
             \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/scrittura_InfluxDB.png}
@@ -89,4 +90,10 @@
         \begin{figure}[H]
             \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/toolbar.png}
             \caption{Toolbar inserita nel grafico}
+        \end{figure}
+    \subsection{Selezione del lasso temporale di predizione}
+        Il plug-in effettua la predizione dei dati all'interno del time range indicato in alto a destra nella pagina della dashboard\glo. Cliccandoci sarà possibile modificarlo per andare a visualizzare i dati che sono stati caricati in precedenza e permettere il corretto funzionamento del prodotto\glo.
+        \begin{figure}[H]
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/time_range.png}
+            \caption{Selezione del lasso temporale di predizione}
         \end{figure}
