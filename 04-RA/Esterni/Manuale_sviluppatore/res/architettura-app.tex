@@ -2,7 +2,7 @@
 \subsection{Applicazione esterna alla piattaforma Grafana}
 Per poter visualizzare la suddivisione delle componenti dell'applicazione esterna e le dipendenze che sussistono tra loro ad alto livello, viene riportato il diagramma dei Package in allegato nel file \textit{diagramma-package-app.png}.
 	\subsubsection{Progettazione architetturale}
-	Abbiamo deciso di utilizzare un design pattern\glosp architetturale Model-View-ViewModel (MVVM) perché si adatta bene alle tecnologie che vengono utilizzate ovvero React ed Electron. In particolare, come si può vedere dalla figura seguente, la View invia dati a ViewModel che a sua volta fornisce delle risposte che permettono di tenere la vista sempre aggiornata. Questo scambio di dati è asincrono ed è fornito interamente da Electron. Inoltre abbiamo la comunicazione tra ViewModel e Model che avviene con la richiesta di esecuzione delle operazioni da parte del ViewModel e la conseguente risposta da parte del Model. Anche questo scambio di messaggi è asincrono ed è implementato da un meccanismo di callback\glo.
+	Abbiamo deciso di utilizzare il design pattern\glosp architetturale Model-View-ViewModel (MVVM) perché si adatta bene alle due principali tecnologie che utilizzate: React ed Electron. In particolare, come si può vedere dalla figura seguente, la View scambia dei dati in modo asincrono con il ViewModel attraverso Electron e ciò permette di mantenere la View sempre aggiornata. Inoltre è presente la comunicazione tra ViewModel e Model che avviene con la richiesta di esecuzione delle operazioni da parte del ViewModel e la conseguente risposta da parte del Model. Anche questo scambio di messaggi è asincrono ed è implementato da un meccanismo di callback\glo.
 	\mbox{}
 	\begin{landscape}
 		\begin{figure}
@@ -12,15 +12,19 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 			\end{figure}
 		\end{figure}
 	\end{landscape}
-	Analizzando i componenti, la nostra architettura è così strutturata: 
+	La nostra architettura è composta dai seguenti componenti: 
 	\begin{itemize}
-		\item \textbf{Model}: modulo che gestisce la business logic\glo. Più in dettaglio esegue l'addestramento dei dati attraverso gli algoritmi di predizione e le operazioni di input/output dei file;
-		\item \textbf{View}: modulo che gestisce la presentazione dei dati attraverso React;
-		\item \textbf{ViewModel}: modulo che gestisce il binding\glosp tra View e Model con un meccanismo detto two-way-data-binding.
+		\item \textbf{Model}: componente che gestisce la business logic\glosp dell'applicazione;
+		\item \textbf{ViewModel}: componente che gestisce il binding\glosp tra View e Model con un meccanismo detto two-way-data-binding;
+		\item \textbf{View}: componente che gestisce la presentazione dei dati attraverso React;
+		\item \textbf{Electron}: componente esterno che gestisce lo scambio di messaggi asincrono tra View e ViewModel;
+		\item \textbf{React}: componente esterno che gestisce il rendering della View.
 	\end{itemize}
 	\subsubsection{Progettazione di dettaglio}
 		Di seguito viene descritta in dettaglio la progettazione dell'applicazione. In allegato viene fornito il file \textit{diagramma-classi-app.png} contenente l'intero diagramma delle classi.
-		\paragraph{Model} \mbox{}
+		\paragraph{Model}
+		I componenti principali del Model sono gli algoritmi di addestramento rappresentati dalle classi \textit{SvmTrainer} ed \textit{RlTrainer}.
+		Più in dettaglio esegue l'addestramento dei dati attraverso gli algoritmi di predizione e le operazioni di input/output dei file;
 		\paragraph*{Algorithm} \mbox{} \\[1mm]
 		Per la gestione degli algoritmi di addestramento abbiamo scelto di implementare due classi distinte \textit{SvmTrainer} e \textit{RlTrainer} che hanno una dipendenza di tipo composizione dalle rispettive classi delle librerie e del tipo di risultato ottenuto.
 		All'interno di ognuna di esse viene fornita la possibilità di addestrare l'algoritmo e di calcolarne gli indici di qualità.
