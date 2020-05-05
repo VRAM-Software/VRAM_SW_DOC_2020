@@ -54,7 +54,6 @@ Nella seguente tabella sono elencate tutte le dipendenze necessarie per la corre
     \verb|ml-modules|\footnote{Il pacchetto \texttt{ml-modules} usato nel nostro progetto è una versione modificata dell'ononimo pacchetto} & \verb|0.1.0| \TBstrut \\ [2mm]
     \verb|react| & \verb|^16.13.0| \TBstrut \\ [2mm]
     \verb|react-dom| & \verb|^16.13.0| \TBstrut \\ [2mm]
-    \verb|react-router-dom| & \verb|^5.1.2| \TBstrut \\ [2mm]
     \verb|react-scripts| & \verb|3.4.0| \TBstrut \\ [2mm]
     \rowcolor{white}
     \caption{Dipendenze per eseguire applicazione}
@@ -71,7 +70,7 @@ Nella seguente tabella sono elencate tutte le dipendenze necessarie per la corre
     \rowcolor{gray!50}
     \textbf{Pacchetto} & \textbf{Versione} \TBstrut \\ [2mm]
     \verb|electron| & \verb|^8.02| \TBstrut \\ [2mm]
-    \verb|electron-packager| & \verb|^14.2.1| \TBstrut \\ [2mm]
+    \verb|electron-packager| & \verb|^14.2.1| \TBstrut \\ [2mm] 
     \verb|coveralls| & \verb|^3.0.9| \TBstrut \\ [2mm]
     \verb|enzyme| & \verb|^3.11.0| \TBstrut \\ [2mm]
     \verb|enzyme-adapter-react-16| & \verb|^1.15.2| \TBstrut \\ [2mm]
@@ -81,6 +80,21 @@ Nella seguente tabella sono elencate tutte le dipendenze necessarie per la corre
     \end{longtable}
     \mbox{}\\ [1mm]
 Seguendo i due passaggi descritti nei precedenti paragrafi, l'applicazione esterna è installata correttamente.
+
+\subsubsection{Eseguire l'applicazione}%\mbox{}\\ [1mm]
+Per eseguire il l'applicazione è necessario aprire due terminali nella cartella: "prediction\_configuration\_utility", eseguire nel primo il comando \verb|npm start| per inizializzare il server Node.Js alla porta 3000. Infine, nel secondo terminale, eseguire il comando \verb|npm run electron| per inizializzare l'istanza di Electron.
+
+\subsubsection{Impacchettare l'applicazione}%\mbox{}\\ [1mm]
+Per generare una release di produzione eseguire il seguente comando per:
+\begin{verbatim}
+  npm run build 
+\end{verbatim}
+In seguito, a seconda del sistema operativo utilizzato, eseguire uno dei seguenti comandi:
+\begin{verbatim}
+  npm run package-win
+  npm run package-mac
+  npm run package-linux
+\end{verbatim}
 
 \subsection{Installazione ambiente di sviluppo integrato WebStorm}
 Per installare l'ambiente di sviluppo integrato WebStorm, visitare la pagina \url{https://www.jetbrains.com/webstorm/download/}. Qui è possibile trovare il download per MacOS, Windows e sistemi operativi basati su Linux/Unix.

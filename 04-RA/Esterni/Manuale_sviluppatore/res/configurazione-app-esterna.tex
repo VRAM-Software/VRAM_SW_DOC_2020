@@ -2,28 +2,32 @@
 \subsubsection{Contenuto file: package.json}
 Il file \verb|package.json | contiene tutte le informazioni e le dipendenze necessarie della nostra applicazione.
 \begin{itemize}
-    \item \textbf{"main"}: questo elemento ha come valore il percorso del file che si occupa di gestire il processo principale dell'applicazione Electron;
-    \item \textbf{"dependencies"}: questo elemento contiene la seguente lista di pacchetti che sono necessari per il corretto funzionamento dell'applicazione:
+    \item \textbf{"main"}: questo attributo ha come valore il percorso del file che si occupa di gestire il processo principale dell'applicazione Electron;
+    \item \textbf{"dependencies"}: questo attributo contiene la seguente lista di pacchetti che sono necessari per il corretto funzionamento dell'applicazione:
         \begin{itemize}
-            \item csvtojson;
-            \item d3;
-            \item electron-is-dev;
-            \item ml-modules;
-            \item react;
-            \item react-dom;
-            \item react-router-dom;
-            \item react-scripts.
+            \item \textbf{csvtojson}: il pacchetto npm csvtojson è utilizzata per gestire la conversione da un file csv ad un oggetto JavaScript;
+            \item \textbf{d3}: la libreria d3 è utilizzata per gestire la renderizzazione del grafico, in particolare la gestione delle unità di misura;
+            \item \textbf{electron-is-dev}: il pacchetto npm electron-is-dev è utilizzata per verificare se l'istanza dell'applicazione esterna è stata inizializzata in modalità sviluppo o produzione;
+            \item \textbf{ml-modules}: la libreria ml-modules è utilizzata per l'utilizzo dell'algoritmo di predizione SVM\glo;
+            \item \textbf{precision-recall}: il pacchetto npm precision-recall è utilizzata per calcolare il risultato di un addestramento SVM\glo;
+            \item \textbf{react}: il framework react viene utilizzato per gestire tutti gli aspetti relativi alla vista;
+            \item \textbf{react-dom}: pacchetto da utilizzare insieme al framework react per gestire le modifiche del DOM per react;
+            \item \textbf{react-scripts}: pacchetto da utilizzare insieme al framework react per gestire gli script necessari per lo sviluppo dell'applicazione come l'inizializzazione del server Node.Js di sviluppo;
+            \item \textbf{@testing-library/jest-dom}: libreria per scrivere test con jest per il DOM;
+            \item \textbf{@testing-library/react}: libreria per scrivere test con jest per react;
+            \item \textbf{@testing-library/user-event}: libreria per scrivere test con jest simulando eventi che possono essere eseguiti da utenti.
         \end{itemize}
-    \item \textbf{"devDependencies"}: questo elemento contiene la seguente lista di pacchetti necessari per il corretto funzionamento dell'applicazione durante lo sviluppo:
+    \item \textbf{"devDependencies"}: questo attributo contiene la seguente lista di pacchetti necessari per il corretto funzionamento dell'applicazione durante lo sviluppo:
         \begin{itemize}
-            \item electron;
-            \item electron-packager;
-            \item coveralls;
-            \item enzyme;
-            \item enzyme-adapter-react-16;
-            \item spectron.
+            \item \textbf{electron}: il framework electron è utilizzato per gestire il funzionamento di una applicazione desktop sviluppata con tecnologie web;
+            \item \textbf{electron-packager}: il pacchetto npm electron-packager è utilizzato per creare un eseguibile partendo dal codice sorgente di una applicazione electron;
+            \item \textbf{coveralls}: utilizzata per il calcolo del code coverage dei test automatici;
+            \item \textbf{prettier}: pacchetto npm per effettuare una correzione automatica dell'indentazione del codice;
+            \item \textbf{enzyme}: pacchetto npm utilizzato che fornisce delle funzioni per testare componenti React;
+            \item \textbf{enzyme-adapter-react-16}: pacchetto npm da utilizzare con enzyme per scrivere test per componenti React;
+            \item \textbf{spectron}: framework utilizzato per scrivere test non automatici per verificare il funzionamento corretto di una applicazione electron.
         \end{itemize} 
-    \item \textbf{"scripts"}: questo elemento contiene una lista di tutti i comandi, utili per uno sviluppatore, che possono essere eseguiti da linea di comando:
+    \item \textbf{"scripts"}: questo attributo contiene una lista di tutti i comandi, utili per uno sviluppatore, che possono essere eseguiti da linea di comando:
         \begin{itemize}
             \item \textbf{electron}: il comando seguente avvia un'istanza di Electron;
             \begin{verbatim}
@@ -40,6 +44,10 @@ Il file \verb|package.json | contiene tutte le informazioni e le dipendenze nece
             \item \textbf{test}: il comando seguente esegue tutti i test dell'applicazione;\\
             \begin{verbatim}
             	npm test
+            \end{verbatim}
+            \item \textbf{beautify}: il comando seguente esegue un controllo e correzione dell'indentazione del codice;\\
+            \begin{verbatim}
+            	npm run beautify
             \end{verbatim}
             \item \textbf{package-mac}: il comando seguente genera una release di produzione\glosp per il sistema operativo: MacOS;
             \begin{verbatim}
