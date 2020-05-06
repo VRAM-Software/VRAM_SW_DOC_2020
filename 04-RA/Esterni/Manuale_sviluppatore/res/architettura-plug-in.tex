@@ -20,7 +20,7 @@ Analizzando i componenti, la nostra architettura è così strutturata:
 	\item \textbf{View}: modulo che gestisce la presentation logic. Più in dettaglio, permette la creazione di un pannello grafico personalizzato all'interno di una dashboard Grafana\glo. Con questo pannello l'utente può selezionare le impostazioni degli algoritmi di predizione, i flussi di dati in ingresso, le impostazioni del grafico presente nel pannello e le impostazioni del database Influx su cui scrivere i risultati;
 	\item \textbf{Controller}: modulo che gestisce l'application logic. Più in dettaglio, trasforma i dati ottenuti dalle interazioni dell'utente ed i flussi dati ottenuti da Grafana\glosp in un formato adatto per l'esecuzione delle azioni da parte del Model.
 \end{itemize}
-\paragraph{Ruolo di Grafana nell'architettura}
+\paragraph{Ruolo di Grafana nell'architettura} \mbox{}\\ [1mm]
 Grafana\glosp ricopre un ruolo fondamentale nell'architettura, infatti la sua presenza permette l'aggiornamento continuo della vista alla variazione dei dati nel modello. In particolare, ogni volta che sono presenti aggiornamenti sui dati nel modello Grafana\glosp li rende disponibili alla vista tramite appositi metodi, assieme alla configurazione delle query con cui questi dati sono stati ottenuti. Inoltre, la sua presenza gestisce tramite AnuglarJS il two-way data binding tra vista HTML e codice Javascript, oltre che ad offrire la maggior parte dei componenti grafici necessari alla realizzazione della vista del plug-in.
 \subsubsection{Progettazione di dettaglio}
 Di seguito viene descritta in dettaglio la progettazione del plug-in. In allegato viene inoltre fornito il file \textit{diagramma-classi-plug-in.png} contenente l'intero diagramma delle classi.
