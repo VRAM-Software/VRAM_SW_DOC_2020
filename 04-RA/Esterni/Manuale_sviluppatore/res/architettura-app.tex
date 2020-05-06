@@ -52,7 +52,8 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		\end{landscape}
 		\paragraph*{Read} \mbox{} \\[1mm]
 		Abbiamo riscontrato nella gestione dell'input che, indipendentemente dalla tipologia di file ricevuto, l'algoritmo per eseguire la lettura di quest'ultimo ha uno scheletro comune. È stato quindi deciso di implementare il design pattern template method.
-		La classe astratta \textit{Read} implementa il metodo \textit{ReadFile(path, callback)} che rappresenta la parte comune dell'algoritmo di lettura da file. Inoltre contiene il metodo astratto \textit{parser(data, callback)} che invece rappresenta la trasformazione del contenuto del file sulla base della sua estensione e perciò viene implementato nelle classi concrete che estendono \textit{Read}. Nel nostro caso esse sono \textit{ReadCsv} e \textit{ReadJson}.
+		La classe astratta \textit{Read} implementa il metodo \textit{ReadFile(path, callback)} che rappresenta la parte di interazione con il filesystem per la lettura da file, comune a qualsiasi tipologia. Inoltre fornisce il metodo astratto \textit{parser(data, callback)} che invece rappresenta la trasformazione del contenuto del file sulla base della sua estensione e, perciò, viene implementato nelle classi concrete che estendono \textit{Read}. Nel nostro caso esse sono \textit{ReadCsv} e \textit{ReadJson}.
+		Infine per quanto riguarda \textit{ReadCsv}, ha una dipendenza di tipo composizione con la classe \textit{TrainParameters} che definisce la struttura dei parametri di addestramento letti dal file. Inoltre, a sua volta, ha una dipendenza di tipo composizione con il template di classe chiamato \textit{Series} che rappresenta il tipo vero e proprio dei parametri di addestramento. È stato definito come template in quanto non si vuole vincolare la tipologia di dato primitivo che contiene, permettendo di istanziarlo in base alle proprie necessità.
 		\mbox{}
 		%\begin{landscape}
 			%\begin{figure}
@@ -63,8 +64,8 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 			%\end{figure}
 		%\end{landscape}
 		\paragraph*{Write} \mbox{} \\[1mm]
-		Anche nella gestione dell'output abbiamo riscontrato che, indipendentemente dalla tipologia di file su cui scrivere, l'algoritmo per eseguire la scrittura di quest'ultimo ha uno scheletro comune. È stato quindi deciso di implementare il design pattern\glosp template method.
-		La classe astratta \textit{Write} implementa il metodo \textit{writeToDisk(path, name, data, notes, callback)} che rappresenta la parte comune dell'algortimo di scrittura su file. Inoltre contiene il metodo astratto \textit{parser(data, callback)} che invece rappresenta la trasformazione dell'oggetto che vogliamo scrivere sul file nel formato corretto. Nel nostro caso abbiamo implementato la classe concreta \textit{WriteJson} ma è estendile a tutti i formati di file desiderati estendendo \textit{Write}.
+		Anche nella gestione dell'output abbiamo riscontrato che, indipendentemente dalla tipologia di file su cui scrivere, l'algoritmo per eseguire la scrittura ha uno scheletro comune. È stato quindi deciso di implementare il design pattern\glosp template method.
+		La classe astratta \textit{Write} implementa il metodo \textit{writeToDisk(path, name, data, notes, callback)} che rappresenta la parte di interazione con il filesystem per la scrittura su file, comune a qualsiasi tipologia. Inoltre contiene il metodo astratto \textit{parser(data, callback)} che invece rappresenta la trasformazione dell'oggetto che vogliamo scrivere sul file nel formato corretto e che differisce dalla tipologia di file. Nel nostro caso abbiamo implementato la classe concreta \textit{WriteJson} che estende \textit{Write}.
 		\mbox{}
 		%\begin{landscape}
 		%	\begin{figure}
@@ -80,6 +81,8 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		\paragraph{View} \mbox{} \\[1mm]
 		La View è realizzata attraverso dei componenti di React contenuti nella classe principale \textit{App} attraverso una dipendenza di tipo composizione. Grazie all'estensione della classe \textit{Component} di React, otteniamo il metodo \textit{render()} che renderizza i componenti visualizzandoli nell'interfaccia utente.
 		Infine per l'implementazione del grafico di addestramento, utilizziamo la libreria D3.
+		\paragraph*{App}
+		È la classe principale che orchestra tutti i componenti della View.
 		\mbox{}
 		%\begin{landscape}
 		%	\begin{figure}
@@ -112,6 +115,7 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 				\end{figure}
 			\end{figure}
 		\end{landscape}
+		\paragraph*{Diagramma di sequenza}
 		Per spiegare meglio l'insieme di azioni compiute al fine di processare i dati per eseguire l'addestramento degli algoritmi, illustriamo un diagramma di sequenza che prende in esame SVM\glo. Per gli altri algoritmi il procedimento è simile.
 		\mbox{}
 		\begin{landscape}
