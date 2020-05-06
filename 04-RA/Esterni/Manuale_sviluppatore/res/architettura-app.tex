@@ -82,7 +82,22 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		La View è realizzata attraverso dei componenti di React contenuti nella classe principale \textit{App} attraverso una dipendenza di tipo composizione. Grazie all'estensione della classe \textit{Component} di React, otteniamo il metodo \textit{render()} che renderizza i componenti visualizzandoli nell'interfaccia utente.
 		Infine per l'implementazione del grafico di addestramento, utilizziamo la libreria D3.
 		\paragraph*{App}
-		È la classe principale che orchestra tutti i componenti della View.
+		È la classe principale che orchestra tutti i componenti della View e che, attraverso Electron, comunica con la ViewModel. \\
+		I campi dati che rappresentano i componenti dell'interfaccia utente sono:
+		\begin{itemize}
+			\item graph: è un oggetto di tipo Graph che rappresenta il grafico di visualizzazione dei dati e dell'addestramento;
+			\item userNotes: è un oggetto di tipo UserNotes e rappresenta il componente grafico di inserimento delle note nel file di addestramento;
+			\item modal: è un oggetto di tipo Modal e rappresenta il componente grafico di salvataggio di un file. A sua volta contiene un oggetto di tipo SaveFileName ?
+			\item choose: è un oggetto di tipo Chooser che rappresenta il componente grafico che permette all'utente di scegliere i file nell'inserimento;
+			\item paramModel: è un oggetto di tipo ParamModal che rappresenta il componente grafico di selezionamento dei valori durante il caricamento dei file csv.
+		\end{itemize}
+		\paragraph*{Graph}
+		È la classe che gestisce il grafico ed ha una dipendenza di tipo composizione con le altre classi che ne rappresentano i componenti:
+		\begin{itemize}
+			\item ScatterPlot: è un oggetto di tipo RenderCircles e rappresenta...
+			\item Grid:
+			\item Axis: 
+		\end{itemize}
 		\mbox{}
 		%\begin{landscape}
 		%	\begin{figure}
@@ -99,7 +114,8 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		La ViewModel contiene i dati da visualizzare nella vista e le trasformazioni per richiamare le operazioni da eseguire nel modello.
 		In particolare è legato alla View tramite Electron che gestisce la loro comunicazione in modo asincrono appoggiandosi al nostro componente \textit{EventManager} e al Model attraverso il meccanismo asincrono di callback.
 		Abbiamo riscontrato la necessità di implementare il design pattern\glosp strategy in tre casi diversi:
-		\paragraph*{Algorithm} \mbox{}
+		\paragraph*{Train} \mbox{} \\[1mm]
+		All'interno di questo package descriviamo le classi che eseguono le trasformazioni necessarie per eseguire l'addestramento richiamando \textit{SvmTrainer} e \textit{RlTrainer} ma anche forniscono i risultati alla View per la visualizzazione. Sono le seguenti:
 		\begin{itemize}
 			\item \textbf{ProcessTraining}: è una classe concreta che rappresenta il context. In essa viene scelto quale algoritmo addestrare sulla base dei dati ricevuti ed ha una dipendenza di tipo aggregazione dall'interfaccia \textit{PerformTraining};
 			\item \textbf{PerformTraining}: è un'interfaccia che rappresenta la strategia astratta. Essa definisce il contratto da rispettare per le classi che implementano il process degli algoritmi di addestramento;
@@ -115,7 +131,7 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 				\end{figure}
 			\end{figure}
 		\end{landscape}
-		\paragraph*{Diagramma di sequenza}
+		\paragraph*{Diagramma di sequenza} \mbox{} \\[1mm]
 		Per spiegare meglio l'insieme di azioni compiute al fine di processare i dati per eseguire l'addestramento degli algoritmi, illustriamo un diagramma di sequenza che prende in esame SVM\glo. Per gli altri algoritmi il procedimento è simile.
 		\mbox{}
 		\begin{landscape}
@@ -126,7 +142,8 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 				\end{figure}
 			\end{figure}
 		\end{landscape}
-		\paragraph*{Read} \mbox{}
+		\paragraph*{Read} \mbox{} \\[1mm]
+		All'interno di questo package descriviamo le classi che eseguono le trasformazioni necessarie per eseguire la lettura da file, csv e json nel nostro caso, e che forniscono i risultati visualizzare successivamente sulla View.
 		\begin{itemize}
 			\item \textbf{ProcessReading}: è una classe concreta che rappresenta il context. In essa viene scelta la tipologia di file da leggere sulla base dei dati ricevuti ed ha una dipendenza di tipo aggregazione dall'interfaccia \textit{PerformReading};
 			\item \textbf{PerformReading}: è un'interfaccia che rappresenta la strategia astratta. Essa definisce il contratto da rispettare per le classi che implementano la lettura da file;
@@ -142,11 +159,12 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 				\end{figure}
 		%	\end{figure}
 		%\end{landscape}
-		\paragraph*{Writing} \mbox{}
+		\paragraph*{Writing} \mbox{} \\[1mm]
+		All'interno di questo package descriviamo le classi che eseguono le trasformazioni necessarie per eseguire la scrittura su file, json nel nostro caso, e che forniscono i risultati visualizzare successivamente sulla View.
 		\begin{itemize}
 			\item \textbf{ProcessWriting}: è una classe concreta che rappresenta il context. in essa viene scelta la tipologia di file su cui scrivere in base ai dati ricevuti ed ha una dipendenza di tipo aggregazione dall'interfaccia \textit{PerformWriting};
 			\item \textbf{PerformWriting}: è un'interfaccia che rappresenta la strategia astratta. Essa definisce il contratto da rispettare per le classi che implementano la lettura da file;
-			\item \textbf{PerformWritingJson}: è una classe concreta che implementa \textit{PerformWriting} e rappresenta il componente che esegue le trasformazioni necessarie per richiamare correttamente l'algoritmo di scrittura di un file Json del Model.
+			\item \textbf{PerformWritingJson}: è una classe concreta che implementa \textit{PerformWriting} e rappresenta il componente che esegue le trasformazioni necessarie per richiamare correttamente l'algoritmo di scrittura di un file Json del Model. Al suo interno ha un campo dati di tipo FileInfo che definisce tutte le informazioni ricavate dal file.
 		\end{itemize}
 		\mbox{}
 		%\begin{landscape}
