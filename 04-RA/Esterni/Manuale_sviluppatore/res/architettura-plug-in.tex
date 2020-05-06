@@ -50,14 +50,14 @@ Essi vengono istanziati solo al momento dell'utilizzo. \\
 \paragraph*{WriteInflux} \mbox{}\\ [1mm]
 Per interfacciarsi e scrivere i dati nel database Influx viene utilizzata la classe \textit{WriteInflux}. Essa viene instanziata all'interno del metodo \textit{predict(DataSet, Result, WriteInfluxParameters)} delle classi rappresentanti gli algoritmi di predizione. Contiene due campi dati:
 \begin{itemize}
-	\item influx: è un riferimento alla classe InfluxDB per Grafana\glo;
+	\item influx: è un riferimento alla classe InfluxDB della libreria node-influx;
 	\item parameters: è un riferimento al tipo WriteInfluxParameters e contiene i parametri per il collegamento e la scrittura nel database.
 \end{itemize}
 È presente il metodo costruttore che riceve in input un WriteInfluxParameters, ne esegue il setting ed instazia InfluxDB.
 Infine sono presenti due metodi:
 \begin{itemize}
-	\item writeArrayToInflux(double[], long[]): esegue la scrittura di un array di dati, solitamente quelli predetti, e dei loro TimeStamps all'interno di InfluxDB;
-	\item writeStampsToInflux(double, long): esegue la scrittura di un singolo dati, solitamente predetto, e del suo relativo TimeStamps all'interno di InfluxDB.
+	\item writeArrayToInflux(double[], long[]): esegue la scrittura di un array di dati, solitamente quelli predetti, usando come chiavi in InfluxDB i corrispondenti TimeStamps passati come parametro;
+	\item writeStampsToInflux(double, long): esegue la scrittura di un singolo dato, solitamente predetto, usando come chiave in InfluxDB il suo relativo TimeStamps passato come parametro.
 \end{itemize}
 \mbox{}
 \begin{landscape}
@@ -71,7 +71,7 @@ Infine sono presenti due metodi:
 
 \paragraph{View} \mbox{}\\ [1mm]
 All'interno della View abbiamo inserito la componente Panel rappresentata dalla classe \textit{PanelCtrl}. Essa rappresenta il nostro pannello principale dal quale gli utenti possono interagire con il plug-in.
-Inoltre attraverso la classe \textit{SelectInfluxDBCtrl} permettiao la selezione dalla datasource Grafana\glosp di tipo Influx su cui scrivere i risultati delle predizioni. In questo modo, sfruttiamo il meccanismo di Grafana\glosp che, dalla scrittura dei dati sul database a questo componente, permette l'aggiornamento continuo della View.
+Inoltre attraverso la classe \textit{SelectInfluxDBCtrl} permettiao la selezione dalla datasource Grafana\glosp di tipo Influx su cui scrivere i risultati delle predizioni. In questo modo, sfruttiamo il meccanismo di Grafana\glosp che, dalla scrittura dei dati sul database di tipo Influx, permette l'aggiornamento continuo della View.
 \paragraph*{PanelCtrl} \mbox{}\\ [1mm]
 La classe che gestisce il pannello di controllo della nostra View è \textit{PanelCtrl} che estende la classe \textit{MetricsPanelCtrl} di Grafana\glo. \\
 I campi dati di cui è necessaria una descrizione sono i seguenti:
@@ -85,15 +85,16 @@ I metodi di cui è necessaria una descrizione sono i seguenti:
 \begin{itemize}
 	\item onDataReceived(Datalist): permette di ricevere i dati da Grafana\glosp e di realizzare delle operazioni. In particolare riceve i dati da InfluxDB e permette l'aggiornamento continuo dal Model;
 	\item updateNodeMap(): permette l'aggiornamento della configurazione dei predittori e quindi della configurazione degli algoritmi;
-	\item onInitEditMode(): permette la gestione della configurazione del pannello dopo che esso è stato modificato da Grafana\glo.
+	\item uploadButtonClick(): permette il caricamento del file JSON di configurazione ottenuto dall'applicativo di addestramento degli algoritmi di predizione;
+	\item onInitEditMode(): permette la gestione della configurazione del pannello al momento della sua istanziazione da parte di Grafana\glo.
 \end{itemize}
 Gli altri metodi e campi dati presenti sono documentati dal loro stesso nome.
 \paragraph*{SelectInfluxDBController} \mbox{}\\ [1mm]
 La classe che gestisce il pannello di inserimento dei dati per la scrittura su InfluxDB, contenuto nel pannello di controllo, è SelectInfluxDBController.
-Contiene un campo dati di tipo Datasource[] che rappresenta i parametri di ogni sorgente dati su cui applicare le previsioni. Espone infine i due metodi per interfacciarsi con tali parametri:
+Contiene un campo dati di tipo Datasource[] che rappresenta i parametri di ogni sorgente dati presente in Grafana\glosp, su cui è possibile applicare le predizioni o scrivere i risultati ottenuti. Espone infine i due metodi per popolare ed interfacciarsi con tale parametri:
 \begin{itemize}
-	\item getDatasources(): permette di ritornare i dati;
-	\item updateDatabaseParams(): aggiorna il contenuto del campo dati.
+	\item getDatasources(): permette di popolare l'array di Datasource effettuando una richiesta HTTP alle API\glosp di Grafana\glo;
+	\item updateDatabaseParams(): permette di inviare al controller i dati inseriti dall'utente tramite la vista.
 \end{itemize}
 \paragraph*{Datasource} \mbox{}\\ [1mm]
 È un tipo di dato che descrive i parametri di una sorgente di dati collegata a Grafana\glosp attraverso dei campi dati.
@@ -139,9 +140,9 @@ Infine all'interno del metodo \textit{performPrediction(DataSet, Result, WriteIn
 \paragraph*{WriteInfluxParameters} \mbox{}\\ [1mm]
 È un tipo di dato che descrive i parametri necessari alla connessione e alla scrittura in un database Influx.
 \paragraph*{Datalist} \mbox{}\\ [1mm]
-È una classe che descrive i dati 
+È una classe che descrive le serie numeriche ottenute da Grafana\glo. Contiene al suo interno il nome della serie ed un array di coppie di punti formati da timestamp e valore.
 \paragraph*{DataSet} \mbox{}\\ [1mm]
-È una classe che descrive il 
+È una classe che descrive le serie numeriche elaborate e pronte per essere inviate agli algoritmi di predizione. Contiene al suo interno una array di serie numeriche e ed un array di timestamp relativi ai singoli punti delle serie numeriche.
 \mbox{}
 \begin{landscape}
 	\begin{figure}
