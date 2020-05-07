@@ -1,5 +1,5 @@
 %ARCHITETTURA APP ESTERNA
-\subsection{Applicazione esterna alla piattaforma Grafana}
+\subsection{Applicazione di addestramento degli algoritmi}
 Per poter visualizzare la suddivisione delle componenti dell'applicazione esterna e le dipendenze che sussistono tra loro ad alto livello, viene riportato il diagramma dei Package in allegato nel file \textit{diagramma-package-app.png}.
 	\subsubsection{Progettazione architetturale}
 	Abbiamo deciso di utilizzare un design pattern\glosp architetturale Model-View-ViewModel (MVVM) perché si adatta bene alle tecnologie che vengono utilizzate ovvero React ed Electron. In particolare, come si può vedere dalla figura seguente, la View invia dati a ViewModel che a sua volta fornisce delle risposte che permettono di tenere la vista sempre aggiornata. Questo scambio di dati è asincrono ed è fornito interamente da Electron. Inoltre abbiamo la comunicazione tra ViewModel e Model che avviene con la richiesta di esecuzione delle operazioni da parte del ViewModel e la conseguente risposta da parte del Model. Anche questo scambio di messaggi è asincrono ed è implementato da un meccanismo di callback\glo.
