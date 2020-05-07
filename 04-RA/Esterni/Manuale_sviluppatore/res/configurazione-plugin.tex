@@ -14,7 +14,6 @@ Aprire le impostazioni di WebStorm dal suo menù "File" ed utilizzando la barra 
 \subsubsection{Importazione di un progetto}
 Dal menu "File" selezionare la voce "Open" e successivamente la root directory del repository desiderato.
 
-\pagebreak
 \subsection{Configurazione plug-in SonarLint per WebStorm}
 \subsubsection{Configurazione globale}
 Per configurare il plug-in SonarLint, aprire le impostazioni di WebStorm dal suo menù "File". Quindi nella sezione "Tools" selezionare la voce "SonarLint". Nella finestra "Visualizzare", selezionare il "+" per aggiungere una connessione al servizio WEB SonarCloud.
@@ -64,24 +63,24 @@ Il file package.json contiene tutte le informazioni e i requisiti necessari dell
 \begin{itemize}
 	\item dependencies: contiene la seguente lista di pacchetti che sono necessari per il corretto funzionamento dell'applicazione:
 		\begin{itemize}
-			\item jquery;
-			\item lodash;
-			\item plotly.js;
-			\item scriptjs;
-			\item influx;
-			\item luxon;
-			\item ml-modules;
-			\item rxjs.
+			\item \textbf{jquery}: la libreria jquery è utilizzata per semplificare lo sviluppo dei componenti javascript del plug-in, in particolare delle componenti relative alla vista;
+			\item \textbf{lodash}: la libreria lodash è utilizzata per semplificare lo sviluppo del plug-in, in particolare semplifica la gestione degli array;
+			\item \textbf{plotly.js}: la libreria plotly.js è utilizzata per rappresentare il grafico all'interno del nostro plug-in, a partire dai dati ottenuti da Grafana\glo;
+			\item \textbf{scriptjs}: la libreria scriptjs è utilizzata per semplificare lo sviluppo e migliorare la gestione delle richieste asincrone;
+			\item \textbf{influx}: la libreria influx è utlizzata per eseguire la scrittura dei risultati delle predizioni nei database di tipo influxDB;
+			\item \textbf{luxon}: la libreria luxon è utilizzata per manipolare e gestire i timestamp dei dati raccolti da grafana e per le scritture su influxDB;
+			\item \textbf{ml-modules}: la libreria ml-modules è utilizzata per l'utilizzo dell'algoritmo di predizione SVM\glo;
+			\item \textbf{rxjs}: la libreria rxjs è utilizzata per semplificare lo sviluppo e la gestione delle richieste HTTP alle API di Grafana\glo.
 		\end{itemize}
 	\item devDependencies: questo attributo contiene la seguente lista di pacchetti che sono necessari per il corretto funzionamento dell'applicazione durante lo sviluppo:
 		\begin{itemize}
-			\item @grafana/data;
-			\item @grafana/toolkit;
-			\item @grafana/ui;
-			\item @types/grafana;
-			\item @types/luxon;
-			\item grafana-sdk-mocks;
-			\item coveralls.
+			\item \textbf{@grafana/data}: richiesta per sviluppare plug-in per Grafana\glosp utilizzando typescript;
+			\item \textbf{@grafana/toolkit}: richiesta per compilare e sviluppare plug-in per Grafana\glo, semplifica il processo di build del plug-in;
+			\item \textbf{@grafana/ui}: richiesta per sviluppare plug-in per Grafana\glosp utilizzando typescript;
+			\item \textbf{@types/grafana}: richiesta per sviluppare plug-in per Grafana\glosp utilizzando typescript;
+			\item \textbf{@types/luxon}: richiesta per utilizzare la libreria luxon utilizzando typescript;
+			\item \textbf{grafana-sdk-mocks}: utilizzata per sviluppare i test automatici per il plug-in, serve per eseguire il mock dei componenti Grafana\glo;
+			\item \textbf{coveralls}: utilizzata per il calcolo del code coverage dei test automatici.
 		\end{itemize}
 	\item{scripts}: questo attributo contiene una lista di tutti i comandi, utili per uno sviluppatore, che possono essere eseguiti da linea di comando:
 		\begin{itemize}
