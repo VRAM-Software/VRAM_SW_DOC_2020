@@ -41,6 +41,55 @@ Per il corretto funzionamento dell'applicazione è necessario installare tutte l
 \begin{verbatim}
 	npm install
 \end{verbatim}
+I pacchetti che vengono installati si suddividono in dipendenze e dipendenze sviluppatore.
+
+\paragraph*{Dipendenze}\mbox{}\\ [1mm]
+Nella seguente tabella sono elencate tutte le dipendenze necessarie per la corretta esecuzione del plug-in.
+\mbox{}\\ [1mm]
+\rowcolors{2}{gray!25}{gray!15}
+\setcounter{table}{0}
+\begin{longtable} {
+		>{}p{65mm} 
+		>{}p{30mm}
+	}
+	\rowcolor{gray!50}
+	\textbf{Pacchetto} & \textbf{Versione} \TBstrut \\ [2mm]
+	\verb|@akanass/rx-http-reques| & \verb|^3.3.0|  \TBstrut \\ [2mm]
+	\verb|@babel/preset-env| & \verb|^7.9.0| \TBstrut \\ [2mm]
+	\verb|influx| & \verb|^5.5.1| \TBstrut \\ [2mm]
+	\verb|jquery| & \verb|^3.4.1| \TBstrut \\ [2mm]
+	\verb|lodash| & \verb|^4.17.10| \TBstrut \\ [2mm]
+	\verb|luxon| & \verb|^1.22.2| \TBstrut \\ [2mm]
+	\verb|ml-modules|\footnote{Il pacchetto \texttt{ml-modules} usato nel nostro progetto è una versione modificata dell'ononimo pacchetto} & \verb|0.1.0| \TBstrut \\ [2mm]
+	\verb|plotly.js| & \verb|^1.52.3| \TBstrut \\ [2mm]
+	\verb|rxjs| & \verb|^6.5.5| \TBstrut \\ [2mm]
+	\verb|scriptjs| & \verb|^2.5.9| \TBstrut \\ [2mm]
+	\rowcolor{white}
+	\caption{Dipendenze per eseguire applicazione}
+\end{longtable}
+
+\paragraph*{Dipendenze sviluppatore}\mbox{}\\ [1mm]
+Nella seguente tabella sono elencate tutte le dipendenze necessarie per la corretta esecuzione del plug-in durante lo sviluppo della stessa.
+\rowcolors{2}{gray!25}{gray!15}
+\setcounter{table}{1}
+\begin{longtable} {
+		>{}p{65mm} 
+		>{}p{30mm}
+	}
+	\rowcolor{gray!50}
+	\textbf{Pacchetto} & \textbf{Versione} \TBstrut \\ [2mm]
+	\verb|@grafana/data| & \verb|^next| \TBstrut \\ [2mm]
+	\verb|@grafana/toolkit| & \verb|^6.7.1| \TBstrut \\ [2mm]
+	\verb|@grafana/ui| & \verb|^next| \TBstrut \\ [2mm]
+	\verb|@types/grafana| & \verb|0.1.0| \TBstrut \\ [2mm]
+	\verb|@types/luxon| & \verb|^1.22.0| \TBstrut \\ [2mm]
+	\verb|coveralls| & \verb|^3.0.9| \TBstrut \\ [2mm]
+	\verb|grafana-sdk-mocks| & \verb|0.1.0| \TBstrut \\ [2mm]
+	\rowcolor{white}
+	\caption{Dipendenze specifiche per lo sviluppatore}
+\end{longtable}
+\mbox{}\\ [1mm]
+Seguendo i due passaggi descritti nei precedenti paragrafi, il plug-in è installato correttamente.
 
 \subsubsection{Eseguire il plug-in}%\mbox{}\\ [1mm]
 Per eseguire il plug-in è necessario copiare il contenuto del repository "grafana\_prediction\_plugin", ad eccezione delle cartelle "node\_modules" e "coverage", all'interno della cartella "data/plugins" dell'installazione Grafana\glo. Accedendo all'interfaccia web si potrà quindi abilitare il plug-in dall'apposita sezione plug-in delle impostazioni.
