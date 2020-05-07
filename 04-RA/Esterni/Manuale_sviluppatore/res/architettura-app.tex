@@ -1,8 +1,8 @@
 %ARCHITETTURA APP ESTERNA
-\subsection{Applicazione esterna alla piattaforma Grafana}
+\subsection{Applicazione di addestramento degli algoritmi}
 Per poter visualizzare la suddivisione delle componenti dell'applicazione esterna e le dipendenze che sussistono tra loro ad alto livello, viene riportato il diagramma dei Package in allegato nel file \textit{diagramma-package-app.png}.
 	\subsubsection{Progettazione architetturale}
-	Abbiamo deciso di utilizzare il design pattern\glosp architetturale Model-View-ViewModel (MVVM) perché si adatta bene alle due principali tecnologie che utilizziamo: React ed Electron. In particolare, come si può vedere dalla figura seguente, la View scambia dei dati in modo asincrono con il ViewModel attraverso Electron e ciò permette di mantenere la View sempre aggiornata. È inoltre presente la comunicazione tra ViewModel e Model che avviene con la richiesta di esecuzione delle operazioni da parte del ViewModel e la conseguente risposta da parte del Model. Anche questo scambio di messaggi è asincrono ed è implementato da un meccanismo di callback\glo.
+	Abbiamo deciso di utilizzare il design pattern\glosp architetturale Model-View-ViewModel (MVVM) perché si adatta bene alle due principali tecnologie che utilizziamo: React ed Electron. In particolare, come si può vedere dalla figura seguente, la View scambia dei dati in modo asincrono con il ViewModel attraverso Electron e ciò permette di mantenere la View sempre aggiornata. Inoltre è presente la comunicazione tra ViewModel e Model che avviene con la richiesta di esecuzione delle operazioni da parte del ViewModel e la conseguente risposta da parte del Model. Anche questo scambio di messaggi è asincrono ed è implementato da un meccanismo di callback\glo.
 	\mbox{}
 	\begin{landscape}
 		\begin{figure}
@@ -25,13 +25,13 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 	\end{itemize}
 	\subsubsection{Progettazione di dettaglio}
 		Di seguito viene descritta in dettaglio la progettazione dell'applicazione. In allegato viene fornito il file \textit{diagramma-classi-app.png} contenente l'intero diagramma delle classi.
-		\paragraph{Model}
+		\paragraph{Model} \mbox{} \\[1mm]
 		I componenti principali del Model sono gli algoritmi di addestramento rappresentati dalle classi concrete \textit{SvmTrainer} ed \textit{RlTrainer} e le funzioni di lettura e scrittura dei file rappresentate dalle classi astratte rispettivamente \textit{Read} e \textit{Write}.
-		Più in dettaglio \textit{SvmTrainer} e \textit{RlTrainer} forniscono le funzionalità di addestramento degli algoritmi di predizione Support Vector Machine\glosp lineare e regressione lineare\glosp con il corrispondente calcolo degli indici di qualità: Precision\glosp e Recall\glosp per il primo e Rq\glosp per il secondo. Per le operazioni di lettura dei file vengono fornite le due classi concrete: \textit{ReadCsv} e \textit{ReadJson} per la lettura di file CSV e JSON. Per quanto riguarda invece l'operazione di scrittura viene fornita la classe concreta \textit{WriteJson} per scrivere all'interno di un file JSON.
+		Più in dettaglio \textit{SvmTrainer} e \textit{RlTrainer} forniscono le funzionalità di addestramento degli algoritmi di predizione Support Vector Machine\glosp lineare e regressione lineare\glosp con il corrispondente calcolo degli indici di qualità: Precision\glosp e Recall\glosp per il primo e Rsquared\glosp per il secondo. Per le operazioni di lettura dei file vengono fornite le due classi concrete: \textit{ReadCsv} e \textit{ReadJson} per la lettura di file CSV e JSON. Per quanto riguarda invece l'operazione di scrittura viene fornita la classe concreta \textit{WriteJson} per scrivere all'interno di un file JSON.
 		\paragraph*{SvmTrainer} \mbox{} \\[1mm]
 		Questa classe, come detto in precedenza, ha lo scopo di addestrare l'algoritmo Support Vector Machine\glosp lineare sfruttando la classe SVM della libreria ml-modules. \\
 		Il campo dati che richiede un ulteriore spiegazione è \textit{options} ovvero un array di stringhe che contiene le opzioni di esecuzione per l'algoritmo.
-		I metodi che invece necessitano di un ulteriore spiegazione sono: \textit{translateData()} e \textit{splitData()}.\begin{itemize}
+		I metodi che invece necessitano di un ulteriore spiegazione sono: \textit{translateData()} e \textit{splitData()}:\begin{itemize}
 			\item \textit{translateData()} in quanto prepara i dati nel formato adeguato all'addestramento;
 			\item \textit{splitData()} in quanto suddivide i dati per il calcolo degli indici di qualità e per l'addestramento dell'algoritmo rispettivamente in 1/3 e 2/3 con una modalità pseudo-casuale per non porre vincoli all'utente in fase di inserimento.
 		\end{itemize}
@@ -39,7 +39,7 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		\paragraph*{RlTrainer} \mbox{} \\[1mm]
 		Questa classe, come detto in precedenza, ha lo scopo di addestrare l'algoritmo regressione lineare\glosp sfruttando la libreria LinearRegression. \\
 		Il campo dati che richiede un'ulteriore spiegazione è \textit{options} ovvero un array di stringhe che contiene le opzioni di esecuzione per l'algoritmo.
-		I metodi che invece necessitano di un ulteriore spiegazione sono: \textit{translateData()} e \textit{splitData()}. 
+		I metodi che invece necessitano di un ulteriore spiegazione sono: \textit{translateData()} e \textit{splitData()}: 
 		\begin{itemize}
 			\item \textit{translateData()} in quanto prepara i dati nel formato adeguato all'addestramento;
 			\item \textit{splitData()} in quanto suddivide i dati per il calcolo degli indici di qualità e per l'addestramento dell'algoritmo rispettivamente in 1/3 e 2/3 con una modalità pseudo-casuale per non porre vincoli all'utente in fase di inserimento.
@@ -48,7 +48,7 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		Questa classe ha una dipendenza verso il tipo \textbf{RlData} che rappresenta la struttura del dato da dare in input ad una Rl\glo.
 		\paragraph*{Result} \mbox{} \\[1mm]
 		Per definire il tipo risultato degli algoritmi di predizione abbiamo implementato l'interfaccia Result. Il contratto di questa interfaccia è composto da un solo metodo: \textit{toStringJson()}. Questo metodo ritorna un oggetto JSON contenente tutti i campi dati del risultato dell'addestramento sotto forma di stringa. In questo modo per ogni tipologia di algoritmo può essere definita una classe concreta che implementa Result e che contiene i propri dati. \\
-		Nella nostra applicazione sono stati implementati \textbf{ResultSvm} e \textbf{ResultRl}:
+		Nella nostra applicazione sono stati implementati \textbf{ResultSvm} e \textbf{ResultRl}.
 		\mbox{}
 		\begin{landscape}
 			\begin{figure}
@@ -89,29 +89,28 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		\paragraph{View} \mbox{} \\[1mm]
 		La View è realizzata attraverso dei componenti di React contenuti nella classe principale \textit{App} attraverso una dipendenza di tipo composizione. Grazie all'estensione della classe \textit{Component} di React, otteniamo il metodo \textit{render()} che renderizza i componenti visualizzandoli nell'interfaccia utente.
 		Infine per l'implementazione del grafico di addestramento, utilizziamo la libreria D3.
-		\paragraph*{App}
+		\paragraph*{App} \mbox{} \\[1mm]
 		È la classe principale che orchestra tutti i componenti della View e che, attraverso Electron, comunica con la ViewModel. \\
 		I componenti principali utilizzati nella classe \textit{App} sono:
 		\begin{itemize}
-			\item Graph che rappresenta il grafico di visualizzazione dei dati e dell'addestramento;
-			\item SaveFileModal e rappresenta il componente grafico di salvataggio di un file;
-			\item ChangeParamModal che rappresenta il componente grafico di selezionamento dei valori durante il caricamento dei file csv;
-			\item ControlPanel che si occupa di renderizzare i seguenti componenti: \begin{itemize}
-				\item ResultPanel che a sua volta contiene il componente QualityIndex il quale ha lo scopo di renderizzare il risultato dell'addestramento sotto forma di percentuale;
-				\item SetDataCheckBoxes che permette all'utente di scegliere quale tipologia di dati visualizzare nel grafico tra quelli usati per l'addestramento e quelli usati per il calcolo degli indici di qualità;
-				\item TextArea che rappresenta il componente grafico di inserimento delle note nel file di addestramento.
+			\item Graph: rappresenta il grafico di visualizzazione dei dati e dell'addestramento;
+			\item SaveFileModal: rappresenta il componente grafico di salvataggio di un file;
+			\item ChangeParamModal: rappresenta il componente grafico di selezionamento dei valori durante il caricamento dei file csv;
+			\item ControlPanel: si occupa di renderizzare i seguenti componenti: \begin{itemize}
+				\item ResultPanel: componente che a sua volta contiene QualityIndex il cui scopo è renderizzare il risultato dell'addestramento in formato percentuale;
+				\item SetDataCheckBoxes: componente che permette all'utente di scegliere quale tipologia di dati visualizzare nel grafico tra quelli usati per l'addestramento e per il calcolo degli indici di qualità;
+				\item TextArea: rappresenta il componente grafico di inserimento delle note nel file di addestramento.
 			\end{itemize}
-			
 		\end{itemize}
-		\paragraph*{Graph}
+		\paragraph*{Graph} \mbox{} \\[1mm]
 		È la classe che gestisce il grafico ed ha una dipendenza di tipo composizione con le altre classi che ne rappresentano i componenti:
 		\begin{itemize}
-			\item ScatterPlot: è un oggetto di tipo ScatterPlot e rappresenta il componente grafico che contiene i seguenti componenti: \begin{itemize}
-				\item Grid che rappresenta il componente grafico e si occupa di renderizzare il risultato dell'addestramento della SVM\glosp nel grafico;
-				\item TrendLine che rappresenta il componente grafico e si occupa di renderizzare il risultato dell'addestramento della RL\glosp nel grafico;
-				\item RenderDataSvm che rappresenta il componente grafico e si occupa di visualizzare correttamente i dati di un addestramento SVM\glo;
-				\item RendeDataRl che rappresenta il componente grafico e si occupa di visualizzare correttamente i dati di un addestramento RL\glo;
-				\item Due componenti Axis che rappresentano l'asse x e l'asse y del grafico.
+			\item ScatterPlot: rappresenta il componente grafico che a sua volta contiene: \begin{itemize}
+				\item Grid: rappresenta il componente grafico che si occupa di renderizzare il risultato dell'addestramento della SVM\glosp nel grafico;
+				\item TrendLine: rappresenta il componente grafico e si occupa di renderizzare il risultato dell'addestramento della RL\glosp nel grafico;
+				\item RenderDataSvm: rappresenta il componente grafico e si occupa di visualizzare correttamente i dati di un addestramento SVM\glo;
+				\item RendeDataRl: rappresenta il componente grafico e si occupa di visualizzare correttamente i dati di un addestramento RL\glo;
+				\item Axis: componente istanziato due volta per rappresentare l'asse x e l'asse y del grafico.
 			\end{itemize}
 		\end{itemize}
 		\mbox{}
@@ -131,13 +130,15 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		In particolare è legato alla View tramite Electron che gestisce la loro comunicazione in modo asincrono appoggiandosi al nostro componente \textit{EventManager} e al Model attraverso il meccanismo asincrono di callback.
 		Abbiamo riscontrato la necessità di implementare il design pattern\glosp strategy in tre casi diversi:
 		\paragraph*{Train} \mbox{} \\[1mm]
-		All'interno di questo package descriviamo le classi che eseguono le trasformazioni necessarie per eseguire l'addestramento richiamando \textit{SvmTrainer} e \textit{RlTrainer} ma anche forniscono i risultati alla View per la visualizzazione. Sono le seguenti:
-		\begin{itemize}
-			\item \textbf{ProcessTraining}: è una classe concreta che rappresenta il context. In essa viene scelto quale algoritmo addestrare sulla base dei dati ricevuti ed ha una dipendenza di tipo aggregazione dall'interfaccia \textit{PerformTraining};
-			\item \textbf{PerformTraining}: è un'interfaccia che rappresenta la strategia astratta. Essa definisce il contratto da rispettare per le classi che implementano il process degli algoritmi di addestramento;
-			\item \textbf{PerformTrainingSvm}: è una classe concreta che implementa \textit{PerformTraining} e rappresenta il componente che esegue la trasformazione ed il controllo dei dati per richiamare correttamente l'algortimo di addestramento SVM\glosp nel Model.
-			\item \textbf{PerformTrainingRl}: è una classe concreta che implementa \textit{PerformTraining} e rappresenta il componente che esegue la trasformazione ed il controllo dei dati per richiamare correttamente l'algortimo di addestramento RL\glosp nel Model.
-		\end{itemize}
+		All'interno di questo package descriviamo le classi che eseguono le trasformazioni necessarie per eseguire l'addestramento richiamando \textit{SvmTrainer} e \textit{RlTrainer} ma anche forniscono i risultati alla View per la visualizzazione.
+		\subparagraph*{ProcessTraining} \mbox{} \\[1mm]
+		È una classe concreta che rappresenta il context. In essa viene scelto quale algoritmo addestrare sulla base dei dati ricevuti ed ha una dipendenza di tipo aggregazione dall'interfaccia \textit{PerformTraining}.
+		\subparagraph*{PerformTraining} \mbox{} \\[1mm]
+		È un'interfaccia che rappresenta la strategia astratta. Essa definisce il contratto da rispettare per le classi che implementano il process degli algoritmi di addestramento.
+		\subparagraph*{PerformTrainingSvm} \mbox{} \\[1mm]
+		È una classe concreta che implementa \textit{PerformTraining} e rappresenta il componente che esegue la trasformazione ed il controllo dei dati per richiamare correttamente l'algortimo di addestramento SVM\glosp nel Model.
+		\subparagraph*{PerformTrainingRl} \mbox{} \\[1mm]
+		È una classe concreta che implementa \textit{PerformTraining} e rappresenta il componente che esegue la trasformazione ed il controllo dei dati per richiamare correttamente l'algortimo di addestramento RL\glosp nel Model.
 		\mbox{}
 		\begin{landscape}
 			\begin{figure}
@@ -160,12 +161,14 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		\end{landscape}
 		\paragraph*{Read} \mbox{} \\[1mm]
 		All'interno di questo package descriviamo le classi che eseguono le trasformazioni necessarie per eseguire la lettura da file, csv e json nel nostro caso, e che forniscono i risultati visualizzare successivamente sulla View.
-		\begin{itemize}
-			\item \textbf{ProcessReading}: è una classe concreta che rappresenta il context. In essa viene scelta la tipologia di file da leggere sulla base dei dati ricevuti ed ha una dipendenza di tipo aggregazione dall'interfaccia \textit{PerformReading};
-			\item \textbf{PerformReading}: è un'interfaccia che rappresenta la strategia astratta. Essa definisce il contratto da rispettare per le classi che implementano la lettura da file;
-			\item \textbf{PerformReadingCsv}: è una classe concreta che implementa \textit{PerformReading} e rappresenta il componente che esegue le trasformazioni necessarie per richiamare la correttamente l'algoritmo di lettura di un file Csv del Model;
-			\item \textbf{PerformReadingJSon}: è una classe concreta che implementa \textit{PerformReading} e rappresenta il componente ch esegue le trasformazioni necessarie per richiamare la correttamente l'algoritmo di lettura di un file Json del Model.
-		\end{itemize}
+		\subparagraph*{ProcessReading} \mbox{} \\[1mm]
+		È una classe concreta che rappresenta il context. In essa viene scelta la tipologia di file da leggere sulla base dei dati ricevuti ed ha una dipendenza di tipo aggregazione dall'interfaccia \textit{PerformReading}.
+		\subparagraph*{PerformReading} \mbox{} \\[1mm]
+		È un'interfaccia che rappresenta la strategia astratta. Essa definisce il contratto da rispettare per le classi che implementano la lettura da file.
+		\subparagraph*{PerformReadingCsv} \mbox{} \\[1mm]
+		È una classe concreta che implementa \textit{PerformReading} e rappresenta il componente che esegue le trasformazioni necessarie per richiamare la correttamente l'algoritmo di lettura di un file Csv del Model.
+		\subparagraph*{PerformReadingJSon} \mbox{} \\[1mm]
+		È una classe concreta che implementa \textit{PerformReading} e rappresenta il componente ch esegue le trasformazioni necessarie per richiamare la correttamente l'algoritmo di lettura di un file Json del Model.
 		\mbox{}
 		%\begin{landscape}
 		%	\begin{figure}
@@ -177,11 +180,12 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		%\end{landscape}
 		\paragraph*{Writing} \mbox{} \\[1mm]
 		All'interno di questo package descriviamo le classi che eseguono le trasformazioni necessarie per eseguire la scrittura su file, json nel nostro caso, e che forniscono i risultati visualizzare successivamente sulla View.
-		\begin{itemize}
-			\item \textbf{ProcessWriting}: è una classe concreta che rappresenta il context. in essa viene scelta la tipologia di file su cui scrivere in base ai dati ricevuti ed ha una dipendenza di tipo aggregazione dall'interfaccia \textit{PerformWriting};
-			\item \textbf{PerformWriting}: è un'interfaccia che rappresenta la strategia astratta. Essa definisce il contratto da rispettare per le classi che implementano la lettura da file;
-			\item \textbf{PerformWritingJson}: è una classe concreta che implementa \textit{PerformWriting} e rappresenta il componente che esegue le trasformazioni necessarie per richiamare correttamente l'algoritmo di scrittura di un file Json del Model. Al suo interno ha un campo dati di tipo FileInfo che definisce tutte le informazioni ricavate dal file.
-		\end{itemize}
+		\subparagraph*{ProcessWriting} \mbox{} \\[1mm]
+		È una classe concreta che rappresenta il context. in essa viene scelta la tipologia di file su cui scrivere in base ai dati ricevuti ed ha una dipendenza di tipo aggregazione dall'interfaccia \textit{PerformWriting}.
+		\subparagraph*{PerformWriting} \mbox{} \\[1mm]
+		È un'interfaccia che rappresenta la strategia astratta. Essa definisce il contratto da rispettare per le classi che implementano la lettura da file.
+		\subparagraph*{PerformWritingJson} \mbox{} \\[1mm]
+		È una classe concreta che implementa \textit{PerformWriting} e rappresenta il componente che esegue le trasformazioni necessarie per richiamare correttamente l'algoritmo di scrittura di un file Json del Model. Al suo interno ha un campo dati di tipo FileInfo che definisce tutte le informazioni ricavate dal file.
 		\mbox{}
 		%\begin{landscape}
 		%	\begin{figure}
