@@ -1,5 +1,5 @@
 \section{Estensibilità del prodotto}
-	\subsection{Supporto a nuovi algoritmi di addestramento}
+	\subsection{Supporto a nuovi algoritmi di predizione}
 	Al momento sono stati implementati gli algoritmi di addestramento e di predizione di Support Vector Machine lineare e di Regressione lineare. Grazie alla struttura dell'architettura è possibile aggiungere le varianti delle famiglie di algoritmi di Support Vector Machine e di Regressione quali non lineari, esponenziali e logaritmiche.
 	Per realizzare ciò, è sufficiente eseguire il seguente procedimento per ogni nuovo algoritmo. Creare una nuova implementazione dell'interfaccia \textit{PerformTraining} con la relativa classe nel Model all'interno dell'applicazione ed una nuova implementazione delle interfacce \textit{PerformPrediction} e \textit{AlgorithmTrainer} nel plug-in.
 	\subsection{Supporto a nuove tipologie di file}
