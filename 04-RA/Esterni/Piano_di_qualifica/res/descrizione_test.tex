@@ -1,4 +1,4 @@
-\section{Specifica dei test}
+\section{Specifica e progresso dei test}
 Il nostro gruppo ha scelto di adottare il Modello a V\glosp per garantire la qualità del nostro prodotto\glo. In particolare, questo modello prevede lo sviluppo dei test durante le attività di analisi dei requisiti, progettazione\glosp architetturale e progettazione\glosp di dettaglio oltre a validazione\glosp e collaudo.
 In questo modo è possibile verificare la correttezza sia di tutti gli aspetti che compongono il progetto\glosp che delle singole parti sviluppate. Sono state individuate quattro tipologie di test:
 \begin{itemize}
@@ -8,7 +8,41 @@ In questo modo è possibile verificare la correttezza sia di tutti gli aspetti c
 	\item test di unità.
 \end{itemize}
 Ogni volta che viene svolta un'attività viene definita una tabella con i test di una tipologia.
-All'interno del documento \textit{Norme di Progetto v. 4.1.1} vengono definite le caratteristiche dei test e i codici che identificano univocamente i singoli test.
+
+\paragraph*{Codifica dei test} \mbox{} \\ [1mm]
+Per ogni test vengono definiti il codice identificativo, la descrizione, lo stato, l'esito e l'importanza.
+\begin{itemize}
+	\item il codice identificativo è scritto in questo formato:\\
+	\\ \textbf{tipologia[codice\_padre].[codice\_figlio]} \\
+	\\ Dove:
+	\begin{itemize}
+		\item \textbf{tipologia}:
+		\begin{itemize}
+			\item \textbf{TS}: test di sistema;
+			\item \textbf{TI}: test di integrazione;
+			\item \textbf{TU}: test di unità.
+		\end{itemize}
+		\item \textbf{codice\_padre}: numero intero progressivo maggiore di zero che identifica univocamente il test;
+		\item \textbf{codice\_figlio}: numero intero progressivo maggiore di zero che indica i sotto-test che compongono il padre. 
+	\end{itemize}
+	\item descrizione: spiegazione concisa e completa di ciò che verifica il test;
+	\item stato:
+	\begin{itemize}
+		\item \textbf{I}: implementato;
+		\item \textbf{NI}: non implementato.
+	\end{itemize}
+	\item Esito:
+	\begin{itemize}
+		\item \textbf{P}: positivo;
+		\item \textbf{N}: negativo;
+		\item \textbf{NE}: non eseguito.
+	\end{itemize}
+	\item Importanza:
+	\begin{itemize}
+		\item \textbf{1}: test di una funzionalità primaria nel nostro prodotto;
+		\item \textbf{2}: test di una funzionalità accessoria e quindi non indispensabile.
+	\end{itemize}
+\end{itemize}
 
 \subsection{Test di accettazione}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %Inserire questo per escludere una sezione dall'indice.
