@@ -23,7 +23,7 @@ Per ogni test vengono definiti il codice identificativo, la descrizione, lo stat
 			\item \textbf{TU}: test di unità.
 		\end{itemize}
 		\item \textbf{codice\_padre}: numero intero progressivo maggiore di zero che identifica univocamente il test;
-		\item \textbf{codice\_figlio}: numero intero progressivo maggiore di zero che indica i sotto-test che compongono il padre. 
+		\item \textbf{codice\_figlio}: numero intero progressivo maggiore di zero che indica i sotto-test che compongono il padre.
 	\end{itemize}
 	\item descrizione: spiegazione concisa e completa di ciò che verifica il test;
 	\item stato:
@@ -58,35 +58,35 @@ Per ogni test vengono definiti il codice identificativo, la descrizione, lo stat
 	>{}p{0mm}}
 	\rowcolor{gray!50}
 	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato} & \textbf{Esito} & \textbf{Priorità} & \TBstrut \\
-	TA1 & Verificare che l'utente possa addestrare gli algoritmi di previsione sull'applicazione esterna & NI & NE & 1 & \TBstrut \\ [2mm]
-	TA1.1 & Verificare che l'utente possa selezionare e caricare, dal suo dispositivo, un file CSV contenente i dati su cui effettuare l'addestramento & NI & NE & 1 & \TBstrut \\ [2mm]
-	TA1.2 & Verificare che l'utente possa selezionare e caricare, dal suo dispositivo, un file JSON contenente la configurazione di un addestramento precedentemente eseguito & NI & NE & 1 & \TBstrut \\ [2mm]
-	TA1.1.1 & Verificare che l'inserimento di un file CSV non valido venga visualizzato un messaggio d'errore & NI & NE & 1 & \TBstrut \\ [2mm]
-	TA1.2.1 & Verificare che l'inserimento di un file JSON non valido venga visualizzato un messaggio d'errore & NI & NE & 1 & \TBstrut \\ [2mm]
-	TA2 & Verificare che l'utente possa visualizzare un grafico a dispersione che rappresenti i dati utilizzati per l'addestramento nell'applicazione esterna & NI & NE & 1 & \TBstrut \\ [2mm]
-	TA3 & Verificare che l'utente possa inserire delle note che verranno scritte nel file JSON contenente il risultato dell'addestramento & NI & NE& 1 & \TBstrut \\ [2mm]
-	TA4 & Verificare che l'utente possa scegliere quale algoritmo utilizzare per effettuare l'addestramento dei dati & NI & NE & 1 & \TBstrut \\ [2mm]
-	TA5 & Verificare che l'utente posso avviare l'addestramento dell'algoritmo di predizione scelto utilizzando i dati inseriti & NI & NE & 1 & \TBstrut \\ [2mm]
-	TA5.1 & Verificare che l'utente possa fermare l'addestramento dell'algoritmo di predizione & NI & NE & 1 & \TBstrut \\ [2mm]
-	TA6 & Verificare che, alla fine del processo di addestramento, venga visualizzato un messaggio di conferma & NI & NE & 1 & \TBstrut \\ [2mm]
-	TA7 & Verificare che, alla fine del processo di addestramento, vengano visualizzati gli indici di qualità delle previsioni eseguite sull'app esterna & NI & NE & 1 & \TBstrut \\ [2mm]
-	TA8 & Verificare che l'utente, alla fine del processo di addestramento, riceva un file JSON contenente il risultato dell'addestramento & NI & NE & 1 & \TBstrut \\ [2mm]
-	TA9	& Verificare che l'utente possa avviare il plug-in & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TA10 & Verificare che l'utente possa caricare il file JSON ottenuto dall'addestramento effettuato dall'applicazione esterna & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TA11 & Verificare che l'utente possa associare i predittori letti dal file JSON al flusso dati & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TA11.1 & Verificare che l'utente possa selezionare un flusso di dati statico su cui eseguire delle previsioni & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TA11.2 & Verificare che l'utente possa visualizzare un messaggio che conferma il successo nel collegamento dei nodi al flusso dati & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TA12 & Verificare che, se il collegamento dei nodi al flusso dati non va a buon file, l'utente visualizzi un messaggio di errore & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TA13 & Verificare che l'utente possa visualizzare il grafico dei risultati della previsione all'interno di una dashboard\glosp precedentemente configurata & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TA14 & Verificare che l'utente possa fermare l'esecuzione del plug-in rimuovendo il relativo pannello dalla dashboard\glo & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TA15 & Verificare che l'utente possa definire un alert\glosp all'interno del pannello della dashboard\glosp su cui si è applicato il plug-in & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TA15.1 & Verificare che l'utente possa inserire un alert\glosp nel pannello della dashboard\glo & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TA15.2 & Verificare che l'utente possa definire le regole di funzionamento di un alert\glo & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TA15.3 & L'utente deve poter definire le condizioni di funzionamento di un alert\glo & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TA15.4 & L'utente deve poter definire il comportamento legato all'assenza di dati  & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TA16 & Verificare che l'utente visualizzi un messaggio di errore se viene inserito un input errato nella definizione di un alert\glo & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TA17 & Verificare che l'utente possa sospendere un alert\glo & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TA18 & Verificare che l'utente possa rimuovere un alert\glo & NI & NE  & 1 & \TBstrut \\ [2mm]
+	TA1 & Verificare che l'utente possa addestrare gli algoritmi di previsione sull'applicazione esterna & I & P & 1 & \TBstrut \\ [2mm]
+	TA1.1 & Verificare che l'utente possa selezionare e caricare, dal suo dispositivo, un file CSV contenente i dati su cui effettuare l'addestramento & I & P & 2 & \TBstrut \\ [2mm]
+	TA1.2 & Verificare che l'utente possa selezionare e caricare, dal suo dispositivo, un file JSON contenente la configurazione di un addestramento precedentemente eseguito & I & P & 2 & \TBstrut \\ [2mm]
+	TA1.1.1 & Verificare che l'inserimento di un file CSV non valido venga visualizzato un messaggio d'errore & I & P & 2 & \TBstrut \\ [2mm]
+	TA1.2.1 & Verificare che l'inserimento di un file JSON non valido venga visualizzato un messaggio d'errore & I & P & 2 & \TBstrut \\ [2mm]
+	TA2 & Verificare che l'utente possa visualizzare un grafico a dispersione che rappresenti i dati utilizzati per l'addestramento nell'applicazione esterna & I & P & 1 & \TBstrut \\ [2mm]
+	TA3 & Verificare che l'utente possa inserire delle note che verranno scritte nel file JSON contenente il risultato dell'addestramento & I & P& 1 & \TBstrut \\ [2mm]
+	TA4 & Verificare che l'utente possa scegliere quale algoritmo utilizzare per effettuare l'addestramento dei dati & I & P & 1 & \TBstrut \\ [2mm]
+	TA5 & Verificare che l'utente posso avviare l'addestramento dell'algoritmo di predizione scelto utilizzando i dati inseriti & I & P & 1 & \TBstrut \\ [2mm]
+	TA5.1 & Verificare che l'utente possa fermare l'addestramento dell'algoritmo di predizione & I & P & 2 & \TBstrut \\ [2mm]
+	TA6 & Verificare che, alla fine del processo di addestramento, venga visualizzato un messaggio di conferma & I & P & 1 & \TBstrut \\ [2mm]
+	TA7 & Verificare che, alla fine del processo di addestramento, vengano visualizzati gli indici di qualità delle previsioni eseguite sull'app esterna & I & P & 1 & \TBstrut \\ [2mm]
+	TA8 & Verificare che l'utente, alla fine del processo di addestramento, riceva un file JSON contenente il risultato dell'addestramento & I & P & 1 & \TBstrut \\ [2mm]
+	TA9	& Verificare che l'utente possa avviare il plug-in & I & P  & 1 & \TBstrut \\ [2mm]
+	TA10 & Verificare che l'utente possa caricare il file JSON ottenuto dall'addestramento effettuato dall'applicazione esterna & I & P  & 1 & \TBstrut \\ [2mm]
+	TA11 & Verificare che l'utente possa associare i predittori letti dal file JSON al flusso dati & I & P  & 1 & \TBstrut \\ [2mm]
+	TA11.1 & Verificare che l'utente possa selezionare un flusso di dati statico su cui eseguire delle previsioni & I & P  & 2 & \TBstrut \\ [2mm]
+	TA11.2 & Verificare che l'utente possa visualizzare un messaggio che conferma il successo nel collegamento dei nodi al flusso dati & I & P  & 2 & \TBstrut \\ [2mm]
+	TA12 & Verificare che, se il collegamento dei nodi al flusso dati non va a buon file, l'utente visualizzi un messaggio di errore & I & P  & 1 & \TBstrut \\ [2mm]
+	TA13 & Verificare che l'utente possa visualizzare il grafico dei risultati della previsione all'interno di una dashboard\glosp precedentemente configurata & I & P  & 1 & \TBstrut \\ [2mm]
+	TA14 & Verificare che l'utente possa fermare l'esecuzione del plug-in rimuovendo il relativo pannello dalla dashboard\glo & I & P  & 1 & \TBstrut \\ [2mm]
+	TA15 & Verificare che l'utente possa definire un alert\glosp all'interno del pannello della dashboard\glosp su cui si è applicato il plug-in & I & P  & 1 & \TBstrut \\ [2mm]
+	TA15.1 & Verificare che l'utente possa inserire un alert\glosp nel pannello della dashboard\glo & I & P  & 2 & \TBstrut \\ [2mm]
+	TA15.2 & Verificare che l'utente possa definire le regole di funzionamento di un alert\glo & I & P  & 2 & \TBstrut \\ [2mm]
+	TA15.3 & L'utente deve poter definire le condizioni di funzionamento di un alert\glo & I & P  & 2 & \TBstrut \\ [2mm]
+	TA15.4 & L'utente deve poter definire il comportamento legato all'assenza di dati  & I & P  & 2 & \TBstrut \\ [2mm]
+	TA16 & Verificare che l'utente visualizzi un messaggio di errore se viene inserito un input errato nella definizione di un alert\glo & I & P  & 1 & \TBstrut \\ [2mm]
+	TA17 & Verificare che l'utente possa sospendere un alert\glo & I & P  & 2 & \TBstrut \\ [2mm]
+	TA18 & Verificare che l'utente possa rimuovere un alert\glo & I & P  & 2 & \TBstrut \\ [2mm]
 	\rowcolor{white}
 	\caption{Test di accettazione}
 \end{longtable}
@@ -106,23 +106,23 @@ Per ogni test vengono definiti il codice identificativo, la descrizione, lo stat
 	>{}p{0mm}}
 	\rowcolor{gray!50}
 	\textbf{Codice} & \textbf{Descrizione} & \textbf{Stato} & \textbf{Esito} & \textbf{Priorità} & \TBstrut \\
-	TS1 & Verificare che l'addestramento degli algoritmi produca un file JSON con i parametri per le previsioni & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TS2 & Verificare che l'addestramento possa essere fermato dall'utente & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TS3 & Verificare che la previsione possa essere fermata dall'utente & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TS4 & Verificare che successivamente al caricamento del file CSV venga effettutata la lettura e il caricamento dei dati nello stato dell'applicazione & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TS5 & Verificare che successivamente al caricamento del file JSON venga effettutata la lettura e il caicamento della configurazione di un'addestramento precedente nello stato dell'applicazione & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TS6 & Verificare che le note scritte dall'utente vengano inserite nel file JSON di output & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TS7 & Verificare la corretta visualizzazione della bontà dei modelli di previsione a seguito dell'addestramento sui dati & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TS8 & Verificare la corretta visualizzazione del grafico relativo ai dati e alla modifica dello stesso in seguito all'addestramento dei dati & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TS9 & Verificare che i nodi ricavati dal file JSON siano associati correttamente al flusso dati scelto in Grafana\glo & NI & NE & 1 & \TBstrut \\ [2mm]
-	TS10 & Applicare le previsioni su un flusso dati statico e visualizzare correttamente i dati ottenuti all'interno di un grafico contenuto nella dashboard\glo & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TS11 & Verificare che l'utente possa definire il comportamento di un alert & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TS12 & Verificare che l'utente possa aggiungere un alert al nostro pannello per monitorare i dati della previsione & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TS13 & Verificare che l'utente possa rimuovere un alert dal nostro pannello & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TS14 & Verificare che la rimozione del nostro pannello implichi la fermata del plug-in & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TS15 & Verificare che i messaggi d'errore relativi agli alert vengano visualizzati & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TS16 & Verificare che i messaggi d'errore relativi ad un caricamento di un file JSON non valido vengano visualizzati & NI & NE  & 1 & \TBstrut \\ [2mm]
-	TS17 & Verificare che i messaggi d'errore relativi all'associazione dei predittorei vengano visualizzati & NI & NE  & 1 & \TBstrut \\ [2mm]
+	TS1 & Verificare che l'addestramento degli algoritmi produca un file JSON con i parametri per le previsioni & I & P & 1 & \TBstrut \\ [2mm]
+	TS2 & Verificare che l'addestramento possa essere fermato dall'utente & I & P & 1 & \TBstrut \\ [2mm]
+	TS3 & Verificare che la previsione possa essere fermata dall'utente & I & P & 1 & \TBstrut \\ [2mm]
+	TS4 & Verificare che successivamente al caricamento del file CSV venga effettutata la lettura e il caricamento dei dati nello stato dell'applicazione & I & P & 1 & \TBstrut \\ [2mm]
+	TS5 & Verificare che successivamente al caricamento del file JSON venga effettutata la lettura e il caicamento della configurazione di un'addestramento precedente nello stato dell'applicazione & I & P & 1 & \TBstrut \\ [2mm]
+	TS6 & Verificare che le note scritte dall'utente vengano inserite nel file JSON di output & I & P & 1 & \TBstrut \\ [2mm]
+	TS7 & Verificare la corretta visualizzazione della bontà dei modelli di previsione a seguito dell'addestramento sui dati & I & P & 1 & \TBstrut \\ [2mm]
+	TS8 & Verificare la corretta visualizzazione del grafico relativo ai dati e alla modifica dello stesso in seguito all'addestramento dei dati & I & P & 1 & \TBstrut \\ [2mm]
+	TS9 & Verificare che i nodi ricavati dal file JSON siano associati correttamente al flusso dati scelto in Grafana\glo & I & P& 1 & \TBstrut \\ [2mm]
+	TS10 & Applicare le previsioni su un flusso dati statico e visualizzare correttamente i dati ottenuti all'interno di un grafico contenuto nella dashboard\glo & I & P & 1 & \TBstrut \\ [2mm]
+	TS11 & Verificare che l'utente possa definire il comportamento di un alert & I & P & 1 & \TBstrut \\ [2mm]
+	TS12 & Verificare che l'utente possa aggiungere un alert al nostro pannello per monitorare i dati della previsione & I & P & 1 & \TBstrut \\ [2mm]
+	TS13 & Verificare che l'utente possa rimuovere un alert dal nostro pannello & I & P & 1 & \TBstrut \\ [2mm]
+	TS14 & Verificare che la rimozione del nostro pannello implichi la fermata del plug-in & I & P & 1 & \TBstrut \\ [2mm]
+	TS15 & Verificare che i messaggi d'errore relativi agli alert vengano visualizzati & I & P & 1 & \TBstrut \\ [2mm]
+	TS16 & Verificare che i messaggi d'errore relativi ad un caricamento di un file JSON non valido vengano visualizzati & I & P & 1 & \TBstrut \\ [2mm]
+	TS17 & Verificare che i messaggi d'errore relativi all'associazione dei predittorei vengano visualizzati & I & P & 1 & \TBstrut \\ [2mm]
 	\rowcolor{white}
 	\caption{Test di sistema}
 \end{longtable}
@@ -168,7 +168,7 @@ Per ogni test vengono definiti il codice identificativo, la descrizione, lo stat
 	TI20	& Verificare che la classe processData quando viene inizializzata con un json di configurazione con proprietà 'pluginAim' uguale a 'rl', chiami la funzione PerformPrediction della ProcessRl che a sua volta chiami il metodo predict di RlPrediction che ritornerà il risulato della predizione sui dati inseriti con i metodi setter di processData. & I & P & 1 & \TBstrut \\ [2mm]
 	TI21	& Verificare che la classe WriteInflux venga istanziata correttamente tramite costruttore, creando un'istanza InfluxDB collegata ad un database contenuto nell'immagine docker InfluxDB scaricata da dockerhub. & I & P & 1 & \TBstrut \\ [2mm]
 	TI22	& Verificare che i metodi writeArrayToInflux e writePointToInflux scrivano correttamente i dati in un istanza docker influxDB scaricata da dockerhub. & I & P & 1 & \TBstrut \\ [2mm]
-	
+
 	\rowcolor{white}
 	\caption{Test di integrazione}
 \end{longtable}
@@ -215,7 +215,7 @@ Per ogni test vengono definiti il codice identificativo, la descrizione, lo stat
 	%------->Input
 	TU17		& Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno, per dimostrare la correttezza del metodo Render() di  Input. & I & P & 1 & \TBstrut \\ [2mm]
 	TU18		& Verificare che le funzioni passate come proprietà al componente Input vengano correttamente chiamate dopo un evento onChange. & I & P & 1 & \TBstrut \\ [2mm]
-	%------->ResultPanel	
+	%------->ResultPanel
 	TU19		& Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno in caso sia utilizzato l'algoritmo svm, per dimostrare la correttezza del metodo Render() di ResultPanel. & I & P & 1 & \TBstrut \\ [2mm]
 	TU20		& Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno in caso sia utilizzato l'algoritmo rl, per dimostrare la correttezza del metodo Render() di ResultPanel. & I & P & 1 & \TBstrut \\ [2mm]
 	%------->SaveFileModal
@@ -225,7 +225,7 @@ Per ogni test vengono definiti il codice identificativo, la descrizione, lo stat
 	TU24		& Verificare che la funzione corretta, passata come proprietà, venga chiamata dopo aver cliccato lo sfondo. & I & P & 1 & \TBstrut \\ [2mm]
 	%------->SetDataCheckBox
 	TU25		& Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno, per dimostrare la correttezza del metodo Render() di SetDataCheckBox. & I & P & 1 & \TBstrut \\ [2mm]
-	TU26		& Verificare che le funzioni passate come proprietà al componente SetDataCheckBox vengano correttamente chiamate dopo un evento onClick. & I & P & 1 & \TBstrut \\ [2mm]	
+	TU26		& Verificare che le funzioni passate come proprietà al componente SetDataCheckBox vengano correttamente chiamate dopo un evento onClick. & I & P & 1 & \TBstrut \\ [2mm]
 	%------->QualityIndex
 	TU27		& Verificare che venga renderizzato l'elemento del componente QualityIndex del colore giusto a seconda di quale indice viene passato come proprietà. & I & P & 2 & \TBstrut \\ [2mm]
 	TU28		& Verificare che venga renderizzato l'elemento del componente QualityIndex del colore giusto a seconda di quale indice viene passato come proprietà. & I & P & 2 & \TBstrut \\ [2mm]
@@ -246,9 +246,9 @@ Per ogni test vengono definiti il codice identificativo, la descrizione, lo stat
 	%------->TrendLine
 	TU38		& Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno, per dimostrare la correttezza del metodo Render() di TrendLine. & I & P & 1 & \TBstrut \\ [2mm]
 	TU39		& Verificare che le funzioni passate come proprietà al componente TrendLine vengano correttamente chiamate nel metodo Render() del componente. & I & P & 1 & \TBstrut \\ [2mm]
-	%------->App		
+	%------->App
 	TU40		& Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno, per dimostrare la correttezza del metodo Render() di App . & I & P & 1 & \TBstrut \\ [2mm]
-	
+
 	%------->VIEWMODEL: PerformReading
 	TU41		& Verificare che venga lanciata un'eccezione in caso venga inizializzata la classe astratta PerformReading. & I & P & 2 & \TBstrut \\ [2mm]
 	TU42		& Verificare che venga lanciata un'eccezione in caso venga chiamata la funzione callRead se non è stata implementata in una classe che estende la classe PerformReading. & I & P & 1 & \TBstrut \\ [2mm]
