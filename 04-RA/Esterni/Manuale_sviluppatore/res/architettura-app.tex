@@ -35,7 +35,7 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 			\item \textit{translateData()} in quanto prepara i dati nel formato adeguato all'addestramento;
 			\item \textit{splitData()} in quanto suddivide i dati per il calcolo degli indici di qualità e per l'addestramento dell'algoritmo rispettivamente in 1/3 e 2/3 con una modalità pseudo-casuale per non porre vincoli all'utente in fase di inserimento.
 		\end{itemize}
-		Questa classe ha una dipendenza verso il tipo \textbf{SvmData} che rappresenta la struttura del dato da dare in input ad una Svm\glo.
+		Questa classe ha una dipendenza verso il tipo \textit{SvmData} che rappresenta la struttura del dato da dare in input ad una Svm\glo.
 		\paragraph*{RlTrainer} \mbox{} \\[1mm]
 		Questa classe, come detto in precedenza, ha lo scopo di addestrare l'algoritmo regressione lineare\glosp sfruttando la libreria LinearRegression. \\
 		Il campo dati che richiede un'ulteriore spiegazione è \textit{options} ovvero un array di stringhe che contiene le opzioni di esecuzione per l'algoritmo.
@@ -45,10 +45,10 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 			\item \textit{splitData()} in quanto suddivide i dati per il calcolo degli indici di qualità e per l'addestramento dell'algoritmo rispettivamente in 1/3 e 2/3 con una modalità pseudo-casuale per non porre vincoli all'utente in fase di inserimento.
 		\end{itemize}
 
-		Questa classe ha una dipendenza verso il tipo \textbf{RlData} che rappresenta la struttura del dato da dare in input ad una Rl\glo.
+		Questa classe ha una dipendenza verso il tipo \textit{RlData} che rappresenta la struttura del dato da dare in input ad una Rl\glo.
 		\paragraph*{Result} \mbox{} \\[1mm]
 		Per definire il tipo risultato degli algoritmi di predizione abbiamo implementato l'interfaccia Result. Il contratto di questa interfaccia è composto da un solo metodo: \textit{toStringJson()}. Questo metodo ritorna un oggetto JSON contenente tutti i campi dati del risultato dell'addestramento sotto forma di stringa. In questo modo per ogni tipologia di algoritmo può essere definita una classe concreta che implementa Result e che contiene i propri dati. \\
-		Nella nostra applicazione sono stati implementati \textbf{ResultSvm} e \textbf{ResultRl}.
+		Nella nostra applicazione sono stati implementati \textit{ResultSvm} e \textit{ResultRl}.
 		\mbox{}
 		\begin{landscape}
 			\begin{figure}
