@@ -1,4 +1,4 @@
-\subsection{Installazione dell'applicazione esterna a Grafana}
+\subsection{Installazione dell'applicazione di addestramento}
 L'installazione dell'applicazione è suddivisa in due passaggi che descriviamo in dettaglio nei prossimi paragrafi:
 \begin{enumerate}
     \item clonare la repository da GitHub;
@@ -10,7 +10,7 @@ Per clonare il repository dell'applicazione, aprire un terminale e usare il coma
 \begin{verbatim}
 	git clone https://github.com/VRAM-Software/grafana_prediction.git
 \end{verbatim}
-Infine per spostarsi nella cartella che contiene il codice sorgente dell'applicativo esterno si usa il comando:
+Infine per spostarsi nella cartella che contiene il codice sorgente dell'applicazione di addestramento si usa il comando:
 \begin{verbatim}
 	cd ./prediction_configuration_utility
 \end{verbatim}
@@ -81,7 +81,7 @@ Nella seguente tabella sono elencate tutte le dipendenze necessarie per la corre
     \caption{Dipendenze specifiche per lo sviluppatore}
     \end{longtable}
     \mbox{}\\ [1mm]
-Seguendo i due passaggi descritti nei precedenti paragrafi, l'applicazione esterna è installata correttamente.
+Seguendo i due passaggi descritti nei precedenti paragrafi, l'applicazione di addestramento è installata correttamente.
 
 \subsubsection{Eseguire l'applicazione}%\mbox{}\\ [1mm]
 Per eseguire il l'applicazione è necessario aprire due terminali nella cartella: "prediction\_configuration\_utility", eseguire nel primo il comando \verb|npm start| per inizializzare il server Node.Js alla porta 3000. Infine, nel secondo terminale, eseguire il comando \verb|npm run electron| per inizializzare l'istanza di Electron.
