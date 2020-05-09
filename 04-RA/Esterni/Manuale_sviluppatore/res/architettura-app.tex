@@ -1,6 +1,6 @@
 %ARCHITETTURA APP ESTERNA
 \subsection{Applicazione di addestramento degli algoritmi}
-Per poter visualizzare la suddivisione delle componenti dell'applicazione esterna e le dipendenze che sussistono tra loro ad alto livello, viene riportato il diagramma dei Package in allegato nel file \textit{diagramma-package-app.png}.
+Per poter visualizzare la suddivisione delle componenti dell'applicazione di addestramento e le dipendenze che sussistono tra loro ad alto livello, viene riportato il diagramma dei Package in allegato nel file \textit{diagramma-package-app.png}.
 	\subsubsection{Progettazione architetturale}
 	Abbiamo deciso di utilizzare il design pattern\glosp architetturale Model-View-ViewModel (MVVM) perché si adatta bene alle due principali tecnologie che utilizziamo: React ed Electron. In particolare, come si può vedere dalla figura seguente, la View scambia dei dati in modo asincrono con il ViewModel attraverso Electron e ciò permette di mantenere la View sempre aggiornata. Inoltre è presente la comunicazione tra ViewModel e Model che avviene con la richiesta di esecuzione delle operazioni da parte del ViewModel e la conseguente risposta da parte del Model. Anche questo scambio di messaggi è asincrono ed è implementato da un meccanismo di callback\glo.
 	\mbox{}
@@ -53,7 +53,7 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 		\begin{landscape}
 			\begin{figure}
 				\begin{figure} [H]
-					\includegraphics[width=\linewidth]{img/Diagrammi/algorithm-app.png}
+					\includegraphics[width=180mm]{img/Diagrammi/algorithm-app.png}
 					\caption{Diagramma delle classi per gli algoritmi nel Model}
 				\end{figure}
 			\end{figure}
@@ -110,7 +110,7 @@ Per poter visualizzare la suddivisione delle componenti dell'applicazione estern
 				\item TrendLine: rappresenta il componente grafico e si occupa di renderizzare il risultato dell'addestramento della RL\glosp nel grafico;
 				\item RenderDataSvm: rappresenta il componente grafico e si occupa di visualizzare correttamente i dati di un addestramento SVM\glo;
 				\item RendeDataRl: rappresenta il componente grafico e si occupa di visualizzare correttamente i dati di un addestramento RL\glo;
-				\item Axis: componente istanziato due volta per rappresentare l'asse x e l'asse y del grafico.
+				\item Axis: componente istanziato due volte per rappresentare l'asse x e l'asse y del grafico.
 			\end{itemize}
 		\end{itemize}
 		\mbox{}
