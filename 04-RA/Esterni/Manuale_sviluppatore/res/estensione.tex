@@ -1,7 +1,13 @@
 \section{Estensibilità del prodotto}
 	\subsection{Supporto a nuovi algoritmi di predizione}
 	Al momento sono stati implementati gli algoritmi di addestramento e di predizione di Support Vector Machine lineare e di Regressione lineare. Grazie alla struttura dell'architettura è possibile aggiungere le varianti delle famiglie di algoritmi di Support Vector Machine e di Regressione quali non lineari, esponenziali e logaritmiche.
-	Per realizzare ciò, è sufficiente eseguire il seguente procedimento per ogni nuovo algoritmo. Creare una nuova implementazione dell'interfaccia \textit{PerformTraining} con la relativa classe nel Model all'interno dell'applicazione ed una nuova implementazione delle interfacce \textit{PerformPrediction} e \textit{AlgorithmTrainer} nel plug-in.
+	Per realizzare ciò, è sufficiente eseguire il seguente procedimento per ogni nuovo algoritmo:
+	\begin{itemize}
+		\item creare una nuova implementazione dell'interfaccia \textit{PerformTraining} con la relativa classe nel Model all'interno dell'applicazione di addestramento;
+		\item creare una nuova implementazione dell'interfaccia \textit{AlgorithmTrainer} nell'applicazione di addestramento;
+		\item creare nuova implementazione dell'interfaccia \textit{PerformPrediction} nel plug-in;
+		\item creare nuova implementazione dell'interfaccia \textit{AlgorithmPrediction} nel plug-in.
+	\end{itemize}
 	\subsection{Supporto a nuove tipologie di file}
 		\subsubsection{Lettura}
 		Viene offerta la possibilità di ampliare le tipologia di file che vengono utilizzate per la lettura dei dati ricevuti in input di addestramento nell'applicazione. Questo è possibile grazie all'implementazione del template method. Infatti è sufficiente estendere la classe astratta \textit{Read} e successivamente implementare il metodo \textit{parser()} per eseguire il parse dei dati nel formato desiderato.

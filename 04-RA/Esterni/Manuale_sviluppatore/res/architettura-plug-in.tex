@@ -21,45 +21,43 @@ Analizzando i componenti, la nostra architettura è così strutturata:
 	\item \textbf{Controller}: modulo che gestisce l'application logic. Più in dettaglio, trasforma i dati ottenuti dalle interazioni dell'utente ed i flussi dati ottenuti da Grafana\glosp in un formato adatto per l'esecuzione delle azioni da parte del Model.
 \end{itemize}
 \paragraph{Ruolo di Grafana nell'architettura} \mbox{}\\ [1mm]
-Grafana\glosp ricopre un ruolo fondamentale nell'architettura, infatti la sua presenza permette l'aggiornamento continuo della vista alla variazione dei dati nel modello. In particolare, ogni volta che sono presenti aggiornamenti sui dati nel modello, Grafana\glosp li rende disponibili alla vista tramite appositi metodi, assieme alla configurazione delle query con cui questi dati sono stati ottenuti. Inoltre, la sua presenza gestisce tramite AnuglarJS il two-way data binding tra vista HTML e codice Javascript, oltre che ad offrire la maggior parte dei componenti grafici necessari alla realizzazione della vista del plug-in.
+Grafana\glosp ricopre un ruolo fondamentale nell'architettura in quanto permette l'aggiornamento continuo della vista alla variazione dei dati nel modello. In particolare, ogni volta che sono presenti aggiornamenti sui dati nel modello, Grafana\glosp li rende disponibili alla vista tramite appositi metodi, assieme alla configurazione delle query con cui questi dati sono stati ottenuti. Inoltre, tramite AnuglarJS, gestisce il two-way data binding tra vista HTML e codice Javascript, oltre che ad offrire la maggior parte dei componenti grafici necessari alla realizzazione della vista del plug-in.
 \subsubsection{Progettazione di dettaglio}
 Di seguito viene descritta in dettaglio la progettazione del plug-in. In allegato viene inoltre fornito il file \textit{diagramma-classi-plug-in.png} contenente l'intero diagramma delle classi.
 \paragraph{Model} \mbox{}\\ [1mm]
 Il componente principale del Model è l'interfaccia degli algoritmi di predizione chiamata \textit{AlgorithmPrediction}. A partire da questa, abbiamo implementato due algoritmi: Support Vector Machine\glosp lineare e Regressione lineare\glo. Essi sono rappresentati rispettivamente dalle classi concrete \textit{SvmPrediction} e \textit{RlPrediction}. In senso più generale, abbiamo riscontrato che, per famiglie di algoritmi Support Vector Machine\glosp e Regressione\glo, è possibile ricondursi ad un'interfaccia unica come abbiamo fornito.
 La due classi concrete hanno inoltre una dipendenza di tipo composizione con un'altra classe concreta chiamata \textit{WriteInflux}. Essa permette di eseguire la scrittura su un database Influx attraverso due metodi che differiscono per il tipo di dati da salvare. Infine, importa la libreria \textit{InfluxDB} che utilizza per interfacciarsi con il database stesso.
 \paragraph*{AlgorithmPrediction} \mbox{}\\ [1mm]
-L'interfaccia degli algoritmi di predizione è chiamata \textit{AlgorithmPrediction} e rappresenta il contratto che tutte le classi concrete devono rispettare per poter caratterizzare un algoritmo di predizione. Essa contiene un solo metodo: \textit{predict(DataSet, Result, WriteInfluxParameters)}. Questo permette di eseguire la predizione su un determinato set di dati di tipo DataSet, con degli specifici parametri di configurazione di tipo Result e di scrittura nel database di tipo WriteInfluxParameters.
+L'interfaccia degli algoritmi di predizione è chiamata \textit{AlgorithmPrediction} e rappresenta il contratto che tutte le classi concrete devono rispettare per poter caratterizzare un algoritmo di predizione. Essa contiene un solo metodo: \textit{predict(DataSet, Result, WriteInfluxParameters)}. Questo permette di eseguire la predizione su un determinato set di dati di tipo DataSet e con degli specifici parametri di configurazione di tipo Result e di scrittura nel database di tipo WriteInfluxParameters.
 \paragraph*{SvmPrediction} \mbox{}\\ [1mm]
-Per implementare l'algoritmo Support Vector Machine\glosp lineare abbiamo realizzato la classe concreta \textit{SvmPrediction}, implementando il metodo \textit{predict(DataSet, Result, WriteInfluxParameters)} dell'interfaccia \textit{AlgorithmPrediction}.
-Questo metodo esegue la predizione sul set di dati e sulla base dei parametri di configurazione forniti in input. Inoltre fa uso di componenti specifici della classe SVM importata dalla libreria \textit{NodeModules} per effettuare la vera e propria previsione. \\
-\textit{SvmPrediction} contiene inoltre due campi dati:
+Per implementare l'algoritmo Support Vector Machine\glosp lineare abbiamo realizzato la classe concreta \textit{SvmPrediction}, implementando quindi il metodo \textit{predict(DataSet, Result, WriteInfluxParameters)} dell'interfaccia \textit{AlgorithmPrediction}.
+Questo metodo esegue la predizione sul set di dati e sulla base dei parametri di configurazione forniti in input. Inoltre fa uso di componenti specifici della classe SVM importata dalla libreria \textit{NodeModules} per effettuare la vera e propria previsione. \textit{SvmPrediction} contiene inoltre due campi dati:
 \begin{itemize}
-	\item writeInflux: è un riferimento alla classe \textit{WriteInflux};
-	\item predictor: è un riferimento alla classe \textit{SVM}.
+	\item \textit{writeInflux}: è un riferimento alla classe \textit{WriteInflux};
+	\item \textit{predictor}: è un riferimento alla classe \textit{SVM}.
 \end{itemize}
 Essi vengono istanziati solo al momento dell'utilizzo. \\
 È infine presente il costruttore privo di parametri che permette di eseguire il binding dei metodi alla classe.
 \paragraph*{RlPrediction} \mbox{}\\ [1mm]
 Per implementare l'algoritmo Regressione lineare\glosp abbiamo realizzato la classe concreta \textit{RlPrediction}, implementando il metodo \textit{predict(DataSet, Result, WriteInfluxParameters)} dell'interfaccia \textit{AlgorithmPrediction}.
-Questo metodo esegue la predizione sul set di dati e sulla base dei parametri di configurazione forniti in input. Inoltre fa uso della libreria \textit{LinearRegression}  che viene importata per effettuare la vera e propria previsione. \\
-\textit{RlPrediction} contiene inoltre due campi dati:
+Questo metodo esegue la predizione sul set di dati e sulla base dei parametri di configurazione forniti in input. Inoltre fa uso della libreria \textit{LinearRegression}  che viene importata per effettuare la vera e propria previsione. \textit{RlPrediction} contiene inoltre due campi dati:
 \begin{itemize}
-	\item writeInflux: è un riferimento alla classe \textit{WriteInflux};
-	\item predictor: è un riferimento alla classe \textit{LinearRegression}.
+	\item \textit{writeInflux}: è un riferimento alla classe \textit{WriteInflux};
+	\item \textit{predictor}: è un riferimento alla classe \textit{LinearRegression}.
 \end{itemize}
 Essi vengono istanziati solo al momento dell'utilizzo. \\
 È infine presente il costruttore privo di parametri che permette di eseguire il binding dei metodi alla classe.
 \paragraph*{WriteInflux} \mbox{}\\ [1mm]
 Per interfacciarsi e scrivere i dati nel database Influx viene utilizzata la classe \textit{WriteInflux}. Essa viene instanziata all'interno del metodo \textit{predict(DataSet, Result, WriteInfluxParameters)} delle classi rappresentanti gli algoritmi di predizione. Contiene due campi dati:
 \begin{itemize}
-	\item influx: è un riferimento alla classe InfluxDB della libreria node-influx;
-	\item parameters: è un riferimento al tipo WriteInfluxParameters e contiene i parametri per il collegamento e la scrittura nel database.
+	\item \textit{influx}: è un riferimento alla classe InfluxDB della libreria node-influx;
+	\item \textit{parameters}: è un riferimento al tipo WriteInfluxParameters e contiene i parametri per il collegamento e la scrittura nel database.
 \end{itemize}
 È presente il metodo costruttore che riceve in input un WriteInfluxParameters, ne esegue il setting ed instazia InfluxDB.
 Infine sono presenti due metodi:
 \begin{itemize}
-	\item writeArrayToInflux(double[], long[]): esegue la scrittura di un array di dati, solitamente quelli predetti, usando come chiavi in InfluxDB i corrispondenti TimeStamps passati come parametro;
-	\item writeStampsToInflux(double, long): esegue la scrittura di un singolo dato, solitamente predetto, usando come chiave in InfluxDB il suo relativo TimeStamps passato come parametro.
+	\item \textit{writeArrayToInflux(double[], long[])}: esegue la scrittura di un array di dati, solitamente quelli predetti, usando come chiavi in InfluxDB i corrispondenti TimeStamps passati come parametro;
+	\item \textit{writeStampsToInflux(double, long)}: esegue la scrittura di un singolo dato, solitamente predetto, usando come chiave in InfluxDB il suo relativo TimeStamps passato come parametro.
 \end{itemize}
 \mbox{}
 \begin{landscape}
@@ -78,25 +76,25 @@ Inoltre attraverso la classe \textit{SelectInfluxDBCtrl} permettiao la selezione
 La classe che gestisce il pannello di controllo della nostra View è \textit{PanelCtrl} che estende la classe \textit{MetricsPanelCtrl} di Grafana\glo. \\
 I campi dati di cui è necessaria una descrizione sono i seguenti:
 \begin{itemize}
-	\item nodeMap: contiene la mappatura dei predittori da fornire per la configurazione degli algoritmi;
+	\item \textit{nodeMap}: contiene la mappatura dei predittori da fornire per la configurazione degli algoritmi;
 	\item databaseParameters: è un oggetto di tipo WriteInfluxParameters e rappresenta quindi i parametri di configurazione del database ricevuti in input dall'utente;
-	\item plotlyPanelUtil: è un oggetto di tipo PlotlyPanelUtil e rappresenta quindi un'istanza di tale classe importata dalla libreria Plotly per la realizzazione di un grafico personalizzato;
-	\item processData: è un oggetto di tipo ProcessData e rappresenta quindi il legame tra View e Controller.
+	\item \textit{plotlyPanelUtil}: è un oggetto di tipo PlotlyPanelUtil e rappresenta quindi un'istanza di tale classe importata dalla libreria Plotly per la realizzazione di un grafico personalizzato;
+	\item \textit{processData}: è un oggetto di tipo ProcessData e rappresenta quindi il legame tra View e Controller.
 \end{itemize}
 I metodi di cui è necessaria una descrizione sono i seguenti:
 \begin{itemize}
-	\item onDataReceived(Datalist): permette di ricevere i dati da Grafana\glosp e di realizzare delle operazioni. In particolare riceve i dati da InfluxDB e permette l'aggiornamento continuo dal Model;
-	\item updateNodeMap(): permette l'aggiornamento della configurazione dei predittori e quindi della configurazione degli algoritmi;
-	\item uploadButtonClick(): permette il caricamento del file JSON di configurazione ottenuto dall'applicativo di addestramento degli algoritmi di predizione;
-	\item onInitEditMode(): permette la gestione della configurazione del pannello al momento della sua istanziazione da parte di Grafana\glo.
+	\item \textit{onDataReceived(Datalist)}: permette di ricevere i dati da Grafana\glosp e di realizzare delle operazioni. In particolare riceve i dati da InfluxDB e permette l'aggiornamento continuo dal Model;
+	\item \textit{updateNodeMap()}: permette l'aggiornamento della configurazione dei predittori e quindi della configurazione degli algoritmi;
+	\item \textit{uploadButtonClick()}: permette il caricamento del file JSON di configurazione ottenuto dall'applicativo di addestramento degli algoritmi di predizione;
+	\item \textit{onInitEditMode()}: permette la gestione della configurazione del pannello al momento della sua istanziazione da parte di Grafana\glo.
 \end{itemize}
 Gli altri metodi e campi dati presenti sono documentati dal loro stesso nome.
 \paragraph*{SelectInfluxDBController} \mbox{}\\ [1mm]
 La classe che gestisce il pannello di inserimento dei dati per la scrittura su InfluxDB, contenuto nel pannello di controllo, è SelectInfluxDBController.
 Contiene un campo dati di tipo Datasource[] che rappresenta i parametri di ogni sorgente dati presente in Grafana\glo, su cui è possibile applicare le predizioni o scrivere i risultati ottenuti. Espone infine i due metodi per popolare ed interfacciarsi con tale parametri:
 \begin{itemize}
-	\item getDatasources(): permette di popolare l'array di Datasource effettuando una richiesta HTTP alle API\glosp di Grafana\glo;
-	\item updateDatabaseParams(): permette di inviare al controller i dati inseriti dall'utente tramite la vista.
+	\item \textit{getDatasources()}: permette di popolare l'array di Datasource effettuando una richiesta HTTP alle API\glosp di Grafana\glo;
+	\item \textit{updateDatabaseParams()}: permette di inviare al controller i dati inseriti dall'utente tramite la vista.
 \end{itemize}
 \paragraph*{Datasource} \mbox{}\\ [1mm]
 È un tipo di dato che descrive i parametri di una sorgente di dati collegata a Grafana\glosp attraverso dei campi dati.
