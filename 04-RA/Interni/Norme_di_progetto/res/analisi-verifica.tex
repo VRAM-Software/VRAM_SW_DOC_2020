@@ -41,7 +41,7 @@ La verifica della documentazione può essere effettuata manualmente in due modi:
 L'analisi dinamica è una tecnica che consiste nell'esecuzione del prodotto\glosp software eseguendo dei test su un insieme finito di casi.
 \paragraph*{Test}\mbox{}\\ [1mm]
 Per la corretta verifica del codice, i test devono seguire regole ben precise che definiscono i parametri e le proprietà che devono avere test per essere considerati efficaci: \mbox{}\\ [1mm]
-\textbf{Parametri da definire}:
+\subparagraph*{Parametri da definire}:
 \begin{itemize}
 	\item \textbf{Input}: l'input preso in considerazione;
 	\item \textbf{Output}: l'output che si aspetta di ricevere;
@@ -92,10 +92,10 @@ Per ogni test vengono definiti il codice identificativo, la descrizione, lo stat
 		\item \textbf{N}: negativo;
 		\item \textbf{NE}: non eseguito.
 	\end{itemize}
-	\item Importanza:
+	\item Priorità:
 	\begin{itemize}
-		\item \textbf{1}: test di una funzionalità primaria nel nostro prodotto;
-		\item \textbf{2}: test di una funzionalità accessoria e quindi non indispensabile.
+		\item \textbf{1}: test a priorità alta, su una funzionalità primaria nel nostro prodotto;
+		\item \textbf{2}: test a priorità bassa, su una funzionalità accessoria nel nostro prodotto e quindi non indispensabile.
 	\end{itemize}
 \end{itemize}
 
@@ -115,7 +115,7 @@ I test di sistema controllano il funzionamento corretto del prodotto\glosp e ver
 	\begin{itemize}
 		\item \textbf{M-PROC05 Percentuale bug sistemati}: indica la percentuale dei bug sistemati, dando così una traccia dell'avanzamento;
 		\begin{itemize}
-			\item[] \textbf{formula}: $\frac{bug \; sistemati}{bug \; totali}$;
+			\item[] \textbf{formula}: $\frac{bug \; sistemati}{bug \; totali}$.
 		\end{itemize}
 	\end{itemize}
 
@@ -125,27 +125,27 @@ I test di sistema controllano il funzionamento corretto del prodotto\glosp e ver
 	\begin{itemize}
 		\item \textbf{M-PROC23 Code coverage}: indica la percentuale di codice coperto da test rispetto al totale delle righe di codice;
 		\begin{itemize}
-			\item[] \textbf{formula}: $\frac{righe \; di \; codice \; coperto}{righe \; di \; codice \; totali}$;
+			\item[] \textbf{formula}: $\frac{righe \; di \; codice \; coperto}{righe \; di \; codice \; totali}$.
 		\end{itemize} 
 	
 		\item \textbf{M-PROC24 Branch coverage}: indica la percentuale di codice coperto da test rispetto al totale delle righe di codice;
 		\begin{itemize}
-			\item[] \textbf{formula}: $\frac{righe \; di \; codice \; coperto}{righe \; di \; codice \; totali}$;
+			\item[] \textbf{formula}: $\frac{righe \; di \; codice \; coperto}{righe \; di \; codice \; totali}$.
 		\end{itemize} 
 	
 		\item \textbf{M-PROC25 Copertura dei test eseguiti}: indica la percentuale di test effettivamente eseguiti;
 		\begin{itemize}
-			\item[] \textbf{formula}: $\frac{test \; eseguiti}{test \; totali}$;
+			\item[] \textbf{formula}: $\frac{test \; eseguiti}{test \; totali}$.
 		\end{itemize}
 	
 		\item \textbf{M-PROC27 Percentuale test alta priorità implementati}: indica la percentuale di test ad alta priorità che sono stati implementati;
 		\begin{itemize}
-			\item[] \textbf{formula}: $\frac{test \; alta \; priorit\grave{a} \; implementati}{test \; alta \; priorit\grave{a} \; totali}$;
+			\item[] \textbf{formula}: $\frac{test \; alta \; priorit\grave{a} \; implementati}{test \; alta \; priorit\grave{a} \; totali}$.
 		\end{itemize}
 	
 		\item \textbf{M-PROC28 Percentuale test bassa priorità implementati}: indica la percentuale di test a bassa priorità che sono stati implementati;
 		\begin{itemize}
-			\item[] \textbf{formula}: $\frac{test \; bassa \; priorit\grave{a} \; implementati}{test \; bassa \; priorit\grave{a} \; totali}$;
+			\item[] \textbf{formula}: $\frac{test \; bassa \; priorit\grave{a} \; implementati}{test \; bassa \; priorit\grave{a} \; totali}$.
 		\end{itemize}
 	\end{itemize}
 
@@ -155,7 +155,7 @@ I test di sistema controllano il funzionamento corretto del prodotto\glosp e ver
 	\begin{itemize}
 		\item \textbf{M-PROD26 percentuale di test superati}: indica la percentuale di test che sono stati superati;
 		\begin{itemize}
-			\item[] \textbf{formula}: $\frac{test \; superati}{test \; eseguiti}$;
+			\item[] \textbf{formula}: $\frac{test \; superati}{test \; eseguiti}$.
 		\end{itemize}
 	\end{itemize}
 

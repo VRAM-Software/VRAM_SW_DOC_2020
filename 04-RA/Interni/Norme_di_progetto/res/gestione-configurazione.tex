@@ -18,7 +18,7 @@
 		\newline
 		La numerazione per il versionamento\glosp del prodotto\glosp si basa sulle modifiche applicate al repository\glosp principale grafana\_prediction, che contiene al suo interno gli altri repository\glosp come sottomoduli. In esso, ad ogni modifica effettuata, il numero di versione del prodotto\glosp è incrementato secondo lo schema seguente.
 		
-		\paragraph*{Numerazione delle versioni del prodotto} \mbox{}
+		\paragraph*{Numerazione delle versioni del prodotto} \mbox{}\\ [1mm]
 		Per identificare univocamente le versioni del prodotto utilizziamo una numerazione basata su 3 cifre nel formato X.Y.Z. La prima bozza ha versione 0.0.0 e le modifiche ai file aggiornano le cifre della versione nel modo seguente:
 		\begin{itemize}
 			\item \textbf{Z} : Questa cifra viene incrementata ogni volta che vengono effettuate delle modifiche al codice sorgente o ai documenti al fine di risolvere problemi riscontrati nel prodotto\glo;
@@ -57,7 +57,7 @@
 		\begin{center}
 			\url{https://github.com/VRAM-Software/grafana_prediction}
 		\end{center}
-		\subparagraph*{Struttura del repository VRAM\_SW\_DOC\_2020}
+		\paragraph*{Struttura del repository VRAM\_SW\_DOC\_2020} \mbox{}\\ [1mm]
 		Al fine di fornire una navigazione agevole e standardizzata, il contenuto del repository\glosp è organizzato in modo gerarchico tramite directory secondo il seguente schema:
 		\newline
 		\dirtree{%
@@ -104,19 +104,19 @@
 	\subsubsection{Obiettivi di qualità}
 	Per questo processo non sono stati definiti obiettivi di qualità.
 	\subsubsection{Strumenti di supporto}
-		\paragraph{GitHub}
+		\paragraph{GitHub} \mbox{}\\ [1mm]
 			In aggiunta ai servizi già elencati, al fine di migliorare efficacia ed efficienza, vengono utilizzate le funzionalità di "Issue Tracking System",  
 			"Milestone" e "Project Board" integrate in GitHub. Ognuna di queste funzionalità viene usata solo da chi autorizzato, ad esempio rilasci di versioni, creazione e chiusura di milestone sono concesse solo al responsabile di progetto\glo.
 			\newline
 			Vengono inoltre utilizzate le "Labels" offerte dall'Issue Tracking System di Github per definire le tipologie di problemi e le loro priorità.
 			\newline
 			Per il repository\glosp contenente il codice sorgente del software sono utilizzate le GitHub Actions al fine di implementare la pratica della continuous integration che, a sua volta, utilizza strumenti quali JEst, SonarCloud e Coveralls per eseguire le verifiche automatiche sul codice sorgente.
-		\paragraph{SonarCloud}
+		\paragraph{SonarCloud} \mbox{}\\ [1mm]
 		I repository\glosp del codice sorgente sono collegati al servizio SonarCloud ed è inserita la sua analisi statica\glosp del codice sorgente nei controlli eseguiti dalla continuous integration. Le pagine sonarcloud dei repository sono disponibili al seguente indirizzo: 
 		\begin{center}
 			\url{https://sonarcloud.io/organizations/vram-software/projects}
 		\end{center}
-		\paragraph{Coveralls}
+		\paragraph{Coveralls} \mbox{}\\ [1mm]
 		Poiché SonarCloud, nella versione disponibile al momento dello svolgimento del progetto\glo, non supporta l'analisi del code coverage tramite Github Actions, utilizziamo il servizio offerto da Coveralls che abbiamo integrato nella continuous integration. Le pagine Coveralls dei repository sono disponibili ai seguenti indirizzi:
 		\begin{center}
 			\url{https://coveralls.io/github/VRAM-Software/grafana_prediction_plugin}
