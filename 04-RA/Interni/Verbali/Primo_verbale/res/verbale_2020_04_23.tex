@@ -21,7 +21,7 @@
     \begin{itemize}
     	\item implementazione indici di qualità dell'addestramento nell'incremento 8;
     	\item interfaccia grafica per gli indici di qualità;
-    	\item scelta del valore k da usare nel calcolo degli indici di qualità.
+    	\item scelta della suddivisione dei dati nel calcolo degli indici di qualità.
     \end{itemize}
     
 \section{Verbale}
@@ -30,5 +30,10 @@
     \subsection{Punto 2}
     Il gruppo ha discusso della rappresentazione grafica degli indici di qualità e ha deciso che verranno rappresentati all'interno di rettangoli, i quali avranno un colore diverso in base al valore dell'indice.
     \subsection{Punto 3}
-    Infine, il gruppo ha discusso in dettaglio il calcolo degli indici di qualità e ha stabilito che nella tecnica della convalidazione incrociata (nota in inglese come k-fold) k avrà un valore pari a 3. Il valore è stato scelto perché rappresenta un compromesso accettabile di affidabilità e velocità di calcolo.
+    Infine, il gruppo ha discusso in dettaglio il calcolo degli indici di qualità e ha stabilito che la tecnica della convalidazione incrociata (nota in inglese come k-fold) risulta eccessivamente complessa per questo ambito e quindi si è optato per una suddivisione dei dati, scelti in modo pseudo-casuale, così composta:
+    \begin{itemize}
+    	\item 2/3 dei dati per l'addestramento dell'algoritmo;
+    	\item 1/3 dei dati per il calcolo degli indici di qualità.
+    \end{itemize}
+	Questa scelta rappresenta un compromesso accettabile di affidabilità e velocità di calcolo.
         
