@@ -3,14 +3,14 @@
 %\includegraphics{img/UC4 - Schema generale.png}
 %\caption{Schema generale: addestramento degli algoritmi di predizione con applicativo esterno con estensioni}
 %\end{figure}
-\subsection{UC4 - Addestramento degli algoritmi di predizione con applicativo esterno}
+\subsection{UC4 - Addestramento degli algoritmi di predizione con applicativo}
 \begin{figure}[H]
 	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/UC4_-_Addestramento_degli_algoritmi_di_predizione_con_applicativo_esterno.png}
 	\caption{Diagramma dello use case UC4}
 \end{figure}
 \begin{itemize}
     \item \textbf{Codice identificativo}: UC4;
-    \item \textbf{Titolo}: addestramento degli algoritmi di predizione con applicativo esterno;
+    \item \textbf{Titolo}: addestramento degli algoritmi di predizione con applicativo;
     \item \textbf{Attori primari}: utente;
     \item \textbf{Descrizione}: attività di addestramento degli algoritmi di predizione eseguita nell'applicativo esterno a Grafana\glosp utilizzando dei dati inseriti dall'utente;
     \item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glo;
@@ -39,7 +39,7 @@
     \item \textbf{Codice identificativo}: UC4.1;
     \item \textbf{Titolo}: inserimento del file in formato CSV contenente i dati per l'addestramento;
     \item \textbf{Attori primari}: utente;
-    \item \textbf{Descrizione}: l'utente inserisce un file in formato CSV contenente i dati per l'addestramento nell'applicazione esterna;
+    \item \textbf{Descrizione}: l'utente inserisce un file in formato CSV contenente i dati per l'addestramento nell'applicazione;
     \item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glo;
     \item \textbf{Postcondizioni}: l'utente ha inserito correttamente il file in formato CSV contenente i dati per l'addestramento;
     \item \textbf{Scenario principale}: l'utente inserisce il file in formato CSV contenente i dati per l'addestramento;
@@ -51,7 +51,7 @@
 	\item \textbf{Titolo}: selezione del modello di predizione su cui eseguire l'addestramento;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Descrizione}: l'utente seleziona il modello di predizione da applicare durante l'addestramento;
-	\item \textbf{Precondizioni}: il file CSV contenente i dati per l'addestramento è stato inserito correttamente nell'applicazione esterna;
+	\item \textbf{Precondizioni}: il file CSV contenente i dati per l'addestramento è stato inserito correttamente nell'applicazione;
 	\item \textbf{Postcondizioni}: il modello di predizione è stato selezionato correttamente;
 	\item \textbf{Scenario principale}: l'utente seleziona un modello di predizione su cui eseguire l'addestramento tra SVM\glosp e RL\glo;
 	\item \textbf{Specializzazione}:
@@ -89,7 +89,7 @@
 	\item \textbf{Titolo}: ricezione del file JSON contenente i predittori\glo;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Descrizione}: l'applicazione restituisce un file JSON, risultato dal completamento dell'addestramento dei dati, contenente i predittori\glosp per eseguire la predizione;
-	\item \textbf{Precondizioni}: l'applicazione esterna ha concluso l'addestramento con successo secondo il suo normale flusso di esecuzione;
+	\item \textbf{Precondizioni}: l'applicazione ha concluso l'addestramento con successo secondo il suo normale flusso di esecuzione;
 	\item \textbf{Postcondizioni}: l'utente ha ricevuto il file JSON, risultato dall'addestramento, contenente i predittori\glosp per eseguire la predizione;
 	\item \textbf{Scenario principale}: l'utente riceve il file JSON, risultato dall'addestramento, contenente i predittori\glosp per eseguire la predizione.
 \end{itemize}
@@ -100,7 +100,7 @@
 	\item \textbf{Titolo}: visualizzazione grafico dei dati per l'addestramento;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Descrizione}: l'utente visualizza il grafico a dispersione rappresentante i dati che ha inserito per l'addestramento;
-	\item \textbf{Precondizioni}: il file CSV contenente i dati per l'addestramento è stato inserito correttamente nell'applicazione esterna;
+	\item \textbf{Precondizioni}: il file CSV contenente i dati per l'addestramento è stato inserito correttamente nell'applicazione;
 	\item \textbf{Postcondizioni}: l'utente ha visualizzato il grafico a dispersione rappresentante i dati che ha inserito;
 	\item \textbf{Scenario principale}: l'utente visualizza il grafico a dispersione rappresentante i dati che ha inserito.
 \end{itemize}
@@ -109,7 +109,7 @@
 	\item \textbf{Codice identificativo}: UC4.7;
 	\item \textbf{Titolo}: inserimento del file in formato JSON contenente una configurazione precedente;
 	\item \textbf{Attori primari}: utente;
-	\item \textbf{Descrizione}: l'utente inserisce nell'applicazione esterna un file in formato JSON che contiene i dati di una configurazione per addestrare nuovamente l'algoritmo di predizione partendo con una configurazione precedente;
+	\item \textbf{Descrizione}: l'utente inserisce nell'applicazione un file in formato JSON che contiene i dati di una configurazione per addestrare nuovamente l'algoritmo di predizione partendo con una configurazione precedente;
 	\item \textbf{Precondizioni}: l'utente è autenticato nel sistema software Grafana\glo;
 	\item \textbf{Postcondizioni}: il file in formato JSON contenente una configurazione precedente è stato inserito correttamente;
 	\item \textbf{Scenario principale}: l'utente inserisce il file in formato JSON contenente una configurazione precedente.
@@ -120,7 +120,7 @@
 	\item \textbf{Titolo}: inserimento delle note per l'utente;
 	\item \textbf{Attori primari}: utente;
 	\item \textbf{Descrizione}: l'utente inserisce le note che compariranno nel file JSON risultante dall'addestramento dell'algoritmo;
-	\item \textbf{Precondizioni}: il file CSV contenente i dati per l'addestramento è stato inserito correttamente nell'applicazione esterna;
+	\item \textbf{Precondizioni}: il file CSV contenente i dati per l'addestramento è stato inserito correttamente nell'applicazione;
 	\item \textbf{Postcondizioni}: l'utente ha inserito correttamente le note che compariranno nel file JSON risultante dall'addestramento dell'algoritmo;
 	\item \textbf{Scenario principale}: l'utente inserisce le note che compariranno nel file JSON risultante dall'addestramento dell'algoritmo.
 \end{itemize}
@@ -141,8 +141,8 @@
 	\item \textbf{Codice identificativo}: UC4.10;
 	\item \textbf{Titolo}: selezione del modello di predizione SVM\glo;
 	\item \textbf{Attori primari}: utente;
-	\item \textbf{Descrizione}: l'utente seleziona il modello di predizione SVM\glosp da applicare durante l'addestramento nell'applicazione esterna;
-	\item \textbf{Precondizioni}: il file CSV contenente i dati per l'addestramento è stato inserito correttamente nell'applicazione esterna;
+	\item \textbf{Descrizione}: l'utente seleziona il modello di predizione SVM\glosp da applicare durante l'addestramento nell'applicazione;
+	\item \textbf{Precondizioni}: il file CSV contenente i dati per l'addestramento è stato inserito correttamente nell'applicazione;
 	\item \textbf{Postcondizioni}: l'utente ha selezionato SVM\glosp come modello di predizione da applicare;
 	\item \textbf{Scenario principale}: l'utente seleziona il modello di predizione SVM\glosp su cui eseguire l'addestramento.
 \end{itemize}
@@ -151,8 +151,8 @@
 	\item \textbf{Codice identificativo}: UC4.11;
 	\item \textbf{Titolo}: selezione del modello di predizione RL\glo;
 	\item \textbf{Attori primari}: utente;
-	\item \textbf{Descrizione}: l'utente seleziona il modello di predizione RL\glosp da applicare durante l'addestramento nell'applicazione esterna;
-	\item \textbf{Precondizioni}: il file CSV contenente i dati per l'addestramento è stato inserito correttamente nell'applicazione esterna;
+	\item \textbf{Descrizione}: l'utente seleziona il modello di predizione RL\glosp da applicare durante l'addestramento nell'applicazione;
+	\item \textbf{Precondizioni}: il file CSV contenente i dati per l'addestramento è stato inserito correttamente nell'applicazione;
 	\item \textbf{Postcondizioni}: l'utente ha selezionato RL\glosp come modello di predizione da applicare;
 	\item \textbf{Scenario principale}: l'utente seleziona il modello di predizione RL\glosp su cui eseguire l'addestramento.
 \end{itemize}
