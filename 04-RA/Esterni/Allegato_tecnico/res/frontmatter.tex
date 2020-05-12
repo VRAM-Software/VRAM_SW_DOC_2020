@@ -1,0 +1,55 @@
+% #### FRONTESPIZIO (frontmatter) ####
+\setlength{\headheight}{33pt} %Distanzia l'header
+\pagenumbering{gobble} %Toglie il numero di pagina
+\begin{titlepage}
+	\begin{center}
+		\vspace*{-2cm}
+		\includegraphics[scale=0.6]{img/logo.png} \\ %Logo
+		\vspace{0.4cm} %Aggiunge uno spazio verticale di 0.5 cm
+		
+		{\LARGE Progetto "Predire in Grafana"} \\ %Nome progetto
+		\vspace{0.4cm} %Attenzione a mettere il punto e NON la virgola
+		
+		{\Huge \textbf{\DocTitle}} \\ %Titolo, prende variabile definita in metadata.tex
+		\vspace{0.4cm}
+		
+		\DocDate \\ %Data, prende variabile definita in metadata.tex
+		\vspace{0.4cm}
+		
+		%Allineamento colonne: l=left r=right c=center, 
+		%va specificato per ogni colonna
+		%Se si vuole la riga tra colonne mettere "|"
+		
+		\begin{tabular}{r | l} %Elementi colonne separate da "&", le righe finiscono con "\\"
+			Versione             & \ver \\
+			Approvazione         & \app \\ 
+			Redazione            & \red \\
+			Verifica             & \test \\
+			Stato                & \stat \\
+			Uso                  & \use \\
+		    Destinato a          & Zucchetti \\
+						         & Prof. Vardanega Tullio\\
+						         & Prof. Cardin Riccardo\\
+			Email di riferimento & vram.software@gmail.com
+		\end{tabular}
+		\vfill
+		\textbf{Descrizione} \\
+		\DocDesc
+	\end{center}
+\end{titlepage}
+\clearpage
+
+% #### Impostazione header, footer  e numerazione pagine ####
+\pagenumbering{arabic} %Pagine con i numeri arabi + reset a 1
+\renewcommand{\footrulewidth}{0.4pt} %Di default footrulewidth==0 e quindi è invisibile, di default \headrulewith==0.4pt
+\rfoot{\thepage\ di \pageref{LastPage}} %Pagina n di m, con numeri Arabi; usa il pacchetto "lastpage", in caso non sia possibile usare tale pacchetto mettere al fondo dell'ultima pagina "\label{LastPage}"
+
+% #### Tabella dei log ####
+\input{res/log_table.tex}
+\clearpage
+
+% #### INDICE (tableofcontents) ####
+\tableofcontents %Provoca la stampa dell'indice
+\clearpage
+
+\setcounter{secnumdepth}{4} %Permette di andare fino alla profondità del paragraph con la numerazione delle sezioni
