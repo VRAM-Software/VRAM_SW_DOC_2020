@@ -1,0 +1,53 @@
+\section{Capitolato 4 - Predire in Grafana}
+
+\subsection{Informazioni generali}
+\begin{itemize}
+	\item \textbf{Nome}: Predire in Grafana\glo: monitoraggio predittivo per DevOps\glo;
+	\item \textbf{Proponente}: \textit{Zucchetti};
+	\item \textbf{Committente}: Prof. Tullio Vardanega e Prof. Riccardo Cardin;
+\end{itemize}
+
+\subsection{Descrizione}
+Con questo capitolato\glo, \textit{Zucchetti} mira a realizzare due plug-in per lo strumento di monitoraggio Grafana\glo. Essi devono applicare gli algoritmi di Support Vector Machine\glosp (SVM) e Regressione Lineare\glosp (RL) al flusso di dati al fine di prevedere livelli al di sopra di una certa soglia e quindi generare un allarme, oppure permettere agli operatori del servizio cloud\glosp di generare segnalazioni dei punti critici che l’erogazione mette in evidenza. In tal modo la linea di produzione del software può intervenire con cognizione di causa sul sistema.
+
+\subsection{Obiettivi di progetto}
+Il sistema richiede di implementare due plug-in di Grafana\glosp scritti in linguaggio JavaScript che eseguiranno i calcoli (Support Vector Machine\glosp o Regressione Lineare\glo) letti da un file JSON e produrranno valori tali da essere aggiunti al flusso di monitoraggio.
+
+\subsection{Requisiti di progetto}
+\begin{itemize}
+	\item Produrre un file JSON dai dati di addestramento con i parametri per le previsioni attraverso SVM\glosp per le classificazioni o RL\glo;
+	\item leggere la definizione del predittore\glosp dal file in formato JSON;
+	\item associare i predittori\glosp letti dal file JSON al flusso di dati presente in Grafana\glo;
+	\item applicare la previsione e fornire i nuovi dati ottenuti al sistema di Grafana\glo;
+	\item rendere disponibili i dati al sistema di creazione di grafici e dashboard\glosp per la loro visualizzazione.
+\end{itemize}
+Opzionalmente è richiesto d'implementare le seguenti funzionalità:
+\begin{itemize}
+	\item offrire la possibilità di definire degli "alert"\glosp in base ai livelli di soglia raggiunti dai nodi collegati alle previsioni;
+	\item fornire i dati che definiscono bontà dei modelli di previsione utilizzati;
+	\item offrire la possibilità di applicare delle trasformazioni alle misure lette dal campo per ottenere delle regressioni\glosp esponenziali o logaritmiche;
+	\item offrire la possibilità di addestrare SVM\glosp o RL\glosp direttamente in Grafana\glo;
+	\item implementare dei meccanismi di apprendimento di flusso, per poter disporre di sistemi di previsione che si adattano costantemente ai dati rilevati sul campo;
+	\item utilizzare altri metodi di previsione che possano dare benefici al calcolo dei dati, tra cui la versione delle SVM\glosp adattate alla regressione\glosp o piccole reti neurali\glosp per la classificazione.
+\end{itemize}
+
+\subsection{Tecnologie interessate}
+\begin{itemize}
+	\item \textbf{JavaScript}: linguaggio di programmazione richiesto per costruire i plug-in di Grafana\glosp ed eseguire i calcoli tramite SVM\glosp e RL\glosp per fare le previsioni;
+	\item \textbf{Grafana}: sistema di monitoraggio open source estendibile con plug-in JavaScript;
+	\item \textbf{Librerie JavaScript per reti neurali}\glo: librerie che permettono di implementare reti neurali\glosp per migliorare le previsioni, utili a soddisfare uno dei requisiti opzionali.
+\end{itemize}
+
+\subsection{Aspetti positivi}
+\begin{itemize} 
+	\item Svolgere questo capitolato\glosp permette di acquisire competenze in ambito di analisi e previsione dei dati, molto richieste in ambito lavorativo;
+	\item la presentazione del problema è stata molto chiara e l'azienda è apparsa molto disponibile;
+	\item gli algoritmi di SVM\glosp e RL\glosp verranno forniti dall'azienda;
+    \item l'azienda si rende disponibile a impartire delle basi di machine learning\glosp che non sono fornite nel nostro corso di laurea.
+\end{itemize}
+\subsection{Criticità e fattori di rischio}
+\begin{itemize}
+	\item Gli algoritmi da utilizzare sono basati su concetti matematici valutati di non facile apprendimento e che quindi potrebbero porterare ad una fase di studio non indifferente. 
+\end{itemize}
+\subsection{Conclusione}
+Il gruppo ha trovato molto chiaro e definito il problema, inoltre l'azienda, forse anche perché di grandi dimensioni, si è mostrata molto disponibile a dedicare risorse per i gruppi che sceglieranno il suo capitolato\glo.
