@@ -1,0 +1,30 @@
+%File principale del documento su cui invocare la compilazione, vedi "istruzioni.txt" per più info
+
+%Preambolo: la parte prima del \begin{document}
+\documentclass[12pt,a4paper]{article} %formato del documento e grandezza caratteri
+
+%Input del file metadata.tex della cartella locale "res/"
+\input{res/metadata.tex} %Contiene le varibili che descrivono il documento
+
+%Input di file di configurazione presi dalla cartella "Template-LaTeX/config/", uguali per tutti i documenti
+%Attenzione bisogna impostare il percorso del file!
+\input{../../../../../Template-LaTeX/config/package.tex} %Inclusione pacchetti
+\input{../../../../../Template-LaTeX/config/config.tex}  %Configurazione pacchetti
+
+\begin{document}
+	%Input del file "frontmatter" preso dalla cartella "Template-LaTeX/config/", uguale per tutti i documenti
+	%Attenzione bisogna impostare il percorso del file!
+	\input{../../../../../Template-LaTeX/config/frontmatter.tex} %Imposta il frontespizio, l'indice, header e footer
+	
+	
+	
+	%Tutte le sezioni del documento
+	\input{res/verbale_2020_02_15.tex}
+	\pagebreak
+	%\input{res/inserire nome sezione n} 
+	
+	
+	
+	%Input del file "decision_table" della cartella locale "res/"
+	\input{res/decision_table.tex} %Tabella delle decisioni (solo per i verbali)
+\end{document}

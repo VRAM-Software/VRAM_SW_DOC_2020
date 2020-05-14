@@ -1,0 +1,25 @@
+% \textbf = grassetto; \Large = font più grande
+% \rowcolors{quanti colori alternare}{colore numero riga pari}{colore numero riga dispari}: colori alternati per riga
+% \rowcolor{color}: cambia colore di una riga
+% p{larghezza colonna}: p è un tipo di colonna di testo verticalmente allineata sopra, ci sarebbe anche m che è centrata a metà ma non è precisa per questo utilizzo TBStrut; la sintassi >{\centering} indica che il contenuto della colonna dovrà essere centrato
+% \TBstrut fa parte di alcuni comandi che ho inserito in config.tex che permetto di aggiungere un po' di padding al testo
+% \\ [2mm] : questra scrittura indica che lo spazio dopo una break line deve essere di 2mm
+
+%\setcounter{secnumdepth}{0}
+%\hfill \break
+%\textbf{\Large{Diario delle modifiche}} \\
+\section{Riepilogo tracciamenti}
+\rowcolors{2}{gray!25}{gray!15}
+\begin{longtable} {
+		>{\centering}p{17mm} 
+		%>{\centering}p{19.5mm}
+		%>{\centering}p{24mm} 
+		%>{\centering}p{24mm} 
+		>{}p{120mm}}
+	\rowcolor{gray!50}
+	\textbf{Codice} & \multicolumn{1}{c}{\textbf{Decisione}} \\%\textbf{Decisione} \\ %\TBstrut \\
+	VE\_4.1 & Inserimento di data, ora, e identificativo algoritmo nel file JSON contenente il predittore. \TBstrut \\ [2mm]
+	VE\_4.2 & Salvataggio con nome personalizzato e solo su richiesta dell'utente. \TBstrut \\ [2mm]
+	VE\_4.3 & Possibilità dell'utente di inserire una descrizione dell'addestramento in corso. \TBstrut \\ [2mm]
+	VE\_4.4 & Visualizzazione grafico nella creazione del pannello. \TBstrut \\ [2mm]
+\end{longtable}
